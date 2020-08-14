@@ -6,12 +6,12 @@ This file contains a list of all of the labs for the semester. Links to labs wil
 | current | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
 |         | Mon, Sep 14 |         | [Lab 0A](https://classroom.github.com/a/Rc09ghXg) | | Introduction; overview of hardware, operating<br>systems, networks, and servers |
-| :pig:   | Wed, Sep 16 |         | [Lab 0B](https://classroom.github.com/a/Rc09ghXg) | | UNIX 1: shell, commands, git |
-|         | Mon, Sep 21 |         | Lab 1A |  |  |
-|         | Wed, Sep 23 |         | Lab 1B |  |  |
-|         | Mon, Sep 28 |         | Lab 2A |  |  |
-|         | Wed, Sep 30 |         | Lab 2B |  |  |
-|         | Mon, Oct 05 |         | Lab 3A |  |  |
+| :pig:   | Wed, Sep 16 |         | [Lab 0B](https://classroom.github.com/a/Rc09ghXg) | | UNIX: shell, commands<br>git: basics|
+|         | Mon, Sep 21 |         | Lab 1A |  | UNIX: files and strings, file formats,<br>text processing, grep |
+|         | Wed, Sep 23 |         | Lab 1B |  | UNIX: regular expressions (regex), awk, sed |
+|         | Mon, Sep 28 |         | Lab 2A |  | Biology: molecular sequence evolution |
+|         | Wed, Sep 30 |         | Lab 2B |  | Biology: molecular sequence alignment |
+|         | Mon, Oct 05 |         | Lab 3A |  | git: clone, branch, fork, merge, commit, rebase  |
 |         | Wed, Oct 07 |         | Lab 4A |  |  |
 |         | Mon, Oct 12 |         | Lab 4B |  |  |
 |         | Wed, Oct 14 |         | Lab 5A |  |  |
