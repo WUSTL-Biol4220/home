@@ -2,7 +2,7 @@
 Fall 2020
 
 ### Course info
-* Zoom meeting (Aug 14): [link]()
+* Zoom meeting: [link]() (updated for Aug 14)
 * Class hours: 830am - 1200pm, Mon and Wed
 * Class room: Meeting online due to Covid-19
 * Office hours: 100 - 200pm, Mon and Wed
