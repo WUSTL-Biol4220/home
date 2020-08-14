@@ -5,7 +5,7 @@ This page contains all information for Practical Bioinformatics (Biol 4220):
 #### Syllabus
 
 #### Getting started
-See the [getting started](getting_started) page for help on topics, such as:
+See the [getting started](getting_started.md) page for help on topics, such as:
 - using VPN
 - accessing the virtual machines
 - using Github
