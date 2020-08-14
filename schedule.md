@@ -3,10 +3,10 @@
 
 This file contains a list of all of the labs for the semester. Links to labs will be added when they become due.
 
-| current | date        | topic   | lecture | lab     |
-| :-:     | :--         | :-      |   :-    | :--     |
-|         | Mon, Sep 14 | Introduction<br>Computer anatomy  |         | [Lab 0A](https://classroom.github.com/a/Rc09ghXg) |
-| :pig:   | Wed, Sep 16 | Unix 1: basic commands        |         | [Lab 0B](https://classroom.github.com/a/Rc09ghXg) |
+| current | date        | topic                             | lecture | lab     |
+| :-:     | :--         | :-                                |   :-    | :--     |
+|         | Mon, Sep 14 | Introduction<br>Overview of hardware, operating<br>systems, networks, and servers   |         | [Lab 0A](https://classroom.github.com/a/Rc09ghXg) |
+| :pig:   | Wed, Sep 16 | UNIX 1: shell, commands            |         | [Lab 0B](https://classroom.github.com/a/Rc09ghXg) |
 |         | Mon, Sep 21 | Hardware       |         | Lab 1A |
 |         | Wed, Sep 23 |         |         | Lab 1B |
 |         | Mon, Sep 28 |         |         | Lab 2A |
