@@ -1,9 +1,12 @@
-# WUSTL BIOL 4220: Getting started
+## WUSTL BIOL 4220: Getting started
+
+### Virtual private network (VPN) access
+
+### Virtual machine (VM) access
 
 ### Creating a GitHub account
 
 ### Linking your GitHub account to Canvas
 
-### Virtual private network access
+### Submitting lab assignments
 
-### Virtual machine access
