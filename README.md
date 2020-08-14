@@ -6,16 +6,17 @@ This page contains all information for Practical Bioinformatics (Biol 4220).
 ###  Info
 Instructor: Professor Michael Landis
 
-Course hours
+Lab and lecture: 830am - 1200pm, Mon and Wed
 
-Office hours
+Office hours: 100 - 200pm, Mon and Wed
 
-Room
+Office: 210 Rebstock
 
-Email: [michael.landis@wustl.edu]
+Email: michael.landis@wustl.edu
 
-Phone
+Phone: 314-935-8082
 
+Link to [Zoom]()
 Link to [Canvas]()
 Link to [Fall 2020 syllabus]()
 Link to [GitHub Classroom]()
