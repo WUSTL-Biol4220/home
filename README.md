@@ -14,9 +14,9 @@
 
 ### Links
 * [Fall 2020 syllabus]()
-* [Zoom]()
-* [Canvas]()
-* [GitHub Classroom]()
+* [Zoom channel]()
+* [Canvas page](https://wustl.instructure.com/courses/54531)
+* [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
 
 ### Getting started
 See the [getting started](getting_started.md) page provides brief tutorials for using course resources and techonologies.
