@@ -1,8 +1,5 @@
 ## Practical Bioinformatics (Biol 4220)
 
-This page contains all information for Practical Bioinformatics (Biol 4220).
-
-
 ### Course info
 * Class hours: 830am - 1200pm, Mon and Wed
 * Class room: Meeting online due to Covid-19
