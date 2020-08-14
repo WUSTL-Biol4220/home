@@ -3,12 +3,12 @@
 This page contains all information for Practical Bioinformatics (Biol 4220).
 
 
-###  Info
-Instructor: Professor Michael Landis
+###  Course info
 
-Lab and lecture: 830am - 1200pm, Mon and Wed
-
-Office hours: 100 - 200pm, Mon and Wed
+| --- | --- |
+| Instructor   | Professor Michael Landis |
+| Class hours  | 830am - 1200pm, Mon and Wed |
+| Office hours | 100 - 200pm, Mon and Wed |
 
 Office: 210 Rebstock
 
