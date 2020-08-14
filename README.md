@@ -20,10 +20,13 @@ Fall 2020
 * [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
 
 ### Getting started
-See the [getting started](getting_started.md) page provides brief tutorials for using course resources and techonologies.
+The [getting started](getting_started.md) guide provides instructions for how to use course resources and techonologies for the [Lab Assignments](labs.md) and the [Course Project](project.md).
 
-### Labs
-Labs will be posted [here](labs.md) on a weekly basis. This page also contains information on how to submit labs
+### Lectures
+Lecture slides, recordings, and other materials are located [here](lectures.md).
 
-### Course project
+### Lab Assignments
+Labs will be posted [here](labs.md) on a weekly basis. This page also contains information on how to submit labs through our [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020) group.
+
+### Course Project
 As part of this course, each student will work on a project to build a bioinformatics pipeline to analyze the evolutionary spread of the coronavirus (SARS-CoV-19). The [project](project.md) page defines the scope of the pipeline project and offers ideas and helper code for how to proceed.
