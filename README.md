@@ -3,12 +3,17 @@
 This page contains all information for Practical Bioinformatics (Biol 4220).
 
 
-### 
+###  Info
 Instructor: Professor Michael Landis
+
 Course hours
+
 Office hours
+
 Room
-Email
+
+Email: [michael.landis@wustl.edu]
+
 Phone
 
 Link to [Canvas]()
