@@ -22,11 +22,7 @@ This page contains all information for Practical Bioinformatics (Biol 4220).
 * [GitHub Classroom]()
 
 ### Getting started
-See the [getting started](getting_started.md) page for help on topics, such as:
-- using VPN
-- accessing the virtual machines
-- using Github
-- submitting assignments
+See the [getting started](getting_started.md) page provides brief tutorials for using course resources and techonologies.
 
 ### Labs
 Labs will be posted [here](labs.md) on a weekly basis. This page also contains information on how to submit labs
