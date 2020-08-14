@@ -7,7 +7,7 @@
 * Office room: 210 Rebstock
 
 ###  Contact info
-* Instructor: Professor Michael Landis
+* Instructor: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
 
