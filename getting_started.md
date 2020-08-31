@@ -27,7 +27,8 @@ Windows users will need to install an SSH client to use various resources that a
 
 - [PuTTy](https://www.putty.org/)
 
-SSH is installed by default on Unix-based operating systems, such as Linux and Mac OS X.
+
+Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections.
 
 ---
 
