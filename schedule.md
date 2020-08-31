@@ -1,7 +1,7 @@
 
 ## Schedule
 
-This file contains a list of all of the labs for the semester. Links to labs will be added when they become due.
+This file contains a list of all of the labs for the semester. Links to labs will be added when they become due. The :pig: marker tells us how we're progressing through the semester.
 
 | current | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
