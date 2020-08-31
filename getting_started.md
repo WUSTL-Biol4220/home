@@ -1,10 +1,9 @@
 # "How To" guide
 
 This document serves as a quick reference for "how to" do basic tasks:
-- Install the WUSTL virtual private network (VPN) software
-- Install the secure shell (SSH) client (for Windows users)
-- Connect to the WUSTL VPN
-- Connect to your Biol 4220 virtual machine (VM)
+- Virtual private network (VPN)
+- Secure shell (SSH)
+- Lab virtual machines (VM)
 - Connect to the WUSTL cluster
 - Create a GitHub Classroom account
 - Accept your lab assignment on GitHub Classroom
@@ -14,36 +13,15 @@ Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in t
 
 ---
 
-## Install the WUSTL virtual private network (VPN) software
-
-You will need to download and install the Cisco AnyConnect VPN client software. Follow the WUSTL IT instructions [here](https://insideartsci.wustl.edu/connect-network-through-vpn).
-
-Mac users running the Catalina OS (10.15) will install [this](https://wustl.box.com/s/89aq55v287hfnryfigdxig1j6k1v7fyl).
-
-All other Windows and Mac users will install by following this [link](https://vpn.wustl.edu/artsci).
-
-
-
----
-
-## Install the secure shell (SSH) client (for Windows users)
-
-Windows users will need to install an SSH client to use various resources that are essential to completing the labs.
-
-- [PuTTy](https://www.putty.org/)
-
-
-Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections.
-
----
-
-## Connect to the WUSTL VPN
+## Virtual private network (VPN)
 
 VPN allows remote users with proper credentials to access private network resources, even when off-campus.
 
-Connecting to the WUSTL VPN requires three steps.
+To use VPN, you'll will need to download and install the Cisco AnyConnect VPN client software. Follow the WUSTL IT instructions [here](https://insideartsci.wustl.edu/connect-network-through-vpn).
+- Mac users running the Catalina OS (10.15) will install [this](https://wustl.box.com/s/89aq55v287hfnryfigdxig1j6k1v7fyl).
+- All other Windows and Mac users will install by following this [link](https://vpn.wustl.edu/artsci).
 
-Once the software is installed, you'll then initiate your VPN connection. To connect to the WUSTL VPN
+Once the software is installed, to connect to the WUSTL VPN
 - Open the Cisco AnyConnect VPN Client software
 - Enter `vpn.wustl.edu/artsci` as the "VPN Service..." and click Connect
 - When prompted, enter your WUSTL id for the Username and your WUSTL password for the Password.
@@ -53,9 +31,19 @@ Once the software is installed, you'll then initiate your VPN connection. To con
 
 Please refer to the WUSTL [Connect](https://it.wustl.edu/items/connect/) resources if you have problems connecting. If your problem persists, please let the instructor know.
 
+---
+
+## Secure shell (SSH) 
+
+SSH is an encrypted protocol for securely communicating with devices on the network. We will connect to several key computational resources, such as our lab virtual machines and the WUSTL cluster, using VPN and SSH in combination.
+
+Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections through terminal.
+
+Windows users will need to install an SSH client to use various resources that are essential to completing the labs. Labs will generally assume that Windows users are connecting with [PuTTy](https://www.putty.org/).
+
 --- 
 
-## Connect to your Biol 4220 virtual machine (VM)
+## Lab virtual machines (VM)
 
 Our class will use VMs to complete laboratory exercises. Each VM is preinstalled with Ubuntu (version XX) and the various packages (XXX) that are necessary to complete the lab assignments throughout the course.
 
@@ -83,6 +71,8 @@ Once you connect, you should see the following prompt
 ```
 michael.landis@host:~
 ```
+
+Lab VMs are preinstalled with (hopefully) all of the necessary software to complete the lab exercises. For various reasons, you will not have full admin access over your Lab VMs. If you find your Lab VM is no longer in a fully operational state, please let the instructor know so we can either fix your issue or provide you with a new VM.
 
 ---
 
