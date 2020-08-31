@@ -11,7 +11,7 @@ This document explains how to:
 - Complete your lab assignment on your VM
 - Submit your assignment on GitHub Classroom
 
-Technical notes for how to use VPN, VMs, `ssh`, `git`, etc. are provided in the lecture and lab notes.
+Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in the [lecture and lab notes](schedule.md).
 
 ---
 
@@ -83,7 +83,14 @@ michael.landis@host:~
 
 ## Connect to the WUSTL cluster
 
-Research Infrastructure Services, or [RIS](ris.wustl.edu), provides WUSTL with high performance computing (HPC) services.  We'll be using the WUSTL HPC for XXX. 
+Many bioinformatics analyses are designed to be run using teams of computational servers, called clusters. Research Infrastructure Services, or [RIS](ris.wustl.edu), provides WUSTL with access to clusters and other high performance computing (HPC) services. We'll use the RIS HPC to learn more about processing bioinformatics tasks with clusters as part of our lecture and lab exercises.
+
+To use RIS HPC, you will need to
+1. Create a RIS HPC account
+2. SSH to RIS HPC
+3. Submit and process jobs
+
+Details for how run analyses with RIS HPC are covered in [Lab X]().
 
 ---
 
