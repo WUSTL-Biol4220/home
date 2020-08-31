@@ -16,7 +16,7 @@ Fall 2020
 ### Course resources
 * [Syllabus](https://docs.google.com/document/d/1TYE10600VUhCyq51_h_9flVUhkCF-IQCE9SnQKRGRGo/edit?usp=sharing)
 * [Lecture & lab schedule](schedule.md)
-* [How To guide](getting_started.md)
+* ["How To" guide](getting_started.md)
 * [Course Project](project.md)
 * [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
 * [Canvas](https://wustl.instructure.com/courses/54531)
