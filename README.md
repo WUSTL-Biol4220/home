@@ -3,9 +3,9 @@
 
 ### Course info
 * Zoom meeting: [link]() (updated for Aug 14)
-* Class hours: 830am - 1200pm, Mon and Wed
+* Class hours: 08:30a - 12:00p, Mon and Wed
 * Class room: Meeting online due to Covid-19
-* Office hours: 100 - 200pm, Mon and Wed
+* Office hours: 01:00p - 02:00p, Mon and Wed
 * Office room: 210 Rebstock
 
 ### Contact info
