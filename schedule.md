@@ -18,7 +18,7 @@ This file contains a list of all of the labs for the semester. Links to labs wil
 |         | Mon, Oct 19 |         | Lab 5A |  |  |
 |         | Wed, Oct 21 |         | Lab 5B |  |  |
 |         | Mon, Oct 26 |         | Lab 6A |  |  |
-|         | Wed, Oct 28 |         | Lab 6B |  |  **Exam 1** |
+|         | Wed, Oct 28 |         |         |  |  **Exam 1** |
 |         | Mon, Nov 02 |         | Lab 7A |  |  |
 |         | Wed, Nov 04 |         | Lab 7B |  | **Project approvals** |
 |         | Mon, Nov 09 |         | Lab 8A |  |  |
@@ -33,5 +33,5 @@ This file contains a list of all of the labs for the semester. Links to labs wil
 |         | Wed, Dec 09 |         | Lab 12B |  |   |
 |         | Mon, Dec 11 |         | Lab 13A |  |   |
 |         | Wed, Dec 16 |         | Lab 13B |  |   |
-|         | Mon, Dec 18 |         | Lab 14A |  | **Project presentations**  |
-|         | Wed, Dec 20 |         | Lab 14B |  | **Exam 2**  |
+|         | Mon, Dec 18 |         |         |  | **Project presentations**  |
+|         | Wed, Dec 20 |         |         |  | **Exam 2**  |
