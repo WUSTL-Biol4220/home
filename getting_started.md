@@ -107,44 +107,41 @@ Here is what the account creation prompt looks like:
 
 ---
 
-## Load your assignment on to your VM
+## Accept a lab assignment
 
 Lab assignments will be posted to the Biol 4220 [GitHub Classroom]() near the start of each class. When a new assignment is posted, students will receive an email with an invitation link to begin their assignment.
 
+You must accept the assignment in order to complete and submit it properly! At first, this procedure might feel burdensome, but it will become easier as the course proceeds.
+
+Accepting the assignment will tell GitHub Classroom to create a personal copy of the lab assignment for you as a new GitHub workspace, called a *repository*.
+
 When you first click on the invite link, you will need to "Authorize GitHub Classroom App" to have permission to interact with your primary GitHub account:
-- <img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_authorize.png" width="150"/>
+<img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_authorize.png" width="150"/>
 
 Next, you'll select your name from the course roster, and confirm that you are this person:
-- <img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_confirm_name.png" width="150"/>
+<img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_confirm_name.png" width="150"/>
 
 You'll then be asked to accept the assignment:
-- <img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_accept_assignment.png" width="150"/>
+<img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_accept_assignment.png" width="150"/>
 
 Once you accept, GitHub Classroom will create a personal repository for your work for the lab exercise:
-- <img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_create_repo.png" width="150"/>
+<img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_create_repo.png" width="150"/>
 
-Upon completion, GitHub Classroom will provide a link to your new workspace on `github.com`:
-- <img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_assignment_accepted.png" width="150"/>
+Upon completion, GitHub Classroom will provide a link to your new GitHub repository for the lab assignment:
+<img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_assignment_accepted.png" width="150"/>
 
-Clicking the second link will take you to your lab workspace:
-- <img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_assignment_repo.png" width="150"/>
-
-
-
+Clicking the second link will take you to the GitHub repository for your lab assignment:
+<img src="https://github.com/WUSTL-Biol4220/how_to/raw/master/assets/github_class_assignment_repo.png" width="150"/>
 
 ---
 
 ## Complete your lab assignment on your VM
 
-To complete your lab assignment, you will need to
-- clone a copy of your repository to your VM
-- follow the lab instructions
-- commit any changes to your repository as you go along
-
-
----
-
-## Submit your lab assignment to GitHub Classroom
+After you have accepted a lab assignment, you will need to
+1. copy the GitHub repository for the lab assignment to your VM
+2. complete the lab instructions
+3. save any completed work to the repository for the lab assignment
+4. submit your repository for grading on GitHub Classroom
 
 Assignments must be submitted within 7 calendar-days (168 hours) from the start of a given class to receive full credit.
 
