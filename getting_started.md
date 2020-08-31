@@ -1,6 +1,6 @@
-# How to...
+# "How To" guide
 
-This document explains how to:
+This document serves as a quick reference for "how to" do basic tasks:
 - Install the WUSTL virtual private network (VPN) software
 - Install the secure shell (SSH) client (for Windows users)
 - Connect to the WUSTL VPN
@@ -17,6 +17,12 @@ Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in t
 ## Install the WUSTL virtual private network (VPN) software
 
 You will need to download and install the Cisco AnyConnect VPN client software. Follow the WUSTL IT instructions [here](https://insideartsci.wustl.edu/connect-network-through-vpn).
+
+Mac users running the Catalina OS (10.15) will install [this](https://wustl.box.com/s/89aq55v287hfnryfigdxig1j6k1v7fyl).
+
+All other Windows and Mac users will install by following this [link](https://vpn.wustl.edu/artsci).
+
+
 
 ---
 
