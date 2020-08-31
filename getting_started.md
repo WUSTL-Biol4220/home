@@ -4,8 +4,8 @@ This document explains how to:
 - Install the WUSTL virtual private network (VPN) software
 - Install the secure shell (SSH) client (for Windows users)
 - Connect to the WUSTL VPN
-- Connect to the Biol 4220 virtual machine (VM) using SSH
-- Connect to the WUSTL cluster hosted by Research Infrastructure Services (RIS)
+- Connect to your Biol 4220 virtual machine (VM)
+- Connect to the WUSTL cluster
 - Create a GitHub Classroom account
 - Accept your lab assignment on GitHub Classroom
 - Complete your lab assignment on your VM
@@ -50,7 +50,7 @@ Please refer to the WUSTL [Connect](https://it.wustl.edu/items/connect/) resourc
 
 --- 
 
-## Connect to the Biol 4220 virtual machine (VM) using SSH
+## Connect to your Biol 4220 virtual machine (VM)
 
 Our class will use VMs to complete laboratory exercises. Each VM is preinstalled with Ubuntu (version XX) and the various packages (XXX) that are necessary to complete the lab assignments throughout the course.
 
