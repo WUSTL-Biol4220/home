@@ -1,5 +1,5 @@
 ## Practical Bioinformatics (Biol 4220)
-Fall 2020
+*Fall 2020*
 
 ### Course info
 * Zoom meeting: [link]() (updated for Aug 14)
