@@ -8,7 +8,6 @@ This document explains how to:
 - Connect to the WUSTL cluster
 - Create a GitHub Classroom account
 - Accept your lab assignment on GitHub Classroom
-- Complete your lab assignment on your VM
 - Submit your assignment on GitHub Classroom
 
 Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in the [lecture and lab notes](schedule.md).
