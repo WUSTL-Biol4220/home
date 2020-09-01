@@ -158,5 +158,8 @@ If your GitHub username is `mlandis` and the lab your completing is `lab-1a`, th
 While completing your assignment, you can save your work using the commands `git add <filename>` and `git commit`. For more details on how to use `git` to save your work, see the Lab XX.
 
 When you're ready to submit your lab assignment
-1. 
+1. Make sure all of your files are are saved and committed
+2. Update your GitHub repository with your changes: `git push`
+3. Visit the GitHub Classroom to see if your lab is correct: https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020/assignments/example-lab
+  a. If your 
 
