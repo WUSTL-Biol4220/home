@@ -146,12 +146,12 @@ After you have accepted a lab assignment, you will need to
 
 Assignments must be submitted within 7 calendar-days (168 hours) from the start of a given class to receive full credit.
 
-If your GitHub username is `mlandis` and the lab your completing is `lab-1a`, then the 
+If your GitHub username is `mlandis` and the lab your completing is `example-lab`, then the 
 
 1. SSH into your VM and log in
 2. Enter to your project directory: `cd ~/projects`
-3. Clone a copy of your repository for the lab assignment: `git clone git@github.com:WUSTL-Biol4220/lab-1a-mlandis.git`
-4. Enter your new lab assignment directory: `cd lab-1a-mlandis`
+3. Clone a copy of your repository for the lab assignment: `git clone git@github.com:WUSTL-Biol4220/example-lab-mlandis.git`
+4. Enter your new lab assignment directory: `cd example-lab-mlandis`
 5. Carefully read the `README.md` file and follow the instructions: `nano README.md`
 6. Complete your laboratory assignment!
 
@@ -160,17 +160,14 @@ While completing your assignment, you can save your work using the commands `git
 When you're ready to submit your lab assignment
 1. Make sure all of your files are are saved and committed
 2. Update your GitHub repository with your changes: `git push`
-3. Check your repository to see if your newest commit passed any tests
-  a. Do you see a red 'X' by your newest commit?
-    i. Click the 'X'<br>
+3. Visit your repository: https://github.com/WUSTL-Biol4220/example-lab-mlandis
+  - If see a red 'X' by your newest commit, click the 'X'<br>
   <img src="assets/github_commit_fail.png" width="200"/>
-    ii. Expand the 'autograding' step to identify the problem<br>
+  - Expand the 'autograding' step to identify the problem<br>
   <img src="assets/github_test_fail.png" width="200"/>
-    iii. The test expects `output.txt` to contain `Hello, world!` not `Jello, warld!`
-
-  b. Do you see a green checkmark next to the newest commit?
-    i. Check the checkmark<br>
+  - The test expects `output.txt` to contain `Hello, world!` not `Jello, warld!`
+  - If you see a green checkmark next to the newest commit, click the checkmark<br>
     <img src="assets/github_commit_succeed.png" width="200"/>
-    ii. Expand the 'autograding' step, and enjoy the celebratory fireworks<br>
+  - Expand the 'autograding' step, and enjoy the celebratory fireworks<br>
     <img src="assets/github_test_succeed.png" width="200"/>
 
