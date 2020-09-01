@@ -160,6 +160,17 @@ While completing your assignment, you can save your work using the commands `git
 When you're ready to submit your lab assignment
 1. Make sure all of your files are are saved and committed
 2. Update your GitHub repository with your changes: `git push`
-3. Visit the GitHub Classroom to see if your lab is correct: https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020/assignments/example-lab
-  a. If your 
+3. Check your repository to see if your newest commit passed any tests
+  a. Do you see a red 'X' by your newest commit?
+    i. Click the 'X'<br>
+  <img src="assets/github_commit_fail.png" width="200"/>
+    ii. Expand the 'autograding' step to identify the problem<br>
+  <img src="assets/github_test_fail.png" width="200"/>
+    iii. The test expects `output.txt` to contain `Hello, world!` not `Jello, warld!`
+
+  b. Do you see a green checkmark next to the newest commit?
+    i. Check the checkmark<br>
+    <img src="assets/github_commit_succeed.png" width="200"/>
+    ii. Expand the 'autograding' step, and enjoy the celebratory fireworks<br>
+    <img src="assets/github_test_succeed.png" width="200"/>
 
