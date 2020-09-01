@@ -146,4 +146,17 @@ After you have accepted a lab assignment, you will need to
 
 Assignments must be submitted within 7 calendar-days (168 hours) from the start of a given class to receive full credit.
 
-There are two important steps to submitting lab
+If your GitHub username is `mlandis` and the lab your completing is `lab-1a`, then the 
+
+1. SSH into your VM and log in
+2. Enter to your project directory: `cd ~/projects`
+3. Clone a copy of your repository for the lab assignment: `git clone git@github.com:WUSTL-Biol4220/lab-1a-mlandis.git`
+4. Enter your new lab assignment directory: `cd lab-1a-mlandis`
+5. Carefully read the `README.md` file and follow the instructions: `nano README.md`
+6. Complete your laboratory assignment!
+
+While completing your assignment, you can save your work using the commands `git add <filename>` and `git commit`. For more details on how to use `git` to save your work, see the Lab XX.
+
+When you're ready to submit your lab assignment
+1. 
+
