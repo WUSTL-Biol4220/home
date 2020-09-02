@@ -16,7 +16,7 @@ Welcome to the home page for the **Fall 2020** class of Biol 4220!
 
 ### Course resources
 * [Syllabus](https://docs.google.com/document/d/1TYE10600VUhCyq51_h_9flVUhkCF-IQCE9SnQKRGRGo/edit?usp=sharing)
-* [Course schedule (lectures, labs, etc.)](course_schedule.md)
+* [Course lecture & lab schedule](course_schedule.md)
 * ["How To" guide](how_to_guide.md)
 * [Course Project](course_project.md)
 * [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
