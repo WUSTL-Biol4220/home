@@ -13,7 +13,7 @@ Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in t
 
 ---
 
-## 1. Virtual private network (VPN)
+## Virtual private network (VPN)
 
 VPN allows remote users with proper credentials to access private network resources, even when off-campus.
 
