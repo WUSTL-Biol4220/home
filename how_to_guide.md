@@ -29,6 +29,10 @@ Once the software is installed, to connect to the WUSTL VPN
 
 <img src="assets/vpn_connect.png" width="250"/>
 
+- If the connection succeeds, the Cisco VPN client window will read `Connected to vpn.wustl.edu/artsci` with a green checkmark.
+
+<img src="assets/vpn_connect_success.png" width="250"/>
+
 Please refer to the WUSTL [Connect](https://it.wustl.edu/items/connect/) resources if you have problems connecting. If your problem persists, please let the instructor know.
 
 ---
