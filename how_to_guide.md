@@ -5,9 +5,9 @@ This document serves as a quick reference for "how to" do basic tasks:
 - Secure shell (SSH)
 - Lab virtual machines (VM)
 - Connect to the WUSTL cluster
-- Create a GitHub Classroom account
-- Accept your lab assignment on GitHub Classroom
-- Submit your assignment on GitHub Classroom
+- Create a GitHub account
+- Accept your GitHub Classroom lab assignment
+- Submit your GitHub Classroom lab assignment
 
 Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in the [course lecture & lab notes](course_schedule.md).
 
@@ -58,7 +58,7 @@ Students who are off-campus will need to first connect to the [VPN](https://gith
 Students that are on-campus or connected through the VPN can access their VM is through [SSH](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh).
 
 To log in to your VM, you'll need to supply three key pieces of information
-1. `ip_address` -- the unique IP address assigned to your VM; format is `128.252.xxx.xxx`
+1. `ip_address` -- the unique IP address assigned to your VM; let's assume that our VM has the IP address `128.252.111.111`
 2. `username` -- your VM username, which is identical to your WUSTL id
 3. `password` -- your VM password, which you'll set upon first login
 
@@ -74,7 +74,7 @@ To log in to your VM, you'll need to supply three key pieces of information
 
 At this point, you will have initiated your SSH connection, you should be prompted to enter your password
 ```
-mlandis@128.252.89.47's password:
+mlandis@128.252.111.111's password:
 ```
 after correctly entering your password, you will see a welcome message similar to
 ```
@@ -133,7 +133,7 @@ Here is what the account creation prompt looks like:
 
 ---
 
-## Accept a lab assignment
+## Accept your GitHub Classroom lab assignment
 
 Lab assignments will be posted to the Biol 4220 [GitHub Classroom]() near the start of each class. When a new assignment is posted, students will receive an email with an invitation link to begin their assignment.
 
@@ -167,7 +167,7 @@ Clicking the second link will take you to the GitHub repository for your lab ass
 
 ---
 
-## Complete your lab assignment on your VM
+## Complete your GitHub Classroom lab assignment
 
 After you have accepted a lab assignment, you will need to
 1. copy the GitHub repository for the lab assignment to your VM
