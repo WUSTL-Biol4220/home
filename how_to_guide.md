@@ -39,7 +39,7 @@ Please refer to the WUSTL [Connect](https://it.wustl.edu/items/connect/) resourc
 
 ## Secure shell (SSH) 
 
-SSH is an encrypted protocol for securely communicating with devices on the network. We will connect to several key computational resources, such as our lab virtual machines and the WUSTL cluster, using VPN and SSH in combination.
+SSH is an encrypted protocol for securely communicating with devices on the network. We will connect to several key computational resources, such as our lab virtual machines and the WUSTL cluster, using VPN and SSH in combination.  You can read more about SSH [here](https://en.wikipedia.org/wiki/Secure_Shell).
 
 * **Linux and Mac OS X.** Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections through terminal. To open an SSH connection to a particular IP address (e.g. `192.168.1.1`), you will open a terminal session, then type `ssh  192.168.1.1` and press enter. If you execute `ssh` without providing a target address, the computer will report different options for how you might use `ssh` (i.e. output reads `usage: ssh` followed by various flags). Please notify the instructor if your command prompt instead reports `command not found: ssh`.
 
@@ -51,19 +51,19 @@ After initiating an SSH connection with a remote host, the users typically needs
 
 ## Lab virtual machines (VM)
 
-Our class will use VMs to complete laboratory exercises. Each VM is preinstalled with Ubuntu (version XX) and the various packages (XXX) that are necessary to complete the lab assignments throughout the course.
+Our class will use virtual machines (or VMs) to complete laboratory exercises. Every student will be given their own personal VM to use. Each VM is preinstalled with Ubuntu (20.04.1 LTS, aka "Focal Fossa") along with the software packages that are necessary to complete the course's lab assignments. For security purposes, your VM is only accessible through the WUSTL private network.
 
-Every student will be given their own personal VM to use. Students will connect to their VM principally using the *secure shell* network protocol (or ssh). You can read more about ssh [here](https://en.wikipedia.org/wiki/Secure_Shell).
+Students who are off-campus will need to first connect to the [VPN](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#virtual-private-network-vpn) before they can connect to their VM.
+ 
+Students that are on-campus or connected through the VPN can access their VM is through [SSH](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh).
 
-To log in, you'll need to supply three key pieces of information
-1. `ip_address` -- the unique IP address assigned to your VM; format is `172.21.xxx.xxx`
+To log in to your VM, you'll need to supply three key pieces of information
+1. `ip_address` -- the unique IP address assigned to your VM; format is `128.252.xxx.xxx`
 2. `username` -- your VM username, which is identical to your WUSTL id
 3. `password` -- your VM password, which you'll set upon first login
 
-If you are off-campus, you will need to first connect to the WUSTL VPN.
-
 ### SSH for Linux and Mac users
-1. Open terminal
+1. Open the Terminal program
 2. Type `ssh username@ip_address` into the command prompt and press enter
 
 ### SSH for Windows users
@@ -72,13 +72,11 @@ If you are off-campus, you will need to first connect to the WUSTL VPN.
 3. Enter `22` into the "Port" field
 4. Click "Open"
 
-Once you connect, you should see the following prompt
-
+At this point, you will have initiated your SSH connection, you should be prompted to enter your password
 ```
 mlandis@128.252.89.47's password:
-mlandis@biol4220-mlandis:~$
 ```
-after entering your password, you will see a welcome message similar to
+after correctly entering your password, you will see a welcome message similar to
 ```
 Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-45-generic x86_64)
 
@@ -102,6 +100,8 @@ mlandis@biol4220-mlandis:~$
 ```
 
 This last line (`mlandis@biol4220-mlandis:~$`) indicates that you have successfully SSH'd into your lab VM, and that it is ready to receive your commands!
+
+If you cannot establish an SSH connection with your VM, please contact the instructor for help.
 
 Lab VMs are preinstalled with all of the software needed to complete the lab exercises. For various reasons, you will not have full admin access over your Lab VMs. If you need additional software installed, or if you find your Lab VM is no longer in a fully operational state, please let the instructor know so we can either fix your issue or provide you with a new VM.
 
