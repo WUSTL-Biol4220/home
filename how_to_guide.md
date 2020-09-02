@@ -79,6 +79,7 @@ mlandis@biol4220-mlandis:~$
 after entering your password, you will see a welcome message similar to
 ```
 Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-45-generic x86_64)
+
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
@@ -89,12 +90,12 @@ Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-45-generic x86_64)
 
    https://microk8s.io/ has docs and details.
 
-44 updates can be installed immediately.
+14 updates can be installed immediately.
 0 of these updates are security updates.
 To see these additional updates run: apt list --upgradable
 
 Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Wed Sep  2 16:05:47 2020 from 172.21.136.99
+Last login: Wed Sep  2 16:18:16 2020 from 172.21.136.99
 mlandis@biol4220-mlandis:~$
 ```
 
