@@ -73,10 +73,34 @@ If you are off-campus, you will need to first connect to the WUSTL VPN.
 Once you connect, you should see the following prompt
 
 ```
+mlandis@128.252.89.47's password:
+mlandis@biol4220-mlandis:~$
+```
+after entering your password, you will see a welcome message similar to
+```
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-45-generic x86_64)
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Kubernetes 1.19 is out! Get it in one command with:
+
+     sudo snap install microk8s --channel=1.19 --classic
+
+   https://microk8s.io/ has docs and details.
+
+44 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Wed Sep  2 16:05:47 2020 from 172.21.136.99
 mlandis@biol4220-mlandis:~$
 ```
 
-Lab VMs are preinstalled with (hopefully) all of the necessary software to complete the lab exercises. For various reasons, you will not have full admin access over your Lab VMs. If you find your Lab VM is no longer in a fully operational state, please let the instructor know so we can either fix your issue or provide you with a new VM.
+This last line (`mlandis@biol4220-mlandis:~$`) indicates that you have successfully SSH'd into your lab VM, and that it is ready to receive your commands!
+
+Lab VMs are preinstalled with all of the software needed to complete the lab exercises. For various reasons, you will not have full admin access over your Lab VMs. If you need additional software installed, or if you find your Lab VM is no longer in a fully operational state, please let the instructor know so we can either fix your issue or provide you with a new VM.
 
 ---
 
