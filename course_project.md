@@ -1,4 +1,4 @@
-# WUSTL Biol 4220 Course Project
+# Course project
 
 ## Overview
 
