@@ -41,9 +41,9 @@ Please refer to the WUSTL [Connect](https://it.wustl.edu/items/connect/) resourc
 
 SSH is an encrypted protocol for securely communicating with devices on the network. We will connect to several key computational resources, such as our lab virtual machines and the WUSTL cluster, using VPN and SSH in combination.
 
-Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections through terminal.
+Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections through terminal. To open an SSH connection to a particular IP address (e.g. `192.168.1.1`), you will open a terminal session, then type `ssh  192.168.1.1` and press enter. If you execute `ssh` without providing a target address, the computer will report different options for how you might use `ssh` (i.e. output reads `usage: ssh` followed by various flags). Please notify the instructor if your command prompt instead reports `command not found: ssh`.
 
-Windows users will need to install an SSH client to use various resources that are essential to completing the labs. Labs will generally assume that Windows users are connecting with [PuTTy](https://www.putty.org/).
+Windows users will need to install an SSH client to use various resources that are essential to completing the labs. Labs will generally assume that Windows users are connecting with [PuTTy](https://www.putty.org/). To open an SSH session with PuTTY, you will double-click the application, enter the appropriate address into the "Host Name or IP address" field, enter `22` into the "Port" field, then click "Open".
 
 --- 
 
