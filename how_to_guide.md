@@ -73,7 +73,7 @@ If you are off-campus, you will need to first connect to the WUSTL VPN.
 Once you connect, you should see the following prompt
 
 ```
-michael.landis@host:~
+mlandis@biol4220-mlandis:~$
 ```
 
 Lab VMs are preinstalled with (hopefully) all of the necessary software to complete the lab exercises. For various reasons, you will not have full admin access over your Lab VMs. If you find your Lab VM is no longer in a fully operational state, please let the instructor know so we can either fix your issue or provide you with a new VM.
