@@ -57,22 +57,26 @@ Students who are off-campus will need to first connect to the [VPN](https://gith
  
 Students that are on-campus or connected through the VPN can access their VM is through [SSH](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh).
 
-To log in to your VM, you'll need to supply three key pieces of information
-1. `ip_address` -- the unique IP address assigned to your VM; let's assume that our VM has the IP address `128.252.111.111`
+To log in to your VM, you'll need to supply three key pieces of information:
+1. `ip_address` -- the unique IP address assigned to your VM
 2. `username` -- your VM username, which is identical to your WUSTL id
 3. `password` -- your VM password, which you'll set upon first login
 
+Each student will have their own `username`, `password`, and `ip_address`. In the below examples, let's pretend the student's username is `mlandis` and their IP is IP address `128.252.111.111`
+
 ### SSH for Linux and Mac users
 1. Open the Terminal program
-2. Type `ssh username@ip_address` into the command prompt and press enter
+2. Type `ssh mlandis@128.252.111.111` into the command prompt and press enter
 
 ### SSH for Windows users
 1. Open PuTTY
-2. Enter `address` into the "Host Name or IP address" field
+2. Enter `128.252.111.111` into the "Host Name or IP address" field
 3. Enter `22` into the "Port" field
 4. Click "Open"
 
-At this point, you will have initiated your SSH connection, you should be prompted to enter your password
+At this point, you will have initiated your SSH connection,
+
+you should be prompted to enter your password
 ```
 mlandis@128.252.111.111's password:
 ```
@@ -101,7 +105,14 @@ mlandis@biol4220-mlandis:~$
 
 This last line (`mlandis@biol4220-mlandis:~$`) indicates that you have successfully SSH'd into your lab VM, and that it is ready to receive your commands!
 
-If you cannot establish an SSH connection with your VM, please contact the instructor for help.
+To terminate your SSH session, type `exit` at the command prompt
+```
+mlandis@biol4220-mlandis:~$ exit
+logout
+Connection to 128.252.111.111 closed.
+```
+
+If you can't establish an SSH connection with your VM, please contact the instructor for help.
 
 Lab VMs are preinstalled with all of the software needed to complete the lab exercises. For various reasons, you will not have full admin access over your Lab VMs. If you need additional software installed, or if you find your Lab VM is no longer in a fully operational state, please let the instructor know so we can either fix your issue or provide you with a new VM.
 
