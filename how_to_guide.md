@@ -1,13 +1,13 @@
 # "How To" guide
 
 This document serves as a quick reference for "how to" do basic tasks:
-- Virtual private network (VPN)
-- Secure shell (SSH)
-- Lab virtual machines (VM)
-- Connect to the WUSTL cluster
-- Create a GitHub account
-- Accept your GitHub Classroom lab assignment
-- Submit your GitHub Classroom lab assignment
+- [Virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#virtual-private-network-vpn)
+- [Secure shell (SSH)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh)
+- [Lab virtual machines (VM)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#lab-virtual-machines-vm)
+- [Connect to the WUSTL cluster](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#connect-to-the-wustl-cluster)
+- [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#create-a-github-account)
+- [Accept your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#accept-your-github-classroom-lab-assignment)
+- [Submit your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#complete-your-github-classroom-lab-assignment)
 
 Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in the [course lecture & lab notes](course_schedule.md).
 
