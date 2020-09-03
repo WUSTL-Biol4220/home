@@ -5,8 +5,8 @@ This file contains a list of all of the labs for the semester. Links to labs wil
 
 | current | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
-|         | Mon, Sep 14 |         | [Lab 1A](https://github.com/WUSTL-Biol4220/lab_1A) | | Introduction; overview of hardware, operating<br>systems, networks, and servers |
-| :pig:   | Wed, Sep 16 |         | [Lab 1B](https://github.com/WUSTL-Biol4220/lab_1B) | | UNIX: shell, commands<br>git: basics|
+|   :pig: | Mon, Sep 14 |         | [Lab 1A](https://github.com/WUSTL-Biol4220/lab_1A) | | Introduction; overview of hardware, operating<br>systems, networks, and servers |
+|         | Wed, Sep 16 |         | Lab 1B | | UNIX: shell, commands<br>git: basics|
 |         | Mon, Sep 21 |         | Lab 2A |  | UNIX: files and strings, file formats,<br>text processing, grep |
 |         | Wed, Sep 23 |         | Lab 2B |  | UNIX: regular expressions (regex), awk, sed |
 |         | Mon, Sep 28 |         | Lab 3A |  | Biology: molecular sequence evolution |
