@@ -24,14 +24,14 @@ We will be borrowing some ideas from [https://github.com/roblanf/sarscov2phylo](
 
 ## 1. Parse user input for pipeline settings
 
---
+---
 
 ## 2. Download sequences
 
 Users should be able to provide a list of accession numbers. The script will then query NCBI to download those files.
 
 
---
+---
 
 ## 3. Align sequences
 
@@ -44,7 +44,7 @@ Extra ideas: allow users to use different software with different arguments.
 Input file: unaligned.fasta
 Output file: alignment.fasta, report.txt
 
---
+---
 
 ## 4. Characterize variation in molecular alignment
 
@@ -63,7 +63,7 @@ Input file: alignment.fasta
 Output file: various report.txt
 
 
---
+---
 
 ## 5. Estimate phylogenetic tree from alignment
 
@@ -72,7 +72,7 @@ Run a simple analysis, generate quick phylogeny plot
 Input file: alignment.fasta
 Output file: phylogeny.tre, figure
 
---
+---
 
 ## 6. Test for signatures of positive selection
 
@@ -85,7 +85,7 @@ Reformat output from PAML so it's readable
 Input file: alignment.fasta, phylogeny.tre
 Output file: PAML results
 
---
+---
 
 ## 7. Generate output files
 
