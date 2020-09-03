@@ -3,11 +3,11 @@
 Welcome to the home page for the **Fall 2020** class of Biol 4220!
 
 ### Course resources
-* [Syllabus](https://docs.google.com/document/d/1TYE10600VUhCyq51_h_9flVUhkCF-IQCE9SnQKRGRGo/edit?usp=sharing)
 * [Course lecture & lab schedule](course_schedule.md)
+* [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
 * ["How To" guide](how_to_guide.md)
 * [Course Project](course_project.md)
-* [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
+* [Syllabus](https://docs.google.com/document/d/1TYE10600VUhCyq51_h_9flVUhkCF-IQCE9SnQKRGRGo/edit?usp=sharing)
 * [Canvas](https://wustl.instructure.com/courses/54531)
 
 ### Course info
