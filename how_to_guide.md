@@ -1,13 +1,13 @@
 # "How To" guide
 
 This document serves as a quick reference for "how to" do basic tasks:
-- Virtual private network (VPN)
-- Secure shell (SSH)
-- Lab virtual machines (VM)
-- Connect to the WUSTL cluster
-- Create a GitHub Classroom account
-- Accept your lab assignment on GitHub Classroom
-- Submit your assignment on GitHub Classroom
+- [Virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#virtual-private-network-vpn)
+- [Secure shell (SSH)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh)
+- [Lab virtual machines (VM)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#lab-virtual-machines-vm)
+- [Connect to the WUSTL cluster](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#connect-to-the-wustl-cluster)
+- [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#create-a-github-account)
+- [Accept your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#accept-your-github-classroom-lab-assignment)
+- [Submit your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#complete-your-github-classroom-lab-assignment)
 
 Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in the [course lecture & lab notes](course_schedule.md).
 
@@ -29,50 +29,92 @@ Once the software is installed, to connect to the WUSTL VPN
 
 <img src="assets/vpn_connect.png" width="250"/>
 
+- If the connection succeeds, the Cisco VPN client window will read `Connected to vpn.wustl.edu/artsci` with a green checkmark.
+
+<img src="assets/vpn_connect_success.png" width="250"/>
+
 Please refer to the WUSTL [Connect](https://it.wustl.edu/items/connect/) resources if you have problems connecting. If your problem persists, please let the instructor know.
 
 ---
 
 ## Secure shell (SSH) 
 
-SSH is an encrypted protocol for securely communicating with devices on the network. We will connect to several key computational resources, such as our lab virtual machines and the WUSTL cluster, using VPN and SSH in combination.
+SSH is an encrypted protocol for securely communicating with devices on the network. We will connect to several key computational resources, such as our lab virtual machines and the WUSTL cluster, using VPN and SSH in combination.  You can read more about SSH [here](https://en.wikipedia.org/wiki/Secure_Shell).
 
-Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections through terminal.
+* **Linux and Mac OS X.** Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections through terminal. To open an SSH connection to a particular IP address (e.g. `192.168.1.1`), you will open a terminal session, then type `ssh  192.168.1.1` and press enter. If you execute `ssh` without providing a target address, the computer will report different options for how you might use `ssh` (i.e. output reads `usage: ssh` followed by various flags). Please notify the instructor if your command prompt instead reports `command not found: ssh`.
 
-Windows users will need to install an SSH client to use various resources that are essential to completing the labs. Labs will generally assume that Windows users are connecting with [PuTTy](https://www.putty.org/).
+* **Windows.** Windows users will need to install an SSH client to use various resources that are essential to completing the labs. Labs will generally assume that Windows users are connecting with [PuTTy](https://www.putty.org/). To open an SSH session with PuTTY, you will double-click the application, enter the appropriate address into the "Host Name or IP address" field, enter `22` into the "Port" field, then click "Open".
+
+After initiating an SSH connection with a remote host, the users typically needs to provide credentials (a username and password) to authenticate and establish the SSH connection. Those details are covered elsewhere.
 
 --- 
 
 ## Lab virtual machines (VM)
 
-Our class will use VMs to complete laboratory exercises. Each VM is preinstalled with Ubuntu (version XX) and the various packages (XXX) that are necessary to complete the lab assignments throughout the course.
+Our class will use virtual machines (or VMs) to complete laboratory exercises. Every student will be given their own personal VM to use. Each VM is preinstalled with Ubuntu (20.04.1 LTS, aka "Focal Fossa") along with the software packages that are necessary to complete the course's lab assignments. For security purposes, your VM is only accessible through the WUSTL private network.
 
-Every student will be given their own personal VM to use. Students will connect to their VM principally using the *secure shell* network protocol (or ssh). You can read more about ssh [here](https://en.wikipedia.org/wiki/Secure_Shell).
+Students who are off-campus will need to first connect to the [VPN](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#virtual-private-network-vpn) before they can connect to their VM.
+ 
+Students that are on-campus or connected through the VPN can access their VM is through [SSH](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh).
 
-To log in, you'll need to supply three key pieces of information
-1. `ip_address` -- the unique IP address assigned to your VM; format is `172.21.xxx.xxx`
+To log in to your VM, you'll need to supply three key pieces of information:
+1. `ip_address` -- the unique IP address assigned to your VM
 2. `username` -- your VM username, which is identical to your WUSTL id
 3. `password` -- your VM password, which you'll set upon first login
 
-If you are off-campus, you will need to first connect to the WUSTL VPN.
+Each student will have their own `username`, `password`, and `ip_address`. In the below examples, let's pretend the student's username is `mlandis` and their IP is IP address `128.252.111.111`
 
 ### SSH for Linux and Mac users
-1. Open terminal
-2. Type `ssh username@ip_address` into the command prompt and press enter
+1. Open the Terminal program
+2. Type `ssh mlandis@128.252.111.111` into the command prompt and press enter
 
 ### SSH for Windows users
 1. Open PuTTY
-2. Enter `address` into the "Host Name or IP address" field
+2. Enter `128.252.111.111` into the "Host Name or IP address" field
 3. Enter `22` into the "Port" field
 4. Click "Open"
 
-Once you connect, you should see the following prompt
+At this point, you will have initiated your SSH connection,
 
+you should be prompted to enter your password
 ```
-michael.landis@host:~
+mlandis@128.252.111.111's password:
+```
+after correctly entering your password, you will see a welcome message similar to
+```
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-45-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Kubernetes 1.19 is out! Get it in one command with:
+
+     sudo snap install microk8s --channel=1.19 --classic
+
+   https://microk8s.io/ has docs and details.
+
+14 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Wed Sep  2 16:18:16 2020 from 172.21.136.99
+mlandis@biol4220-mlandis:~$
 ```
 
-Lab VMs are preinstalled with (hopefully) all of the necessary software to complete the lab exercises. For various reasons, you will not have full admin access over your Lab VMs. If you find your Lab VM is no longer in a fully operational state, please let the instructor know so we can either fix your issue or provide you with a new VM.
+This last line (`mlandis@biol4220-mlandis:~$`) indicates that you have successfully SSH'd into your lab VM, and that it is ready to receive your commands!
+
+To terminate your SSH session, type `exit` at the command prompt
+```
+mlandis@biol4220-mlandis:~$ exit
+logout
+Connection to 128.252.111.111 closed.
+```
+
+If you can't establish an SSH connection with your VM, please contact the instructor for help.
+
+Lab VMs are preinstalled with all of the software needed to complete the lab exercises. For various reasons, you will not have full admin access over your Lab VMs. If you need additional software installed, or if you find your Lab VM is no longer in a fully operational state, please let the instructor know so we can either fix your issue or provide you with a new VM.
 
 ---
 
@@ -102,7 +144,7 @@ Here is what the account creation prompt looks like:
 
 ---
 
-## Accept a lab assignment
+## Accept your GitHub Classroom lab assignment
 
 Lab assignments will be posted to the Biol 4220 [GitHub Classroom]() near the start of each class. When a new assignment is posted, students will receive an email with an invitation link to begin their assignment.
 
@@ -136,7 +178,7 @@ Clicking the second link will take you to the GitHub repository for your lab ass
 
 ---
 
-## Complete your lab assignment on your VM
+## Complete your GitHub Classroom lab assignment
 
 After you have accepted a lab assignment, you will need to
 1. copy the GitHub repository for the lab assignment to your VM
