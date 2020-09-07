@@ -16,6 +16,9 @@ Student pipelines will incorporate seven major steps
 
 This document will provide the technical requirements for how each step is expected to operate. In the process of completing the lab exercises, we will learn how to use various programs and techniques to achieve these goals. Whenever possible, I'll make a point to emphasize how lab exercises will help you design scripts and code for these steps.
 
+Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own arguments, options, and expected output. In general
+
+
 Students will be welcome to make richer pipelines, explore whatever they want. All students will have to add at least 2 features. **Feature ideas must be approved by the instructor.**
 
 
@@ -65,6 +68,9 @@ Pipeline users will be able to provide input in two ways: by passing arguments a
 ### Control file
 
 
+### Useful labs
+
+
 
 ---
 
@@ -93,11 +99,41 @@ data, e.g. `ACGTACGTACT`.
      b. Accessions that do not exist on GenBank will fail to download; report to `warnings.log` which files failed to download
 
 
+### Useful labs
+
 
 
 ---
 
 ## 3. Align sequences
+
+Step 3 of the pipeline will retrieve and align the target accessions identified in in `./sequences` marked as valid from Step 2. Minimally, the pipeline should align the software using [Muscle] and [Clustal].
+
+#### Muscle
+
+```
+Basic usage
+
+    muscle -in <inputfile> -out <outputfile>
+
+Common options (for a complete list please see the User Guide):
+
+    -in <inputfile>    Input file in FASTA format (default stdin)
+    -out <outputfile>  Output alignment in FASTA format (default stdout)
+    -diags             Find diagonals (faster for similar sequences)
+    -maxiters <n>      Maximum number of iterations (integer, default 16)
+    -maxhours <h>      Maximum time to iterate in hours (default no limit)
+    -html              Write output in HTML format (default FASTA)
+    -msf               Write output in GCG MSF format (default FASTA)
+    -clw               Write output in CLUSTALW format (default FASTA)
+    -clwstrict         As -clw, with 'CLUSTAL W (1.81)' header
+    -log[a] <logfile>  Log to file (append if -loga, overwrite if -log)
+    -quiet             Do not write progress messages to stderr
+    -version           Display version information and exit
+```
+
+#### Clustal
+
 
 Users should be able to align their sequences using Muscle.
 
@@ -107,6 +143,10 @@ Extra ideas: allow users to use different software with different arguments.
 
 Input file: unaligned.fasta
 Output file: alignment.fasta, report.txt
+
+
+### Useful labs
+
 
 ---
 
