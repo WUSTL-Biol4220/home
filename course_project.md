@@ -18,13 +18,14 @@ This document will provide the technical requirements for how each step is expec
 
 Students will be welcome to make richer pipelines, explore whatever they want. All students will have to add at least 2 features. **Feature ideas must be approved by the instructor.**
 
-We will be borrowing some ideas from [https://github.com/roblanf/sarscov2phylo](https://github.com/roblanf/sarscov2phylo).
+
+Elements of the pipeline project design were inspired by [https://github.com/roblanf/sarscov2phylo](https://github.com/roblanf/sarscov2phylo).
 
 ---
 
 ## General specifications
 
-The pipeline will accept as input fasta-formatted sequence data a
+Students will develop a pipeline that provides the following functionality
 
 ```
 NAME
@@ -56,13 +57,42 @@ DESCRIPTION
 
 ## 1. Parse user input for pipeline settings
 
+Pipeline users will be able to provide input in two ways: by passing arguments and optional flags to the pipeline program, or by populating a tab-delimited control file.
+
+### Optional flags
+
+
+### Control file
+
 
 
 ---
 
 ## 2. Download sequences
 
-Users should be able to provide a list of accession numbers. The script will then query NCBI to download those files.
+The `gather_sequences.sh` file will accept one file as input. That input file will contain a list of GenBank accession numbers, one per row, where each accession corresponds to a target sequence. The script will then download all available sequences into the `sequences` subdirectory, and append any issues to the file `warnings.log`.
+
+Input file example with four accessions
+```
+A12345678
+H32183282
+B32701283
+G63645551
+```
+
+The script will:
+
+1. Identify whether fasta-formatted accession already exists in the `sequences` subdirectory. For example, for accession `A12345678` the script will see whether `sequences/seq_A12345678.fasta` exists.
+     a. If the accession *does* exist, the script will further validate that the file contains two lines: line 1 contains the fasta description, e.g. `>sample_1|A12345678`; line 2 contains the sequence 
+data, e.g. `ACGTACGTACT`.
+     b. If the accession exists but is *invalid*, delete the accession from `sequences` and mark it to be downloaded. Record deleted files in `warnings.log`.
+
+2. For each missing accession -- either because it was not downloaded or because it was deleted for being invalid -- download that accession from GenBank. 
+     a. Download and rename each GenBank accession as a fasta file. For example, accession `A12345678` can be downlaoded from GenBank using the command `wget XXX/A12345678`, and saved as `sequences/seq_A12345678.fasta`.
+     b. Save all processed
+     b. Accessions that do not exist on GenBank will fail to download; report to `warnings.log` which files failed to download
+
+
 
 
 ---
