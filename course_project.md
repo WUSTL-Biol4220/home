@@ -107,7 +107,7 @@ data, e.g. `ACGTACGTACT`.
 
 ## 3. Align sequences
 
-Step 3 of the pipeline will retrieve and align the target accessions identified in in `./sequences` marked as valid from Step 2. Minimally, the pipeline should align the software using [Muscle] and [Clustal].
+Step 3 of the pipeline will retrieve and align the target accessions identified in in `./sequences` marked as valid from Step 2. Minimally, the pipeline should align the software using [Muscle] and [MAFFT].
 
 #### Muscle
 
@@ -132,14 +132,36 @@ Common options (for a complete list please see the User Guide):
     -version           Display version information and exit
 ```
 
-#### Clustal
+#### MAFFT
 
+```
+------------------------------------------------------------------------------
+  MAFFT v7.453 (2019/Nov/8)
+  https://mafft.cbrc.jp/alignment/software/
+  MBE 30:772-780 (2013), NAR 30:3059-3066 (2002)
+------------------------------------------------------------------------------
+High speed:
+  % mafft in > out
+  % mafft --retree 1 in > out (fast)
 
-Users should be able to align their sequences using Muscle.
+High accuracy (for <~200 sequences x <~2,000 aa/nt):
+  % mafft --maxiterate 1000 --localpair  in > out (% linsi in > out is also ok)
+  % mafft --maxiterate 1000 --genafpair  in > out (% einsi in > out)
+  % mafft --maxiterate 1000 --globalpair in > out (% ginsi in > out)
 
-Allow users to provide settings x, y, z.
+If unsure which option to use:
+  % mafft --auto in > out
 
-Extra ideas: allow users to use different software with different arguments.
+--op # :         Gap opening penalty, default: 1.53
+--ep # :         Offset (works like gap extension penalty), default: 0.0
+--maxiterate # : Maximum number of iterative refinement, default: 0
+--clustalout :   Output: clustal format, default: fasta
+--reorder :      Outorder: aligned, default: input order
+--quiet :        Do not report progress
+--thread # :     Number of threads (if unsure, --thread -1)
+--dash :         Add structural information (Rozewicki et al, submitted)
+```
+
 
 Input file: unaligned.fasta
 Output file: alignment.fasta, report.txt
@@ -163,8 +185,15 @@ Find all coding regions, identify all codons, report codon usage frequencies
 
 Search for all sites with 2+ changes (parsimony-informative sites)
 
-Input file: alignment.fasta
-Output file: various report.txt
+Input file(s)
+* sequences.fasta
+
+Output file(s)
+* align_mafft.settings_XXXXXX.fasta
+* align.muscle.settings_XXXXXX.fasta
+* align_mafft.settings_XXXXXX.txt
+* align_muscle.settings_XXXXXX.txt
+* align.warnings.log
 
 
 ---
