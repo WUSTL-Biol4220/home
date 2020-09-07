@@ -62,14 +62,11 @@ DESCRIPTION
 
 Pipeline users will be able to provide input in two ways: by passing arguments and optional flags to the pipeline program, or by populating a tab-delimited control file.
 
-### Optional flags
+### Usage
 
+`./parse_input [OPTIONS] file`
 
-### Control file
-
-
-### Useful labs
-
+### Output
 
 
 ---
