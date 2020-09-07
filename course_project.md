@@ -34,9 +34,13 @@ SYNOPSIS
      ls [-ABCFGHLOPRSTUW@abcdefghiklmnopqrstuwx1%] [file ...]
 
 DESCRIPTION
-     The pipeline accepts a list of accession numbers as input, downloads those accessions into as fasta formatted files into a user directory (if they do not already exist), aligns those sequences under a variety of settings to create an alignment-set, generates descriptive statistics for the alignment-set, and computes the molecular phylogeny for the alignment-set.
+     The pipeline accepts a list of accession numbers as input, downloads those accessions into
+     as fasta formatted files into a user directory (if they do not already exist), aligns those
+     sequences under a variety of settings to create an alignment-set, generates descriptive
+     statistics for the alignment-set, and computes the molecular phylogeny for the alignment-set.
 
-     If one operand is given, it assumes that all. If multiple files are given, then the program will combine all fasta files.
+     If one operand is given, it assumes that all. If multiple files are given, then the program
+     will combine all fasta files.
 
      The following options are available:
 
