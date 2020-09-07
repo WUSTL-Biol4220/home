@@ -27,11 +27,11 @@ Once the software is installed, to connect to the WUSTL VPN
 - When prompted, enter your WUSTL id for the Username and your WUSTL password for the Password.
 - Click OK to connect to the WUSTL VPN
 
-<img src="assets/vpn_connect.png" width="250"/>
+<img src="assets/how_to/vpn_connect.png" width="250"/>
 
 - If the connection succeeds, the Cisco VPN client window will read `Connected to vpn.wustl.edu/artsci` with a green checkmark.
 
-<img src="assets/vpn_connect_success.png" width="250"/>
+<img src="assets/how_to/vpn_connect_success.png" width="250"/>
 
 Please refer to the WUSTL [Connect](https://it.wustl.edu/items/connect/) resources if you have problems connecting. If your problem persists, please let the instructor know.
 
@@ -139,7 +139,7 @@ Visit https://github.com, then supply a username, your email address, and a pass
 
 Here is what the account creation prompt looks like:
 
-<img src="assets/github_new_account.png" width="250"/>
+<img src="assets/how_to/github_new_account.png" width="250"/>
 
 
 ---
@@ -154,27 +154,27 @@ Accepting the assignment will tell GitHub Classroom to create a personal copy of
 
 When you first click on the invite link, you will need to "Authorize GitHub Classroom App" to have permission to interact with your primary GitHub account:
 
-<img src="assets/github_class_authorize.png" width="150"/>
+<img src="assets/how_to/github_class_authorize.png" width="150"/>
 
 Next, you'll select your name from the course roster, and confirm that you are this person:
 
-<img src="assets/github_class_confirm_name.png" width="150"/>
+<img src="assets/how_to/github_class_confirm_name.png" width="150"/>
 
 You'll then be asked to accept the assignment:
 
-<img src="assets/github_class_accept_assignment.png" width="150"/>
+<img src="assets/how_to/github_class_accept_assignment.png" width="150"/>
 
 Once you accept, GitHub Classroom will create a personal repository for your work for the lab exercise:
 
-<img src="assets/github_class_create_repo.png" width="150"/>
+<img src="assets/how_to/github_class_create_repo.png" width="150"/>
 
 Upon completion, GitHub Classroom will provide a link to your new GitHub repository for the lab assignment:
 
-<img src="assets/github_class_assignment_accepted.png" width="150"/>
+<img src="assets/how_to/github_class_assignment_accepted.png" width="150"/>
 
 Clicking the second link will take you to the GitHub repository for your lab assignment:
 
-<img src="assets/github_class_assignment_repo.png" width="150"/>
+<img src="assets/how_to/github_class_assignment_repo.png" width="150"/>
 
 ---
 
@@ -204,12 +204,12 @@ When you're ready to submit your lab assignment
 2. Update your GitHub repository with your changes: `git push`
 3. Visit your repository: https://github.com/WUSTL-Biol4220/example-lab-mlandis
   - If see a red 'X' by your newest commit, click the 'X'<br>
-  <img src="assets/github_commit_fail.png" width="200"/>
+  <img src="assets/how_to/github_commit_fail.png" width="200"/>
   - Expand the 'autograding' step to identify the problem<br>
-  <img src="assets/github_test_fail.png" width="200"/>
+  <img src="assets/how_to/github_test_fail.png" width="200"/>
   - The test expects `output.txt` to contain `Hello, world!` not `Jello, warld!`
   - If you see a green checkmark next to the newest commit, click the checkmark<br>
-    <img src="assets/github_commit_succeed.png" width="200"/>
+    <img src="assets/how_to/github_commit_succeed.png" width="200"/>
   - Expand the 'autograding' step, and enjoy the celebratory fireworks<br>
-    <img src="assets/github_test_succeed.png" width="200"/>
+    <img src="assets/how_to/github_test_succeed.png" width="200"/>
 
