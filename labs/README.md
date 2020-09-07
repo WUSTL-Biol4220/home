@@ -1,1 +1,1 @@
-The .md files in this directory provide the instructions for each Biol 4220 lab exericse.
+Newly assigned Biol4220 lab exercises are posted in this directory as .md files.
