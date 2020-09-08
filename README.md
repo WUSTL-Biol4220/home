@@ -2,6 +2,8 @@
 
 Welcome to the home page for the **Fall 2020** class of Biol 4220!
 
+<img src="assets/home/biol4220_logo.png" width="250"/>
+
 ### Course resources
 * [Lecture & lab schedule](course_schedule.md)
 * [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
