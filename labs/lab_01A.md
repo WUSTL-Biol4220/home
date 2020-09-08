@@ -1,5 +1,5 @@
 
-# Lab 01A
+# Lab 01A: orientation
 
 *Lab 01A GitHub Classroom link:* https://classroom.github.com/a/p86i6vXW
 
