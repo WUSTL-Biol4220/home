@@ -144,7 +144,7 @@ Click on the button with the pen logo on the righthand side of the page to 'Edit
 
 Replace the current text for the file with text that matches the expected output.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_1A/git_class_correct_text.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01A/git_class_correct_text.png" width="350"/>
 
 Scroll down, write a message to explain your edits, then click 'Commit changes' to save your work.
 
