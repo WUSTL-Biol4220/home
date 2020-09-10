@@ -9,6 +9,7 @@ Welcome to the home page for the **Fall 2020** class of Biol 4220!
 * [Course Project](course_project.md)
 * [Syllabus](https://docs.google.com/document/d/1TYE10600VUhCyq51_h_9flVUhkCF-IQCE9SnQKRGRGo/edit?usp=sharing)
 * [Canvas](https://wustl.instructure.com/courses/54531)
+* [Canvas files](https://wustl.instructure.com/courses/54531/files)
 
 ### Course info
 * Zoom meeting: [link]() (updated for Aug 14)
