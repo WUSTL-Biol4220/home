@@ -15,7 +15,9 @@ Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in t
 
 ## Virtual private network (VPN)
 
-VPN allows remote users with proper credentials to access private network resources, even when off-campus.
+VPN allows remote users with proper credentials to access private network resources, even when off-campus. To complete most lab assignments in this course, students will need to connect to resources on WUSTL's private network, such as the lab computers or the campus servers.
+
+WUSTL undergraduates can connect to the VPN by following the directions listed here: https://techden.wustl.edu/items/vpn-danforth-students/
 
 To use VPN, you'll will need to download and install the Cisco AnyConnect VPN client software. Follow the WUSTL IT instructions [here](https://insideartsci.wustl.edu/connect-network-through-vpn).
 - Mac users running the Catalina OS (10.15) will install [this](https://wustl.box.com/s/89aq55v287hfnryfigdxig1j6k1v7fyl).
