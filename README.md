@@ -1,6 +1,8 @@
-## Fall 2020 home page for
+## Home page
 
 <img src="assets/home/biol4220_logo_trim.png" width="350"/>
+
+Fall 2020
 
 ### Course resources
 * [Syllabus](https://docs.google.com/document/d/1TYE10600VUhCyq51_h_9flVUhkCF-IQCE9SnQKRGRGo/edit?usp=sharing)
