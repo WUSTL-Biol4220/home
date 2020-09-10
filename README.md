@@ -1,5 +1,3 @@
-## Home page
-
 <img src="assets/home/biol4220_logo_trim.png" width="350"/>
 
 ### Course resources
