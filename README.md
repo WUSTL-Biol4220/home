@@ -1,6 +1,5 @@
+## Home page for the **Fall 2020** class of Biol 4220!
 <img src="assets/home/biol4220_logo_trim.png" width="350"/>
-
-Welcome to the home page for the **Fall 2020** class of Biol 4220!
 
 ### Course resources
 * [Syllabus](https://docs.google.com/document/d/1TYE10600VUhCyq51_h_9flVUhkCF-IQCE9SnQKRGRGo/edit?usp=sharing)
