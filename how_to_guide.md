@@ -17,25 +17,22 @@ Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in t
 
 VPN allows remote users with proper credentials to access private network resources, even when off-campus. To complete most lab assignments in this course, students will need to connect to resources on WUSTL's private network, such as the lab computers or the campus servers.
 
-WUSTL undergraduates can connect to the VPN by following the directions listed here: https://techden.wustl.edu/items/vpn-danforth-students/
-
-To use VPN, you'll will need to download and install the Cisco AnyConnect VPN client software. Follow the WUSTL IT instructions [here](https://insideartsci.wustl.edu/connect-network-through-vpn).
-- Mac users running the Catalina OS (10.15) will install [this](https://wustl.box.com/s/89aq55v287hfnryfigdxig1j6k1v7fyl).
-- All other Windows and Mac users will install by following this [link](https://vpn.wustl.edu/artsci).
+WUSTL undergraduates can install the necessary VPN software and connect to the VPN by following the directions listed here: https://techden.wustl.edu/items/vpn-danforth-students/
 
 Once the software is installed, to connect to the WUSTL VPN
 - Open the Cisco AnyConnect VPN Client software
-- Enter `vpn.wustl.edu/artsci` as the "VPN Service..." and click Connect
-- When prompted, enter your WUSTL id for the Username and your WUSTL password for the Password.
+- Enter `danforthvpn.wustl.edu` as the "VPN" and click Connect
+- When prompted, enter your WUSTL id for the Username and enter the text `push`, `sms`, or `phone` (see guide for details) for the "Second password".
+- Accept the security check through your device for 2FA (two factor authentication)
 - Click OK to connect to the WUSTL VPN
 
 <img src="assets/how_to/vpn_connect.png" width="250"/>
 
-- If the connection succeeds, the Cisco VPN client window will read `Connected to vpn.wustl.edu/artsci` with a green checkmark.
+- If the connection succeeds, the Cisco VPN client window will read `Connected to danforthvpn.wustl.edu` with a green checkmark.
 
 <img src="assets/how_to/vpn_connect_success.png" width="250"/>
 
-Please refer to the WUSTL [Connect](https://it.wustl.edu/items/connect/) resources if you have problems connecting. If your problem persists, please let the instructor know.
+If your problem persists, please let the instructor know or contact the WUSTL [IT department](it.wustl.edu).
 
 ---
 
