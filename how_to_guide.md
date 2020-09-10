@@ -25,9 +25,6 @@ Once the software is installed, to connect to the WUSTL VPN
 - When prompted, enter your WUSTL id for the Username and enter the text `push`, `sms`, or `phone` (see guide for details) for the "Second password".
 - Accept the security check through your device for 2FA (two factor authentication)
 - Click OK to connect to the WUSTL VPN
-
-<img src="assets/how_to/vpn_connect.png" width="250"/>
-
 - If the connection succeeds, the Cisco VPN client window will read `Connected to danforthvpn.wustl.edu` with a green checkmark.
 
 <img src="assets/how_to/vpn_connect_success.png" width="250"/>
