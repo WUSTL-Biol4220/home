@@ -15,7 +15,7 @@ This lab has seven parts
 6. [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/lab_1A#6-accept-your-first-github-classroom-assignment)
 7. [Submit a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/lab_1A#7-complete-your-first-github-classroom-assignment)
 
-Parts of this lab assignment may be particularly difficult for students who are new to computing. Some of the concepts and commands we're using here have not yet been introduced, and may seem unfamiliar or intimidating. This feeling is common in computing! Do the best that you can do for now, and rest assured that we'll spend more time learning about these new concepts soon enough! Please ask the instructor for help if needed.
+Parts of this lab assignment may be particularly difficult for students who are new to computing. Some of the concepts and commands we're using here have not yet been introduced, and may seem unfamiliar or intimidating. This feeling is common in computing! Do the best that you can do for now, and rest assured that we'll spend more time learning about these new concepts soon enough. Please ask the instructor for help if needed.
 
 
 ---
