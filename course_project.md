@@ -18,7 +18,7 @@ This document provides the technical requirements for how each step is expected 
 
 Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own arguments, options, and expected output. At the same time, the program for each pipeline step may be required to produce output or accept input that is compatible with other pipeline steps (for example, sequence alignement in Step 3 will accept the downloaded sequences of Step 2 as input).
 
-Students will be welcome to make richer pipelines, explore whatever they want. All students will have to add at least 2 features. **Feature ideas must be approved by the instructor (date TBD).** 
+Students will be welcome to make richer pipelines, explore whatever they want. All students will have to add at least two new custom features. **Feature ideas must be approved by the instructor (date TBD).** 
 
 Elements of the pipeline project design were inspired by [https://github.com/roblanf/sarscov2phylo](https://github.com/roblanf/sarscov2phylo).
 
