@@ -56,7 +56,7 @@ DESCRIPTION
 
 ---
 
-## 1. Parse user input for pipeline settings
+## 1. `parse_settings.sh`
 
 Pipeline users will be able to provide input in two ways: by passing arguments and optional flags to the pipeline program, or by populating a tab-delimited control file.
 
@@ -69,7 +69,7 @@ Pipeline users will be able to provide input in two ways: by passing arguments a
 
 ---
 
-## 2. Download sequences
+## 2. `gather_sequences.sh`
 
 The `gather_sequences.sh` file will accept one file as input. That input file will contain a list of GenBank accession numbers, one per row, where each accession corresponds to a target sequence. The script will then download all available sequences into the `sequences` subdirectory, and append any issues to the file `warnings.log`.
 
@@ -100,9 +100,9 @@ data, e.g. `ACGTACGTACT`.
 
 ---
 
-## 3. Align sequences
+## 3. `align_sequences.sh`
 
-Step 3 of the pipeline will retrieve and align the target accessions identified in in `./sequences` marked as valid from Step 2. Minimally, the pipeline should align the software using [Muscle] and [MAFFT].
+Step 3 of the pipeline will retrieve and align a set of fasta accessions from `./sequences` (obtained in Step 2). Minimally, the pipeline should align the software using [Muscle]() and [MAFFT]().
 
 #### Muscle
 
@@ -157,29 +157,6 @@ If unsure which option to use:
 --dash :         Add structural information (Rozewicki et al, submitted)
 ```
 
-
-Input file: unaligned.fasta
-Output file: alignment.fasta, report.txt
-
-
-### Useful labs
-
-
----
-
-## 4. Characterize variation in molecular alignment
-
-Python script to process alignment.
-
-Read alignment as a matrix.
-
-Report the GC-richness of each sequence
-Report GC-richness of each site
-
-Find all coding regions, identify all codons, report codon usage frequencies
-
-Search for all sites with 2+ changes (parsimony-informative sites)
-
 Input file(s)
 * sequences.fasta
 
@@ -193,12 +170,44 @@ Output file(s)
 
 ---
 
+## 4. `mol_stats.py`
+
+The `mol_stats.py` script generates a report of various summary statistics and transformations for a multiple sequence alignment.
+
+This Python script will perform several steps:
+1. Read an alignment file
+2. Compute the GC-richness for each sequence
+3. Compute the GC-richness for each site
+4. Determine whether or not each site is phylogenetically informative.
+5. Find all coding regions and all codons
+6. Compute codon frequencies per site and per sequence
+7. Compute codon usage enrichment across amino acids, sites, and sequences
+
+Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in Lab XX [TBD]. Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one nucleotide type, and at least two individuals of a different nucleotide type -- i.e. the site contains enough information to identify a phylogenetic "split".
+
+
+Input file(s)
+* Step 3 alignment file
+
+Output file(s)
+* gc_seq_report.txt
+* gc_site_report.txt
+* phylo_info_report.txt
+* codon_usage_report.txt
+* warning.log
+
+
+---
+
 ## 5. Estimate phylogenetic tree from alignment
 
 Run a simple analysis, generate quick phylogeny plot
 
-Input file: alignment.fasta
-Output file: phylogeny.tre, figure
+Input file(s):
+* Step 3 alignment file alignment.fasta
+Output file(s):
+* phylogeny.tre
+* toytree figure
 
 ---
 
@@ -208,6 +217,14 @@ Run PAML under different settings
 
 Reformat input for PAML
 Reformat output from PAML so it's readable
+
+
+Input file(s):
+* Step 3 alignment file, Step 5 phylogeny
+Output file(s):
+* phylogeny.tre
+* toytree figure
+* parsed dNdS report
 
 
 Input file: alignment.fasta, phylogeny.tre
