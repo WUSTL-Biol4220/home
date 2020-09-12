@@ -199,25 +199,28 @@ Output file(s)
 
 ---
 
-## 5. Estimate phylogenetic tree from alignment
+## 5. `infer_phylo.sh`
 
-Run a simple analysis, generate quick phylogeny plot
+The `infer_phylo.sh` script will estimate a phylogeny from a multiple sequence alignment using the [fasttree]() software, then plot the tree using the [toytree]() software.
+
+To complete this 
 
 Input file(s):
 * Step 3 alignment file alignment.fasta
 Output file(s):
-* phylogeny.tre
+* phylogeny.tre file (different settings)
 * toytree figure
 
 ---
 
-## 6. Test for signatures of positive selection
+## 6. `mol_pos_sel.sh`
 
-Run PAML under different settings
+The `mol_pos_sel.sh` script will test for the molecular signature of positive selection using [PAML](). 
+
+PAML can b
 
 Reformat input for PAML
 Reformat output from PAML so it's readable
-
 
 Input file(s):
 * Step 3 alignment file, Step 5 phylogeny
@@ -226,9 +229,14 @@ Output file(s):
 * toytree figure
 * parsed dNdS report
 
-
-Input file: alignment.fasta, phylogeny.tre
-Output file: PAML results
+Input file(s):
+* Step 1 settings
+* Step 3 alignment file
+* Step 5 phylogeny file
+Output file(s):
+* raw PAML results
+* reformatted PAML results
+* auto-generated PAML settings files
 
 ---
 
@@ -238,5 +246,8 @@ Take all previous report files, then summarize it in a compact representation.
 
 Have it update README.md so the results are visible in your github repo
 
-Input: report.txt files
-Output: README.md
+Input file(s):
+* output from Steps 2-6
+Output file(s):
+* single file that reports settings and output
+
