@@ -12,9 +12,9 @@
 ### Course info
 * Zoom meeting: [link](https://wustl.zoom.us/j/93971192504?pwd=RHBaK3cwcys3SFJNSFVYME8zSW9GUT09
 )
-* Class hours: 08:30a - 12:00p MW
+* Class hours: 8:30am - 12:00pm on Mon + Wed
 * Class room: Meeting online due to Covid-19
-* Office hours: 01:00p - 02:00p MW
+* Office hours: 2:00pm - 04:00pm on Thu
 * Office room: Zoom or 210 Rebstock *with appointment*
 
 ### Contact info
