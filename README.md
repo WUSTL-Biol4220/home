@@ -7,7 +7,6 @@
 * [Course Project](course_project.md)
 * ["How To" guide](how_to_guide.md)
 * [Canvas](https://wustl.instructure.com/courses/54531)
-* [Canvas files](https://wustl.instructure.com/courses/54531/files)
 
 ### Course info
 * Zoom meeting: [link](https://wustl.zoom.us/j/93971192504?pwd=RHBaK3cwcys3SFJNSFVYME8zSW9GUT09
