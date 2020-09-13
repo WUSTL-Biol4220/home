@@ -5,7 +5,7 @@ This file contains a list of all of the labs for the semester. Links to labs wil
 
 | current | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
-|   :pig: | Mon, Sep 14 |         | [Lab 01A](labs/lab_01A.md) | | Introduction; overview of hardware, operating<br>systems, networks, and servers |
+|   :pig: | Mon, Sep 14 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">slides</a>        | [lab](labs/lab_01A.md) | | Introduction; overview of hardware, operating<br>systems, networks, and servers |
 |         | Wed, Sep 16 |         | Lab 01B | | UNIX: shell, commands<br>git: basics|
 |         | Mon, Sep 21 |         | Lab 02A |  | UNIX: files and strings, file formats,<br>text processing, grep |
 |         | Wed, Sep 23 |         | Lab 02B |  | UNIX: regular expressions (regex), awk, sed |
