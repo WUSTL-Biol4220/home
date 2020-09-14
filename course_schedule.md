@@ -31,7 +31,7 @@ This file contains a list of all of the labs for the semester. Links to labs wil
 |         | Wed, Dec 02 |         | Lab 12B |  | **Project check-in**   |
 |         | Mon, Dec 07 |         | Lab 13A |  |   |
 |         | Wed, Dec 09 |         | Lab 13B |  |   |
-|         | Mon, Dec 11 |         | Lab 14A |  |   |
+|         | Mon, Dec 14 |         | Lab 14A |  |   |
 |         | Wed, Dec 16 |         | Lab 14B |  |   |
-|         | Mon, Dec 18 |         |         |  | **Project presentations**  |
-|         | Wed, Dec 20 |         |         |  | **Exam 2**  |
+|         | Mon, Dec 21 |         |         |  | **Project presentations**  |
+|         | Wed, Dec 23 |         |         |  | **Exam 2**  |
