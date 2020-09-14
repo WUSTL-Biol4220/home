@@ -58,7 +58,7 @@ To log in to your VM, you'll need to supply three key pieces of information:
 2. `username` -- your VM username, which is identical to your WUSTL id
 3. `password` -- your VM password, which you'll set upon first login
 
-Each student will have their own `username`, `password`, and `ip_address`. In the below examples, let's pretend the student's username is `mlandis` and their IP is IP address `128.252.111.111`
+Each student will have their own `username`, `password`, and `ip_address`. In the below examples, let's pretend the student's username is `mlandis` and their IP address is `128.252.111.111`. *NOTE: These are example values; the instructor will provide you with your username, password, and IP address.*
 
 ### SSH for Linux and Mac users
 1. Open the Terminal program
