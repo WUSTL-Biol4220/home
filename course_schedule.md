@@ -18,18 +18,18 @@ This file contains a list of all of the labs for the semester. Links to labs wil
 |         | Mon, Oct 19 |         | Lab 06A |  |  |
 |         | Wed, Oct 21 |         | Lab 06B |  |  |
 |         | Mon, Oct 26 |         | Lab 07A |  |  |
-|         | Wed, Oct 28 |         |         |  |  **Exam 1** |
+|         | Wed, Oct 28 |         |         |  | **Exam 1** |
 |         | Mon, Nov 02 |         | Lab 08A |  |  |
-|         | Wed, Nov 04 |         | Lab 08B |  | **Project approvals** |
+|         | Wed, Nov 04 |         | Lab 08B |  | <br>**Project approvals** |
 |         | Mon, Nov 09 |         | Lab 09A |  |  |
 |         | Wed, Nov 11 |         | Lab 09B |  |  |
 |         | Mon, Nov 16 |         | Lab 10A |  |  |
-|         | Wed, Nov 18 |         | Lab 10B |  | **Project check-in**  |
+|         | Wed, Nov 18 |         | Lab 10B |  | <br>**Project check-in**  |
 |         | Mon, Nov 23 |         | Lab 11A |  |   |
 |         | Wed, Nov 25 |         | Lab 11B |  |   |
 |         | Mon, Nov 30 |         | Lab 12A |  |   |
-|         | Wed, Dec 02 |         | Lab 12B |  | **Project check-in**   |
+|         | Wed, Dec 02 |         | Lab 12B |  | <br>**Project check-in**   |
 |         | Mon, Dec 07 |         | Lab 13A |  |   |
 |         | Wed, Dec 09 |         | Lab 13B |  |   |
-|         | Mon, Dec 14 |         | Lab 14A |  | **Project presentations**  |
+|         | Mon, Dec 14 |         | Lab 14A |  | <br>**Project presentations**  |
 |         | Wed, Dec 16 |         | Lab 14B |  | **Exam 2**  |
