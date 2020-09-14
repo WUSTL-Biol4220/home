@@ -5,7 +5,7 @@ This file contains a list of all of the labs for the semester. Links to labs wil
 
 | current | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
-|   :pig: | Mon, Sep 14 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">slides</a><br><a href="https://wustl.zoom.us/rec/share/xVUbAqcq2UKZY69q7A4uFFs6QqkuYjnN8-t7HT3nY6MTlWLIhWxb5mHuK4ER6Hp8._TbxHG2tCex6TQ-M?startTime=1600105741000">video</a> | [lab](labs/lab_01A.md) | | Introduction; overview of hardware, operating<br>systems, networks, and servers |
+|   :pig: | Mon, Sep 14 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">Lecture 01A</a><br>(<a href="https://wustl.zoom.us/rec/share/xVUbAqcq2UKZY69q7A4uFFs6QqkuYjnN8-t7HT3nY6MTlWLIhWxb5mHuK4ER6Hp8._TbxHG2tCex6TQ-M?startTime=1600105741000">video</a>) | [Lab 01A](labs/lab_01A.md) | | Introduction; overview of hardware, operating<br>systems, networks, and servers |
 |         | Wed, Sep 16 |         | Lab 01B | | UNIX: shell, commands |
 |         | Mon, Sep 21 |         | Lab 02A |  | Git: introduction; working with a commit history  |
 |         | Wed, Sep 23 |         | Lab 02B |  | UNIX: more commands, pipes, redirects |
