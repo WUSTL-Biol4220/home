@@ -114,7 +114,9 @@ Lab VMs are preinstalled with all of the software needed to complete the lab exe
 
 ---
 
-## Connect to the WUSTL cluster (draft)
+## Connect to the WUSTL cluster
+
+*Note, this step is an incomplete placeholder for the full instructions.*
 
 Many bioinformatics analyses are designed to be run using teams of computational servers, called clusters. Research Infrastructure Services, or [RIS](ris.wustl.edu), provides WUSTL with access to clusters and other high performance computing (HPC) services. We'll use the RIS HPC to learn more about processing bioinformatics tasks with clusters as part of our lecture and lab exercises.
 
