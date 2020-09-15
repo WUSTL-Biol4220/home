@@ -3,7 +3,7 @@
 
 This file contains a list of all of the labs for the semester. Links to labs will be added when they become due. The :pig: marker tells us how we're progressing through the semester.
 
-Reading assignments from *Computing Skills for Biologists*, by Allesina and Wilmes, are identified by the CSB prefix followed by the sections. Students are strongly encouraged to read through the exercises at the end of each chapter, since they are similar in nature to what might appear on an Exam.
+Reading assignments from [*Computing Skills for Biologists*](https://computingskillsforbiologists.com/) (Allesina & Wilmes) are identified by the CSB prefix followed by the sections. Students are strongly encouraged to read through the exercises at the end of each chapter, since they are similar in nature to what might appear on an Exam.
 
 | current | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
