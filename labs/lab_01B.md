@@ -388,7 +388,7 @@ Where is the actual log for the content of `history` stored? Every time a comman
 
 To complete Lab 01B, you will upload an excerpt of `history` output to GitHub.
 
-From the command line on your VM, call the `history` command. Through your SSH terminal on your personal computer, highlight and copy the text that was printed to the screen. Then, paste the text into a text editor, then save that text to a file called `output.txt` on your personal computer.
+From the command line on your VM, call the `history` command. Through your SSH terminal on your personal computer, highlight and copy the text that was printed to the screen. Then, paste the text into a text editor, then save that text to a file called `history.txt` on your personal computer.
 
 Accept your GitHub Classroom assignment for Lab 01B using the link at the top of these instructions. Navigate to your newly created Lab 01B repo, then add and save your local copy of `history.txt` to the repo, as you did with `output.txt` in Lab 01A. Once you have saved (committed) the `history.txt` file to the Lab 01B repo, you should see a green checkmark at the top of your repo page.
 
