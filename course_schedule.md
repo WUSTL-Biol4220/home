@@ -12,9 +12,9 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Sep 21 |         | Lab 02A | CSB: 2.1-2.4 | Git: introduction; working with a commit history  |
 |         | Wed, Sep 23 |         | Lab 02B | CSB: 1.5-1.6 | Unix: more commands, pipes, redirects |
 |         | Mon, Sep 28 |         | Lab 03A | CSB: xxx-xxx | Unix: text processing, file format, grep |
-|         | Wed, Sep 30 |         | Lab 03B |  | Biology: molecular sequences |
+|         | Wed, Sep 30 |         | Lab 03B |  | Biology: molecular sequences<br>Unix: file transfer |
 |         | Mon, Oct 05 |         | Lab 04A |  | Biology: sequence alignment<br>**Project intro** |
-|         | Wed, Oct 07 |         | Lab 04B | CSB: 1.7-1.10 | Unix: scripts  |
+|         | Wed, Oct 07 |         | Lab 04B | CSB: 1.7-1.10 | Unix: scripts, variables, for-loops  |
 |         | Mon, Oct 12 |         | Lab 05A | CSB: 2.4-2.8 | Git: branch management |
 |         | Wed, Oct 14 |         | Lab 05B |  | Unix: regular expressions (regex), awk, sed  |
 |         | Mon, Oct 19 |         | Lab 06A |  |  |
