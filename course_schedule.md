@@ -9,7 +9,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
 |         | Mon, Sep 14 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">Lecture 01A</a><br>(<a href="https://wustl.zoom.us/rec/share/xVUbAqcq2UKZY69q7A4uFFs6QqkuYjnN8-t7HT3nY6MTlWLIhWxb5mHuK4ER6Hp8._TbxHG2tCex6TQ-M?startTime=1600105741000">video</a>) | [Lab 01A](labs/lab_01A.md) | CSB: pp. 1-11 | Introduction; overview of hardware, operating<br>systems, networks, and servers |
 | :pig:   | Wed, Sep 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01B.pdf">Lecture 01B</a><br>(<a href="https://wustl.zoom.us/rec/share/v9Fgjrx-KLpP-Jy-XAOowq0FOQP2tTFISahS4NsG5272KRJqbCFIqPo001AX3Fnr.ha8SXalwnFjg8fxp?startTime=1600263299000">video</a>)        | [Lab 01B](labs/lab_01B.md) | CSB: 1.1-1.4| Unix: shell, commands, filesystem |
-|         | Mon, Sep 21 |         | Lab 02A | CSB: 2.1-2.4 | Git: introduction; working with a commit history  |
+|         | Mon, Sep 21 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_02A.pdf">Lecture 02A</a>        | [Lab 02A](labs/lab_02A.md)| CSB: 2.1-2.4 | Git: introduction; working with a commit history  |
 |         | Wed, Sep 23 |         | Lab 02B | CSB: 1.5-1.6 | Unix: pipes, redirects, more commands |
 |         | Mon, Sep 28 |         | Lab 03A | CSB: xxx-xxx | Unix: text processing, file format, grep |
 |         | Wed, Sep 30 |         | Lab 03B | CSB: 1.7-1.10 | Unix: scripts, pseudocode, variables  | 
