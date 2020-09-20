@@ -33,5 +33,5 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Dec 02 |         | Lab 12B |  | <br>**Project check-in**   |
 |         | Mon, Dec 07 |         | Lab 13A |  |   |
 |         | Wed, Dec 09 |         | Lab 13B |  |   |
-|         | Mon, Dec 14 |         | Lab 14A |  | <br>**Project presentations**  |
-|         | Wed, Dec 16 |         | Lab 14B |  | **Exam 2**  |
+|         | Mon, Dec 14 |         |         |  | <br>**Project presentations**  |
+|         | Wed, Dec 16 |         |         |  | **Exam 2**  |
