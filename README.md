@@ -9,12 +9,13 @@
 * [Canvas](https://wustl.instructure.com/courses/54531)
 
 ### Course info
-* Zoom meeting: [link](https://wustl.zoom.us/j/93971192504?pwd=RHBaK3cwcys3SFJNSFVYME8zSW9GUT09
-)
+
 * Class hours: 8:30am - 12:00pm on Mon + Wed
 * Class room: Meeting online due to Covid-19
 * Office hours: 2:00pm - 4:00pm on Thu
-* Office room: Zoom or 210 Rebstock *with appointment*
+* Office room: Zoom *without appointment* or 210 Rebstock *with appointment*
+* Zoom channel for class and office hours: [link](https://wustl.zoom.us/j/93971192504?pwd=RHBaK3cwcys3SFJNSFVYME8zSW9GUT09
+)
 
 ### Contact info
 * Instructor: Michael Landis
