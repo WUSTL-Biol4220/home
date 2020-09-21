@@ -21,12 +21,12 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Oct 21 |         | Lab 06B | CSB: xxx-xxx | Unix: regular expressions (regex) |
 |         | Mon, Oct 26 |         | Lab 07A | CSB: xxx-xxx | Unix: more regex  |
 |         | Wed, Oct 28 |         |         |  | **Exam 1** |
-|         | Mon, Nov 02 |         | Lab 08A |  |  |
-|         | Wed, Nov 04 |         | Lab 08B |  | <br>**Project approvals** |
-|         | Mon, Nov 09 |         | Lab 09A |  |  Python: |
-|         | Wed, Nov 11 |         | Lab 09B |  |  |
-|         | Mon, Nov 16 |         | Lab 10A |  |  |
-|         | Wed, Nov 18 |         | Lab 10B |  | <br>**Project check-in**  |
+|         | Mon, Nov 02 |         | Lab 08A |  | Python: introduction, variables, operators, file handling |
+|         | Wed, Nov 04 |         | Lab 08B |  | Python: containers, control structures <br>**Project approvals** |
+|         | Mon, Nov 09 |         | Lab 09A |  | Python: strings |
+|         | Wed, Nov 11 |         | Lab 09B |  | Python: functions |
+|         | Mon, Nov 16 |         | Lab 10A |  | Biology: sequence stats |
+|         | Wed, Nov 18 |         | Lab 10B |  | Coding practices: docstrings, unit tests, commits<br>**Project check-in**  |
 |         | Mon, Nov 23 |         | Lab 11A |  |   |
 |         | Wed, Nov 25 |         | Lab 11B |  |   |
 |         | Mon, Nov 30 |         | Lab 12A |  |   |
