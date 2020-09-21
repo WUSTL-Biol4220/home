@@ -344,7 +344,7 @@ The files `leo.fasta` and `tigris.fasta` have returned to the `data/neofelis` fo
 mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ rm -rf data
 mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ ls data
 ls: cannot access 'data': No such file or directory
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git checkout master data
+mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git checkout master
 Updated 7 paths from ed02d3c
 mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git status
 On branch master
