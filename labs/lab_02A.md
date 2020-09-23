@@ -346,6 +346,9 @@ mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ ls data
 ls: cannot access 'data': No such file or directory
 mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git checkout master data
 Updated 7 paths from ed02d3c
+mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
 mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
