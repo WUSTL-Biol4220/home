@@ -37,7 +37,7 @@ Hello, world!
 
 Define and print the string that produces the following output, using the `echo` command with the `-e` option. The `-e` option instructs `echo` to evaluate escaped characters for the string literal.
 
-For this lab section, you will need to determine: **What is the one-line text string that you would construct to produce the string literal output with `echo -e` below?**
+Section 1 question: **What is the one-line text string that you would construct to produce the string literal output with `echo -e` below?**
 ```
 Special symbols are easy to escape! See?
 	\n
