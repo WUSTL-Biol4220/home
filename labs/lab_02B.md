@@ -1,6 +1,6 @@
 # Lab 02B
 
-*Lab 02B GitHub Classroom link:* https://classroom.github.com/a/4ZJF3Kfx
+*Lab 02B GitHub Classroom link:* https://classroom.github.com/a/ZabQYLlG
 
 This lab will explore how to generate and manipulate character strings in various ways. The lab will also explore how to use the pipe (`|`) and redirect (`>`) commands to link together independent programs.
 
