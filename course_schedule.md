@@ -13,9 +13,9 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |   :pig: | Wed, Sep 23 |    <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_02B.pdf">Lecture 02B</a><br>(<a href="https://wustl.box.com/s/iwcb4vaz9qb14xhanwu6v9ol477lygwu">video</a>)    | [Lab 02B](labs/lab_02B.md) | CSB: 1.5-1.6 | Unix: pipes, redirects, more commands |
 |         | Mon, Sep 28 |         | Lab 03A | CSB: xxx-xxx | Unix: text processing, file format, grep |
 |         | Wed, Sep 30 |         | Lab 03B | CSB: 1.7-1.10 | Unix: scripts, pseudocode, variables, control structures  | 
-|         | Mon, Oct 05 |         | Lab 04A | TBD | Biology: molecular sequences<br>Unix: file transfer<br>**Project intro** |
+|         | Mon, Oct 05 |         | Lab 04A | TBD | Biology: molecular sequences<br>Unix: file transfer |
 |         | Wed, Oct 07 |         | Lab 04B | TBD | Biology: sequence alignment, methods sensitivity |
-|         | Mon, Oct 12 |         | Lab 05A | CSB: 2.4-2.8 | Git: branch management, collaboration | 
+|         | Mon, Oct 12 |         | Lab 05A | CSB: 2.4-2.8 | Git: branch management, collaboration<br>**Project intro** | 
 |         | Wed, Oct 14 |         | Lab 05B | TBD | Unix: working on cluster |
 |         | Mon, Oct 19 |         | Lab 06A | TBD | Biology: molecular phylogenetics, neighbor-joining |
 |         | Wed, Oct 21 |         | Lab 06B | CSB: xxx-xxx | Unix: regular expressions (regex) |
