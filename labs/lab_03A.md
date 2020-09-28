@@ -120,24 +120,6 @@ $ cut -d "," -f8 Asteraceae_locations.csv | tail -n5 > names.csv
 $ cut -d "," -f2 Asteraceae_locations.csv | tail -n5 > codes.csv
 ```
 
-
-----> Add this section if we can figure out how get join, paste, and lam to work.
-First, try using the `lam` command to *laminate* together two files, side-by-side, as columns
-
-```console
-$ lam  codes.csv -s "," names.csv
-TVL,Vernonia_sutherlandii
-TVL,Vernonia_thodei
-TVL,Vernonia_triflora
-TVL,Vernonia_wollastonii
-TVL,Zoutpansbergia_caerulea
-```
-
-```console
-join
-```
-<----
-
 When processing text in files, a key step is often to collect the set of target files. The `find` function searches a target directory, and all directories nested within it, for all filesystem objects. Providing a search pattern with the `-name` option directs `find` to only show those file paths that match.
 
 ```console
@@ -154,7 +136,7 @@ data/Saavedra2013/n30.txt
 
 Bioinformatics projects tend to rely on a variety of pipeline commands, developed by different researchers to achieve different goals. In this section of the lab, you'll be provided with an assortment of pipeline commands. Your job is to interpret what those pipeline commands do, how to modify the pipeline to fulfill a different objective, and/or how to select a pipeline to perform a desired task.
 
-For each of the three problems below, you will need to produce (1) a file that modifies the behavior of the pipeline, (2) a file containing the output of the modified pipeline, and (3) a file that describes the steps of the modified pipeline, line-by-line.
+For each of the three problems below, you will need to produce (1) a file that modifies the behavior of the pipeline, (2) a file containing the output of the modified pipeline, and (3) a file that describes the steps of the modified pipeline, line-by-line. For each assignment, store these three files in the directory `part_2/problem_N`, where `N` corresponds to the problem in Part 3 that you've solved.
 
 For example, an exercise might provide you with the pipeline commands
 ```
@@ -197,7 +179,7 @@ cat data/Marra2014_data.fasta | grep ">" | tr -s " " | grep -v it_thresh | cut -
 ---
 ## 3. Writing text-processing pipelines
 
-In this final step for Lab 03A, you will write several pipelines that can be used to process a data file. For each pipeline, I will provide a description of what information needs to be extracted from a given input file. Your job is to translate this request into a series of Unix commands to produce the desired output. Similar to the previous example, you will need to submit three files for each problem: a file containing the pipeline command (`pipeline.txt`); a file containing the pipeline output (`output.txt`); and a file providing a line-by-line description of your pipeline command (`description.txt`). For each assignment, store these three files in the directory `step_3/problem_N`, where `N` corresponds to the problem in Part 3 that you've solved.
+In this final step for Lab 03A, you will write several pipelines that can be used to process a data file. For each pipeline, I will provide a description of what information needs to be extracted from a given input file. Your job is to translate this request into a series of Unix commands to produce the desired output. Similar to the previous example, you will need to submit three files for each problem: a file containing the pipeline command (`pipeline.txt`); a file containing the pipeline output (`output.txt`); and a file providing a line-by-line description of your pipeline command (`description.txt`). For each assignment, store these three files in the directory `part_3/problem_N`, where `N` corresponds to the problem in Part 3 that you've solved.
 
 
 **Problem 1.** Write a pipeline to extract all of the sequence names from all of the fasta-formatted files in a directory, then print the first 3 characters of each sequence name in alphabetical order and without duplicates. Use the file `data/miRNA` to produce `output.txt`.
