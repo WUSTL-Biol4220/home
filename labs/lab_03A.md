@@ -154,7 +154,7 @@ The *description file* (`description.txt`) will explain in simple language what 
 Finally, move the three files for each exercise in Step 2 into the directory `step_2/problem_N`, where `N` corresponds to exercises 1, 2, and 3.
 
 
-**Problem 1.** Modify the following command to first sort the data table by the `AdultBodyMass_g` column before sorting by `Family`.
+**Problem 1.** Modify the following command to first sort the data table by the `AdultBodyMass_g` column before sorting by `Family`. (Hint: the command `sort -k4 -k2` would first sort by values in field 4, then subsort those results by values in field 2.)
 ```
 cat data/Pacifici2013_data.csv | cut -d ";" -f2,3,4 | sort -k2 -t ";" | uniq | cut -d ";" -f1,3 > output.txt
 ```
@@ -177,7 +177,7 @@ In this final step for Lab 03A, you will write several pipelines that can be use
 
 **Problem 1.** Write a pipeline to extract all of the sequence names from all of the fasta-formatted files in a directory, then print the first 3 characters of each sequence name in alphabetical order and without duplicates. Use the file `data/miRNA` to produce `output.txt`.
 
-**Problem 2.** Write a pipeline to find all `.fasta` files in the local directory or in any of its subdirectories (at any depth), then print only the first part of each filename -- e.g. if a file was found at `data/seq/cytB.fasta`, then the pipeline should only print `dmel`. Find files in the `data` directory to produce `output.txt`.
+**Problem 2.** Write a pipeline to find all `.fasta` files in the local directory or in any of its subdirectories (at any depth), then print only the first part of each filename -- e.g. if a file was found at `data/seq/cytB.fasta`, then the pipeline should only print `cytB`. Find files in the `data` directory to produce `output.txt`.
 
 **Problem 3.** Write a pipeline to retrieve all of the sequence data from a fasta-formatted, convert all lowercase basepairs to uppercase, convert all basepairs for thymine (T) to the uracil (U), replace each basepair with its base complement, then print the result sequence data. *(Biology note: Each nucleotide has a natural base complement on a DNA [or RNA] molecule. The complement for A is T [or U], for T [or U] is A, for C is G, and for G is C.)* Use the file `data/Marra2014_data.fasta` to produce `output.txt`.
 
