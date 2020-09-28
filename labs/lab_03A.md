@@ -113,13 +113,6 @@ Vernonia wollastonii
 Zoutpansbergia caerulea
 ```
 
-Two ways to combine the contents of files are `join` and `lam`. To demonstrate how these commands, we'll first cut our file in two ways
-
-```console
-$ cut -d "," -f8 Asteraceae_locations.csv | tail -n5 > names.csv
-$ cut -d "," -f2 Asteraceae_locations.csv | tail -n5 > codes.csv
-```
-
 When processing text in files, a key step is often to collect the set of target files. The `find` function searches a target directory, and all directories nested within it, for all filesystem objects. Providing a search pattern with the `-name` option directs `find` to only show those file paths that match.
 
 ```console
