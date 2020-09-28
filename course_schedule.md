@@ -10,12 +10,12 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Sep 14 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">Lecture 01A</a><br>(<a href="https://wustl.zoom.us/rec/share/xVUbAqcq2UKZY69q7A4uFFs6QqkuYjnN8-t7HT3nY6MTlWLIhWxb5mHuK4ER6Hp8._TbxHG2tCex6TQ-M?startTime=1600105741000">video</a>) | [Lab 01A](labs/lab_01A.md) | CSB: pp. 1-11 | Introduction; overview of hardware, operating<br>systems, networks, and servers |
 |         | Wed, Sep 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01B.pdf">Lecture 01B</a><br>(<a href="https://wustl.zoom.us/rec/share/v9Fgjrx-KLpP-Jy-XAOowq0FOQP2tTFISahS4NsG5272KRJqbCFIqPo001AX3Fnr.ha8SXalwnFjg8fxp?startTime=1600263299000">video</a>)        | [Lab 01B](labs/lab_01B.md) | CSB: 1.1-1.4| Unix: shell, commands, filesystem |
 |         | Mon, Sep 21 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_02A.pdf">Lecture 02A</a><br>(<a href="https://wustl.zoom.us/rec/play/DYos0tV3u3q73ESQ5q-NqC7VWIFmC1XFpRjw0AWHGHVNIAy4oRK5-XLuHryS_UKWUIssmASNAPAmZ2jp.95xtHKTsKwkZ8QFQ">video</a>)       | [Lab 02A](labs/lab_02A.md)| CSB: 2.1-2.4 | Git: introduction; working with a commit history  |
-|   :pig: | Wed, Sep 23 |    <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_02B.pdf">Lecture 02B</a>     | [Lab 02B](labs/lab_02B.md) | CSB: 1.5-1.6 | Unix: pipes, redirects, more commands |
-|         | Mon, Sep 28 |         | Lab 03A | CSB: xxx-xxx | Unix: text processing, file format, grep |
+|   :pig: | Wed, Sep 23 |    <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_02B.pdf">Lecture 02B</a><br>(<a href="https://wustl.box.com/s/iwcb4vaz9qb14xhanwu6v9ol477lygwu">video</a>)    | [Lab 02B](labs/lab_02B.md) | CSB: 1.5-1.6 | Unix: pipes, redirects, more commands |
+|         | Mon, Sep 28 |         | Lab 03A |      | Unix: text processing, file format, grep |
 |         | Wed, Sep 30 |         | Lab 03B | CSB: 1.7-1.10 | Unix: scripts, pseudocode, variables, control structures  | 
-|         | Mon, Oct 05 |         | Lab 04A | TBD | Biology: molecular sequences<br>Unix: file transfer<br>**Project intro** |
+|         | Mon, Oct 05 |         | Lab 04A | TBD | Biology: molecular sequences<br>Unix: file transfer |
 |         | Wed, Oct 07 |         | Lab 04B | TBD | Biology: sequence alignment, methods sensitivity |
-|         | Mon, Oct 12 |         | Lab 05A | CSB: 2.4-2.8 | Git: branch management, collaboration | 
+|         | Mon, Oct 12 |         | Lab 05A | CSB: 2.4-2.8 | Git: branch management, collaboration<br>**Project intro** | 
 |         | Wed, Oct 14 |         | Lab 05B | TBD | Unix: working on cluster |
 |         | Mon, Oct 19 |         | Lab 06A | TBD | Biology: molecular phylogenetics, neighbor-joining |
 |         | Wed, Oct 21 |         | Lab 06B | CSB: xxx-xxx | Unix: regular expressions (regex) |

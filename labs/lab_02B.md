@@ -37,7 +37,7 @@ Hello, world!
 
 Define and print the string that produces the following output, using the `echo` command with the `-e` option. The `-e` option instructs `echo` to evaluate escaped characters for the string literal.
 
-What is the one-line text string that you would construct to produce the string literal output with `echo -e` below? 
+Section 1 question: **What is the one-line text string that you would construct to produce the string literal output with `echo -e` below?**
 ```
 Special symbols are easy to escape! See?
 	\n
@@ -70,7 +70,7 @@ Commit the `string_literal.txt` file to your repo when complete.
 
 ## 2. Wildcards
 
-Strings are often used to identify filesytem resources. In many cases like this, the user wants to identify a set of strings that share a common pattern. The wildcard characters useful in these cases. A *wildcard* is used as a placeholder in a search pattern to match any other suitable character(s) during a search. Two wildcards we'll learn about today are `*` and `?`. The `*` character will match zero or more characters of any type, while the `?` character will match exactly one character. We will learn about other types of wildcards in a future lab on regular expressions.
+Strings are often used to identify filesytem resources. In many cases like this, the user wants to identify a set of strings that share a common pattern. The wildcard characters useful in these cases. A *wildcard* is used as a placeholder in a search pattern to match any other suitable character(s) during a search. Two wildcards we'll learn about today are `*` and `?`. The `*` character will match zero or more characters of any type, while the `?` character will match exactly one character. Any number of wildcards can appear anywhere in a search pattern: it's your choice. We will learn about other types of wildcards in a future lab on regular expressions.
 
 In this section, you will determine what command accomplished the specified objectives below.
 
