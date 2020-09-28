@@ -85,7 +85,7 @@ GUA,Zyzyxia,lundellii
 
 Now, call `cut` with `uniq` against the column containing the three-letter region codes:
 ```console
-$ cut -d "," -f2 Asteraceae_locations.csv | uniq | head -n5
+$ cut -d "," -f2 Asteraceae_locations.csv | uniq | tail -n5
 NAM
 NAT
 OFS
