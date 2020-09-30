@@ -48,7 +48,7 @@ To do this, you'll likely need to apply the `sort` with the `-g` option to compa
 ---
 
 ## 3. Creating a new shell script
-The Part 3 problems will ask you to write a script to process a dataset. When writing a new script, remember that it helps to (1) first outline the script with pseudocode sketch how you want the script to behave, and (2) to create copies of filesystem objects or to simplify the size/format of a target file so that output is easier to interpret. 
+The Part 3 problems will ask you to write a script to process a dataset. When writing a new script, remember that it helps to (1) first outline the script with pseudocode to sketch how you want the script to behave, and (2) to create copies of filesystem objects or to simplify the size/format of a target file so that output is easier to interpret. 
 
 **Problem 1.** Write a script that swaps the the names of two files. For example, if `file1.txt` contained the text `Hello` and `file2.txt` contained the text `world!`, then after calling the script `part_3/problem_1/run.sh`, `file1.txt` would contain the text `world!` and `file2.txt` would contain the text `Hello`. Running the script should not result in any other lasting changes to the filesystem (e.g. new permanent folders and/or files, etc.)
 
