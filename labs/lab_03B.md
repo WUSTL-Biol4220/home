@@ -19,7 +19,7 @@ For each script, annotate what each line of the script does using a comment `#`.
 
 **Problem 1.** `part_1/problem_1/run.sh` takes a directory as input. Try calling `./run.sh tmp` to see what the script does.
 
-**Problem 2.** `part_2/problem_2/run.sh` processes the file `data/Gesquiere2011_data.csv`, a file that records hormone levels among blood samples, where some individuals had their blood sampled multiple times.
+**Problem 2.** `part_1/problem_2/run.sh` processes the file `data/Gesquiere2011_data.csv`, a file that records hormone levels among blood samples, where some individuals had their blood sampled multiple times.
 
 
 ---
