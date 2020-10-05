@@ -15,11 +15,11 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Sep 30 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_03B.pdf">Lecture 03B</a><br>(<a href="https://wustl.zoom.us/rec/share/tLw4P2VjUoSRs1WbkQ2ctv3Ogz8HRtstZ7R7BT5p4kRiBaUWXmsCqFdNtygthIlJ.HMvx9HYphVfKbNQf">video</a>) | [Lab 03B](labs/lab_03B.md) | CSB: 1.7-1.10 | Unix: scripts, variables, control structures, pseudocode  | 
 |  :pig:  | Mon, Oct 05 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_04A.pdf">Lecture 04A</a>         | [Lab 04A](labs/lab_04A.md)| <a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/">Entrez Unix tools</a><br>(suggested) | Biology: molecular sequences<br>Unix: file transfer |
 |         | Wed, Oct 07 |         | Lab 04B | TBD | Biology: sequence alignment, methods sensitivity |
-|         | Mon, Oct 12 |         | Lab 05A | CSB: 2.4-2.8 | Git: branch management, collaboration<br>**Project intro** | 
-|         | Wed, Oct 14 |         | Lab 05B | TBD | Unix: working on cluster |
-|         | Mon, Oct 19 |         | Lab 06A | TBD | Biology: molecular phylogenetics, neighbor-joining |
-|         | Wed, Oct 21 |         | Lab 06B | CSB: xxx-xxx | Unix: regular expressions (regex) |
-|         | Mon, Oct 26 |         | Lab 07A | CSB: xxx-xxx | Unix: more regex  |
+|         | Mon, Oct 12 |         | Lab 05A | CSB: xxx-xxx | Unix: regular expressions (regex) |
+|         | Wed, Oct 14 |         | Lab 05B | CSB: xxx-xxx | Unix: more regex  |
+|         | Mon, Oct 19 |         | Lab 06A | TBD | Biology: molecular phylogenetics, neighbor-joining<br>**Project intro** |
+|         | Wed, Oct 21 |         | Lab 06B | CSB: 2.4-2.8 | Git: branch management, collaboration | 
+|         | Mon, Oct 26 |         | Lab 07A | TBD | Unix: working on cluster |
 |         | Wed, Oct 28 |         |         |  | **Exam 1** |
 |         | Mon, Nov 02 |         | Lab 08A |  | Python: introduction, variables, operators, file handling |
 |         | Wed, Nov 04 |         | Lab 08B |  | Python: containers, control structures <br>**Project approvals** |
