@@ -54,9 +54,9 @@ The Part 3 problems will ask you to write a script to process a dataset. When wr
 
 **Problem 2.** The directory `data/Saavedra2013` contains a number of files, where each file reports if a pollinator (row) and an plant (column) interacted, where a 1 indicates an recorded interaction, and 0 indicates no recorded interaction. Write a script (`part_3/problem_2/run.sh`) that finds the number of pollinators and the number of plants for each file, then stores those records in the output in the following format
 ```
-/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n9.txt 12 45
-/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n8.txt 19 67
-/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n7.txt 16 51
+/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n9.txt 12 22
+/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n8.txt 19 33
+/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n7.txt 16 25
 ...
 ```
 
