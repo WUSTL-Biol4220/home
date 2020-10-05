@@ -63,6 +63,14 @@ Would you like to do that automatically now? [y/N]
 OK, done.
 ```
 
+By adding the `$HOME/edirect` directory to be assigned to your `PATH` variable, your user account be able to call various EDirect commands from anywhere on the filesystem. (We will discuss what `PATH` does in the next lab.) Your current shell session, however, has not yet registered the new directory `$HOME/edirect` directory when it searches for commands. To make your current shell session aware of the new EDirect commands, type
+
+```console
+~$ source ~/.bashrc
+```
+
+(Alternatively, you can log-off then log-on to your session to refresh the `PATH` variable.)
+
 Your local installation of EDirect should now be correct. Now, you can remove the script.
 ```console
 ~$ rm install-edirect.sh
