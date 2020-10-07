@@ -20,7 +20,13 @@ This part of the lab will give you some basic exposure to the local installation
 
 Once the binary is on your filesystem, the next task is to ensure the binary file itself or a shortcut (*symbolic link*) to the file is located in one of the directories defined in your `PATH`. The `PATH` variable is an environmental variable that is initialized every time you log in to your account. When you type a command, like `ls`, Unix will recognize that command as the first binary discovered in any directories listed in `PATH`. Most Unix systems recognize the directory `~/.local/bin` in `PATH`, which is where we will place copies or links to our alignment programs.
 
-First, we'll install MUSCLE. Create a new directory for the program, then download the installation files.
+
+However, your VM does not have this `~/.local/bin` directory by default, so we will need to create it for it to be recognized in `PATH`
+```console
+$ mkdir ~/.local/bin
+```
+
+Now, we can begin installing our alignment software. First, we'll install MUSCLE. Create a new directory for the program, then download the installation files.
 
 ```
 $ mkdir -p ~/apps/muscle
