@@ -129,7 +129,7 @@ Three sets of sequences are provided for this lab. We will focus on sequences th
 To begin, we will align `adh.fasta` using MUSCLE. MUSCLE supports fairly few options, but it is fast.
 
 ```
-$ muscle -in adh.fasta  -out adh.muscle_it1.fasta --maxiters 1
+$ muscle -in adh.fasta  -out adh.muscle_it1.fasta -maxiters 1
 
 MUSCLE v3.8.31 by Robert C. Edgar
 
