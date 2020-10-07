@@ -52,11 +52,11 @@ The Part 3 problems will ask you to write a script to process a dataset. When wr
 
 **Problem 1.** Write a script that swaps the the names of two files. For example, if `file1.txt` contained the text `Hello` and `file2.txt` contained the text `world!`, then after calling the script `part_3/problem_1/run.sh`, `file1.txt` would contain the text `world!` and `file2.txt` would contain the text `Hello`. Running the script should not result in any other lasting changes to the filesystem (e.g. new permanent folders and/or files, etc.)
 
-**Problem 2.** The directory `data/Saavedra2013` contains a number of files, where each file reports if a pollinator (row) and an plant (column) interacted, where a 1 indicates an recorded interaction, and 0 indicates no recorded interaction. Write a script (`part_3/problem_2/run.sh`) that finds the number of pollinators and the number of plants for each file, then stores those records the output in the following format
+**Problem 2.** The directory `data/Saavedra2013` contains a number of files, where each file reports if a pollinator (row) and an plant (column) interacted, where a 1 indicates an recorded interaction, and 0 indicates no recorded interaction. Write a script (`part_3/problem_2/run.sh`) that finds the number of pollinators and the number of plants for each file, then stores those records in the output in the following format
 ```
-/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n9.txt 12 45
-/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n8.txt 19 67
-/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n7.txt 16 51
+/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n9.txt 12 22
+/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n8.txt 19 33
+/home/mlandis/labs/lab-03b-mlandis/data/Saavedra2013/n7.txt 16 25
 ...
 ```
 
