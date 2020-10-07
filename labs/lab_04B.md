@@ -26,6 +26,13 @@ However, your VM does not have this `~/.local/bin` directory by default, so we w
 $ mkdir ~/.local/bin
 ```
 
+After creating this new directory, we'll need to refresh your *user profile* settings. By default, your profile settings are determined when you log in to a new shell session by loading (or *sourcing*) the settings in the `~/.profile` file. Your profile file customizes your user account, such as how you want the command line interface to appear and behave, how command shortcuts ("aliases") are defined, and what values are assigned to environmental variables. We want the `PATH` variable to contain an entry for our new `~/.local/bin` directory. If you view the last lines of `~/.profile`, you'll see that it adds `~/.local/bin` to `PATH` if `~/.local/bin` exists.
+
+To update your `PATH`, you can either log-off then log back on to your user account, or call the command
+```
+$ source ~/.profile
+```
+
 Now, we can begin installing our alignment software. First, we'll install MUSCLE. Create a new directory for the program, then download the installation files.
 
 ```
