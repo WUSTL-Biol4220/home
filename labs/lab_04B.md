@@ -226,4 +226,5 @@ What settings under MAFFT and what settings under PRANK produce roughly similar 
 To turn in this assignment, please commit and push the following files to your GitHub assignment repo:
 - all `.fasta` files generated in Part 2
 - `align_mafft.sh` and `align_prank.sh` from Part 3
+- `seq.mafft_stats.csv` and `seq.prank_stats.csv` from Part 3
 - a file named `history.txt` that contains the output from the `history` command
