@@ -1,6 +1,6 @@
 # Lab 04B
 
-*Lab 04B GitHub Classroom link:* https://classroom.github.com/a/6f9RSL4X
+*Lab 04B GitHub Classroom link:* https://classroom.github.com/a/2xu6ADvB
 
 This lab will explore three different programs that employ multiple sequence alignment algorithm. Two are [MUSCLE](https://www.drive5.com/muscle/) and  [MAFFT](https://mafft.cbrc.jp/alignment/software/), which are progressive alignment methods. The other is [PRANK](http://wasabiapp.org/software/prank/), a phylogeny-aware alignment method. In this lab, you will install the two programs on your VM, experiment with the programs by running the program under various settings through the command line, then write a script to align a sequence dataset under a set of user-provided program options.
 
@@ -20,7 +20,20 @@ This part of the lab will give you some basic exposure to the local installation
 
 Once the binary is on your filesystem, the next task is to ensure the binary file itself or a shortcut (*symbolic link*) to the file is located in one of the directories defined in your `PATH`. The `PATH` variable is an environmental variable that is initialized every time you log in to your account. When you type a command, like `ls`, Unix will recognize that command as the first binary discovered in any directories listed in `PATH`. Most Unix systems recognize the directory `~/.local/bin` in `PATH`, which is where we will place copies or links to our alignment programs.
 
-First, we'll install MUSCLE. Create a new directory for the program, then download the installation files.
+
+However, your VM does not have this `~/.local/bin` directory by default, so we will need to create it for it to be recognized in `PATH`
+```console
+$ mkdir ~/.local/bin
+```
+
+After creating this new directory, we'll need to refresh your *user profile* settings. By default, your profile settings are determined when you log in to a new shell session by loading (or *sourcing*) the settings in the `~/.profile` file. Your profile file customizes your user account, such as how you want the command line interface to appear and behave, how command shortcuts ("aliases") are defined, and what values are assigned to environmental variables. We want the `PATH` variable to contain an entry for our new `~/.local/bin` directory. If you view the last lines of `~/.profile`, you'll see that it adds `~/.local/bin` to `PATH` if `~/.local/bin` exists.
+
+To update your `PATH`, you can either log-off then log back on to your user account, or call the command
+```
+$ source ~/.profile
+```
+
+Now, we can begin installing our alignment software. First, we'll install MUSCLE. Create a new directory for the program, then download the installation files.
 
 ```
 $ mkdir -p ~/apps/muscle
@@ -116,7 +129,7 @@ Three sets of sequences are provided for this lab. We will focus on sequences th
 To begin, we will align `adh.fasta` using MUSCLE. MUSCLE supports fairly few options, but it is fast.
 
 ```
-$ muscle -in adh.fasta  -out adh.muscle_it1.fasta --maxiters 1
+$ muscle -in adh.fasta  -out adh.muscle_it1.fasta -maxiters 1
 
 MUSCLE v3.8.31 by Robert C. Edgar
 
@@ -213,4 +226,5 @@ What settings under MAFFT and what settings under PRANK produce roughly similar 
 To turn in this assignment, please commit and push the following files to your GitHub assignment repo:
 - all `.fasta` files generated in Part 2
 - `align_mafft.sh` and `align_prank.sh` from Part 3
+- `seq.mafft_stats.csv` and `seq.prank_stats.csv` from Part 3
 - a file named `history.txt` that contains the output from the `history` command
