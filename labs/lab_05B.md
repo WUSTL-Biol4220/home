@@ -22,7 +22,7 @@ contig,length,numreads,gene,status
 00004,291,3,00001,it_thresh
 ```
 
-The lines that process the text and print output can be written in just lines, with the first line being a simple `echo` to write the header names, and the second line being a `sed` command to reformat the sequence information.
+The lines that process the text and print output can be written in just two lines, with the first line being a simple `echo` to write the header names, and the second line being a `sed` command to reformat the sequence information.
 
 **Problem 2.** Write a script named `problem2.sh` to extract interesting sequence motifs from `ecoli.fasta`, a fasta-formatted file containing one sequence. For example, task 1 will be to find all lines in which the motif `[GC]ATTACA` occurs. The output for exercise 1 will be formatted as
 ```
