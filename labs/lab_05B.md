@@ -39,7 +39,7 @@ You can `cat -n` or `grep -n ""` to prefix the line number to each line in `ecol
 For the following tasks, report lines that contain 1+ instances of following motifs:
 
 - *Task 1:* Report all instances of the motifs `GATTACA` or `CATTACA`.
-- *Task 2:* Report all instances of motifs that are 10 basepairs in length, begin with `AAA` and end with `TTT` and contain no `C`s. 
+- *Task 2:* Report all instances of motifs that are 10 basepairs in length, begin with `AAA` and end with `TTT` and contain no `C`s. For example, `AAAGATTTTT` would match, but `AAACCGTTTT` would not.
 - *Task 3:* Report all instances of motifs that repeat `xA` between 5 and 6 times, and are flanked by the basepair `C` on both sides; only list the repeating region, not the flanking region. For example, `CTATATATATAC` would match, and the printed motif would be `TATATATATA`. The motifs `CGATAGACATAC` and `CTATATATATAG` would not match.
 - *Task 4:* Report all lines that begin with `ATG` and end with `TAT`, `GAA`, or `CGA`. However, only print the first and last the nucleotides for the matched line in the output. For example if a line read `ATGCAGTATAGGACCATAGATACAGATATGGTAAGACCGA`, then the printed text for the motif should read `ATGCGA`.
 
