@@ -22,7 +22,7 @@ contig,length,numreads,gene,status
 00004,291,3,00001,it_thresh
 ```
 
-The lines that process the text and print output can be written in just lines, with the first line being a simple `echo` to write the header names, and the second line being a `sed` command to reformat the sequence information.
+The lines that process the text and print output can be written in just two lines, with the first line being a simple `echo` to write the header names, and the second line being a `sed` command to reformat the sequence information.
 
 **Problem 2.** Write a script named `problem2.sh` to extract interesting sequence motifs from `ecoli.fasta`, a fasta-formatted file containing one sequence. For example, task 1 will be to find all lines in which the motif `[GC]ATTACA` occurs. The output for exercise 1 will be formatted as
 ```
@@ -39,7 +39,7 @@ You can `cat -n` or `grep -n ""` to prefix the line number to each line in `ecol
 For the following tasks, report lines that contain 1+ instances of following motifs:
 
 - *Task 1:* Report all instances of the motifs `GATTACA` or `CATTACA`.
-- *Task 2:* Report all instances of motifs that are 10 basepairs in length, begin with `AAA` and with `TTT` and contain no `C`s. 
+- *Task 2:* Report all instances of motifs that are 10 basepairs in length, begin with `AAA` and end with `TTT` and contain no `C`s. For example, `AAAGATTTTT` would match, but `AAACCGTTTT` would not.
 - *Task 3:* Report all instances of motifs that repeat `xA` between 5 and 6 times, and are flanked by the basepair `C` on both sides; only list the repeating region, not the flanking region. For example, `CTATATATATAC` would match, and the printed motif would be `TATATATATA`. The motifs `CGATAGACATAC` and `CTATATATATAG` would not match.
 - *Task 4:* Report all lines that begin with `ATG` and end with `TAT`, `GAA`, or `CGA`. However, only print the first and last the nucleotides for the matched line in the output. For example if a line read `ATGCAGTATAGGACCATAGATACAGATATGGTAAGACCGA`, then the printed text for the motif should read `ATGCGA`.
 
