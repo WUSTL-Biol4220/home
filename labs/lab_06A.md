@@ -21,6 +21,7 @@ FastTree (http://www.microbesonline.org/fasttree/) is phylogenetic inference sof
 
 ```
 $ wget http://www.microbesonline.org/fasttree/FastTree
+$ chmod +x FastTree
 $ cp FastTree ~/.local/bin/fasttree
 ```
 
