@@ -91,7 +91,7 @@ $ nw_indent simple_newick.tre
 ```
 
 
-We can visualize that Newick string with the ocmmand
+We can visualize that Newick string with the command
 ```
 $ nw_display simple_newick.tre
                                        +-------------------------------------+ A
