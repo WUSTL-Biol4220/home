@@ -214,6 +214,8 @@ $ cat output/primates-JC-MLE.contree
 (((Saimiri_sciureus:0.1239752697,(Callicebus_donacophilus:0.1020864274,(Cebus_albifrons:0.0983848577,Aotus_trivirgatus:0.1042444580)45:0.0251511972)53:0.0349025280)100:0.0776567284,((Hylobates_lar:0.1146820143,Pan_paniscus:0.0808129287)93:0.0320053991,(Colobus_guereza:0.1254055000,(Chlorocebus_aethiops:0.0793995081,Macaca_mulatta:0.0980342609)96:0.0277058194)100:0.0441403542)100:0.0531336716)100:0.0461693791,(((Tarsius_syrichta:0.1666672071,(((Galago_senegalensis:0.0784946174,Otolemur_crassicaudatus:0.0846763436)100:0.0459002932,Perodicticus_potto:0.0974196762)91:0.0259484374,(Loris_tardigradus:0.0979654601,Nycticebus_coucang:0.1100940690)83:0.0323645409)80:0.0325003007)34:0.0234662782,(Lepilemur_hubbardorum:0.1267055210,(((Varecia_variegata_variegata:0.1124506063,Lemur_catta:0.0857991684)78:0.0357837557,Propithecus_coquereli:0.0900948559)49:0.0238106553,(Microcebus_murinus:0.1202963845,Cheirogaleus_major:0.0782454409)97:0.0394293337)59:0.0292536656)100:0.0539654199)23:0.0180351073,Daubentonia_madagascariensis:0.1293442077)52:0.0287209999,Galeopterus_variegatus:0.1667330484);
 ```
 
+### Maximum parsimony with MPBoot
+
 Finally, we will estimate the maximum parsimony tree for primate cytB using `mpboot`. The syntax is very similar to that for `iqtree`, except that parsimony methods do not have evolutionary models, so we do not specify the `-m` option
 
 ```
