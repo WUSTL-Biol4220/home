@@ -77,7 +77,7 @@ $ cat simple_newick.tre
 
 or in an expanded format
 ```
-$ nw_ident simple_newick.tre
+$ nw_indent simple_newick.tre
 (
   (
     A,
