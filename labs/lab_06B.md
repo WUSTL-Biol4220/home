@@ -68,7 +68,7 @@ In this part, we will return to the local branch we created in Part 1.
 $ git checkout mlandis_edit
 ```
 
-This branch is an older version of `main`, before all us applied ourt edits. First, merge the `main` branch into `mlandis_edit`
+This branch is an older version of `main`, before all of us applied our edits. First, merge the `main` branch into `mlandis_edit`
 
 ```console
 $ git merge main
