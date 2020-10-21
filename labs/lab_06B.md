@@ -35,7 +35,7 @@ $ git branch
 
 Our first group exercise will be to create an empty file named `data_mlandis.txt`. Commit that file to your current branch (`main`) in your local repository, then push your changes to the remote repo on GitHub. After everyone has pushed their changes, pull changes from the remote repo. You should now have a local copy of each student's empty file. 
 
-Now, add your username and a message to your file. Commit and push the changes, while pulling any changes from your collaborators. Repeat this three times. At this time, no one should modify any file but their own, meaning `git` should report any issues as everyone pushes and pulls their changes.
+Now, add your username and a message to your file. Commit and push the changes, while pulling any changes from your collaborators. Repeat this three times. At this time, no one should modify any file but their own, meaning `git` should not report any issues as everyone pushes and pulls their changes.
 
 ---
 
