@@ -21,6 +21,7 @@ FastTree (http://www.microbesonline.org/fasttree/) is phylogenetic inference sof
 
 ```
 $ wget http://www.microbesonline.org/fasttree/FastTree
+$ chmod +x FastTree
 $ cp FastTree ~/.local/bin/fasttree
 ```
 
@@ -76,7 +77,7 @@ $ cat simple_newick.tre
 
 or in an expanded format
 ```
-$ nw_ident simple_newick.tre
+$ nw_indent simple_newick.tre
 (
   (
     A,
@@ -90,7 +91,7 @@ $ nw_ident simple_newick.tre
 ```
 
 
-We can visualize that Newick string with the ocmmand
+We can visualize that Newick string with the command
 ```
 $ nw_display simple_newick.tre
                                        +-------------------------------------+ A
@@ -213,6 +214,8 @@ $ cat output/primates-JC-MLE.contree
 (((Saimiri_sciureus:0.1239752697,(Callicebus_donacophilus:0.1020864274,(Cebus_albifrons:0.0983848577,Aotus_trivirgatus:0.1042444580)45:0.0251511972)53:0.0349025280)100:0.0776567284,((Hylobates_lar:0.1146820143,Pan_paniscus:0.0808129287)93:0.0320053991,(Colobus_guereza:0.1254055000,(Chlorocebus_aethiops:0.0793995081,Macaca_mulatta:0.0980342609)96:0.0277058194)100:0.0441403542)100:0.0531336716)100:0.0461693791,(((Tarsius_syrichta:0.1666672071,(((Galago_senegalensis:0.0784946174,Otolemur_crassicaudatus:0.0846763436)100:0.0459002932,Perodicticus_potto:0.0974196762)91:0.0259484374,(Loris_tardigradus:0.0979654601,Nycticebus_coucang:0.1100940690)83:0.0323645409)80:0.0325003007)34:0.0234662782,(Lepilemur_hubbardorum:0.1267055210,(((Varecia_variegata_variegata:0.1124506063,Lemur_catta:0.0857991684)78:0.0357837557,Propithecus_coquereli:0.0900948559)49:0.0238106553,(Microcebus_murinus:0.1202963845,Cheirogaleus_major:0.0782454409)97:0.0394293337)59:0.0292536656)100:0.0539654199)23:0.0180351073,Daubentonia_madagascariensis:0.1293442077)52:0.0287209999,Galeopterus_variegatus:0.1667330484);
 ```
 
+### Maximum parsimony with MPBoot
+
 Finally, we will estimate the maximum parsimony tree for primate cytB using `mpboot`. The syntax is very similar to that for `iqtree`, except that parsimony methods do not have evolutionary models, so we do not specify the `-m` option
 
 ```
@@ -238,7 +241,9 @@ This indicates that the maximum likelihood (MLE) and maximum parsimony (MP) tree
 
 ## Scripting phylogenetics analyses
 
-*Part 1.* Write a script called `build_phylo.sh` that accepts a DNA sequence alignment in fasta format as an input argument.  The script will then estimate the phylogeny from that alignment using `fasttree`, `iqtree`, and `mpboot`, using the settings defined in the previous section. Store the input filename, except for the `.fasta` file extension, into a variable called e.g. `INPUT_PREFIX`. For each tree estimate, the script should store text-plots for each phylogeny into the file `${INPUT_PREFIX}.tree_plot.txt` using `nw_display`. Additionally, the script should write three files that compute the Robinson-Foulds distance for each pair of trees: `${INPUT_PREFIX}.MLE_MP.rfdist`, `${INPUT_PREFIX}.MLE_NJ.rfdist`, and `${INPUT_PREFIX}.MP_NJ.rfdist`.
+*Part 1.* Write a script called `build_phylo.sh` that accepts a DNA sequence alignment in fasta format as an input argument.  The script will then estimate the phylogeny from that alignment using `fasttree`, `iqtree`, and `mpboot`, using the settings defined in the previous section. Use a variable named `METHOD` to record whether the tree was estimated using neighbor-joining (`NJ`), maximum likelihood (`ML`), or maximum parsimony (`MP`). Store the input filename, except for the `.fasta` file extension, into a variable called e.g. `INPUT_PREFIX`. Then define the variable `OUTPUT_PREFIX` that is equal to `${INPUT_PREFIX}.${METHOD}`.
+
+For each analysis, the script should ensure all standard output from the methods has the prefix `${OUTPUT_PREFIX}`. In addition, save text-plots for each phylogeny into the file `${OUTPUT_PREFIX}.tree_plot.txt` using `nw_display`. Finally, save three files that compute the Robinson-Foulds distance between the pairs trees estimated by the three methods: `${INPUT_PREFIX}.MLE_MP.rfdist`, `${INPUT_PREFIX}.MLE_NJ.rfdist`, and `${INPUT_PREFIX}.MP_NJ.rfdist`.
 
 *Part 2.* Write a script called `batch_phylo.sh` that accepts a text file containing a list of fasta files as an argument. This script will apply `build_phylo.sh` to each fasta file in the list, and store output for each input file in an organized manner into a local directory `output/${INPUT_PREFIX}`. In particular, create the file `input_sequences.txt` that contains
 
