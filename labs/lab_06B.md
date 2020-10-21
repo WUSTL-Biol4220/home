@@ -1,6 +1,6 @@
 # Lab 06B
 
-*Lab 06B GitHub Classroom link:* https://classroom.github.com/g/JHMuJ5F1
+*Lab 06B GitHub Classroom link:* https://classroom.github.com/g/P1iPDoj3
 
 In this lab, we will learn how git enables researchers to modify the same set of files in real time. We will work with a one shared repository to complete the lab exercises. 
 
