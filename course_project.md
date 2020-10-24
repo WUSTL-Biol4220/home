@@ -165,6 +165,19 @@ The log file should report
 
 ## 4. `make_phylo.sh`
 
+*(Relevant labs and lectures: 06A)*
+
+This script will align a set of fasta sequences located in a target directory.
+
+### Usage
+
+`./make_align SEQUENCE_DIR ALIGN_TOOL [ALIGN_TOOL_OPTIONS]`
+
+### Behavior
+
+The `make_align.sh` script will align the sequences in `SEQUENCE_DIR` using the method `ALIGN_TOOL` and the options defined in `ALIGN_TOOL_OPTIONS`.
+
+
 The `make_phylo.sh` script will estimate a phylogeny from a multiple sequence alignment using the [fasttree]() software, then plot the tree using the [toytree]() software.
 
 To complete this 
