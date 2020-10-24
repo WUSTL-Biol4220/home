@@ -71,25 +71,27 @@ Don't forget, each student must **add two or more custom features** to his/her p
 
 ## 1. `parse_settings.sh`
 
-This script will parse analysis settings from a settings file. Users will provide two arguments: (1) the name of the pipeline step settings parse, and (2) the file path to the pipeline settings file.
+This script will parse analysis settings from a setting file. Users will provide two arguments: (1) the file path to the pipeline settings file, and (2) the name of the pipeline step to parse.
 
-The pipeline settings file stores comma-separated values in the following format
+The pipeline settings file stores comma-separated values in the following format:
 ```
-step,settings
-get_seq.sh,""
-make_align.sh,""
-make_phylo.sh,""
-make_mol_stats.py,""
-make_dnds.py,""
-make_results.py,""
+script,settings
+get_seq.sh,accession=my_accessions.txt;overwrite=true;
+make_align.sh,
+make_phylo.sh,
+make_mol_stats.py,
+make_dnds.py,
+make_results.py,
+feature1.sh,setting1=my_feature1_settings.txt;parameter1=20;
+feature2.py,setting2=my_feature2_settings.txt;parameter2=50;
 ```
+The `script` column identifies a pipeline step by the script name. The `settings` column contains a list of `;`-delimited setting variables following the pattern `variable1=value1;variable2=value2;`.
+
+For example, if we called `./parse_settings.sh settings.txt get_seq.sh` we should locate the row for the step labeled `get_seq.sh` then parse the settings string `accession=my_accessions.txt;overwrite=true;`. The `parse_settings.sh` script will then reformat the settings for a given pipeline step as-needed. Users may provide all or only some settings for any pipeline step. 
 
 ### Usage
 
-`./parse_input [OPTIONS] file`
-
-### Output
-
+`./parse_input SETTINGS_FILE PIPELINE_STEP`
 
 ---
 
