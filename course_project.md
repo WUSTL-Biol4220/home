@@ -167,26 +167,30 @@ The log file should report
 
 *(Relevant labs and lectures: 06A)*
 
-This script will align a set of fasta sequences located in a target directory.
+This script will estimate a phylogeny from a multiple sequence alignment.
 
 ### Usage
 
-`./make_align SEQUENCE_DIR ALIGN_TOOL [ALIGN_TOOL_OPTIONS]`
+`./make_phylo ALIGNMENT_FILE PHYLO_TOOL [PHYLO_TOOL_OPTIONS]
 
 ### Behavior
 
-The `make_align.sh` script will align the sequences in `SEQUENCE_DIR` using the method `ALIGN_TOOL` and the options defined in `ALIGN_TOOL_OPTIONS`.
+The `make_phylo.sh` script will infer a phylogeny using the alignment stored in `ALIGNMENT_FILE` using the software `PHYLO_TOOL` under the settings `PHYLO_TOOL_OPTIONS`. The script must support the phylogenetic inference methods: FastTree, IQ-Tree, and MPBoot. Students are welcome to include additional phylogenetic methods, but they will need to install that software on their virtual machine. The phylogenetic inference procedure will use arguments/options passed in through `PHYLO_TOOL_OPTIONS`. Note that invalid input and/or invalid software options may cause the phylogenetics software to fail. Script failures you encounter should be logged in `warnings.log`
 
+In addition to supporting input and output arguments, other `PHYLO_TOOL_OPTIONS` to support are
+- FastTree: gap open penalty (`-gapopen`)
+- IQ-Tree: gap open penalty (`--op`) and gap extension penalty (`--ep`)
+- MPBoot: gap rate (`-gaprate`), gap extension probability (`-gapext`)
 
-The `make_phylo.sh` script will estimate a phylogeny from a multiple sequence alignment using the [fasttree]() software, then plot the tree using the [toytree]() software.
+The script should write two files as output: (1) the output phylogenetic estimate stored as a Newick string and (2) a log file that documents the phylogenetic inference settings. If the `ALIGNMENT_FILE` was `primates_cytb.align_mafft.fasta` and `PHYLO_TOOL` was FastTree, then the output file should be saved as `primates_cytb.align_MAFFT.phylo_FastTree.tre` and `primates_cytb.align_MAFFT.phylo_FastTree.log`.
 
-To complete this 
+The log file should report
+- the name of the file containing the phylogenetic estimate, in Newick format
+- the command string used to infer the phylogeny
+- when the phylogeny was created (use output of `date`)
+- a text-based plot of the tree using `nw_display`
+- (optional) the version of the phylogenetic software
 
-Input file(s):
-* Step 3 alignment file alignment.fasta
-Output file(s):
-* phylogeny.tre file (different settings)
-* toytree figure
 
 ---
 
