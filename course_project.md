@@ -225,45 +225,27 @@ As output, this script should output five files in .csv format. The beginning of
 - `prefix.seq_codon.csv`
 - `prefix.codon_usage.csv`
 
-Input file(s)
-* Step 3 alignment file
-
-Output file(s)
-* gc_seq_report.txt
-* gc_site_report.txt
-* phylo_info_report.txt
-* codon_usage_report.txt
-* warning.log
-
-
 ---
 
 ## 6. `make_dnds.py`
 
 *(Relevant labs and lectures: TBD)*
 
-The `make_dnds.sh` script will test for the molecular signature of positive selection using [PAML](). 
+The `make_dnds.sh` script will test for the molecular signature of positive selection using PAML. 
 
-PAML can b
+### Usage
 
-Reformat input for PAML
-Reformat output from PAML so it's readable
+`./make_dnds.py ALIGNMENT_FILE PHYLOGENY_FILE [PAML_OPTIONS]`
 
-Input file(s):
-* Step 3 alignment file, Step 5 phylogeny
-Output file(s):
-* phylogeny.tre
-* toytree figure
-* parsed dNdS report
+### Behavior
 
-Input file(s):
-* Step 1 settings
-* Step 3 alignment file
-* Step 5 phylogeny file
-Output file(s):
-* raw PAML results
-* reformatted PAML results
-* auto-generated PAML settings files
+This script accepts a multiple sequence alignment and a phylogenetic tree as input to process using PAML. PAML settings are managed through a control file (`.ctl`); this script accepts `PAML_OPTIONS` that are then reformatted accordingly into the PAML control file. At a minimum, `PAML_OPTIONS` should support the settings XX, XX, XX.
+
+The script should read in the default PAML output, saving per-site dN/dS scores as a csv file in `${SEQUENCE_NAME}.site_dnds.py` and a Newick string estimated using the PAML codon model titled `${SEQUENCE_NAME}.paml.tre`.
+
+As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
+- `prefix.paml.tre`
+- `prefix.site_dnds.csv`
 
 ---
 
@@ -271,29 +253,21 @@ Output file(s):
 
 *(Relevant labs and lectures: TBD)*
 
-Take all previous report files, then summarize it in a compact representation.
+This file will collect all pipeline output located in the target sequence directory, then combine any compatible results or logs and generate any figures.
 
-Have it update README.md so the results are visible in your github repo
+### Usage
 
-Input file(s):
-* output from Steps 2-6
-Output file(s):
-* single file that reports settings and output
+`./make_results.py SEQUENCE_DIR [RESULTS_OPTIONS]`
 
----
+### Behavior
 
+This script should generate a `README.md` file in `SEQUENCE_DIR` that lists the analysis settings.
 
 ---
 
 ## Pipeline manual
 
----
-
-## Input dataset
-
----
-
-## Analysis output
+Create short manual entries for your two (or more) custom pipeline steps. These entries should define the usage and behavior the scripts in a comparable detail to the entries in this document (`course_project.md`).
 
 ---
 
@@ -304,7 +278,3 @@ Write a 1-2 page report (12pt font, single-spaced) that summarizes your research
 1. An overview of your pipeline, the pipeline features, and the analysis results.
 2. A detailed description of the custom pipeline features that you added to the project, why they might be interesting or useful, and any challenges you encountered introducing those features.
 3. A discussion of how your analysis output (results) differed depending on what settings/datasets you analyzed, and how those differences might influence what biological hypotheses are supported or rejected. For example, an analysis run under Settings-A might cause our methods to infer high proportions of nonsynonymous substitutions relative to synonymous substitutions, while Settings-B might cause our methods to infer roughly equal proportions of nonsynonymous and synonymous substitutions. Do Settings-A and Settings-B support conflicting biological scenarios? Why is it important to compare results using both settings? 
-
-
----
-
