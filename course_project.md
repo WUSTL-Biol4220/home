@@ -2,7 +2,7 @@
 
 ## Overview
 
-Fall 2020 students will build a bioinformatics pipeline to analyze genomic data for multiple SARS-CoV-19 sequences. This document provides the technical requirements for the pipeline steps. Each step will generally rely on programs and techniques we explored in various course lab assignment, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
+Fall 2020 students will build a bioinformatics pipeline to analyze the spread of SARS-CoV-19. This document outlines the technical requirements for the pipeline steps. Each step will generally rely on programs and techniques we explored in various course lab assignment, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
 
 Student pipelines will incorporate seven major steps:
 
@@ -10,42 +10,60 @@ Student pipelines will incorporate seven major steps:
 2. Download sequences
 3. Align sequences
 4. Estimate phylogenetic tree from alignment
-5. Test for signatures of positive selection
-6. Characterize variation in molecular alignment
+5. Characterize variation in molecular alignment
+6. Test for signatures of positive selection
 7. Generate output files
 
 ```
 # pipeline schematic
-
- in---->(1)
-         |
-         V
-        (2)
-         |
-         V     
-  /-----(3)-----\
-  |      |      |
-  V      V      V
- (4)--->(5)    (6)
-  |      |      |
-  |      V      |
-  \---->(7)<----/
-         |
-         V
-        out
-          
+                 
+                  + → 6 ──+
+                  |   ↓   ↓
+ in → 1 → 2 → 3 → 4 → 7 → out
+                  |       ↑
+                  + → 5 ──+ 
 ```
 
+Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own arguments, options, and output. At the same time, the script for any pipeline may need to produce output or accept input that is compatible with other pipeline steps (for example, sequence alignement in Step 3 will accept the downloaded sequences of Step 2 as input). Each student need to add at least two new custom features. Custom features must be approved by the instructor. The pipeline, once complete, will then be used to analyze a biological dataset.
 
-Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own arguments, options, and output. At the same time, the program for each pipeline step may be required to produce output or accept input that is compatible with other pipeline steps (for example, sequence alignement in Step 3 will accept the downloaded sequences of Step 2 as input).
+### Project submission
+Students will submit their pipeline projects as GitHub repositories. Each repository will contain all the relevant files needed for a naive user to analyze a provided dataset, or a new dataset. Project repositories must contain the following files:
+  - pipeline scripts
+  - pipeline manual
+  - input dataset
+  - analysis output
+  - analysis write-up
+  
+These materials are described in more detail below.
 
-Students will be welcome to make richer pipelines, explore whatever they want. All students will have to add at least two new custom features. **Feature ideas must be approved by the instructor by Wed, Nov 4.** 
+### Project presentation
+
+At the end of the course, each student will deliver a short presentation of their work on the pipeline project to the class. Your presentation should share:
+  - your custom pipeline features
+  - an overview of your pipeline settings/datasets
+  - an overview of your findings
+  - aspects of the pipeline you would like to improve
+  - any technical challenges you were proud to overcome
+  - ideas for new pipeline features
+  
+Plan to present for at least 10 minutes. After your presentation, the class will discuss what was presented, and ask the presenter questions.
+
+### Important dates
+
+- Feature ideas must be approved by the instructor by **Wed, Nov 4**
+- Students will present their work to the class on **Mon, Dec 14**
+- Students will submit their project materials by **Fri, Dec 18**
+
 
 (*Elements of the pipeline project design were inspired by [https://github.com/roblanf/sarscov2phylo](https://github.com/roblanf/sarscov2phylo).*)
 
 ---
 
-## General specifications
+## Pipeline scripts
+
+This section defines the general specifications for the Bioinformatics pipeline.
+
+### General specifications
 
 Students will develop a pipeline that provides the following functionality
 
