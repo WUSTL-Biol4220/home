@@ -32,7 +32,7 @@ Students will submit their pipeline projects as GitHub repositories. Each reposi
   - pipeline manual
   - input dataset
   - analysis output
-  - analysis write-up
+  - analysis report
   
 These materials are described in more detail below.
 
@@ -61,7 +61,7 @@ Plan to present for at least 10 minutes. After your presentation, the class will
 
 ## Pipeline scripts
 
-This section defines the general specifications for the Bioinformatics pipeline.
+
 
 ### General specifications
 
@@ -257,6 +257,32 @@ Input file(s):
 * output from Steps 2-6
 Output file(s):
 * single file that reports settings and output
+
+---
+
+
+---
+
+## Pipeline manual
+
+---
+
+## Input dataset
+
+---
+
+## Analysis output
+
+---
+
+## Analysis report
+
+Write a 1-2 page report (12pt font, single-spaced) that summarizes your research findings. At a minimum, report should contain these components:
+
+1. An overview of your pipeline, the pipeline features, and the analysis results.
+2. A detailed description of the custom pipeline features that you added to the project, why they might be interesting or useful, and any challenges you encountered introducing those features.
+3. A discussion of how your analysis output (results) differed depending on what settings/datasets you analyzed, and how those differences might influence what biological hypotheses are supported or rejected. For example, an analysis run under Settings-A might cause our methods to infer high proportions of nonsynonymous substitutions relative to synonymous substitutions, while Settings-B might cause our methods to infer roughly equal proportions of nonsynonymous and synonymous substitutions. Do Settings-A and Settings-B support conflicting biological scenarios? Why is it important to compare results using both settings? 
+
 
 ---
 
