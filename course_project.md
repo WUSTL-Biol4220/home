@@ -97,7 +97,10 @@ For example, if we called `./parse_settings.sh settings.txt get_seq.sh` we shoul
 
 ## 2. `get_seq.sh`
 
-The `get_seq.sh` file will accept one file as input. That input file will contain a list of GenBank accession numbers, one per row, where each accession corresponds to a target sequence. The script will then download all available sequences into the `sequences` subdirectory, and append any issues to the file `warnings.log`.
+*(Relevant labs and lectures: 03A, 03B, 04A)*
+
+
+The `get_seq.sh` manages and downloads fasta-formatted accessions from GenBank. As input, the script accepts a list of accessions, one per row. The script will then download all available sequences into the `sequences` subdirectory, and append any issues to the file `warnings.log`.
 
 ### Usage
 
