@@ -171,7 +171,7 @@ This script will estimate a phylogeny from a multiple sequence alignment.
 
 ### Usage
 
-`./make_phylo ALIGNMENT_FILE PHYLO_TOOL [PHYLO_TOOL_OPTIONS]
+`./make_phylo ALIGNMENT_FILE PHYLO_TOOL [PHYLO_TOOL_OPTIONS]`
 
 ### Behavior
 
@@ -196,19 +196,34 @@ The log file should report
 
 ## 5. `make_mol_stats.py`
 
+*(Relevant labs and lectures: TBD)*
+
 The `make_mol_stats.py` script generates a report of various summary statistics and transformations for a multiple sequence alignment.
 
+### Usage
+
+`./make_mol_stats.py ALIGNMENT_FILE`
+
+### Behavior
+
 This Python script will perform several steps:
-1. Read an alignment file
+1. Store `ALIGNMENT_FILE` into a container
 2. Compute the GC-richness for each sequence
 3. Compute the GC-richness for each site
 4. Determine whether or not each site is phylogenetically informative.
 5. Find all coding regions and all codons
 6. Compute codon frequencies per site and per sequence
-7. Compute codon usage enrichment across amino acids, sites, and sequences
+7. Compute biased codon usage proportions across amino acids, sites, and sequences
 
-Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in Lab XX [TBD]. Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one nucleotide type, and at least two individuals of a different nucleotide type -- i.e. the site contains enough information to identify a phylogenetic "split".
+Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in Lab [XX]() (TBD). Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one variant, and at least two individuals of a different variant -- i.e. the site contains enough information to identify a phylogenetic "split".
 
+As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
+- `prefix.seq_GC.csv`
+- `prefix.site_GC.csv`
+- `prefix.seq_phylo_inf.csv`
+- `prefix.site_codon.csv`
+- `prefix.seq_codon.csv`
+- `prefix.codon_usage.csv`
 
 Input file(s)
 * Step 3 alignment file
@@ -224,6 +239,8 @@ Output file(s)
 ---
 
 ## 6. `make_dnds.py`
+
+*(Relevant labs and lectures: TBD)*
 
 The `make_dnds.sh` script will test for the molecular signature of positive selection using [PAML](). 
 
@@ -251,6 +268,8 @@ Output file(s):
 ---
 
 ## 7. `make_results.py`
+
+*(Relevant labs and lectures: TBD)*
 
 Take all previous report files, then summarize it in a compact representation.
 
