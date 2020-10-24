@@ -101,7 +101,6 @@ For example, if we called `./parse_settings.sh settings.txt get_seq.sh` we shoul
 
 *(Relevant labs and lectures: 03A, 03B, 04A)*
 
-
 The `get_seq.sh` manages and downloads fasta-formatted accessions from GenBank. As input, the script accepts two arguments: (1) a list of accessions, and (2) a directory where the sequences are managed. The script will then check whether each accession has already been downloaded into the managed directory, download any missing sequences, and append any issues to the file `warnings.log`.
 
 ### Usage
@@ -133,15 +132,24 @@ data, e.g. `ACGTACGTACT`.
 
 ## 3. `make_align.sh`
 
-Step 3 of the pipeline will collect and align a set of fasta accessions located in a user-provided directory (output by `get_seq.sh` in Step 2) under settings provided in XXX.
+*(Relevant labs and lectures: 03B, 04B)*
+
+This script will align a set of fasta sequences located in a target directory.
 
 ### Usage
 
-`./make_align -s=SETTINGS_FILE FASTA_FILE`
+`./make_align SEQUENCE_DIR ALIGN_TOOL [ALIGN_TOOL_OPTIONS]`
 
-### Description
+### Behavior
 
-The `make_align.sh` script will align the sequences in `FASTA_FILE` according to the settings in `SETTINGS_FILE`. 
+The `make_align.sh` script will align the sequences in `SEQUENCE_DIR` using the method `ALIGN_TOOL` and the options defined in `ALIGN_TOOL_OPTIONS`.
+
+The script will concatenate all fasta files in `SEQUENCE_DIR`, then take that concatenated sequence file as input for the alignment procedure. The script will then align the sequence file using a supported alignment tool (specified by `ALIGN_TOOL`), where supported tools must include MAFFT, Muscle, and PRANK. Students are welcome to add support for additional tools, but they will need to install that software on their virtual machine. The alignment procedure will use arguments/options passed in through `ALIGN_TOOL_OPTIONS`. Note that invalid input and/or invalid software options may cause the alignment software to fail. Script failures you encounter should be logged in `warnings.log`
+
+Important `ALIGN_OPTION_TOOLS` to support are
+- MAFFT: gap open penalty (`--op`) and gap extension penalty (`--ep`)
+- Muscle:
+- PRANK: gap rate (`-gaprate`), gap extension probability (`-gapext`)
 
 Supported MAFFT settings are the gap open penalty (`--op`) and the gap extension penalty (`--ep`).
 
