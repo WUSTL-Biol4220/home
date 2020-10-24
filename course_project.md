@@ -144,32 +144,22 @@ This script will align a set of fasta sequences located in a target directory.
 
 The `make_align.sh` script will align the sequences in `SEQUENCE_DIR` using the method `ALIGN_TOOL` and the options defined in `ALIGN_TOOL_OPTIONS`.
 
-The script will concatenate all fasta files in `SEQUENCE_DIR`, then take that concatenated sequence file as input for the alignment procedure. The script will then align the sequence file using a supported alignment tool (specified by `ALIGN_TOOL`), where supported tools must include MAFFT, Muscle, and PRANK. Students are welcome to add support for additional tools, but they will need to install that software on their virtual machine. The alignment procedure will use arguments/options passed in through `ALIGN_TOOL_OPTIONS`. Note that invalid input and/or invalid software options may cause the alignment software to fail. Script failures you encounter should be logged in `warnings.log`
+The script will concatenate all fasta files in `SEQUENCE_DIR`, then take that concatenated sequence file as input for the alignment procedure. The script will then align the sequence file using a supported alignment tool (specified by `ALIGN_TOOL`), where supported tools must include Muscle, MAFFT, and PRANK. Students are welcome to add support for additional tools, but they will need to install that software on their virtual machine. The alignment procedure will use arguments/options passed in through `ALIGN_TOOL_OPTIONS`. Note that invalid input and/or invalid software options may cause the alignment software to fail. Script failures you encounter should be logged in `warnings.log`
 
-Important `ALIGN_OPTION_TOOLS` to support are
+In addition to supporting input and output arguments, other `ALIGN_TOOL_OPTIONS` to support are
+- Muscle: gap open penalty (`-gapopen`)
 - MAFFT: gap open penalty (`--op`) and gap extension penalty (`--ep`)
-- Muscle:
 - PRANK: gap rate (`-gaprate`), gap extension probability (`-gapext`)
 
-Supported MAFFT settings are the gap open penalty (`--op`) and the gap extension penalty (`--ep`).
+The script should write two files as output: (1) the output alignment file and (2) a log file that documents the alignment settings. If the `SEQUENCE_DIR` was `primates_cytb` and `ALIGN_TOOL` was MAFFT, then the output file should be saved as `primates_cytb.align_MAFFT.fasta` and `primates_cytb.align_MAFFT.log`.
 
-PRANK supports the gap rate (`-gaprate`) and the gap extension probability (`-gapext`) parameters.
-
-### Output
-
-The file print the sequences aligned under `SETTINGS_FILE` settings to stdout.
-
-
-Input file(s)
-* sequences.fasta
-
-Output file(s)
-* align_mafft.settings_XXXXXX.fasta
-* align.muscle.settings_XXXXXX.fasta
-* align_mafft.settings_XXXXXX.txt
-* align_muscle.settings_XXXXXX.txt
-* align.warnings.log
-
+The log file should report
+- the name of the alignment file
+- the command string used to align the sequences
+- when the alignment was created (use output of `date`)
+- the number of sequences and the number of sites in the aligned sequence
+- (optional) the version of the alignment software
+- (optional) list of the aligned accessions
 
 ---
 
