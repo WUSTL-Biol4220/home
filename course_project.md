@@ -4,26 +4,6 @@
 
 Fall 2020 students will build a bioinformatics pipeline to analyze the spread of SARS-CoV-19. This document outlines the technical requirements for the pipeline steps. Each step will generally rely on programs and techniques we explored in various course lab assignment, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
 
-Student pipelines will incorporate seven major steps:
-
-1. Parse user input for pipeline settings
-2. Download sequences
-3. Align sequences
-4. Estimate phylogenetic tree from alignment
-5. Characterize variation in molecular alignment
-6. Test for signatures of positive selection
-7. Generate output files
-
-```
-# pipeline schematic
-                 
-                  + → 6 ──+
-                  |   ↓   ↓
- in → 1 → 2 → 3 → 4 → 7 → out
-                  |       ↑
-                  + → 5 ──+ 
-```
-
 Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own arguments, options, and output. At the same time, the script for any pipeline may need to produce output or accept input that is compatible with other pipeline steps (for example, sequence alignement in Step 3 will accept the downloaded sequences of Step 2 as input). Each student need to add at least two new custom features. Custom features must be approved by the instructor. The pipeline, once complete, will then be used to analyze a biological dataset.
 
 ### Project submission
@@ -59,9 +39,32 @@ Plan to present for at least 10 minutes. After your presentation, the class will
 
 ---
 
-## Pipeline scripts
+## Pipeline script, `pipeline.sh`
 
+Students will write a bioinformatics pipeline script (`pipeline.sh`) that accepts a settings file name as an argument.
 
+Student pipelines will incorporate seven major steps:
+
+1. Parse settings
+2. Download sequences
+3. Align sequences
+4. Estimate phylogenetic tree from alignment
+5. Characterize variation in molecular alignment
+6. Test for signatures of positive selection
+7. Generate output files
+
+```
+# pipeline schematic
+# (order of steps)
+                 
+                  + → 6 ──+
+                  |   ↓   ↓
+ in → 1 → 2 → 3 → 4 → 7 → out
+                  |       ↑
+                  + → 5 ──+ 
+```
+
+Don't forget, each student must **add two or more custom features** to his/her pipeline. Where those steps will fit into the above schematic will depend on exactly what the features are.
 
 ### General specifications
 
