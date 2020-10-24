@@ -2,7 +2,7 @@
 
 ## Overview
 
-Fall 2020 students will build a bioinformatics pipeline to analyze the spread of SARS-CoV-19. This document outlines the technical requirements for the pipeline steps. Each step will generally rely on programs and techniques we explored in various course lab assignment, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
+Practical Bioinformatics (Biol4220) students will build a bioinformatics pipeline to analyze the spread of SARS-CoV-19. This document outlines the technical requirements for the pipeline steps. Each step will generally rely on programs and techniques we explored in various course lab assignment, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
 
 Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own arguments, options, and output. At the same time, the script for any pipeline may need to produce output or accept input that is compatible with other pipeline steps (for example, sequence alignement in Step 3 will accept the downloaded sequences of Step 2 as input). Each student need to add at least two new custom features. Custom features must be approved by the instructor. The pipeline, once complete, will then be used to analyze a biological dataset.
 
@@ -41,9 +41,15 @@ Plan to present for at least 10 minutes. After your presentation, the class will
 
 ## Pipeline script, `pipeline.sh`
 
-Students will write a bioinformatics pipeline script (`pipeline.sh`) that accepts a settings file name as an argument.
+Students will write a bioinformatics pipeline script that accepts a settings file name as an argument.
 
-Student pipelines will incorporate seven major steps:
+### Usage
+
+`./pipeline.sh SETTINGS_FILE [JOB_DIR]`
+
+### Behavior
+
+The script `pipeline.sh` itself runs seven other pipeline steps, in the general order:
 
 1. Parse settings
 2. Gather sequences
@@ -66,6 +72,8 @@ Student pipelines will incorporate seven major steps:
 
 Don't forget, each student must **add two or more custom features** to his/her pipeline. Where those steps will fit into the above schematic will depend on exactly what the features are.
 
+All output is stored into the optional directory targetted by `JOB_DIR`. If no argument is provided for `JOB_DIR`, then the script outputs results into the directory `tmp`. The script creates the directory if it does not exist.
+
 
 ---
 
@@ -75,7 +83,7 @@ This script will parse analysis settings from a setting file. Users will provide
 
 ### Usage
 
-`./parse_input SETTINGS_FILE PIPELINE_STEP`
+`./parse_settings.sh SETTINGS_FILE PIPELINE_STEP`
 
 ### Behavior
 
@@ -241,7 +249,7 @@ The `make_dnds.sh` script will test for the molecular signature of positive sele
 
 This script accepts a multiple sequence alignment and a phylogenetic tree as input to process using PAML. PAML settings are managed through a control file (`.ctl`); this script accepts `PAML_OPTIONS` that are then reformatted accordingly into the PAML control file. At a minimum, `PAML_OPTIONS` should support the settings XX, XX, XX.
 
-The script should read in the default PAML output, saving per-site dN/dS scores as a csv file in `${SEQUENCE_NAME}.site_dnds.py` and a Newick string estimated using the PAML codon model titled `${SEQUENCE_NAME}.paml.tre`.
+The script should read in the default PAML output, saving per-site dN/dS scores as a csv file in `${SEQUENCE_NAME}.site_dnds.csv` and a Newick string estimated using the PAML codon model titled `${SEQUENCE_NAME}.paml.tre`.
 
 As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
 - `prefix.paml.tre`
