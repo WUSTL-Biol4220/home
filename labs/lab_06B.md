@@ -1,7 +1,5 @@
 # Lab 06B
 
-*Lab 06B GitHub Classroom link:* https://classroom.github.com/g/JHMuJ5F1
-
 In this lab, we will learn how git enables researchers to modify the same set of files in real time. We will work with a one shared repository to complete the lab exercises. 
 
 Exercises
@@ -37,7 +35,7 @@ $ git branch
 
 Our first group exercise will be to create an empty file named `data_mlandis.txt`. Commit that file to your current branch (`main`) in your local repository, then push your changes to the remote repo on GitHub. After everyone has pushed their changes, pull changes from the remote repo. You should now have a local copy of each student's empty file. 
 
-Now, add your username and a message to your file. Commit and push the changes, while pulling any changes from your collaborators. Repeat this three times. At this time, no one should modify any file but their own, meaning `git` should report any issues as everyone pushes and pulls their changes.
+Now, add your username and a message to your file. Commit and push the changes, while pulling any changes from your collaborators. Repeat this three times. At this time, no one should modify any file but their own, meaning `git` should not report any issues as everyone pushes and pulls their changes.
 
 ---
 
@@ -70,7 +68,7 @@ In this part, we will return to the local branch we created in Part 1.
 $ git checkout mlandis_edit
 ```
 
-This branch is an older version of `main`, before all us applied ourt edits. First, merge the `main` branch into `mlandis_edit`
+This branch is an older version of `main`, before all of us applied our edits. First, merge the `main` branch into `mlandis_edit`
 
 ```console
 $ git merge main
