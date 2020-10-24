@@ -73,6 +73,12 @@ Don't forget, each student must **add two or more custom features** to his/her p
 
 This script will parse analysis settings from a setting file. Users will provide two arguments: (1) the file path to the pipeline settings file, and (2) the name of the pipeline step to parse.
 
+### Usage
+
+`./parse_input SETTINGS_FILE PIPELINE_STEP`
+
+### Behavior
+
 The pipeline settings file stores comma-separated values in the following format:
 ```
 script,settings
@@ -89,10 +95,6 @@ The `script` column identifies a pipeline step by the script name. The `settings
 
 For example, if we called `./parse_settings.sh settings.txt get_seq.sh` we should locate the row for the step labeled `get_seq.sh` then parse the settings string `accession=my_accessions.txt;overwrite=true;`. The `parse_settings.sh` script will then reformat the settings for a given pipeline step as-needed. Users may provide all or only some settings for any pipeline step. 
 
-### Usage
-
-`./parse_input SETTINGS_FILE PIPELINE_STEP`
-
 ---
 
 ## 2. `get_seq.sh`
@@ -100,11 +102,13 @@ For example, if we called `./parse_settings.sh settings.txt get_seq.sh` we shoul
 *(Relevant labs and lectures: 03A, 03B, 04A)*
 
 
-The `get_seq.sh` manages and downloads fasta-formatted accessions from GenBank. As input, the script accepts a list of accessions, one per row. The script will then download all available sequences into the `sequences` subdirectory, and append any issues to the file `warnings.log`.
+The `get_seq.sh` manages and downloads fasta-formatted accessions from GenBank. As input, the script accepts two arguments: (1) a list of accessions, and (2) a directory where the sequences are managed. The script will then check whether each accession has already been downloaded into the managed directory, download any missing sequences, and append any issues to the file `warnings.log`.
 
 ### Usage
 
-`./get_seq [OPTIONS] file`
+`./get_seq ACCESSION_FILE SEQUENCE_DIR`
+
+### Behavior
 
 Input file example with four accessions
 ```
