@@ -46,7 +46,7 @@ Students will write a bioinformatics pipeline script (`pipeline.sh`) that accept
 Student pipelines will incorporate seven major steps:
 
 1. Parse settings
-2. Download sequences
+2. Gather sequences
 3. Align sequences
 4. Estimate phylogenetic tree from alignment
 5. Characterize variation in molecular alignment
@@ -66,41 +66,23 @@ Student pipelines will incorporate seven major steps:
 
 Don't forget, each student must **add two or more custom features** to his/her pipeline. Where those steps will fit into the above schematic will depend on exactly what the features are.
 
-### General specifications
-
-Students will develop a pipeline that provides the following functionality
-
-```
-NAME
-     biol4220-pipeline -- analyze data
-
-SYNOPSIS
-     ls [-ABCFGHLOPRSTUW@abcdefghiklmnopqrstuwx1%] [file ...]
-
-DESCRIPTION
-     The pipeline accepts a list of accession numbers as input, downloads those accessions into
-     as fasta formatted files into a user directory (if they do not already exist), aligns those
-     sequences under a variety of settings to create an alignment-set, generates descriptive
-     statistics for the alignment-set, and computes the molecular phylogeny for the alignment-set.
-
-     If one operand is given, it assumes that all. If multiple files are given, then the program
-     will combine all fasta files.
-
-     The following options are available:
-
-     --align     align settings
-     --paml      PAML settings
-     --phylo     phylo settings
-     --feature   extra feature settings
-     --output
-       
-```
 
 ---
 
 ## 1. `parse_settings.sh`
 
-Pipeline users will be able to provide input in two ways: by passing arguments and optional flags to the pipeline program, or by populating a tab-delimited control file.
+This script will parse analysis settings from a settings file. Users will provide two arguments: (1) the name of the pipeline step settings parse, and (2) the file path to the pipeline settings file.
+
+The pipeline settings file stores comma-separated values in the following format
+```
+step,settings
+get_seq.sh,""
+make_align.sh,""
+make_phylo.sh,""
+make_mol_stats.py,""
+make_dnds.py,""
+make_results.py,""
+```
 
 ### Usage
 
@@ -111,13 +93,13 @@ Pipeline users will be able to provide input in two ways: by passing arguments a
 
 ---
 
-## 2. `gather_sequences.sh`
+## 2. `get_seq.sh`
 
-The `gather_sequences.sh` file will accept one file as input. That input file will contain a list of GenBank accession numbers, one per row, where each accession corresponds to a target sequence. The script will then download all available sequences into the `sequences` subdirectory, and append any issues to the file `warnings.log`.
+The `get_seq.sh` file will accept one file as input. That input file will contain a list of GenBank accession numbers, one per row, where each accession corresponds to a target sequence. The script will then download all available sequences into the `sequences` subdirectory, and append any issues to the file `warnings.log`.
 
 ### Usage
 
-`./gather_sequences [OPTIONS] file`
+`./get_seq [OPTIONS] file`
 
 Input file example with four accessions
 ```
@@ -146,17 +128,17 @@ data, e.g. `ACGTACGTACT`.
 
 ---
 
-## 3. `align_sequences.sh`
+## 3. `make_align.sh`
 
-Step 3 of the pipeline will collect and align a set of fasta accessions located in a user-provided directory (output by `gather_sequences.sh` in Step 2) under settings provided in XXX.
+Step 3 of the pipeline will collect and align a set of fasta accessions located in a user-provided directory (output by `get_seq.sh` in Step 2) under settings provided in XXX.
 
 ### Usage
 
-`./align_sequences -s=SETTINGS_FILE FASTA_FILE`
+`./make_align -s=SETTINGS_FILE FASTA_FILE`
 
 ### Description
 
-The `align_sequences.sh` script will align the sequences in `FASTA_FILE` according to the settings in `SETTINGS_FILE`. 
+The `make_align.sh` script will align the sequences in `FASTA_FILE` according to the settings in `SETTINGS_FILE`. 
 
 Supported MAFFT settings are the gap open penalty (`--op`) and the gap extension penalty (`--ep`).
 
@@ -180,9 +162,9 @@ Output file(s)
 
 ---
 
-## 4. `infer_phylo.sh`
+## 4. `make_phylo.sh`
 
-The `infer_phylo.sh` script will estimate a phylogeny from a multiple sequence alignment using the [fasttree]() software, then plot the tree using the [toytree]() software.
+The `make_phylo.sh` script will estimate a phylogeny from a multiple sequence alignment using the [fasttree]() software, then plot the tree using the [toytree]() software.
 
 To complete this 
 
@@ -194,9 +176,9 @@ Output file(s):
 
 ---
 
-## 5. `mol_stats.py`
+## 5. `make_mol_stats.py`
 
-The `mol_stats.py` script generates a report of various summary statistics and transformations for a multiple sequence alignment.
+The `make_mol_stats.py` script generates a report of various summary statistics and transformations for a multiple sequence alignment.
 
 This Python script will perform several steps:
 1. Read an alignment file
@@ -223,9 +205,9 @@ Output file(s)
 
 ---
 
-## 6. `mol_pos_sel.sh`
+## 6. `make_dnds.py`
 
-The `mol_pos_sel.sh` script will test for the molecular signature of positive selection using [PAML](). 
+The `make_dnds.sh` script will test for the molecular signature of positive selection using [PAML](). 
 
 PAML can b
 
@@ -250,7 +232,7 @@ Output file(s):
 
 ---
 
-## 7. Generate output files
+## 7. `make_results.py`
 
 Take all previous report files, then summarize it in a compact representation.
 
