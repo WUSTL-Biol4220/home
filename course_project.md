@@ -110,7 +110,7 @@ The `get_seq.sh` manages and downloads fasta-formatted accessions from GenBank. 
 
 ### Behavior
 
-Input file example with four accessions
+The file `ACCESSION_FILE` will contain a list of accessions. Example format:
 ```
 A12345678
 H32183282
@@ -120,21 +120,15 @@ G63645551
 
 The script will:
 
-1. Identify whether fasta-formatted accession already exists in the `sequences` subdirectory. For example, for accession `A12345678` the script will see whether `sequences/seq_A12345678.fasta` exists.
+1. Identify whether fasta-formatted accession already exists in the `SEQUENCE_DIR` subdirectory. For example, for accession `A12345678` the script will see whether `sequences/seq_A12345678.fasta` exists.
      a. If the accession *does* exist, the script will further validate that the file contains two lines: line 1 contains the fasta description, e.g. `>sample_1|A12345678`; line 2 contains the sequence 
 data, e.g. `ACGTACGTACT`.
-     b. If the accession exists but is *invalid*, delete the accession from `sequences` and mark it to be downloaded. Record deleted files in `warnings.log`.
+     b. If the accession exists but is *invalid*, delete the accession from `SEQUENCE_DIR` and mark it to be downloaded. Record deleted files in the file `warnings.log`.
 
 2. For each missing accession -- either because it was not downloaded or because it was deleted for being invalid -- download that accession from GenBank. 
-     a. Download and rename each GenBank accession as a fasta file. For example, accession `A12345678` can be downlaoded from GenBank using the command `wget XXX/A12345678`, and saved as `sequences/seq_A12345678.fasta`.
-     b. Save all processed
-     b. Accessions that do not exist on GenBank will fail to download; report to `warnings.log` which files failed to download
-
-
-### Useful labs
-
-
-
+     a. Download and rename each GenBank accession as a fasta file. For example, accession `A12345678` fetched from GenBank using the `equery` and `efetch` commands, and saved as `seq_A12345678.fasta`
+     b. Invalid accessions that do not exist on GenBank will fail to download; report to `warnings.log` which files failed to download
+     
 ---
 
 ## 3. `make_align.sh`
