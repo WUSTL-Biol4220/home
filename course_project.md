@@ -127,13 +127,13 @@ G63645551
 
 The script will:
 
-1. Identify whether fasta-formatted accession already exists in the `SEQUENCE_DIR` subdirectory. For example, for accession `A12345678` the script will see whether `sequences/seq_A12345678.fasta` exists.
+1. Identify whether fasta-formatted accession already exists in the `SEQUENCE_DIR` subdirectory. For example, for accession `A12345678` the script will see whether `sequences/A12345678.fasta` exists.
      a. If the accession *does* exist, the script will further validate that the file contains two lines: line 1 contains the fasta description, e.g. `>sample_1|A12345678`; line 2 contains the sequence 
 data, e.g. `ACGTACGTACT`.
      b. If the accession exists but is *invalid*, delete the accession from `SEQUENCE_DIR` and mark it to be downloaded. Record deleted files in the file `warnings.log`.
 
 2. For each missing accession -- either because it was not downloaded or because it was deleted for being invalid -- download that accession from GenBank. 
-     a. Download and rename each GenBank accession as a fasta file. For example, accession `A12345678` fetched from GenBank using the `equery` and `efetch` commands, and saved as `seq_A12345678.fasta`
+     a. Download and rename each GenBank accession as a fasta file. For example, accession `A12345678` fetched from GenBank using the `equery` and `efetch` commands, and saved as `A12345678.fasta`
      b. Invalid accessions that do not exist on GenBank will fail to download; report to `warnings.log` which files failed to download
      
 ---
@@ -159,7 +159,7 @@ In addition to supporting input and output arguments, other `ALIGN_TOOL_OPTIONS`
 - MAFFT: gap open penalty (`--op`) and gap extension penalty (`--ep`)
 - PRANK: gap rate (`-gaprate`), gap extension probability (`-gapext`)
 
-The script should write two files as output: (1) the output alignment file and (2) a log file that documents the alignment settings. If the `SEQUENCE_DIR` was `primates_cytb` and `ALIGN_TOOL` was MAFFT, then the output file should be saved as `primates_cytb.align_MAFFT.fasta` and `primates_cytb.align_MAFFT.log`.
+The script should write two files as output: (1) the output alignment file and (2) a log file that documents the alignment settings. If the `SEQUENCE_DIR` was `primates_cytb` and `ALIGN_TOOL` was MAFFT, then the output file should be saved as `primates_cytb.align_mafft.fasta` and `primates_cytb.align_mafft.log`.
 
 The log file should report
 - the name of the alignment file
@@ -190,13 +190,12 @@ In addition to supporting input and output arguments, other `PHYLO_TOOL_OPTIONS`
 - IQ-Tree: gap open penalty (`--op`) and gap extension penalty (`--ep`)
 - MPBoot: gap rate (`-gaprate`), gap extension probability (`-gapext`)
 
-The script should write two files as output: (1) the output phylogenetic estimate stored as a Newick string and (2) a log file that documents the phylogenetic inference settings. If the `ALIGNMENT_FILE` was `primates_cytb.align_mafft.fasta` and `PHYLO_TOOL` was FastTree, then the output file should be saved as `primates_cytb.align_MAFFT.phylo_FastTree.tre` and `primates_cytb.align_MAFFT.phylo_FastTree.log`.
+The script should write three files as output: (1) the output phylogenetic estimate stored as a Newick string, (2) a text representation of the phylogeny using NW Utilities, and (3) a log file that documents the phylogenetic inference settings. If the `ALIGNMENT_FILE` was `primates_cytb.align_mafft.fasta` and `PHYLO_TOOL` was FastTree, then the output file should be saved as `primates_cytb.align_mafft.phylo_fasttree.tre`, `primates_cytb.align_mafft.phylo_fasttree.nw_display.txt`, and `primates_cytb.align_mafft.phylo_fasttree.log`.
 
 The log file should report
 - the name of the file containing the phylogenetic estimate, in Newick format
 - the command string used to infer the phylogeny
 - when the phylogeny was created (use output of `date`)
-- a text-based plot of the tree using `nw_display`
 - (optional) the version of the phylogenetic software
 
 
@@ -225,13 +224,14 @@ This Python script will perform several steps:
 
 Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in Lab [XX]() (TBD). Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one variant, and at least two individuals of a different variant -- i.e. the site contains enough information to identify a phylogenetic "split".
 
-As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
+As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment 
 - `prefix.seq_GC.csv`
 - `prefix.site_GC.csv`
 - `prefix.seq_phylo_inf.csv`
 - `prefix.site_codon.csv`
 - `prefix.seq_codon.csv`
 - `prefix.codon_usage.csv`
+where `prefix` is the alignment name except the file extension (`.fasta`) e.g. `primates_cytb.align_mafft` from `primates_cytb.align_mafft.fasta`.
 
 ---
 
@@ -239,7 +239,7 @@ As output, this script should output five files in .csv format. The beginning of
 
 *(Relevant labs and lectures: TBD)*
 
-The `make_dnds.sh` script will test for the molecular signature of positive selection using PAML. 
+The `make_dnds.sh` script will test for the molecular signature of positive selection using the modeling software, PAML. 
 
 ### Usage
 
@@ -261,7 +261,7 @@ As output, this script should output five files in .csv format. The beginning of
 
 *(Relevant labs and lectures: TBD)*
 
-This file will collect all pipeline output located in the target sequence directory, then combine any compatible results or logs and generate any figures.
+This file will collect all pipeline output located in the target sequence directory, then combine any compatible results and/or logs and generate figures.
 
 ### Usage
 
@@ -269,7 +269,36 @@ This file will collect all pipeline output located in the target sequence direct
 
 ### Behavior
 
-This script should generate a `README.md` file in `SEQUENCE_DIR` that lists the analysis settings.
+This script should generate a `README.md` file in `SEQUENCE_DIR` that lists the analysis settings and the output files for each step. For example
+```
+# ./pipeline.sh my_settings.csv job1
+# ./parse_settings.sh my_settings.csv
+# ./get_seq.sh primates_cytb
+primates_cytb/A12345678
+primates_cytb/H32183282
+primates_cytb/B32701283
+primates_cytb/G63645551
+# ./make_align.sh sequences mafft '-op 2 -ep 1'`
+job1/primates_cytb.align_mafft.fasta
+job1/primates_cytb.align_mafft.log
+# ./make_phylo job1/primates_cytb.align_mafft.fasta fasttree '-noml'
+job1/primates_cytb.phylo_fasttree.tre
+job1/primates_cytb.phylo_fasttree.nw_display.txt
+job1/primates_cytb.phylo_fasttree.log
+# ./make_mol_stats.py job1/primates_cytb.align_mafft.fasta
+primates_cytb.align_mafft.seq_GC.csv
+primates_cytb.align_mafft.site_GC.csv
+primates_cytb.align_mafft.seq_phylo_inf.csv
+primates_cytb.align_mafft.site_codon.csv
+primates_cytb.align_mafft.seq_codon.csv
+primates_cytb.align_mafft.codon_usage.csv
+# ./make_dnds.py job1/primates_cytb.align_mafft.fasta job1/primates_cytb.align_mafft.phylo_fasttree.tre '-some_setting'
+primates_cytb.align_mafft.phylo_fasttree.paml.tre
+primates_cytb.align_mafft.phylo_fasttree.site_dnds.csv
+# ./make_results.py SEQUENCE_DIR [RESULTS_OPTIONS]
+fig_phy.primates_cytb.align_mafft.phylo_fasttree.pdf
+fig_plot.primates_cytb.align_mafft.phylo_fasttree.pdf
+```
 
 ---
 
