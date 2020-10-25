@@ -2,27 +2,7 @@
 
 ## Overview
 
-Fall 2020 students will build a bioinformatics pipeline to analyze the spread of SARS-CoV-19. This document outlines the technical requirements for the pipeline steps. Each step will generally rely on programs and techniques we explored in various course lab assignment, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
-
-Student pipelines will incorporate seven major steps:
-
-1. Parse user input for pipeline settings
-2. Download sequences
-3. Align sequences
-4. Estimate phylogenetic tree from alignment
-5. Characterize variation in molecular alignment
-6. Test for signatures of positive selection
-7. Generate output files
-
-```
-# pipeline schematic
-                 
-                  + → 6 ──+
-                  |   ↓   ↓
- in → 1 → 2 → 3 → 4 → 7 → out
-                  |       ↑
-                  + → 5 ──+ 
-```
+Practical Bioinformatics (Biol4220) students will build a bioinformatics pipeline to analyze the spread of SARS-CoV-19. This document outlines the technical requirements for the pipeline steps. Each step will generally rely on programs and techniques we explored in various course lab assignment, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
 
 Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own arguments, options, and output. At the same time, the script for any pipeline may need to produce output or accept input that is compatible with other pipeline steps (for example, sequence alignement in Step 3 will accept the downloaded sequences of Step 2 as input). Each student need to add at least two new custom features. Custom features must be approved by the instructor. The pipeline, once complete, will then be used to analyze a biological dataset.
 
@@ -32,7 +12,7 @@ Students will submit their pipeline projects as GitHub repositories. Each reposi
   - pipeline manual
   - input dataset
   - analysis output
-  - analysis write-up
+  - analysis report
   
 These materials are described in more detail below.
 
@@ -59,64 +39,85 @@ Plan to present for at least 10 minutes. After your presentation, the class will
 
 ---
 
-## Pipeline scripts
+## Pipeline script, `pipeline.sh`
 
-This section defines the general specifications for the Bioinformatics pipeline.
+Students will write a bioinformatics pipeline script that accepts a settings file name as an argument.
 
-### General specifications
+### Usage
 
-Students will develop a pipeline that provides the following functionality
+`./pipeline.sh SETTINGS_FILE [JOB_DIR]`
+
+### Behavior
+
+The script `pipeline.sh` itself runs seven other pipeline steps, in the general order:
+
+1. Parse settings
+2. Gather sequences
+3. Align sequences
+4. Estimate phylogenetic tree from alignment
+5. Characterize variation in molecular alignment
+6. Test for signatures of positive selection
+7. Generate output files
 
 ```
-NAME
-     biol4220-pipeline -- analyze data
-
-SYNOPSIS
-     ls [-ABCFGHLOPRSTUW@abcdefghiklmnopqrstuwx1%] [file ...]
-
-DESCRIPTION
-     The pipeline accepts a list of accession numbers as input, downloads those accessions into
-     as fasta formatted files into a user directory (if they do not already exist), aligns those
-     sequences under a variety of settings to create an alignment-set, generates descriptive
-     statistics for the alignment-set, and computes the molecular phylogeny for the alignment-set.
-
-     If one operand is given, it assumes that all. If multiple files are given, then the program
-     will combine all fasta files.
-
-     The following options are available:
-
-     --align     align settings
-     --paml      PAML settings
-     --phylo     phylo settings
-     --feature   extra feature settings
-     --output
-       
+# pipeline schematic
+# (order of steps)
+                 
+                  + → 6 ──+
+                  |   ↓   ↓
+ in → 1 → 2 → 3 → 4 → 7 → out
+                  |       ↑
+                  + → 5 ──+ 
 ```
+
+Don't forget, each student must **add two or more custom features** to his/her pipeline. Where those steps will fit into the above schematic will depend on exactly what the features are.
+
+All output is stored into the optional directory targetted by `JOB_DIR`. If no argument is provided for `JOB_DIR`, then the script outputs results into the directory `tmp`. The script creates the directory if it does not exist.
+
 
 ---
 
 ## 1. `parse_settings.sh`
 
-Pipeline users will be able to provide input in two ways: by passing arguments and optional flags to the pipeline program, or by populating a tab-delimited control file.
+This script will parse analysis settings from a setting file. Users will provide two arguments: (1) the file path to the pipeline settings file, and (2) the name of the pipeline step to parse.
 
 ### Usage
 
-`./parse_input [OPTIONS] file`
+`./parse_settings.sh SETTINGS_FILE PIPELINE_STEP`
 
-### Output
+### Behavior
 
+The pipeline settings file stores comma-separated values in the following format:
+```
+script,settings
+get_seq.sh,accession=my_accessions.txt;overwrite=true;
+make_align.sh,
+make_phylo.sh,
+make_mol_stats.py,
+make_dnds.py,
+make_results.py,
+feature1.sh,setting1=my_feature1_settings.txt;parameter1=20;
+feature2.py,setting2=my_feature2_settings.txt;parameter2=50;
+```
+The `script` column identifies a pipeline step by the script name. The `settings` column contains a list of `;`-delimited setting variables following the pattern `variable1=value1;variable2=value2;`.
+
+For example, if we called `./parse_settings.sh settings.txt get_seq.sh` we should locate the row for the step labeled `get_seq.sh` then parse the settings string `accession=my_accessions.txt;overwrite=true;`. The `parse_settings.sh` script will then reformat the settings for a given pipeline step as-needed. Users may provide all or only some settings for any pipeline step. 
 
 ---
 
-## 2. `gather_sequences.sh`
+## 2. `get_seq.sh`
 
-The `gather_sequences.sh` file will accept one file as input. That input file will contain a list of GenBank accession numbers, one per row, where each accession corresponds to a target sequence. The script will then download all available sequences into the `sequences` subdirectory, and append any issues to the file `warnings.log`.
+*(Relevant labs and lectures: 03A, 03B, 04A)*
+
+The `get_seq.sh` manages and downloads fasta-formatted accessions from GenBank. As input, the script accepts two arguments: (1) a list of accessions, and (2) a directory where the sequences are managed. The script will then check whether each accession has already been downloaded into the managed directory, download any missing sequences, and append any issues to the file `warnings.log`.
 
 ### Usage
 
-`./gather_sequences [OPTIONS] file`
+`./get_seq ACCESSION_FILE SEQUENCE_DIR`
 
-Input file example with four accessions
+### Behavior
+
+The file `ACCESSION_FILE` will contain a list of accessions. Example format:
 ```
 A12345678
 H32183282
@@ -126,137 +127,191 @@ G63645551
 
 The script will:
 
-1. Identify whether fasta-formatted accession already exists in the `sequences` subdirectory. For example, for accession `A12345678` the script will see whether `sequences/seq_A12345678.fasta` exists.
+1. Identify whether fasta-formatted accession already exists in the `SEQUENCE_DIR` subdirectory. For example, for accession `A12345678` the script will see whether `sequences/A12345678.fasta` exists.
      a. If the accession *does* exist, the script will further validate that the file contains two lines: line 1 contains the fasta description, e.g. `>sample_1|A12345678`; line 2 contains the sequence 
 data, e.g. `ACGTACGTACT`.
-     b. If the accession exists but is *invalid*, delete the accession from `sequences` and mark it to be downloaded. Record deleted files in `warnings.log`.
+     b. If the accession exists but is *invalid*, delete the accession from `SEQUENCE_DIR` and mark it to be downloaded. Record deleted files in the file `warnings.log`.
 
 2. For each missing accession -- either because it was not downloaded or because it was deleted for being invalid -- download that accession from GenBank. 
-     a. Download and rename each GenBank accession as a fasta file. For example, accession `A12345678` can be downlaoded from GenBank using the command `wget XXX/A12345678`, and saved as `sequences/seq_A12345678.fasta`.
-     b. Save all processed
-     b. Accessions that do not exist on GenBank will fail to download; report to `warnings.log` which files failed to download
-
-
-### Useful labs
-
-
-
+     a. Download and rename each GenBank accession as a fasta file. For example, accession `A12345678` fetched from GenBank using the `equery` and `efetch` commands, and saved as `A12345678.fasta`
+     b. Invalid accessions that do not exist on GenBank will fail to download; report to `warnings.log` which files failed to download
+     
 ---
 
-## 3. `align_sequences.sh`
+## 3. `make_align.sh`
 
-Step 3 of the pipeline will collect and align a set of fasta accessions located in a user-provided directory (output by `gather_sequences.sh` in Step 2) under settings provided in XXX.
+*(Relevant labs and lectures: 03B, 04B)*
+
+This script will align a set of fasta sequences located in a target directory.
 
 ### Usage
 
-`./align_sequences -s=SETTINGS_FILE FASTA_FILE`
+`./make_align SEQUENCE_DIR ALIGN_TOOL [ALIGN_TOOL_OPTIONS]`
 
-### Description
+### Behavior
 
-The `align_sequences.sh` script will align the sequences in `FASTA_FILE` according to the settings in `SETTINGS_FILE`. 
+The `make_align.sh` script will align the sequences in `SEQUENCE_DIR` using the method `ALIGN_TOOL` and the options defined in `ALIGN_TOOL_OPTIONS`.
 
-Supported MAFFT settings are the gap open penalty (`--op`) and the gap extension penalty (`--ep`).
+The script will concatenate all fasta files in `SEQUENCE_DIR`, then take that concatenated sequence file as input for the alignment procedure. The script will then align the sequence file using a supported alignment tool (specified by `ALIGN_TOOL`), where supported tools must include Muscle, MAFFT, and PRANK. Students are welcome to add support for additional tools, but they will need to install that software on their virtual machine. The alignment procedure will use arguments/options passed in through `ALIGN_TOOL_OPTIONS`. Note that invalid input and/or invalid software options may cause the alignment software to fail. Script failures you encounter should be logged in `warnings.log`
 
-PRANK supports the gap rate (`-gaprate`) and the gap extension probability (`-gapext`) parameters.
+In addition to supporting input and output arguments, other `ALIGN_TOOL_OPTIONS` to support are
+- Muscle: gap open penalty (`-gapopen`)
+- MAFFT: gap open penalty (`--op`) and gap extension penalty (`--ep`)
+- PRANK: gap rate (`-gaprate`), gap extension probability (`-gapext`)
 
-### Output
+The script should write two files as output: (1) the output alignment file and (2) a log file that documents the alignment settings. If the `SEQUENCE_DIR` was `primates_cytb` and `ALIGN_TOOL` was MAFFT, then the output file should be saved as `primates_cytb.align_mafft.fasta` and `primates_cytb.align_mafft.log`.
 
-The file print the sequences aligned under `SETTINGS_FILE` settings to stdout.
+The log file should report
+- the name of the alignment file
+- the command string used to align the sequences
+- when the alignment was created (use output of `date`)
+- the number of sequences and the number of sites in the aligned sequence
+- (optional) the version of the alignment software
+- (optional) list of the aligned accessions
 
+---
 
-Input file(s)
-* sequences.fasta
+## 4. `make_phylo.sh`
 
-Output file(s)
-* align_mafft.settings_XXXXXX.fasta
-* align.muscle.settings_XXXXXX.fasta
-* align_mafft.settings_XXXXXX.txt
-* align_muscle.settings_XXXXXX.txt
-* align.warnings.log
+*(Relevant labs and lectures: 06A)*
+
+This script will estimate a phylogeny from a multiple sequence alignment.
+
+### Usage
+
+`./make_phylo ALIGNMENT_FILE PHYLO_TOOL [PHYLO_TOOL_OPTIONS]`
+
+### Behavior
+
+The `make_phylo.sh` script will infer a phylogeny using the alignment stored in `ALIGNMENT_FILE` using the software `PHYLO_TOOL` under the settings `PHYLO_TOOL_OPTIONS`. The script must support the phylogenetic inference methods: FastTree, IQ-Tree, and MPBoot. Students are welcome to include additional phylogenetic methods, but they will need to install that software on their virtual machine. The phylogenetic inference procedure will use arguments/options passed in through `PHYLO_TOOL_OPTIONS`. Note that invalid input and/or invalid software options may cause the phylogenetics software to fail. Script failures you encounter should be logged in `warnings.log`
+
+In addition to supporting input and output arguments, other `PHYLO_TOOL_OPTIONS` to support are
+- FastTree: gap open penalty (`-gapopen`)
+- IQ-Tree: gap open penalty (`--op`) and gap extension penalty (`--ep`)
+- MPBoot: gap rate (`-gaprate`), gap extension probability (`-gapext`)
+
+The script should write three files as output: (1) the output phylogenetic estimate stored as a Newick string, (2) a text representation of the phylogeny using NW Utilities, and (3) a log file that documents the phylogenetic inference settings. If the `ALIGNMENT_FILE` was `primates_cytb.align_mafft.fasta` and `PHYLO_TOOL` was FastTree, then the output file should be saved as `primates_cytb.align_mafft.phylo_fasttree.tre`, `primates_cytb.align_mafft.phylo_fasttree.nw_display.txt`, and `primates_cytb.align_mafft.phylo_fasttree.log`.
+
+The log file should report
+- the name of the file containing the phylogenetic estimate, in Newick format
+- the command string used to infer the phylogeny
+- when the phylogeny was created (use output of `date`)
+- (optional) the version of the phylogenetic software
 
 
 ---
 
-## 4. `infer_phylo.sh`
+## 5. `make_mol_stats.py`
 
-The `infer_phylo.sh` script will estimate a phylogeny from a multiple sequence alignment using the [fasttree]() software, then plot the tree using the [toytree]() software.
+*(Relevant labs and lectures: TBD)*
 
-To complete this 
+The `make_mol_stats.py` script generates a report of various summary statistics and transformations for a multiple sequence alignment.
 
-Input file(s):
-* Step 3 alignment file alignment.fasta
-Output file(s):
-* phylogeny.tre file (different settings)
-* toytree figure
+### Usage
 
----
+`./make_mol_stats.py ALIGNMENT_FILE`
 
-## 5. `mol_stats.py`
-
-The `mol_stats.py` script generates a report of various summary statistics and transformations for a multiple sequence alignment.
+### Behavior
 
 This Python script will perform several steps:
-1. Read an alignment file
+1. Store `ALIGNMENT_FILE` into a container
 2. Compute the GC-richness for each sequence
 3. Compute the GC-richness for each site
 4. Determine whether or not each site is phylogenetically informative.
 5. Find all coding regions and all codons
 6. Compute codon frequencies per site and per sequence
-7. Compute codon usage enrichment across amino acids, sites, and sequences
+7. Compute biased codon usage proportions across amino acids, sites, and sequences
 
-Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in Lab XX [TBD]. Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one nucleotide type, and at least two individuals of a different nucleotide type -- i.e. the site contains enough information to identify a phylogenetic "split".
+Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in Lab [XX]() (TBD). Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one variant, and at least two individuals of a different variant -- i.e. the site contains enough information to identify a phylogenetic "split".
 
-
-Input file(s)
-* Step 3 alignment file
-
-Output file(s)
-* gc_seq_report.txt
-* gc_site_report.txt
-* phylo_info_report.txt
-* codon_usage_report.txt
-* warning.log
-
+As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment 
+- `prefix.seq_GC.csv`
+- `prefix.site_GC.csv`
+- `prefix.seq_phylo_inf.csv`
+- `prefix.site_codon.csv`
+- `prefix.seq_codon.csv`
+- `prefix.codon_usage.csv`
+where `prefix` is the alignment name except the file extension (`.fasta`) e.g. `primates_cytb.align_mafft` from `primates_cytb.align_mafft.fasta`.
 
 ---
 
-## 6. `mol_pos_sel.sh`
+## 6. `make_dnds.py`
 
-The `mol_pos_sel.sh` script will test for the molecular signature of positive selection using [PAML](). 
+*(Relevant labs and lectures: TBD)*
 
-PAML can b
+The `make_dnds.sh` script will test for the molecular signature of positive selection using the modeling software, PAML. 
 
-Reformat input for PAML
-Reformat output from PAML so it's readable
+### Usage
 
-Input file(s):
-* Step 3 alignment file, Step 5 phylogeny
-Output file(s):
-* phylogeny.tre
-* toytree figure
-* parsed dNdS report
+`./make_dnds.py ALIGNMENT_FILE PHYLOGENY_FILE [PAML_OPTIONS]`
 
-Input file(s):
-* Step 1 settings
-* Step 3 alignment file
-* Step 5 phylogeny file
-Output file(s):
-* raw PAML results
-* reformatted PAML results
-* auto-generated PAML settings files
+### Behavior
+
+This script accepts a multiple sequence alignment and a phylogenetic tree as input to process using PAML. PAML settings are managed through a control file (`.ctl`); this script accepts `PAML_OPTIONS` that are then reformatted accordingly into the PAML control file. At a minimum, `PAML_OPTIONS` should support the settings XX, XX, XX.
+
+The script should read in the default PAML output, saving per-site dN/dS scores as a csv file in `${SEQUENCE_NAME}.site_dnds.csv` and a Newick string estimated using the PAML codon model titled `${SEQUENCE_NAME}.paml.tre`.
+
+As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
+- `prefix.paml.tre`
+- `prefix.site_dnds.csv`
 
 ---
 
-## 7. Generate output files
+## 7. `make_results.py`
 
-Take all previous report files, then summarize it in a compact representation.
+*(Relevant labs and lectures: TBD)*
 
-Have it update README.md so the results are visible in your github repo
+This file will collect all pipeline output located in the target sequence directory, then combine any compatible results and/or logs and generate figures.
 
-Input file(s):
-* output from Steps 2-6
-Output file(s):
-* single file that reports settings and output
+### Usage
+
+`./make_results.py SEQUENCE_DIR [RESULTS_OPTIONS]`
+
+### Behavior
+
+This script should generate a `README.md` file in `SEQUENCE_DIR` that lists the analysis settings and the output files for each step. For example
+```
+# ./pipeline.sh my_settings.csv job1
+# ./parse_settings.sh my_settings.csv
+# ./get_seq.sh primates_cytb
+primates_cytb/A12345678
+primates_cytb/H32183282
+primates_cytb/B32701283
+primates_cytb/G63645551
+# ./make_align.sh sequences mafft '-op 2 -ep 1'`
+job1/primates_cytb.align_mafft.fasta
+job1/primates_cytb.align_mafft.log
+# ./make_phylo job1/primates_cytb.align_mafft.fasta fasttree '-noml'
+job1/primates_cytb.phylo_fasttree.tre
+job1/primates_cytb.phylo_fasttree.nw_display.txt
+job1/primates_cytb.phylo_fasttree.log
+# ./make_mol_stats.py job1/primates_cytb.align_mafft.fasta
+primates_cytb.align_mafft.seq_GC.csv
+primates_cytb.align_mafft.site_GC.csv
+primates_cytb.align_mafft.seq_phylo_inf.csv
+primates_cytb.align_mafft.site_codon.csv
+primates_cytb.align_mafft.seq_codon.csv
+primates_cytb.align_mafft.codon_usage.csv
+# ./make_dnds.py job1/primates_cytb.align_mafft.fasta job1/primates_cytb.align_mafft.phylo_fasttree.tre '-some_setting'
+primates_cytb.align_mafft.phylo_fasttree.paml.tre
+primates_cytb.align_mafft.phylo_fasttree.site_dnds.csv
+# ./make_results.py SEQUENCE_DIR [RESULTS_OPTIONS]
+fig_phy.primates_cytb.align_mafft.phylo_fasttree.pdf
+fig_plot.primates_cytb.align_mafft.phylo_fasttree.pdf
+```
 
 ---
 
+## Pipeline manual
+
+Create short manual entries for your two (or more) custom pipeline steps. These entries should define the usage and behavior the scripts in a comparable detail to the entries in this document (`course_project.md`).
+
+---
+
+## Analysis report
+
+Write a 1-2 page report (12pt font, single-spaced) that summarizes your research findings. At a minimum, report should contain these components:
+
+1. An overview of your pipeline, the pipeline features, and the analysis results.
+2. A detailed description of the custom pipeline features that you added to the project, why they might be interesting or useful, and any challenges you encountered introducing those features.
+3. A discussion of how your analysis output (results) differed depending on what settings/datasets you analyzed, and how those differences might influence what biological hypotheses are supported or rejected. For example, an analysis run under Settings-A might cause our methods to infer high proportions of nonsynonymous substitutions relative to synonymous substitutions, while Settings-B might cause our methods to infer roughly equal proportions of nonsynonymous and synonymous substitutions. Do Settings-A and Settings-B support conflicting biological scenarios? Why is it important to compare results using both settings? 
