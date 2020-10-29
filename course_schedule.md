@@ -22,12 +22,12 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |        | Mon, Oct 26 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_07A.pdf">Lecture 07A</a> | [Lab 07A](labs/lab_07A.md)  | -- | Unix: working on cluster<br>**Overview [course project](course_project.md)** |
 |  :pig:  | Wed, Oct 28 |         |         |  | **Exam 1**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam1_study_guide.pdf">study guide</a>) |
 |         | Mon, Nov 02 |         | Lab 08A |  | Python: introduction, variables, operators, file handling |
-|         | Wed, Nov 04 |         | Lab 08B |  | Python: containers, control structures <br>**Project approvals** |
-|         | Mon, Nov 09 |         | Lab 09A |  | Python: strings |
+|         | Wed, Nov 04 |         | Lab 08B |  | Python: containers, control structures|
+|         | Mon, Nov 09 |         | Lab 09A |  | Python: strings <br>**Project approvals**  |
 |         | Wed, Nov 11 |         | Lab 09B |  | Python: functions |
 |         | Mon, Nov 16 |         | Lab 10A |  | Biology: sequence stats |
-|         | Wed, Nov 18 |         | Lab 10B |  | Coding practices: docstrings, unit tests, commits<br>**Project check-in**  |
-|         | Mon, Nov 23 |         | Lab 11A |  |   |
+|         | Wed, Nov 18 |         | Lab 10B |  | Coding practices: docstrings, unit tests, commits |
+|         | Mon, Nov 23 |         | Lab 11A |  | **Project check-in**   |
 |         | Wed, Nov 25 |         | Lab 11B |  |   |
 |         | Mon, Nov 30 |         | Lab 12A |  |   |
 |         | Wed, Dec 02 |         | Lab 12B |  | <br>**Project check-in**   |
