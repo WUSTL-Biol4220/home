@@ -26,7 +26,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Nov 09 |         | Lab 09A |  | Python: strings <br>**Project approvals**  |
 |         | Wed, Nov 11 |         | Lab 09B |  | Python: scripting, libraries |
 |         | Mon, Nov 16 |         | Lab 10A |  | Biology: sequence stats |
-|         | Wed, Nov 18 |         | Lab 10B |  | Python: BioSequence |
+|         | Wed, Nov 18 |         | Lab 10B |  | Python: bioconductor |
 |         | Mon, Nov 23 |         | Lab 11A |  | Biology: positive selection<br>**Project check-in**   |
 |         | Wed, Nov 25 |         | Lab 11B |  | Python: matplotlib |
 |         | Mon, Nov 30 |         | Lab 12A |  | Python: numpy |
