@@ -20,11 +20,11 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Oct 19 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_06A.pdf">Lecture 06A</a><br>(<a href="https://wustl.zoom.us/rec/share/RH1SrbyGdwpOwfHIk6KyBsH-b8Z_OxPy-7E8lChoNBhQcbeSdvszh5uZwIXNg1i5.bQjIm-ZZPUQ1crPO">video</a>) | [Lab 06A](labs/lab_06A.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">Phylo paper</a> | Biology: molecular phylogenetics |
 |         | Wed, Oct 21 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_06B.pdf">Lecture 06B</a><br>(<a href="https://wustl.zoom.us/rec/share/4bYRnXjfd9NZhp6Zemce7tru2G5xoPiGZBH8NevhStFga_K38W9GK7QNKRM16ljc.CrTZvYaNAWezkKKA">video</a>)        | [Lab 06B](labs/lab_06B.md) | CSB: 2.4-2.8 | Git: branch management, collaboration | 
 |        | Mon, Oct 26 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_07A.pdf">Lecture 07A</a> | [Lab 07A](labs/lab_07A.md)  | -- | Unix: working on cluster<br>**Overview [course project](course_project.md)** |
-|  :pig:  | Wed, Oct 28 |         |         |  | **Exam 1**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam1_study_guide.pdf">study guide</a>) |
-|         | Mon, Nov 02 |         | Lab 08A |  | Python: introduction, variables, operators, file handling |
-|         | Wed, Nov 04 |         | Lab 08B |  | Python: containers, control structures|
+|  :pig:  | Wed, Oct 28 |   --    |  --     |  | **Exam 1**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam1_study_guide.pdf">study guide</a>) |
+|         | Mon, Nov 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_08A.pdf">Lecture 08A</a><br>(<a href="https://wustl.zoom.us/rec/share/fUWZlEKaWrOLhPTgE6Un2jM9kZRG9SKmYP4gGK_SpQPUtcDHnVJchXuNOmbDWGw4.DHK1K7Rz9OmMM3x_">video</a>)         | [Lab 08A](labs/lab_08A.md) |  | Python: introduction, variables, operators,<br>if-statements, functions |
+|         | Wed, Nov 04 |         | Lab 08B |  | Python: containers, loops, file handling |
 |         | Mon, Nov 09 |         | Lab 09A |  | Python: strings <br>**Project approvals**  |
-|         | Wed, Nov 11 |         | Lab 09B |  | Python: functions |
+|         | Wed, Nov 11 |         | Lab 09B |  | Python: scripting, libraries |
 |         | Mon, Nov 16 |         | Lab 10A |  | Biology: sequence stats |
 |         | Wed, Nov 18 |         | Lab 10B |  | Coding practices: docstrings, unit tests, commits |
 |         | Mon, Nov 23 |         | Lab 11A |  | **Project check-in**   |
