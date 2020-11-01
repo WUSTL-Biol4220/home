@@ -26,12 +26,12 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Nov 09 |         | Lab 09A |  | Python: strings <br>**Project approvals**  |
 |         | Wed, Nov 11 |         | Lab 09B |  | Python: scripting, libraries |
 |         | Mon, Nov 16 |         | Lab 10A |  | Biology: sequence stats |
-|         | Wed, Nov 18 |         | Lab 10B |  | Coding practices: docstrings, unit tests, commits |
-|         | Mon, Nov 23 |         | Lab 11A |  | **Project check-in**   |
-|         | Wed, Nov 25 |         | Lab 11B |  |   |
-|         | Mon, Nov 30 |         | Lab 12A |  |   |
-|         | Wed, Dec 02 |         | Lab 12B |  | <br>**Project check-in**   |
-|         | Mon, Dec 07 |         | Lab 13A |  |   |
-|         | Wed, Dec 09 |         | Lab 13B |  |   |
+|         | Wed, Nov 18 |         | Lab 10B |  | Python: BioSequence |
+|         | Mon, Nov 23 |         | Lab 11A |  | Biology: positive selection<br>**Project check-in**   |
+|         | Wed, Nov 25 |         | Lab 11B |  | Python: matplotlib |
+|         | Mon, Nov 30 |         | Lab 12A |  | Python: numpy |
+|         | Wed, Dec 02 |         | Lab 12B |  | Python: scipy <br>**Project check-in**   |
+|         | Mon, Dec 07 |         | Lab 13A |  | Python: pandas |
+|         | Wed, Dec 09 |         | Lab 13B |  | Python: ete3 |
 |         | Mon, Dec 14 |         | Lab 14A |  | <br>**Project presentations**  |
 |         | Wed, Dec 16 |         | Lab 14B |  | **Exam 2**  |
