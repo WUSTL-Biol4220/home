@@ -19,19 +19,19 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Oct 14 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_05B.pdf">Lecture 05B</a><br>(<a href="https://wustl.zoom.us/rec/play/xAcAmsBLiSjUK3j84L5nV11wuHxRXbreNSIzQW89JtokHP5qyApt9mWdcd5OJTWRIXEPUW4_XnjABsJg.arFUVa3DRK6aIIA_?continueMode=true&_x_zm_rtaid=2lHjdi2uQJ-vg9n2aocGiQ.1603069873219.840039063d4b2973fa2d1721f5f329fc&_x_zm_rhtaid=966">video</a>)         | [Lab 05B](labs/lab_05B.md) | CSB: 5.5-5.8 | Unix: more regex, find-replace, group capture, sed  |
 |         | Mon, Oct 19 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_06A.pdf">Lecture 06A</a><br>(<a href="https://wustl.zoom.us/rec/share/RH1SrbyGdwpOwfHIk6KyBsH-b8Z_OxPy-7E8lChoNBhQcbeSdvszh5uZwIXNg1i5.bQjIm-ZZPUQ1crPO">video</a>) | [Lab 06A](labs/lab_06A.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">Phylo paper</a> | Biology: molecular phylogenetics |
 |         | Wed, Oct 21 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_06B.pdf">Lecture 06B</a><br>(<a href="https://wustl.zoom.us/rec/share/4bYRnXjfd9NZhp6Zemce7tru2G5xoPiGZBH8NevhStFga_K38W9GK7QNKRM16ljc.CrTZvYaNAWezkKKA">video</a>)        | [Lab 06B](labs/lab_06B.md) | CSB: 2.4-2.8 | Git: branch management, collaboration | 
-|        | Mon, Oct 26 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_07A.pdf">Lecture 07A</a> | [Lab 07A](labs/lab_07A.md)  | -- | Unix: working on cluster<br>**Overview [course project](course_project.md)** |
-|  :pig:  | Wed, Oct 28 |         |         |  | **Exam 1**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam1_study_guide.pdf">study guide</a>) |
-|         | Mon, Nov 02 |         | Lab 08A |  | Python: introduction, variables, operators, file handling |
-|         | Wed, Nov 04 |         | Lab 08B |  | Python: containers, control structures|
-|         | Mon, Nov 09 |         | Lab 09A |  | Python: strings <br>**Project approvals**  |
-|         | Wed, Nov 11 |         | Lab 09B |  | Python: functions |
+|        | Mon, Oct 26 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_07A.pdf">Lecture 07A</a><br>(<a href="https://wustl.zoom.us/rec/share/fUWZlEKaWrOLhPTgE6Un2jM9kZRG9SKmYP4gGK_SpQPUtcDHnVJchXuNOmbDWGw4.DHK1K7Rz9OmMM3x_">video</a>)  | [Lab 07A](labs/lab_07A.md)  | -- | Unix: working on cluster<br>**Overview [course project](course_project.md)** |
+|         | Wed, Oct 28 |   --    |  --     |  | **Exam 1**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam1_study_guide.pdf">study guide</a>) |
+|  :pig:  | Mon, Nov 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_08A.pdf">Lecture 08A</a>        | [Lab 08A](labs/lab_08A.md) |  | Python: introduction, variables, operators,<br>if-statements, functions |
+|         | Wed, Nov 04 |         | Lab 08B |  | Python: containers, loops, script arguments |
+|         | Mon, Nov 09 |         | Lab 09A |  | Python: strings, file handling<br>**Project approvals**  |
+|         | Wed, Nov 11 |         | Lab 09B |  | Python: scripting, system calls, libraries |
 |         | Mon, Nov 16 |         | Lab 10A |  | Biology: sequence stats |
-|         | Wed, Nov 18 |         | Lab 10B |  | Coding practices: docstrings, unit tests, commits |
-|         | Mon, Nov 23 |         | Lab 11A |  | **Project check-in**   |
-|         | Wed, Nov 25 |         | Lab 11B |  |   |
-|         | Mon, Nov 30 |         | Lab 12A |  |   |
-|         | Wed, Dec 02 |         | Lab 12B |  | <br>**Project check-in**   |
-|         | Mon, Dec 07 |         | Lab 13A |  |   |
-|         | Wed, Dec 09 |         | Lab 13B |  |   |
+|         | Wed, Nov 18 |         | Lab 10B |  | Python: bioconductor |
+|         | Mon, Nov 23 |         | Lab 11A |  | Biology: positive selection<br>**Project check-in**   |
+|         | Wed, Nov 25 |         | Lab 11B |  | Python: matplotlib |
+|         | Mon, Nov 30 |         | Lab 12A |  | Python: numpy |
+|         | Wed, Dec 02 |         | Lab 12B |  | Python: scipy <br>**Project check-in**   |
+|         | Mon, Dec 07 |         | Lab 13A |  | Python: pandas |
+|         | Wed, Dec 09 |         | Lab 13B |  | Python: ete3 |
 |         | Mon, Dec 14 |         | Lab 14A |  | <br>**Project presentations**  |
 |         | Wed, Dec 16 |         | Lab 14B |  | **Exam 2**  |
