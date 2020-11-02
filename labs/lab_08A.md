@@ -246,7 +246,7 @@ x = my_function( 1, 2, 13 )
 
 Write Python code to perform each of the following tasks. Save your solutions for each task in a separate Python script, titled e.g. `problem1.py` for Problem 1, `problem2.py` for Problem 2, and so forth.
 
-- **Problem 1.**  Create a variable `x` with the string value `11.05` and the variable `y` with the value `9.95`. Convert the values into floating point representation, then print their sum to standard output.
+- **Problem 1.**  Create a variable `x` with the string value `'11.05'` and the numerical variable `y` with the value `9.95`. Convert the values into floating point representation, then print their sum to standard output.
 
 - **Problem 2.** Create three variables: `duck`, `chicken`, and `turkey`. Assign each variable an animal sound. Create a fourth variable called `turducken` that concatenates the values of the three variables together, in any order.
 
