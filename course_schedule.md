@@ -22,9 +22,9 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |        | Mon, Oct 26 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_07A.pdf">Lecture 07A</a><br>(<a href="https://wustl.zoom.us/rec/share/fUWZlEKaWrOLhPTgE6Un2jM9kZRG9SKmYP4gGK_SpQPUtcDHnVJchXuNOmbDWGw4.DHK1K7Rz9OmMM3x_">video</a>)  | [Lab 07A](labs/lab_07A.md)  | -- | Unix: working on cluster<br>**Overview [course project](course_project.md)** |
 |  :pig:  | Wed, Oct 28 |   --    |  --     |  | **Exam 1**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam1_study_guide.pdf">study guide</a>) |
 |         | Mon, Nov 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_08A.pdf">Lecture 08A</a>        | [Lab 08A](labs/lab_08A.md) |  | Python: introduction, variables, operators,<br>if-statements, functions |
-|         | Wed, Nov 04 |         | Lab 08B |  | Python: containers, loops, file handling |
-|         | Mon, Nov 09 |         | Lab 09A |  | Python: strings <br>**Project approvals**  |
-|         | Wed, Nov 11 |         | Lab 09B |  | Python: scripting, libraries |
+|         | Wed, Nov 04 |         | Lab 08B |  | Python: containers, loops, script arguments |
+|         | Mon, Nov 09 |         | Lab 09A |  | Python: strings, file handling<br>**Project approvals**  |
+|         | Wed, Nov 11 |         | Lab 09B |  | Python: scripting, system calls, libraries |
 |         | Mon, Nov 16 |         | Lab 10A |  | Biology: sequence stats |
 |         | Wed, Nov 18 |         | Lab 10B |  | Python: bioconductor |
 |         | Mon, Nov 23 |         | Lab 11A |  | Biology: positive selection<br>**Project check-in**   |
