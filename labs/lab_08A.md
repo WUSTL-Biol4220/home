@@ -62,7 +62,7 @@ $
 
 Now, let's create a Python script. First create a new file call `example.py` that contains the following text
 ```
-#!/bin/python
+#!/usr/bin/python
 # construct a string
 'Ahem, can you hear me?'
 # print a string
