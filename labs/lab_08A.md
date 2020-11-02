@@ -14,7 +14,17 @@ In this lab, we will begin to learn how to program using the Python programming 
 
 Python is an *interpreted* language, where interpreted languages use a program called the interpreter to translate human-readable code into computer-readable commands. There are a variety of useful tools that Python programmers use to run their code. Any computer that has Python installed will also  have the `python` program for interpreting code. The `ipython` program ([link](https://ipython.readthedocs.io/en/stable/)) is another Python shell and interpreter that introduces several user-friendly features, including syntax highlighting, debugger integration, and improved object introspection. We will primarily use `python` and `ipython` in this course. However, many Python programmers prefer to develop using `jupyter` ([link](https://jupyter.org/)), which offers an elegant online interface for managing Python notebooks. Alternatively, many Python developers might prefer to use `conda` ([link](https://docs.conda.io/en/latest/)), which offers a flexible framework for managing and rapidly deploying development environments.
 
-To begin the lab, log in to your virtual machine, clone the repo for this GitHub assignment, then enter the new directory for this lab. Once inside, open the interactive Python shell
+To begin the lab, log in to your virtual machine. From your home directory, use the package installer for Python (`pip`) to install the interactive Python shell, `ipython`
+
+```console
+$ pip install ipython
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: ipython in /home/mlandis/.local/lib/python3.8/site-packages (7.17.0)
+Requirement already satisfied: setuptools>=18.5 in /usr/lib/python3/dist-packages (from ipython) (45.2.0)
+...
+```
+
+Once `pip` completes the installation of `ipython`, clone your GitHub assignment repository, enter the newly cloned directory, and open the `ipython` console
 
 ```console
 $ ipython
