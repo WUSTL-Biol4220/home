@@ -6,6 +6,7 @@ In this lab, we will begin to learn how to program using the Python programming 
 
 1. Python interpreter
 2. Variables, operators, if-statements, and functions
+3. Exercises
 
 ---
 
@@ -239,8 +240,9 @@ def my_function(a, b, c=10):
 # call custom function
 x = my_function( 1, 2, 13 )
 ```
+--
 
-### Exercises
+## Exercises
 
 Write Python code to perform each of the following tasks. Save your solutions for each task in a separate Python script, titled e.g. `problem1.py` for Problem 1, `problem2.py` for Problem 2, and so forth.
 
