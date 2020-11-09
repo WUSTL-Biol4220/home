@@ -23,7 +23,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Oct 28 |   --    |  --     | --  | **Exam 1**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam1_study_guide.pdf">study guide</a>) |
 |         | Mon, Nov 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_08A.pdf">Lecture 08A</a><br>(<a href="https://wustl.zoom.us/rec/share/d6qJQPJo9eLE_ZuT1UHrSkoDLupaZ8ca3-lgGqSpUDGV1_z5j3CkijqrO1bjZoN8.42G6D_uU2FwIrAQn">video</a>) | [Lab 08A](labs/lab_08A.md) | CSB: 3.1-3.3.5, 3.6.1  | Python: introduction, variables, operators,<br>if-statements, functions |
 |  :pig:  | Wed, Nov 04 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_08B.pdf">Lecture 08B</a> | [Lab 08B](labs/lab_08B.md)  | CSB: 3.4, 3.6.2 | Python: containers, loops, script arguments |
-|         | Mon, Nov 09 |         | Lab 09A |  | Python: strings, file handling<br>**Project approvals**  |
+|  :pig:  | Mon, Nov 09 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_09A.pdf">Lecture 09A</a> | [Lab 09A](labs/lab_09A.md) |  | Python: strings, file handling<br>**Project approvals**  |
 |         | Wed, Nov 11 |         | Lab 09B |  | Python: scripting, system calls, libraries |
 |         | Mon, Nov 16 |         | Lab 10A |  | Biology: sequence stats |
 |         | Wed, Nov 18 |         | Lab 10B |  | Python: bioconductor |
