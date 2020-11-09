@@ -294,8 +294,8 @@ Running the script `./problem3.py data output.txt` should cause the script to in
 ```
 [ ['Viburnum_clemensiae', 'rbcL', 6, 'ACGACT'],
   ['Viburnum_dentatum', 'rbcL', 6, 'ACGACT'],
-  ['Viburnum_clemensiae', 'rbcL', 7, 'CTTAGTA'],
-  ['Viburnum_dentatum', 'rbcL', 7, 'GTTAGTA'] ]
+  ['Viburnum_clemensiae', 'matK', 7, 'CTTAGTA'],
+  ['Viburnum_dentatum', 'matK', 7, 'GTTAGTA'] ]
 ```
 
 that is then written in csv format to the file `output.txt`
