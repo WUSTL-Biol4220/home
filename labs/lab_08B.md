@@ -293,7 +293,7 @@ then, return to the Unix shell, enable execute-permissions for the `example.py`,
 $ chmod +x example.py
 $ ./example.py hello world 3.14
 Contents of sys.argv, length = 4
-  sys.argv[0] = ./sys.py
+  sys.argv[0] = ./example.py
   sys.argv[1] = hello
   sys.argv[2] = world
   sys.argv[3] = 3.14
