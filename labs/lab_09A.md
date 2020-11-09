@@ -24,7 +24,7 @@ Strings are a Python data type used for representing text. However, in many ways
 'C'
 >>> x[0:6]           # return characters 0 to 6
 'Cookie'
->>> x[:2]            # return up to character before index 6
+>>> x[:6]            # return up to character before index 6
 'Cookie'
 >>> x[7:]            # return character at index 7 through end
 'Monster'
@@ -294,8 +294,8 @@ Running the script `./problem3.py data output.txt` should cause the script to in
 ```
 [ ['Viburnum_clemensiae', 'rbcL', 6, 'ACGACT'],
   ['Viburnum_dentatum', 'rbcL', 6, 'ACGACT'],
-  ['Viburnum_clemensiae', 'rbcL', 7, 'CTTAGTA'],
-  ['Viburnum_dentatum', 'rbcL', 7, 'GTTAGTA'] ]
+  ['Viburnum_clemensiae', 'matK', 7, 'CTTAGTA'],
+  ['Viburnum_dentatum', 'matK', 7, 'GTTAGTA'] ]
 ```
 
 that is then written in csv format to the file `output.txt`
