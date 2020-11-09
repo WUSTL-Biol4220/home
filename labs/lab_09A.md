@@ -24,7 +24,7 @@ Strings are a Python data type used for representing text. However, in many ways
 'C'
 >>> x[0:6]           # return characters 0 to 6
 'Cookie'
->>> x[:2]            # return up to character before index 6
+>>> x[:6]            # return up to character before index 6
 'Cookie'
 >>> x[7:]            # return character at index 7 through end
 'Monster'
