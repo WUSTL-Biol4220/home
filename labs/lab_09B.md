@@ -239,7 +239,7 @@ ACGTT
 > Species_B
 ACTTC
 ```
-and if `seq.align(test.fasta)` produced the alignment file `test.align.fasta`
+and if `seq.align('test.fasta')` produced the alignment file `test.align.fasta`
 
 ```
 > Species_A
