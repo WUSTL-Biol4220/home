@@ -223,7 +223,7 @@ These slide-index operators can also be used to reverse strings and extract subs
 You will create a separate Python script for each of the following problems.
 
 **Problem 1.** 
-Write a module file called `word.py`. This code will define a function called `mutate(s)` which accepts the string `s` as input and returns a string as output. The `mutate()` function will take the input string, convert it to a list of single-character strings, randomize the order of elements in the character-list using `random.shuffle()`, convert the now-shuffled character-list back into a string, then return that string. The script will also define an if-statement for `if name == '__main__'` that calls `mutate()` for that string, then prints the shuffled string to standard output.
+Write a module file called `word.py`. This code will define a function called `mutate(s)` which accepts the string `s` as input and returns a string as output. The `mutate()` function will take the input string, convert it to a list of single-character strings, randomize the order of elements in the character-list using `random.shuffle()`, convert the now-shuffled character-list back into a string, then return that string. The script will also define an if-statement for `if __name__ == '__main__'` that calls `mutate()` for that string, then prints the shuffled string to standard output.
 
 You will need to import `random` to use `random.shuffle()` and `sys` to support the argument vector, `sys.argv`.
 
