@@ -223,14 +223,14 @@ These slide-index operators can also be used to reverse strings and extract subs
 You will create a separate Python script for each of the following problems.
 
 **Problem 1.** 
-Write a module file called `word.py`. This code will define a function called `mutate(s)` which accepts the string `s` as input and returns a string as output. The `mutate()` function will take the input string, convert it to a list of single-character strings, randomize the order of elements in the character-list using `random.shuffle()`, convert the now-shuffled character-list back into a string, then return that string. The script will also define a `__main__()` function that accepts a string as an argument, calls `mutate()` for that string, then prints the shuffled string to standard output.
+Write a module file called `word.py`. This code will define a function called `mutate(s)` which accepts the string `s` as input and returns a string as output. The `mutate()` function will take the input string, convert it to a list of single-character strings, randomize the order of elements in the character-list using `random.shuffle()`, convert the now-shuffled character-list back into a string, then return that string. The script will also define an if-statement for `if __name__ == '__main__'` that calls `mutate()` for that string, then prints the shuffled string to standard output.
 
 You will need to import `random` to use `random.shuffle()` and `sys` to support the argument vector, `sys.argv`.
 
 If done correctly, you should be able to `import word` and call `word.mutate('elephant')` within a Python shell, which might return `'phleetna'` as a randomly shuffled string. Or the module could be called as a Unix script from the command line with `$ ./word.py elephant`, which might return `'taelephn'` as another randomly shuffled string. 
 
 **Problem 2.**
-Write a module file called `seq.py`. The code will be able to launch alignment software using `os.popen` and extract some basic information from the resultant alignment. This code will define two functions. The first function will be called `align(filename)`, which will issue a system call to align the fasta file (`filename`) using an alignment program of your choice (e.g. Muscle). The second function will be called `site(i)` which returns a dictionary for the characters found at site-index `i` in the alignment.
+Write a module file called `seq.py`. The code will be able to launch alignment software using `os.popen` and extract some basic information from the resultant alignment. This code will define two functions. The first function will be called `align(filename)`, which will issue a system call to align the fasta file (`filename`) using an alignment program of your choice (e.g. Muscle). The second function will be called `site(filename, i)` which returns a dictionary for the characters found at site-index `i` in the alignment stored in `filename`. The returned dictionary will have the sequence name as the key, and the character for the site-index `i` as the value.
 
 For example, if the fasta file `test.fasta` contained
 ```
@@ -247,6 +247,6 @@ ACGTT-
 > Species_B
 AC-TTC
 ```
-then `seq.site(0)` would return `{'Species_A':'A', 'Species_B':'A'}` and `seq.site(2)` would return `{'Species_A':'G', 'Species_B':'-'}`.
+then `seq.site('test.align.fasta', 0)` would return `{'Species_A':'A', 'Species_B':'A'}` and `seq.site('test.align.fasta', 2)` would return `{'Species_A':'G', 'Species_B':'-'}`.
 
 To complete the lab, commit and push your two scripts to your GitHub repository.
