@@ -81,5 +81,5 @@ True
 ```
 
 
-To complete the lab, commit and push your two scripts to your GitHub repository.
+To complete the lab, commit and push your `seq.py` module script to your GitHub repository.
 
