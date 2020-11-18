@@ -1,6 +1,6 @@
 # Lab 10B
 
-*Lab 10B GitHub Classroom link:* https://classroom.github.com/a/U1cmZxrD
+*Lab 10B GitHub Classroom link:* https://classroom.github.com/a/jpACG0e9
 
 In this lab, we will learn how to use the Biopython library.
 
