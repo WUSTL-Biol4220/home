@@ -280,7 +280,7 @@ The script should return a dictionary-of-dictionaries that reports the percent o
 {'Species_A': {'hydrophobic': 0.5, 'hydrophilic': 0.0, 'negative': 0.0, 'positive': 0.0, 'tiny': 0.0, 'huge': 0.0, 'polar': 0.5},
  'Species_B': {'hydrophobic': 0.5, 'hydrophilic': 0.0, 'negative': 0.0, 'positive': 0.0, 'tiny': 0.0, 'huge': 0.0, 'polar': 0.5},
  'Species_C': {'hydrophobic': 0.5, 'hydrophilic': 0.0, 'negative': 0.0, 'positive': 0.0, 'tiny': 0.5, 'huge': 0.0, 'polar': 0.5},
- 'Species_D': {'hydrophobic': 0.5, 'hydrophilic': 0.0, 'negative': 0.0, 'positive': 0.0, 'tiny': 0.0, 'huge': 0.0, 'polar': 0.5}}
+ 'Species_D': {'hydrophobic': 0.5, 'hydrophilic': 0.0, 'negative': 0.0, 'positive': 0.0, 'tiny': 0.5, 'huge': 0.0, 'polar': 0.5}}
 ```
 
 **Part 3.** Write a function called `codon_usage_bias(nt_alignment)` that accepts a nucleotide alignment (`nt_alignment`) as input, translates all codons into amino acids, then reports the percents that each codon was used per amino acid.
