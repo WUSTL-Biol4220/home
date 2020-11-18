@@ -1,6 +1,6 @@
 # Lab 10B
 
-*Lab 10B GitHub Classroom link:* https://classroom.github.com/a/U1cmZxrD
+*Lab 10B GitHub Classroom link:* https://classroom.github.com/a/jpACG0e9
 
 In this lab, we will learn how to use the Biopython library.
 
@@ -53,11 +53,11 @@ The elements of a `Seq` object can be indexed and concatenated in the same manne
 >>> my_seq = Seq('GATCGATGGGCCTATATAGGA')
 >>> my_seq[4:12]              # extract subsequence
 Seq('GATGGGCC')
->>> my_seq[0::3]              # first codon position
+>>> my_seq[0::3]              # first codon positions
 Seq('GCTGTAG')
->>> my_seq[1::3]              # second codon position
+>>> my_seq[1::3]              # second codon positions
 Seq('AGGCATG')
->>> my_seq[2::3]              # third codon position
+>>> my_seq[2::3]              # third codon positions
 Seq('TAGCTAA')
 >>> my_seq[:7]+Seq('NNNNNNN')+ my_seq[14:]
 Seq('GATCGATNNNNNNNTATAGGA')
