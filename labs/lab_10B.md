@@ -226,7 +226,7 @@ TCTCCTC seq4
 
 ## Exercises
 
-(*Important: An earlier version of example.fasta that was originally stored in the GitHub assignment contained slightly different sequences than the example.fasta file used in the above example. Replace the contents of example.fasta with the above sequences to exactly reproduce the results given here.)
+(*Important: The example output shown below uses sequence data from an example fasta file. The original example.fasta file packaged with this assignment differed slightly in its sequence content. To exactly reproduce the example results, replace the contents of example.fasta with the text below.)
 
 You will create a separate Python script for each of the following problems.
 
