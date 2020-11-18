@@ -226,6 +226,8 @@ TCTCCTC seq4
 
 ## Exercises
 
+(*Important: An earlier version of example.fasta that was originally stored in the GitHub assignment contained slightly different sequences than the example.fasta file used in the above example. Replace the contents of example.fasta with the above sequences to exactly reproduce the results given here.)
+
 You will create a separate Python script for each of the following problems.
 
 Write a module file called `biopython_stats.py`. The module will define several functions to read a sequence aligment of nucleotides, to translate the codons into amino acids depending on the reading frame, to classify amino acids into classes of physicochemical properties, and to report codon usage frequencies per amino acid.
@@ -259,6 +261,8 @@ Species_B : TL
 Species_C : SI
 Species_D : SL
 ```
+
+(*Important: An earlier version of example.fasta that was originally stored in the GitHub assignment contained slightly different sequences than the example.fasta file used in the above example. Replace the contents of example.fasta with the above sequences to exactly reproduce the results given here.)
 
 **Part 2.** Write a function called `find_physicochemical_seq(aa_alignment)` that identifies the physicochemical properties for each amino acid in the alignment. The `aa_alignment` argument is an alignment of amino acids, similar to that output by `read_alignment()`. Below is a list of  amino acid properties, and the amino acids with that property.
 
