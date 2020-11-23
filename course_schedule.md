@@ -27,7 +27,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Nov 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_09B.pdf">Lecture 09B</a><br>(<a href="https://wustl.zoom.us/rec/share/gc6wUG48KhCX-uS8zyi7xG7SNbgILagiz2qP4Yx4XgyFNasT7XfqMMM2PGXm0DGZ.r5yYWAfirP-zu_s-">video</a>) | [Lab 09B](labs/lab_09B.md) | -- | Python: modules, system calls, more with containers |
 |         | Mon, Nov 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_10A.pdf">Lecture 10A</a><br>(<a href="https://wustl.zoom.us/rec/share/DFRteNGd-39D09TLb9oS-umPYmSDYqLDLKEROIIvLsfIK_GSPGS5Rzr4KX_0yHu3.LX02lr21SENUhfNF">video</a>) | [Lab 10A](labs/lab_10A.md) | -- | Biology: sequence stats |
 |  :pig:  | Wed, Nov 18 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_10B.pdf">Lecture 10B</a><br>(<a href="https://wustl.zoom.us/rec/share/sw9Sy81gcWt_GPx2MUHf1vYg0RzhVXFeaoArdDNEcj27QX7lWxFjYkunRfjOBLbw.DqDoC5JnIV0wfUF5">video</a>) | [Lab 10B](labs/lab_10B.md) | CSB 6.4 | Python: Biopython |
-|         | Mon, Nov 23 | Lecture 11A | Lab 11A |  | Biology: positive selection<br>**Project check-in**   |
+|         | Mon, Nov 23 |<a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_11A.pdf">Lecture 11A</a> | [Lab 11A](labs/lab_11A.md) | <a href="yang_bielawski_2000_tree.pdf">dN/dS paper</a> | Biology: positive selection<br>**Project check-in**   |
 |         | Wed, Nov 25 | Lecture 11B | Lab 11B |  | Python: Matplotlib |
 |         | Mon, Nov 30 | Lecture 12A | Lab 12A |  | Python: NumPy |
 |         | Wed, Dec 02 | Lecture 12B | Lab 12B |  | Python: SciPy <br>**Project check-in**   |
