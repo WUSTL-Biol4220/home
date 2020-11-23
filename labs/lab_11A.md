@@ -1,6 +1,6 @@
 # Lab 11A
 
-*Lab 11A GitHub Classroom link:* https://classroom.github.com/a/U1cmZxrD
+*Lab 11A GitHub Classroom link:* https://classroom.github.com/a/d98ABq7U
 
 In this lab, we'll learn how to test hypotheses regarding protein evolution using the phylogenetic software package, PAML. [PAML](http://abacus.gene.ucl.ac.uk/software/paml.html) -- which stands for "Phylogenetic Analysis by Maximum Likelihood" -- is open source software written for inferring phylogenies and other phylogenetic patterns.  Specifically, PAML provides a special tool called `codeml` that is used to measure the relative rates of nonsynonmyous vs. synonymous substitutions (called dN/dS).
 
