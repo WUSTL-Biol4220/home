@@ -32,7 +32,7 @@ cc  -O3 -o baseml baseml.c tools.c -lm
 Now, we will clean up the PAML binaries, first by deleting the Windows executables (`.exe`), then moving the newly build binaries, and finally by adding the new `codeml` program to `~/.local/bin`. Recall that `~/.local/bin` is identified in the environment variable, `PATH`, as defined by `~/.bash_profile`.
 
 ```console
-$ rm bin/*.exe
+$ rm ../bin/*.exe
 $ mv baseml basemlg codeml pamp evolver yn00 chi2 ../bin
 $ cd ~/.local/bin
 $ ln -s ~/apps/paml4.9j/bin/codeml .
