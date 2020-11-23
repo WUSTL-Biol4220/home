@@ -20,7 +20,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Oct 19 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_06A.pdf">Lecture 06A</a><br>(<a href="https://wustl.zoom.us/rec/share/RH1SrbyGdwpOwfHIk6KyBsH-b8Z_OxPy-7E8lChoNBhQcbeSdvszh5uZwIXNg1i5.bQjIm-ZZPUQ1crPO">video</a>) | [Lab 06A](labs/lab_06A.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">Phylo paper</a> | Biology: molecular phylogenetics |
 |         | Wed, Oct 21 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_06B.pdf">Lecture 06B</a><br>(<a href="https://wustl.zoom.us/rec/share/4bYRnXjfd9NZhp6Zemce7tru2G5xoPiGZBH8NevhStFga_K38W9GK7QNKRM16ljc.CrTZvYaNAWezkKKA">video</a>)        | [Lab 06B](labs/lab_06B.md) | CSB: 2.4-2.8 | Git: branch management, collaboration | 
 |        | Mon, Oct 26 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_07A.pdf">Lecture 07A</a><br>(<a href="https://wustl.zoom.us/rec/share/fUWZlEKaWrOLhPTgE6Un2jM9kZRG9SKmYP4gGK_SpQPUtcDHnVJchXuNOmbDWGw4.DHK1K7Rz9OmMM3x_">video</a>)  | [Lab 07A](labs/lab_07A.md)  | -- | Unix: working on cluster<br>**Overview [course project](course_project.md)** |
-|         | Wed, Oct 28 |   --    |  --     | --  | **Exam 1**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam1_study_guide.pdf">study guide</a>) |
+|         | Wed, Oct 28 |   --    |  --     |  <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam1_study_guide.pdf">study guide</a>  | **Exam 1** |
 |         | Mon, Nov 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_08A.pdf">Lecture 08A</a><br>(<a href="https://wustl.zoom.us/rec/share/d6qJQPJo9eLE_ZuT1UHrSkoDLupaZ8ca3-lgGqSpUDGV1_z5j3CkijqrO1bjZoN8.42G6D_uU2FwIrAQn">video</a>) | [Lab 08A](labs/lab_08A.md) | CSB: 3.1-3.3.5, 3.6.1  | Python: introduction, variables, operators,<br>if-statements, functions |
 |         | Wed, Nov 04 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_08B.pdf">Lecture 08B</a><br>(<a href="https://wustl.zoom.us/rec/share/z0kY4fQNcbc330_8WyGmkRBIoTGArJSKtDXCAVwt_CnGSRbjCm6Q4Ifh4oanQyqd.2GBUuagdkYE7ZQgF">video</a>) | [Lab 08B](labs/lab_08B.md)  | CSB: 3.4, 3.6.2 | Python: containers, loops, script arguments |
 |         | Mon, Nov 09 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_09A.pdf">Lecture 09A</a><br>(<a href="https://wustl.zoom.us/rec/share/iIMcVpB5lw3IZBaBa3GFF2gjjxmDyQ80DWmjdkF_P3Uaa0xUHvxDsuWyHwEaL8EK.NLYfwNFjOxdlf2NA">video</a>) | [Lab 09A](labs/lab_09A.md) | CSB 3.3.6, 3.7 | Python: strings, file handling<br>**Project approvals**  |
@@ -33,5 +33,5 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Dec 02 | Lecture 12B | Lab 12B |  | Python: SciPy <br>**Project check-in**   |
 |         | Mon, Dec 07 | Lecture 13A | Lab 13A |  | Python: pandas |
 |         | Wed, Dec 09 | Lecture 13B | Lab 13B |  | Python: ETE |
-|         | Mon, Dec 14 | -- | -- |  | <br>**Project presentations**  |
-|         | Wed, Dec 16 | -- | -- |  | **Exam 2**  |
+|         | Mon, Dec 14 | -- | -- | -- | <br>**Project presentations**  |
+|         | Wed, Dec 16 | -- | -- | -- | **Exam 2**  |
