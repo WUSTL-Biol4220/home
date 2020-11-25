@@ -59,11 +59,61 @@ Major features of the genome include
 - The open reading frame, ORF1ab, contains overlapping reading frames that encode the polyproteins PP1ab and PP1a. PPA1ab and PP1a themselves encode 16 nonstructural proteins (NSPs) when cleaved.
 - Nonstructural proteins, nsp1 through nsp16, play various roles in replication, transcription, and host translation interference.
 
-Below is a list of accession numbers for the four structural proteins (S, E, M, and N) for XX viruses, which have been sampled from different geographic regions and different time points.
+Most SARS-CoV-2 sequences are deposited to GenBank as annotated genomes. The following command will download the genome for `MW290939` as a nucleotide-encoded fasta file, with each protein-coding gene stored as a different fasta entry: `efetch -db nuccore -format fasta_cds_na -id MW290939`. Below is a list of accessions for a set of viruses sampled in November, with one sequence from across the United States. Every state is represented once, except for Delaware (DE) and North Dakota (ND). Washington, DC, (DC) and Puerto Rico (PR) were included.
 
 ```
-genome  S-gene    E-gene    M-gene    N-gene
-
+AK,MW264435
+AL,MW064314
+AR,MW190821
+AZ,MW190194
+CA,MW276155
+CO,MW190239
+CT,MW190240
+DC,MT929039
+DE,
+FL,MW286516
+GA,MW190459
+HI,MW190887	
+IA,MT806782
+ID,MW190249
+IL,MW191367
+IN,MW190377
+KS,MW064605
+KY,MT365025
+LA,MW190659
+MA,MW190252
+MD,MW292629
+ME,MW190472
+MI,MW190276
+MN,MW288251
+MO,MW190916
+MS,MW065196
+MT,MW221270
+NC,MT997204
+ND,
+NE,MT325592
+NH,MW064686
+NJ,MW190663
+NM,MW269882
+NV,MW190917
+NY,MW264424
+OH,MW190278
+OK,MT998442
+OR,MW190447
+PA,MW190279
+PR,MW191154
+RI,MT344960
+SC,MW191276
+SD,MT846549
+TN,MW191277
+TX,MW284540
+UT,MW241167
+VT,MT472623
+VA,MW280449
+WA,MT982401
+WI,MW190935
+WV,MW065351
+WY,MW065213
 ```
 
 These accessions are only for your convenience. You're free to analyze any SARS-CoV-2 genetic dataset that you wish. That dataset might focus on a particular geographical region, a particular time period, or on different aspects of the nonstructural proteins.
