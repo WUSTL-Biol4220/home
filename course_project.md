@@ -47,7 +47,7 @@ This section gives a brief overview of SARS-related coronavirus biology, includi
 
 Coronaviruses (family [Coronaviridae](https://talk.ictvonline.org/ictv-reports/ictv_9th_report/positive-sense-rna-viruses-2011/w/posrna_viruses/222/coronaviridae)) are enveloped single-stranded RNA viruses. At roughly 30kb in length, coronavirus genomes are large (if not the largest) among RNA viruses. Coronaviridae includes two virus subfamilies, Coronavirinae and Torovirinae. Coronavirinae is further divided into the virus genera *Alphacoronavirus*, *Betacoronavirus* , *Deltacoronavirus* , and *Gammacoronavirus*. SARS-related coronaviruses belong to *Betacoronavirus*, which primarily infect mammals, and include SARS-CoV, MERS-CoV, and now SARS-CoV-2.
 
-![assets/course_project/sars_cov_2_genome.jpg]()
+![](assets/course_project/sars_cov_2_genome.jpg)
 
 SARS-CoV-2 has the following genomic structure:
 - Structural proteins (from exterior to interior)
