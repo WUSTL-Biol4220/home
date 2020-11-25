@@ -139,7 +139,7 @@ WV,MW065351
 WY,MW065213
 ```
 
-If you are unsure of what datasets to analyze, I would suggest focusing on structural genes (S, E, M, N) for the US accessions (above). Of coursse, you're free to analyze any SARS-CoV-2 genetic dataset that you wish. That dataset might focus on a single state, a different country, a global perspective, other coronaviruses, different time periods, or nonstructural genes.
+If you are unsure of what datasets to analyze, I would suggest focusing on structural genes (S, E, M, N) for the US accessions (above). Of coursse, you're free to analyze any SARS-CoV-2 genetic dataset that you wish. That dataset might focus on a single state, a different country, a global perspective, other coronaviruses, different time periods, or nonstructural genes. Search for more SARS-CoV-2 accessions with this [tool](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=SARS-CoV-2,%20taxid:2697049).
 
 ---
 
