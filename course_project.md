@@ -59,7 +59,27 @@ Major features of the genome include
 - The open reading frame, ORF1ab, contains overlapping reading frames that encode the polyproteins PP1ab and PP1a. PPA1ab and PP1a themselves encode 16 nonstructural proteins (NSPs) when cleaved.
 - Nonstructural proteins, nsp1 through nsp16, play various roles in replication, transcription, and host translation interference.
 
-Most SARS-CoV-2 sequences are deposited to GenBank as annotated genomes. The following command will download the genome for `MW290939` as a nucleotide-encoded fasta file, with each protein-coding gene stored as a different fasta entry: `efetch -db nuccore -format fasta_cds_na -id MW290939`. Below is a list of accessions for a set of viruses sampled in November, with one sequence from across the United States. Every state is represented once, except for Delaware (DE) and North Dakota (ND). Washington, DC, (DC) and Puerto Rico (PR) were included.
+Most SARS-CoV-2 sequences are deposited to GenBank as annotated genomes. The following command will download the genome for `MW264435` as a nucleotide-encoded fasta file, with each protein-coding gene stored as a different fasta entry:
+```
+$ efetch -db nuccore -format fasta_cds_na -id MW264435`
+>lcl|MW290939.1_cds_QPI19188.1_1 [gene=ORF1ab] [protein=ORF1ab polyprotein] [partial=3'] [exception=ribosomal slippage] [protein_id=QPI19188.1] [location=join(227..13429,13429..>21122)] [gbkey=CDS]
+ATGGAGAGCCTTGTCCCTGGTTTCAACGAGAAAACACACGTCCAACTCAGTTTGCCTGTTTTACAGGTTC
+GCGACGTGCTCGTACGTGGCTTTGGAGACTCCGTGGAGGAGGTCTTATCAGAGGCACGTCAACATCTTAA
+AGATGGCACTTGTGGCTTAGTAGAAGTTGAAAAAGGCGTTTTGCCTCAACTTGAACAGCCCTATGTGTTC
+... more sequence data ...
+>lcl|MW290939.1_cds_QPI19189.1_2 [gene=ORF1ab] [protein=ORF1a polyprotein] [partial=3'] [protein_id=QPI19189.1] [location=227..>13356] [gbkey=CDS]
+ATGGAGAGCCTTGTCCCTGGTTTCAACGAGAAAACACACGTCCAACTCAGTTTGCCTGTTTTACAGGTTC
+GCGACGTGCTCGTACGTGGCTTTGGAGACTCCGTGGAGGAGGTCTTATCAGAGGCACGTCAACATCTTAA
+AGATGGCACTTGTGGCTTAGTAGAAGTTGAAAAAGGCGTTTTGCCTCAACTTGAACAGCCCTATGTGTTC
+... more sequence data ...
+>lcl|MW290939.1_cds_QPI19190.1_3 [gene=S] [protein=surface glycoprotein] [frame=3] [partial=5'] [protein_id=QPI19190.1] [location=<21627..25345] [gbkey=CDS]
+GTTTATTACCCTGACAAAGTTTTCAGATCCTCAGTTTTACATTCAACTCAGGACTTGTTCTTACCTTTCT
+TTTCCAATGTTACTTGGTTCCATGCTATACATGTCTCTGGGACCAATGGTACTAAGAGGTTTGATAACCC
+TGTCCTACCATTTAATGATGGTGTTTATTTTGCTTCCACTGAGAAGTCTAACATAATAAGAGGCTGGATT
+... and so on ...
+```
+
+Below is a list of accessions for a set of viruses sampled in November, with one sequence from across the United States. Every state is represented once, except for Delaware (DE) and North Dakota (ND). Washington, DC, (DC) and Puerto Rico (PR) were included.
 
 ```
 AK,MW264435
