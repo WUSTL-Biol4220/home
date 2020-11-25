@@ -1,6 +1,6 @@
 # Lab 11A
 
-*Lab 11A GitHub Classroom link:* https://classroom.github.com/a/U1cmZxrD
+*Lab 11A GitHub Classroom link:* https://classroom.github.com/a/d98ABq7U
 
 In this lab, we'll learn how to test hypotheses regarding protein evolution using the phylogenetic software package, PAML. [PAML](http://abacus.gene.ucl.ac.uk/software/paml.html) -- which stands for "Phylogenetic Analysis by Maximum Likelihood" -- is open source software written for inferring phylogenies and other phylogenetic patterns.  Specifically, PAML provides a special tool called `codeml` that is used to measure the relative rates of nonsynonmyous vs. synonymous substitutions (called dN/dS).
 
@@ -32,7 +32,7 @@ cc  -O3 -o baseml baseml.c tools.c -lm
 Now, we will clean up the PAML binaries, first by deleting the Windows executables (`.exe`), then moving the newly build binaries, and finally by adding the new `codeml` program to `~/.local/bin`. Recall that `~/.local/bin` is identified in the environment variable, `PATH`, as defined by `~/.bash_profile`.
 
 ```console
-$ rm bin/*.exe
+$ rm ../bin/*.exe
 $ mv baseml basemlg codeml pamp evolver yn00 chi2 ../bin
 $ cd ~/.local/bin
 $ ln -s ~/apps/paml4.9j/bin/codeml .

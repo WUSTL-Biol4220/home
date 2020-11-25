@@ -39,6 +39,34 @@ Plan to present for at least 10 minutes. After your presentation, the class will
 
 ---
 
+## SARS-CoV-2
+
+In 2020, the common name "coronavirus" is synonymous with a specific virus lineage, more precisely known as as Severe Acute Respiratory Syndrome-related Coronavirus-2 (SARS-CoV-2). SARS-CoV-2 is the virus that causes the infectious disease known as COVID-19. The first SARS-CoV was identified in China in 2003, and remained largely contained within that geographical region. A great deal has been learned since then about the molecular basis for how SARS-related coronaviruses infect humans, along with the genomic structure and composition of coronavirus lineages.
+
+This section gives a brief overview of SARS-related coronavirus biology, including the genome architecture of SARS-CoV-2, the apparent functions of different proteins in the genome, and a suggested dataset that could be used to analyze with the pipeline.
+
+Coronaviruses (family [Coronaviridae](https://talk.ictvonline.org/ictv-reports/ictv_9th_report/positive-sense-rna-viruses-2011/w/posrna_viruses/222/coronaviridae)) are enveloped single-stranded RNA viruses. At roughly 30kb in length, coronavirus genomes are large (if not the largest) among RNA viruses. Coronaviridae includes two virus subfamilies, Coronavirinae and Torovirinae. Coronavirinae is further divided into the virus genera *Alphacoronavirus*, *Betacoronavirus* , *Deltacoronavirus* , and *Gammacoronavirus*. SARS-related coronaviruses belong to *Betacoronavirus*, which primarily infect mammals, and include SARS-CoV, MERS-CoV, and now SARS-CoV-2.
+
+SARS-CoV-2 has the following genomic structure:
+- Structural proteins (from exterior to interior)
+  - S, the spike protein, facilitates the attachment of the virion to the cell, and the entry of the virion into the cell.
+  - E, the envelope protein, is the smallest of the structural proteins, facilitates protein-protein interactions and protein-environment interactions, but appears to have varied and "enigmatic" roles
+  - M, the membrane protein, mediates the formation of the envelope protein, integrates spike proteins into the envelope protein, and determines the general shape of the viral envelope.
+  - N, the nucleocapsid protein, directly binds to the coronavirus RNA genome, encapsulating it.
+- The open reading frame, ORF1ab, contains overlapping reading frames that encode the polyproteins PP1ab and PP1a. PPA1ab and PP1a themselves encode 16 nonstructural proteins (NSPs) when cleaved.
+- Nonstructural proteins, nsp1 through nsp16, play various roles in replication, transcription, and host translation interference.
+
+Below is a list of accession numbers for the four structural proteins (S, E, M, and N) for XX viruses, which have been sampled from different geographic regions and different time points.
+
+```
+genome  S-gene    E-gene    M-gene    N-gene
+
+```
+
+These accessions are only for your convenience. You're free to analyze any SARS-CoV-2 genetic dataset that you wish. That dataset might focus on a particular geographical region, a particular time period, or on different aspects of the nonstructural proteins.
+
+---
+
 ## Pipeline script, `pipeline.sh`
 
 Students will write a bioinformatics pipeline script that accepts a settings file name as an argument.
