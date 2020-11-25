@@ -39,6 +39,20 @@ Plan to present for at least 10 minutes. After your presentation, the class will
 
 ---
 
+## SARS-CoV-2
+
+In 2020, the common name "coronavirus" is synonymous with a specific virus lineage, more precisely known as as Severe Acute Respiratory Syndrome-related Coronavirus-2 (SARS-CoV-2). SARS-CoV-2 is the virus that causes the infectious disease known as COVID-19. The first SARS-CoV was identified in China in 2003, and remained largely contained within that geographical region. A great deal has been learned since then about the molecular basis for how SARS-related coronaviruses infect humans, along with the genomic structure and composition of coronavirus lineages.
+
+This section gives a brief overview of SARS-related coronavirus biology, including the genome architecture of SARS-CoV-2, the apparent functions of different proteins in the genome, and a suggested dataset that could be used to analyze with the pipeline.
+
+### Coronavirus diversity
+
+### SARS-CoV-2 genome
+
+### SARS-CoV-2 data
+
+---
+
 ## Pipeline script, `pipeline.sh`
 
 Students will write a bioinformatics pipeline script that accepts a settings file name as an argument.
