@@ -5,7 +5,7 @@ This file contains a list of all of the labs for the semester. Links to labs wil
 
 Reading assignments from [*Computing Skills for Biologists*](https://computingskillsforbiologists.com/) (Allesina & Wilmes) are identified by the CSB prefix followed by the pages or sections. Students are strongly encouraged to read through the exercises at the end of each CSB chapter we read, since those exercises are similar to what might appear on an Exam.
 
-| current | date        | lecture | lab     | reading | topics |
+|         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
 |         | Mon, Sep 14 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">Lecture 01A</a><br>(<a href="https://wustl.zoom.us/rec/share/xVUbAqcq2UKZY69q7A4uFFs6QqkuYjnN8-t7HT3nY6MTlWLIhWxb5mHuK4ER6Hp8._TbxHG2tCex6TQ-M?startTime=1600105741000">video</a>) | [Lab 01A](labs/lab_01A.md) | CSB: pp. 1-11 | Introduction; overview of hardware, operating<br>systems, networks, and servers |
 |         | Wed, Sep 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01B.pdf">Lecture 01B</a><br>(<a href="https://wustl.zoom.us/rec/share/v9Fgjrx-KLpP-Jy-XAOowq0FOQP2tTFISahS4NsG5272KRJqbCFIqPo001AX3Fnr.ha8SXalwnFjg8fxp?startTime=1600263299000">video</a>)        | [Lab 01B](labs/lab_01B.md) | CSB: 1.1-1.4| Unix: shell, commands, filesystem |
