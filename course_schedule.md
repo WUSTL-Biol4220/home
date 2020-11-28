@@ -5,7 +5,7 @@ This file contains a list of all of the labs for the semester. Links to labs wil
 
 Reading assignments from [*Computing Skills for Biologists*](https://computingskillsforbiologists.com/) (Allesina & Wilmes) are identified by the CSB prefix followed by the pages or sections. Students are strongly encouraged to read through the exercises at the end of each CSB chapter we read, since those exercises are similar to what might appear on an Exam.
 
-| current | date        | lecture | lab     | reading | topics |
+|         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
 |         | Mon, Sep 14 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">Lecture 01A</a><br>(<a href="https://wustl.zoom.us/rec/share/xVUbAqcq2UKZY69q7A4uFFs6QqkuYjnN8-t7HT3nY6MTlWLIhWxb5mHuK4ER6Hp8._TbxHG2tCex6TQ-M?startTime=1600105741000">video</a>) | [Lab 01A](labs/lab_01A.md) | CSB: pp. 1-11 | Introduction; overview of hardware, operating<br>systems, networks, and servers |
 |         | Wed, Sep 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01B.pdf">Lecture 01B</a><br>(<a href="https://wustl.zoom.us/rec/share/v9Fgjrx-KLpP-Jy-XAOowq0FOQP2tTFISahS4NsG5272KRJqbCFIqPo001AX3Fnr.ha8SXalwnFjg8fxp?startTime=1600263299000">video</a>)        | [Lab 01B](labs/lab_01B.md) | CSB: 1.1-1.4| Unix: shell, commands, filesystem |
@@ -27,11 +27,11 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Nov 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_09B.pdf">Lecture 09B</a><br>(<a href="https://wustl.zoom.us/rec/share/gc6wUG48KhCX-uS8zyi7xG7SNbgILagiz2qP4Yx4XgyFNasT7XfqMMM2PGXm0DGZ.r5yYWAfirP-zu_s-">video</a>) | [Lab 09B](labs/lab_09B.md) | -- | Python: modules, system calls, more with containers |
 |         | Mon, Nov 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_10A.pdf">Lecture 10A</a><br>(<a href="https://wustl.zoom.us/rec/share/DFRteNGd-39D09TLb9oS-umPYmSDYqLDLKEROIIvLsfIK_GSPGS5Rzr4KX_0yHu3.LX02lr21SENUhfNF">video</a>) | [Lab 10A](labs/lab_10A.md) | -- | Biology: sequence stats |
 |         | Wed, Nov 18 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_10B.pdf">Lecture 10B</a><br>(<a href="https://wustl.zoom.us/rec/share/sw9Sy81gcWt_GPx2MUHf1vYg0RzhVXFeaoArdDNEcj27QX7lWxFjYkunRfjOBLbw.DqDoC5JnIV0wfUF5">video</a>) | [Lab 10B](labs/lab_10B.md) | CSB 6.4 | Python: Biopython |
-|  :pig:  | Mon, Nov 23 |<a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_11A.pdf">Lecture 11A</a><br>(<a href="https://wustl.zoom.us/rec/share/qyo7rDIo7V9_Sp0R9LG6MzIKt97SCvw2TIJp96deuyBfrWX_5pbehUKPVHuk0N-B.dgbNKAXadrVRI80k">video</a>) | [Lab 11A](labs/lab_11A.md) | <a href="yang_bielawski_2000_tree.pdf">dNdS paper</a> | Biology: positive selection<br>**Project check-in**   |
-|         | Wed, Nov 25 | Lecture 11B | Lab 11B |  | Python: Matplotlib |
-|         | Mon, Nov 30 | Lecture 12A | Lab 12A |  | Python: NumPy |
-|         | Wed, Dec 02 | Lecture 12B | Lab 12B |  | Python: SciPy <br>**Project check-in**   |
-|         | Mon, Dec 07 | Lecture 13A | Lab 13A |  | Python: pandas |
-|         | Wed, Dec 09 | Lecture 13B | Lab 13B |  | Python: ETE |
+|         | Mon, Nov 23 |<a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_11A.pdf">Lecture 11A</a><br>(<a href="https://wustl.zoom.us/rec/share/qyo7rDIo7V9_Sp0R9LG6MzIKt97SCvw2TIJp96deuyBfrWX_5pbehUKPVHuk0N-B.dgbNKAXadrVRI80k">video</a>) | [Lab 11A](labs/lab_11A.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/papers/yang_bielawski_2000_tree.pdf">dNdS paper</a> | Biology: positive selection<br>**Project check-in**   |
+|         | Wed, Nov 25 | -- | -- | -- | **Open Lab** |
+|  :pig:  | Mon, Nov 30 | Lecture 12A | Lab 12A | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">Figure design paper</a> | Python: Matplotlib |
+|         | Wed, Dec 02 | Lecture 12B | Lab 12B |  | Python: NumPy <br>**Project check-in**   |
+|         | Mon, Dec 07 | Lecture 13A | Lab 13A |  | Python: SciPy |
+|         | Wed, Dec 09 | -- | -- | -- | **Open Lab** |
 |         | Mon, Dec 14 | -- | -- | -- | <br>**Project presentations**  |
-|         | Wed, Dec 16 | -- | -- | -- | **Exam 2**  |
+|         | Wed, Dec 16 | -- | -- | study guide (TBD) | **Exam 2**  |

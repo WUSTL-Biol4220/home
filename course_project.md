@@ -47,7 +47,10 @@ This section gives a brief overview of SARS-related coronavirus biology, includi
 
 Coronaviruses (family [Coronaviridae](https://talk.ictvonline.org/ictv-reports/ictv_9th_report/positive-sense-rna-viruses-2011/w/posrna_viruses/222/coronaviridae)) are enveloped single-stranded RNA viruses. At roughly 30kb in length, coronavirus genomes are large (if not the largest) among RNA viruses. Coronaviridae includes two virus subfamilies, Coronavirinae and Torovirinae. Coronavirinae is further divided into the virus genera *Alphacoronavirus*, *Betacoronavirus* , *Deltacoronavirus* , and *Gammacoronavirus*. SARS-related coronaviruses belong to *Betacoronavirus*, which primarily infect mammals, and include SARS-CoV, MERS-CoV, and now SARS-CoV-2.
 
-SARS-CoV-2 has the following genomic structure:
+The genome structure for SARS-CoV-2 is shown in the image below. 
+![](assets/course_project/sars_cov_2_genome.jpg)
+
+Major features of the genome include
 - Structural proteins (from exterior to interior)
   - S, the spike protein, facilitates the attachment of the virion to the cell, and the entry of the virion into the cell.
   - E, the envelope protein, is the smallest of the structural proteins, facilitates protein-protein interactions and protein-environment interactions, but appears to have varied and "enigmatic" roles
@@ -56,14 +59,87 @@ SARS-CoV-2 has the following genomic structure:
 - The open reading frame, ORF1ab, contains overlapping reading frames that encode the polyproteins PP1ab and PP1a. PPA1ab and PP1a themselves encode 16 nonstructural proteins (NSPs) when cleaved.
 - Nonstructural proteins, nsp1 through nsp16, play various roles in replication, transcription, and host translation interference.
 
-Below is a list of accession numbers for the four structural proteins (S, E, M, and N) for XX viruses, which have been sampled from different geographic regions and different time points.
+Most SARS-CoV-2 sequences are deposited to GenBank as annotated genomes. The following command will download the genome for `MW264435` as a nucleotide-encoded fasta file, with each protein-coding gene stored as a different fasta entry:
+```
+$ efetch -db nuccore -format fasta_cds_na -id MW264435
+>lcl|MW290939.1_cds_QPI19188.1_1 [gene=ORF1ab] [protein=ORF1ab polyprotein] [partial=3'] [exception=ribosomal slippage] [protein_id=QPI19188.1] [location=join(227..13429,13429..>21122)] [gbkey=CDS]
+ATGGAGAGCCTTGTCCCTGGTTTCAACGAGAAAACACACGTCCAACTCAGTTTGCCTGTTTTACAGGTTC
+GCGACGTGCTCGTACGTGGCTTTGGAGACTCCGTGGAGGAGGTCTTATCAGAGGCACGTCAACATCTTAA
+AGATGGCACTTGTGGCTTAGTAGAAGTTGAAAAAGGCGTTTTGCCTCAACTTGAACAGCCCTATGTGTTC
+... more sequence data ...
+$ efetch -db nuccore -format fasta_cds_na -id MW264435 | grep ">"
+>lcl|MW264435.1_cds_QPD96888.1_1 [gene=ORF1ab] [protein=ORF1ab polyprotein] [exception=ribosomal slippage] [protein_id=QPD96888.1] [location=join(250..13452,13452..21539)] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96889.1_2 [gene=ORF1ab] [protein=ORF1a polyprotein] [protein_id=QPD96889.1] [location=250..13467] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96890.1_3 [gene=S] [protein=surface glycoprotein] [protein_id=QPD96890.1] [location=21547..25368] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96891.1_4 [gene=ORF3a] [protein=ORF3a protein] [protein_id=QPD96891.1] [location=25377..26204] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96892.1_5 [gene=E] [protein=envelope protein] [protein_id=QPD96892.1] [location=26229..26456] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96893.1_6 [gene=M] [protein=membrane glycoprotein] [protein_id=QPD96893.1] [location=26507..27175] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96894.1_7 [gene=ORF6] [protein=ORF6 protein] [protein_id=QPD96894.1] [location=27186..27371] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96895.1_8 [gene=ORF7a] [protein=ORF7a protein] [protein_id=QPD96895.1] [location=27378..27743] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96896.1_9 [gene=ORF7b] [protein=ORF7b] [protein_id=QPD96896.1] [location=27740..27871] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96897.1_10 [gene=ORF8] [protein=truncated ORF8 protein] [protein_id=QPD96897.1] [location=27878..27958] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96898.1_11 [gene=N] [protein=nucleocapsid phosphoprotein] [protein_id=QPD96898.1] [location=28258..29517] [gbkey=CDS]
+>lcl|MW264435.1_cds_QPD96899.1_12 [gene=ORF10] [protein=ORF10 protein] [protein_id=QPD96899.1] [location=29542..29658] [gbkey=CDS]
+```
+
+Below is a list of accessions for a set of viruses sampled in November, with one sequence from across the United States. Every state is represented once, except for Delaware (DE) and North Dakota (ND). Washington, DC, (DC) and Puerto Rico (PR) were included.
 
 ```
-genome  S-gene    E-gene    M-gene    N-gene
-
+AK,MW264435
+AL,MW064314
+AR,MW190821
+AZ,MW190194
+CA,MW276155
+CO,MW190239
+CT,MW190240
+DC,MT929039
+DE,
+FL,MW286516
+GA,MW190459
+HI,MW190887
+IA,MT806782
+ID,MW190249
+IL,MW191367
+IN,MW190377
+KS,MW064605
+KY,MT365025
+LA,MW190659
+MA,MW190252
+MD,MW292629
+ME,MW190472
+MI,MW190276
+MN,MW288251
+MO,MW190916
+MS,MW065196
+MT,MW221270
+NC,MT997204
+ND,
+NE,MT325592
+NH,MW064686
+NJ,MW190663
+NM,MW269882
+NV,MW190917
+NY,MW264424
+OH,MW190278
+OK,MT998442
+OR,MW190447
+PA,MW190279
+PR,MW191154
+RI,MT344960
+SC,MW191276
+SD,MT846549
+TN,MW191277
+TX,MW284540
+UT,MW241167
+VT,MT472623
+VA,MW280449
+WA,MT982401
+WI,MW190935
+WV,MW065351
+WY,MW065213
 ```
 
-These accessions are only for your convenience. You're free to analyze any SARS-CoV-2 genetic dataset that you wish. That dataset might focus on a particular geographical region, a particular time period, or on different aspects of the nonstructural proteins.
+If you are unsure of what datasets to analyze, I would suggest focusing on structural genes (S, E, M, N) for the US accessions (above). Of coursse, you're free to analyze any SARS-CoV-2 genetic dataset that you wish. That dataset might focus on a single state, a different country, a global perspective, other coronaviruses, different time periods, or nonstructural genes. Search for more SARS-CoV-2 accessions with this [tool](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=SARS-CoV-2,%20taxid:2697049).
 
 ---
 
