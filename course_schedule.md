@@ -34,4 +34,4 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Dec 07 | Lecture 13A | Lab 13A |  | Python: SciPy |
 |         | Wed, Dec 09 | -- | Open Lab | -- | -- |
 |         | Mon, Dec 14 | -- | -- | -- | <br>**Project presentations**  |
-|         | Wed, Dec 16 | -- | -- | -- | **Exam 2**  |
+|         | Wed, Dec 16 | -- | -- | study guide (TBD) | **Exam 2**  |
