@@ -195,7 +195,7 @@ The pipeline settings file stores comma-separated values in the following format
 ```
 script,settings
 get_seq.sh,accession=my_accessions.txt;sequence_dir=US_samples;overwrite=true;
-make_align.sh,
+make_align.sh,align_tool=muscle;sequence_dir=US_samples;gap_penalty=0.1;gap_extension=0.3;
 make_phylo.sh,
 make_mol_stats.py,
 make_dnds.py,
