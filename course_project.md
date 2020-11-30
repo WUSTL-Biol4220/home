@@ -194,7 +194,7 @@ This script will parse analysis settings from a setting file. Users will provide
 The pipeline settings file stores comma-separated values in the following format:
 ```
 script,settings
-get_seq.sh,accession=my_accessions.txt;overwrite=true;
+get_seq.sh,accession=my_accessions.txt;sequence_dir=US_samples;overwrite=true;
 make_align.sh,
 make_phylo.sh,
 make_mol_stats.py,
@@ -217,7 +217,7 @@ The `get_seq.sh` manages and downloads fasta-formatted accessions from GenBank. 
 
 ### Usage
 
-`./get_seq ACCESSION_FILE SEQUENCE_DIR`
+`./get_seq ACCESSION_FILE SEQUENCE_DIR [OVERWRITE]`
 
 ### Behavior
 
@@ -235,6 +235,7 @@ The script will:
      a. If the accession *does* exist, the script will further validate that the file contains two lines: line 1 contains the fasta description, e.g. `>sample_1|A12345678`; line 2 contains the sequence 
 data, e.g. `ACGTACGTACT`.
      b. If the accession exists but is *invalid*, delete the accession from `SEQUENCE_DIR` and mark it to be downloaded. Record deleted files in the file `warnings.log`.
+     c. If the optional `OVERWRITE` argument is provided and equals "true", then treat all sequences as missing accessions that will be overwritten.
 
 2. For each missing accession -- either because it was not downloaded or because it was deleted for being invalid -- download that accession from GenBank. 
      a. Download and rename each GenBank accession as a fasta file. For example, accession `A12345678` fetched from GenBank using the `equery` and `efetch` commands, and saved as `A12345678.fasta`
