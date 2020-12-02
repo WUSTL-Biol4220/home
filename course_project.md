@@ -268,12 +268,12 @@ The `make_mol_stats.py` script generates a report of various summary statistics 
 ### Behavior
 
 This Python script will perform several steps:
-1. Store `ALIGNMENT_FILE` into a container
+1. Store `ALIGN_FILE` into a container
 2. Compute the GC-richness for each sequence
 3. Compute the GC-richness for each site
 4. Determine whether or not each site is phylogenetically informative.
-5. Find all coding regions and all codons
-6. Compute codon frequencies per site and per sequence
+5. Compute codon frequencies for each sequence
+6. Compute codon frequencies for each site
 7. Compute biased codon usage proportions across amino acids, sites, and sequences
 
 Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in Lab [XX]() (TBD). Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one variant, and at least two individuals of a different variant -- i.e. the site contains enough information to identify a phylogenetic "split".
