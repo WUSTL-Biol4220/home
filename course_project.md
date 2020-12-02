@@ -82,62 +82,7 @@ $ efetch -db nuccore -format fasta_cds_na -id MW264435 | grep ">"
 >lcl|MW264435.1_cds_QPD96899.1_12 [gene=ORF10] [protein=ORF10 protein] [protein_id=QPD96899.1] [location=29542..29658] [gbkey=CDS]
 ```
 
-Below is a list of accessions for a set of viruses sampled in November, with one sequence from across the United States. Every state is represented once, except for Delaware (DE) and North Dakota (ND). Washington, DC, (DC) and Puerto Rico (PR) were included.
-
-```
-AK,MW264435
-AL,MW064314
-AR,MW190821
-AZ,MW190194
-CA,MW276155
-CO,MW190239
-CT,MW190240
-DC,MT929039
-DE,
-FL,MW286516
-GA,MW190459
-HI,MW190887
-IA,MT806782
-ID,MW190249
-IL,MW191367
-IN,MW190377
-KS,MW064605
-KY,MT365025
-LA,MW190659
-MA,MW190252
-MD,MW292629
-ME,MW190472
-MI,MW190276
-MN,MW288251
-MO,MW190916
-MS,MW065196
-MT,MW221270
-NC,MT997204
-ND,
-NE,MT325592
-NH,MW064686
-NJ,MW190663
-NM,MW269882
-NV,MW190917
-NY,MW264424
-OH,MW190278
-OK,MT998442
-OR,MW190447
-PA,MW190279
-PR,MW191154
-RI,MT344960
-SC,MW191276
-SD,MT846549
-TN,MW191277
-TX,MW284540
-UT,MW241167
-VT,MT472623
-VA,MW280449
-WA,MT982401
-WI,MW190935
-WV,MW065351
-WY,MW065213
-```
+This [file](assets/course_project/accessions.txt) contains a list of accessions for a set of viruses sampled in November, with one sequence from across the United States. Every state is represented once, except for Delaware (DE) and North Dakota (ND). Washington, DC, (DC) and Puerto Rico (PR) were included. 
 
 If you are unsure of what datasets to analyze, I would suggest focusing on structural genes (S, E, M, N) for the US accessions (above). Of coursse, you're free to analyze any SARS-CoV-2 genetic dataset that you wish. That dataset might focus on a single state, a different country, a global perspective, other coronaviruses, different time periods, or nonstructural genes. Search for more SARS-CoV-2 accessions with this [tool](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=SARS-CoV-2,%20taxid:2697049).
 
