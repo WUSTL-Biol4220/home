@@ -196,7 +196,7 @@ The pipeline settings file stores comma-separated values in the following format
 script,settings
 get_seq.sh,accession=my_accessions.txt;sequence_dir=US_samples;overwrite=true;
 make_align.sh,align_tool=muscle;sequence_dir=US_samples;gap_open=0.1;gap_ext=0.3;
-make_phylo.sh,
+make_phylo.sh,align_file=phylo_tool=iqtree;s
 make_mol_stats.py,
 make_dnds.py,
 make_results.py,
@@ -251,18 +251,18 @@ This script will align a set of fasta sequences located in a target directory.
 
 ### Usage
 
-`./make_align SEQUENCE_DIR ALIGN_TOOL [ALIGN_TOOL_OPTIONS]`
+`./make_align SEQUENCE_DIR ALIGN_TOOL [GAP_OPEN] [GAP_EXT]`
 
 ### Behavior
 
-The `make_align.sh` script will align the sequences in `SEQUENCE_DIR` using the method `ALIGN_TOOL` and the options defined in `ALIGN_TOOL_OPTIONS`.
+The `make_align.sh` script will align the sequences in `SEQUENCE_DIR` using the method `ALIGN_TOOL` and the optional arguments defined by `GAP_OPEN` and `GAP_EXT`.
 
-The script will concatenate all fasta files in `SEQUENCE_DIR`, then take that concatenated sequence file as input for the alignment procedure. The script will then align the sequence file using a supported alignment tool (specified by `ALIGN_TOOL`), where supported tools must include Muscle, MAFFT, and PRANK. Students are welcome to add support for additional tools, but they will need to install that software on their virtual machine. The alignment procedure will use arguments/options passed in through `ALIGN_TOOL_OPTIONS`. Note that invalid input and/or invalid software options may cause the alignment software to fail. Script failures you encounter should be logged in `warnings.log`
+The script will concatenate all fasta files in `SEQUENCE_DIR`, then take that concatenated sequence file as input for the alignment procedure. The script will then align the sequence file using a supported alignment tool (specified by `ALIGN_TOOL`), where supported tools must include Muscle, MAFFT, and PRANK. Students are welcome to add support for additional tools, but they will need to install that software on their virtual machine. The alignment procedure will use arguments/options passed in through `GAP_OPEN` and `GAP_EXT`. Note that invalid input and/or invalid software options may cause the alignment software to fail. Script failures you encounter should be logged in `warnings.log`
 
 In addition to supporting input and output arguments, other `ALIGN_TOOL_OPTIONS` to support are
-- Muscle: gap open penalty (`-gapopen`)
-- MAFFT: gap open penalty (`--op`) and gap extension penalty (`--ep`)
-- PRANK: gap rate (`-gaprate`), gap extension probability (`-gapext`)
+- Muscle: gap open penalty (`-gapopen`) using `GAP_OPEN`
+- MAFFT: gap open penalty (`--op`) using `GAP_OPEN` and gap extension penalty (`--ep`) using `GAP_EXT`
+- PRANK: gap open rate (`-gaprate`) using `GAP_OPEN` gap extension probability (`-gapext`) using `GAP_EXT`
 
 The script should write two files as output: (1) the output alignment file and (2) a log file that documents the alignment settings. If the `SEQUENCE_DIR` was `primates_cytb` and `ALIGN_TOOL` was MAFFT, then the output file should be saved as `primates_cytb.align_mafft.fasta` and `primates_cytb.align_mafft.log`.
 
@@ -291,9 +291,9 @@ This script will estimate a phylogeny from a multiple sequence alignment.
 The `make_phylo.sh` script will infer a phylogeny using the alignment stored in `ALIGNMENT_FILE` using the software `PHYLO_TOOL` under the settings `PHYLO_TOOL_OPTIONS`. The script must support the phylogenetic inference methods: FastTree, IQ-Tree, and MPBoot. Students are welcome to include additional phylogenetic methods, but they will need to install that software on their virtual machine. The phylogenetic inference procedure will use arguments/options passed in through `PHYLO_TOOL_OPTIONS`. Note that invalid input and/or invalid software options may cause the phylogenetics software to fail. Script failures you encounter should be logged in `warnings.log`
 
 In addition to supporting input and output arguments, other `PHYLO_TOOL_OPTIONS` to support are
-- FastTree: gap open penalty (`-gapopen`)
-- IQ-Tree: gap open penalty (`--op`) and gap extension penalty (`--ep`)
-- MPBoot: gap rate (`-gaprate`), gap extension probability (`-gapext`)
+- FastTree: use of a more complex model of nucleotide evolution (`-gtr`)
+- IQ-Tree: use of a more complex model of nucleotide evolution (`-m GTR`) or a simpler model (`-m JC`)
+- MPBoot: *no settings*
 
 The script should write three files as output: (1) the output phylogenetic estimate stored as a Newick string, (2) a text representation of the phylogeny using NW Utilities, and (3) a log file that documents the phylogenetic inference settings. If the `ALIGNMENT_FILE` was `primates_cytb.align_mafft.fasta` and `PHYLO_TOOL` was FastTree, then the output file should be saved as `primates_cytb.align_mafft.phylo_fasttree.tre`, `primates_cytb.align_mafft.phylo_fasttree.nw_display.txt`, and `primates_cytb.align_mafft.phylo_fasttree.log`.
 
@@ -308,7 +308,7 @@ The log file should report
 
 ## 5. `make_mol_stats.py`
 
-*(Relevant labs and lectures: TBD)*
+*(Relevant labs and lectures: 10A, 10B)*
 
 The `make_mol_stats.py` script generates a report of various summary statistics and transformations for a multiple sequence alignment.
 
@@ -342,7 +342,7 @@ where `prefix` is the alignment name except the file extension (`.fasta`) e.g. `
 
 ## 6. `make_dnds.py`
 
-*(Relevant labs and lectures: TBD)*
+*(Relevant labs and lectures: 11A)*
 
 The `make_dnds.sh` script will test for the molecular signature of positive selection using the modeling software, PAML. 
 
@@ -364,7 +364,7 @@ As output, this script should output five files in .csv format. The beginning of
 
 ## 7. `make_results.py`
 
-*(Relevant labs and lectures: TBD)*
+*(Relevant labs and lectures: 1B, 2B, 3A)*
 
 This file will collect all pipeline output located in the target sequence directory, then combine any compatible results and/or logs and generate figures.
 
@@ -386,7 +386,7 @@ primates_cytb/G63645551
 # ./make_align.sh sequences mafft '-op 2 -ep 1'`
 job1/primates_cytb.align_mafft.fasta
 job1/primates_cytb.align_mafft.log
-# ./make_phylo job1/primates_cytb.align_mafft.fasta fasttree '-noml'
+# ./make_phylo job1/primates_cytb.align_mafft.fasta fasttree '-gtr'
 job1/primates_cytb.phylo_fasttree.tre
 job1/primates_cytb.phylo_fasttree.nw_display.txt
 job1/primates_cytb.phylo_fasttree.log
