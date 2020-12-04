@@ -47,7 +47,7 @@ This section gives a brief overview of SARS-related coronavirus biology, includi
 
 Coronaviruses (family [Coronaviridae](https://talk.ictvonline.org/ictv-reports/ictv_9th_report/positive-sense-rna-viruses-2011/w/posrna_viruses/222/coronaviridae)) are enveloped single-stranded RNA viruses. At roughly 30kb in length, coronavirus genomes are large (if not the largest) among RNA viruses. Coronaviridae includes two virus subfamilies, Coronavirinae and Torovirinae. Coronavirinae is further divided into the virus genera *Alphacoronavirus*, *Betacoronavirus* , *Deltacoronavirus* , and *Gammacoronavirus*. SARS-related coronaviruses belong to *Betacoronavirus*, which primarily infect mammals, and include SARS-CoV, MERS-CoV, and now SARS-CoV-2.
 
-The genome structure for SARS-CoV-2 is shown in the image below. 
+The genome structure for SARS-CoV-2 is shown in the image below. Figure from [Kim et al. (2020, Cell)](https://github.com/WUSTL-Biol4220/home/blob/master/assets/course_project/kim_et_al_2020_cell_sarscov2_architecture.pdf).
 ![](assets/course_project/sars_cov_2_genome.jpg)
 
 Major features of the genome include
@@ -268,12 +268,12 @@ The `make_mol_stats.py` script generates a report of various summary statistics 
 ### Behavior
 
 This Python script will perform several steps:
-1. Store `ALIGNMENT_FILE` into a container
+1. Store `ALIGN_FILE` into a container
 2. Compute the GC-richness for each sequence
 3. Compute the GC-richness for each site
 4. Determine whether or not each site is phylogenetically informative.
-5. Find all coding regions and all codons
-6. Compute codon frequencies per site and per sequence
+5. Compute codon frequencies for each sequence
+6. Compute codon frequencies for each site
 7. Compute biased codon usage proportions across amino acids, sites, and sequences
 
 Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in Lab [XX]() (TBD). Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one variant, and at least two individuals of a different variant -- i.e. the site contains enough information to identify a phylogenetic "split".
