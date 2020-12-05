@@ -30,8 +30,8 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Nov 23 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_11A.pdf">Lecture 11A</a><br>(<a href="https://wustl.zoom.us/rec/share/qyo7rDIo7V9_Sp0R9LG6MzIKt97SCvw2TIJp96deuyBfrWX_5pbehUKPVHuk0N-B.dgbNKAXadrVRI80k">video</a>) | [Lab 11A](labs/lab_11A.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/papers/yang_bielawski_2000_tree.pdf">dNdS paper</a> | Biology: positive selection<br>**Project check-in**   |
 |         | Wed, Nov 25 | -- | -- | -- | **Open Lab** |
 |         | Mon, Nov 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_12A.pdf">Lecture 12A</a> | [Lab 12A](labs/lab_12A.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">Figure design paper</a> | Python: Matplotlib |
-|  :pig:  | Wed, Dec 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_12B.pdf">Lecture 12B</a>  | [Lab 12B](labs/lab_12B.md) | CSB ?? | Python: NumPy <br>**Project check-in**   |
-|         | Mon, Dec 07 | Lecture 13A | Lab 13A |  | Python: SciPy |
+|         | Wed, Dec 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_12B.pdf">Lecture 12B</a>  | [Lab 12B](labs/lab_12B.md) | CSB ?? | Python: NumPy <br>**Project check-in**   |
+|  :pig:  | Mon, Dec 07 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_13A.pdf">Lecture 13A</a> | Lab 13A | -- | Python: SciPy |
 |         | Wed, Dec 09 | -- | -- | -- | **Open Lab** |
 |         | Mon, Dec 14 | -- | -- | -- | <br>**Project presentations**  |
 |         | Wed, Dec 16 | -- | -- | study guide (TBD) | **Exam 2**  |
