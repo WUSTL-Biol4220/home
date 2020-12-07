@@ -85,7 +85,7 @@ array([10.11179033, 10.10902411, 10.65111753, 10.32368948])
 >>> stats.norm.pdf(x=x, loc=10, scale=2 )
 array([0.19915978, 0.19917499, 0.18917553, 0.19687573])
 >>> # return mean, variance, skewness, kurtosis (mvsk)
->>> stats.norm.stats(loc=10, scale=2, \     
+>>> stats.norm.stats(loc=10, scale=2, \
                      moments='mvsk')
 (array(10.), array(4.), array(0.), array(0.))
 >>> # generate 1000 normal RVs with mean=10, scale=2
