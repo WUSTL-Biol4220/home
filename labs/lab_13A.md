@@ -30,6 +30,8 @@ In this lab, we will explore several of SciPy's many features for processing qua
 
 In this lab, we will explore several SciPy packages that are useful for analyzing biological datasets: `scipy.constants`, `scipy.stats`, `scipy.optimize`, `scipy.integrate`, and `scipy.cluster`.
 
+You will need to install the SciPy library on your virtual machine, which may be done with the command `pip install scipy`.
+
 ### `scipy.constants`
 
 The `scipy.constants` provides a dictionary of nearly 400 mathematical and physical constants. The value for a constant may be referenced by name directly (e.g. `scipy.constants.pi`). Any constant -- along with its value, unit, and precision -- can also be extracted from the dictionary, `scipy.constants.physical_constants`.
