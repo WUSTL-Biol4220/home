@@ -229,7 +229,7 @@ SciPy offers several methods for clustering data, including vector quantization,
 ...
 >>> features = np.concatenate((a, b))    # x = [ a, b ]
 >>> x = whiten(features)                 # normalize data
->>> y, e = kmeans(whitened, 2)           # infer k=2 means
+>>> y, e = kmeans(x, 2)                  # infer k=2 means
 >>> plt.scatter(x[:, 0], x[:, 1])        # plot data, x
 >>> plt.scatter(y[:, 0], y[:, 1], c='r') # plot means, y
 >>> plt.show()
