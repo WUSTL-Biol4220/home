@@ -2,7 +2,7 @@
 
 *Lab 13A GitHub Classroom link:* https://classroom.github.com/a/Gjy6fm47
 
-In this lab, we will explore several of SciPy's many features for processing quantitative data. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-13a.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 12A](labs/lab-12a.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
+In this lab, we will explore several of SciPy's many features for processing quantitative data. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-13a.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 12A](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_12A.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
 
 ---
 
