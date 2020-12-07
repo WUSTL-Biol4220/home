@@ -1,0 +1,67 @@
+AY304486,SARS coronavirus SZ3
+AY304488,SARS coronavirus SZ16
+AY572034,SARS coronavirus civet007
+DQ022305,Bat SARS coronavirus HKU3 1
+DQ071615,Bat SARS coronavirus Rp3
+DQ084199,Bat SARS coronavirus HKU3 2
+DQ084200,Bat SARS coronavirus HKU3 3
+DQ412042,Bat SARS coronavirus Rf1
+DQ412043,Bat SARS coronavirus Rm1
+DQ648856,Bat coronavirus BtCoV/273/2005
+DQ648857,Bat coronavirus BtCoV/279/2005
+FJ588686,Bat SARS coronavirus Rs672/2006
+GQ153539,Bat SARS coronavirus HKU3 4
+GQ153540,Bat SARS coronavirus HKU3 5
+GQ153541,Bat SARS coronavirus HKU3 6
+GQ153542,Bat SARS coronavirus HKU3 7
+GQ153543,Bat SARS coronavirus HKU3 8
+GQ153544,Bat SARS coronavirus HKU3 9
+GQ153545,Bat SARS coronavirus HKU3 10
+GQ153546,Bat SARS coronavirus HKU3 11
+GQ153547,Bat SARS coronavirus HKU3 12
+GQ153548,Bat SARS coronavirus HKU3 13
+GU190215,Bat coronavirus BM48 21/BGR/2008
+JX993987,Bat coronavirus Rp/Shaanxi2011
+JX993988,Bat coronavirus Cp/Yunnan
+KC881005,Bat SARS-like coronavirus RsSHC014
+KC881006,Bat SARS-like coronavirus Rs3367
+KF294457,SARS related bat coronavirus Longquan 140
+KF367457,Bat SARS-like coronavirus WIV1
+KF569996,Rhinolophus affinis coronavirus LYRa11
+KF636752,Bat Hp betacoronavirus/Zhejiang2013
+KJ473811,Bat coronavirus BtRf BetaCoV/JL2012
+KJ473812,Bat coronavirus BtRf BetaCoV/HeB2013
+KJ473813,Bat coronavirus BtRf BetaCoV/SX2013
+KJ473814,Bat coronavirus BtRs BetaCoV/HuB2013
+KJ473815,Bat coronavirus BtRs BetaCoV/GX2013
+KJ473816,Bat coronavirus BtRs BetaCoV/YN2013
+KP886808,Bat SARS-like coronavirus YNLF 31C
+KP886809,Bat SARS-like coronavirus YNLF 34C
+KT444582,SARS-like coronavirus WIV16
+KU182964,Bat coronavirus JTMC15
+KU182963,Bat coronavirus MLHJC35
+KU973692,SARS related coronavirus F46
+KY352407,SARS related coronavirus BtKY72
+KY417142,Bat SARS-like coronavirus As6526
+KY417143,Bat SARS-like coronavirus Rs4081
+KY417144,Bat SARS-like coronavirus Rs4084
+KY417145,Bat SARS-like coronavirus Rf4092
+KY417146,Bat SARS-like coronavirus Rs4231
+KY417147,Bat SARS-like coronavirus Rs4237
+KY417148,Bat SARS-like coronavirus Rs4247
+KY417149,Bat SARS-like coronavirus Rs4255
+KY417150,Bat SARS-like coronavirus Rs4874
+KY417151,Bat SARS-like coronavirus Rs7327
+KY417152,Bat SARS-like coronavirus Rs9401
+KY770858,Bat coronavirus Anlong 103
+KY770859,Bat coronavirus Anlong 112
+KY770860,Bat coronavirus Jiyuan 84
+KY938558,Bat coronavirus 16BO133
+MG772933,Bat SARS-like coronavirus SL CoVZC45
+MG772934,Bat SARS-like coronavirus SL CoVZXC21
+MK211374,Bat coronavirus BtRl BetaCoV/SC2018
+MK211375,Bat coronavirus BtRs BetaCoV/YN2018A
+MK211376,Bat coronavirus BtRs BetaCoV/YN2018B
+MK211377,Bat coronavirus BtRs BetaCoV/YN2018C
+MK211378,Bat coronavirus BtRs BetaCoV/YN2018D
+NC_004718,SARS coronavirus
