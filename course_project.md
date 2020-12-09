@@ -306,7 +306,7 @@ The `make_dnds.sh` script will test for the molecular signature of positive sele
 
 ### Behavior
 
-This script accepts a multiple sequence alignment and a phylogenetic tree as input to process using PAML. PAML settings are managed through a control file ([https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/codeml.ctl](codeml.ctl)), where the appropriate filenames will need to be assigned based on the `make_dnds.py` arguments.
+This script accepts a multiple sequence alignment and a phylogenetic tree as input to process using PAML. PAML settings are managed through a control file ([codeml.ctl](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/codeml.ctl)), where the appropriate filenames will need to be assigned based on the `make_dnds.py` arguments.
 
 The script should read in the default PAML output, saving per-site dN/dS scores as a csv file in `${ALIGN_FILE}.site_dnds.csv` and a Newick string estimated using the PAML codon model titled `${ALIGN_FILE}.paml.tre`.
 
