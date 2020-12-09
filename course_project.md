@@ -308,6 +308,8 @@ The `make_dnds.sh` script will test for the molecular signature of positive sele
 
 This script accepts a multiple sequence alignment and a phylogenetic tree as input to process using PAML. PAML settings are managed through a control file ([codeml.ctl](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/codeml.ctl)), where the appropriate filenames will need to be assigned based on the `make_dnds.py` arguments. Note that the provided control file applies the model settings `NSsites = 0 1 2`, as was done in Lab 11A.
 
+PAML will not accept a standard fasta file as input. Instead, PAML uses a custom format, where the first row contains two numbers -- the number of sequences, and the number of sites per sequence -- and each following row gives the sequence name, followed by the sequence content. This [file](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/example_convert_paml.py) contains modifiable code for converting fasta formatted files into PAML format.
+
 The script should read in the default PAML output, saving per-site dN/dS scores as a csv file in `${ALIGN_FILE}.site_dnds.csv` and a Newick string estimated using the PAML codon model titled `${ALIGN_FILE}.paml.tre`.
 
 As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
