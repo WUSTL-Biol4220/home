@@ -152,7 +152,7 @@ get_seq.sh,accession=my_accessions.txt;sequence_dir=US_samples;overwrite=true;
 make_align.sh,sequence_dir=US_samples;align_tool=mafft;align_tool_options='-gapopen 2';
 make_phylo.sh,align_file=covid_align_mafft.fasta;phylo_tool=fasttree;phylo_tool_options='-gtr';
 make_mol_stats.py,align_file=covid_align_mafft.fasta;
-make_dnds.py,align_file=covid_align_mafft.fasta;phylo_file=covid_align_mafft_fasttree.tre;paml_options='';
+make_dnds.py,align_file=covid_align_mafft.fasta;phylo_file=covid_align_mafft_fasttree.tre;
 make_results.py,sequence_dir=US_samples;
 feature1.sh,setting1=my_feature1_settings.txt;parameter1=20;
 feature2.py,setting2=my_feature2_settings.txt;parameter2=50;
@@ -302,13 +302,13 @@ The `make_dnds.sh` script will test for the molecular signature of positive sele
 
 ### Usage
 
-`./make_dnds.py ALIGN_FILE PHYLO_FILE [PAML_OPTIONS]`
+`./make_dnds.py ALIGN_FILE PHYLO_FILE`
 
 ### Behavior
 
-This script accepts a multiple sequence alignment and a phylogenetic tree as input to process using PAML. PAML settings are managed through a control file (`.ctl`); this script accepts `PAML_OPTIONS` that are then reformatted accordingly into the PAML control file. At a minimum, `PAML_OPTIONS` should support the settings XX, XX, XX.
+This script accepts a multiple sequence alignment and a phylogenetic tree as input to process using PAML. PAML settings are managed through a control file ([codeml.ctl](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/codeml.ctl)), where the appropriate filenames will need to be assigned based on the `make_dnds.py` arguments. Note that the provided control file applies the model settings `NSsites = 0 1 2`, as was done in Lab 11A.
 
-The script should read in the default PAML output, saving per-site dN/dS scores as a csv file in `${SEQUENCE_NAME}.site_dnds.csv` and a Newick string estimated using the PAML codon model titled `${SEQUENCE_NAME}.paml.tre`.
+The script should read in the default PAML output, saving per-site dN/dS scores as a csv file in `${ALIGN_FILE}.site_dnds.csv` and a Newick string estimated using the PAML codon model titled `${ALIGN_FILE}.paml.tre`.
 
 As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
 - `prefix.paml.tre`
@@ -351,7 +351,7 @@ primates_cytb.align_mafft.seq_phylo_inf.csv
 primates_cytb.align_mafft.site_codon.csv
 primates_cytb.align_mafft.seq_codon.csv
 primates_cytb.align_mafft.codon_usage.csv
-# ./make_dnds.py job1/primates_cytb.align_mafft.fasta job1/primates_cytb.align_mafft.phylo_fasttree.tre '-some_setting'
+# ./make_dnds.py job1/primates_cytb.align_mafft.fasta job1/primates_cytb.align_mafft.phylo_fasttree.tre
 primates_cytb.align_mafft.phylo_fasttree.paml.tre
 primates_cytb.align_mafft.phylo_fasttree.site_dnds.csv
 # ./make_results.py SEQUENCE_DIR [RESULTS_OPTIONS]
