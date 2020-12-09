@@ -91,7 +91,7 @@ $ efetch -db nuccore -format fasta_cds_na -id MW264435 | grep ">"
 >lcl|MW264435.1_cds_QPD96899.1_12 [gene=ORF10] [protein=ORF10 protein] [protein_id=QPD96899.1] [location=29542..29658] [gbkey=CDS]
 ```
 
-For genewise comparative analyses, you will likely need to partition each resulting fasta file into separate gene-specific fasta files.
+For genewise comparative analyses, you will likely need to partition each resulting fasta file into separate gene-specific fasta files. Here is an [example script](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/example_get_seq.sh) that may be helpful.
 
 If you are unsure of what datasets to analyze, I would suggest focusing on structural genes (S, E, M, N) for the US accessions (above). Of coursse, you're free to analyze any SARS-CoV-2 genetic dataset that you wish. That dataset might focus on a single state, a different country, a global perspective, other coronaviruses, different time periods, or nonstructural genes. Search for more SARS-CoV-2 accessions with this [tool](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=SARS-CoV-2,%20taxid:2697049).
 
