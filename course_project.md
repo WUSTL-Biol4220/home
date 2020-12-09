@@ -281,7 +281,7 @@ This Python script will perform several steps:
 6. Compute codon frequencies for each site
 7. Compute biased codon usage proportions across amino acids, sites, and sequences
 
-Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in Lab [XX]() (TBD). Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one variant, and at least two individuals of a different variant -- i.e. the site contains enough information to identify a phylogenetic "split".
+Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in the materials for classes 10A and 10B. Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one variant, and at least two individuals of a different variant -- i.e. the site contains enough information to identify a phylogenetic "split".
 
 As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment 
 - `prefix.seq_GC.csv`
