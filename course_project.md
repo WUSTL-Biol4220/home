@@ -30,9 +30,9 @@ Plan to present for at least 10 minutes. After your presentation, the class will
 
 ### Important dates
 
-- Feature ideas must be approved by the instructor by **Wed, Nov 4**
-- Students will present their work to the class on **Mon, Dec 14**
-- Students will submit their project materials by **Fri, Dec 18**
+- Feature ideas must be approved by the instructor by **Wed, Nov 4, 2020**
+- Students will present their work to the class on **Mon, Dec 14, 2020**
+- Students will email their project code and report to [michael.landis@wustl.edu](mailto:michael.landis@wustl.edu) by **Fri, Jan 8, 2021**
 
 
 (*Elements of the pipeline project design were inspired by [https://github.com/roblanf/sarscov2phylo](https://github.com/roblanf/sarscov2phylo).*)
