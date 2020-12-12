@@ -32,6 +32,6 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Nov 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_12A.pdf">Lecture 12A</a><br>(<a href="https://wustl.zoom.us/rec/share/FCFha0Y7KONLUXl4RqzQg_PvHqOzf25kTi4qnPkxHggWIP1idT2apeEBR9JSH96i.-gjdNbXgFoG5ZcsE?startTime=1606747173000">video</a>) | [Lab 12A](labs/lab_12A.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">Figure design paper</a> | Python: Matplotlib |
 |         | Wed, Dec 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_12B.pdf">Lecture 12B</a><br>(<a href="https://wustl.zoom.us/rec/share/LDPGoBTYi2Tzth0SCLMuO9x9rqFAKW02XGSe4BZ3vx5SIRAgafcix2WdkrXHoyGS.K1SiOJSsArnQfqC5?startTime=1606919665000">video</a>)  | [Lab 12B](labs/lab_12B.md) | CSB 6.1 - 6.2.3  | Python: NumPy <br>**Project check-in**   |
 |         | Mon, Dec 07 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_13A.pdf">Lecture 13A</a><br>(<a href="https://wustl.zoom.us/rec/share/D1izoC6FDPIvRFkSQOgXEt1lZEXrUG0_lkZGyPR6xwcM-SQWkxTYhR1KbfOj93VF.gM5658ZwZSkVL7Pa?startTime=1607351710000">video</a>) | [Lab 13A](labs/lab_13A.md)| CSB 6.2.4 - 6.2.5 | Python: SciPy |
-|  :pig:  | Wed, Dec 09 | -- | -- | -- | **Open Lab** |
-|         | Mon, Dec 14 | -- | -- | -- | **Project presentations**  |
+|         | Wed, Dec 09 | -- | -- | -- | **Open Lab** |
+|   :pig: | Mon, Dec 14 | -- | -- | -- | **Project presentations**  |
 |         | Wed, Dec 16 | -- | -- | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam2_study_guide.pdf">study guide</a>  | **Exam 2**  |
