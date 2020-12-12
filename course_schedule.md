@@ -34,4 +34,4 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Dec 07 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_13A.pdf">Lecture 13A</a><br>(<a href="https://wustl.zoom.us/rec/share/D1izoC6FDPIvRFkSQOgXEt1lZEXrUG0_lkZGyPR6xwcM-SQWkxTYhR1KbfOj93VF.gM5658ZwZSkVL7Pa?startTime=1607351710000">video</a>) | [Lab 13A](labs/lab_13A.md)| CSB 6.2.4 - 6.2.5 | Python: SciPy |
 |  :pig:  | Wed, Dec 09 | -- | -- | -- | **Open Lab** |
 |         | Mon, Dec 14 | -- | -- | -- | **Project presentations**  |
-|         | Wed, Dec 16 | -- | -- | study guide (TBD) | **Exam 2**  |
+|         | Wed, Dec 16 | -- | -- | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/notes/biol4220_exam2_study_guide.pdf">study guide</a>  | **Exam 2**  |
