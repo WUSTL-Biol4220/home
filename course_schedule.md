@@ -10,10 +10,10 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">Lecture 01A</a>   | [Lab 01A](labs/lab_01A.md) | CSB: pp. 1-11   | Unix: shell, commands, filesystem  |
 |         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01B.pdf">Lecture 01B</a>   | [Lab 01B](labs/lab_01B.md) | CSB: 1.1-1.4    | Unix: pipes, redirects, more commands |
 |         | Mon, Sep 06 | -- | -- | -- | **Labor Day** |
-|         | Wed, Sep 08 | -- | -- | CSB: 1.5-1.6    | Biology: molecular sequences, BLAST |
+|         | Wed, Sep 08 | -- | -- | CSB: 1.5-1.6    | Molecular sequences, BLAST |
 |         | Mon, Sep 13 | -- | -- |  --             | Unix: text processing, file format, grep |
 |         | Wed, Sep 15 | -- | -- | CSB: 1.7-1.10   | Unix: scripts, variables, control structures, pseudocode  | 
-|         | Mon, Sep 20 | -- | -- | <a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/">Entrez Unix tools</a> | Biology: molecular sequences, BLAST<br>Unix: file transfer |
+|         | Mon, Sep 20 | -- | -- | <a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/">Entrez Unix tools</a> | Biology: Genbank<br>Unix: file transfer |
 |         | Wed, Sep 22 | -- | -- | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/assets/papers/loytynoja_goldman_prank_2008_science.pdf">PRANK paper</a> | Biology: sequence alignment, methods sensitivity |
 |         | Mon, Sep 27 | -- | -- | CSB: 5.1-5.4 | Unix: regular expressions, regex match |
 |         | Wed, Sep 29 | -- | -- | CSB: 5.5-5.8 | Unix: more regex, find-replace, group capture, sed  |
