@@ -14,7 +14,7 @@
 ### Course info
 
 * Class hours: 8:30am - 12:00pm on Mon + Wed
-* Class room: Meeting online due to Covid-19
+* Class room: Life Sciences, Room 117 (Computer Lab)
 * Office hours: 2:00pm - 4:00pm on Thu
 * Office room: 210 Rebstock *with appointment*
 
