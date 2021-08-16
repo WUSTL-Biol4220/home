@@ -1,3 +1,5 @@
+## Fall 2021
+
 <img src="assets/home/biol4220_logo_trim.png" width="350"/>
 
 ### Course resources
@@ -21,3 +23,6 @@
 * Instructor: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
+
+* Graduate Student Instructor: Nathan Wamsley
+* Email: n.t.wamsely@wustl.edu
