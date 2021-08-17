@@ -18,22 +18,22 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Sep 27 | -- | -- | -- | Unix: regular expressions, regex match |
 |         | Wed, Sep 29 | -- | -- | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Mon, Oct 04 | -- | -- | -- | Biology: molecular phylogenetics |
-|         | Wed, Oct 06 | -- | -- | -- | Git: branch management, collaboration<br>**Overview course project** | 
+|         | Wed, Oct 06 | -- | -- | -- | Git: branch management, collaboration<br>**Course project: overview** | 
 |         | Mon, Oct 11 | -- | -- | -- | **Fall Break** |
 |         | Wed, Oct 13 | -- | -- | -- | **Exam 1** |
 |         | Mon, Oct 18 | -- | -- | -- | Python: introduction, variables, operators,<br>if-statements, functions |
 |         | Wed, Oct 20 | -- | -- | -- | Python: containers, loops, script arguments |
-|         | Mon, Oct 25 | -- | -- | -- | Python: strings, file handling<br>**Project approvals**  |
+|         | Mon, Oct 25 | -- | -- | -- | Python: strings, file handling<br>**Course project: approvals**  |
 |         | Wed, Oct 27 | -- | -- | -- | Python: modules, system calls, more with containers |
 |         | Mon, Nov 01 | -- | -- | -- | Biology: sequence stats |
 |         | Wed, Nov 03 | -- | -- | -- | Python: Biopython |
-|         | Mon, Nov 08 | -- | -- | -- | Biology: positive selection<br>**Project check-in**   |
+|         | Mon, Nov 08 | -- | -- | -- | Biology: positive selection<br>**Course project: check-in**   |
 |         | Wed, Nov 10 | -- | -- | -- | **Open Lab** |
 |         | Mon, Nov 15 | -- | -- | -- | Python: Matplotlib, Seaborn, Plotly |
-|         | Wed, Nov 17 | -- | -- | -- | Python: NumPy <br>**Project check-in**   |
+|         | Wed, Nov 17 | -- | -- | -- | Python: NumPy <br>**Course project: check-in**   |
 |         | Mon, Nov 22 | -- | -- | -- | Python: SciPy |
 |         | Wed, Nov 24 | -- | -- | -- | **Thanksgiving break** |
 |         | Mon, Nov 29 | -- | -- | -- | Python: Pandas  |
-|         | Wed, Dec 01 | -- | -- | -- | Open Lab  |
-|         | Mon, Dec 06 | -- | -- | -- | **Project presentations**  |
+|         | Wed, Dec 01 | -- | -- | -- | **Course project: open lab**  |
+|         | Mon, Dec 06 | -- | -- | -- | **Course project: presentations**  |
 |         | Wed, Dec 08 | -- | -- | -- | **Exam 2**  |
