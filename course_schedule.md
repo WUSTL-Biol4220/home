@@ -1,13 +1,13 @@
 
 ## Course schedule
 
-This file contains a list of all of the labs for the semester. Links to labs will be added when they become due. The :pig: marker tells us how we're progressing through the semester.
+This file contains a list of all of the labs for the semester. Links for labs will be added when they are assigned. The :dna: marker tells us how we're progressing through the semester.
 
 Reading assignments from [*Computing Skills for Biologists*](https://computingskillsforbiologists.com/) (Allesina & Wilmes) are identified by the CSB prefix followed by the pages or sections. Students are strongly encouraged to read through the exercises at the end of each CSB chapter we read, since those exercises are similar to what might appear on an Exam.
 
 |         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
-|         | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">Lecture 01A</a>   | [Lab 01A](labs/lab_01A.md) | -- | Biology: sequence data<br>Unix: shell, commands |
+|  :dna:  | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">Lecture 01A</a>   | [Lab 01A](labs/lab_01A.md) | -- | Biology: sequence data<br>Unix: shell, commands |
 |         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01B.pdf">Lecture 01B</a>   | [Lab 01B](labs/lab_01B.md) | -- | Unix: filesystem, git |
 |         | Mon, Sep 06 | -- | -- | -- | **Labor Day** |
 |         | Wed, Sep 08 | -- | -- | -- | Unix: pipes, redirects |
