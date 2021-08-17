@@ -9,7 +9,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
 |  :dna:  | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01A.pdf">Lecture 01A</a>   | [Lab 01A](labs/lab_01A.md) | -- | Biology: sequence data<br>Unix: shell, commands |
 |         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lect_01B.pdf">Lecture 01B</a>   | [Lab 01B](labs/lab_01B.md) | -- | Unix: filesystem, git |
-|         | Mon, Sep 06 | -- | -- | -- | **Labor Day** |
+|         | Mon, Sep 06 | -- | -- | -- | **No class: Labor Day** |
 |         | Wed, Sep 08 | -- | -- | -- | Unix: pipes, redirects |
 |         | Mon, Sep 13 | -- | -- | -- | Unix: text processing, file format, grep |
 |         | Wed, Sep 15 | -- | -- | -- | Biology: GenBank, BLAST | 
@@ -19,7 +19,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Sep 29 | -- | -- | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Mon, Oct 04 | -- | -- | -- | Biology: molecular phylogenetics |
 |         | Wed, Oct 06 | -- | -- | -- | Git: branch management, collaboration<br>**Course project: overview** | 
-|         | Mon, Oct 11 | -- | -- | -- | **Fall Break** |
+|         | Mon, Oct 11 | -- | -- | -- | **No class: Fall Break** |
 |         | Wed, Oct 13 | -- | -- | -- | **Exam 1** |
 |         | Mon, Oct 18 | -- | -- | -- | Python: introduction, variables, operators,<br>if-statements, functions |
 |         | Wed, Oct 20 | -- | -- | -- | Python: containers, loops, script arguments |
@@ -32,7 +32,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Nov 15 | -- | -- | -- | Python: Matplotlib, Seaborn, Plotly |
 |         | Wed, Nov 17 | -- | -- | -- | Python: NumPy <br>**Course project: check-in**   |
 |         | Mon, Nov 22 | -- | -- | -- | Python: SciPy |
-|         | Wed, Nov 24 | -- | -- | -- | **Thanksgiving break** |
+|         | Wed, Nov 24 | -- | -- | -- | **No class: Thanksgiving** |
 |         | Mon, Nov 29 | -- | -- | -- | Python: Pandas  |
 |         | Wed, Dec 01 | -- | -- | -- | **Course project: open lab**  |
 |         | Mon, Dec 06 | -- | -- | -- | **Course project: presentations**  |
