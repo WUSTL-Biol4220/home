@@ -20,9 +20,11 @@
 
 ### Contact info
 
-Instructor: Michael Landis
+Instructor
+* Name: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
 
-Graduate Student Instructor: Nathan Wamsley
+Graduate Student Instructor
+* Name: Nathan Wamsley
 * Email: n.t.wamsely@wustl.edu
