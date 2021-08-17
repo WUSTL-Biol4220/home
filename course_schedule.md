@@ -18,7 +18,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Sep 27 | -- | -- | -- | Unix: regular expressions, regex match |
 |         | Wed, Sep 29 | -- | -- | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Mon, Oct 04 | -- | -- | -- | Biology: molecular phylogenetics |
-|         | Wed, Oct 06 | -- | -- | -- | Git: branch management, collaboration<br>**Overview [course project](course_project.md)** | 
+|         | Wed, Oct 06 | -- | -- | -- | Git: branch management, collaboration<br>**Overview course project** | 
 |         | Mon, Oct 11 | -- | -- | -- | **Fall Break** |
 |         | Wed, Oct 13 | -- | -- | -- | **Exam 1** |
 |         | Mon, Oct 18 | -- | -- | -- | Python: introduction, variables, operators,<br>if-statements, functions |
