@@ -35,9 +35,9 @@ The course resources include:
 * [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
 * [Canvas](https://wustl.instructure.com/courses/54531)
 
-(Throughout the remaining tasks in Lab 1A, we'll repeatedly refer to the "How To" guide.)
+(We'll repeatedly refer to the "How To" guide for the tasks assigned in Lab 01A.)
 
-Notice that this website is hosted at the web addresss [http://github.com](http://github.com). GitHub is a website used by programmers, artists, and researchers to save and share digital projects. Biol 4220 will make heavy use of GitHub in various ways. Not only will we use it to host organizational materials for the course. We'll also use GitHub to submit our lab exercises and to develop our analysis pipeline projects.
+Notice that this website is hosted at the web addresss [http://github.com](http://github.com). GitHub is a website used by programmers, artists, and researchers to save and share digital projects. Biol 4220 will make heavy use of GitHub in various ways. Not only will we use it to host organizational materials for the course, we'll also use GitHub to submit our lab exercises and to develop our analysis pipeline projects.
 
 ---
 
