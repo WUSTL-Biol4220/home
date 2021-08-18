@@ -160,4 +160,4 @@ Expand the `Run education/autograding` step that previously failed, and enjoy so
 
 If your repository still shows a red 'x' (fails autograding test) instead of a green checkmark (passes autograding test), re-read `Run education/autograding` message and modify `output.txt` accordingly.
 
-This concludes your first lab exercise.
+That's it! This concludes your first lab exercise.
