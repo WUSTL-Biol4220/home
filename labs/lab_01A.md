@@ -94,15 +94,15 @@ Students who do not yet have a GitHub account should visit the [Create a GitHub 
 
 ## 6. Accept your first GitHub Classroom assignment
 
-Lab exercises (including this one!) will be assigned to students through the [Practical Bioinformatics (Fall 2020)](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020) website, hosted by [GitHub Classroom](https://classroom.github.com).
+Lab exercises (including this one!) will be assigned to students through the [Practical Bioinformatics (Fall 2021)](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-2021) website, hosted by [GitHub Classroom](https://classroom.github.com).
 
-Each lab exercise will include an *invitation link* at the top of the lab instructions (i.e. the `README.md` file, like this one). The invitation link for Lab 01A is https://classroom.github.com/a/p86i6vXW.
+Each lab exercise will include an *invitation link* at the top of the lab instructions (i.e. the `README.md` file, like this one). The invitation link for Lab 01A is https://classroom.github.com/a/u0jYtjrJ.
 
 By clicking that link, you will inform GitHub Classroom that you've accepted the assignment. GitHub Classroom will then prepare your lab workspace on the code-sharing website GitHub. That workspace will be a *git repository* (or *repo* for short). Future labs will explore how to use the version control software, git. For now, we can essentially view a repo as a "smart folder" that can recall the entire history for how its contents have changed.
 
 Visit the [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#accept-your-github-classroom-lab-assignment) section in the "How To" guide.
 
-Accept the Lab 01A assignment and verify that you can access the *git repository* for your lab assignment through [GitHub](https://github.com). 
+Accept the Lab 01a assignment and verify that you can access the *git repository* for your lab assignment through [GitHub](https://github.com). 
 My GitHub username is mlandis, so my Lab 01A repo was created at https://github.com/WUSTL-Biol4220/lab_01A-mlandis. After that workspace is prepared, all that's left is to complete your assignment (next section).
 
 
