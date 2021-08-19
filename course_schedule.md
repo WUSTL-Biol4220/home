@@ -12,7 +12,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Sep 06 | -- | -- | -- | **No class: Labor Day** |
 |         | Wed, Sep 08 | -- | -- | -- | Unix: git |
 |         | Mon, Sep 13 | -- | -- | -- | Unix: pipes, redirects |
-|         | Wed, Sep 15 | -- | -- | -- | Unix: text processing, grep<br>Biology: GenBank, BLAST | 
+|         | Wed, Sep 15 | -- | -- | -- | Unix: text processing<br>Biology: GenBank, BLAST | 
 |         | Mon, Sep 20 | -- | -- | -- | Unix: scripts, variables, control structures, functions  |
 |         | Wed, Sep 22 | -- | -- | -- | Biology: sequence alignment, methods sensitivity |
 |         | Mon, Sep 27 | -- | -- | -- | Unix: regular expressions, regex match |
