@@ -8,11 +8,11 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
 |  :dna:  | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01A.pdf">Lecture 01A</a>   | [Lab 01A](labs/lab_01A.md) | -- | Biology: sequence data<br>Unix: OS, shell |
-|         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01B.pdf">Lecture 01B</a>   | [Lab 01B](labs/lab_01B.md) | -- | Unix: commands, filesystem, git |
+|         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01B.pdf">Lecture 01B</a>   | [Lab 01B](labs/lab_01B.md) | -- | Unix: commands, filesystem |
 |         | Mon, Sep 06 | -- | -- | -- | **No class: Labor Day** |
-|         | Wed, Sep 08 | -- | -- | -- | Unix: pipes, redirects |
-|         | Mon, Sep 13 | -- | -- | -- | Unix: text processing, file format, grep |
-|         | Wed, Sep 15 | -- | -- | -- | Biology: GenBank, BLAST | 
+|         | Wed, Sep 08 | -- | -- | -- | Unix: git |
+|         | Mon, Sep 13 | -- | -- | -- | Unix: pipes, redirects |
+|         | Wed, Sep 15 | -- | -- | -- | Unix: text processing<br>Biology: GenBank, BLAST | 
 |         | Mon, Sep 20 | -- | -- | -- | Unix: scripts, variables, control structures, functions  |
 |         | Wed, Sep 22 | -- | -- | -- | Biology: sequence alignment, methods sensitivity |
 |         | Mon, Sep 27 | -- | -- | -- | Unix: regular expressions, regex match |
