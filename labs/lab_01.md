@@ -35,7 +35,7 @@ The course resources include:
 * [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
 * [Canvas](https://wustl.instructure.com/courses/54531)
 
-(We'll repeatedly refer to the "How To" guide for the tasks assigned in Lab 01A.)
+(We'll repeatedly refer to the "How To" guide for the tasks assigned in Lab 01.)
 
 Notice that this website is hosted at the web addresss [http://github.com](http://github.com). GitHub is a website used by programmers, artists, and researchers to save and share digital projects. Biol 4220 will make heavy use of GitHub in various ways. Not only will we use it to host organizational materials for the course, we'll also use GitHub to submit our lab exercises and to develop our analysis pipeline projects.
 
@@ -45,11 +45,11 @@ Notice that this website is hosted at the web addresss [http://github.com](http:
 
 A *virtual private network* (VPN) is an extension of a private network that can be accessed through the internet. To control access to the VPN, a network administrator can design a server, called the *VPN host*, that only allows authorized users to connect to the VPN. Authorized users identify and authenticate themselves against the VPN host using a special piece of software, called the *VPN client*. Connecting to a VPN generally requires the user to provide (1) the IP address for the VPN host, (2) the login credentials for a user who is authorized to access the VPN, and sometimes (3) two-factor authentication (or 2FA) to ensure that the user who is logging into the VPN is indeed who they claim to be -- e.g. by sending a push notification to the user's registered smartphone. These VPN client-host relationships allow private networks to control what network resources are accessible to the outside world, and to whom.
 
-For Part 2 of Lab 01A, we'll install the VPN client software on to your home computer, then verify that we can connect to the WUSTL VPN.
+For Part 2 of Lab 01, we'll install the VPN client software on to your home computer, then verify that we can connect to the WUSTL VPN.
 
 Complete the steps in the [VPN](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#virtual-private-network-vpn) section in the "How To" guide.
 
-In general, your home computer will need to be connected to the VPN to connect to your lab virtual machine (e.g. Part 3 of Lab 01A) and other WUSTL network resources. 
+In general, your home computer will need to be connected to the VPN to connect to your lab virtual machine (e.g. Part 3 of Lab 01) and other WUSTL network resources. 
 
 Now you can access approved WUSTL network resources from anywhere in the world, even your home.
 
@@ -96,23 +96,23 @@ Students who do not yet have a GitHub account should visit the [Create a GitHub 
 
 Lab exercises (including this one!) will be assigned to students through the [Practical Bioinformatics (Fall 2021)](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-2021) website, hosted by [GitHub Classroom](https://classroom.github.com).
 
-Each lab exercise will include an *invitation link* at the top of the lab instructions (i.e. the `README.md` file, like this one). The invitation link for Lab 01A is https://classroom.github.com/a/u0jYtjrJ.
+Each lab exercise will include an *invitation link* at the top of the lab instructions (i.e. the `README.md` file, like this one). The invitation link for Lab 01 is https://classroom.github.com/a/u0jYtjrJ.
 
 By clicking that link, you will inform GitHub Classroom that you've accepted the assignment. GitHub Classroom will then prepare your lab workspace on the code-sharing website GitHub. That workspace will be a *git repository* (or *repo* for short). Future labs will explore how to use the version control software, git. For now, we can essentially view a repo as a "smart folder" that can recall the entire history for how its contents have changed.
 
 Visit the [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#accept-your-github-classroom-lab-assignment) section in the "How To" guide.
 
 Accept the Lab 01a assignment and verify that you can access the *git repository* for your lab assignment through [GitHub](https://github.com). 
-My GitHub username is mlandis, so my Lab 01A repo was created at https://github.com/WUSTL-Biol4220/lab_01-mlandis. After that workspace is prepared, all that's left is to complete your assignment (next section).
+My GitHub username is mlandis, so my Lab 01 repo was created at https://github.com/WUSTL-Biol4220/lab_01-mlandis. After that workspace is prepared, all that's left is to complete your assignment (next section).
 
 
 ---
 
 ## 7. Complete your first GitHub Classroom assignment
 
-We are finally in a position to complete your first lab exercise. The task itself for Lab 01A is extremely simple. We will create a file called `output.txt` that contains the text `Hello, world!` in our lab assignment repository. Then, we will submit lab repository to GitHub Classroom for grading.
+We are finally in a position to complete your first lab exercise. The task itself for Lab 01 is extremely simple. We will create a file called `output.txt` that contains the text `Hello, world!` in our lab assignment repository. Then, we will submit lab repository to GitHub Classroom for grading.
 
-Visit your Lab 01A assignment repository.
+Visit your Lab 01 assignment repository.
 
 Click the "Add file" button, then select the 'Create new file' option
 
