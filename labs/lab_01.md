@@ -1,19 +1,19 @@
 
-# Lab 01A
+# Lab 01
 
-*Lab 01A GitHub Classroom link:* https://classroom.github.com/a/p86i6vXW
+*Lab 01 GitHub Classroom link:* https://classroom.github.com/a/p86i6vXW
 
 In this lab, we'll familiarize ourselves with various computational resources and procedures that we'll use throughout the course.
 
 This lab has seven short parts
 
-1. [Explore the course home page](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md#1-explore-the-course-home-page)
-2. [Connect to the virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md#2-connect-to-the-virtual-private-network-vpn)
-3. [Install the secure shell client (SSH)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md#3-connect-to-the-secure-shell-client-ssh)
-4. [Connect to your virtual machine (VM)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md#4-connecting-to-your-lab-computer-your-virtual-machine)
-5. [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md#5-create-a-github-account)
-6. [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md#6-accept-your-first-github-classroom-assignment)
-7. [Submit a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md#7-complete-your-first-github-classroom-assignment)
+1. [Explore the course home page](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#1-explore-the-course-home-page)
+2. [Connect to the virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#2-connect-to-the-virtual-private-network-vpn)
+3. [Install the secure shell client (SSH)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#3-connect-to-the-secure-shell-client-ssh)
+4. [Connect to your virtual machine (VM)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#4-connecting-to-your-lab-computer-your-virtual-machine)
+5. [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#5-create-a-github-account)
+6. [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#6-accept-your-first-github-classroom-assignment)
+7. [Submit a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#7-complete-your-first-github-classroom-assignment)
 
 Parts of this lab assignment may be particularly difficult for students who are new to computing. Some of the concepts and commands we're using here have not yet been introduced, and may seem unfamiliar or intimidating. This feeling is common in computing! Do the best that you can do for now, and rest assured that we'll spend more time learning about these new concepts soon enough. Please ask the instructor for help if needed.
 
@@ -21,7 +21,7 @@ Parts of this lab assignment may be particularly difficult for students who are 
 ---
 ## 1. Explore the course home page
 
-Part 1 of Lab 01A will simply be to locate a few key resources for Biol 4220.
+Part 1 of Lab 01 will simply be to locate a few key resources for Biol 4220.
 
 The main course webpage is located at: [https://github.com/WUSTL-Biol4220/home](https://github.com/WUSTL-Biol4220/home). 
 
