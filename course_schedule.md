@@ -7,33 +7,33 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 
 |         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
-|  :dna:  | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01A.pdf">Lecture 01A</a>   | [Lab 01A](labs/lab_01A.md) | -- | Biology: sequence data<br>Unix: OS, shell |
-|         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01B.pdf">Lecture 01B</a>   | [Lab 01B](labs/lab_01B.md) | -- | Unix: commands, filesystem |
+|  :dna:  | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01.pdf">Lecture 01</a>   | [Lab 01](labs/lab_01.md) | -- | Biology: sequence data<br>Unix: OS, shell |
+|         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01.pdf">Lecture 02</a>   | [Lab 02](labs/lab_02.md) | -- | Unix: commands, filesystem |
 |         | Mon, Sep 06 | -- | -- | -- | **No class: Labor Day** |
-|         | Wed, Sep 08 | Lecture 02B | Lab 02B | -- | Unix: git |
-|         | Mon, Sep 13 | Lecture 03A | Lab 03A | -- | Unix: text, pipes, redirects |
-|         | Wed, Sep 15 | Lecture 03B | Lab 03B | -- | Unix: more text<br>Biology: GenBank, BLAST | 
-|         | Mon, Sep 20 | Lecture 04A | Lab 04A | -- | Unix: scripts, variables, control structures, functions  |
-|         | Wed, Sep 22 | Lecture 04B | Lab 04B | -- | Biology: sequence alignment, methods sensitivity |
-|         | Mon, Sep 27 | Lecture 05A | Lab 05A | -- | Unix: regular expressions, regex match |
-|         | Wed, Sep 29 | Lecture 05B | Lab 05B | -- | Unix: more regex, find-replace, group capture, sed |
-|         | Mon, Oct 04 | Lecture 06A | Lab 06A | -- | Biology: molecular phylogenetics |
-|         | Wed, Oct 06 | Lecture 06B | Lab 06B | -- | Git: branch management, collaboration<br>**Course project: overview** | 
+|         | Wed, Sep 08 | Lecture 03 | Lab 03 | -- | Unix: git |
+|         | Mon, Sep 13 | Lecture 04 | Lab 04 | -- | Unix: text, pipes, redirects |
+|         | Wed, Sep 15 | Lecture 05 | Lab 05 | -- | Unix: more text<br>Biology: GenBank, BLAST | 
+|         | Mon, Sep 20 | Lecture 06 | Lab 06 | -- | Unix: scripts, variables, control structures, functions  |
+|         | Wed, Sep 22 | Lecture 07 | Lab 07 | -- | Biology: sequence alignment, methods sensitivity |
+|         | Mon, Sep 27 | Lecture 08 | Lab 08 | -- | Unix: regular expressions, regex match |
+|         | Wed, Sep 29 | Lecture 09 | Lab 09 | -- | Unix: more regex, find-replace, group capture, sed |
+|         | Mon, Oct 04 | Lecture 10 | Lab 10 | -- | Biology: molecular phylogenetics |
+|         | Wed, Oct 06 | Lecture 11 | Lab 11 | -- | Git: branch management, collaboration<br>**Course project: overview** | 
 |         | Mon, Oct 11 | -- | -- | -- | **No class: Fall Break** |
 |         | Wed, Oct 13 | -- | -- | -- | **Exam 1** |
-|         | Mon, Oct 18 | Lecture 07A | Lab 07A | -- | Python: introduction, variables, operators,<br>if-statements, functions |
-|         | Wed, Oct 20 | Lecture 07B | Lab 07B | -- | Python: containers, loops, script arguments |
-|         | Mon, Oct 25 | Lecture 08A | Lab 08A | -- | Python: strings, file handling<br>**Course project: approvals**  |
-|         | Wed, Oct 27 | Lecture 08B | Lab 08B | -- | Python: modules, system calls, more with containers |
-|         | Mon, Nov 01 | Lecture 09A | Lab 09A | -- | Biology: sequence stats |
-|         | Wed, Nov 03 | Lecture 09B | Lab 09B | -- | Python: Biopython |
-|         | Mon, Nov 08 | Lecture 10A | Lab 10A | -- | Biology: positive selection<br>**Course project: check-in**   |
+|         | Mon, Oct 18 | Lecture 12 | Lab 12 | -- | Python: introduction, variables, operators,<br>if-statements, functions |
+|         | Wed, Oct 20 | Lecture 13 | Lab 13 | -- | Python: containers, loops, script arguments |
+|         | Mon, Oct 25 | Lecture 14 | Lab 14 | -- | Python: strings, file handling<br>**Course project: approvals**  |
+|         | Wed, Oct 27 | Lecture 15 | Lab 15 | -- | Python: modules, system calls, more with containers |
+|         | Mon, Nov 01 | Lecture 16 | Lab 16 | -- | Biology: sequence stats |
+|         | Wed, Nov 03 | Lecture 17 | Lab 17 | -- | Python: Biopython |
+|         | Mon, Nov 08 | Lecture 18 | Lab 18 | -- | Biology: positive selection<br>**Course project: check-in**   |
 |         | Wed, Nov 10 | -- | -- | -- | **Course project: open Lab** |
-|         | Mon, Nov 15 | Lecture 11A | Lab 11A | -- | Python: Matplotlib, Seaborn, Plotly |
-|         | Wed, Nov 17 | Lecture 11B | Lab 11B | -- | Python: NumPy <br>**Course project: check-in**   |
-|         | Mon, Nov 22 | Lecture 12A | Lab 12A | -- | Python: SciPy |
+|         | Mon, Nov 15 | Lecture 19 | Lab 19 | -- | Python: Matplotlib, Seaborn, Plotly |
+|         | Wed, Nov 17 | Lecture 20 | Lab 20 | -- | Python: NumPy <br>**Course project: check-in**   |
+|         | Mon, Nov 22 | Lecture 21 | Lab 21 | -- | Python: SciPy |
 |         | Wed, Nov 24 | -- | -- | -- | **No class: Thanksgiving** |
-|         | Mon, Nov 29 | Lecture 13A | Lab 13A | -- | Python: Pandas  |
+|         | Mon, Nov 29 | Lecture 22 | Lab 22 | -- | Python: Pandas  |
 |         | Wed, Dec 01 | -- | -- | -- | **Course project: open lab**  |
 |         | Mon, Dec 06 | -- | -- | -- | **Course project: presentations**  |
 |         | Wed, Dec 08 | -- | -- | -- | **Exam 2**  |
