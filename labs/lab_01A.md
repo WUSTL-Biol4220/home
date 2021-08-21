@@ -5,7 +5,7 @@
 
 In this lab, we'll familiarize ourselves with various computational resources and procedures that we'll use throughout the course.
 
-This lab has seven parts
+This lab has seven short parts
 
 1. [Explore the course home page](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md#1-explore-the-course-home-page)
 2. [Connect to the virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md#2-connect-to-the-virtual-private-network-vpn)
