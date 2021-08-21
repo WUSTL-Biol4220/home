@@ -1,15 +1,15 @@
 
-# Lab 01B
+# Lab 02
 
-*Lab 01B GitHub Classroom link:* https://classroom.github.com/a/vFiNOEUv
+*Lab 02 GitHub Classroom link:* https://classroom.github.com/a/vFiNOEUv
 
 In this lab, we'll familiarize ourselves with various computational resources and procedures that we'll use throughout the course.
 
-The major tasks to complete for Lab 01B are
-1. [Commands, options, and arguments](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_01B.md#1-commands-options-and-arguments)
-2. [Working with the filesystem](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_01B.md#2-working-with-the-filesystem)
-3. [Command line tricks](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_01B.md#3-command-line-tricks)
-4. [Save your work to GitHub](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_01B.md#4-submit-your-work)
+The major tasks to complete for Lab 02 are
+1. [Commands, options, and arguments](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_02.md#1-commands-options-and-arguments)
+2. [Working with the filesystem](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_02.md#2-working-with-the-filesystem)
+3. [Command line tricks](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_02.md#3-command-line-tricks)
+4. [Save your work to GitHub](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_02.md#4-submit-your-work)
 
 If you don't remember how to perform these steps, review the materials in [Lab 01A](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md) and in the ["How To"](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md) guide.
 
@@ -73,15 +73,15 @@ to open the Nano editor. You can edit text documents in Nano simply by typing in
 This directory contains the lab assignments for Practical Bioinformatics (Biol 4220).
 ```
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01B/nano1.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_02/nano1.png" width="350"/>
 
 Once you've entered this text, press `^X` (ctrl-X) on the keyboard to Exit Nano.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01B/nano2.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_02/nano2.png" width="350"/>
 
 Before exiting, Nano will ask if you would like to `Save modified buffer?`, which refers to the text you added. Press `Y` to confirm the save.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01B/nano3.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_02/nano3.png" width="350"/>
 
 When Nano asks `File Name to Write`, press Enter to keep the default name `readme.txt`. Once saved, you will return to the command prompt.
 
@@ -153,7 +153,7 @@ mlandis@biol4220-mlandis:~$ ls
 labs
 ```
 
-This concludes Part 1 of Lab 01B.
+This concludes Part 1 of Lab 02.
 
 
 ---
@@ -162,51 +162,51 @@ This concludes Part 1 of Lab 01B.
 
 We'll learn more about manipulating filesystems here. For this part of the lecture, we will create a 
 
-Enter the `labs` directory, make a directory called `lab_01B`, and enter the directory.
+Enter the `labs` directory, make a directory called `lab_02`, and enter the directory.
 
 ```console
 mlandis@biol4220-mlandis:~$ cd labs
-mlandis@biol4220-mlandis:~/labs$ mkdir lab_01B
-mlandis@biol4220-mlandis:~/labs$ cd lab_01B
-mlandis@biol4220-mlandis:~/labs/lab_01B$ pwd
-/home/mlandis/labs/lab_01B
+mlandis@biol4220-mlandis:~/labs$ mkdir lab_02
+mlandis@biol4220-mlandis:~/labs$ cd lab_02
+mlandis@biol4220-mlandis:~/labs/lab_02$ pwd
+/home/mlandis/labs/lab_02
 ```
 
-As an aside, it is possible to run multiple commands in a single line by separating each command by the `;` character. For example, let's return to the home directory, print the working directory, then re-enter the `labs/lab_01B` directory.
+As an aside, it is possible to run multiple commands in a single line by separating each command by the `;` character. For example, let's return to the home directory, print the working directory, then re-enter the `labs/lab_02` directory.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab_01B$ cd ~;pwd;cd labs;cd lab_01B
+mlandis@biol4220-mlandis:~/labs/lab_02$ cd ~;pwd;cd labs;cd lab_02
 /home/mlandis
-mlandis@biol4220-mlandis:~/labs/lab_01B$
+mlandis@biol4220-mlandis:~/labs/lab_02$
 ```
 
 Now, let's create an empty file called `output.txt` with the `touch` command. The `touch` command will (1) update the "last accessed" and "last modified" times for a file if the targeted file exists or (2) create a new file with the name of the target file if no such file exists.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab_01B$ touch output.txt
+mlandis@biol4220-mlandis:~/labs/lab_02$ touch output.txt
 ```
 
 we can see the file
 ```console
-mlandis@biol4220-mlandis:~/labs/lab_01B$ ls
+mlandis@biol4220-mlandis:~/labs/lab_02$ ls
 output.txt
 ```
 
 but it contains no text
 ```console
-mlandis@biol4220-mlandis:~/labs/lab_01B$ cat output.txt
-mlandis@biol4220-mlandis:~/labs/lab_01B$
+mlandis@biol4220-mlandis:~/labs/lab_02$ cat output.txt
+mlandis@biol4220-mlandis:~/labs/lab_02$
 ```
 
 Let's create a second file called, `.hidden.txt`
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab_01B$ touch .hidden.txt
+mlandis@biol4220-mlandis:~/labs/lab_02$ touch .hidden.txt
 ```
 
 Now list the contents of the directory
 ```console
-mlandis@biol4220-mlandis:~/labs/lab_01B$ ls
+mlandis@biol4220-mlandis:~/labs/lab_02$ ls
 output.txt
 ```
 
@@ -214,7 +214,7 @@ Files and folders that begin with the `.` are considered *hidden* filesystem obj
 
 To display `.hidden.txt` in a `ls` call, we can provide the `-a` option to list *all contents*
 ```console
-mlandis@biol4220-mlandis:~/labs/lab_01B$ ls -a
+mlandis@biol4220-mlandis:~/labs/lab_02$ ls -a
 .  ..  .hidden.txt  output.txt
 ```
 
@@ -223,9 +223,9 @@ Now we see two items that we expected to see (`output.txt` and `.hidden.txt`) an
 For example, we can go "up" in the directory structure, into the parent directory, by using `cd ..`
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab_01B$ pwd
-/home/mlandis/labs/lab_01B
-mlandis@biol4220-mlandis:~/labs/lab_01B$ cd ..
+mlandis@biol4220-mlandis:~/labs/lab_02$ pwd
+/home/mlandis/labs/lab_02
+mlandis@biol4220-mlandis:~/labs/lab_02$ cd ..
 mlandis@biol4220-mlandis:~/labs$ cd ..
 mlandis@biol4220-mlandis:~$ pwd
 /home/mlandis
@@ -234,53 +234,53 @@ mlandis@biol4220-mlandis:~$ pwd
 When you go the "down" in the directory structure, towards child folders, you can change multiple folders at a time.
 
 ```console
-mlandis@biol4220-mlandis:~$ cd labs/lab_01B/
-mlandis@biol4220-mlandis:~/labs/lab_01B$
+mlandis@biol4220-mlandis:~$ cd labs/lab_02/
+mlandis@biol4220-mlandis:~/labs/lab_02$
 ```
 
 However, if *any* of the directories in a longer filepath do not exist, you the error message won't tell you *which* directory is missing
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab_01B$ cd ~
-mlandis@biol4220-mlandis:~$ cd yabs/yab_01B
--bash: cd: yabs/yab_01B: No such file or directory
-mlandis@biol4220-mlandis:~$ cd labs/yab_01B
--bash: cd: labs/yab_01B: No such file or directory
+mlandis@biol4220-mlandis:~/labs/lab_02$ cd ~
+mlandis@biol4220-mlandis:~$ cd yabs/yab_02
+-bash: cd: yabs/yab_02: No such file or directory
+mlandis@biol4220-mlandis:~$ cd labs/yab_02
+-bash: cd: labs/yab_02: No such file or directory
 ```
 
 Just as you can change into directories with `cd` that are far from your current directory, you can also modify, copy, and move distant files by providing the relative location of the file to your current location
 ```console
-mlandis@biol4220-mlandis:~$ cp labs/lab_01B/output.txt labs/lab_01B/output.txt.bak
-mlandis@biol4220-mlandis:~$ ls labs/lab_01B
+mlandis@biol4220-mlandis:~$ cp labs/lab_02/output.txt labs/lab_02/output.txt.bak
+mlandis@biol4220-mlandis:~$ ls labs/lab_02
 output.txt  output.txt.bak
 ```
 
-In this case, the directory `labs/lab_01B` is called the *relative filepath*, since it refers to `labs/lab_01B` directories that exist in your current working directory (`~`). The command `cp labs/lab_01B/output.txt labs/lab_01B/output.txt.bak` will generate an error if issued from within a different directory
+In this case, the directory `labs/lab_02` is called the *relative filepath*, since it refers to `labs/lab_02` directories that exist in your current working directory (`~`). The command `cp labs/lab_02/output.txt labs/lab_02/output.txt.bak` will generate an error if issued from within a different directory
 
 ```console
 mlandis@biol4220-mlandis:~$ cd labs
-mlandis@biol4220-mlandis:~/labs$ cp labs/lab_01B/output.txt labs/lab_01B/output.txt.bak
-cp: cannot stat 'labs/lab_01B/output.txt': No such file or directory
+mlandis@biol4220-mlandis:~/labs$ cp labs/lab_02/output.txt labs/lab_02/output.txt.bak
+cp: cannot stat 'labs/lab_02/output.txt': No such file or directory
 ```
 
 If you want a command to target particular file or folder, no matter where you execute the command, you must use the *absolute filepath* for the target. An absolute filepath will begin with the `/` symbol, which represents the root directory of the entire filesystem.
 
 ```console
-mlandis@biol4220-mlandis:~/labs$ rm labs/lab_01B/output.txt.bak
-rm: cannot remove 'labs/lab_01B/output.txt.bak': No such file or directory
-mlandis@biol4220-mlandis:~/labs$ rm /home/mlandis/labs/lab_01B/output.txt.bak
-mlandis@biol4220-mlandis:~/labs$ ls /home/mlandis/labs/lab_01B
+mlandis@biol4220-mlandis:~/labs$ rm labs/lab_02/output.txt.bak
+rm: cannot remove 'labs/lab_02/output.txt.bak': No such file or directory
+mlandis@biol4220-mlandis:~/labs$ rm /home/mlandis/labs/lab_02/output.txt.bak
+mlandis@biol4220-mlandis:~/labs$ ls /home/mlandis/labs/lab_02
 output.txt
 ```
 
 Where do you think you would be located if you called `cd ../..` from the directory `~/labs`?
 
-Let's return to the home directory and erase the `lab_01B` directory.
+Let's return to the home directory and erase the `lab_02` directory.
 
 ```console
 mlandis@biol4220-mlandis:~/labs$ cd ~
-mlandis@biol4220-mlandis:~$ rmdir labs/lab_01B
-rmdir: failed to remove 'labs/lab_01B': Directory not empty
+mlandis@biol4220-mlandis:~$ rmdir labs/lab_02
+rmdir: failed to remove 'labs/lab_02': Directory not empty
 ```
 
 When deleting a non-empty directory, there are two options: (1) you can manually delete the contents of the soon-to-be-deleted directory, then use the `rmdir` command against that directory, but this can be a tedious task when the target directory is full of multiple levels of other non-empty directories; or (2) you can use the more powerful and general, but dangerous, remove command (`rm`) with special options to apply `rm` recursively (`-r`) to all subdirectories. When `rm -r` encounters a non-empty subdirectory, it will ask for user confirmation to delete that directory. Users who are absolutely sure they know what they are doing will often call `rm -rf` to delete a directory and all its contents recursively and to *force* those deletions to occur without user confirmation.
@@ -288,7 +288,7 @@ When deleting a non-empty directory, there are two options: (1) you can manually
 Now, let's very carefully apply `rm -rf`
 
 ```console
-rm -rf labs/lab_01B
+rm -rf labs/lab_02
 ```
 
 You can imagine how dangerous it would be to apply `rm -rf` to the wrong folder system accidentally; that folder would be wiped from your hard drive! Here, it's important to note that Linux does not have a "recycling bin" or "trash can" like Mac OS X or Windows machines. When a file is deleted, it is generally gone for good, and can only be recovered by retrieving the file from an external backup system.
@@ -356,7 +356,7 @@ mlandis@biol4220-mlandis:~$ history
 (only the final 10 lines shown)
 
   467  ls
-  468  rm -rf lab_01B/
+  468  rm -rf lab_02/
   469  s
   470  ls
   471  cd ..
@@ -386,10 +386,10 @@ Where is the actual log for the content of `history` stored? Every time a comman
 
 ## 4. Submit your work
 
-To complete Lab 01B, you will upload an excerpt of `history` output to GitHub.
+To complete Lab 02, you will upload an excerpt of `history` output to GitHub.
 
 From the command line on your VM, call the `history` command. Through your SSH terminal on your personal computer, highlight and copy the text that was printed to the screen. Then, paste the text into a text editor, then save that text to a file called `history.txt` on your personal computer.
 
-Accept your GitHub Classroom assignment for Lab 01B using the link at the top of these instructions. Navigate to your newly created Lab 01B repo, then add and save your local copy of `history.txt` to the repo, as you did with `output.txt` in Lab 01A. Once you have saved (committed) the `history.txt` file to the Lab 01B repo, you should see a green checkmark at the top of your repo page.
+Accept your GitHub Classroom assignment for Lab 02 using the link at the top of these instructions. Navigate to your newly created Lab 02 repo, then add and save your local copy of `history.txt` to the repo, as you did with `output.txt` in Lab 01. Once you have saved (committed) the `history.txt` file to the Lab 02 repo, you should see a green checkmark at the top of your repo page.
 
 Transferring information from your virtual machine to your person computer in this way may feel "hacky" to you -- because it is! Beginning with the next lab, we'll begin to use `git` to update and share files in a far more elegant manner.
