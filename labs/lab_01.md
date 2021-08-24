@@ -8,8 +8,8 @@ In this lab, we'll familiarize ourselves with various computational resources an
 This lab has seven short parts
 
 1. [Explore the course home page](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#1-explore-the-course-home-page)
-2. [Connect to the virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#2-connect-to-the-virtual-private-network-vpn)
-3. [Install the secure shell client (SSH)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#3-connect-to-the-secure-shell-client-ssh)
+2. [Virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#2-virtual-private-network-vpn)
+3. [Secure shell client (SSH)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#3-secure-shell-client-ssh)
 4. [Connect to your virtual machine (VM)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#4-connecting-to-your-lab-computer-your-virtual-machine)
 5. [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#5-create-a-github-account)
 6. [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#6-accept-your-first-github-classroom-assignment)
@@ -41,7 +41,9 @@ Notice that this website is hosted at the web addresss [http://github.com](http:
 
 ---
 
-## 2. Connect to the virtual private network (VPN)
+## 2. Virtual private network (VPN)
+
+*(NOTE: Connecting to the VPN is only needed to access campus resources when **off-campus**. Complete this lab exercise when off-campus.)*
 
 A *virtual private network* (VPN) is an extension of a private network that can be accessed through the internet. To control access to the VPN, a network administrator can design a server, called the *VPN host*, that only allows authorized users to connect to the VPN. Authorized users identify and authenticate themselves against the VPN host using a special piece of software, called the *VPN client*. Connecting to a VPN generally requires the user to provide (1) the IP address for the VPN host, (2) the login credentials for a user who is authorized to access the VPN, and sometimes (3) two-factor authentication (or 2FA) to ensure that the user who is logging into the VPN is indeed who they claim to be -- e.g. by sending a push notification to the user's registered smartphone. These VPN client-host relationships allow private networks to control what network resources are accessible to the outside world, and to whom.
 
@@ -55,7 +57,7 @@ Now you can access approved WUSTL network resources from anywhere in the world, 
 
 ---
 
-## 3. Connect to the secure shell client (SSH)
+## 3. Secure shell client (SSH)
 
 Two computers that are on the same network can connect and communicate with one another in various ways. One mode of communication -- through the secure shell (SSH) protocol -- is remarkably simple, fast, versatile, and secure. Once you have established an SSH connection with a remote computer, you will largely be free to interact with that computer as though you were physically sitting in front of it, at the keyboard, logged in through your user account. Most bioinformatics work carried out on remote computers is facilitated by SSH.
 
@@ -103,7 +105,7 @@ By clicking that link, you will inform GitHub Classroom that you've accepted the
 Visit the [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#accept-your-github-classroom-lab-assignment) section in the "How To" guide.
 
 Accept the Lab 01a assignment and verify that you can access the *git repository* for your lab assignment through [GitHub](https://github.com). 
-My GitHub username is mlandis, so my Lab 01 repo was created at https://github.com/WUSTL-Biol4220/lab_01-mlandis. After that workspace is prepared, all that's left is to complete your assignment (next section).
+My GitHub username is mlandis, so my Lab 01 repo was created at https://github.com/WUSTL-Biol4220/lab-01-mlandis. After that workspace is prepared, all that's left is to complete your assignment (next section).
 
 
 ---
