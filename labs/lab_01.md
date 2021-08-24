@@ -1,7 +1,7 @@
 
 # Lab 01
 
-*Lab 01 GitHub Classroom link:* https://classroom.github.com/a/p86i6vXW
+*Lab 01 GitHub Classroom link:* https://classroom.github.com/a/u0jYtjrJ
 
 In this lab, we'll familiarize ourselves with various computational resources and procedures that we'll use throughout the course.
 
