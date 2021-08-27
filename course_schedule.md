@@ -13,7 +13,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Sep 08 | Lecture 03 | Lab 03 | -- | Unix: git |
 |         | Mon, Sep 13 | Lecture 04 | Lab 04 | -- | Unix: text, pipes, redirects |
 |         | Wed, Sep 15 | Lecture 05 | Lab 05 | -- | Unix: more text<br>Biology: GenBank | 
-|         | Mon, Sep 20 | Lecture 06 | Lab 06 | -- | Unix: scripts, variables, control structures, functions  |
+|         | Mon, Sep 20 | Lecture 06 | Lab 06 | -- | Unix: shell scripts  |
 |         | Wed, Sep 22 | Lecture 07 | Lab 07 | -- | Biology: sequence alignment, methods sensitivity |
 |         | Mon, Sep 27 | Lecture 08 | Lab 08 | -- | Unix: regular expressions, regex match |
 |         | Wed, Sep 29 | Lecture 09 | Lab 09 | -- | Unix: more regex, find-replace, group capture, sed |
