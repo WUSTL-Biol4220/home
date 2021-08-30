@@ -13,7 +13,7 @@ For this lab, you will be the only contributor to your repo. In a future lab, we
 
 ---
 
-## 1. Clone your "Lab 01" repo to your VM
+## 1. Clone your Lab 01 repo to your VM
 
 Enter your Lab 01 repo hosted at https://github.com/WUSTL-Biol4220. For example, the repo for Lab 01 for my user account (`mlandis`) is located at https://github.com/WUSTL-Biol4220/lab-01-mlandis.
 
