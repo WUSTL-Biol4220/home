@@ -4,7 +4,7 @@
 
 In this lab, we'll learn the basics for using the version control software, `git`, and how to use `git` with [GitHub](https://github.com). Using `git` to manage your code or other projects becomes natural with practice, but it can feel complicated or overwhelming when you first begin to use the tool. If you are nervous about how to use a certain command, you can always create a "test example" like what we'll use below to understand how the commands work in a safe environment. The other good news is that, generally, `git` itself does not forget the versioned history of files its watching; that means that even if you do make a mistake, it's almost certain that you can recover from a previously saved version. That's the beauty of version control.
 
-The major tasks to complete for Lab 02A are
+The major tasks to complete for Lab 03 are
 1. Exploring `git` basics
 2. Working within a single branch
 3. Working with multiple branches
