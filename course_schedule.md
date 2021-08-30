@@ -7,7 +7,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 
 |         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
-|  :dna:  | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01.pdf">Lecture 01</a>   | [Lab 01](labs/lab_01.md) | -- | Biology: sequence data<br>Orientation |
+|  :dna:  | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01.pdf">Lecture 01</a>   | [Lab 01](labs/lab_01.md) | -- | Unix: orientation |
 |         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01.pdf">Lecture 02</a>   | [Lab 02](labs/lab_02.md) | -- | Unix: commands, filesystem |
 |         | Mon, Sep 06 | -- | -- | -- | **No class: Labor Day** |
 |         | Wed, Sep 08 | Lecture 03 | Lab 03 | -- | Unix: git |
