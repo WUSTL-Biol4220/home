@@ -21,9 +21,9 @@ Enter your Lab 01 repo hosted at https://github.com/WUSTL-Biol4220. For example,
 
 Click on the green "Code" button, which will present you with various options for how to acquire the code. One of the bottom two options is to open the repo in the GitHub Desktop repo management application (which we won't use in this course). Another option is to download the entire repo as a `.zip` file. What we'll do is clone (or copy) the repository to our VM using the `git clone` command.
 
-We will clone using the HTTPS link, which needs no special configuration but does require you to enter your username and password to interact with GitHub. Your dropdown menu should read "Clone with HTTPS"; if it does not, click the blue "Use HTTPS" link. Copy the HTTPS link to your clipboard. For example, my HTTPS link is `https://github.com/WUSTL-Biol4220/lab-01a-mlandis.git`.
+We will clone using the HTTPS link, which needs no special configuration but does require you to enter your username and password to interact with GitHub. Your dropdown menu should read "Clone with HTTPS"; if it does not, click the blue "Use HTTPS" link. Copy the HTTPS link to your clipboard. For example, my HTTPS link is `https://github.com/WUSTL-Biol4220/lab-01-mlandis.git`.
 
-Log into your VM and change directories to `~/labs`; we'll store all course lab work in this directory from now own. From here, we'll instruct `git` to `clone` (copy) the repository hosted at `https://github.com/WUSTL-Biol4220/lab-01a-mlandis.git`.
+Log into your VM and change directories to `~/labs`; we'll store all course lab work in this directory from now own. From here, we'll instruct `git` to `clone` (copy) the repository hosted at `https://github.com/WUSTL-Biol4220/lab-01-mlandis.git`.
 
 ```console
 mlandis@biol4220-mlandis:~/labs$ git clone https://github.com/WUSTL-Biol4220/lab-01-mlandis.git
