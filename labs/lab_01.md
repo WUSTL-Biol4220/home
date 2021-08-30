@@ -7,13 +7,13 @@ In this lab, we'll familiarize ourselves with various computational resources an
 
 This lab has seven short parts
 
-1. [Explore the course home page](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#1-explore-the-course-home-page)
-2. [Virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#2-virtual-private-network-vpn)
-3. [Secure shell client (SSH)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#3-secure-shell-client-ssh)
-4. [Connect to your virtual machine (VM)](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#4-connecting-to-your-lab-computer-your-virtual-machine)
-5. [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#5-create-a-github-account)
-6. [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#6-accept-your-first-github-classroom-assignment)
-7. [Submit a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01.md#7-complete-your-first-github-classroom-assignment)
+1. [Explore the course home page](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#1-explore-the-course-home-page)
+2. [Virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#2-virtual-private-network-vpn)
+3. [Secure shell client (SSH)](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#3-secure-shell-client-ssh)
+4. [Connect to your virtual machine (VM)](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#4-connecting-to-your-lab-computer-your-virtual-machine)
+5. [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#5-create-a-github-account)
+6. [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#6-accept-your-first-github-classroom-assignment)
+7. [Submit a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#7-complete-your-first-github-classroom-assignment)
 
 Parts of this lab assignment may be particularly difficult for students who are new to computing. Some of the concepts and commands we're using here have not yet been introduced, and may seem unfamiliar or intimidating. This feeling is common in computing! Do the best that you can do for now, and rest assured that we'll spend more time learning about these new concepts soon enough. Please ask the instructor for help if needed.
 
@@ -29,9 +29,9 @@ All of the course materials are centralized in this page, including the Zoom mee
 
 The course resources include:
 * [Syllabus](https://docs.google.com/document/d/1TYE10600VUhCyq51_h_9flVUhkCF-IQCE9SnQKRGRGo/edit?usp=sharing)
-* [Lecture & Lab schedule](https://github.com/WUSTL-Biol4220/home/blob/master/course_schedule.md)
-* ["How To" guide](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md)
-* [Course Project](https://github.com/WUSTL-Biol4220/home/blob/master/course_project.md)
+* [Lecture & Lab schedule](https://github.com/WUSTL-Biol4220/home/blob/main/course_schedule.md)
+* ["How To" guide](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md)
+* [Course Project](https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md)
 * [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
 * [Canvas](https://wustl.instructure.com/courses/54531)
 
@@ -49,7 +49,7 @@ A *virtual private network* (VPN) is an extension of a private network that can 
 
 For Part 2 of Lab 01, we'll install the VPN client software on to your home computer, then verify that we can connect to the WUSTL VPN.
 
-Complete the steps in the [VPN](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#virtual-private-network-vpn) section in the "How To" guide.
+Complete the steps in the [VPN](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#virtual-private-network-vpn) section in the "How To" guide.
 
 In general, your home computer will need to be connected to the VPN to connect to your lab virtual machine (e.g. Part 3 of Lab 01) and other WUSTL network resources. 
 
@@ -63,7 +63,7 @@ Two computers that are on the same network can connect and communicate with one 
 
 The easiest way to connect to a remote computer through the SSH protocol is to install an SSH client.
 
-Complete the steps in the [SSH](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh) section in the "How To" guide.
+Complete the steps in the [SSH](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#secure-shell-ssh) section in the "How To" guide.
 
 Now your home computer has a way to remotely interact with other computers on the network.
 
@@ -75,7 +75,7 @@ In Biol 4220, each student will have access to their own personal computer, loca
 
 One thing to know is that these lab computers are not *physical computers*, but *virtual machines* or (VMs). As the name suggests, a VM is a computer hardware system that is emulated using software. This emulation is called *virtualization*. VMs are typically hosted by a VM server that specializes in virtualization, and is responsible for managing shared *physical* hardware resources -- such as processor time, memory, disk storage -- across the VMs that it is hosting, as well as backing up VMs, rebooting VMs, copying VMs, etc. Virtualization is an extremely useful technology, because it allows you to safely control and replicate your software environment, making certain software configurations extremely portable across diverse computing infrastructures. (For wet lab folks, imagine if you could "clone" your bench setup and mail it to a collaborating lab!)
 
-Complete the steps in the [VM section](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#lab-virtual-machines-vm) in the "How To" guide.
+Complete the steps in the [VM section](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#lab-virtual-machines-vm) in the "How To" guide.
 
 Now you know how to connect to your VM.
 
@@ -90,7 +90,7 @@ It was mentioned earlier that this course will use the [GitHub](https://github.c
 
 If you already have a GitHub account, make sure you know your account name and password.
 
-Students who do not yet have a GitHub account should visit the [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#create-a-github-account) section in the "How To" guide.
+Students who do not yet have a GitHub account should visit the [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-account) section in the "How To" guide.
 
 ---
 
@@ -102,7 +102,7 @@ Each lab exercise will include an *invitation link* at the top of the lab instru
 
 By clicking that link, you will inform GitHub Classroom that you've accepted the assignment. GitHub Classroom will then prepare your lab workspace on the code-sharing website GitHub. That workspace will be a *git repository* (or *repo* for short). Future labs will explore how to use the version control software, git. For now, we can essentially view a repo as a "smart folder" that can recall the entire history for how its contents have changed.
 
-Visit the [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#accept-your-github-classroom-lab-assignment) section in the "How To" guide.
+Visit the [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#accept-your-github-classroom-lab-assignment) section in the "How To" guide.
 
 Accept the Lab 01 assignment and verify that you can access the *git repository* for your lab assignment through [GitHub](https://github.com). 
 My GitHub username is mlandis, so my Lab 01 repo was created at https://github.com/WUSTL-Biol4220/lab-01-mlandis. After that workspace is prepared, all that's left is to complete your assignment (next section).
@@ -118,47 +118,47 @@ Visit your Lab 01 assignment repository.
 
 Click the 'Add file' button, then select the 'Create new file' option
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_create_file.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_create_file.png" width="350"/>
 
 Name the file `output.txt` by entering that name about the 'Edit file' panel. In the 'Edit file' panel, enter any text so long as it is not `Hello, world!`
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_wrong_text.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_wrong_text.png" width="350"/>
 
 Scroll to the bottom of the window, enter a message, and click 'Commit change'
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_wrong_commit.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_wrong_commit.png" width="350"/>
 
 Allow the autograding software ~30 seconds to run, then return to your lab repository page on GitHub. Click on the red 'X', which will expand the error flag and display a 'Details' link. Click 'Details'.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_error_flag.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_error_flag.png" width="350"/>
 
 Expand the failed step with the red 'X' (`Run education/autograding`) to see why the job failed. What was the expected output and what was the actual output?
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_error_msg.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_error_msg.png" width="350"/>
 
 Return to the main page for your copy of the Lab 01 repository, then click on the `output.txt` file.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_edit_file.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_edit_file.png" width="350"/>
 
 Click on the button with the pen logo on the righthand side of the page to 'Edit this file'.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_edit_file_2.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_edit_file_2.png" width="350"/>
 
 Replace the current text for the file with text that matches the expected output.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_correct_text.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_correct_text.png" width="350"/>
 
 Scroll down, write a message to explain your edits, then click 'Commit changes' to save your work.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_correct_commit.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_correct_commit.png" width="350"/>
 
 When you visit your Lab 01 assignment repository on GitHub, you should see a green checkmark towards the top of the screen.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_success_flag.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_success_flag.png" width="350"/>
 
 Expand the `Run education/autograding` step that previously failed, and enjoy some fancy emoji art
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_01/git_class_success_msg.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_success_msg.png" width="350"/>
 
 If your repository still shows a red 'x' (fails autograding test) instead of a green checkmark (passes autograding test), re-read `Run education/autograding` message and modify `output.txt` accordingly.
 

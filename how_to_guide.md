@@ -1,13 +1,13 @@
 # "How To" guide
 
 This document serves as a quick reference for "how to" do basic tasks:
-- [Virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#virtual-private-network-vpn)
-- [Secure shell (SSH)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh)
-- [Lab virtual machines (VM)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#lab-virtual-machines-vm)
-- [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#create-a-github-account)
-- [Create a GitHub personal authentication token (PAT)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#create-a-github-personal-authentication-token-pat)
-- [Accept your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#accept-your-github-classroom-lab-assignment)
-- [Submit your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#complete-your-github-classroom-lab-assignment)
+- [Virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#virtual-private-network-vpn)
+- [Secure shell (SSH)](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#secure-shell-ssh)
+- [Lab virtual machines (VM)](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#lab-virtual-machines-vm)
+- [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-account)
+- [Create a GitHub personal authentication token (PAT)](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-personal-authentication-token-pat)
+- [Accept your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#accept-your-github-classroom-lab-assignment)
+- [Submit your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#complete-your-github-classroom-lab-assignment)
 
 Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in the [course lecture & lab notes](course_schedule.md).
 
@@ -51,9 +51,9 @@ After initiating an SSH connection with a remote host, the users typically needs
 
 Our class will use virtual machines (or VMs) to complete laboratory exercises. Every student will be given their own personal VM to use. Each VM is preinstalled with Ubuntu (20.04.1 LTS, aka "Focal Fossa") along with the software packages that are necessary to complete the course's lab assignments. For security purposes, your VM is only accessible through the WUSTL private network.
 
-Students who are off-campus will need to first connect to the [VPN](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#virtual-private-network-vpn) before they can connect to their VM.
+Students who are off-campus will need to first connect to the [VPN](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#virtual-private-network-vpn) before they can connect to their VM.
  
-Students that are on-campus or connected through the VPN can access their VM is through [SSH](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh).
+Students that are on-campus or connected through the VPN can access their VM is through [SSH](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#secure-shell-ssh).
 
 To log in to your VM, you'll need to supply three key pieces of information:
 1. `ip_address` -- the unique IP address assigned to your VM

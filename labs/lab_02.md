@@ -6,12 +6,12 @@
 In this lab, we'll familiarize ourselves with various computational resources and procedures that we'll use throughout the course.
 
 The major tasks to complete for Lab 02 are
-1. [Commands, options, and arguments](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_02.md#1-commands-options-and-arguments)
-2. [Working with the filesystem](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_02.md#2-working-with-the-filesystem)
-3. [Command line tricks](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_02.md#3-command-line-tricks)
-4. [Save your work to GitHub](https://github.com/WUSTL-Biol4220/home_staging/blob/master/labs/lab_02.md#4-submit-your-work)
+1. [Commands, options, and arguments](https://github.com/WUSTL-Biol4220/home_staging/blob/main/labs/lab_02.md#1-commands-options-and-arguments)
+2. [Working with the filesystem](https://github.com/WUSTL-Biol4220/home_staging/blob/main/labs/lab_02.md#2-working-with-the-filesystem)
+3. [Command line tricks](https://github.com/WUSTL-Biol4220/home_staging/blob/main/labs/lab_02.md#3-command-line-tricks)
+4. [Save your work to GitHub](https://github.com/WUSTL-Biol4220/home_staging/blob/main/labs/lab_02.md#4-submit-your-work)
 
-If you don't remember how to perform these steps, review the materials in [Lab 01A](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_01A.md) and in the ["How To"](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md) guide.
+If you don't remember how to perform these steps, review the materials in [Lab 01A](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01A.md) and in the ["How To"](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md) guide.
 
 
 ---
@@ -73,15 +73,15 @@ to open the Nano editor. You can edit text documents in Nano simply by typing in
 This directory contains the lab assignments for Practical Bioinformatics (Biol 4220).
 ```
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_02/nano1.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_02/nano1.png" width="350"/>
 
 Once you've entered this text, press `^X` (ctrl-X) on the keyboard to Exit Nano.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_02/nano2.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_02/nano2.png" width="350"/>
 
 Before exiting, Nano will ask if you would like to `Save modified buffer?`, which refers to the text you added. Press `Y` to confirm the save.
 
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_02/nano3.png" width="350"/>
+<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_02/nano3.png" width="350"/>
 
 When Nano asks `File Name to Write`, press Enter to keep the default name `readme.txt`. Once saved, you will return to the command prompt.
 
