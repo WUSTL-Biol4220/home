@@ -1,10 +1,10 @@
-# Lab 02B
+# Lab 04
 
-*Lab 02B GitHub Classroom link:* https://classroom.github.com/a/ZabQYLlG
+*Lab 04 GitHub Classroom link:* https://classroom.github.com/a/x54OORBu
 
 This lab will explore how to generate and manipulate character strings in various ways. The lab will also explore how to use the pipe (`|`) and redirect (`>`) commands to link together independent programs.
 
-The major tasks to complete for Lab 02B are
+The major tasks to complete for Lab 04 are
 1. Character strings
 2. Wildcards
 3. More Unix commands
