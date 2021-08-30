@@ -15,8 +15,7 @@
 
 * Class hours: 8:30am - 12:00pm on Mon + Wed
 * Class room: Life Sciences, Room 117 (Computer Lab)
-* Office hours: 2:00pm - 4:00pm on Thu
-* Office room: 210 Rebstock *with appointment*
+
 
 ### Contact info
 
@@ -24,7 +23,11 @@ Instructor
 * Name: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
+* Office hours: 2:00pm - 3:00pm on Thu
+* Office room: 210 Rebstock *with appointment*
 
 Graduate Student Instructor
 * Name: Nathan Wamsley
 * Email: n.t.wamsely@wustl.edu
+* Office hours: TBD
+* Office room: TBD
