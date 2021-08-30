@@ -4,7 +4,6 @@ This document serves as a quick reference for "how to" do basic tasks:
 - [Virtual private network (VPN)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#virtual-private-network-vpn)
 - [Secure shell (SSH)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh)
 - [Lab virtual machines (VM)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#lab-virtual-machines-vm)
-<!-- - [Connect to the WUSTL cluster](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#connect-to-the-wustl-cluster) -->
 - [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#create-a-github-account)
 - [Accept your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#accept-your-github-classroom-lab-assignment)
 - [Submit your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#complete-your-github-classroom-lab-assignment)
@@ -111,23 +110,6 @@ Connection to 128.252.111.111 closed.
 If you can't establish an SSH connection with your VM, please contact the instructor for help.
 
 Lab VMs are preinstalled with all of the software needed to complete the lab exercises. For various reasons, you will not have full admin access over your Lab VMs. If you need additional software installed, or if you find your Lab VM is no longer in a fully operational state, please let the instructor know so we can either fix your issue or provide you with a new VM.
-
-<!--
----
-
-## Connect to the WUSTL cluster
-
-*Note, this step is an incomplete placeholder for the full instructions.*
-
-Many bioinformatics analyses are designed to be run using teams of computational servers, called clusters. Research Infrastructure Services, or [RIS](ris.wustl.edu), provides WUSTL with access to clusters and other high performance computing (HPC) services. We'll use the RIS HPC to learn more about processing bioinformatics tasks with clusters as part of our lecture and lab exercises.
-
-To use RIS HPC, you will need to
-1. Create a RIS HPC account
-2. SSH to RIS HPC
-3. Submit and process jobs
-
-Details for how run analyses with RIS HPC are covered in [Lab X]().
--->
 
 ---
 
