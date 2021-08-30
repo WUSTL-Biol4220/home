@@ -1,8 +1,8 @@
-# Lab 02A
+# Lab 03
 
-*Lab 02A GitHub Classroom link:* https://classroom.github.com/a/4ZJF3Kfx
+*Lab 03 GitHub Classroom link:* https://classroom.github.com/a/5pGJRF0e
 
-In this lab, we'll learn the basics of the version control software, `git`, and how to use `git` with [GitHub](https://github.com). Using `git` to manage your code or other projects becomes natural with practice. However, it can feel complicated at times. If you feel nervous about a certain command, you can always create a "test example" like what we'll use below to understand how the commands work in a safe environment. The other good news is that, generally, `git` itself does not forget the versioned history of files its watching; that means that even if you do make a mistake, its almost certain that you can recover from a previously saved version. That's the beauty of version control.
+In this lab, we'll learn the basics for using the version control software, `git`, and how to use `git` with [GitHub](https://github.com). Using `git` to manage your code or other projects becomes natural with practice, but it can feel complicated or overwhelming when you first begin to use the tool. If you are nervous about how to use a certain command, you can always create a "test example" like what we'll use below to understand how the commands work in a safe environment. The other good news is that, generally, `git` itself does not forget the versioned history of files its watching; that means that even if you do make a mistake, it's almost certain that you can recover from a previously saved version. That's the beauty of version control.
 
 The major tasks to complete for Lab 02A are
 1. Exploring `git` basics
@@ -13,9 +13,9 @@ For this lab, you will be the only contributor to your repo. In a future lab, we
 
 ---
 
-## 1. Clone your "Lab 01A" repo to your VM
+## 1. Clone your "Lab 01" repo to your VM
 
-Enter your Lab 01A repo hosted at https://github.com/WUSTL-Biol4220. For example, the repo for Lab 01A for my user account (`mlandis`) is located at https://github.com/WUSTL-Biol4220/lab-01a-mlandis.
+Enter your Lab 01 repo hosted at https://github.com/WUSTL-Biol4220. For example, the repo for Lab 01 for my user account (`mlandis`) is located at https://github.com/WUSTL-Biol4220/lab-01-mlandis.
 
 <img src="https://github.com/WUSTL-Biol4220/home/raw/master/assets/lab_02A/clone_01a.png" width="350"/>
 
@@ -26,8 +26,8 @@ We will clone using the HTTPS link, which needs no special configuration but doe
 Log into your VM and change directories to `~/labs`; we'll store all course lab work in this directory from now own. From here, we'll instruct `git` to `clone` (copy) the repository hosted at `https://github.com/WUSTL-Biol4220/lab-01a-mlandis.git`.
 
 ```console
-mlandis@biol4220-mlandis:~/labs$ git clone https://github.com/WUSTL-Biol4220/lab-01a-mlandis.git
-Cloning into 'lab-01a-mlandis'...
+mlandis@biol4220-mlandis:~/labs$ git clone https://github.com/WUSTL-Biol4220/lab-01-mlandis.git
+Cloning into 'lab-01-mlandis'...
 Username for 'https://github.com': mlandis
 Password for 'https://mlandis@github.com':
 remote: Enumerating objects: 15, done.
@@ -37,20 +37,20 @@ remote: Total 15 (delta 2), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (15/15), 1.71 KiB | 28.00 KiB/s, done.
 ```
 
-And we see that all files and folders from Lab 01A on GitHub are now in our VM filesystem!
+And we see that all files and folders from Lab 01 on GitHub are now in our VM filesystem!
 ```console
 mlandis@biol4220-mlandis:~/labs$ ls
-lab-01a-mlandis
-mlandis@biol4220-mlandis:~/labs$ ls lab-01a-mlandis/
+lab-01-mlandis
+mlandis@biol4220-mlandis:~/labs$ ls lab-01-mlandis/
 output.txt
-mlandis@biol4220-mlandis:~/labs$ cat lab-01a-mlandis/output.txt
+mlandis@biol4220-mlandis:~/labs$ cat lab-01-mlandis/output.txt
 Hello, world!
 ```
 
 Call `git status` to learn whether any files in your local repo contain changes that are absent in GitHub's copy of the repo
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-01a-mlandis$ git status
+mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -62,18 +62,18 @@ The command tells us which local branch we're using (`master`) and that our loca
 Let's add a new file to our repository
 
 ```console
-mlandis@biol4220-mlandis:~/labs$ cd lab-01a-mlandis/
-mlandis@biol4220-mlandis:~/labs/lab-01a-mlandis$ nano more_output.txt
+mlandis@biol4220-mlandis:~/labs$ cd lab-01-mlandis/
+mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ nano more_output.txt
 
   ... add some text, then save and exit with ^X
   
-mlandis@biol4220-mlandis:~/labs/lab-01a-mlandis$ cat more_output.txt
+mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ cat more_output.txt
 Hey, world, what's going on with you?
 ```
 
 Call the `git status` command to learn whether any files in your local repo contain changes that are absent in GitHub's copy of the repo
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-01a-mlandis$ git status
+mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -87,8 +87,8 @@ nothing added to commit but untracked files present (use "git add" to track)
 Notice that the status continues to report that our local branch is in sync with GitHub's branch, but status notes a new *untracked file* has been added to the directory structure monitored by `git`. We'll use the `git add` command to track changes to `more_output.txt`, and alert us if the file is out-of-sync.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-01a-mlandis$ git add more_output.txt
-mlandis@biol4220-mlandis:~/labs/lab-01a-mlandis$ git status
+mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git add more_output.txt
+mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -115,7 +115,7 @@ Now, to commit our changes, we'll use the `git commit` with the `-m` flag to pas
 
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-01a-mlandis$ git commit -m 'checking in with Planet Earth'
+mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git commit -m 'checking in with Planet Earth'
 [master 517d999] checking in with Planet Earth
  1 file changed, 1 insertion(+)
  create mode 100644 more_output.txt
@@ -126,7 +126,7 @@ Our successful commit returns several useful pieces of information, in particula
 Now, let's check the status of our repo
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-01a-mlandis$ git status
+mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git status
 On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
@@ -137,7 +137,7 @@ nothing to commit, working tree clean
 Our local branch is one commit ahead of GitHub's copy. This should seem correct to you, since all of our changes so far have been local, and still need to be communicated to the remote repo hosted by GitHub! To send *all local commits* to GitHub, we will use the `git push` command
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-01a-mlandis$ git push
+mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git push
 Username for 'https://github.com': mlandis
 Password for 'https://mlandis@github.com':
 Enumerating objects: 4, done.
@@ -146,35 +146,35 @@ Delta compression using up to 2 threads
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 366 bytes | 366.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/WUSTL-Biol4220/lab-01a-mlandis.git
+To https://github.com/WUSTL-Biol4220/lab-01-mlandis.git
    f67bd00..517d999  master -> master
 ```
 
 And we now see that the local and remote repos are once again in-sync.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-01a-mlandis$ git status
+mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
 ```
 
-Now, return to your the GitHub web page that hosts your copy of the Lab 01A repo. Again, for reference, mine is https://github.com/WUSTL-Biol4220/lab-01a-mlandis. You should now see your `more_output.txt` file listed in the repo contents.
+Now, return to your the GitHub web page that hosts your copy of the Lab 01 repo. Again, for reference, mine is https://github.com/WUSTL-Biol4220/lab-01-mlandis. You should now see your `more_output.txt` file listed in the repo contents.
 
 Congratulations! You've just cloned a local copy of a remote repo, added a file to it, committed the changes, then pushed your changes back to the remote repo. This covers 99% of daily `git` usage. The remaining labs will exercise more difficult situations in repo management.
 
 ---
 
-## 2. Configure Lab 01B directory as a GitHub repo
+## 2. Configure Lab 03 directory as a GitHub repo
 
 In this lab, we'll learn more about how to move between different commits within a single repo branch.
 
-Similar to what you did in Part 1 of this lab, we will clone your Lab 02A assignment repo from GitHub to the `~/labs` directory on your VM. The process of cloning a repo to your workstation will become familiar over time, but revisit the Part 1 instructions if you don't remember the exact procedure. The general procedure is to: navigate to the Lab 02A assignment on GitHub, click Code, select HTTPS, then copy the link to your clipboard (e.g. `https://github.com/WUSTL-Biol4220/lab-02a-mlandis.git`). Then, enter `~/labs` and call `git clone` while using the copied link as the argument.
+Similar to what you did in Part 1 of this lab, we will clone your Lab 03 assignment repo from GitHub to the `~/labs` directory on your VM. The process of cloning a repo to your workstation will become familiar over time, but revisit the Part 1 instructions if you don't remember the exact procedure. The general procedure is to: navigate to the Lab 03 assignment on GitHub, click Code, select HTTPS, then copy the link to your clipboard (e.g. `https://github.com/WUSTL-Biol4220/lab-03-mlandis.git`). Then, enter `~/labs` and call `git clone` while using the copied link as the argument.
 
 ```console
-mlandis@biol4220-mlandis:~/labs$ git clone https://github.com/WUSTL-Biol4220/lab-02a-mlandis.git
-Cloning into 'lab-02a-mlandis'...
+mlandis@biol4220-mlandis:~/labs$ git clone https://github.com/WUSTL-Biol4220/lab-03-mlandis.git
+Cloning into 'lab-03-mlandis'...
 Username for 'https://github.com': mlandis
 Password for 'https://mlandis@github.com':
 remote: Enumerating objects: 13, done.
@@ -182,9 +182,9 @@ remote: Counting objects: 100% (13/13), done.
 remote: Compressing objects: 100% (6/6), done.
 remote: Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (13/13), 988 bytes | 98.00 KiB/s, done.
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ ls
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ ls
 data  README.md
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ cat README.md
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ cat README.md
 This repo contains nucleotide sequences for the species in two closely related genera in Felidae, *Panthera* and *Neofelis*:
 ``
 data/panthera/leo.fasta
@@ -200,7 +200,7 @@ data/neofelis/diardi.fasta
 Let's begin by reviewing our *commit history* using `git log`
 
 ```
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git log
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git log
 commit 5c48daca1e1cc668a041602637811586591933ed (HEAD -> master, origin/master, origin/HEAD)
 Author: Michael Landis <mlandis@gmail.com>
 Date:   Fri Sep 11 11:25:22 2020 -0500
@@ -212,8 +212,8 @@ In my case, the commit id for my first commit begins with `5c48dac`. Let's modif
 
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ mv data/panthera/leo.fasta data/neofelis/
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git status
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ mv data/panthera/leo.fasta data/neofelis/
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -232,8 +232,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 We need to inform `git` to add any new files within `data` subdirectories, then commit any relevant changes
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git add data
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git commit -m 'move lion to clouded leopard genus'
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git add data
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git commit -m 'move lion to clouded leopard genus'
 [master b96cfb5] move lion to clouded leopard genus
  1 file changed, 0 insertions(+), 0 deletions(-)
  rename data/{panthera => neofelis}/leo.fasta (100%)
@@ -245,7 +245,7 @@ Now, move `data/panthera/tigris.fasta` into `data/neofelis`, and commit that cha
 We now see these two commits as the most recent entries in `git log`
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git log
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git log
 commit 10ee6fb7a13af2e5854b0e203a17e88958375a7f (HEAD -> master)
 Author: Michael Landis <michael.landis@wustl.edu>
 Date:   Fri Sep 11 12:06:26 2020 -0500
@@ -268,7 +268,7 @@ Date:   Fri Sep 11 11:25:22 2020 -0500
 If we want to remember what commit `b96cfb5`, we can always read the associated message ("move lion to clouded leopard genus"). But what exactly changed in the filesystem? For this, we can use the command `git diff` to identify *differences* in the filesystem between the two commits.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git diff b96cfb5 5c48dac
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git diff b96cfb5 5c48dac
 diff --git a/data/neofelis/leo.fasta b/data/panthera/leo.fasta
 similarity index 100%
 rename from data/neofelis/leo.fasta
@@ -278,7 +278,7 @@ rename to data/panthera/leo.fasta
 Suppose we discover this change was in error. We can use `git revert` to *revert* any changes applied in a particular commit. 
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git revert b96cfb5
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git revert b96cfb5
 
    ... provide a 
 
@@ -290,7 +290,7 @@ mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git revert b96cfb5
 A reversion is itself a commit that is added to the repo history.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git log -n1
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git log -n1
 commit 8ec9fc0e2935214238013f1b12f54bbfbd328818 (HEAD -> master)
 Author: Michael Landis <michael.landis@wustl.edu>
 Date:   Fri Sep 11 12:14:34 2020 -0500
@@ -300,9 +300,9 @@ Date:   Fri Sep 11 12:14:34 2020 -0500
     This reverts commit b96cfb5bacf3e1c6de1bc546a60d2dfa4b769bc8.
 ```
 
-Revert the other commit, which placed `tigris.fasta` in `data/neofelis`, then commit the reversion. After this, verify that `leo.fasta` and `tigris.fasta` are in `data/panthera` and not in `data/neofelis`. By calling `git status`, it will report that your repo is out-of-sync with GitHub: "`Your branch is ahead of 'origin/master' by 4 commits.`"). Use `git push` to synchronize your local repo with GitHub. Refer to the first part of Lab 02A if you are unsure of how to do this.
+Revert the other commit, which placed `tigris.fasta` in `data/neofelis`, then commit the reversion. After this, verify that `leo.fasta` and `tigris.fasta` are in `data/panthera` and not in `data/neofelis`. By calling `git status`, it will report that your repo is out-of-sync with GitHub: "`Your branch is ahead of 'origin/master' by 4 commits.`"). Use `git push` to synchronize your local repo with GitHub. Refer to the first part of Lab 03 if you are unsure of how to do this.
 
-Now, if someone were to clone your repo from GitHub, they would have access to all of your changes, including the reversions. Validate this by visiting your Lab 02A repo on GitHub. Notice that your newest commit appears at the top of your repo's page.
+Now, if someone were to clone your repo from GitHub, they would have access to all of your changes, including the reversions. Validate this by visiting your Lab 03 repo on GitHub. Notice that your newest commit appears at the top of your repo's page.
 
 <img src="https://github.com/WUSTL-Biol4220/home/raw/master/assets/lab_02A/view_02a.png" width="350"/>
 
@@ -313,7 +313,7 @@ Click on the "5 commits" (or however many commits your branch has) to view the c
 Suppose now that you wanted to view and interact with the filesystem as it existed before your two reversions. Return to your VM and checkout the commit prior to the commit in which you applied `git revert` (for me, it's `10ee6fb`).
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git checkout 10ee6fb
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git checkout 10ee6fb
 Note: switching to '10ee6fb'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
@@ -332,24 +332,24 @@ Or undo this operation with:
 Turn off this advice by setting config variable advice.detachedHead to false
 
 HEAD is now at 10ee6fb move tiger into clouded leopard genus
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ ls data/panthera/
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ ls data/panthera/
 onca.fasta  pardua.fasta  uncia.fasta
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ ls data/neofelis/
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ ls data/neofelis/
 diardi.fasta  leo.fasta  nebulosa.fasta  tigris.fasta
 ```
 
 The files `leo.fasta` and `tigris.fasta` have returned to the `data/neofelis` folder, as they were in commit `10ee6fb`. What we can't ignore is the long warning message, indicating that the branch is now in a `detatched HEAD` state. In essence, any commits you make in this state will not have any effect on the commit history *for your current branch*. All changes will be forgotten once you return to the most recent commit for the branch.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ rm -rf data
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ ls data
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ rm -rf data
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ ls data
 ls: cannot access 'data': No such file or directory
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git checkout master data
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git checkout master data
 Updated 7 paths from ed02d3c
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git checkout master
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git checkout master
 Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git status
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -360,27 +360,27 @@ Your local VM and GitHub repos should now be viewing the same commit -- i.e. the
 
 ---
 
-## 3. Commit and push Lab 02A to VM using `git`
+## 3. Commit and push Lab 03 to VM using `git`
 
 In this final section, we'll learn how to work with multiple `git` branches, including how to create new branches, how to merge branches, and resolve merge conflicts. Each `git` branch manages its own commit history. This allows the user to freely modify different versions of the git repo's filesystem, with options to reconcile differences between branch histories should that be useful in some way. Becoming comfortable with branch management is key to unlocking the full potential of `git`.
 
 To begin, we can use the `git branch` command to observe what branches are locally available, and which branch we are currently modifying.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git branch
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git branch
 * master
 ```
 
 We are using (`*`) the default branch (`master`), which is the only branch, currently. Suppose you wanted to add the new file `data/puma/concolor.fasta` to the repo filesystem, but you wanted to introduce those changes in a way that wouldn't interfere with the contents of `master`. We will create a new branch called `add_puma`, then switch into it.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git branch add_puma
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git branch
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git branch add_puma
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git branch
   add_puma
 * master
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git checkout add_puma
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git checkout add_puma
 Switched to branch 'add_puma'
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git branch
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git branch
 * add_puma
   master
 ```
@@ -394,7 +394,7 @@ ACGTTATTACAT
 Next, add that file to be monitored by the repo, then commit the changes to the branch's history. Once those changes are committed, try to push the commit history to GitHub.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git push
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git push
 fatal: The current branch add_puma has no upstream branch.
 To push the current branch and set the remote as upstream, use
 
@@ -403,7 +403,7 @@ To push the current branch and set the remote as upstream, use
 
 When you create a new branch in `git` through your local machine, you will need to inform GitHub (`origin`) that 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git push --set-upstream origin add_puma
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git push --set-upstream origin add_puma
 Username for 'https://github.com': mlandis
 Password for 'https://mlandis@github.com':
 Enumerating objects: 7, done.
@@ -414,9 +414,9 @@ Writing objects: 100% (5/5), 474 bytes | 474.00 KiB/s, done.
 Total 5 (delta 0), reused 0 (delta 0)
 remote:
 remote: Create a pull request for 'add_puma' on GitHub by visiting:
-remote:      https://github.com/WUSTL-Biol4220/lab-02a-mlandis/pull/new/add_puma
+remote:      https://github.com/WUSTL-Biol4220/lab-03-mlandis/pull/new/add_puma
 remote:
-To https://github.com/WUSTL-Biol4220/lab-02a-mlandis.git
+To https://github.com/WUSTL-Biol4220/lab-03-mlandis.git
  * [new branch]      add_puma -> add_puma
 Branch 'add_puma' set up to track remote branch 'add_puma' from 'origin'.
 ```
@@ -432,7 +432,7 @@ Unfortunately, we forgot to update the `README.md` file to reflect the new conte
 To apply the new GitHub branch commits to your local copy of the branch, you will need *pull* them from GitHub (`origin`), like so
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git pull
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git pull
 Username for 'https://github.com': mlandis
 Password for 'https://mlandis@github.com':
 remote: Enumerating objects: 5, done.
@@ -440,13 +440,13 @@ remote: Counting objects: 100% (5/5), done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), 754 bytes | 754.00 KiB/s, done.
-From https://github.com/WUSTL-Biol4220/lab-02a-mlandis
+From https://github.com/WUSTL-Biol4220/lab-03-mlandis
    dd7156a..d443871  add_puma   -> origin/add_puma
 Updating dd7156a..d443871
 Fast-forward
  README.md | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ cat README.md
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ cat README.md
 This repo contains nucleotide sequences for the species in three Felidae genera, *Panthera*, *Neofelis*, and *Puma*:
 ``
 data/panthera/leo.fasta
@@ -470,10 +470,10 @@ Be sure to also update `README.md` to reflect the changes in our `data` director
 The two branches, `master` and `add_puma`, contain new data additions that we would somehow like to reunify into a single branch. This can be done using the `git merge` command. To *merge* in `git`, you will merge another branch into the branch you are currently using. In our case, we will merge `add_puma` into `master`.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git branch
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git branch
   add_puma
 * master
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git merge add_puma
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git merge add_puma
 Auto-merging README.md
 CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
@@ -482,7 +482,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 The merge had no problem copying the separate `data/acinonyx/jubatus.fasta` and `data/puma/concolor.fasta` files
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ ls data
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ ls data
 acinonyx  neofelis  panthera  puma
 ```
 
@@ -532,7 +532,7 @@ data/puma/concolor.fasta
 Save the edited file and return to the command line. View the status of the repo
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git status
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git status
 On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
@@ -553,10 +553,10 @@ Unmerged paths:
 The status report indicates that our changes to `README.md` must be added to the repo to resolve the merge conflict. Add `README.md` to the tracked files, commit all changes, then push the changes back to GitHub.
 
 ```console
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git add README.md
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git commit -am 'merge with add_puma; resolve README.md conflict'
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git add README.md
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git commit -am 'merge with add_puma; resolve README.md conflict'
 [master b34d17b] merge with add_puma; resolve README.md conflict
-mlandis@biol4220-mlandis:~/labs/lab-02a-mlandis$ git push
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git push
 Username for 'https://github.com': mlandis
 Password for 'https://mlandis@github.com':
 Enumerating objects: 16, done.
@@ -566,12 +566,10 @@ Compressing objects: 100% (8/8), done.
 Writing objects: 100% (10/10), 979 bytes | 326.00 KiB/s, done.
 Total 10 (delta 3), reused 0 (delta 0)
 remote: Resolving deltas: 100% (3/3), completed with 1 local object.
-To https://github.com/WUSTL-Biol4220/lab-02a-mlandis.git
+To https://github.com/WUSTL-Biol4220/lab-03-mlandis.git
    0004f47..b34d17b  master -> master
 ```
 
-Return to the Lab 02A repo on GitHub. The `README.md` should show your merged changes.
-
-
+Return to the Lab 03 repo on GitHub. The `README.md` should show your merged changes.
 
 <img src="https://github.com/WUSTL-Biol4220/home/raw/master/assets/lab_02A/commit_02a.png" width="350"/>
