@@ -3,7 +3,7 @@
 
 *Lab 02 GitHub Classroom link:* https://classroom.github.com/a/vFiNOEUv
 
-In this lab, we'll familiarize ourselves with various computational resources and procedures that we'll use throughout the course.
+In this lab, we'll familiarize ourselves with the Unix command line interface (CLI) and filesystem.
 
 The major tasks to complete for Lab 02 are
 1. [Commands, options, and arguments](https://github.com/WUSTL-Biol4220/home_staging/blob/main/labs/lab_02.md#1-commands-options-and-arguments)
