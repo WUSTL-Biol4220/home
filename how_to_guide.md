@@ -5,6 +5,7 @@ This document serves as a quick reference for "how to" do basic tasks:
 - [Secure shell (SSH)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#secure-shell-ssh)
 - [Lab virtual machines (VM)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#lab-virtual-machines-vm)
 - [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#create-a-github-account)
+- [Create a GitHub personal authentication token (PAT)](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#create-a-github-personal-authentication-token-pat)
 - [Accept your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#accept-your-github-classroom-lab-assignment)
 - [Submit your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/master/how_to_guide.md#complete-your-github-classroom-lab-assignment)
 
@@ -128,7 +129,7 @@ Here is what the account creation prompt looks like:
 
 ---
 
-# Create a GitHub Personal Authentication Token (PAT)
+## Create a GitHub Personal Authentication Token (PAT)
 
 GitHub uses Personal Authentication Tokens (or PATs) to control access to different GitHub resources (e.g. repositories) for each GitHub users. PATs function very similarly to passwords, except each PAT may (1) grant access to different resources and (2) have a different expiration date.
 
