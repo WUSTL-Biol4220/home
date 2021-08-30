@@ -16,6 +16,8 @@ Technical details for how to use VPNs, VMs, `ssh`, `git`, etc. are provided in t
 
 VPN allows remote users with proper credentials to access private network resources, even when off-campus. To complete most lab assignments in this course, students will need to connect to resources on WUSTL's private network, such as the lab computers or the campus servers.
 
+Note that VPN will only work properly if you are off-campus. You may receive an error or notice unusual access to network resources if you attempt to connect to the VPN while on-campus.
+
 WUSTL undergraduates can install the necessary VPN software and connect to the VPN by following the directions listed here: https://techden.wustl.edu/items/vpn-danforth-students/
 
 Once the software is installed, to connect to the WUSTL VPN
@@ -34,7 +36,7 @@ If your problem persists, please let the instructor know or contact the WUSTL [I
 
 ## Secure shell (SSH) 
 
-SSH is an encrypted protocol for securely communicating with devices on the network. We will connect to several key computational resources, such as our lab virtual machines and the WUSTL cluster, using VPN and SSH in combination.  You can read more about SSH [here](https://en.wikipedia.org/wiki/Secure_Shell).
+SSH is an encrypted protocol for securely communicating with devices on the network. We will connect to several key computational resources, such as our lab virtual machines, using VPN and SSH in combination. You can read more about SSH [here](https://en.wikipedia.org/wiki/Secure_Shell).
 
 * **Linux and Mac OS X.** Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections through terminal. To open an SSH connection to a particular IP address (e.g. `192.168.1.1`), you will open a terminal session, then type `ssh  192.168.1.1` and press enter. If you execute `ssh` without providing a target address, the computer will report different options for how you might use `ssh` (i.e. output reads `usage: ssh` followed by various flags). Please notify the instructor if your command prompt instead reports `command not found: ssh`.
 
@@ -71,7 +73,7 @@ Each student will have their own `username`, `password`, and `ip_address`. In th
 
 At this point, you will have initiated your SSH connection,
 
-you should be prompted to enter your password
+you should be prompted to enter your password (your entered text will be invisible)
 ```
 mlandis@128.252.111.111's password:
 ```
@@ -98,7 +100,7 @@ Last login: Wed Sep  2 16:18:16 2020 from 172.21.136.99
 mlandis@biol4220-mlandis:~$
 ```
 
-This last line (`mlandis@biol4220-mlandis:~$`) indicates that you have successfully SSH'd into your lab VM, and that it is ready to receive your commands!
+This last line (`mlandis@biol4220-mlandis:~$`) indicates that you have successfully SSH'd into your lab VM, and that the VM is ready to receive your commands!
 
 To terminate your SSH session, type `exit` at the command prompt
 ```
