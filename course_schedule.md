@@ -12,9 +12,9 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Sep 06 | -- | -- | -- | **No class: Labor Day** |
 |         | Wed, Sep 08 | Lecture 03 | Lab 03 | -- | Unix: git |
 |         | Mon, Sep 13 | Lecture 04 | Lab 04 | -- | Unix: text, pipes, redirects |
-|         | Wed, Sep 15 | Lecture 05 | Lab 05 | -- | Unix: text formats, pipelines<br>Biology: GenBank | 
+|         | Wed, Sep 15 | Lecture 05 | Lab 05 | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
 |         | Mon, Sep 20 | Lecture 06 | Lab 06 | -- | Unix: shell scripts  |
-|         | Wed, Sep 22 | Lecture 07 | Lab 07 | -- | Biology: sequence data |
+|         | Wed, Sep 22 | Lecture 07 | Lab 07 | -- | Biology: GenBank, BLAST |
 |         | Mon, Sep 27 | Lecture 08 | Lab 08 | -- | Unix: regular expressions, regex match |
 |         | Wed, Sep 29 | Lecture 09 | Lab 09 | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Mon, Oct 04 | Lecture 10 | Lab 10 | -- | Biology: molecular phylogenetics |
