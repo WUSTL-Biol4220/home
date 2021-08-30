@@ -128,6 +128,45 @@ Here is what the account creation prompt looks like:
 
 ---
 
+# Create a GitHub Personal Authentication Token (PAT)
+
+GitHub uses Personal Authentication Tokens (or PATs) to control access to different GitHub resources (e.g. repositories) for each GitHub users. PATs function very similarly to passwords, except each PAT may (1) grant access to different resources and (2) have a different expiration date.
+
+In general, you will need to create a PAT and register it on your VM to use GitHub through your VM. (You are free to configure your VM to authenticate with GitHub in an alternative manner if you prefer.)
+
+To create a PAT for GitHub
+1. Log in to GitHub
+2. Click on your Account Manager (your account avatar in the upper right corner)
+3. Click `Settings` from the dropdown menu
+4. Click `Developer settings` from the left menu bar
+5. Click `Personal access token` from the left menu bar
+6. Click `Generate a personal access token` from the main text
+7. Enter your GitHub credentials, if asked
+8. You should now be at the website: https://github.com/settings/tokens/new
+
+<img src="assets/how_to/github_pat_create.png" width="450"/>
+
+9. For `Note` enter `Token for Biol 4220`
+10. For `Expiration` set the custom date of 01/01/2022 (or longer if you prefer)
+11. For `Select scopes` check off the `repo` and `workflow` fields
+12. Click the green `Generate Token` button at the bottom of the page
+13. Copy the text that reads `ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` to your clipboard
+
+<img src="assets/how_to/github_pat_copy.png" width="450"/>
+
+To register the PAT on your VM
+1. SSH on to your VM
+2. Enter the command `git config --global credential.helper store`
+3. When you next interact with GitHub that requires your credentials (e.g. using `git push` or `git pull`)
+    a. Enter your GitHub username in the username field
+    b. Enter the **PAT that you saved to your clipboard** into the password field
+4. This will save your credentials as plain text in the file `~/.git-credentials` as `https://username:ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@github.com`. The command `cat ~/.git-credentials` will print this file to screen, if you want to take a peek.
+
+Please see an instructor if you have difficulties configuring the PAT on your VM, if your credentials no longer work, or if you reset your PAT.
+
+
+---
+
 ## Accept your GitHub Classroom lab assignment
 
 Lab assignments will be posted to the Biol 4220 [GitHub Classroom]() near the start of each class. When a new assignment is posted, students will receive an email with an invitation link to begin their assignment.
@@ -181,7 +220,7 @@ If your GitHub username is `mlandis` and the lab your completing is `example-lab
 5. Carefully read the `README.md` file and follow the instructions: `nano README.md`
 6. Complete your laboratory assignment!
 
-While completing your assignment, you can save your work using the commands `git add <filename>` and `git commit`. For more details on how to use `git` to save your work, see the Lab XX.
+While completing your assignment, you can save your work using the commands `git add <filename>` and `git commit`. For more details on how to use `git` to save your work, see Lab 03.
 
 When you're ready to submit your lab assignment
 1. Make sure all of your files are are saved and committed
