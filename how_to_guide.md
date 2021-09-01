@@ -131,6 +131,8 @@ Here is what the account creation prompt looks like:
 
 ## Create a GitHub Personal Authentication Token (PAT)
 
+*WARNING: you will not be able to register a PAT on your VM until after you have completed the `git` lab (Lab 03)*
+
 GitHub uses Personal Authentication Tokens (or PATs) to control access to different GitHub resources (e.g. repositories) for each GitHub users. PATs function very similarly to passwords, except each PAT may (1) grant access to different resources and (2) have a different expiration date.
 
 In general, you will need to create a PAT and register it on your VM to use GitHub through your VM. (You are free to configure your VM to authenticate with GitHub in an alternative manner if you prefer.)
@@ -155,7 +157,7 @@ To create a PAT for GitHub
 
 <img src="assets/how_to/github_pat_copy.png" width="450"/>
 
-**NOTE: The exact text of the PAT cannot be seen again after you leave the token-creation webpage. You do not need it again after registering the PAT into the VM (below). However, you may choose to copy the PAT to a local file on your computer if you are worried about losing it. Alternatively, you can always create and register a new PAT if the original copy is needed again for some reason.**
+**NOTE:** The exact text of the PAT cannot be seen again after you leave the token-creation webpage. You do not need it again after registering the PAT into the VM (below). However, you may choose to copy the PAT to a local file on your computer if you are worried about losing it. Alternatively, you can always create and register a new PAT if the original copy is needed again for some reason.
 
 To register the PAT on your VM
 1. SSH on to your VM
