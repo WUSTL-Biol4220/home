@@ -155,6 +155,8 @@ To create a PAT for GitHub
 
 <img src="assets/how_to/github_pat_copy.png" width="450"/>
 
+**NOTE: The exact text of the PAT cannot be seen again after you leave the token-creation webpage. You do not need it again after registering the PAT into the VM (below). However, you may choose to copy the PAT to a local file on your computer if you are worried about losing it. Alternatively, you can always create and register a new PAT if the original copy is needed again for some reason.**
+
 To register the PAT on your VM
 1. SSH on to your VM
 2. Enter the command `git config --global credential.helper store`
