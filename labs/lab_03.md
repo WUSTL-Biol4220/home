@@ -401,7 +401,7 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin add_puma
 ```
 
-When you create a new branch in `git` through your local machine, you will need to inform GitHub (`origin`) that 
+When you create a new branch in `git` through your local machine, you will need to inform GitHub (`origin`) before you can push the current branch 
 ```console
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git push --set-upstream origin add_puma
 Username for 'https://github.com': mlandis
