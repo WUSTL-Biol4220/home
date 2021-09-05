@@ -265,7 +265,7 @@ Date:   Fri Sep 11 11:25:22 2020 -0500
     Initial commit
 ```
 
-If we want to remember what commit `b96cfb5`, we can always read the associated message ("move lion to clouded leopard genus"). But what exactly changed in the filesystem? For this, we can use the command `git diff` to identify *differences* in the filesystem between the two commits.
+If we want to remember what commit `b96cfb5` was for, we can always read the associated message ("move lion to clouded leopard genus"). But what exactly changed in the filesystem? For this, we can use the command `git diff` to identify *differences* in the filesystem between the two commits.
 
 ```console
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git diff b96cfb5 5c48dac
