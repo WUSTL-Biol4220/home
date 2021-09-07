@@ -15,10 +15,10 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Sep 15 | Lecture 05 | Lab 05 | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
 |         | Mon, Sep 20 | Lecture 06 | Lab 06 | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
 |         | Wed, Sep 22 | Lecture 07 | Lab 07 | -- | Biology: GenBank, BLAST |
-|         | Mon, Sep 27 | Lecture 08 | Lab 08 | -- | Unix: regular expressions, regex match |
-|         | Wed, Sep 29 | Lecture 09 | Lab 09 | -- | Unix: more regex, find-replace, group capture, sed |
-|         | Mon, Oct 04 | Lecture 10 | Lab 10 | -- | Biology: molecular phylogenetics |
-|         | Wed, Oct 06 | Lecture 11 | Lab 11 | -- | Git: branch management, collaboration<br>**Course project: overview** | 
+|         | Mon, Sep 27 | Lecture 08 | Lab 08 | -- | Biology: molecular sequence alignment |
+|         | Wed, Sep 29 | Lecture 09 | Lab 09 | -- | Unix: regular expressions, regex match |
+|         | Mon, Oct 04 | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace, group capture, sed |
+|         | Wed, Oct 06 | Lecture 11 | Lab 11 | -- | Biology: molecular phylogenetics <br>**Course project: overview** | 
 |         | Mon, Oct 11 | -- | -- | -- | **No class: Fall Break** |
 |         | Wed, Oct 13 | -- | -- | -- | **Exam 1** |
 |         | Mon, Oct 18 | Lecture 12 | Lab 12 | -- | Python: introduction, variables, operators,<br>if-statements, functions |
