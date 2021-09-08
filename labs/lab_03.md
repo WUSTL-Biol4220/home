@@ -9,6 +9,8 @@ The major tasks to complete for Lab 03 are
 2. Working within a single branch
 3. Working with multiple branches
 
+You will need to create a Personal Authentication Token (PAT) to complete this lab. Instructions to do so are here: [link](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-personal-authentication-token-pat).
+
 For this lab, you will be the only contributor to your repo. In a future lab, we will cover how to work with other contributors in a shared repo.
 
 ---
