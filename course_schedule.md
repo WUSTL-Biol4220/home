@@ -8,9 +8,9 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
 |         | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01.pdf">Lecture 01</a>   | [Lab 01](labs/lab_01.md) | CSB 0.1 - 0.5 | Unix: orientation |
-|  :dna:  | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01.pdf">Lecture 02</a>   | [Lab 02](labs/lab_02.md) | CSB 1.1 - 1.5.1 | Unix: commands, filesystem |
+|         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01.pdf">Lecture 02</a>   | [Lab 02](labs/lab_02.md) | CSB 1.1 - 1.5.1 | Unix: commands, filesystem |
 |         | Mon, Sep 06 | -- | -- | -- | **No class: Labor Day** |
-|         | Wed, Sep 08 | Lecture 03 | Lab 03 | CSB 2.1 - 2.5 | Unix: git |
+|  :dna:  | Wed, Sep 08 | Lecture 03 | Lab 03 | CSB 2.1 - 2.5 | Unix: git |
 |         | Mon, Sep 13 | Lecture 04 | Lab 04 | CSB 1.5.2 - 1.6.6 | Unix: text, pipes, redirects |
 |         | Wed, Sep 15 | Lecture 05 | Lab 05 | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
 |         | Mon, Sep 20 | Lecture 06 | Lab 06 | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
