@@ -52,6 +52,7 @@ Hello, world!
 Call `git status` to learn whether any files in your local repo contain changes that are absent in GitHub's copy of the repo
 
 ```console
+mlandis@biol4220-mlandis:~/labs$ cd lab-01-mlandis
 mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git status
 On branch main
 Your branch is up to date with 'origin/main'.
