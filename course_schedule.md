@@ -7,18 +7,18 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 
 |         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
-|         | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01.pdf">Lecture 01</a>   | [Lab 01](labs/lab_01.md) | CSB 0.1 - 0.5 | Unix: orientation |
-|  :dna:  | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/master/lectures/lecture_01.pdf">Lecture 02</a>   | [Lab 02](labs/lab_02.md) | CSB 1.1 - 1.5.1 | Unix: commands, filesystem |
+|         | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_01.pdf">Lecture 01</a>   | [Lab 01](labs/lab_01.md) | CSB 0.1 - 0.5 | Unix: orientation |
+|         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_01.pdf">Lecture 02</a>   | [Lab 02](labs/lab_02.md) | CSB 1.1 - 1.5.1 | Unix: commands, filesystem |
 |         | Mon, Sep 06 | -- | -- | -- | **No class: Labor Day** |
-|         | Wed, Sep 08 | Lecture 03 | Lab 03 | CSB 2.1 - 2.5 | Unix: git |
+|  :dna:  | Wed, Sep 08 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_03.pdf">Lecture 03</a> | [Lab 03](labs/lab_03.md) | CSB 2.1 - 2.5 | Unix: git |
 |         | Mon, Sep 13 | Lecture 04 | Lab 04 | CSB 1.5.2 - 1.6.6 | Unix: text, pipes, redirects |
 |         | Wed, Sep 15 | Lecture 05 | Lab 05 | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
 |         | Mon, Sep 20 | Lecture 06 | Lab 06 | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
 |         | Wed, Sep 22 | Lecture 07 | Lab 07 | -- | Biology: GenBank, BLAST |
-|         | Mon, Sep 27 | Lecture 08 | Lab 08 | -- | Unix: regular expressions, regex match |
-|         | Wed, Sep 29 | Lecture 09 | Lab 09 | -- | Unix: more regex, find-replace, group capture, sed |
-|         | Mon, Oct 04 | Lecture 10 | Lab 10 | -- | Biology: molecular phylogenetics |
-|         | Wed, Oct 06 | Lecture 11 | Lab 11 | -- | Git: branch management, collaboration<br>**Course project: overview** | 
+|         | Mon, Sep 27 | Lecture 08 | Lab 08 | -- | Biology: molecular sequence alignment |
+|         | Wed, Sep 29 | Lecture 09 | Lab 09 | -- | Unix: regular expressions, regex match |
+|         | Mon, Oct 04 | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace, group capture, sed |
+|         | Wed, Oct 06 | Lecture 11 | Lab 11 | -- | Biology: molecular phylogenetics <br>**Course project: overview** | 
 |         | Mon, Oct 11 | -- | -- | -- | **No class: Fall Break** |
 |         | Wed, Oct 13 | -- | -- | -- | **Exam 1** |
 |         | Mon, Oct 18 | Lecture 12 | Lab 12 | -- | Python: introduction, variables, operators,<br>if-statements, functions |

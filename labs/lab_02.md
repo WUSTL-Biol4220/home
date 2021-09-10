@@ -11,7 +11,7 @@ The major tasks to complete for Lab 02 are
 3. [Command line tricks](https://github.com/WUSTL-Biol4220/home_staging/blob/main/labs/lab_02.md#3-command-line-tricks)
 4. [Save your work to GitHub](https://github.com/WUSTL-Biol4220/home_staging/blob/main/labs/lab_02.md#4-submit-your-work)
 
-If you don't remember how to perform these steps, review the materials in [Lab 01A](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01A.md) and in the ["How To"](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md) guide.
+If you don't remember how to perform specific tasks for any of these steps, review the materials in [Lab 01](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md) and in the ["How To"](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md) guide.
 
 
 ---

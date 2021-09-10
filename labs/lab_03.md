@@ -1,6 +1,6 @@
 # Lab 03
 
-*Lab 03 GitHub Classroom link:* to be provided
+*Lab 03 GitHub Classroom link:* https://classroom.github.com/a/5pGJRF0e
 
 In this lab, we'll learn the basics for using the version control software, `git`, and how to use `git` with [GitHub](https://github.com). Using `git` to manage your code or other projects becomes natural with practice, but it can feel complicated or overwhelming when you first begin to use the tool. If you are nervous about how to use a certain command, you can always create a "test example" like what we'll use below to understand how the commands work in a safe environment. The other good news is that, generally, `git` itself does not forget the versioned history of files its watching; that means that even if you do make a mistake, it's almost certain that you can recover from a previously saved version. That's the beauty of version control.
 
@@ -8,6 +8,8 @@ The major tasks to complete for Lab 03 are
 1. Exploring `git` basics
 2. Working within a single branch
 3. Working with multiple branches
+
+You will need to create a Personal Authentication Token (PAT) to complete this lab. Instructions to do so are here: [link](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-personal-authentication-token-pat).
 
 For this lab, you will be the only contributor to your repo. In a future lab, we will cover how to work with other contributors in a shared repo.
 
@@ -50,6 +52,7 @@ Hello, world!
 Call `git status` to learn whether any files in your local repo contain changes that are absent in GitHub's copy of the repo
 
 ```console
+mlandis@biol4220-mlandis:~/labs$ cd lab-01-mlandis
 mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git status
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -265,7 +268,7 @@ Date:   Fri Sep 11 11:25:22 2020 -0500
     Initial commit
 ```
 
-If we want to remember what commit `b96cfb5`, we can always read the associated message ("move lion to clouded leopard genus"). But what exactly changed in the filesystem? For this, we can use the command `git diff` to identify *differences* in the filesystem between the two commits.
+If we want to remember what commit `b96cfb5` was for, we can always read the associated message ("move lion to clouded leopard genus"). But what exactly changed in the filesystem? For this, we can use the command `git diff` to identify *differences* in the filesystem between the two commits.
 
 ```console
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git diff b96cfb5 5c48dac
@@ -401,7 +404,7 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin add_puma
 ```
 
-When you create a new branch in `git` through your local machine, you will need to inform GitHub (`origin`) that 
+When you create a new branch in `git` through your local machine, you will need to inform GitHub (`origin`) before you can push the current branch 
 ```console
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git push --set-upstream origin add_puma
 Username for 'https://github.com': mlandis
