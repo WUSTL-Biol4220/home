@@ -114,7 +114,7 @@ $ esearch -db nucleotide -query "AY596878" | efetch -format fasta
 
 Note that an unmatched search query will identify 0 records. Fetching against a search with 0 matches will return no text.
 ```console
-$ esearch -db nucleotide -query "Tyrannosaurus Rex"
+$ esearch -db nucleotide -query "Tyrannosaurus rex"
 <ENTREZ_DIRECT>
   <Db>nucleotide</Db>
   <WebEnv>MCID_5f779558ae9e2c11ab7040b6</WebEnv>
@@ -122,7 +122,7 @@ $ esearch -db nucleotide -query "Tyrannosaurus Rex"
   <Count>0</Count>
   <Step>1</Step>
 </ENTREZ_DIRECT>
-$ esearch -db nucleotide -query "Tyrannosaurus Rex" | efetch -format fasta
+$ esearch -db nucleotide -query "Tyrannosaurus rex" | efetch -format fasta
 $
 ```
 
