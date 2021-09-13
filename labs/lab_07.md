@@ -46,7 +46,7 @@ The output is an XML object that contains information about the search request a
 Although we now have the search text, no data has been *fetched* from the `nucleotide` database yet. By piping our `esearch` output into the `efetch` command, we can download the records associated with the query on the target databse. Using `efetch -format fasta` will cause the program to print the fetched sequence data to the screen (stdout) in fasta format.
 
 ```console
-$ esearch -db nucleotide -query "Viburnum clemensiae" |  efetch -format fasta > sequences.fasta`
+$ esearch -db nucleotide -query "Viburnum clemensiae" |  efetch -format fasta > sequences.fasta
 $ head -n5 sequences.fasta
 >KJ796120.1 Viburnum clemensae voucher PW Sweeney et al. 2142 RNA polymerase beta' subunit (rpoC2) gene, partial cds; chloroplast
 ATGGAGGTACTTATGGCAGAACGGGCCAATCTGGTCTTTCACAATAAAGTGATAGACGGAACTGCCATGA
