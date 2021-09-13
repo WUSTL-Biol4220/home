@@ -68,19 +68,18 @@ $ # press space to advance `more` by one page
 $ blastn -help | more      
 ```
 
+The help output for BLAST should give you a sense of how customizable the tool is, and that BLAST output probably depends (to some extent) on how the tool is called.
 
-blastn -db nt -query spo0A.fasta -out align.txt -remote
-
-
+```
 blastn -db nt -query example.fasta -out align.txt -remote -outfmt 7 -max_target_seqs 10
+```
+
 parse the file based on E-score
 based on num hits
 
 Then download accessions using efetch
 
-blastn -db nt -query example.fasta -out align.txt -remote -outfmt 7 -max_target_seqs 10
-
-
+```
 cat align.txt  | tail -n11 | head -n10 | cut -f 2,3,4 | tr '\t' ','
 cat align.txt  | tail -n11 | head -n10 | cut -f 2,3,4 | tr '\t' ',' | sort -k 3 -t ','
 ```
