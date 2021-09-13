@@ -70,9 +70,17 @@ $ blastn -help | more
 
 The help output for BLAST should give you a sense of how customizable the tool is, and that BLAST output probably depends (to some extent) on how the tool is called.
 
+Suppose one of your more mischevious friends gives you a fasta file (`dino_dna.fasta`) that they allege contains a DNA sequence from their talking pet dinosaur. Could it be true!?
+
 ```
-blastn -db nt -query example.fasta -out align.txt -remote -outfmt 7 -max_target_seqs 10
+blastn -db nt -query dino_dna.fasta -out blast_report.txt -remote -outfmt 7 -max_target_seqs 10
 ```
+
+```
+blastn -db nt -query dino_dna.fasta -out blast_report.txt -remote -outfmt 7 -max_target_seqs 10
+```
+
+
 
 parse the file based on E-score
 based on num hits
