@@ -5,12 +5,13 @@
 This lab will focus on retrieving fasta formatted sequences from GenBank, one of NCBI's Entrez databases. These techniques are useful when you need to generate a dataset for a set of organisms and genes. Although these scripts will only download nucleotide sequence information, the scripts could easily be adapted to compile different kinds of datasets (e.g. amino acid sequences, gene annotation features).
 
 The major components of this lab are:
-1. Basic uses for EDirect
-2. Scripting with EDirect
+1. BLAST
+2. Basic uses for EDirect
+3. Scripting with EDirect
 
 ---
 
-## 1. Basic uses for EDirect
+## 2. Basic uses for EDirect
 
 The EDirect suite contains many useful Unix command-line tools, some of which we'll explore here. Visit the EDirect web page for the [EDirect Unix utilities](https://www.ncbi.nlm.nih.gov/books/NBK179288/) to learn more about the general uses for the tool suite. The [EDirect Examples](https://www.ncbi.nlm.nih.gov/books/NBK179288/#_chapter6_Examples_) section contains some especially useful practical techniques. EDirect commands do not have man-pages (`man`), but you can learn more about each command by calling it with the `--help` flag.
 
@@ -130,7 +131,7 @@ Although we've only explored a tiny fraction of what the EDirect utilities can d
 
 ---
 
-## 2. Scripting with EDirect
+## 3. Scripting with EDirect
 
 In this part of the lab, we will write scripts to download sequences from GenBank that match search criteria for species name, gene name, and sequence length. When completing this lab, you might consider what types of datasets you've needed to compile in your research experiences:
 - What criteria or search patterns would be needed to obtain all of the sequences you *did* want, and none of the sequences you *did not* want?
@@ -195,42 +196,7 @@ $ wc files/*.fasta
   96  162 6855 total
 ```
 
-Now run your script against a set of species and genes that you find personally interesting! One way to find new genes is using BLAST (next section).
-
----
-
-## 3. Scripting with BLAST 
-
-
-```
-sudo apt install ncbi-blast+
-
-lftp -e "cd blast/executables/LATEST; dir; quit" ftp.ncbi.nlm.nih.gov | awk '{print $NF}'
-# shows output
-blastn # DNA
-blastp # protein
-```
-
-```
-mkdir $HOME/blast_db
-nano ~/.bash_profile
-export BLASTDB=$HOME/blast_db
-```
-
-```
-cd $BLASTDB
-wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/refseq_rna.00.tar.gz
-tar -xzvf refseq_rna.00.tar.gz
-rm refseq_rna.00.tar.gz
-```
-
-```
-blastn -query example.fasta -db refseq_rna.00 -out results.txt
-blastn -query example.fasta -db refseq_rna.00 -out results.txt -outfmt 10
-blastn -query example.fasta -db refseq_rna.00 -out results.txt -outfmt 10 -evalue 0.01
-blastn -query example.fasta -db refseq_rna.00 -out results.txt -outfmt 10 -evalue 0.01 -num_threads 2
-```
-
+Now run your script against a set of species and genes that you find personally interesting! One way to find new genes is using BLAST (first section).
 
 ---
 
