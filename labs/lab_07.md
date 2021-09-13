@@ -11,6 +11,76 @@ The major components of this lab are:
 
 ---
 
+## 1. BLAST
+
+This section will demonstrate how to use BLAST (Basic Local Alignment Search Tool). BLAST is often the first tool researchers use to identify *what* a sequence is and what it does. For example: do any known genes have similar content to this anonymous sequence? what is the expected function of this sequence? and, in what species do we find this gene?  To provide information that can help answer these types of questions, BLAST compares a query sequence to a database of target sequences, computes a BLAST score to assess how well the query and matches to each possible target sequence, and then returns those target sequences with the highest BLAST scores (sometimes called 'hits'). BLAST hits report the identities of matched sequences, the match scores, the significance scores, and so forth.
+
+Most researchers use NCBI's online interface to submit BLAST queries against GenBank (https://blast.ncbi.nlm.nih.gov/Blast.cgi), which is sufficient for a large number of standard queries. In this lab, we will download and install a local version of BLAST to better understand how it works.
+
+First, create a new directory in your `$HOME` directory called `apps`, then enter that directory
+```
+$ mkdir -p ~/apps
+$ cd apps
+```
+
+Next, download the BLAST suite using the `wget` (web-get) command
+```
+$ wget https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.12.0+-x64-linux.tar.gz
+```
+then unzip and expand the compressed archive (the `.tar.gz` file, also affectionately referred to as a 'tarball') with the command
+
+```
+$ tar xvzf ncbi-blast-2.12.0+-x64-linux.tar.gz
+ncbi-blast-2.12.0+/
+ncbi-blast-2.12.0+/bin/
+ncbi-blast-2.12.0+/bin/windowmasker
+ncbi-blast-2.12.0+/bin/makeblastdb
+ncbi-blast-2.12.0+/bin/makeprofiledb
+ncbi-blast-2.12.0+/bin/segmasker
+...
+ncbi-blast-2.12.0+/doc/
+ncbi-blast-2.12.0+/doc/README.txt
+ncbi-blast-2.12.0+/LICENSE
+```
+
+and remove the original archive
+
+```
+$ rm ncbi-blast-2.12.0+-x64-linux.tar.gz
+```
+
+We will then move all of the newly extract BLAST tools from the `bin` subdirectory (executable *bin*aries) into the directory `~/.local/bin`. 
+```
+$ mv ncbi-blast-2.12.0+/bin/* ~/.local/bin
+```
+
+If BLAST was installed correctly, calling `which blastn` should generate output similar to what you see below.
+```
+$ which blastn
+/home/mlandis/.local/bin/blastn
+```
+
+We will primarily u
+
+blastn -help
+blastn -db nt -query spo0A.fasta -out align.txt -remote
+
+
+blastn -db nt -query example.fasta -out align.txt -remote -outfmt 7 -max_target_seqs 10
+parse the file based on E-score
+based on num hits
+
+Then download accessions using efetch
+
+blastn -db nt -query example.fasta -out align.txt -remote -outfmt 7 -max_target_seqs 10
+
+
+cat align.txt  | tail -n11 | head -n10 | cut -f 2,3,4 | tr '\t' ','
+cat align.txt  | tail -n11 | head -n10 | cut -f 2,3,4 | tr '\t' ',' | sort -k 3 -t ','
+```
+
+---
+
 ## 2. Basic uses for EDirect
 
 The EDirect suite contains many useful Unix command-line tools, some of which we'll explore here. Visit the EDirect web page for the [EDirect Unix utilities](https://www.ncbi.nlm.nih.gov/books/NBK179288/) to learn more about the general uses for the tool suite. The [EDirect Examples](https://www.ncbi.nlm.nih.gov/books/NBK179288/#_chapter6_Examples_) section contains some especially useful practical techniques. EDirect commands do not have man-pages (`man`), but you can learn more about each command by calling it with the `--help` flag.
