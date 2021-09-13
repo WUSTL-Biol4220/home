@@ -51,7 +51,7 @@ $ rm ncbi-blast-2.12.0+-x64-linux.tar.gz
 
 We will then move all of the newly extract BLAST tools from the `bin` subdirectory (executable *bin*aries) into the directory `~/.local/bin`. 
 ```
-$ mv ncbi-blast-2.12.0+/bin/* ~/.local/bin
+$ cp ncbi-blast-2.12.0+/bin/* ~/.local/bin
 ```
 
 If BLAST was installed correctly, calling `which blastn` should generate output similar to what you see below.
@@ -60,9 +60,15 @@ $ which blastn
 /home/mlandis/.local/bin/blastn
 ```
 
-We will primarily u
+The BLAST suite we installed comes with many tools. We'll use the `blastn` tool for this lab, which is specialized for comparing nucleotide sequences to one another. Call `blastn -help` to survey different options for using the command line tool
+```
+$ # pipe the help output into the `more` command
+$ # press enter to advance `more` by one line
+$ # press space to advance `more` by one page
+$ blastn -help | more      
+```
 
-blastn -help
+
 blastn -db nt -query spo0A.fasta -out align.txt -remote
 
 
