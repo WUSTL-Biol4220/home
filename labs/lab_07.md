@@ -167,7 +167,7 @@ Viburnum dentatum
 Viburnum rufidulum
 ```
 
-The gene file is a .csv value, where the first column gives the gene name and the second column gives the expected sequence length (in the format `x:y` to be used with `[SLEN]` as in Problem 1), or is left empty for genes that will not be filtered by sequence length during the search.
+The gene file is in .csv format, where the first column gives the gene name and the second column gives the expected sequence length (in the format `x:y` to be used with `[SLEN]` as in Problem 1). If the entry in the second column is left empty, that gene will not be filtered by sequence length during the search.
 
 ```console
 $ cat my_genes.txt
@@ -195,7 +195,7 @@ $ wc files/*.fasta
   96  162 6855 total
 ```
 
-Now run your script against a set of species and genes that you find personally interesting!
+Now run your script against a set of species and genes that you find personally interesting! One way to find new genes is using BLAST (next section).
 
 ---
 
