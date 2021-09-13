@@ -55,7 +55,7 @@ GACTCTGGGTTTCCAACAAGCTACTGCTACATCTATTTCATTAGGAATTGATGATCTTTTAACAATACCT
 TCTAAGAGATGGCTAGTTCAAGATGCTGAACAACAAAGTTTGATTTTGGAAAAACACCATCATTATGGGA
 ```
 
-What command would you use to learn how many sequences were written to `sequences.fasta`? to learn how many lines the file contains?
+What command would you use to learn how many sequences were written to `sequences.fasta`? What command would tell you lines it contains?
 
 Another useful format to fetch is the GenBank (`gb`) format, which we saw in the lecture slides. This format contains various metadata relating to the accession. Here, we'll use the `-stop 1` option with `efetch` so we only fetch one record.
 
