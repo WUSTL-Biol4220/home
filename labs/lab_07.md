@@ -100,6 +100,11 @@ Query_1	XM_016949680.2	98.722	313	4	0	8	320	1	313	3.21e-154	556
 Query_1	XM_016949678.2	98.722	313	4	0	8	320	1	313	3.21e-154	556
 ```
 
+Querying against GenBank using the `-remote` flag can be slow. We can also BLAST against a local copy of a GenBank database.
+
+Download the database
+
+Set up the link
 
 parse the file based on E-score
 based on num hits
