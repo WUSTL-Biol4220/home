@@ -1,6 +1,6 @@
 # Lab 05
 
-*Lab 05 GitHub Classroom link:* to be provided
+*Lab 05 GitHub Classroom link:* https://classroom.github.com/a/RGglR_it
 
 This lab will study how to process a variety of text files. 
 
