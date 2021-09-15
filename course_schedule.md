@@ -8,7 +8,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
 |         | Mon, Aug 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_01.pdf">Lecture 01</a>   | [Lab 01](labs/lab_01.md) | CSB 0.1 - 0.5 | Unix: orientation |
-|         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_01.pdf">Lecture 02</a>   | [Lab 02](labs/lab_02.md) | CSB 1.1 - 1.5.1 | Unix: commands, filesystem |
+|         | Wed, Sep 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_02.pdf">Lecture 02</a>   | [Lab 02](labs/lab_02.md) | CSB 1.1 - 1.5.1 | Unix: commands, filesystem |
 |         | Mon, Sep 06 | -- | -- | -- | **No class: Labor Day** |
 |         | Wed, Sep 08 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_03.pdf">Lecture 03</a> | [Lab 03](labs/lab_03.md) | CSB 2.1 - 2.5 | Unix: git |
 |         | Mon, Sep 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_04.pdf">Lecture 04</a> | [Lab 04](labs/lab_04.md)  | CSB 1.5.2 - 1.6.6 | Unix: text, pipes, redirects |
