@@ -23,7 +23,7 @@ Instructor
 * Name: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
-* Office hours: 2:00pm - 3:00pm on Thu
+* Office hours: 3:00pm - 4:00pm on Thu
 * Office room: 210 Rebstock *with appointment*
 
 Graduate Student Instructor

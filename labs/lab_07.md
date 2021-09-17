@@ -5,12 +5,28 @@
 This lab will focus on retrieving fasta formatted sequences from GenBank, one of NCBI's Entrez databases. These techniques are useful when you need to generate a dataset for a set of organisms and genes. Although these scripts will only download nucleotide sequence information, the scripts could easily be adapted to compile different kinds of datasets (e.g. amino acid sequences, gene annotation features).
 
 The major components of this lab are:
-1. Basic uses for EDirect
-2. Scripting with EDirect
+1. BLAST
+2. Basic uses for EDirect
+3. Scripting with EDirect
 
 ---
 
-## 1. Basic uses for EDirect
+## 1. BLAST
+
+This section will demonstrate how to use BLAST (Basic Local Alignment Search Tool). The BLAST is often the first tool researchers use to identify *what* a sequence is and what it does. For example: do any known genes have similar content to this anonymous sequence? what is the expected function of this sequence? and, in what species do we find this gene?  To provide information that can help answer these types of questions, BLAST compares a query sequence to a database of target sequences, computes a BLAST score to assess how well the query and matches to each possible target sequence, and then returns those target sequences with the highest BLAST scores (sometimes called 'hits'). BLAST hits report the identities of matched sequences, the match scores, the significance scores, and so forth.
+
+Most researchers use NCBI's online interface to submit BLAST queries against GenBank records (https://blast.ncbi.nlm.nih.gov/Blast.cgi). BLAST is also available as a [command line tool](https://www.ncbi.nlm.nih.gov/books/NBK279690/), which is useful for scripting. However, the command line tool requires the local installation of a (large!) GenBank database to be used effectively. That being said, we'll use the web tool today.
+
+Now for a problem. Suppose one of your more mischevious friends gives you a fasta file that they allege contains a DNA sequence from their talking pet dinosaur. Could it be true!?
+
+Print the content of your `dino_dna.fasta` to stdout, and then copy the printed text in your terminal to your clipboard. Next open the [BLAST website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the "Nucleotide BLAST" tool. Paste your text into the field entitled "Enter Query Sequence". At the bottom of the page, click "BLAST".
+
+NCBI will then tell you that your BLAST search is underway (it normally takes 10-30 seconds to complete).
+
+
+---
+
+## 2. Basic uses for EDirect
 
 The EDirect suite contains many useful Unix command-line tools, some of which we'll explore here. Visit the EDirect web page for the [EDirect Unix utilities](https://www.ncbi.nlm.nih.gov/books/NBK179288/) to learn more about the general uses for the tool suite. The [EDirect Examples](https://www.ncbi.nlm.nih.gov/books/NBK179288/#_chapter6_Examples_) section contains some especially useful practical techniques. EDirect commands do not have man-pages (`man`), but you can learn more about each command by calling it with the `--help` flag.
 
@@ -46,7 +62,7 @@ The output is an XML object that contains information about the search request a
 Although we now have the search text, no data has been *fetched* from the `nucleotide` database yet. By piping our `esearch` output into the `efetch` command, we can download the records associated with the query on the target databse. Using `efetch -format fasta` will cause the program to print the fetched sequence data to the screen (stdout) in fasta format.
 
 ```console
-$ esearch -db nucleotide -query "Viburnum clemensiae" |  efetch -format fasta > sequences.fasta`
+$ esearch -db nucleotide -query "Viburnum clemensiae" |  efetch -format fasta > sequences.fasta
 $ head -n5 sequences.fasta
 >KJ796120.1 Viburnum clemensae voucher PW Sweeney et al. 2142 RNA polymerase beta' subunit (rpoC2) gene, partial cds; chloroplast
 ATGGAGGTACTTATGGCAGAACGGGCCAATCTGGTCTTTCACAATAAAGTGATAGACGGAACTGCCATGA
@@ -55,7 +71,7 @@ GACTCTGGGTTTCCAACAAGCTACTGCTACATCTATTTCATTAGGAATTGATGATCTTTTAACAATACCT
 TCTAAGAGATGGCTAGTTCAAGATGCTGAACAACAAAGTTTGATTTTGGAAAAACACCATCATTATGGGA
 ```
 
-What command would you use to learn how many sequences were written to `sequences.fasta`? to learn how many lines the file contains?
+What command would you use to learn how many sequences were written to `sequences.fasta`? What command would tell you lines it contains?
 
 Another useful format to fetch is the GenBank (`gb`) format, which we saw in the lecture slides. This format contains various metadata relating to the accession. Here, we'll use the `-stop 1` option with `efetch` so we only fetch one record.
 
@@ -114,7 +130,7 @@ $ esearch -db nucleotide -query "AY596878" | efetch -format fasta
 
 Note that an unmatched search query will identify 0 records. Fetching against a search with 0 matches will return no text.
 ```console
-$ esearch -db nucleotide -query "Tyrannosaurus Rex"
+$ esearch -db nucleotide -query "Tyrannosaurus rex"
 <ENTREZ_DIRECT>
   <Db>nucleotide</Db>
   <WebEnv>MCID_5f779558ae9e2c11ab7040b6</WebEnv>
@@ -122,7 +138,7 @@ $ esearch -db nucleotide -query "Tyrannosaurus Rex"
   <Count>0</Count>
   <Step>1</Step>
 </ENTREZ_DIRECT>
-$ esearch -db nucleotide -query "Tyrannosaurus Rex" | efetch -format fasta
+$ esearch -db nucleotide -query "Tyrannosaurus rex" | efetch -format fasta
 $
 ```
 
@@ -130,7 +146,7 @@ Although we've only explored a tiny fraction of what the EDirect utilities can d
 
 ---
 
-## 2. Scripting with EDirect
+## 3. Scripting with EDirect
 
 In this part of the lab, we will write scripts to download sequences from GenBank that match search criteria for species name, gene name, and sequence length. When completing this lab, you might consider what types of datasets you've needed to compile in your research experiences:
 - What criteria or search patterns would be needed to obtain all of the sequences you *did* want, and none of the sequences you *did not* want?
@@ -167,7 +183,7 @@ Viburnum dentatum
 Viburnum rufidulum
 ```
 
-The gene file is a .csv value, where the first column gives the gene name and the second column gives the expected sequence length (in the format `x:y` to be used with `[SLEN]` as in Problem 1), or is left empty for genes that will not be filtered by sequence length during the search.
+The gene file is in .csv format, where the first column gives the gene name and the second column gives the expected sequence length (in the format `x:y` to be used with `[SLEN]` as in Problem 1). If the entry in the second column is left empty, that gene will not be filtered by sequence length during the search.
 
 ```console
 $ cat my_genes.txt
@@ -193,45 +209,6 @@ $ wc files/*.fasta
   12   24  859 files/Viburnum_rufidulum_matK_MH551948.fasta
   20   31 1473 files/Viburnum_rufidulum_rbcL_KJ773975.fasta
   96  162 6855 total
-```
-
-Now run your script against a set of species and genes that you find personally interesting!
-
----
-
-## 3. Scripting with BLAST 
-
-
-(still working out software + exercises)
-
-
-```
-sudo apt install ncbi-blast+
-
-lftp -e "cd blast/executables/LATEST; dir; quit" ftp.ncbi.nlm.nih.gov | awk '{print $NF}'
-# shows output
-blastn # DNA
-blastp # protein
-```
-
-```
-mkdir $HOME/blast_db
-nano ~/.bash_profile
-export BLASTDB=$HOME/blast_db
-```
-
-```
-cd $BLASTDB
-wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/refseq_rna.00.tar.gz
-tar -xzvf refseq_rna.00.tar.gz
-rm refseq_rna.00.tar.gz
-```
-
-```
-blastn -query example.fasta -db refseq_rna.00 -out results.txt
-blastn -query example.fasta -db refseq_rna.00 -out results.txt -outfmt 10
-blastn -query example.fasta -db refseq_rna.00 -out results.txt -outfmt 10 -evalue 0.01
-blastn -query example.fasta -db refseq_rna.00 -out results.txt -outfmt 10 -evalue 0.01 -num_threads 2
 ```
 
 
