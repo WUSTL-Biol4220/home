@@ -202,6 +202,9 @@ Now run your script against a set of species and genes that you find personally 
 ## 3. Scripting with BLAST 
 
 
+(still working out software + exercises)
+
+
 ```
 sudo apt install ncbi-blast+
 
