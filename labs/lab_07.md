@@ -13,108 +13,16 @@ The major components of this lab are:
 
 ## 1. BLAST
 
-This section will demonstrate how to use BLAST (Basic Local Alignment Search Tool). BLAST is often the first tool researchers use to identify *what* a sequence is and what it does. For example: do any known genes have similar content to this anonymous sequence? what is the expected function of this sequence? and, in what species do we find this gene?  To provide information that can help answer these types of questions, BLAST compares a query sequence to a database of target sequences, computes a BLAST score to assess how well the query and matches to each possible target sequence, and then returns those target sequences with the highest BLAST scores (sometimes called 'hits'). BLAST hits report the identities of matched sequences, the match scores, the significance scores, and so forth.
+This section will demonstrate how to use BLAST (Basic Local Alignment Search Tool). The BLAST is often the first tool researchers use to identify *what* a sequence is and what it does. For example: do any known genes have similar content to this anonymous sequence? what is the expected function of this sequence? and, in what species do we find this gene?  To provide information that can help answer these types of questions, BLAST compares a query sequence to a database of target sequences, computes a BLAST score to assess how well the query and matches to each possible target sequence, and then returns those target sequences with the highest BLAST scores (sometimes called 'hits'). BLAST hits report the identities of matched sequences, the match scores, the significance scores, and so forth.
 
-Most researchers use NCBI's online interface to submit BLAST queries against GenBank (https://blast.ncbi.nlm.nih.gov/Blast.cgi), which is sufficient for a large number of standard queries. In this lab, we will download and install a local version of BLAST to better understand how it works.
+Most researchers use NCBI's online interface to submit BLAST queries against GenBank records (https://blast.ncbi.nlm.nih.gov/Blast.cgi). BLAST is also available as a [command line tool](https://www.ncbi.nlm.nih.gov/books/NBK279690/), which is useful for scripting. However, the command line tool requires the local installation of a (large!) GenBank database to be used effectively. That being said, we'll use the web tool today.
 
-First, create a new directory in your `$HOME` directory called `apps`, then enter that directory
-```
-$ mkdir -p ~/apps
-$ cd apps
-```
+Now for a problem. Suppose one of your more mischevious friends gives you a fasta file that they allege contains a DNA sequence from their talking pet dinosaur. Could it be true!?
 
-Next, download the BLAST suite using the `wget` (web-get) command
-```
-$ wget https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.12.0+-x64-linux.tar.gz
-```
-then unzip and expand the compressed archive (the `.tar.gz` file, also affectionately referred to as a 'tarball') with the command
+Print the content of your `dino_dna.fasta` to stdout, and then copy the printed text in your terminal to your clipboard. Next open the [BLAST website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the "Nucleotide BLAST" tool. Paste your text into the field entitled "Enter Query Sequence". At the bottom of the page, click "BLAST".
 
-```
-$ tar xvzf ncbi-blast-2.12.0+-x64-linux.tar.gz
-ncbi-blast-2.12.0+/
-ncbi-blast-2.12.0+/bin/
-ncbi-blast-2.12.0+/bin/windowmasker
-ncbi-blast-2.12.0+/bin/makeblastdb
-ncbi-blast-2.12.0+/bin/makeprofiledb
-ncbi-blast-2.12.0+/bin/segmasker
-...
-ncbi-blast-2.12.0+/doc/
-ncbi-blast-2.12.0+/doc/README.txt
-ncbi-blast-2.12.0+/LICENSE
-```
+NCBI will then tell you that your BLAST search is underway (it normally takes 10-30 seconds to complete).
 
-and remove the original archive
-
-```
-$ rm ncbi-blast-2.12.0+-x64-linux.tar.gz
-```
-
-We will then move all of the newly extract BLAST tools from the `bin` subdirectory (executable *bin*aries) into the directory `~/.local/bin`. 
-```
-$ cp ncbi-blast-2.12.0+/bin/* ~/.local/bin
-```
-
-If BLAST was installed correctly, calling `which blastn` should generate output similar to what you see below.
-```
-$ which blastn
-/home/mlandis/.local/bin/blastn
-```
-
-The BLAST suite we installed comes with many tools. We'll use the `blastn` tool for this lab, which is specialized for comparing nucleotide sequences to one another. Call `blastn -help` to survey different options for using the command line tool
-```
-$ # pipe the help output into the `more` command
-$ # press enter to advance `more` by one line
-$ # press space to advance `more` by one page
-$ blastn -help | more      
-```
-
-The help output for BLAST should give you a sense of how customizable the tool is, and that BLAST output probably depends (to some extent) on how the tool is called.
-
-Suppose one of your more mischevious friends gives you a fasta file (`dino_dna.fasta`) that they allege contains a DNA sequence from their talking pet dinosaur. Could it be true!?
-
-```
-blastn -db nt -query dino_dna.fasta -out blast_report.txt -remote -outfmt 7 -max_target_seqs 10
-```
-
-```
-blastn -db nt -query dino_dna.fasta -out blast_report.txt -remote -outfmt 7 -max_target_seqs 10
-```
-
-```
-$ blastn -db nt -remote -query <(echo -e 'GGGAGCTTCCGGATTGAGCCGGAAGTCCCCCCAGAGCGGATGCCGCGGCGGGCCTGTGGGAGCGGGGTCATCTTCTCTCTGCTGCTGTAGCTGCCATGGGCAAAAGAGACCGAGCGGACCGCGACAAGAAGAAATCCAGGAAGCGGCACTATGAGGATGAAGAGGATGATGAAGAGGACGCCCCGGGGAACGACCCTCAGGAAGCGGTTCCCTCGGCGGCGGGGAAGCAGGTGGATGAGTCAGGCACCAAAGTGGATGAATATGGAGCCAAGGACTACAGGCTGCAAATGCCGCTGAAGGACGACCACACCTCCAGGCCC') -max_target_seqs 10 -outfmt 7
-# BLASTN 2.12.0+
-# Query:
-# RID: KZCXPDRG013
-# Database: nt
-# Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
-# 10 hits found
-Query_1	M31899.1	100.000	320	0	0	1	320	1	320	8.80e-165	592
-Query_1	XM_011510794.2	100.000	310	0	0	11	320	1	310	3.19e-159	573
-Query_1	AK300250.1	100.000	310	0	0	11	320	1	310	3.19e-159	573
-Query_1	XM_003828264.3	98.746	319	4	0	2	320	28	346	1.48e-157	568
-Query_1	XM_016949679.2	98.746	319	4	0	2	320	9	327	1.48e-157	568
-Query_1	XM_016949674.2	98.746	319	4	0	2	320	1	319	1.48e-157	568
-Query_1	XM_016949673.2	98.746	319	4	0	2	320	9	327	1.48e-157	568
-Query_1	XM_019022245.2	98.742	318	4	0	2	319	14	331	5.33e-157	566
-Query_1	XM_016949680.2	98.722	313	4	0	8	320	1	313	3.21e-154	556
-Query_1	XM_016949678.2	98.722	313	4	0	8	320	1	313	3.21e-154	556
-```
-
-Querying against GenBank using the `-remote` flag can be slow. We can also BLAST against a local copy of a GenBank database.
-
-Download the database
-
-Set up the link
-
-parse the file based on E-score
-based on num hits
-
-Then download accessions using efetch
-
-```
-cat align.txt  | tail -n11 | head -n10 | cut -f 2,3,4 | tr '\t' ','
-cat align.txt  | tail -n11 | head -n10 | cut -f 2,3,4 | tr '\t' ',' | sort -k 3 -t ','
-```
 
 ---
 
