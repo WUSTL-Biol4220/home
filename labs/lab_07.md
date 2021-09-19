@@ -15,9 +15,41 @@ The major components of this lab are:
 
 This section will demonstrate how to use BLAST (Basic Local Alignment Search Tool). The BLAST is often the first tool researchers use to identify *what* a sequence is and what it does. For example: do any known genes have similar content to this anonymous sequence? what is the expected function of this sequence? and, in what species do we find this gene?  To provide information that can help answer these types of questions, BLAST compares a query sequence to a database of target sequences, computes a BLAST score to assess how well the query and matches to each possible target sequence, and then returns those target sequences with the highest BLAST scores (sometimes called 'hits'). BLAST hits report the identities of matched sequences, the match scores, the significance scores, and so forth.
 
-Most researchers use NCBI's online interface to submit BLAST queries against GenBank records (https://blast.ncbi.nlm.nih.gov/Blast.cgi). BLAST is also available as a [command line tool](https://www.ncbi.nlm.nih.gov/books/NBK279690/), which is useful for scripting. However, the command line tool requires the local installation of a (large!) GenBank database to be used effectively. That being said, we'll use the web tool today.
+Most researchers use NCBI's online interface to submit BLAST queries against GenBank records (https://blast.ncbi.nlm.nih.gov/Blast.cgi). The goal of this exercise is to familiarize you with designing BLAST queries and interpreting BLAST output.
 
-Now for a problem. Suppose one of your more mischevious friends gives you a fasta file that they allege contains a DNA sequence from their talking pet dinosaur. Could it be true!?
+BLAST is also available as a [command line tool](https://www.ncbi.nlm.nih.gov/books/NBK279690/), which is useful for scripting. The command line tool, however, requires the local installation of a (large!) GenBank database to be used effectively. Because of that, we'll use the web tool today.
+
+*Problem 1.* Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool. This wil open a new interfact with a tab named `blastp` (i.e. BLAST for proteins) selected.
+
+Copy and paste the following amino acid sequence into the first text field, which reads "
+Enter accession number(s), gi(s), or FASTA sequence(s)".
+
+```
+> Mysterious_protein_sequence
+MSKRKAPQET LNGGITDMLT ELANFEKNVS QAIHKYNAYR KAASVIAKYP HKIKSGAEAK
+KLPGVGTKIA EKIDEFLATG KLRKLEKIRQ DDTSSSINFL TRVSGIGPSA ARKFVDEGIK
+TLEDLRKNED KLNHHQRIGL KYFGDFEKRI PREEMLQMQD IVLNEVKKVD SEYIATVCGS
+FRRGAESSGD MDVLLTHPSF TSESTKQPKL LHQVVEQLQK VHFITDTLSK GETKFMGVCQ
+LPSKNDEKEY PHRRIDIRLI PKDQYYCGVL YFTGSDIFNK NMRAHALEKG FTINEYTIRP
+LGVTGVAGEP LPVDSEKDIF DYIQWKYREP KDRSE
+```
+
+Read through the other options that you can set. A few are particularly interesting.
+
+Setting "Query subrange" allows you to limit the BLAST search to match only part of the query sequence, e.g. if you were interested in only matching a particular domain. This may help you allow you to more precisely predict the function of an anonymous protein.
+
+"Database" option allows you to focus your search for matches against a specific protein database. This is particularly useful if you are e.g. only interested in matching against model organisms, whose protein functions are most likely to have been studied experimentaly. Not only will selecting a specific database speed up your search, it will also decrease your average E-value, since smaller databases contain fewer samples, and therefore are less likely to generate matches that are false positives due to multiple testing. Setting "Organism" can limit your search even further.
+
+
+
+- What organism is this sequence from?
+- What gene is this sequence from?
+- Look up the gene and function.
+- Write down the accession number.
+
+
+
+Part 2.
 
 Print the content of your `dino_dna.fasta` to stdout, and then copy the printed text in your terminal to your clipboard. Next open the [BLAST website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the "Nucleotide BLAST" tool. Paste your text into the field entitled "Enter Query Sequence". At the bottom of the page, click "BLAST".
 
