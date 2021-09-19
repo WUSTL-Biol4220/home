@@ -125,7 +125,7 @@ Review the top 5 BLAST hits in the filtered results. Create a text file called `
 2. What range of E values do you see?
 3. What are the sequence descriptions for the best BLAST hits?
 4. What are genes like this often used for?
-5. This gene sequence appears on page 103 in "Jurassic Park" by Michael Crichton, apparently in reference to the DNA sequences the scientists used to bring extinct non-avian dinosaurs to life. Do you think it is likely that Crichton generated a random DNA sequence or used the DNA from a random gene for his book? Or do you think it is likely that the gene sequence Crichton published could somehow be involved in ressurrecting dinosaurs? Speculate wildly! But do try to give a defensible answer.
+5. This gene sequence appears on page 103 in "Jurassic Park" by Michael Crichton, apparently in reference to the DNA sequences the scientists used to bring extinct non-avian dinosaurs to life. Do you think it is likely that Crichton generated a random DNA sequence or used the DNA from a random gene for his book? Or do you think it is likely that the gene sequence Crichton published could somehow be involved in ressurrecting dinosaurs? Feel free to speculate wildly, but try to give a defensible answer.
 
 ---
 
