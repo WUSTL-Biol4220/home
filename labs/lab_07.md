@@ -5,13 +5,13 @@
 This lab will focus on retrieving fasta formatted sequences from GenBank, one of NCBI's Entrez databases. These techniques are useful when you need to generate a dataset for a set of organisms and genes. Although these scripts will only download nucleotide sequence information, the scripts could easily be adapted to compile different kinds of datasets (e.g. amino acid sequences, gene annotation features).
 
 The major components of this lab are:
-1. BLAST
+1. Exploring BLAST
 2. Basic uses for EDirect
 3. Scripting with EDirect
 
 ---
 
-## 1. BLAST
+## 1. Exploring BLAST
 
 This section will demonstrate how to use BLAST (Basic Local Alignment Search Tool). The BLAST is often the first tool researchers use to identify *what* a sequence is and what it does. For example: do any known genes have similar content to this anonymous sequence? what is the expected function of this sequence? and, in what species do we find this gene?  To provide information that can help answer these types of questions, BLAST compares a query sequence to a database of target sequences, computes a BLAST score to assess how well the query and matches to each possible target sequence, and then returns those target sequences with the highest BLAST scores (sometimes called 'hits'). BLAST hits report the identities of matched sequences, the match scores, the significance scores, and so forth.
 
@@ -40,21 +40,93 @@ Setting "Query subrange" allows you to limit the BLAST search to match only part
 
 "Database" option allows you to focus your search for matches against a specific protein database. This is particularly useful if you are e.g. only interested in matching against model organisms, whose protein functions are most likely to have been studied experimentaly. Not only will selecting a specific database speed up your search, it will also decrease your average E-value, since smaller databases contain fewer samples, and therefore are less likely to generate matches that are false positives due to multiple testing. Setting "Organism" can limit your search even further.
 
+Click the "BLAST" button to submit your query. It may take the NCBI servers 30-60 seconds to process your request.
 
+Upon completion, the website will display the query results. Scroll down to find the results table.
 
-- What organism is this sequence from?
-- What gene is this sequence from?
-- Look up the gene and function.
-- Write down the accession number.
+Review the top 5 BLAST hits. Create a text file called `part_1_problem_1_answers.txt` that contains answers to these questions:
+1. What range of Total Score values do you see?
+2. What range of E values do you see?
+3. What species does the (input) query sequence probably belong to?
+4. What gene does the query sequence belong to?
+5. What is the putative function for this gene?
+6. Relatively speaking, would you expect that this gene and its function evolves slowly or rapidly compared to other genes?
 
+*Problem 2.* Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool again. Paste the same `Mysertious_protein_sequence` into the text field.
 
+Do not click BLAST yet. Instead, expand the `+ Algorithm parameters` option at the bottom of the screen. Change "Max target sequences" from 100 to 1000 so more (worse) possible matches are returned. Change the "Word size" to 2, which requires fewer characters to initiate a possible match. Change the "Gap costs" to "Existence: 6, Extension: 2" which tells BLAST to allow for more gaps in its alignments. Change "Compositional adjustments" to "No adjustment" to tell BLAST to disregard what we know about the relative frequencies of amino acids. Lastly, uncheck "Low complexity regions" under "Filter" to tell BLAST to ignore segments of the protein that contain little information (e.g. proline-rich segments, acidic/basic regions).
 
-Part 2.
+These options should *worsen* our search. Now click BLAST. The query will take longer (60-120 seconds).
+
+Under the "Filter Results" box in the upper right, enter 50 to 60 in the "Percent Identity" option. Click Filter
+
+Review the top 5 BLAST hits in the filtered results. Create a text file called `part_1_problem_2_answers.txt` that contains answers to these questions:
+1. What range of Total Score values do you see?
+2. What range of E values do you see?
+3. What species were matched? Provide some context for how distantly related those species are relative to the species from which the query sequence probably originated.
+
+Click on the name of a sequence to inspect the BLAST alignment. You should see output that resembles this:
+```
+Query  2    SKRKAP--QETLNGGITDMLTELANFEKNVSQAIHKYNAYRKAASVIAKYPHKIKSGAEA  59
+            +KRK P  +  LN  + ++L E+A +E+NV++ +HKYNAYR AAS +AK+P KI SG+EA
+Sbjct  3    NKRKNPTSENNLNASVCELLLEIAEYERNVNRNVHKYNAYRNAASTLAKHPKKITSGSEA  62
+
+Query  60   KKLPGVGTKIAEKIDEFLATGKLRKLEKIRQDDTSSSINFLTRVSGIGPSAARKFVDEGI  119
+            KKL GVG+KI +KIDE++ TG++ K++KIR DDT+ +IN L RVSGIGP+ AR+ +++GI
+Sbjct  63   KKLKGVGSKIGDKIDEYIKTGEMGKVKKIRADDTNVAINLLARVSGIGPAKARELINDGI  122
+
+Query  120  KTLEDLRKNEDKLNHHQRIGLKYFGDFEKRIPREEMLQMQDIVLNEVKKVDSEYIATVCG  179
+             T+EDLRKN+DKLNHHQ IGLKYF DFE RIPR+E+  ++  +   + + DS+Y+ T+CG
+Sbjct  123  TTIEDLRKNQDKLNHHQIIGLKYFEDFELRIPRDEIKLIEKQLKEHIGEFDSKYLVTICG  182
+
+Query  180  SFRRGAESSGDMDVLLTHPSFTSESTKQPKLLHQVVEQLQKVHFITDTLSKGETKFMGVC  239
+            S+RRGA+SSGD+D LLTHPS+TSES+K P LL +V + L+    +TDTLS+G++KFMGVC
+Sbjct  183  SYRRGAKSSGDVDALLTHPSYTSESSKCPSLLSKVTQVLKDHGLVTDTLSQGDSKFMGVC  242
+
+Query  240  QLPSKNDEKEYPHRRIDIRLIPKDQYYCGVLYFTGSDIFNKNMRAHALEKGFTINEYTIR  299
+             L      +  PHRR+DIRL+P DQYYCG+LYFTGSD+FNK MR HAL+KGFT+NEY IR
+Sbjct  243  HL-----MEGLPHRRLDIRLLPHDQYYCGILYFTGSDMFNKAMRQHALDKGFTLNEYCIR  297
+
+Query  300  PLGVTGVAGEPLPVDSEKDIFDYIQWKYREPKDRS  334
+            P+G TGV GE LPV  E+DIFDYI + Y+EP +R+
+Sbjct  298  PVGSTGVPGEALPVSCERDIFDYIDYDYKEPHERN  332
+```
+
+The top line for each row (`Query`) reports the query sequence you initially provided. The bottom line (`Sbjct`) displays the content for the hit your are inspecting. The middle line indicates whether two amino acids at a given position are identical (letter), are functionally equivalent (`+`), or differ (` `; space). Positions that differ must be explained either by an amino acid substitution (letter on top/bottom sequences differ) or a gap (`-` on top/bottom sequence).
+
+*Problem 3.* Return to the BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi). This time, select the Nucleotide BLAST tool
+
+Paste your text into the field entitled "Enter Query Sequence".
+
+```
+>DinoDNA  "Dinosaur DNA" from Crichton JURASSIC PARK  p. 103 nt 1-1200
+GCGTTGCTGGCGTTTTTCCATAGGCTCCGCCCCCCTGACGAGCATCACAAAAATCGACGC
+GGTGGCGAAACCCGACAGGACTATAAAGATACCAGGCGTTTCCCCCTGGAAGCTCCCTCG
+TGTTCCGACCCTGCCGCTTACCGGATACCTGTCCGCCTTTCTCCCTTCGGGAAGCGTGGC
+TGCTCACGCTGTACCTATCTCAGTTCGGTGTAGGTCGTTCGCTCCAAGCTGGGCTGTGTG
+CCGTTCAGCCCGACCGCTGCGCCTTATCCGGTAACTATCGTCTTGAGTCCAACCCGGTAA
+AGTAGGACAGGTGCCGGCAGCGCTCTGGGTCATTTTCGGCGAGGACCGCTTTCGCTGGAG
+ATCGGCCTGTCGCTTGCGGTATTCGGAATCTTGCACGCCCTCGCTCAAGCCTTCGTCACT
+CCAAACGTTTCGGCGAGAAGCAGGCCATTATCGCCGGCATGGCGGCCGACGCGCTGGGCT
+GGCGTTCGCGACGCGAGGCTGGATGGCCTTCCCCATTATGATTCTTCTCGCTTCCGGCGG
+CCCGCGTTGCAGGCCATGCTGTCCAGGCAGGTAGATGACGACCATCAGGGACAGCTTCAA
+CGGCTCTTACCAGCCTAACTTCGATCACTGGACCGCTGATCGTCACGGCGATTTATGCCG
+CACATGGACGCGTTGCTGGCGTTTTTCCATAGGCTCCGCCCCCCTGACGAGCATCACAAA
+CAAGTCAGAGGTGGCGAAACCCGACAGGACTATAAAGATACCAGGCGTTTCCCCCTGGAA
+GCGCTCTCCTGTTCCGACCCTGCCGCTTACCGGATACCTGTCCGCCTTTCTCCCTTCGGG
+CTTTCTCAATGCTCACGCTGTAGGTATCTCAGTTCGGTGTAGGTCGTTCGCTCCAAGCTG
+ACGAACCCCCCGTTCAGCCCGACCGCTGCGCCTTATCCGGTAACTATCGTCTTGAGTCCA
+ACACGACTTAACGGGTTGGCATGGATTGTAGGCGCCGCCCTATACCTTGTCTGCCTCCCC
+GCGGTGCATGGAGCCGGGCCACCTCGACCTGAATGGAAGCCGGCGGCACCTCGCTAACGG
+CCAAGAATTGGAGCCAATCAATTCTTGCGGAGAACTGTGAATGCGCAAACCAACCCTTGG
+CCATCGCGTCCGCCATCTCCAGCAGCCGCACGCGGCGCATCTCGGGCAGCGTTGGGTCCT
+```
 
 Print the content of your `dino_dna.fasta` to stdout, and then copy the printed text in your terminal to your clipboard. Next open the [BLAST website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the "Nucleotide BLAST" tool. Paste your text into the field entitled "Enter Query Sequence". At the bottom of the page, click "BLAST".
 
 NCBI will then tell you that your BLAST search is underway (it normally takes 10-30 seconds to complete).
 
+`part_1_problem_2_answers.txt`
 
 ---
 
