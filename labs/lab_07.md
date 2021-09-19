@@ -19,7 +19,7 @@ Most researchers use NCBI's online interface to submit BLAST queries against Gen
 
 BLAST is also available as a [command line tool](https://www.ncbi.nlm.nih.gov/books/NBK279690/), which is useful for scripting. The command line tool, however, requires the local installation of a (large!) GenBank database to be used effectively. Because of that, we'll use the web tool today.
 
-*Problem 1.* Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool. This wil open a new interfact with a tab named `blastp` (i.e. BLAST for proteins) selected.
+**Problem 1.** Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool. This wil open a new interfact with a tab named `blastp` (i.e. BLAST for proteins) selected.
 
 Copy and paste the following amino acid sequence into the first text field, which reads "
 Enter accession number(s), gi(s), or FASTA sequence(s)".
@@ -52,7 +52,7 @@ Review the top 5 BLAST hits. Create a text file called `part_1_problem_1_answers
 5. What is the putative function for this gene?
 6. Relatively speaking, would you expect that this gene and its function evolves slowly or rapidly compared to other genes?
 
-*Problem 2.* Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool again. Paste the same `Mysertious_protein_sequence` into the text field.
+**Problem 2.** Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool again. Paste the same `Mysertious_protein_sequence` into the text field.
 
 Do not click BLAST yet. Instead, expand the `+ Algorithm parameters` option at the bottom of the screen. Change "Max target sequences" from 100 to 1000 so more (worse) possible matches are returned. Change the "Word size" to 2, which requires fewer characters to initiate a possible match. Change the "Gap costs" to "Existence: 6, Extension: 2" which tells BLAST to allow for more gaps in its alignments. Change "Compositional adjustments" to "No adjustment" to tell BLAST to disregard what we know about the relative frequencies of amino acids. Lastly, uncheck "Low complexity regions" under "Filter" to tell BLAST to ignore segments of the protein that contain little information (e.g. proline-rich segments, acidic/basic regions).
 
@@ -94,9 +94,7 @@ Sbjct  298  PVGSTGVPGEALPVSCERDIFDYIDYDYKEPHERN  332
 
 The top line for each row (`Query`) reports the query sequence you initially provided. The bottom line (`Sbjct`) displays the content for the hit your are inspecting. The middle line indicates whether two amino acids at a given position are identical (letter), are functionally equivalent (`+`), or differ (` `; space). Positions that differ must be explained either by an amino acid substitution (letter on top/bottom sequences differ) or a gap (`-` on top/bottom sequence).
 
-*Problem 3.* Return to the BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi). This time, select the Nucleotide BLAST tool
-
-Paste your text into the field entitled "Enter Query Sequence".
+**Problem 3.** Return to the BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi). This time, select the Nucleotide BLAST tool. Copy the text below and paste it into the "Enter Query Sequence" text field.
 
 ```
 >DinoDNA  "Dinosaur DNA" from Crichton JURASSIC PARK  p. 103 nt 1-1200
@@ -122,11 +120,12 @@ CCAAGAATTGGAGCCAATCAATTCTTGCGGAGAACTGTGAATGCGCAAACCAACCCTTGG
 CCATCGCGTCCGCCATCTCCAGCAGCCGCACGCGGCGCATCTCGGGCAGCGTTGGGTCCT
 ```
 
-Print the content of your `dino_dna.fasta` to stdout, and then copy the printed text in your terminal to your clipboard. Next open the [BLAST website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the "Nucleotide BLAST" tool. Paste your text into the field entitled "Enter Query Sequence". At the bottom of the page, click "BLAST".
-
-NCBI will then tell you that your BLAST search is underway (it normally takes 10-30 seconds to complete).
-
-`part_1_problem_2_answers.txt`
+Review the top 5 BLAST hits in the filtered results. Create a text file called `part_1_problem_3_answers.txt` that contains answers to these questions:
+1. What range of Total Score values do you see?
+2. What range of E values do you see?
+3. What are the sequence descriptions for the best BLAST hits?
+4. What are genes like this often used for?
+5. This gene sequence appears on page 103 in "Jurassic Park" by Michael Crichton, apparently in reference to the DNA sequences the scientists used to bring extinct non-avian dinosaurs to life. Do you think it is likely that Crichton generated a random DNA sequence or used the DNA from a random gene for his book? Or do you think it is likely that the gene sequence Crichton published could somehow be involved in ressurrecting dinosaurs? Speculate wildly! But do try to give a defensible answer.
 
 ---
 
@@ -320,8 +319,11 @@ $ wc files/*.fasta
 
 To submit your assignment, please commit and push the following files to your repository:
 ```
-find_accession.sh        # from problem 1
-fetch_accessions.sh      # from problem 2
-files/*.fasta            # the output from problem 2
+part_1_problem_1.txt     # answers for "good" run of blastp
+part_1_problem_2.txt     # answers for "bad" run of blastp
+part_1_problem_3.txt     # answers for Jurassic Park run w/ blastn
+find_accession.sh        # from problem 2
+fetch_accessions.sh      # from problem 3
+files/*.fasta            # the output from problem 3
 history.txt              # redirected from `history` command
 ```
