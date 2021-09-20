@@ -82,7 +82,7 @@ $ echo $PATH
 
 Let's create links for `muscle` and `prank`
 ```console
-cd ~/.local/bin
+$ cd ~/.local/bin
 $ ln -s ~/apps/muscle/muscle3.8.31_i86linux64 muscle
 $ ln -s ~/apps/prank/bin/prank prank
 ```
