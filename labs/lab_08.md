@@ -129,6 +129,8 @@ $ ln -s ~/apps/alan/alan alan
 
 Three sets of sequences are provided for this lab. We will focus on sequences that encode alcohol dehydrogenase (ADH) for highly divergent prokaryotic and eukaryotic species (`adh.fasta`). However, cytochrome B sequences for various turtle species (`testudines_cytB.fasta`) and ITS sequences for members of the Hawaiian silversword alliance (`silverswords_ITS.fasta`) are also available for experimentation. 
 
+### MUSCLE
+
 To begin, we will align `adh.fasta` using MUSCLE. MUSCLE supports fairly few options, but it is fast.
 
 ```
@@ -158,7 +160,11 @@ Alternatively, you can call use `alan` to view the alignment as nucleotides (`-n
 $ alan -n adh.muscle_it1.fasta
 ```
 
-Run MUSCLE again, this time for a maximum of 16 iterations. Increasing the number of iterations improves how likely it is that the resultant alignment is optimal alignment. Be sure to change the output file name so the earlier result is not overwritten.
+Increasing the number of iterations will allow MUSCLE to find a better global fit for the alignment score. Run MUSCLE again, this time for a maximum of 2 iterations. Then try 3, 4, 5, and 6 iterations. Be sure to change the output file name so the earlier result is not overwritten.
+
+How would you construct a pipeline with `cat`, `sort`, `uniq`, and `wc` to count how many lines differ between two fasta alignment files?
+
+### MAFFT
 
 MAFFT behaves similarly to MUSCLE, but MAFFT provides more features. Notably, the user can impose different gap-open (`--op`) and gap-extension (`--ep`) costs to the alignment algorithm. Run MAFFT under the following conditions.
 
@@ -171,6 +177,8 @@ $ mafft --op 0.0 --ep 0.0 adh.fasta > adh.mafft_op0_ep0.fasta        # op=0.0, e
 
 What happens when the value of `--op` is small? when it is large? What happens when the value of `--ep` is small? when it is large? What settings would you provide to MAFFT to generate an alignment that with very few, but very large, gaps? for an alignment with very many, but very small gaps?
 
+### PRANK
+
 Finally, we will run the phylogeny-aware alignment tool, PRANK. In contrast to the progressive aligners, MUSCLE and MAFFT, PRANK instead employs evolutionary rules ("tree-thinking") to determine what sequence variation is due to substitution, insertion, or deletion. We will generate alignments manually under several
 ```
 $ prank -d=adh.fasta -o=adh.prank_default                                        # gaprate=0.025 gapext=0.75 (default)
@@ -182,7 +190,6 @@ prank -iterate= # number of repeated tries
 ```
 
 Construct a Unix command to measure the number of positions in the alignment. Construct another command to count the number of gaps in the alignment. What is the length of each alignment? How many gaps does each alignment contain?
-
 
 ---
 
