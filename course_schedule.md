@@ -12,8 +12,8 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Sep 06 | -- | -- | -- | **No class: Labor Day** |
 |         | Wed, Sep 08 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_03.pdf">Lecture 03</a> | [Lab 03](labs/lab_03.md) | CSB 2.1 - 2.5 | Unix: git |
 |         | Mon, Sep 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_04.pdf">Lecture 04</a> | [Lab 04](labs/lab_04.md)  | CSB 1.5.2 - 1.6.6 | Unix: text, pipes, redirects |
-|  :dna:  | Wed, Sep 15 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_05.pdf">Lecture 05</a> | [Lab 05](labs/lab_05.md) | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
-|         | Mon, Sep 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_06.pdf">Lecture 06</a> | [Lab 06](labs/lab_06.md) | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
+|         | Wed, Sep 15 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_05.pdf">Lecture 05</a> | [Lab 05](labs/lab_05.md) | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
+|  :dna:  | Mon, Sep 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_06.pdf">Lecture 06</a> | [Lab 06](labs/lab_06.md) | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
 |         | Wed, Sep 22 | Lecture 07 | Lab 07 | -- | Biology: GenBank, BLAST |
 |         | Mon, Sep 27 | Lecture 08 | Lab 08 | -- | Biology: molecular sequence alignment |
 |         | Wed, Sep 29 | Lecture 09 | Lab 09 | -- | Unix: regular expressions, regex match |
