@@ -179,7 +179,7 @@ In this final step for Lab 05, you will write several pipelines that can be used
 
 **Problem 2.** Write a pipeline to find all `.fasta` files in the local directory or in any of its subdirectories (at any depth), then print only the first part of each filename -- e.g. if a file was found at `data/seq/cytB.fasta`, then the pipeline should only print `cytB`. Find files in the `data` directory to produce `output.txt`.
 
-**Problem 3.** Write a pipeline to retrieve all of the sequence data from a fasta-formatted file, convert all lowercase basepairs to uppercase, convert all basepairs for thymine (T) to the uracil (U), replace each basepair with its base complement, then print the result sequence data. *(Biology note: Each nucleotide has a natural base complement on a DNA [or RNA] molecule. The complement for A is T [or U], for T [or U] is A, for C is G, and for G is C.)* Use the file `data/Marra2014_data.fasta` to produce `output.txt`.
+**Problem 3.** Write a pipeline to retrieve all of the sequence data from a fasta-formatted file, convert all lowercase basepairs to uppercase, convert all basepairs for thymine (T) to the uracil (U), replace each basepair with its base complement, then print the resulting sequence data. *(Biology note: Each nucleotide has a natural base complement on a DNA [or RNA] molecule. The complement for A is T [or U], for T [or U] is A, for C is G, and for G is C.)* The output does not need to contain the fasta-style sequence headers (i.e. the lines that begin with `>`). Use the file `data/Marra2014_data.fasta` to produce `output.txt`.
 
 
 ---
