@@ -22,12 +22,12 @@ This part of the lab will give you some basic exposure to the local installation
 
 Once the binary is on your filesystem, the next task is to ensure the binary file itself or a shortcut (*symbolic link*) to the file is located in one of the directories defined in your `PATH`. The `PATH` variable is an environmental variable that is initialized every time you log in to your account. When you type a command, like `ls`, Unix will recognize that command as the first binary discovered in any directories listed in `PATH`. Most Unix systems recognize the directory `~/.local/bin` in `PATH`, which is where we will place copies or links to our alignment programs.
 
-However, your VM does not have this `~/.local/bin` directory by default, so we will need to create it for it to be recognized in `PATH`
+Your operating system should already contain the `~/.local/bin` directory by default. You can use the following command to silently create the directory and all necessary subdirectories if, for some reason, it is missing.
 ```console
 $ mkdir -p ~/.local/bin
 ```
 
-After creating this new directory, we'll need to refresh your *user profile* settings. By default, your profile settings are determined when you log in to a new shell session by loading (or *sourcing*) the settings in the `~/.profile` file. Your profile file customizes your user account, such as how you want the command line interface to appear and behave, how command shortcuts ("aliases") are defined, and what values are assigned to environmental variables. We want the `PATH` variable to contain an entry for our new `~/.local/bin` directory. If you view the last lines of `~/.profile`, you'll see that it adds `~/.local/bin` to `PATH` if `~/.local/bin` exists.
+Because there is a chance that you created this new directory, we need to refresh your *user profile* settings. By default, your profile settings are determined when you log in to a new shell session by loading (or *sourcing*) the settings in the `~/.profile` file. Your profile file customizes your user account, such as how you want the command line interface to appear and behave, how command shortcuts ("aliases") are defined, and what values are assigned to environmental variables. We want the `PATH` variable to contain an entry for our new `~/.local/bin` directory. If you view the last lines of `~/.profile`, you'll see that it adds `~/.local/bin` to `PATH` if `~/.local/bin` exists
 
 To update your `PATH`, you can either log-off then log back on to your user account, or call the command
 ```
@@ -36,14 +36,15 @@ $ source ~/.profile
 
 Now, we can begin installing our alignment software. First, we'll install MUSCLE. Create a new directory for the program, then download the installation files.
 
-```
+```console
 $ mkdir -p ~/apps/muscle
 $ cd ~/apps/muscle
 $ wget https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux64.tar.gz
 ```
 
 Files with the `.tar.gz` extension are archived into a single file (`.tar`) and zipped (`.gz`) as what's colloquially known as a *tarball*. We can unzip and decompress this tarball with the command `tar zxcf <tarball_file>`. In order, the options `zxvf` signify: un**z**ip the file, e**x**tract the files from the archive, print all filenames **v**erbosely, and that the argument is the input **f**ilename.
-```
+
+```console
 $ tar zxvf muscle3.8.31_i86linux64.tar.gz
 $ ls -lart muscle3.8.31_i86linux64
 -rwxr-xr-x 1 mlandis mlandis 1058280 Oct  2 20:17 muscle3.8.31_i86linux64
@@ -53,16 +54,16 @@ Notice that the unzipped and extracted MUSCLE program permissions already allow 
 
 Next, we'll download the PRANK tarball, which contains the executable binaries for both the PRANK program itself, and for the MAFFT program. These programs can be installed and made accesible following a procedure that's similar to how we installed MUSCLE
 
-```
+```console
 $ cd ~/apps
 $ wget http://wasabiapp.org/download/prank/prank.linux64.170427.tgz
 $ tar zxvf prank.linux64.170427.tgz
-$ ls -lart prank/bin
+$ ls -lart prank/bin/prank
 -rwx------ 1 mlandis mlandis 1138736 Jul  3  2017 prank
 ```
 
 Finally, download and unzip the software for MAFFT
-```
+```console
 $ cd ~/apps
 $ wget https://mafft.cbrc.jp/alignment/software/mafft-7.471-linux.tgz
 $ tar zxvf mafft-7.471-linux.tgz
@@ -72,7 +73,7 @@ $ ls -lart mafft-linux64/mafft.bat
 
 We might like to be able to execute these programs, by name, from anywhere in the filesystem. Programs located in any directory listed in the environmental variable called `PATH` can be excuted from anywhere in the filesystem.
 
-```
+```console
 $ echo $PATH
 /home/mlandis/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mlandis/edirect
 ```
@@ -80,20 +81,21 @@ $ echo $PATH
 `PATH` directories are separated by the `:` delimiter. In addition, `PATH` directories are explored from left to right when searching for a binary. Notice that the first directory in `PATH` is `/home/mlandis/.local/bin`. That directory is nested inside `HOME` directory, meaning every user can write files in that directory. Local installations of custom software will often involve moving or copying the binary for the program to `~/.local/bin`, or by creating a symbolic link within `~/.local/bin` to the binary.
 
 Let's create links for `muscle` and `prank`
-```
-cd ~/.local/bin
+```console
+$ cd ~/.local/bin
 $ ln -s ~/apps/muscle/muscle3.8.31_i86linux64 muscle
 $ ln -s ~/apps/prank/bin/prank prank
 ```
 
 Installing MAFFT is more involved, largely because MAFFT requires access to various utilities located in `~/apps/mafft-linux64/mafftdir` to run properly. Rather than creating a symbolic link to the file `~/apps/mafft-linux64/mafft.bat`, we will copy that file and its directory of utilities into the `.local/bin` directory.
 
-```
-$ cp mafft-linux64/mafft.bat ~/.local/bin/mafft
-$ cp -R mafft-linux64/mafftdir ~/.local/bin/mafftdir
+```console
+$ cp ~/apps/mafft-linux64/mafft.bat ~/.local/bin/mafft
+$ cp -R ~/apps/mafft-linux64/mafftdir ~/.local/bin/mafftdir
 ```
 
 When listing files, symbolic links are identified as `link_name -> actual_link_target` when calling `ls -lart`.  Listing our three new programs in `~/.local/bin` shows that `muscle` and `prank` are symbolic links, while `mafft` is an actual file. In fact, if you open `~/.local/bin/mafft` in `nano`, you'll discover it's a shell script!
+
 ```console
 $ cd ~/.local/bin
 $ ls -lart muscle
@@ -127,6 +129,8 @@ $ ln -s ~/apps/alan/alan alan
 
 Three sets of sequences are provided for this lab. We will focus on sequences that encode alcohol dehydrogenase (ADH) for highly divergent prokaryotic and eukaryotic species (`adh.fasta`). However, cytochrome B sequences for various turtle species (`testudines_cytB.fasta`) and ITS sequences for members of the Hawaiian silversword alliance (`silverswords_ITS.fasta`) are also available for experimentation. 
 
+### MUSCLE
+
 To begin, we will align `adh.fasta` using MUSCLE. MUSCLE supports fairly few options, but it is fast.
 
 ```
@@ -156,7 +160,11 @@ Alternatively, you can call use `alan` to view the alignment as nucleotides (`-n
 $ alan -n adh.muscle_it1.fasta
 ```
 
-Run MUSCLE again, this time for a maximum of 16 iterations. Increasing the number of iterations improves how likely it is that the resultant alignment is optimal alignment. Be sure to change the output file name so the earlier result is not overwritten.
+Increasing the number of iterations will allow MUSCLE to find a better global fit for the alignment score. Run MUSCLE again, this time for a maximum of 2 iterations. Then try 3, 4, 5, and 6 iterations. Be sure to change the output file name so the earlier result is not overwritten.
+
+How would you construct a pipeline with `cat`, `sort`, `uniq`, and `wc` to count how many lines differ between two fasta alignment files?
+
+### MAFFT
 
 MAFFT behaves similarly to MUSCLE, but MAFFT provides more features. Notably, the user can impose different gap-open (`--op`) and gap-extension (`--ep`) costs to the alignment algorithm. Run MAFFT under the following conditions.
 
@@ -169,6 +177,8 @@ $ mafft --op 0.0 --ep 0.0 adh.fasta > adh.mafft_op0_ep0.fasta        # op=0.0, e
 
 What happens when the value of `--op` is small? when it is large? What happens when the value of `--ep` is small? when it is large? What settings would you provide to MAFFT to generate an alignment that with very few, but very large, gaps? for an alignment with very many, but very small gaps?
 
+### PRANK
+
 Finally, we will run the phylogeny-aware alignment tool, PRANK. In contrast to the progressive aligners, MUSCLE and MAFFT, PRANK instead employs evolutionary rules ("tree-thinking") to determine what sequence variation is due to substitution, insertion, or deletion. We will generate alignments manually under several
 ```
 $ prank -d=adh.fasta -o=adh.prank_default                                        # gaprate=0.025 gapext=0.75 (default)
@@ -180,7 +190,6 @@ prank -iterate= # number of repeated tries
 ```
 
 Construct a Unix command to measure the number of positions in the alignment. Construct another command to count the number of gaps in the alignment. What is the length of each alignment? How many gaps does each alignment contain?
-
 
 ---
 
