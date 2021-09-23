@@ -274,7 +274,7 @@ The script should return these results when called with these arguments:
 $ ./find_accession.sh 'Viburnum rufidulum' 'rbcL'
 Viburnum rufidulum,rbcL,KY627132,557
 $ ./find_accession.sh 'Viburnum rufidulum' 'rbcL' '1300:1400'
-Viburnum rufidulum,rbcL,KJ773975,1323
+Viburnum rufidulum,rbcL,HQ591761,1323
 ```
 
 **Problem 2.** Write a second script called `fetch_accessions.sh` that downloads and organizes sequences when provided a file containing species names (argument 1) and a file with gene names (argument 2). The species file simply contains a list of species, one-per-row. 
@@ -302,15 +302,15 @@ Running the script using the above `my_species.txt` and `my_genes.txt` files as 
 ```console
 $ ./fetch_accessions.sh my_species.txt my_genes.txt files
 $ ls files
-Viburnum_clemensiae_matK_HQ591569.fasta  Viburnum_dentatum_matK_KJ773225.fasta  Viburnum_rufidulum_matK_MH551948.fasta
-Viburnum_clemensiae_rbcL_HQ591714.fasta  Viburnum_dentatum_rbcL_KJ773973.fasta  Viburnum_rufidulum_rbcL_KJ773975.fasta
+Viburnum_clemensiae_matK_HQ591569.fasta  Viburnum_dentatum_matK_HQ591574.fasta  Viburnum_rufidulum_matK_MH551948.fasta
+Viburnum_clemensiae_rbcL_HQ591714.fasta  Viburnum_dentatum_rbcL_HQ591718.fasta  Viburnum_rufidulum_rbcL_HQ591761.fasta
 $ wc files/*.fasta
   12   23  841 files/Viburnum_clemensiae_matK_HQ591569.fasta
   21   33 1474 files/Viburnum_clemensiae_rbcL_HQ591714.fasta
-  11   20  740 files/Viburnum_dentatum_matK_KJ773225.fasta
-  20   31 1468 files/Viburnum_dentatum_rbcL_KJ773973.fasta
+  11   20  740 files/Viburnum_dentatum_matK_HQ591574.fasta
+  20   31 1468 files/Viburnum_dentatum_rbcL_HQ591718.fasta
   12   24  859 files/Viburnum_rufidulum_matK_MH551948.fasta
-  20   31 1473 files/Viburnum_rufidulum_rbcL_KJ773975.fasta
+  20   31 1473 files/Viburnum_rufidulum_rbcL_HQ591761.fasta
   96  162 6855 total
 ```
 
