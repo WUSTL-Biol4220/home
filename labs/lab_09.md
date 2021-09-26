@@ -40,7 +40,7 @@ Merrily, merrily, merrily, merrily
 
 You will be asked to write a script to solve each of the following problems. That script may either contain a simple pipeline command, or it may contain more advanced shell programming structures, but all scripts must centrally rely on `grep` and regex to solve the problem at hand.
 
-**Problem 1.** Write a script called `problem1.sh` that accepts a list of Genbank accessions as input, then labels each accession as a nucleotide, protein, WGS, or MGA record. GenBank accessions differ in format depending on whether an accession identifies a nucleotide sequence, a protein sequence, or a whole genome sequence.
+**Problem 1.** Write a script called `problem1.sh` that accepts a list of Genbank accessions as input, then labels each accession as a nucleotide, protein, WGS, or MGA record. If the accesion is not one of these, then do not return aything for that acession. GenBank accessions differ in format depending on whether an accession identifies a nucleotide sequence, a protein sequence, or a whole genome sequence.
 
 From https://www.ncbi.nlm.nih.gov/Sequin/acc.html:
 
