@@ -92,7 +92,7 @@ mhc class i antigen b*46
 mhc class ii antigen drb1*1
 ```
 
-**Problem 3.** Write a script called `problem3.sh` that searches *Origin of Species* for certain classes of words. Download the plain text file for *Origin of Species* from the URL http://www.gutenberg.org/cache/epub/2009/pg2009.txt, and save the file as `oos.txt`. Your script will process `oos.txt` and print a sorted list of the five most common words that begin with a "c" and end with a "d", ignoring upper/lower case.
+**Problem 3.** Write a script called `problem3.sh` that searches *Origin of Species* for certain classes of words. Download the plain text file for *Origin of Species* from the URL https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt, and save the file as `oos.txt`. Your script will process `oos.txt` and print a sorted list of the five most common words that begin with a "c" and end with a "d", ignoring upper/lower case.
 Expected results:
 ```
  217 could
