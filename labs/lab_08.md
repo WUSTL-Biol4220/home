@@ -189,7 +189,7 @@ $ prank -gaprate=0.001 -gapext=0.001 -d=adh.fasta -o=adh.prank_open0001_ext0001
 prank -iterate= # number of repeated tries
 ```
 
-Using separate Unix commands that we previously learned in class, try to find the number of sequences (rows) and sites (columns) in the alignment. Construct another command to count the number of gaps (`-` characters) in the alignment. 
+Try using previously learned Unix commands to find the number of sequences (rows) and sites (columns) in an alignment. Construct another command to count the number of gaps (`-` characters) in the alignment. If that is difficult, try using the `grep -o` command as part of a pipeline to find those counts. Type `man grep` to learn exactly what `grep -o` does, but briefly it outputs every match against the search pattern, one per line.
 
 ---
 
