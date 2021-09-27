@@ -189,7 +189,7 @@ $ prank -gaprate=0.001 -gapext=0.001 -d=adh.fasta -o=adh.prank_open0001_ext0001
 prank -iterate= # number of repeated tries
 ```
 
-Construct a Unix command to measure the number of positions in the alignment. Construct another command to count the number of gaps in the alignment. What is the length of each alignment? How many gaps does each alignment contain?
+Using separate Unix commands that we previously learned in class, try to find the number of sequences (rows) and sites (columns) in the alignment. Construct another command to count the number of gaps (`-` characters) in the alignment. 
 
 ---
 
