@@ -59,7 +59,7 @@ $ cd ~/apps
 $ wget http://wasabiapp.org/download/prank/prank.linux64.170427.tgz
 $ tar zxvf prank.linux64.170427.tgz
 $ ls -lart prank/bin/prank
--rwx------ 1 mlandis mlandis 1138736 Jul  3  2017 prank
+-rwx------ 1 mlandis mlandis 1138736 Jul  3  2017 prank/bin/prank
 ```
 
 Finally, download and unzip the software for MAFFT
