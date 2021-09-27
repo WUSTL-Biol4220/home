@@ -14,8 +14,8 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Sep 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_04.pdf">Lecture 04</a> | [Lab 04](labs/lab_04.md)  | CSB 1.5.2 - 1.6.6 | Unix: text, pipes, redirects |
 |         | Wed, Sep 15 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_05.pdf">Lecture 05</a> | [Lab 05](labs/lab_05.md) | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
 |         | Mon, Sep 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_06.pdf">Lecture 06</a> | [Lab 06](labs/lab_06.md) | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
-|  :dna:  | Wed, Sep 22 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_07.pdf">Lecture 07</a> | [Lab 07](labs/lab_07.md) | <a href="https://www.nature.com/scitable/topicpage/basic-local-alignment-search-tool-blast-29096/">BLAST overview</a><br><a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/">EDirect tools</a><br>(optional) | Biology: GenBank, BLAST |
-|         | Mon, Sep 27 | Lecture 08 | Lab 08 | -- | Biology: molecular sequence alignment |
+|         | Wed, Sep 22 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_07.pdf">Lecture 07</a> | [Lab 07](labs/lab_07.md) | <a href="https://www.nature.com/scitable/topicpage/basic-local-alignment-search-tool-blast-29096/">BLAST overview</a><br><a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/">EDirect tools</a><br>(optional) | Biology: GenBank, BLAST |
+|  :dna:  | Mon, Sep 27 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_08.pdf">Lecture 08</a> | [Lab 08](labs/lab_08.md) | -- | Biology: molecular sequence alignment |
 |         | Wed, Sep 29 | Lecture 09 | Lab 09 | -- | Unix: regular expressions, regex match |
 |         | Mon, Oct 04 | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Wed, Oct 06 | Lecture 11 | Lab 11 | -- | Biology: molecular phylogenetics <br>**Course project: overview** | 
