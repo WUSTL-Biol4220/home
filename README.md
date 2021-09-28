@@ -24,10 +24,10 @@ Instructor
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
 * Office hours: 3:00pm - 4:00pm on Thu
-* Office room: 210 Rebstock *with appointment*
+* Office room: Rebstock 210
 
 Graduate Student Instructor
 * Name: Nathan Wamsley
 * Email: n.t.wamsely@wustl.edu
-* Office hours: TBD
-* Office room: TBD
+* Office hours: Available by appointment on most afternoons and on Tuesday morning.
+* Office room: McDonnell Sciences Suite 406 (or Zoom)

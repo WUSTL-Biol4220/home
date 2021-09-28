@@ -43,7 +43,7 @@ For the following tasks, report lines that contain 1+ instances of following mot
 - *Task 3:* Report all instances of motifs that repeat `xA` between 5 and 6 times, and are flanked by the basepair `C` on both sides; only list the repeating region, not the flanking region. For example, `CTATATATATAC` would match, and the printed motif would be `TATATATATA`. The motif `CGATAGACATAC` would match, and be printed as `GATAGACATA`. The motif `CTATATATATAG` would not match.
 - *Task 4:* Report all lines that begin with `ATG` and end with `TAT`, `GAA`, or `CGA`. However, only print the first and last the nucleotides for the matched line in the output. For example if a line read `ATGCAGTATAGGACCATAGATACAGATATGGTAAGACCGA`, then the printed text for the motif should read `ATGCGA`.
 
-**Problem 3.** Write a script named `problem3.sh` to organize the chapter descriptions in *Origin of Species*. *Origin of Species* can be download from http://www.gutenberg.org/cache/epub/2009/pg2009.txt.
+**Problem 3.** Write a script named `problem3.sh` to organize the chapter descriptions in *Origin of Species*. *Origin of Species* can be download from https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt.
 
 Your script will reformat the descriptions for each Chapter listed after `CONTENTS.` and before `  GLOSSARY OF SCIENTIFIC TERMS.` For example, the original text for the Chapter 2 title (`VARIATION UNDER NATURE.`) and topics (e.g. `Variability`, `Individual Differences`, ...) appear as
 ```
