@@ -20,6 +20,8 @@ We will install four pieces of phylogenetics software for this lab.
 FastTree (http://www.microbesonline.org/fasttree/) is phylogenetic inference software specializes in rapidly inferring molecular phylogenies using a variety of inference methods. For the purposes of our lab, we'll use FastTree to infer phyologenies using the distance-based neighbor-joining algorithm.
 
 ```
+$ mkdir ~/fasttree
+$ cd ~/fasttree
 $ wget http://www.microbesonline.org/fasttree/FastTree
 $ chmod +x FastTree
 $ cp FastTree ~/.local/bin/fasttree
@@ -45,15 +47,15 @@ MPBoot (http://www.iqtree.org/mpboot/), which is also written by the authors of 
 $ cd ~/apps
 $ wget http://www.iqtree.org/mpboot/mpboot-avx-1.1.0-Linux.tar.gz
 $ tar zxvf mpboot-avx-1.1.0-Linux.tar.gz
-$  cp ~/apps/mpboot-avx-1.1.0-Linux/bin/mpboot-avx ~/.local/bin/mpboot
+$ cp ~/apps/mpboot-avx-1.1.0-Linux/bin/mpboot-avx ~/.local/bin/mpboot
 ```
 
 ### Installing newick_utils
 
-Finally, we will us the software Newick Utilities (http://cegg.unige.ch/newick_utils) to visualize what trees we estimate using these three phylogenetic methods.
+Finally, we will us the software Newick Utilities (https://github.com/tjunier/newick_utils) to visualize what trees we estimate using these three phylogenetic methods.
 ```
 $ cd ~/apps
-$ wget http://cegg.unige.ch/pub/newick-utils-1.6-Linux-x86_64-disabled-extra.tar.gz
+$ wget https://github.com/WUSTL-Biol4220/home/raw/main/assets/files/newick-utils-1.6-Linux-x86_64-disabled-extra.tar.gz
 $ tar zxvf newick-utils-1.6-Linux-x86_64-disabled-extra.tar.gz
 # ... decompresses and extracts many files ...
 $ cp ~/apps/newick-utils-1.6/src/nw_* ~/.local/bin
