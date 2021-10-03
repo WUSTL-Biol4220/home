@@ -71,7 +71,7 @@ Phylogenetic trees are generally represented either as human-readable visualizat
 
 Newick strings are compact and computer-readable formats for storing phylogenetic relationships. The simplest features of a Newick string report the phylogenetic relationships (or *topology*) of the taxa:
 
-For example, suppose we have the file `simple_newick.tre`
+For example, suppose we create a file `simple_newick.tre` with the following contents
 ```
 $ cat simple_newick.tre
 ((A,B),(C,D));
@@ -113,12 +113,14 @@ How does the Newick string relate to the visualization?
 
 Newick strings typically report richer information, including the amount of molecular divergence (*branch lengths* measured in expected numbers of substitution per site) or the degree of statistical support for recovering a certain phylogenetic relationship (called *clade support*)
 
-The topology of `richer_newick.tre` is the same as `simple_newick.tre`, but it is annotated with branch lengths and clade support values:
+Create a file called `richer_newick.tre` with the following contents:
+
 ```
 $ cat richer_newick.tre
 ((A:0.1,B:0.2)0.75:0.3,(C:0.3,D:0.2)0.9:0.2);
 ```
-or, in expanded format,
+
+The topology of `richer_newick.tre` is the same as `simple_newick.tre`, but it is annotated with branch lengths and clade support values. It can be viewed in in expanded format,
 
 ```
 $ nw_indent richer_newick.tre
@@ -134,7 +136,7 @@ $ nw_indent richer_newick.tre
 );
 ```
 
-which can be visualized as
+can be also visualized as
 
 ```
 $ nw_display richer_newick.tre
@@ -259,4 +261,10 @@ then run `batch_phylo.sh input_sequences.txt`.
 
 ---
 
-Submit the scripts `build_phylo.sh` and `batch_phylo.sh` and all content in `./output` to GitHub.
+Submit the the following files to complete the assignment:
+- `simple_newick.tre`
+- `richer_newick.tre`
+- `build_phylo.sh`
+- `batch_phylo.sh`
+- the `output` directory and its contents
+- the output of `history > history.txt`
