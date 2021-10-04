@@ -2,7 +2,7 @@
 
 *Lab 10 GitHub Classroom link:* to be provided
 
-In the previous lab, we explored how to use the `grep` command with regular expressions to search and print general text patterns found within a text file or stream. Refer to the Lecture 05A for a review on regular expressions for search patterns.
+In the previous lab, we explored how to use the `grep` command with regular expressions to search and print general text patterns found within a text file or stream. Refer to the Lecture 09 for a review on regular expressions for search patterns.
 
 Regular expressions may also be used to *find and replace* content within text files or streams. Among Unix tools, the `sed` command is the simplest, most flexible, and most widely proliferated tool. Lecture 10 provides an overview of how to construct various stream editing commands using `sed`, including find-and-replace commands.
 
