@@ -70,7 +70,7 @@ Chapter titles and topics should be reformatted to appear as
 ```
 where Chapter 2 would be printed between Chapters 1 and 3 in the output. Number and title each chapter entry. Within each chapter, use two spaces and a hyphen (`  -`) to list chapter topics. Only print the first 40 characters of each topic description. Topics with more than 40 characters will instead be terminated with `[...]` rather than the remaining text.
 
-Consider using `grep -n` in combination with `sed 'a,b p' oos.txt` to extract the raw text describing the chapters in `oos.txt`. Use `tr` to reformat each list of chapter topics into a single line of text, then use `tr` again to split the topics against the `-` delimiter. To truncate the topic descriptions to 40 characters, this can be done with `sed` and backreferences.
+Consider using `grep -n` in combination with `sed 'a,b p' oos.txt` to extract the raw text describing the chapters in `oos.txt`. Use `tr` to reformat each list of chapter topics into a single line of text, then use `tr` again with `cut` to split the topics against the `-` delimiter. To truncate the topic descriptions to 40 characters, this can be done with `sed` and backreferences.
 
 
 **For Problem 3**, at a minimum, you should be able to produce a list of topics, separated by line, and abbreviated to <40 characters, for the text found in Chapter 2. If that is easy for you, then try to additionally collect the number and chapter for a given set of topics. Finally, try to write a script that re-organizes all chapter numbers, titles, and topics as above.
