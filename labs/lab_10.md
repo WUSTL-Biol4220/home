@@ -1,6 +1,6 @@
 # Lab 10
 
-*Lab 10 GitHub Classroom link:* to be provided
+*Lab 10 GitHub Classroom link:* https://classroom.github.com/a/BlDjHtUt
 
 In the previous lab, we explored how to use the `grep` command with regular expressions to search and print general text patterns found within a text file or stream. Refer to the Lecture 09 for a review on regular expressions for search patterns.
 
