@@ -157,7 +157,9 @@ What new features in the richer Newick string require description?
 - The colon and number that immediately follows each node in the tree tells us the branch length for that lineage. For example, `A:0.1` indicates that the branch length for A is 0.1 expected substitutions/site.
 - Internal nodes, identified by `)` characters in the Newick string, are marked with two pieces of information. For example, the clade that contains taxa and and B is defined by `(A:0.1,B:0.2)0.75:0.3`. This part of the string tells us that the clade (A+B) has a support metric of 75% and a branch length of 0.3 expected substitutions/site.
 
-Read the contents of `richer_newick.tre` carefully and make sure you understand how each part of the Newick string relates the the `nw_display` visualization.
+Read the contents of `richer_newick.tre` carefully and make sure you understand how each part of the Newick string relates to the `nw_display` visualization. 
+
+
 
 ---
 
