@@ -2,6 +2,8 @@
 
 *Lab 10 GitHub Classroom link:* https://classroom.github.com/a/BlDjHtUt
 
+**(Note: Problem 2, Task 3 previously asked you to find motifs with 5 to 6 repeat units (e.g. GACATAGATACA). You should now search for motifs with 3 to 4 repeat units.)**
+
 In the previous lab, we explored how to use the `grep` command with regular expressions to search and print general text patterns found within a text file or stream. Refer to the Lecture 09 for a review on regular expressions for search patterns.
 
 Regular expressions may also be used to *find and replace* content within text files or streams. Among Unix tools, the `sed` command is the simplest, most flexible, and most widely proliferated tool. Lecture 10 provides an overview of how to construct various stream editing commands using `sed`, including find-and-replace commands.
@@ -40,7 +42,7 @@ For the following tasks, report lines that contain 1+ instances of following mot
 
 - *Task 1:* Report all instances of the motifs `GATTACA` or `CATTACA`.
 - *Task 2:* Report all instances of motifs that are 10 basepairs in length, begin with `AAA` and end with `TTT` and contain no `C`s. For example, `AAAGATTTTT` would match, but `AAACCGTTTT` would not.
-- *Task 3:* Report all instances of motifs that repeat `xA` between 3 and 4 times, and are flanked by the basepair `C` on both sides; only list the repeating region, not the flanking region. For example, `CGAGACATAC` would match, and the printed motif would be `GAGACATA`. The motif `CCATAGAC` would match, and be printed as `CATAGA`. The motifs `CTATATAG` and `CTATATATATAC` would not match.
+- *Task 3:* Report all instances of motifs that repeat the pair of nucleotides `xA` between 3 and 4 times, and are flanked by the basepair `C` on both sides; only list the repeating region, not the flanking region. For example, `CGAGACATAC` would match, and the printed motif would be `GAGACATA`. The motif `CCATAGAC` would match, and be printed as `CATAGA`. The motifs `CTATATAG` and `CTATATATATAC` would not match.
 - *Task 4:* Report all lines that begin with `ATG` and end with `TAT`, `GAA`, or `CGA`. However, only print the first and last the nucleotides for the matched line in the output. For example if a line read `ATGCAGTATAGGACCATAGATACAGATATGGTAAGACCGA`, then the printed text for the motif should read `ATGCGA`.
 
 **Problem 3.** Write a script named `problem3.sh` to organize the chapter descriptions in *Origin of Species*. *Origin of Species* can be download from https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt.
