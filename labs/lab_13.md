@@ -330,4 +330,4 @@ This problem can be solved in multiple ways. One way is to use three nested for-
 
 **Problem 3.** Write a Python script that converts a sequence of numbers into a sequence of alphabetical characters. The script expects any number of integers (valued 1 to 26) as an argument. Taking each number in the arguments, the script then converts that number into the letter in the corresponding position in the alphabet. For example, if the script was called as `./problem3.sh 3 1 20` would print `cat`, and `/problem3.sh 16 25 20 8 15 14` would print `python`.
 
-To complete the lab, commit and push your three scripts to your GitHub repository.
+To complete the lab, commit and push your three scripts and a log of your history to your GitHub repository.
