@@ -21,7 +21,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |  :dna:  | Wed, Oct 06 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_11.pdf">Lecture 11</a> | [Lab 11](labs/lab_11.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Mon, Oct 11 | -- | -- | -- | **No class: Fall Break** |
 |         | Wed, Oct 13 | -- | -- | -- | **Exam 1**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/files/biol4220_exam1_study_guide.docx">Exam 1 study guide</a>) |
-|         | Mon, Oct 18 | Lecture 12 | Lab 12 | -- | Python: introduction, variables, operators,<br>if-statements, functions<br>**Course project: overview**  |
+|         | Mon, Oct 18 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_12.pdf">Lecture 12</a> | [Lab 12](labs/lab_12.md) | -- | Python: introduction, variables, operators,<br>if-statements, functions<br>**Course project: overview**  |
 |         | Wed, Oct 20 | Lecture 13 | Lab 13 | -- | Python: containers, loops, script arguments |
 |         | Mon, Oct 25 | Lecture 14 | Lab 14 | -- | Python: strings, file handling<br>**Course project: approvals**  |
 |         | Wed, Oct 27 | Lecture 15 | Lab 15 | -- | Python: modules, system calls, more with containers |
