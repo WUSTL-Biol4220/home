@@ -14,7 +14,9 @@ Pipelines will be composed of a number of intermediate scripted steps. For examp
 Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own input, arguments, options, and output. At the same time, the script for any pipeline may need to produce output or accept input that is compatible with other pipeline steps (with the Option 1 pipeline, for example, sequence alignement in Step 3 will accept the downloaded sequences of Step 2 as input).
 
 ## Project submission
-Students will submit their pipeline projects as GitHub repositories. Each repository will contain all the relevant files needed for a naive user to analyze a provided dataset, or a new dataset. Project repositories must contain the following files:
+Students will submit their pipeline projects using a GitHub repository (e.g. maintained under https://github.com/username/biol4220_course_project)
+
+Each repository will contain all the relevant files needed for a naive user to analyze a provided dataset, or a new dataset. Project repositories must contain the following files:
   - pipeline scripts
   - input dataset
   - analysis output
