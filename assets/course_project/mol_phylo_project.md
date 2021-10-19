@@ -70,7 +70,7 @@ For example, if we called `./parse_settings.sh settings.txt get_seq.sh` we shoul
 
 ## 2. `get_seq.sh`
 
-*(Relevant labs and lectures: 03A, 03B, 04A)*
+*(Relevant labs and lectures: 05, 06, 07)*
 
 The `get_seq.sh` manages and downloads fasta-formatted accessions from GenBank. As input, the script accepts two arguments: (1) a list of accessions, and (2) a directory where the sequences are managed. The script will then check whether each accession has already been downloaded into the managed directory, download any missing sequences, and append any issues to the file `warnings.log`.
 
@@ -104,7 +104,7 @@ data, e.g. `ACGTACGTACT`.
 
 ## 3. `make_align.sh`
 
-*(Relevant labs and lectures: 03B, 04B)*
+*(Relevant labs and lectures: 05, 06, 08)*
 
 This script will align a set of fasta sequences located in a target directory.
 
@@ -137,7 +137,7 @@ The log file should report
 
 ## 4. `make_phylo.sh`
 
-*(Relevant labs and lectures: 06A)*
+*(Relevant labs and lectures: 11)*
 
 This script will estimate a phylogeny from a multiple sequence alignment.
 
@@ -167,7 +167,7 @@ The log file should report
 
 ## 5. `make_mol_stats.py`
 
-*(Relevant labs and lectures: 10A, 10B)*
+*(Relevant labs and lectures: 16, 17)*
 
 The `make_mol_stats.py` script generates a report of various summary statistics and transformations for a multiple sequence alignment.
 
@@ -201,7 +201,7 @@ where `prefix` is the alignment name except the file extension (`.fasta`) e.g. `
 
 ## 6. `make_dnds.py`
 
-*(Relevant labs and lectures: 11A)*
+*(Relevant labs and lectures: 18)*
 
 The `make_dnds.sh` script will test for the molecular signature of positive selection using the modeling software, PAML. 
 
@@ -225,7 +225,7 @@ As output, this script should output five files in .csv format. The beginning of
 
 ## 7. `make_results.py`
 
-*(Relevant labs and lectures: 1B, 2B, 3A)*
+*(Relevant labs and lectures: 02, 04, 05)*
 
 This file will collect all pipeline output located in the target sequence directory, then combine any compatible results and/or logs and generate figures.
 
