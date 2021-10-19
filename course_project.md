@@ -7,6 +7,8 @@ Practical Bioinformatics (Biol4220) students will build a bioinformatics pipelin
 - **Option 1** is a molecular phylogenetics pipeline; [details](assets/course_project/mol_phylo_project.md).
 - **Option 2** is a custom pipeline on a research topic of your choosing. These pipelines, however, must minimally involve steps for (1) data collection, (2) data formatting, (3) data analysis, and (4) output generation.
 
+All pipeline projects require instructor approval (see below).
+
 Pipelines will be composed of a number of intermediate scripted steps. For example, the molecular phylogenetics pipeline is built from 10 steps (8 standard, 2 custom). Pipeline steps will extend techniques that we explored in various course lab assignments, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
 
 Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own input, arguments, options, and output. At the same time, the script for any pipeline may need to produce output or accept input that is compatible with other pipeline steps (with the Option 1 pipeline, for example, sequence alignement in Step 3 will accept the downloaded sequences of Step 2 as input).
