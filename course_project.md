@@ -4,7 +4,7 @@
 
 Practical Bioinformatics (Biol4220) students will build a bioinformatics pipeline to analyze biological data. There are two options for students to pursue:
 
-- **Option 1** is a molecular phylogenetics pipeline that downloads, aligns, and analyzes sequence data in a phylogenetic context ([details](assets/course_project/mol_phylo_project.md)).
+- **Option 1** is a molecular phylogenetics pipeline that downloads, aligns, and analyzes sequence data in a phylogenetic context ([link](assets/course_project/mol_phylo_project.md)).
 - **Option 2** is a custom pipeline on a research topic of your choosing. These pipelines, however, must minimally involve steps for (1) data collection, (2) data formatting, (3) data analysis, and (4) output generation.
 
 All pipeline projects require instructor approval (see below).
@@ -28,7 +28,7 @@ These materials are described in more detail below.
 
 ## Pipeline manual
 
-Create short manual entries for your two (or more) custom pipeline steps. These entries should define the usage and behavior the scripts in a comparable detail to the entries in this document (`course_project.md`).
+Create short manual entries for any custom pipeline steps. These entries should define the usage and behavior the scripts in a comparable detail to the entries in the molecular phylogenetics pipeline specification ([link](assets/course_project/mol_phylo_project.md)).
 
 ## Analysis report
 
