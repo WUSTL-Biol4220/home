@@ -73,7 +73,7 @@ Write a 1-2 page report (12pt font, single-spaced) that summarizes your research
 - Mammals (TBD)
 - Humans (TBD)
 - Primates (TBD)
-- 
+
 ---
 
 ## Molecular phylogenetics pipeline (Option 1)
