@@ -40,7 +40,7 @@ Plan to present for at least 10 minutes. After your presentation, the class will
 
 ### Important dates
 
-- Feature ideas must be approved by the instructor by **Wed, Oct 27, 2021**
+- Pipeline features and datasets approved by the instructor by **Wed, Oct 27, 2021**
 - Students will present their work to the class on **Mon, Dec 06, 2021**
 - Grading of project repositories will begin on **Mon, Dec 13, 2021**
 
