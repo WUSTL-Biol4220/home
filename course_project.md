@@ -18,13 +18,25 @@ Each step of the pipeline must run as an independent script or program. As such,
 ### Project submission
 Students will submit their pipeline projects as GitHub repositories. Each repository will contain all the relevant files needed for a naive user to analyze a provided dataset, or a new dataset. Project repositories must contain the following files:
   - pipeline scripts
-  - pipeline manual
   - input dataset
   - analysis output
+  - pipeline manual
   - analysis report
   - presentation slides
   
 These materials are described in more detail below.
+
+### Pipeline manual
+
+Create short manual entries for your two (or more) custom pipeline steps. These entries should define the usage and behavior the scripts in a comparable detail to the entries in this document (`course_project.md`).
+
+### Analysis report
+
+Write a 1-2 page report (12pt font, single-spaced) that summarizes your research findings. At a minimum, report should contain these components:
+
+1. An overview of your pipeline, the pipeline features, and the analysis results.
+2. A detailed description of the custom pipeline features that you added to the project, why they might be interesting or useful, and any challenges you encountered introducing those features.
+3. A discussion of how your analysis output (results) differed depending on what settings/datasets you analyzed, and how those differences might influence what biological hypotheses are supported or rejected. For example, an analysis run under Settings-A might cause our methods to infer high proportions of nonsynonymous substitutions relative to synonymous substitutions, while Settings-B might cause our methods to infer roughly equal proportions of nonsynonymous and synonymous substitutions. Do Settings-A and Settings-B support conflicting biological scenarios? Why is it important to compare results using both settings? 
 
 ### Project presentation
 
@@ -43,23 +55,6 @@ Plan to present for at least 10 minutes. After your presentation, the class will
 - Pipeline features and datasets approved by the instructor by **Wed, Oct 27, 2021**
 - Students will present their work to the class on **Mon, Dec 06, 2021**
 - Grading of project repositories will begin on **Mon, Dec 13, 2021**
-
----
-
-### Pipeline manual
-
-Create short manual entries for your two (or more) custom pipeline steps. These entries should define the usage and behavior the scripts in a comparable detail to the entries in this document (`course_project.md`).
-
----
-
-### Analysis report
-
-Write a 1-2 page report (12pt font, single-spaced) that summarizes your research findings. At a minimum, report should contain these components:
-
-1. An overview of your pipeline, the pipeline features, and the analysis results.
-2. A detailed description of the custom pipeline features that you added to the project, why they might be interesting or useful, and any challenges you encountered introducing those features.
-3. A discussion of how your analysis output (results) differed depending on what settings/datasets you analyzed, and how those differences might influence what biological hypotheses are supported or rejected. For example, an analysis run under Settings-A might cause our methods to infer high proportions of nonsynonymous substitutions relative to synonymous substitutions, while Settings-B might cause our methods to infer roughly equal proportions of nonsynonymous and synonymous substitutions. Do Settings-A and Settings-B support conflicting biological scenarios? Why is it important to compare results using both settings? 
-
 
 
 <!--
