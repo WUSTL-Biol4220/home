@@ -16,24 +16,24 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Sep 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_06.pdf">Lecture 06</a> | [Lab 06](labs/lab_06.md) | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
 |         | Wed, Sep 22 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_07.pdf">Lecture 07</a> | [Lab 07](labs/lab_07.md) | <a href="https://www.nature.com/scitable/topicpage/basic-local-alignment-search-tool-blast-29096/">BLAST overview</a><br><a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/">EDirect tools</a><br>(optional) | Biology: GenBank, BLAST |
 |         | Mon, Sep 27 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_08.pdf">Lecture 08</a> | [Lab 08](labs/lab_08.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/loytynoja_goldman_prank_2008_science.pdf">PRANK paper</a> | Biology: molecular sequence alignment |
-|         | Wed, Sep 29 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_09.pdf">Lecture 09</a> | [Lab 09](labs/lab_09.md) | CSB 5.1-5.9 | Unix: regular expressions, regex match |
+|         | Wed, Sep 29 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_09.pdf">Lecture 09</a> | [Lab 09](labs/lab_09.md) | CSB 5.1 - 5.9 | Unix: regular expressions, regex match |
 |         | Mon, Oct 04 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_10.pdf">Lecture 10</a> | [Lab 10](labs/lab_10.md) | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Wed, Oct 06 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_11.pdf">Lecture 11</a> | [Lab 11](labs/lab_11.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Mon, Oct 11 | -- | -- | -- | **No class: Fall Break** |
 |         | Wed, Oct 13 | -- | -- | -- | **Exam 1**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/files/biol4220_exam1_study_guide.docx">Exam 1 study guide</a>) |
-|  :dna:  | Mon, Oct 18 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_12.pdf">Lecture 12</a> | [Lab 12](labs/lab_12.md) | -- | Python: introduction, variables, operators,<br>if-statements, functions<br>**Course project: overview**  |
-|         | Wed, Oct 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_13.pdf">Lecture 13</a> | Lab 13 | -- | Python: containers, loops, script arguments |
-|         | Mon, Oct 25 | Lecture 14 | Lab 14 | -- | Python: strings, file handling<br>**Course project: approvals**  |
-|         | Wed, Oct 27 | Lecture 15 | Lab 15 | -- | Python: modules, system calls, more with containers |
+|  :dna:  | Mon, Oct 18 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_12.pdf">Lecture 12</a> | [Lab 12](labs/lab_12.md) | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: introduction, variables, operators,<br>if-statements, functions<br>**Course project: overview**  |
+|         | Wed, Oct 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_13.pdf">Lecture 13</a> | Lab 13 | CSB 3.4, 3.6.2| Python: containers, loops, script arguments |
+|         | Mon, Oct 25 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_14.pdf">Lecture 14</a> | Lab 14 | CSB 3.3.6, 3.7  | Python: strings, file handling<br>**Course project: approvals**  |
+|         | Wed, Oct 27 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_15.pdf">Lecture 15</a> | Lab 15 | CSB 4.2.2 - 4.4 | Python: modules, system calls, more with containers |
 |         | Mon, Nov 01 | Lecture 16 | Lab 16 | -- | Biology: sequence stats |
-|         | Wed, Nov 03 | Lecture 17 | Lab 17 | -- | Python: Biopython |
+|         | Wed, Nov 03 | Lecture 17 | Lab 17 | CSB 6.4 | Python: Biopython |
 |         | Mon, Nov 08 | Lecture 18 | Lab 18 | -- | Biology: positive selection<br>**Course project: check-in**   |
 |         | Wed, Nov 10 | -- | -- | -- | **Course project: open Lab** |
 |         | Mon, Nov 15 | Lecture 19 | Lab 19 | -- | Python: Matplotlib, Seaborn, Plotly |
-|         | Wed, Nov 17 | Lecture 20 | Lab 20 | -- | Python: NumPy <br>**Course project: check-in**   |
-|         | Mon, Nov 22 | Lecture 21 | Lab 21 | -- | Python: SciPy |
+|         | Wed, Nov 17 | Lecture 20 | Lab 20 | CSB 6.1 - 6.2.2 | Python: NumPy <br>**Course project: check-in**   |
+|         | Mon, Nov 22 | Lecture 21 | Lab 21 | CSB 6.2.3 - 6.2.5 | Python: SciPy |
 |         | Wed, Nov 24 | -- | -- | -- | **No class: Thanksgiving** |
-|         | Mon, Nov 29 | Lecture 22 | Lab 22 | -- | Python: Pandas  |
+|         | Mon, Nov 29 | Lecture 22 | Lab 22 | CSB 6.3 | Python: Pandas  |
 |         | Wed, Dec 01 | -- | -- | -- | **Course project: open lab**  |
 |         | Mon, Dec 06 | -- | -- | -- | **Course project: presentations**  |
 |         | Wed, Dec 08 | -- | -- | -- | **Exam 2**  |
