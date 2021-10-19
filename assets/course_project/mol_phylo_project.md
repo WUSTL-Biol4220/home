@@ -1,6 +1,6 @@
 # Molecular phylogenetics pipeline (Option 1)
 
-*Read more about the general pipeline project requirements [here](course_project.md).*
+*Read more about the general pipeline project requirements [here](https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md).*
 
 ## Pipeline script, `pipeline.sh`
 
