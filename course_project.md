@@ -43,12 +43,38 @@ Plan to present for at least 10 minutes. After your presentation, the class will
 - Grading of project repositories will begin on **Mon, Dec 13, 2021**
 
 
+---
+
+### Pipeline manual
+
+Create short manual entries for your two (or more) custom pipeline steps. These entries should define the usage and behavior the scripts in a comparable detail to the entries in this document (`course_project.md`).
+
+---
+
+### Analysis report
+
+Write a 1-2 page report (12pt font, single-spaced) that summarizes your research findings. At a minimum, report should contain these components:
+
+1. An overview of your pipeline, the pipeline features, and the analysis results.
+2. A detailed description of the custom pipeline features that you added to the project, why they might be interesting or useful, and any challenges you encountered introducing those features.
+3. A discussion of how your analysis output (results) differed depending on what settings/datasets you analyzed, and how those differences might influence what biological hypotheses are supported or rejected. For example, an analysis run under Settings-A might cause our methods to infer high proportions of nonsynonymous substitutions relative to synonymous substitutions, while Settings-B might cause our methods to infer roughly equal proportions of nonsynonymous and synonymous substitutions. Do Settings-A and Settings-B support conflicting biological scenarios? Why is it important to compare results using both settings? 
+
+---
 
 ### Possible datasets
 - [US SARS-CoV-2 sequences](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/accessions_USA.txt) contains accessions for a set of viruses sampled in November, across the United States. Every state is represented once, except for Delaware (DE) and North Dakota (ND). Washington, DC, (DC) and Puerto Rico (PR) were included. This dataset has relatively little molecular variation, but genes are annotated in a manner that's easy to work with.
 - [Global SARS-CoV-2 sequences](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/accessions_global.txt) contains accessions for virus sequences obtained from roughly fifty countries, worldwide. For each country, the most recently available sequence was used; for most countries, the newest sequence was obtained <30 days ago, while for others the last sequence deposited on GenBank was in Spring 2020. Like the US dataset, the global dataset has relatively low amounts of molecular variation.
 - [Orthocoronavirinae](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/accessions_Orthocoronavirinae.txt) is a curated dataset hosted by GenBank [here](https://www.ncbi.nlm.nih.gov/genomes/GenomesGroup.cgi?taxid=2501931). Genes for these genomes are annotated in a useful manner that will allow you to compare, for example, the structural proteins (S, E, N, M). Not all coronaviruses have the same set of nonstructural proteins, so those will be more difficult to analyze for various reasons. This dataset also presents extremely high levels of molecular variation, as RNA viruses evolve very rapidly. Aligning the sequences in a meaningful way may be challenging, but you should try if you find this dataset appealing.
 - [SARS-like bat and human coronaviruses](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/accessions_bat_sarslike.txt) contains over 67 coronavirus sequences sampled from bat and human populations, mostly referenced from [Wells et al. (2020)](wells_et_al_2020_bioRxiv.pdf). These genomes include one SARS-CoV sequence (NC_004718), four SARS-CoV-2 sequences (MW315209, MW320728, MW326508, MW327510), with all remaining sequences originating in bats. These genomes do not share a common naming convention for genes, making it fairly difficult to extract the genes from the dataset. To simplify your analyses, you may use alignments for the four structural proteins, shared here: [S](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/CoV_sarslike_bat/S.fasta), [E](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/CoV_sarslike_bat/E.fasta), [N](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/CoV_sarslike_bat/N.fasta), [M](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/CoV_sarslike_bat/M.fasta)
+- Bacteria/viruses (TBD)
+- Vertebrates (TBD)
+- Angiosperms (TBD)
+- Birds (TBD)
+- Mammals (TBD)
+- Humans (TBD)
+- Primates (TBD)
+- 
+---
 
 ## Molecular phylogenetics pipeline (Option 1)
 
@@ -316,21 +342,6 @@ fig_phy.primates_cytb.align_mafft.phylo_fasttree.pdf
 fig_plot.primates_cytb.align_mafft.phylo_fasttree.pdf
 ```
 
----
-
-### Pipeline manual
-
-Create short manual entries for your two (or more) custom pipeline steps. These entries should define the usage and behavior the scripts in a comparable detail to the entries in this document (`course_project.md`).
-
----
-
-### Analysis report
-
-Write a 1-2 page report (12pt font, single-spaced) that summarizes your research findings. At a minimum, report should contain these components:
-
-1. An overview of your pipeline, the pipeline features, and the analysis results.
-2. A detailed description of the custom pipeline features that you added to the project, why they might be interesting or useful, and any challenges you encountered introducing those features.
-3. A discussion of how your analysis output (results) differed depending on what settings/datasets you analyzed, and how those differences might influence what biological hypotheses are supported or rejected. For example, an analysis run under Settings-A might cause our methods to infer high proportions of nonsynonymous substitutions relative to synonymous substitutions, while Settings-B might cause our methods to infer roughly equal proportions of nonsynonymous and synonymous substitutions. Do Settings-A and Settings-B support conflicting biological scenarios? Why is it important to compare results using both settings? 
 
 
 
