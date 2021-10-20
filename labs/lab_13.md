@@ -282,7 +282,7 @@ To understand how `sys.argv` works, create a Python script called `example.py` w
 ```console
 #!/usr/bin/python
 import sys      # load a special library that defines sys.argv behavior
-print('Contents of sys.argv, length = ' + len(sys.argv)) 
+print('Contents of sys.argv, length = ' + str(len(sys.argv))) 
 for i,x in enumerate(sys.argv):
     print( '  sys.argv['+str(i)+'] = ' + sys.argv[i])
 ```
