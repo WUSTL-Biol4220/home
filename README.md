@@ -25,6 +25,7 @@ Instructor
 * Phone: 314-935-8082
 * Office hours: 3:00pm - 4:00pm on Thu
 * Office room: Rebstock 210
+* Zoom link: https://wustl.zoom.us/j/93971192504
 
 Graduate Student Instructor
 * Name: Nathan Wamsley
