@@ -1,6 +1,6 @@
 # Lab 16
 
-*Lab 16 GitHub Classroom link:* https://classroom.github.com/a/U1cmZxrD
+*Lab 16 GitHub Classroom link: to be provided*
 
 In this lab, we will use Python to extract various statistics about the patterns of molecular variation contained in a multiple sequence alignment.
 
@@ -80,6 +80,5 @@ The remaining functions will expect a data object called the *alignment dictiona
 True
 ```
 
-
-To complete the lab, commit and push your `seq.py` module script to your GitHub repository.
+To complete the lab, commit and push your `mol_stats.py` module script to your GitHub repository.
 
