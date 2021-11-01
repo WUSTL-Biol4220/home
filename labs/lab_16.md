@@ -1,6 +1,6 @@
 # Lab 16
 
-*Lab 16 GitHub Classroom link: to be provided*
+*Lab 16 GitHub Classroom link:* https://classroom.github.com/a/apmxYP_4
 
 In this lab, we will use Python to extract various statistics about the patterns of molecular variation contained in a multiple sequence alignment.
 
