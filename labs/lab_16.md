@@ -80,5 +80,5 @@ The remaining functions will expect a data object called the *alignment dictiona
 True
 ```
 
-To complete the lab, commit and push your `mol_stats.py` module script to your GitHub repository.
+To complete the lab, commit and push your `mol_stats.py` module script and `history.txt` file to your GitHub repository.
 
