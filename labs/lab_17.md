@@ -254,7 +254,7 @@ then calling `read_alignment('example.fasta')` would return the amino acid align
 >>> a
 <<class 'Bio.Align.MultipleSeqAlignment'> instance (4 records of length 2, ExtendedIUPACProtein()) at 7f3cdada9670>
 >>> for x in a:
-...   print(f'{x.id} : {x.seq}')
+...   print(f'{x.id} : {x.seq.seq}')
 ...
 Species_A : TL
 Species_B : TL
