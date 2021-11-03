@@ -262,7 +262,7 @@ Species_C : SI
 Species_D : SL
 ```
 
-(*Important: An earlier version of example.fasta that was originally stored in the GitHub assignment contained slightly different sequences than the example.fasta file used in the above example. Replace the contents of example.fasta with the above sequences to exactly reproduce the results given here.)
+(**Bonus problem.** Real world alignments often contain gap characters (`-`), but Biopython cannot translate a codon that contain gaps. Modify your `read_alignment()` method to drop codon-site columns that contain gaps.)
 
 **Part 2.** Write a function called `find_physicochemical_seq(aa_alignment)` that identifies the physicochemical properties for each amino acid in the alignment. The `aa_alignment` argument is an alignment of amino acids, similar to that output by `read_alignment()`. Below is a list of  amino acid properties, and the amino acids with that property.
 
