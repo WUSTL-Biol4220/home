@@ -26,8 +26,8 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Oct 25 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_14.pdf">Lecture 14</a> | [Lab 14](labs/lab_14.md) | CSB 3.3.6, 3.7  | Python: strings, file handling  |
 |         | Wed, Oct 27 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_15.pdf">Lecture 15</a> | [Lab 15](labs/lab_15.md) | CSB 4.2.2 - 4.4 | Python: modules, system calls, more with containers<br>**Course project: approvals** |
 |         | Mon, Nov 01 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_16.pdf">Lecture 16</a> | [Lab 16](labs/lab_16.md) | -- | Biology: sequence stats |
-|  :dna:  | Wed, Nov 03 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_17.pdf">Lecture 17</a> | [Lab 17](labs/lab_17.md)  | CSB 6.4 | Python: Biopython |
-|         | Mon, Nov 08 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_18.pdf">Lecture 18</a> | [Lab 18](labs/lab_18.md) | -- | Biology: positive selection<br>**Course project: check-in**   |
+|         | Wed, Nov 03 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_17.pdf">Lecture 17</a> | [Lab 17](labs/lab_17.md)  | CSB 6.4 | Python: Biopython |
+|  :dna:  | Mon, Nov 08 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_18.pdf">Lecture 18</a> | [Lab 18](labs/lab_18.md) | -- | Biology: positive selection<br>**Course project: check-in**   |
 |         | Wed, Nov 10 | -- | -- | -- | **Course project: open Lab** |
 |         | Mon, Nov 15 | Lecture 19 | Lab 19 | -- | Python: Matplotlib, Seaborn, Plotly |
 |         | Wed, Nov 17 | Lecture 20 | Lab 20 | CSB 6.1 - 6.2.2 | Python: NumPy <br>**Course project: check-in**   |
