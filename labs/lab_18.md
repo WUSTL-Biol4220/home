@@ -1,6 +1,6 @@
 # Lab 18
 
-*Lab 18 GitHub Classroom link: to be provided*
+*Lab 18 GitHub Classroom link:* https://classroom.github.com/a/k93qypCl
 
 In this lab, we'll learn how to test hypotheses regarding protein evolution using the phylogenetic software package, PAML. [PAML](http://abacus.gene.ucl.ac.uk/software/paml.html) -- which stands for "Phylogenetic Analysis by Maximum Likelihood" -- is open source software written for inferring phylogenies and other phylogenetic patterns.  Specifically, PAML provides a special tool called `codeml` that is used to measure the relative rates of nonsynonmyous vs. synonymous substitutions (called dN/dS).
 
@@ -385,7 +385,7 @@ What does all of this mean? This first model assumes all sites evolve under the 
 
 As flexible as PAML is for modeling, it is somewhat limited in terms of how it accepts input and how it prints output. We will write a Python script that accepts user arguments as input, runs a PAML analysis under those settings, then generates output datafiles that are easily parsed.
 
-Create a module called `paml.py`. The module will define three functions.
+Create a module called `paml.py`. The module will define two functions.
 
 The first function is called `run(control_file, seq_file, tree_file, output_file)`. This function accepts a sequence file and tree file (Newick format) as input. The function then creates a new file called `control_file` in the local directory. The control file will be identical to `codeml.ctl` from the HIV example, except the `seq_file`, `tree_file`, and `output_file` settings are replaced by the user-provided arguments. Once the new control file (`control_file`) is created, run the PAML analysis by calling `codeml control_file`.
 
