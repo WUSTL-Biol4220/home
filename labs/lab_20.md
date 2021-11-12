@@ -2,7 +2,7 @@
 
 *Lab 20 GitHub Classroom link:* to be provided
 
-This lab will introduce to the numerical analysis library, NumPy, with an emphasis on how to create, access, manipulate, and compute with `numpy.array` data structures. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-20.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 19](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_19.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
+This lab will introduce to the numerical analysis library, NumPy, with an emphasis on how to create, access, manipulate, and compute with `numpy.array` data structures. To complete this assignment, finish the exercises in a Jupyter notebook (`lab-20.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 19](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_19.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
 
 ---
 

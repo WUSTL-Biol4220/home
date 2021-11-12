@@ -289,4 +289,4 @@ plt.show()
 
 ---
 
-Save and close the Jupyter notebook after you have generated each of the above plots. Once closed, commit and push the `.ipynb` file that you saved to your GitHub repository.
+Save and close the Jupyter notebook after you have generated each of the above plots. Once closed, commit and push the `lab-19.ipynb` file that you saved to your GitHub repository.
