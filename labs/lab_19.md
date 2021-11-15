@@ -131,7 +131,7 @@ $ pip install matplotlib
 
 As we'd done in the previous section, we'll continue to use Jupyter notebooks to generate Matplotlib visualizations through our remote virtual machines that we can view from our personal computers. 
 
-First, create a new notebook called `plot.ipynb` through the Jupyter Notebook interface. In the first cell, we will import all the libraries we'll use in the remaining cells, and set the random seed for the analysis. What is the random seed? When computers generate "random" numbers, the random numbers are in fact a sequence of pseudorandom numbers, where each value in the sequence is perfectly determined by a starting value, known as the *random number seed*.
+First, create a new notebook called `lab-19.ipynb` through the Jupyter Notebook interface. In the first cell, we will import all the libraries we'll use in the remaining cells, and set the random seed for the analysis. What is the random seed? When computers generate "random" numbers, the random numbers are in fact a sequence of pseudorandom numbers, where each value in the sequence is perfectly determined by a starting value, known as the *random number seed*.
 
 ```python
 # Import libraries
