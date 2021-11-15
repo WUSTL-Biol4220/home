@@ -279,7 +279,7 @@ cb.set_label('Number of entries')
 
 # Add title and labels to plot.
 title='Heatmap of 2D normally distributed data points'
-plt.title()
+plt.title(title)
 plt.xlabel('x axis')
 plt.ylabel('y axis')
 
