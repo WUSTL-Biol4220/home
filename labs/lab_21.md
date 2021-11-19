@@ -1,6 +1,6 @@
 # Lab 21
 
-*Lab 21 GitHub Classroom link:* https://classroom.github.com/a/Gjy6fm47
+*Lab 21 GitHub Classroom link:* https://classroom.github.com/a/b1obEPVP
 
 In this lab, we will explore several of SciPy's many features for processing quantitative data. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-21.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 19](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_19.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
 
