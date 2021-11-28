@@ -8,18 +8,13 @@ This lab will explore how to work with data tables through the Python package, P
 
 ## Pandas
 
-[Pandas](https://pandas.pydata.org/) 
+[Pandas](https://pandas.pydata.org/) is an open source Python package that provides user-friendly and computationally efficient methods and objects for working with 1D and 2D data tables or spreadsheets. Pandas provides extensive [documentation](https://pandas.pydata.org/docs/) explaining how its code works, through guided [tutorials](https://pandas.pydata.org/docs/getting_started/index.html#getting-started), [cheat sheets](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf), and technical [developer guides](https://pandas.pydata.org/docs/reference/index.html).
 
-https://pandas.pydata.org/docs/
+In this lab, we will practice using some of the basic features of Pandas.
 
+Enter the cloned repository for Lab 22 in your file system. It will contain the example data tables `codons.csv` and `amino_acids.csv`, both of which are in a comma-separated value format.
 
-https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
-
-
-
----
-
-CSV in file system
+View the contents of `codons.csv`:
 
 ```bash
 $ cat codons.csv
@@ -38,12 +33,17 @@ TTG,Leu,L
 TTT,Phe,F
 ```
 
-Load CSV in pandas.
+Pandas should already be installed on your virtual machines. Regardless, installing it is easy:
+```bash
+$ pip install pandas
+```
+
+In your notebook, create a `pd.DataFrame` object from `codon.csv` using Pandas:
 
 ```python
 >>> import pandas as pd
 >>> fn = codon.csv'
->>> codon = pd.read_table(fn, sep=',’)
+>>> codon = pd.read_table(fn, sep=',')
 >>> codon
 
    codon abbr code
@@ -62,7 +62,9 @@ Load CSV in pandas.
 [64 rows x 3 columns]
 ```
 
-Many ways to read/write files.
+Pandas will display larger data tables in an abbreviated format. (Notice `codon` only displays the first and last five rows out of all 64.)
+
+Part of what makes Pandas so useful is that it allows programmers to easily import/export data tables across a wide variety of formats. In effect, this makes it easy to explore datasets using Python without needing to write custom data parsers.
 
 ```python
 >>> # read data into new DataFrame
@@ -73,7 +75,7 @@ pd.read_excel(      pd.read_html(       pd.read_sas(        pd.read_stata(
 pd.read_feather(    pd.read_json(       pd.read_spss(       pd.read_table(
 pd.read_fwf(        pd.read_orc(        pd.read_sql(
 
->>> df = pd.DataFrame() # create empty DataFrame
+>>> df = pd.DataFrame() # create empty DataFrame to explore methods
 >>> # return values of DataFrame as new type
 >>> df.to_<PRESS TAB>
 df.to_clipboard(  df.to_gbq(        df.to_markdown(   df.to_records(    df.to_xarray(
@@ -81,15 +83,16 @@ df.to_csv(        df.to_hdf(        df.to_numpy(      df.to_sql(
 df.to_dict(       df.to_html(       df.to_parquet(    df.to_stata(
 df.to_excel(      df.to_json(       df.to_period(     df.to_string(
 df.to_feather(    df.to_latex(      df.to_pickle(     df.to_timestamp(
+
 >>> # example: read csv, then write to excel
 >>> df = pd.read_csv(‘amino_acids.csv')
 >>> df.to_excel(‘amino_acids.xlsx')
 ```
 
-Shape and axes.
+Once a Pandas container is created from a data table in the filesystem, it helps to know the size and dimensions of the new container, and how its rows and columns (axes) are named.
 
 ```python
->>> codon = pd.read_csv('codons.csv', sep=',’)
+>>> codon = pd.read_csv('codons.csv', sep=',')
 >>> # shape returns ordered sizes of dimensions
 >>> codon.shape
 (64, 3)
@@ -108,8 +111,7 @@ RangeIndex(start=0, stop=64, step=1)
  dtype='object')]
 ```
 
-
-Viewing data.
+It is also useful to review the contents of a dataframe after it is loaded. Use the `.head()` and `.tail()` method for the new dataframe to view only its first/last rows.
 
 ```python
 >>> codon # partial view of data frame
@@ -140,11 +142,10 @@ Viewing data.
 >>>
 ```
 
-
-Summarize data
+Information about the dimensions, size, column datatypes and memory usage are summarized with `.info()`. Pandas represents strings using the `object` `Dtype`.
 
 ```python
->>> # overview of DataFrame properties
+>>> codon.info() # overview of DataFrame properties
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 64 entries, 0 to 63
 Data columns (total 3 columns):
@@ -155,6 +156,11 @@ Data columns (total 3 columns):
  2   code    64 non-null     object
 dtypes: object(3)
 memory usage: 1.6+ KB
+```
+
+The `.describe()` method will print a summary of the range of values for each column.
+
+```python
 >>> # summary of DataFrame contents
 >>> codon.describe()
        codon abbr code
@@ -164,9 +170,10 @@ top      AGC  Arg    L
 freq       1    6    6
 ```
 
-Do it again for AA.
+Of course, applying the same commands to a different data table will produce different output. View the head and tail of a new amino acid dataframe.
 
 ```python
+>>> aa = pd.read_csv('amino_acids.csv', sep=',')
 >>> aa.head(3)
             name abbr mol_formula  mol_weight  hydrophob
 code
@@ -181,6 +188,7 @@ Y       tyrosine  Tyr    C9H11NO3      181.19         63
 V         valine  Val    C5H11NO2      117.15         76
 ```
 
+Notice that the datatype (`Dtype`) differs across columns. The `aa` dataframe has a column of floating point numbers (`mol_weight`) and a column of integers (`hydrophob`).
 
 ```python
 >>> aa.info()
@@ -198,7 +206,7 @@ dtypes: float64(1), int64(1), object(3)
 memory usage: 1.5+ KB
 ```
 
-Summarize numerical columns
+Applying `aa.describe()` summarizes the numerical columns using various quantitative summary statistics (`mean`, `std`, `min`, `max`, quantiles, etc.):
 
 ```python
 >>> aa.describe()
@@ -213,7 +221,9 @@ min     75.070000  -55.000000
 max    204.230000  100.000000
 ```
 
-Series.
+Pandas defines a 1D-container class (`pandas.Series`) and a 2D-container class (`pandas.DataFrame`). So far, we have only been explicitly working with `pandas.DataFrame` objects. That said, the columns of a `pandas.DataFrame` object are in fact `pandas.Series` object. Importantly, all elements in a `pandas.Series` object have the same datatype (`dtype`) -- e.g. `int64`, `float64`, `object`. Columns in `pandas.DataFrame`, however, may differ in `dtype`.
+
+To understand this better, create a 1D `pandas.Series` object.
 
 ```python
 >>> data_1d = ['Homo','Pan','Gorilla', 'Pongo']
@@ -226,7 +236,7 @@ Series.
 Name: Genus, dtype: object
 ```
 
-DataFrame.
+Now create a 2D `pandas.DataFrame` object for the same genera.
 
 ```python
 >>> data_2d = [['Homo', 60], ['Pan', 45], ['Gorilla', 125], ['Pongo', 50]]
@@ -239,7 +249,7 @@ DataFrame.
 3    Pongo       50
 ```
 
-DataFrame is made of Series.
+Notice that the returned column `df_2d['Genus']` closely resembles the returned value for `df_1d`. (We will show how to access rows, columns, and elements soon.)
 
 ```python
 >>> df_2d['Genus']
@@ -250,7 +260,7 @@ DataFrame is made of Series.
 Name: Genus, dtype: object
 ```
 
-Datatypes.
+Comparing the `type` of the containers and the `dtype` and `dtypes` of the containers reveals that `df_1d` and `df_2d['Genus']` are in fact both `pandas.Series` with the same `dtype` (`'O'` for `object`).
 
 ```python
 >>> type(df_1d)
@@ -269,6 +279,8 @@ dtype: object
 dtype('O')
 ```
 
+Next, we'll explore how to access rows, columns, and elements from a dataframe. For this, we'll load a csv that contains information about 20 commonly used amino acids. By calling `.read_csv` while using the argument `index_col='code'`, our new `aa` data frame will label its rows according to the column named `code` (the single-letter character that represents each amino acid). 
+
 ```python
 >>> aa = pd.read_csv('amino_acids.csv', index_col='code')
 >>> aa.columns
@@ -279,6 +291,10 @@ Index(['A', 'R', 'N', 'D', 'C', 'E', 'Q', 'G', 'H', 'I', 'L', 'K', 'M', 'F',
       dtype='object', name='code')
 ```
 
+The safest way to extract rows, columns, and elements from a `pandas.DataFrame` is by using `.loc[a,b]` and `.iloc[a,b]` notation. This notation behaves similarly to that for `np.ndarray` from Numpy. The letter `a` (before the comma) is a placeholder for the subset of rows to extract from the dataframe, and `b` (after the comma) represents the subset of columns to extract. Using `.loc` uses the labeled location for each row/column, while `.iloc` uses the base-0 integer-indexed location.
+
+For example, to extract the `panda.Series` row labeled `A` from `aa`:
+
 ```python
 >>> aa.loc['A',:]
 name           alanine
@@ -288,6 +304,8 @@ mol_weight        89.1
 hydrophob           41
 Name: A, dtype: object
 ```
+
+To extract the `pandas.Series` column labeled `mol_weight` from `aa`:
 
 ```python
 >>> aa.loc[:,'mol_weight']
@@ -315,25 +333,26 @@ V    117.15
 Name: mol_weight, dtype: float64
 ```
 
+There are many equivalent ways to access an element using the `.loc` and `.iloc`, either by visiting the element in the dataframe directly, or by extracting a `pandas.Series` first, then accessing an element in that series. This allows the programmer to interact with the dataframe in whatever way is most convenient for processing.
+
 ```python
+>>> aa.loc['A','mol_weight']
+89.1
+>>> aa.iloc[0,3]
+89.1
 >>> aa.loc['A',:]['mol_weight']
 89.1
 >>> aa.loc[:,'mol_weight']['A']
-89.1
->>> aa.loc['A','mol_weight']
 89.1
 >>> aa.iloc[0,:]['mol_weight']
 89.1
 >>> aa.iloc[:,3]['A']
 89.1
->>> aa.iloc[0,3]
-89.1
 >>> aa.loc['A',:][3]
-89.1
->>> aa.iloc[0,:]['mol_weight']
 89.1
 ```
 
+Note that slice indexing can be used for label-based locations (`.loc`) and fro integer-based locations (`.iloc`; shown later).
 
 ```python
 >>> aa.loc['A':'C','name':'abbr']
@@ -346,6 +365,7 @@ D     aspartic acid  Asp
 C          cysteine  Cys
 ```
 
+Use lists of locations to extract non-contiguous subsets of rows and columns from the dataframe.
 
 ```python
 >>> aa.loc[['A','R'],:]
@@ -375,7 +395,7 @@ A           89.1         41
 R          174.2        -14
 ```
 
-Use comparison to produce Series of boolean values.
+You can also construct series of boolean values from row/column data.
 
 ```python
 >>> aa['mol_weight'] > 150
@@ -403,7 +423,7 @@ V    False
 Name: mol_weight, dtype: bool
 ```
 
-Access rows that evaluate to True.
+Boolean series can then be used to subset the dataframe. For example, the following command only displays rows whose `mol_weight` values are greater than 150.
 
 ```python
 >>> aa[ aa['mol_weight'] > 150 ]
@@ -416,7 +436,7 @@ W        tryptophan  Trp  C11H12N2O2      204.23         97
 Y          tyrosine  Tyr    C9H11NO3      181.19         63
 ```
 
-Access rows with values in a given set of targets.
+The `.isin` method returns a boolean series that records which entries "match" within a set of targets. In this example, we want to locate only those rows that encode alanine (code `A`) and cysteine (code `C`):
 
 ```python
 >>> codon = pd.read_csv('codons.csv')
@@ -445,7 +465,7 @@ Access rows with values in a given set of targets.
 59   TGT  Cys    C
 ```
 
-Sorting values.
+Data tables often need to be sorted for viewing or processing. Pandas dataframes can be sorted according to the location (index) for rows (`axis=0`) or columns (`axis=1`) using `.sort_index`. They can also be sorted according the the values of a given column using `.sort_values`.
 
 ```python
 >>> aa.head(3)
@@ -480,6 +500,9 @@ P           proline  Pro     C5H9NO2      115.13        -46
 H         histidine  His    C6H9N3O2      155.16        -31
 ```
 
+Especially with large data tables, it often helps to summarize the data to comprehend what information the table contains. We saw this earlier with the `.describe` method. Pandas offers a variety of other summary methods, which can be found in the [developer guide](https://pandas.pydata.org/docs/reference/frame.html).
+
+For example, quantiles bin data such that some percent of the data are less than or equal to a quantile's value -- e.g. 20% of molecular weights are less than or equal to 117.7460.
 
 ```python
 >>> aa.quantile([0.05, 0.20, 0.5, 0.80, 0.95])
@@ -489,6 +512,11 @@ H         histidine  His    C6H9N3O2      155.16        -31
 0.50    132.6150      10.50
 0.80    157.1660      80.20
 0.95    182.3420      99.05
+```
+
+Rank displays the order of values, from smallest to largest, with tied values receiving the average rank.
+
+```python
 >>> aa.loc[:,'mol_weight':'hydrophob'].rank()
       mol_weight  hydrophob
 code
@@ -514,6 +542,8 @@ Y           19.0       14.0
 V            5.0       16.0
 ```
 
+Pandas also allows you to apply custom functions to dataframes against either rows or columns.
+
 ```python
 >>> df = pd.DataFrame(np.random.randn(3, 2),index=list('ABC'), columns=list('XY'))
 >>> df
@@ -536,6 +566,8 @@ B   -0.583292
 C    0.788036
 dtype: float64
 ```
+
+Reshaping standard data tables into a "melted" format is easy in Pandas. Melted tables generally treat one (or sometimes more) variables as the identifying variable, then creates a separate row for each other variable and value associated with that identifying variable in the new melted table. For example, if we melt `aa` while using `abbr` as the identifying variable, each of the 20 amino acids has 4 entries (`name`, `mol_formula`, `mol_weight`, `hydrophob`) in a newly melted table with 80 rows and 3 columns. (This format is commonly used in data science packages, such as `dplyr` in the `tidyverse` from `R`).
 
 ```python
 >>> aa.head(3)
@@ -561,6 +593,8 @@ N     asparagine  Asn    C4H8N2O3      132.12        -28
 [80 rows x 3 columns]
 ```
 
+Melted datasets can also be restored to a standard format using pivot tables. To appreciate this, first create a melted table:
+
 ```python
 >>> df = pd.DataFrame({"A": ["foo", "foo", "foo", "foo", "foo",
 ...                          "bar", "bar", "bar", "bar"],
@@ -584,6 +618,8 @@ N     asparagine  Asn    C4H8N2O3      132.12        -28
 8  bar  two  large  7  9
 ```
 
+Then create a pivot table, where the values associated with `A` (`foo` and `bar`) and `C` (`small` and `large`) are used to index rows, and the values associated with `D` and `E` are summarized using different sets of aggregation functions (mean, min, max):
+
 ```python
 >>> table = pd.pivot_table(df, values=['D', 'E'],
 ...                        index=['A','C'],
@@ -599,6 +635,7 @@ foo large  2.000000  5.0  4.500000  4.0
     small  2.333333  6.0  4.333333  2.0
 ```
 
+Lastly, data tables that share values for a given dimension can be merged. For example, we can merge `aa` and `codon` using their shared abbreviated amino acid names (`abbr`) to construct a comprehensive table containing information about the genetic code and the properties of resulting translated amino acids
 
 ```python
 >>> aa.head(3)
@@ -629,6 +666,5 @@ N     asparagine  Asn    C4H8N2O3      132.12        -28
 
 [61 rows x 7 columns]
 ```
-
 
 Once you have executed all of the above code through the Jupyter notebook, save and close the notebook, then commit and push the notebook to your GitHub classroom assignment repository. Also submit a log of your history (`history.txt`).
