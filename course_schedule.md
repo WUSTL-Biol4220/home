@@ -35,5 +35,5 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Nov 24 | -- | -- | -- | **No class: Thanksgiving** |
 | :dna:   | Mon, Nov 29 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_22.pdf">Lecture 22</a> | [Lab 22](labs/lab_22.md) | CSB 6.3 | Python: Pandas  |
 |         | Wed, Dec 01 | -- | -- | -- | **Course project: open lab**  |
-|         | Mon, Dec 06 | -- | -- | -- | **Course project: presentations**  |
+|         | Mon, Dec 06 | -- | -- | -- | **Course project: presentations**<br>(plan to speak for 10 minutes) |
 |         | Wed, Dec 08 | -- | -- | -- | **Exam 2**<br>(<a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/files/biol4220_exam2_study_guide.docx">Exam 2 study guide</a>)  |
