@@ -42,7 +42,7 @@ In your notebook, create a `pd.DataFrame` object from `codon.csv` using Pandas:
 
 ```python
 >>> import pandas as pd
->>> fn = codon.csv'
+>>> fn = 'codons.csv'
 >>> codon = pd.read_table(fn, sep=',')
 >>> codon
 
