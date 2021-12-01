@@ -219,7 +219,7 @@ PAML will not accept a standard fasta file as input. Instead, PAML uses a custom
 
 The script should read in the default PAML output, saving per-site dN/dS scores as a csv file in `${ALIGN_FILE}.site_dnds.csv` and a Newick string estimated using the PAML codon model titled `${ALIGN_FILE}.paml.tre`.
 
-As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
+As output, this script should output two files. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
 - `prefix.paml.tre`
 - `prefix.site_dnds.csv`
 
