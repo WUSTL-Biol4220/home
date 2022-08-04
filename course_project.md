@@ -48,7 +48,7 @@ At the end of the course, each student will deliver a short presentation of thei
   - any technical challenges you were proud to overcome
   - ideas for new pipeline features
   
-Plan to present for at least 10 minutes. After your presentation, the class will discuss what was presented, and ask the presenter questions.
+**Plan to present for no more than 10 minutes.** After your presentation, the class will ask the presenter questions. We'll discuss more after everyone has presented, if there's time.
 
 ## Project approval
 

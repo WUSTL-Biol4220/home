@@ -66,6 +66,8 @@ Pandas will display larger data tables in an abbreviated format. (Notice `codon`
 
 Part of what makes Pandas so useful is that it allows programmers to easily import/export data tables across a wide variety of formats. In effect, this makes it easy to explore datasets using Python without needing to write custom data parsers.
 
+Note: .to_excel requires the openpyxl packages. Open a terminal and enter 'pip install openpyxl'
+
 ```python
 >>> # read data into new DataFrame
 >>> pd.read_<PRESS TAB>

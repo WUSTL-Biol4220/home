@@ -184,9 +184,11 @@ This Python script will perform several steps:
 4. Determine whether or not each site is phylogenetically informative.
 5. Compute codon frequencies for each sequence
 6. Compute codon frequencies for each site
-7. Compute biased codon usage proportions across amino acids, sites, and sequences
+7. Compute biased codon usage proportions across amino acids, sites, and sequences. For this, you will need to report the frequencies of codons used *for each amino acid* that appears in the site, sequence, and matrix.
 
 Precise definitions for GC-richness, codons, codon usage frequencies, and phylogenetic informativeness are defined in the materials for classes 10A and 10B. Briefly, GC-richness is the proportion of sites that are in G or C rather than A or T. Codons are the nucleotide triplets that encode amino acids during translation. Codon usage frequencies are the proportions that a particular codon-type is used to encode a particular amino acid. A phylogenetically informative site is an alignment site that contains at least two individuals of one variant, and at least two individuals of a different variant -- i.e. the site contains enough information to identify a phylogenetic "split".
+
+**Note:** depending on what dataset you use, you may find that the aligned matrix contains a large number of gaps and/or that it contains an unusual frame shift. For this assignment, treat the alignment as being correct. You may discard any codon sites that contain a gap. You can also "trim" your alignment so that the total number of sites in the alignment is a multiple of three (i.e. drop 1-2 sites).
 
 As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment 
 - `prefix.seq_GC.csv`
@@ -217,7 +219,7 @@ PAML will not accept a standard fasta file as input. Instead, PAML uses a custom
 
 The script should read in the default PAML output, saving per-site dN/dS scores as a csv file in `${ALIGN_FILE}.site_dnds.csv` and a Newick string estimated using the PAML codon model titled `${ALIGN_FILE}.paml.tre`.
 
-As output, this script should output five files in .csv format. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
+As output, this script should output two files. The beginning of these files will share the name of the alignment -- e.g. `primates_cytb.align_MAFFT.fasta`
 - `prefix.paml.tre`
 - `prefix.site_dnds.csv`
 
