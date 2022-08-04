@@ -27,7 +27,7 @@ Instructor
 * Office room: Rebstock 210
 * Zoom link: https://wustl.zoom.us/j/93971192504
 
-Graduate Student Instructor
+Teaching Assistant
 * Name: Hannah Chay
 * Email: hchay@wustl.edu
 * Office hours: TBD
