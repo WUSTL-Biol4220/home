@@ -1,4 +1,4 @@
-## Fall 2021
+## Fall 2022
 
 <img src="assets/home/biol4220_logo_trim.png" width="350"/>
 
