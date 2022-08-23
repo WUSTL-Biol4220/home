@@ -24,12 +24,11 @@ Instructor
 * Name: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
-* Office hours: 3:00pm - 4:00pm on Thu
-* Office room: Rebstock 210
-* Zoom link: https://wustl.zoom.us/j/93971192504
+* Office hours: 3:00-4:00pm on Thu
+* Office hours location: Rebstock 210
 
 Teaching Assistant
 * Name: Hannah Chay
 * Email: hchay@wustl.edu
-* Office hours: TBD
-* Office room: TBD
+* Office hours: 1:30-2:30 on Tue and 1:00-2:00 on Thu
+* Office hours location: LLC Common Room
