@@ -29,6 +29,6 @@ Instructor
 
 Teaching Assistant
 * Name: Hannah Chay
-* Email: hchay@wustl.edu
-* Office hours: 1:30-2:30 on Tue and 1:00-2:00 on Thu
+* Email: chayh@wustl.edu
+* Office hours: 1:30-2:30 on Tue and 1:00-2:00 on Fri
 * Office hours location: LLC Common Room
