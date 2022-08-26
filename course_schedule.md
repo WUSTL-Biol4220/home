@@ -1,7 +1,7 @@
 
 ## Course schedule
 
-This file contains a list of all of the labs for the semester. Links for labs will be added when they are assigned. The :dna: marker tells us how we're progressing through the semester.
+This file contains a list of all of the labs for the semester. Links for labs will be added when they are assigned. The :whale: marker tells us how we're progressing through the semester.
 
 Reading assignments from [*Computing Skills for Biologists*](https://computingskillsforbiologists.com/) (Allesina & Wilmes) are identified by the CSB prefix followed by the pages or sections. Students are strongly encouraged to read through the exercises at the end of each CSB chapter we read, since those exercises are similar to what might appear on an Exam.
 
