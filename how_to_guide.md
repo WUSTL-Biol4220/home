@@ -127,6 +127,45 @@ Here is what the account creation prompt looks like:
 
 <img src="assets/how_to/github_new_account.png" width="250"/>
 
+---
+
+## Add SSH key to GitHub account
+
+You can simplify how you access GitHub from your virtual machine by first generating a unique SSH key on your virtual machine then registering that key with your GitHub account. Registering the SSH key allows you to bypass repeated and somewhat tedious username/password authentication.
+
+To generate an SSH key, log into your virtual machine then type
+```
+$ cd ~/.ssh && ssh-keygen
+```
+When asked, use the default location to save the key then enter and re-enter your key's password (a blank password will be accepted but is not ideal).
+```
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/mlandis/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/mlandis/.ssh/id_rsa
+Your public key has been saved in /home/mlandis/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:fJFkgx52TrtiW0YBtNxszpExskQMmLUvhMI0Cy+J42k mlandis@bio4220testvm
+The key's randomart image is:
++---[RSA 3072]----+
+|. o  +o=*o*      |
+|.= ..o ++O+*     |
+|= * . oo+=Oo     |
+|.o.. . =.++o     |
+| E    . S.+.     |
+|.      .o.+      |
+|       . =       |
+|        .        |
+|                 |
++----[SHA256]-----+
+```
+Next, print and copy the contents of your new key file:
+```
+$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EZZZZZZZZZZCZXYCKOebxfeutzUbDSsrO4DewLcvUQzEXrt09Knp7jJkYnnnO2S+axy/O2WHQZZZZZZZZMxeJsyUe+tN7CmwwB/Zn/BdWkvEnK0fkutsR8ahfXTrEl4OScWPZZZZZZZZZZZZZN8zfKPPdpfR7yzdUUa+ZoW2wFbEygvh39u1XJGO+k0G2ajeeujvOksh7SXXiBZI+9sBuQmos3DaFZ1Pz5bFOIBFeFMiG+QW18xo1YVhGr8GKVOV1hcE8/6Lxn1byXFN5P5DEQF+Jrxvt1aq0FLY7EjH4ZZZZZZZZ7Rx4AEa4+/6KBku1SfeV5hk4FYnv+IHaD47R0BD68ZZZZZZZ5PbIKxAT2o+DbR31A/zqRzXXRbgbS36gn5x3m+XCadXDZZZZZZaUCuD18k6zOONDUFF2xN8qNC6MrH/GFYqKZZZA71/MdIAejqZZZZZw3k3Dc8WMU= mlandis@bio4220testvm
+```
+**Important:** This key grants special access to your computer. Do not share it publicly. (The key printed above is a toy example and is invalid.)
 
 ---
 
