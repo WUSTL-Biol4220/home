@@ -4,11 +4,11 @@
 
 ### Course resources
 
-* [Syllabus](https://docs.google.com/document/d/1P3TJ_bJiwFAKXKII_R3fqhgLsiTNXfowWWD4hjdMnp0/edit?usp=sharing)
-* [Canvas](https://wustl.instructure.com/courses/93893)
 * [Lecture & lab schedule](course_schedule.md)
-* [Course Project](course_project.md)
 * [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-2022)
+* [Canvas](https://wustl.instructure.com/courses/93893)
+* [Syllabus](https://docs.google.com/document/d/1P3TJ_bJiwFAKXKII_R3fqhgLsiTNXfowWWD4hjdMnp0/edit?usp=sharing)
+* [Course Project](course_project.md)
 * ["How To" guide](how_to_guide.md)
 
 
@@ -24,12 +24,11 @@ Instructor
 * Name: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
-* Office hours: 3:00pm - 4:00pm on Thu
-* Office room: Rebstock 210
-* Zoom link: https://wustl.zoom.us/j/93971192504
+* Drop-in hours: 3:00-4:00pm on Thu
+* Drop-in hours location: Rebstock 210
 
 Teaching Assistant
 * Name: Hannah Chay
-* Email: hchay@wustl.edu
-* Office hours: TBD
-* Office room: TBD
+* Email: chayh@wustl.edu
+* Drop-in hours: 1:30-2:30 on Tue and 12:00-1:00 on Fri
+* Drop-in hours location: LLC Common Room

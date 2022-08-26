@@ -5,6 +5,7 @@ This document serves as a quick reference for "how to" do basic tasks:
 - [Secure shell (SSH)](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#secure-shell-ssh)
 - [Lab virtual machines (VM)](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#lab-virtual-machines-vm)
 - [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-account)
+- [Add SSH Key to GitHub account](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#add-ssh-key-to-github-account)
 - [Create a GitHub personal authentication token (PAT)](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-personal-authentication-token-pat)
 - [Accept your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#accept-your-github-classroom-lab-assignment)
 - [Submit your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#complete-your-github-classroom-lab-assignment)
@@ -126,6 +127,57 @@ Here is what the account creation prompt looks like:
 
 <img src="assets/how_to/github_new_account.png" width="250"/>
 
+---
+
+## Add SSH key to GitHub account
+
+You can simplify how you access GitHub from your virtual machine by first generating a unique SSH key on your virtual machine then registering that key with your GitHub account. Registering the SSH key allows you to bypass repeated and somewhat tedious username/password authentication.
+
+To generate an SSH key, log into your virtual machine then type
+```
+$ cd ~/.ssh && ssh-keygen
+```
+When asked, use the default location to save the key then enter and re-enter your key's password (a blank password will be accepted but is not ideal).
+```
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/mlandis/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/mlandis/.ssh/id_rsa
+Your public key has been saved in /home/mlandis/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:fJFkgx52TrtiW0YBtNxszpExskQMmLUvhMI0Cy+J42k mlandis@bio4220testvm
+The key's randomart image is:
++---[RSA 3072]----+
+|. o  +o=*o*      |
+|.= ..o ++O+*     |
+|= * . oo+=Oo     |
+|.o.. . =.++o     |
+| E    . S.+.     |
+|.      .o.+      |
+|       . =       |
+|        .        |
+|                 |
++----[SHA256]-----+
+```
+Next, print and copy the contents of your new key file:
+```
+$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EZZZZZZZZZZCZXYCKOebxfeutzUbDSsrO4DewLcvUQzEXrt09Knp7jJkYnnnO2S+axy/O2WHQZZZZZZZZMxeJsyUe+tN7CmwwB/Zn/BdWkvEnK0fkutsR8ahfXTrEl4OScWPZZZZZZZZZZZZZN8zfKPPdpfR7yzdUUa+ZoW2wFbEygvh39u1XJGO+k0G2ajeeujvOksh7SXXiBZI+9sBuQmos3DaFZ1Pz5bFOIBFeFMiG+QW18xo1YVhGr8GKVOV1hcE8/6Lxn1byXFN5P5DEQF+Jrxvt1aq0FLY7EjH4ZZZZZZZZ7Rx4AEa4+/6KBku1SfeV5hk4FYnv+IHaD47R0BD68ZZZZZZZ5PbIKxAT2o+DbR31A/zqRzXXRbgbS36gn5x3m+XCadXDZZZZZZaUCuD18k6zOONDUFF2xN8qNC6MrH/GFYqKZZZA71/MdIAejqZZZZZw3k3Dc8WMU= mlandis@bio4220testvm
+```
+**Important:** This key grants special access to your computer. Do not share it publicly. (The key printed above is a toy example and is invalid.)
+
+The next step is to register your new key with your GitHub account.
+
+- Click on your User Avatar in the upper right corner of the GitHub page
+- Choose "Settings" from the dropdown menu
+- Click "SSH and GPG keys" under "Access" on the menubar on the left
+- Click the green "New SSH key" button in the upper right
+- Enter the "Biol 4220 VM" as the Title, select "Authentication Key" (default) as the Key type, paste the copied contents of `id_rsa.pub` into the Key field, then click "Add SSH key".
+
+<img src="assets/how_to/github_ssh_key.png" width="450"/>
+
+That's it! Your SSH key is now registered with GitHub. This will make it easier for you to interact with GitHub from your virtual machine.
 
 ---
 
@@ -163,8 +215,8 @@ To register the PAT on your VM
 1. SSH on to your VM
 2. Enter the command `git config --global credential.helper store`
 3. When you next interact with GitHub that requires your credentials (e.g. using `git push` or `git pull`)
-    a. Enter your GitHub username in the username field
-    b. Enter the **PAT that you saved to your clipboard** into the password field
+    - Enter your GitHub username in the username field
+    - Enter the **PAT that you saved to your clipboard** into the password field
 4. This will save your credentials as plain text in the file `~/.git-credentials` as `https://username:ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@github.com`. The command `cat ~/.git-credentials` will print this file to screen, if you want to take a peek.
 
 Please see an instructor if you have difficulties configuring the PAT on your VM, if your credentials no longer work, or if you reset your PAT.
