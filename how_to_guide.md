@@ -163,8 +163,8 @@ To register the PAT on your VM
 1. SSH on to your VM
 2. Enter the command `git config --global credential.helper store`
 3. When you next interact with GitHub that requires your credentials (e.g. using `git push` or `git pull`)
-    a. Enter your GitHub username in the username field
-    b. Enter the **PAT that you saved to your clipboard** into the password field
+    - Enter your GitHub username in the username field
+    - Enter the **PAT that you saved to your clipboard** into the password field
 4. This will save your credentials as plain text in the file `~/.git-credentials` as `https://username:ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@github.com`. The command `cat ~/.git-credentials` will print this file to screen, if you want to take a peek.
 
 Please see an instructor if you have difficulties configuring the PAT on your VM, if your credentials no longer work, or if you reset your PAT.
