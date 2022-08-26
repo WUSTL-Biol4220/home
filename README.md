@@ -24,11 +24,11 @@ Instructor
 * Name: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
-* Office hours: 3:00-4:00pm on Thu
-* Office hours location: Rebstock 210
+* Drop-in hours: 3:00-4:00pm on Thu
+* Drop-in hours location: Rebstock 210
 
 Teaching Assistant
 * Name: Hannah Chay
 * Email: chayh@wustl.edu
-* Office hours: 1:30-2:30 on Tue and 1:00-2:00 on Fri
-* Office hours location: LLC Common Room
+* Drop-in hours: 1:30-2:30 on Tue and 12:00-1:00 on Fri
+* Drop-in hours location: LLC Common Room
