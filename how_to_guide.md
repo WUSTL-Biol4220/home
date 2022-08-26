@@ -167,6 +167,18 @@ ssh-rsa AAAAB3NzaC1yc2EZZZZZZZZZZCZXYCKOebxfeutzUbDSsrO4DewLcvUQzEXrt09Knp7jJkYn
 ```
 **Important:** This key grants special access to your computer. Do not share it publicly. (The key printed above is a toy example and is invalid.)
 
+The next step is to register your new key with your GitHub account.
+
+- Click on your User Avatar in the upper right corner of the GitHub page
+- Choose "Settings" from the dropdown menu
+- Click "SSH and GPG keys" under "Access" on the menubar on the left
+- Click the green "New SSH key" button in the upper right
+- Enter the "Biol 4220 VM" as the Title, select "Authentication Key" (default) as the Key type, paste the copied contents of `id_rsa.pub` into the Key field, then click "Add SSH key".
+
+<img src="assets/how_to/github_ssh_key.png" width="450"/>
+
+That's it! Your SSH key is now registered with GitHub. This will make it easier for you to interact with GitHub from your virtual machine.
+
 ---
 
 ## Create a GitHub Personal Authentication Token (PAT)
