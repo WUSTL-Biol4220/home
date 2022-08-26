@@ -5,6 +5,7 @@ This document serves as a quick reference for "how to" do basic tasks:
 - [Secure shell (SSH)](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#secure-shell-ssh)
 - [Lab virtual machines (VM)](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#lab-virtual-machines-vm)
 - [Create a GitHub account](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-account)
+- [Add SSH Key to GitHub account](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#add-ssh-key-to-github-account)
 - [Create a GitHub personal authentication token (PAT)](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-personal-authentication-token-pat)
 - [Accept your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#accept-your-github-classroom-lab-assignment)
 - [Submit your GitHub Classroom lab assignment](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#complete-your-github-classroom-lab-assignment)
