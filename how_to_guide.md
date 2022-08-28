@@ -285,11 +285,14 @@ When you're ready to submit your lab assignment
 3. Visit your repository: https://github.com/WUSTL-Biol4220/example-lab-mlandis
   - If see a red 'X' by your newest commit, click the 'X'<br>
   <img src="assets/how_to/github_commit_fail.png" width="200"/>
+  
   - Expand the 'autograding' step to identify the problem<br>
   <img src="assets/how_to/github_test_fail.png" width="200"/>
+  
   - The test expects `output.txt` to contain `Hello, world!` not `Jello, warld!`
   - If you see a green checkmark next to the newest commit, click the checkmark<br>
-    <img src="assets/how_to/github_commit_succeed.png" width="200"/>
+  <img src="assets/how_to/github_commit_succeed.png" width="200"/>
+    
   - Expand the 'autograding' step, and enjoy the celebratory fireworks<br>
-    <img src="assets/how_to/github_test_succeed.png" width="200"/>
+  <img src="assets/how_to/github_test_succeed.png" width="200"/>
 
