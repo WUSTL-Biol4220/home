@@ -7,8 +7,8 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 
 |         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
-| :whale: | Mon, Aug 29 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_01.pdf">Lecture 01</a>   | [Lab 01](labs/lab_01.md) | CSB 0.1 - 0.5 | Unix: orientation |
-|         | Wed, Aug 31 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_02.pdf">Lecture 02</a>   | [Lab 02](labs/lab_02.md) | CSB 1.1 - 1.5.1 | Unix: commands, filesystem |
+| :whale: | Mon, Aug 29 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_01.pdf">Lecture 01</a> | [Lab 01](labs/lab_01.md) | CSB 0.1 - 0.5 | Unix: orientation |
+|         | Wed, Aug 31 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_02.pdf">Lecture 02</a> | [Lab 02](labs/lab_02.md) | CSB 1.1 - 1.5.1 | Unix: commands, filesystem |
 |         | Mon, Sep 05 | -- | -- | -- | **No class: Labor Day** |
 |         | Wed, Sep 07 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_03.pdf">Lecture 03</a> | [Lab 03](labs/lab_03.md) | CSB 2.1 - 2.5 | Unix: git |
 |         | Mon, Sep 12 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_04.pdf">Lecture 04</a> | [Lab 04](labs/lab_04.md)  | CSB 1.5.2 - 1.6.6 | Unix: text, pipes, redirects |
@@ -20,8 +20,8 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Oct 03 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_10.pdf">Lecture 10</a> | [Lab 10](labs/lab_10.md) | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Wed, Oct 05 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_11.pdf">Lecture 11</a> | [Lab 11](labs/lab_11.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Mon, Oct 10 | -- | -- | -- | **No class: Fall Break** |
-|         | Wed, Oct 12 | -- | -- | -- | **Exam 1** |
-|         | Mon, Oct 17 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_12.pdf">Lecture 12</a> | [Lab 12](labs/lab_12.md) | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: introduction, variables, operators,<br>if-statements, functions<br>**Course project: overview**  |
+|         | Wed, Oct 12 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_12.pdf">Lecture 12</a> | [Lab 12](labs/lab_12.md) | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: introduction, variables, operators,<br>if-statements, functions<br>**Course project: overview**  |
+|         | Mon, Oct 17 | -- | -- | -- | **Exam 1** |
 |         | Wed, Oct 19 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_13.pdf">Lecture 13</a> | [Lab 13](labs/lab_13.md) | CSB 3.4, 3.6.2| Python: containers, loops, script arguments |
 |         | Mon, Oct 24 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_14.pdf">Lecture 14</a> | [Lab 14](labs/lab_14.md) | CSB 3.3.6, 3.7  | Python: strings, file handling  |
 |         | Wed, Oct 26 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_15.pdf">Lecture 15</a> | [Lab 15](labs/lab_15.md) | CSB 4.2.2 - 4.4 | Python: modules, system calls, more with containers<br>**Course project: approvals** |
