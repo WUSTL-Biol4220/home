@@ -343,7 +343,9 @@ mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ ls data/neofelis/
 diardi.fasta  leo.fasta  nebulosa.fasta  tigris.fasta
 ```
 
-The files `leo.fasta` and `tigris.fasta` have returned to the `data/neofelis` folder, as they were in commit `10ee6fb`. What we can't ignore is the long warning message, indicating that the branch is now in a `detatched HEAD` state. In essence, any commits you make in this state will not have any effect on the commit history *for your current branch*. All changes will be forgotten once you return to the most recent commit for the branch.
+The files `leo.fasta` and `tigris.fasta` have returned to the `data/neofelis` folder, as they were in commit `10ee6fb`. What we can't ignore is the long warning message, indicating that the branch is now in a `detached HEAD` state. A detached HEAD state means that the commit you are interacting with (via checkout) is not associated with a branch. Commits you make while detached will not be stored to the commit history of the previously checked out branch. A detached head state can allow you to modify older versions of the files in your repo, observe how the new changes behave, and (if useful) save those changes into a new branch.
+
+For this lab, we will modify the filesystem while in a detached state by deleting a directory. Then we will return to our original position in the git history with a second checkout command, which will restore the directory as it was originally saved in the main branch.
 
 ```console
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ rm -rf data
@@ -359,6 +361,8 @@ On branch main
 Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
+mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ ls data
+neofelis  panthera
 ```
 
 Your local VM and GitHub repos should now be viewing the same commit -- i.e. the most recent commit in the repo's history.
