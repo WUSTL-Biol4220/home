@@ -9,9 +9,11 @@ The major tasks to complete for Lab 03 are
 2. Working within a single branch
 3. Working with multiple branches
 
-You will need to create a Personal Authentication Token (PAT) to complete this lab. Instructions to do so are here: [link](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-personal-authentication-token-pat).
+**Important.** To complete this lab and all future labs, you will need to generate an SSH key for your VM and associate that key with your GitHub account. Instructions for this can be found here: [link](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#add-ssh-key-to-github-account).
 
-For this lab, you will be the only contributor to your repo. In a future lab, we will cover how to work with other contributors in a shared repo.
+<!--
+You will need to create a Personal Authentication Token (PAT) to complete this lab. Instructions to do so are here: [link](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#create-a-github-personal-authentication-token-pat).
+-->
 
 ---
 
@@ -19,24 +21,24 @@ For this lab, you will be the only contributor to your repo. In a future lab, we
 
 Enter your Lab 01 repo hosted at https://github.com/WUSTL-Biol4220. For example, the repo for Lab 01 for my user account (`mlandis`) is located at https://github.com/WUSTL-Biol4220/lab-01-mlandis.
 
-<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_02A/clone_01a.png" width="350"/>
+<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/clone_01.png" width="350"/>
 
 Click on the green "Code" button, which will present you with various options for how to acquire the code. One of the bottom two options is to open the repo in the GitHub Desktop repo management application (which we won't use in this course). Another option is to download the entire repo as a `.zip` file. What we'll do is clone (or copy) the repository to our VM using the `git clone` command.
 
-We will clone using the HTTPS link, which needs no special configuration but does require you to enter your username and password to interact with GitHub. Your dropdown menu should read "Clone with HTTPS"; if it does not, click the blue "Use HTTPS" link. Copy the HTTPS link to your clipboard. For example, my HTTPS link is `https://github.com/WUSTL-Biol4220/lab-01-mlandis.git`.
+Select "SSH" as the clone option. Cloning a GitHub project using the SSH link means that you do not need to enter your GitHub username and password for standard `git` commands, such as `push` and `pull`. Instead, GitHub authenticates your access using your VM's SSH key (see [link](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#add-ssh-key-to-github-account)).
 
-Log into your VM and change directories to `~/labs`; we'll store all course lab work in this directory from now own. From here, we'll instruct `git` to `clone` (copy) the repository hosted at `https://github.com/WUSTL-Biol4220/lab-01-mlandis.git`.
+Copy the SSH link to your clipboard. For example, my SSH link is `git@github.com:WUSTL-Biol4220/lab-01-mlandis.git`.
+
+Log into your VM and change directories to `~/labs`; we'll store all course lab work in this directory from now own. From here, we'll instruct `git` to `clone` (copy) the repository hosted at `git@github.com:WUSTL-Biol4220/lab-01-mlandis.git`.
 
 ```console
-mlandis@biol4220-mlandis:~/labs$ git clone https://github.com/WUSTL-Biol4220/lab-01-mlandis.git
+mlandis@biol4220-mlandis:~/labs$ git clone git@github.com:WUSTL-Biol4220/lab-01-mlandis.git
 Cloning into 'lab-01-mlandis'...
-Username for 'https://github.com': mlandis
-Password for 'https://mlandis@github.com':
 remote: Enumerating objects: 15, done.
 remote: Counting objects: 100% (15/15), done.
 remote: Compressing objects: 100% (9/9), done.
-remote: Total 15 (delta 2), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (15/15), 1.71 KiB | 28.00 KiB/s, done.
+remote: Total 15 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (15/15), done.
 ```
 
 And we see that all files and folders from Lab 01 on GitHub are now in our VM filesystem!
