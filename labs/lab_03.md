@@ -285,7 +285,7 @@ Suppose we discover this change was in error. We can use `git revert` to *revert
 ```console
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git revert b96cfb5
 
-   ... provide a 
+   ... use commit message to explain purpose of the revert, if useful ...
 
 [main 8ec9fc0] Revert "move lion to clouded leopard genus"
  1 file changed, 0 insertions(+), 0 deletions(-)
