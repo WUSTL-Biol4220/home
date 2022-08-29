@@ -178,15 +178,15 @@ In this lab, we'll learn more about how to move between different commits within
 Similar to what you did in Part 1 of this lab, we will clone your Lab 03 assignment repo from GitHub to the `~/labs` directory on your VM. The process of cloning a repo to your workstation will become familiar over time, but revisit the Part 1 instructions if you don't remember the exact procedure. The general procedure is to: navigate to the Lab 03 assignment on GitHub, click Code, select HTTPS, then copy the link to your clipboard (e.g. `https://github.com/WUSTL-Biol4220/lab-03-mlandis.git`). Then, enter `~/labs` and call `git clone` while using the copied link as the argument.
 
 ```console
-mlandis@biol4220-mlandis:~/labs$ git clone https://github.com/WUSTL-Biol4220/lab-03-mlandis.git
+mlandis@biol4220-mlandis:~/labs$ git clone git@github.com:WUSTL-Biol4220/lab-03-mlandis.git
 Cloning into 'lab-03-mlandis'...
-Username for 'https://github.com': mlandis
-Password for 'https://mlandis@github.com':
+Warning: Permanently added the ECDSA host key for IP address '140.82.112.3' to the list of known hosts.
 remote: Enumerating objects: 13, done.
 remote: Counting objects: 100% (13/13), done.
 remote: Compressing objects: 100% (6/6), done.
-remote: Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (13/13), 988 bytes | 98.00 KiB/s, done.
+remote: Total 13 (delta 0), reused 12 (delta 0), pack-reused 0
+Receiving objects: 100% (13/13), done.
+mlandis@biol4220-mlandis:~/labs$ cd lab-03-mlandis/
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ ls
 data  README.md
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ cat README.md
