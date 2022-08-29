@@ -23,9 +23,9 @@ Enter your Lab 01 repo hosted at https://github.com/WUSTL-Biol4220. For example,
 
 <img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/clone_01.png" width="350"/>
 
-Click on the green "Code" button, which will present you with various options for how to acquire the code. One of the bottom two options is to open the repo in the GitHub Desktop repo management application (which we won't use in this course). Another option is to download the entire repo as a `.zip` file. What we'll do is clone (or copy) the repository to our VM using the `git clone` command.
+Click on the green "Code" button, which will present you with three options to acquire the code. We'll use the top option to "Clone" or copy the repository to our VM using the `git clone` command. 
 
-Select "SSH" as the clone option. Cloning a GitHub project using the SSH link means that you do not need to enter your GitHub username and password for standard `git` commands, such as `push` and `pull`. Instead, GitHub authenticates your access using your VM's SSH key (see [link](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#add-ssh-key-to-github-account)).
+Select "SSH" as the clone option. By using SSH to clone a GitHub project, you will not need to enter your GitHub username and password for standard `git` commands, such as `push` and `pull`. Instead, GitHub authenticates your access using your VM's SSH key (see [link](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#add-ssh-key-to-github-account)). Using SSH also avoids the need to configure other complicated authentication schemes -- e.g. two factor authentication or personalized authentication tokens.
 
 Copy the SSH link to your clipboard. For example, my SSH link is `git@github.com:WUSTL-Biol4220/lab-01-mlandis.git`.
 
