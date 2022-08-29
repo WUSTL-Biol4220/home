@@ -135,7 +135,7 @@ You can simplify how you access GitHub from your virtual machine by first genera
 
 To generate an SSH key, log into your virtual machine then type
 ```
-$ cd ~/.ssh && ssh-keygen
+$ mkdir -p ~/.ssh && cd ~/.ssh && ssh-keygen
 ```
 When asked, use the default location to save the key then enter and re-enter your key's password (a blank password will be accepted but is not ideal).
 ```
