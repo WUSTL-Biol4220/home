@@ -24,7 +24,7 @@ Instructor
 * Name: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
-* Drop-in hours: 3:00-4:00pm on Thu
+* Drop-in hours: 3:00-4:00pm on Wed
 * Drop-in hours location: Rebstock 210
 
 Teaching Assistant

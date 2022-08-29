@@ -40,7 +40,7 @@ If your problem persists, please let the instructor know or contact the WUSTL [I
 
 SSH is an encrypted protocol for securely communicating with devices on the network. We will connect to several key computational resources, such as our lab virtual machines, using VPN and SSH in combination. You can read more about SSH [here](https://en.wikipedia.org/wiki/Secure_Shell).
 
-* **Linux and Mac OS X.** Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections through terminal. To open an SSH connection to a particular IP address (e.g. `192.168.1.1`), you will open a terminal session, then type `ssh  192.168.1.1` and press enter. If you execute `ssh` without providing a target address, the computer will report different options for how you might use `ssh` (i.e. output reads `usage: ssh` followed by various flags). Please notify the instructor if your command prompt instead reports `command not found: ssh`.
+* **Linux and Mac OS X.** Users with Unix-based operating systems, such as Linux and Mac OS X, will use the pre-installed `ssh` program to establish SSH connections through terminal. If you want to open an SSH connection to a particular IP address (e.g. `192.168.1.1`), you will open a terminal session, then type `ssh  192.168.1.1` and press enter. (**Note:** this is only an example command that you do not need to execute.) If you execute `ssh` without providing a target address, the computer will report different options for how you might use `ssh` (i.e. output reads `usage: ssh` followed by various flags). Please notify the instructor if your command prompt instead reports `command not found: ssh`.
 
 * **Windows.** Windows users will need to install an SSH client to use various resources that are essential to completing the labs. Labs will generally assume that Windows users are connecting with [PuTTy](https://www.putty.org/). To open an SSH session with PuTTY, you will double-click the application, enter the appropriate address into the "Host Name or IP address" field, enter `22` into the "Port" field, then click "Open".
 
@@ -135,7 +135,7 @@ You can simplify how you access GitHub from your virtual machine by first genera
 
 To generate an SSH key, log into your virtual machine then type
 ```
-$ cd ~/.ssh && ssh-keygen
+$ mkdir -p ~/.ssh && cd ~/.ssh && ssh-keygen
 ```
 When asked, use the default location to save the key then enter and re-enter your key's password (a blank password will be accepted but is not ideal).
 ```
@@ -160,7 +160,7 @@ The key's randomart image is:
 |                 |
 +----[SHA256]-----+
 ```
-Next, print and copy the contents of your new key file:
+Next, print and copy the contents of your new key file. **Important:** you must run this command on your virtual machine and copy the contents for your individual and unique `id_rsa.pub` file. 
 ```
 $ cat id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EZZZZZZZZZZCZXYCKOebxfeutzUbDSsrO4DewLcvUQzEXrt09Knp7jJkYnnnO2S+axy/O2WHQZZZZZZZZMxeJsyUe+tN7CmwwB/Zn/BdWkvEnK0fkutsR8ahfXTrEl4OScWPZZZZZZZZZZZZZN8zfKPPdpfR7yzdUUa+ZoW2wFbEygvh39u1XJGO+k0G2ajeeujvOksh7SXXiBZI+9sBuQmos3DaFZ1Pz5bFOIBFeFMiG+QW18xo1YVhGr8GKVOV1hcE8/6Lxn1byXFN5P5DEQF+Jrxvt1aq0FLY7EjH4ZZZZZZZZ7Rx4AEa4+/6KBku1SfeV5hk4FYnv+IHaD47R0BD68ZZZZZZZ5PbIKxAT2o+DbR31A/zqRzXXRbgbS36gn5x3m+XCadXDZZZZZZaUCuD18k6zOONDUFF2xN8qNC6MrH/GFYqKZZZA71/MdIAejqZZZZZw3k3Dc8WMU= mlandis@bio4220testvm
