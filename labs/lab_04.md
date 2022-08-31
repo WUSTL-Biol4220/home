@@ -186,6 +186,7 @@ atgggaatttcccaattttgtactcaataccctcttccttcaactgctcttctgatttgc
 caacccaggcaacttccggatgtgtgtaaatcactgatggcacacagttgtagtcgatgt
 gcactgcaccg_A_SUSPICIOUS_ERROR_caacacagatgagtcctctgctttgtgag
 ccagcattggaccagcgaccacatcaccaatagcatagatatttggaattttggtttgga
+atctgctattcactggaattctacctctgggatctagttcaattccaagctcttctagtc
 ```
 
 Another use of `grep` might be to list all instances of a genetic motif within a file, while also printing the line numbers (`-n`) for any matches:
