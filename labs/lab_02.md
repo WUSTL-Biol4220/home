@@ -160,7 +160,7 @@ This concludes Part 1 of Lab 02.
 
 ## 2. Working with the filesystem
 
-We'll learn more about manipulating filesystems here. For this part of the lecture, we will create a 
+We'll learn more about manipulating filesystems here. For this part of the lecture, we will create, access, manipulation, and remove filesystem objects. 
 
 Enter the `labs` directory, make a directory called `lab_02`, and enter the directory.
 
