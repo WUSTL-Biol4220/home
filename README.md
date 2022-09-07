@@ -5,7 +5,6 @@
 ### Course resources
 
 * [Lecture & lab schedule](course_schedule.md)
-* [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-2022)
 * [Canvas](https://wustl.instructure.com/courses/93893)
 * [Syllabus](https://docs.google.com/document/d/1P3TJ_bJiwFAKXKII_R3fqhgLsiTNXfowWWD4hjdMnp0/edit?usp=sharing)
 * [Course Project](course_project.md)
