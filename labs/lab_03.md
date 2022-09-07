@@ -309,11 +309,11 @@ Revert the other commit, which placed `tigris.fasta` in `data/neofelis`, then co
 
 Now, if someone were to clone your repo from GitHub, they would have access to all of your changes, including the reversions. Validate this by visiting your Lab 03 repo on GitHub. Notice that your newest commit appears at the top of your repo's page.
 
-<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_02A/view_02a.png" width="350"/>
+<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/view_03.png" width="350"/>
 
 Click on the "5 commits" (or however many commits your branch has) to view the commit history through the GitHub GUI.
 
-<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_02A/commit_02a.png" width="350"/>
+<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/commit_03.png" width="350"/>
 
 Suppose now that you wanted to view and interact with the filesystem as it existed before your two reversions. Return to your VM and checkout the commit prior to the commit in which you applied `git revert` (for me, it's `10ee6fb`).
 
@@ -432,11 +432,11 @@ Branch 'add_puma' set up to track remote branch 'add_puma' from 'origin'.
 
 Now go to GitHub. Notice that the GitHub repo now lists two branches: `main` and `add_puma`.
 
-<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_02A/new_branch_02a.png" width="350"/>
+<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/new_branch_03.png" width="350"/>
 
 Unfortunately, we forgot to update the `README.md` file to reflect the new contents of `data` in the `add_puma` branch. Use the GitHub editor to correct the text of `README.md`. This edit will appear as a new commit in the branch history.
 
-<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_02A/view_02a.png" width="350"/>
+<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/view_03.png" width="350"/>
 
 To apply the new GitHub branch commits to your local copy of the branch, you will need *pull* them from GitHub (`origin`), like so
 
@@ -581,4 +581,4 @@ To https://github.com/WUSTL-Biol4220/lab-03-mlandis.git
 
 Return to the Lab 03 repo on GitHub. The `README.md` should show your merged changes.
 
-<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_02A/commit_02a.png" width="350"/>
+<img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/commit_03.png" width="350"/>
