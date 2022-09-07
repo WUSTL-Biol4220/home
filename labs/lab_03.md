@@ -583,4 +583,4 @@ Return to the Lab 03 repo on GitHub. The `README.md` should show your merged cha
 
 <img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/commit_03.png" width="350"/>
 
-The lab assignment is complete after this final `push` command is complete.
+This final `push` command completes the lab exercise.
