@@ -1,6 +1,6 @@
 # Lab 07
 
-*Lab 07 GitHub Classroom link:* https://classroom.github.com/a/rpDo8ozQ
+*Lab 07 GitHub Classroom link:* https://classroom.github.com/a/85oUc2nQ
 
 This lab will focus on retrieving fasta formatted sequences from GenBank, one of NCBI's Entrez databases. These techniques are useful when you need to generate a dataset for a set of organisms and genes. Although these scripts will only download nucleotide sequence information, the scripts could easily be adapted to compile different kinds of datasets (e.g. amino acid sequences, gene annotation features).
 
