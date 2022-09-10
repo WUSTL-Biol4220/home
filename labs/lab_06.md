@@ -1,6 +1,6 @@
 # Lab 06
 
-*Lab 06 GitHub Classroom link:* https://classroom.github.com/a/nUMxX_Ot
+*Lab 06 GitHub Classroom link:* https://classroom.github.com/a/uFqrc1yv
 
 Many complex tasks cannot be completed with a single shell command, or even with several commands joined together with pipes. *Shell scripts* are useful in situations that require multiple commands, access to intermediate variables, for-loops, if-statements, mathematical operations, and/or unusual procedures that cannot easily be done with existing programs. In this lab, we will learn how to run, annotate, modify, and create shell scripts.
 
