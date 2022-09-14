@@ -95,7 +95,7 @@ TVL
 
 Or, using `sort` with `cut`, list all species names in alphabetical order:
 ```console
-$ sort -k9,9 -t "," Asteraceae_locations.csv | cut -d "," -f8 | head -n5
+$ sort -t "," Asteraceae_locations.csv | cut -d "," -f8 | head -n5
 Acanthocephalus_amplexifolius
 Acanthocephalus_benthamianus
 Achillea_arabica
