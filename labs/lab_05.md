@@ -175,7 +175,7 @@ cat data/Marra2014_data.fasta | grep ">" | tr -s " " | grep -v it_thresh | cut -
 In this final step for Lab 05, you will write several pipelines that can be used to process a data file. For each pipeline, I will provide a description of what information needs to be extracted from a given input file. Your job is to translate this request into a series of Unix commands to produce the desired output. Similar to the previous example, you will need to submit three files for each problem: a file containing the pipeline command (`pipeline.txt`); a file containing the pipeline output (`output.txt`); and a file providing a line-by-line description of your pipeline command (`description.txt`). For each assignment, store these three files in the directory `part_3/problem_N`, where `N` corresponds to the problem in Part 3 that you've solved.
 
 
-**Problem 1.** Write a pipeline to extract all of the sequence names from all of the fasta-formatted files in a directory, then print the first 3 characters of each sequence name in alphabetical order and without duplicates. Use the file `data/miRNA` to produce `output.txt`.
+**Problem 1.** Write a pipeline to extract all of the sequence names from all of the fasta-formatted files in a directory, then print the first 3 characters of each sequence name in alphabetical order and without duplicates. Use the files in `data/miRNA` to produce `output.txt`.
 
 **Problem 2.** Write a pipeline to find all `.fasta` files in the local directory or in any of its subdirectories (at any depth), then print only the first part of each filename -- e.g. if a file was found at `data/seq/cytB.fasta`, then the pipeline should only print `cytB`. Find files in the `data` directory to produce `output.txt`.
 
