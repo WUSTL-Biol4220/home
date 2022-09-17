@@ -26,7 +26,7 @@ For each script, annotate what each line of the script does using a comment `#`.
 
 ## 2. Complete a shell script
 
-For Part 2 of the lab, you will provided with `run.sh` scripts that contain some of the code needed to solve each problem. Your task is to complete the script for each problem as requested. In addition, provide a description for the script and annotate the scripts in the same manner was required for the Part 1 problems.
+For Part 2 of the lab, you will be provided with `run.sh` scripts that contain some of the code needed to solve each problem. Your task is to complete the script for each problem as requested. In addition, provide a description for the script and annotate the scripts in the same manner was required for the Part 1 problems.
 
 **Problem 1.** The file `data/numbers.txt` contains a data table with three columns of integers. Modify the script `/part_2/problem_1/run.sh` to report which value for each row in `data/numbers.txt` is the largest. The output should read
 ```
