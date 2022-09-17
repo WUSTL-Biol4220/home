@@ -95,7 +95,7 @@ TVL
 
 Or, using `sort` with `cut`, list all species names in alphabetical order:
 ```console
-$ sort -k9,9 -t "," Asteraceae_locations.csv | cut -d "," -f8 | head -n5
+$ sort -t "," Asteraceae_locations.csv | cut -d "," -f8 | head -n5
 Acanthocephalus_amplexifolius
 Acanthocephalus_benthamianus
 Achillea_arabica
@@ -154,7 +154,7 @@ The *description file* (`description.txt`) will explain in simple language what 
 Finally, move the three files for each exercise in Step 2 into the directory `step_2/problem_N`, where `N` corresponds to exercises 1, 2, and 3.
 
 
-**Problem 1.** Modify the following command to first sort the data table by the `AdultBodyMass_g` column before sorting by `Family`. (Hint: the command `sort -k4 -k2` would first sort by values in field 4, then subsort those results by values in field 2.)
+**Problem 1.** Modify the following command to first sort the data table by the `AdultBodyMass_g` column before sorting by `Family`. The output should all columns extracted using the original pipeline in addition to the new column `AdultBodyMass_g` column. (Hint: the command `sort -k4 -k2` would first sort by values in field 4, then subsort those results by values in field 2.)
 ```
 cat data/Pacifici2013_data.csv | cut -d ";" -f2,3,4 | sort -k2 -t ";" | uniq | cut -d ";" -f1,3 > output.txt
 ```
@@ -175,7 +175,7 @@ cat data/Marra2014_data.fasta | grep ">" | tr -s " " | grep -v it_thresh | cut -
 In this final step for Lab 05, you will write several pipelines that can be used to process a data file. For each pipeline, I will provide a description of what information needs to be extracted from a given input file. Your job is to translate this request into a series of Unix commands to produce the desired output. Similar to the previous example, you will need to submit three files for each problem: a file containing the pipeline command (`pipeline.txt`); a file containing the pipeline output (`output.txt`); and a file providing a line-by-line description of your pipeline command (`description.txt`). For each assignment, store these three files in the directory `part_3/problem_N`, where `N` corresponds to the problem in Part 3 that you've solved.
 
 
-**Problem 1.** Write a pipeline to extract all of the sequence names from all of the fasta-formatted files in a directory, then print the first 3 characters of each sequence name in alphabetical order and without duplicates. Use the file `data/miRNA` to produce `output.txt`.
+**Problem 1.** Write a pipeline to extract all of the sequence names stored inside all the fasta-formatted files in a directory, then print the first 3 characters of each sequence name in alphabetical order and without duplicates. For example, `Mus` are the first 3 characters for the fasta sequence label `>Mus_musculus_cytB`. Use the files in `data/miRNA` to produce `output.txt`. 
 
 **Problem 2.** Write a pipeline to find all `.fasta` files in the local directory or in any of its subdirectories (at any depth), then print only the first part of each filename -- e.g. if a file was found at `data/seq/cytB.fasta`, then the pipeline should only print `cytB`. Find files in the `data` directory to produce `output.txt`.
 
