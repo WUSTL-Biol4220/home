@@ -50,7 +50,7 @@ Review the top 5 BLAST hits. Create a text file called `part_1_problem_1_answers
 3. What species does the (input) query sequence probably belong to?
 4. What gene does the query sequence belong to?
 5. What is the putative function for this gene?
-6. Relatively speaking, would you expect that this gene and its function evolves slowly or rapidly compared to other genes?
+6. Would you expect that this gene and its function evolves slowly or rapidly compared to other genes, and why?
 
 **Problem 2.** Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool again. Paste the same `Mysertious_protein_sequence` into the text field.
 
