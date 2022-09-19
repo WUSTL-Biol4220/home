@@ -17,7 +17,7 @@ To complete this lab, you will need to clone your GitHub Classroom repository fo
 
 For each script, annotate what each line of the script does using a comment `#`. After the first line (`#!/bin/bash`) add a comment that gives a brief description of what the script does, what the script expects as input (if anything), and a description and example of the output. Redirect the output for each script to `output.txt` to, simply to show that you have successfully run each script.
 
-**Problem 1.** `part_1/problem_1/run.sh` takes a directory as input. Try calling `./run.sh tmp` to see what the script does.
+**Problem 1.** `part_1/problem_1/run.sh` takes a directory as input. Try calling `./run.sh tmp` multiple times to see what the script does.
 
 **Problem 2.** `part_1/problem_2/run.sh` processes the file `data/Gesquiere2011_data.csv`, a file that records hormone levels among blood samples, where some individuals had their blood sampled multiple times.
 
