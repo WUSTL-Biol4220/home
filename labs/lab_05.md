@@ -129,7 +129,7 @@ data/Saavedra2013/n30.txt
 
 Bioinformatics projects tend to rely on a variety of pipeline commands, developed by different researchers to achieve different goals. In this section of the lab, you'll be provided with an assortment of pipeline commands. Your job is to interpret what those pipeline commands do, how to modify the pipeline to fulfill a different objective, and/or how to select a pipeline to perform a desired task.
 
-For each of the three problems below, you will need to produce (1) a file that modifies the behavior of the pipeline, (2) a file containing the output of the modified pipeline, and (3) a file that describes the steps of the modified pipeline, line-by-line. For each assignment, store these three files in the directory `part_2/problem_N`, where `N` corresponds to the problem in Part 3 that you've solved.
+For each of the three problems below, you will need to produce (1) a file that modifies the behavior of the pipeline, (2) a file containing the output of the modified pipeline, and (3) a file that describes the steps of the modified pipeline, line-by-line. For each assignment, store these three files in the directory `part_2/problem_N`, where `N` corresponds to the problem in Part 2 that you've solved.
 
 For example, an exercise might provide you with the pipeline commands
 ```
