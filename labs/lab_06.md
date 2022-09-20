@@ -17,7 +17,7 @@ To complete this lab, you will need to clone your GitHub Classroom repository fo
 
 For each script, annotate what each line of the script does using a comment `#`. After the first line (`#!/bin/bash`) add a comment that gives a brief description of what the script does, what the script expects as input (if anything), and a description and example of the output. Redirect the output for each script to `output.txt` to, simply to show that you have successfully run each script.
 
-**Problem 1.** `part_1/problem_1/run.sh` takes a directory as input. Try calling `./run.sh tmp` to see what the script does.
+**Problem 1.** `part_1/problem_1/run.sh` takes a directory as input. Try calling `./run.sh tmp` multiple times to see what the script does.
 
 **Problem 2.** `part_1/problem_2/run.sh` processes the file `data/Gesquiere2011_data.csv`, a file that records hormone levels among blood samples, where some individuals had their blood sampled multiple times.
 
@@ -34,6 +34,7 @@ For Part 2 of the lab, you will be provided with `run.sh` scripts that contain s
 23589 is the largest number.
 ...
 ```
+(Hint: By default a for-loop will iterate over whitespace-delimited "words" in a list. For example, a for-loop would parse `cat dog mouse` into the words `cat`, `dog`, `mouse` for iteration. You can use the translate command (`tr`) replace some whitespace-delimiters with non-whitespace-delimiters (e.g. `;`) to alter what the for-loop considers as a word during iteration.)
 
 
 **Problem 2.** The data table written to `data/Pacifici2013_data.csv` reports species traits, such as body mass and longevity, for a large number of mammals species. Modify the script `/part_2/problem_2/run.sh` to report the family, the species, and the body mass for the species with the *largest* body mass and the species with the *smallest* body mass within each family. For example, the entries output for Ursidae (the bear family) would be:
