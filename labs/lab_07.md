@@ -52,7 +52,7 @@ Review the top 5 BLAST hits. Create a text file called `part_1_problem_1_answers
 5. What is the putative function for this gene?
 6. Would you expect that this gene and its function evolves slowly or rapidly compared to other genes, and why?
 
-**Problem 2.** Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool again. Paste the same `Mysertious_protein_sequence` into the text field.
+**Problem 2.** Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool again. Paste the same `Mysterious_protein_sequence` into the text field.
 
 Do not click BLAST yet. Instead, expand the `+ Algorithm parameters` option at the bottom of the screen. Change "Max target sequences" from 100 to 1000 so more (worse) possible matches are returned. Change the "Word size" to 2, which requires fewer characters to initiate a possible match. Change the "Gap costs" to "Existence: 6, Extension: 2" which tells BLAST to allow for more gaps in its alignments. Change "Compositional adjustments" to "No adjustment" to tell BLAST to disregard what we know about the relative frequencies of amino acids. Lastly, uncheck "Low complexity regions" under "Filter" to tell BLAST to ignore segments of the protein that contain little information (e.g. proline-rich segments, acidic/basic regions).
 
