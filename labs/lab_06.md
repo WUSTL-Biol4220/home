@@ -10,6 +10,8 @@ $ git commit -m 'fix expected files'
 $ git pull
 $ git push
 ```
+The autograder will re-run after you push the new changes.
+
 In general, we do not use the autograder to determine grades, so you do not need to update `expected_files.txt` to the corrected version to receive full credit for the grade.
 
 
