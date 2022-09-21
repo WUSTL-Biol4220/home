@@ -44,7 +44,7 @@ Click the "BLAST" button to submit your query. It may take the NCBI servers 30-6
 
 Upon completion, the website will display the query results. Scroll down to find the results table.
 
-Review the top 5 BLAST hits. Create a text file called `part_1_problem_1_answers.txt` that contains answers to these questions:
+Review the top 5 BLAST hits (use default sorting). Create a text file called `part_1_problem_1_answers.txt` that contains answers to these questions:
 1. What range of Total Score values do you see?
 2. What range of E values do you see?
 3. What species does the (input) query sequence probably belong to?
@@ -60,7 +60,7 @@ These options should *worsen* our search. Now click BLAST. The query will take l
 
 Under the "Filter Results" box in the upper right, enter 50 to 60 in the "Percent Identity" option. Click Filter
 
-Review the top 5 BLAST hits in the filtered results. Create a text file called `part_1_problem_2_answers.txt` that contains answers to these questions:
+Review the top 5 BLAST hits in the filtered results (use default sorting). Create a text file called `part_1_problem_2_answers.txt` that contains answers to these questions:
 1. What range of Total Score values do you see?
 2. What range of E values do you see?
 3. What species were matched? Provide some context for how distantly related those species are relative to the species from which the query sequence probably originated.
@@ -120,7 +120,7 @@ CCAAGAATTGGAGCCAATCAATTCTTGCGGAGAACTGTGAATGCGCAAACCAACCCTTGG
 CCATCGCGTCCGCCATCTCCAGCAGCCGCACGCGGCGCATCTCGGGCAGCGTTGGGTCCT
 ```
 
-Review the top 5 BLAST hits in the filtered results. Create a text file called `part_1_problem_3_answers.txt` that contains answers to these questions:
+Review the top 5 BLAST hits in the filtered results (use default sorting). Create a text file called `part_1_problem_3_answers.txt` that contains answers to these questions:
 1. What range of Total Score values do you see?
 2. What range of E values do you see?
 3. What are the sequence descriptions for the best BLAST hits?
