@@ -3,8 +3,12 @@
 **NOTE:** The autograder reads the file named `expected_files.txt` that is bundled with this assignment to verify all files were correctly committed to your GitHub Classroom repo. The original version of `expected_files.txt` contains an error. You can replace that file with a corrected version of `expected_files.txt` using the following command:
 ```
 $ cd <path_to_your_lab_06_directory>
-$ cp expected_files.txt expected_files.txt.bak
-$ wget https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_07/expected_files.txt .
+$ rm expected_files.txt
+$ wget https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_06/expected_files.txt
+$ git add expected_files.txt
+$ git commit -m 'fix expected files'
+$ git pull
+$ git push
 ```
 In general, we do not use the autograder to determine grades, so you do not need to update `expected_files.txt` to the corrected version to receive full credit for the grade.
 
