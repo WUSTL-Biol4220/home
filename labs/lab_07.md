@@ -274,7 +274,7 @@ The script should return these results when called with these arguments:
 $ ./find_accession.sh 'Viburnum rufidulum' 'rbcL'
 Viburnum rufidulum,rbcL,KY627132,557
 $ ./find_accession.sh 'Viburnum rufidulum' 'rbcL' '1300:1400'
-Viburnum rufidulum,rbcL,HQ591761,1323
+Viburnum rufidulum,rbcL,HQ591761,1332
 ```
 
 **Problem 2.** Write a second script called `fetch_accessions.sh` that downloads and organizes sequences when provided a file containing species names (argument 1) and a file with gene names (argument 2). The species file simply contains a list of species, one-per-row. 
