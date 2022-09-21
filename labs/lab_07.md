@@ -44,7 +44,7 @@ Click the "BLAST" button to submit your query. It may take the NCBI servers 30-6
 
 Upon completion, the website will display the query results. Scroll down to find the results table.
 
-Review the top 5 BLAST hits. Create a text file called `part_1_problem_1_answers.txt` that contains answers to these questions:
+Review the top 5 BLAST hits (use default sorting). Create a text file called `part_1_problem_1_answers.txt` that contains answers to these questions:
 1. What range of Total Score values do you see?
 2. What range of E values do you see?
 3. What species does the (input) query sequence probably belong to?
@@ -60,7 +60,7 @@ These options should *worsen* our search. Now click BLAST. The query will take l
 
 Under the "Filter Results" box in the upper right, enter 50 to 60 in the "Percent Identity" option. Click Filter
 
-Review the top 5 BLAST hits in the filtered results. Create a text file called `part_1_problem_2_answers.txt` that contains answers to these questions:
+Review the top 5 BLAST hits in the filtered results (use default sorting). Create a text file called `part_1_problem_2_answers.txt` that contains answers to these questions:
 1. What range of Total Score values do you see?
 2. What range of E values do you see?
 3. What species were matched? Provide some context for how distantly related those species are relative to the species from which the query sequence probably originated.
@@ -120,7 +120,7 @@ CCAAGAATTGGAGCCAATCAATTCTTGCGGAGAACTGTGAATGCGCAAACCAACCCTTGG
 CCATCGCGTCCGCCATCTCCAGCAGCCGCACGCGGCGCATCTCGGGCAGCGTTGGGTCCT
 ```
 
-Review the top 5 BLAST hits in the filtered results. Create a text file called `part_1_problem_3_answers.txt` that contains answers to these questions:
+Review the top 5 BLAST hits in the filtered results (use default sorting). Create a text file called `part_1_problem_3_answers.txt` that contains answers to these questions:
 1. What range of Total Score values do you see?
 2. What range of E values do you see?
 3. What are the sequence descriptions for the best BLAST hits?
@@ -261,7 +261,7 @@ Solving each problem will involve writing a shell script that makes use of for-l
 ```
 IFS=$'\n'                 # set the internal field separator as
                           # the newline while running this script
-for LINE in `cat $FILE`;  # loop over \n-separated words from cat
+for LINE in $(cat $FILE);  # loop over \n-separated words from cat
 do                        # open for-loop
   echo $LINE              # do something with each word
 done                      # close for-loop
@@ -274,7 +274,7 @@ The script should return these results when called with these arguments:
 $ ./find_accession.sh 'Viburnum rufidulum' 'rbcL'
 Viburnum rufidulum,rbcL,KY627132,557
 $ ./find_accession.sh 'Viburnum rufidulum' 'rbcL' '1300:1400'
-Viburnum rufidulum,rbcL,HQ591761,1323
+Viburnum rufidulum,rbcL,HQ591761,1332
 ```
 
 **Problem 2.** Write a second script called `fetch_accessions.sh` that downloads and organizes sequences when provided a file containing species names (argument 1) and a file with gene names (argument 2). The species file simply contains a list of species, one-per-row. 
