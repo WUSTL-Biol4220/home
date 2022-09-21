@@ -1,0 +1,13 @@
+part_1/problem_1/run.sh
+part_1/problem_2/run.sh
+part_2/problem_1/run.sh
+part_2/problem_2/run.sh
+part_3/problem_1/run.sh
+part_3/problem_2/run.sh
+part_1/problem_1/output.txt
+part_1/problem_2/output.txt
+part_2/problem_1/output.txt
+part_2/problem_2/output.txt
+part_3/problem_1/output.txt
+part_3/problem_2/output.txt
+history.txt
