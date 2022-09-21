@@ -259,7 +259,7 @@ In this part of the lab, we will write scripts to download sequences from GenBan
 Solving each problem will involve writing a shell script that makes use of for-loops, if-statements, text-processing, and the newly learned EDirect commands. Solutions may involve reading files line-by-line, which can be done with the following for-loop syntax
 
 ```
-IFS=$'\n'                 # set the internal file separator as
+IFS=$'\n'                 # set the internal field separator as
                           # the newline while running this script
 for LINE in `cat $FILE`;  # loop over \n-separated words from cat
 do                        # open for-loop
