@@ -261,7 +261,7 @@ Solving each problem will involve writing a shell script that makes use of for-l
 ```
 IFS=$'\n'                 # set the internal field separator as
                           # the newline while running this script
-for LINE in `cat $FILE`;  # loop over \n-separated words from cat
+for LINE in $(cat $FILE);  # loop over \n-separated words from cat
 do                        # open for-loop
   echo $LINE              # do something with each word
 done                      # close for-loop
