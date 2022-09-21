@@ -1,6 +1,6 @@
 # Lab 06
 
-**NOTE:** The autograder reads the file named `expected_files.txt` that is bundled with this assignment to verify all files were correctly committed to your GitHub Classroom repo. The original version of `expected_files.txt` contains an error. You can replace that file with a corrected version of `expected_files.txt` using the following command:
+**NOTE:** The autograder reads the file named `expected_files.txt` that is bundled with this assignment to verify all files were correctly committed to your GitHub Classroom repo. The original version of `expected_files.txt` contains an error. You can replace that file with a corrected version of `expected_files.txt` using the following commands:
 ```
 $ cd <path_to_your_lab_06_directory>
 $ rm expected_files.txt
