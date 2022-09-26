@@ -162,7 +162,7 @@ $ alan -n adh.muscle_it1.fasta
 
 Increasing the number of iterations will allow MUSCLE to find a better global fit for the alignment score. Run MUSCLE again, this time for a maximum of 2 iterations. Then try 3, 4, 5, and 6 iterations. Be sure to change the output file name so the earlier result is not overwritten.
 
-How would you construct a pipeline with `cat`, `sort`, `uniq`, and `wc` to count how many lines differ between two fasta alignment files?
+How would you construct a pipeline with `cat`, `sort`, `uniq`, `grep`, and `wc` to count how many lines differ between two fasta alignment files?
 
 ### MAFFT
 
@@ -225,7 +225,7 @@ $ cat prank_costs.txt
 
 **For Problems 1 and 2.** Each script will align the input fasta file once for each the settings in each row of the cost file. For example, if the `./align_prank.sh` script was applied against the input was `seq.fasta`, the script would generate the file `seq.prank_1.fasta` by running PRANK using the settings from the first row of the cost file, `seq.prank_2.fasta` for the second row, etc.
 
-In addition, the scripts should record alignment statistics for each setting under the alignment program, then save those statistics to the file `seq.prank_stats.csv` -- again, assuming the input file was `seq.fasta` and the alignment program was PRANK. This file should contain columns that report the setting ID, the total number of gaps in the alignment, the average number of gaps per sequence (total # gaps / # sequences), and the total alignment length (total # characters / # sequences) for each setting in the costs file.
+In addition, the scripts should record alignment statistics for each setting under the alignment program, then save those statistics to the file `seq.prank_stats.csv` -- again, assuming the input file was `seq.fasta` and the alignment program was PRANK. This file should contain columns that report the setting ID, the total number of gaps in the alignment, the average number of gaps per sequence (total # gaps / # sequences), and the total alignment length (total # characters per aligned sequence) for each setting in the costs file.
 
 What settings under MAFFT and what settings under PRANK produce roughly similar numbers of gaps?  Does one program seem to produce "gappier" alignments over a wide range of settings?
 
