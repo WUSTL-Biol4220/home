@@ -1,6 +1,6 @@
 # Lab 09
 
-*Lab 09 GitHub Classroom link:* https://classroom.github.com/a/wWiwAMsr
+*Lab 09 GitHub Classroom link:* https://classroom.github.com/a/21aidbIR
 
 This lab will explore how to use regular expressions (regex) to search for patterns in text files using the `grep` command. Lecture 09 reviews the regex features that we'll explore in this lab. Each problem contains smaller exercises.
 
