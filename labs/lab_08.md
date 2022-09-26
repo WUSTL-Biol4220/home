@@ -162,7 +162,7 @@ $ alan -n adh.muscle_it1.fasta
 
 Increasing the number of iterations will allow MUSCLE to find a better global fit for the alignment score. Run MUSCLE again, this time for a maximum of 2 iterations. Then try 3, 4, 5, and 6 iterations. Be sure to change the output file name so the earlier result is not overwritten.
 
-How would you construct a pipeline with `cat`, `sort`, `uniq`, and `wc` to count how many lines differ between two fasta alignment files?
+How would you construct a pipeline with `cat`, `sort`, `uniq`, `grep`, and `wc` to count how many lines differ between two fasta alignment files?
 
 ### MAFFT
 
