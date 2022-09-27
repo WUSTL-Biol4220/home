@@ -322,8 +322,8 @@ To submit your assignment, please commit and push the following files to your re
 part_1_problem_1.txt     # answers for "good" run of blastp
 part_1_problem_2.txt     # answers for "bad" run of blastp
 part_1_problem_3.txt     # answers for Jurassic Park run w/ blastn
-find_accession.sh        # from problem 2
-fetch_accessions.sh      # from problem 3
-files/*.fasta            # the output from problem 3
+find_accession.sh        # from problem 1
+fetch_accessions.sh      # from problem 2
+files/*.fasta            # the output from problem 2
 history.txt              # redirected from `history` command
 ```
