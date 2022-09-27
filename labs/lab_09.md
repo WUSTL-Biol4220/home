@@ -105,7 +105,9 @@ Expected results:
 73 changed
 60 considered
 ```
- 
+
+One strategy for solving this problem is to first extract the correct number of matches for a word like `considered`. After that, generalize your solution for other words using regular expressions.
+
 **Problem 4.**
 
 Write a script called `problem4.sh` to process the file `bee_list.txt`, which contains information regarding bee biodiversity. `bee_list.txt` is a tab-delimited file reporting nearly 20,000 bee species, a list of papers for each species initial description, and unique identifiers for each bee species in the Taxonomic Information System. Your script should print the `N` authors in `bee_list.txt` that have the most publications. (Assume that each occurrence to the name [e.g.] "Eversmann" refers to the same person.) Also, the script should report the `N` years with the highest numbers of publications. The value of `N` is a user-provided argument. When printing the "top" results, also print their respective counts.
