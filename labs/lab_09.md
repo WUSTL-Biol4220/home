@@ -94,7 +94,9 @@ mhc class i antigen b*46
 mhc class ii antigen drb1*1
 ```
 
-**Problem 3.** Write a script called `problem3.sh` that searches *Origin of Species* for certain classes of words. Download the plain text file for *Origin of Species* from the URL https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt, and save the file as `oos.txt`. Your script will process `oos.txt` and print a sorted list of the five most common words that begin with a "c" and end with a "d", ignoring upper/lower case. Hints: Use man to find out what the '-c' flag does for the tr command. Can you use character ranges to convert uppercase to lowercase or vice versa?
+**Problem 3.** Write a script called `problem3.sh` that searches *Origin of Species* for certain classes of words. Download the plain text file for *Origin of Species* from the URL https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt, and save the file as `oos.txt`. You can do this either on your VM using the `wget` command or by uploading the file to your GitHub repository and pulling those changes into the repo on your VM.
+
+Your script will process `oos.txt` and print a sorted list of the five most common words that begin with a "c" and end with a "d", ignoring upper/lower case. Hints: Use man to find out what the '-c' flag does for the tr command. Can you use character ranges to convert uppercase to lowercase or vice versa?
 Expected results:
 ```
 271 could
