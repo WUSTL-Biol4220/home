@@ -82,7 +82,9 @@ DADDE7892341,MGA
 
 Note, the last five items in the example input are not valid NCBI accessions, so they are not printed. Modify the example input to see if the script behaves as intended!
 
-**Problem 2.** Write a script called `problem2.sh` to identify all sequences of major histocompatibility complex (MHC) genes in `Marra2014_BLAST_data.txt` that are marked as genetic variants. The input file lists a number of unidentified gene sequences (`contigXXXXX`) and the potential function and/or identity of each sequence, as derived from BLAST searches. Sequences with descriptions that contain an asterisk character ("\*") MHC variants. (Hint: use `\*` to escape the asterisk character and search for the literal value `*`).
+**Problem 2.** Write a script called `problem2.sh` to identify all sequences of major histocompatibility complex (MHC) genes in `Marra2014_BLAST_data.txt` that are marked as genetic variants. The input file lists a number of unidentified gene sequences (`contigXXXXX`) and the potential function and/or identity of each sequence, as derived from BLAST searches. Sequences with descriptions that contain the "mhc" string and an asterisk character ("\*") are MHC variants. (Hint: use `\*` to escape the asterisk character and search for the literal value `*`).
+
+Although you could use for-loops or `cut` to extract the relevant text, instead use `grep -o -P` with regular expressions. Study the general structures in the format of the data file to design your regular expression. 
 
 Expected results:
 ```
