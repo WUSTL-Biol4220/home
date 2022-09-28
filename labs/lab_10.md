@@ -61,14 +61,14 @@ Your script will reformat the descriptions for each Chapter listed after `CONTEN
 Chapter titles and topics should be reformatted to appear as
 ```
 II. Variation Under Nature
-  - Variability
-  - Individual Differences
-  - Doubtful species
-  - Wide ranging, much diffused, and common [...]
-  - Species of the larger genera in each cou[...]
-  - Many of the species of the larger genera[...]
+ - Variability
+ - Individual Differences
+ - Doubtful species
+ - Wide ranging, much diffused, and common [...]
+ - Species of the larger genera in each cou[...]
+ - Many of the species of the larger genera[...]
 ```
-where Chapter 2 would be printed between Chapters 1 and 3 in the output. Number and title each chapter entry. Within each chapter, use two spaces and a hyphen (`  -`) to list chapter topics. Only print the first 40 characters of each topic description. Topics with more than 40 characters will instead be terminated with `[...]` rather than the remaining text.
+where Chapter 2 would be printed between Chapters 1 and 3 in the output. Number and title each chapter entry. Within each chapter, use one spaces and one hyphen (`  -`) to list chapter topics. Only print the first 40 characters of each topic description. Topics with more than 40 characters will instead be terminated with `[...]` rather than the remaining text.
 
 Consider using `grep -n` in combination with `sed 'a,b p' oos.txt` to extract the raw text describing the chapters in `oos.txt`. Use `tr` to reformat each list of chapter topics into a single line of text, then use `tr` again with `cut` to split the topics against the `-` delimiter. To truncate the topic descriptions to 40 characters, this can be done with `sed` and backreferences.
 
