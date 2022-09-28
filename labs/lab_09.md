@@ -42,7 +42,7 @@ You will be asked to write a script to solve each of the following problems. Tha
 
 **Problem 1.** Write a script called `problem1.sh` that accepts a list of Genbank accessions as input, then labels each accession as a nucleotide, protein, WGS, or MGA record. If the accesion is not one of these, then do not return aything for that acession. GenBank accessions differ in format depending on whether an accession identifies a nucleotide sequence, a protein sequence, or a whole genome sequence.
 
-From https://www.ncbi.nlm.nih.gov/Sequin/acc.html:
+From https://www.ncbi.nlm.nih.gov/genbank/acc_prefix/:
 
 | Data | Pattern |
 |---|---|
@@ -82,7 +82,9 @@ DADDE7892341,MGA
 
 Note, the last five items in the example input are not valid NCBI accessions, so they are not printed. Modify the example input to see if the script behaves as intended!
 
-**Problem 2.** Write a script called `problem2.sh` to identify all sequences of major histocompatibility complex (MHC) genes in `Marra2014_BLAST_data.txt` that are marked as genetic variants. The input file lists a number of unidentified gene sequences (`contigXXXXX`) and the potential function and/or identity of each sequence, as derived from BLAST searches. Sequences with descriptions that contain an asterisk character ("\*") MHC variants. (Hint: use `\*` to escape the asterisk character and search for the literal value `*`).
+**Problem 2.** Write a script called `problem2.sh` to identify all sequences of major histocompatibility complex (MHC) genes in `Marra2014_BLAST_data.txt` that are marked as genetic variants. The input file lists a number of unidentified gene sequences (`contigXXXXX`) and the potential function and/or identity of each sequence, as derived from BLAST searches. Sequences with descriptions that contain the "mhc" string and an asterisk character ("\*") are MHC variants. (Hint: use `\*` to escape the asterisk character and search for the literal value `*`).
+
+Although you could use for-loops or `cut` to extract the relevant text, instead use `grep -o -P` with regular expressions. Study the general structures in the format of the data file to design your regular expression. 
 
 Expected results:
 ```
@@ -92,7 +94,9 @@ mhc class i antigen b*46
 mhc class ii antigen drb1*1
 ```
 
-**Problem 3.** Write a script called `problem3.sh` that searches *Origin of Species* for certain classes of words. Download the plain text file for *Origin of Species* from the URL https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt, and save the file as `oos.txt`. Your script will process `oos.txt` and print a sorted list of the five most common words that begin with a "c" and end with a "d", ignoring upper/lower case. Hints: Use man to find out what the '-c' flag does for the tr command. Can you use character ranges to convert uppercase to lowercase or vice versa?
+**Problem 3.** Write a script called `problem3.sh` that searches *Origin of Species* for certain classes of words. Download the plain text file for *Origin of Species* from the URL https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt, and save the file as `oos.txt`. You can do this either on your VM using the `wget` command or by uploading the file to your GitHub repository and pulling those changes into the repo on your VM.
+
+Your script will process `oos.txt` and print a sorted list of the five most common words that begin with a "c" and end with a "d", ignoring upper/lower case. Hints: Use man to find out what the '-c' flag does for the tr command. Can you use character ranges to convert uppercase to lowercase or vice versa?
 Expected results:
 ```
 271 could
@@ -101,7 +105,9 @@ Expected results:
 73 changed
 60 considered
 ```
- 
+
+One strategy for solving this problem is to first extract the correct number of matches for a word like `considered`. After that, generalize your solution for other words using regular expressions.
+
 **Problem 4.**
 
 Write a script called `problem4.sh` to process the file `bee_list.txt`, which contains information regarding bee biodiversity. `bee_list.txt` is a tab-delimited file reporting nearly 20,000 bee species, a list of papers for each species initial description, and unique identifiers for each bee species in the Taxonomic Information System. Your script should print the `N` authors in `bee_list.txt` that have the most publications. (Assume that each occurrence to the name [e.g.] "Eversmann" refers to the same person.) Also, the script should report the `N` years with the highest numbers of publications. The value of `N` is a user-provided argument. When printing the "top" results, also print their respective counts.

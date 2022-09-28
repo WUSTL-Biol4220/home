@@ -305,13 +305,13 @@ $ ls files
 Viburnum_clemensiae_matK_HQ591569.fasta  Viburnum_dentatum_matK_HQ591574.fasta  Viburnum_rufidulum_matK_MH551948.fasta
 Viburnum_clemensiae_rbcL_HQ591714.fasta  Viburnum_dentatum_rbcL_HQ591718.fasta  Viburnum_rufidulum_rbcL_HQ591761.fasta
 $ wc files/*.fasta
-  12   23  841 files/Viburnum_clemensiae_matK_HQ591569.fasta
-  21   33 1474 files/Viburnum_clemensiae_rbcL_HQ591714.fasta
-  11   20  740 files/Viburnum_dentatum_matK_HQ591574.fasta
-  20   31 1468 files/Viburnum_dentatum_rbcL_HQ591718.fasta
-  12   24  859 files/Viburnum_rufidulum_matK_MH551948.fasta
-  20   31 1473 files/Viburnum_rufidulum_rbcL_HQ591761.fasta
-  96  162 6855 total
+  12   23  841 files/Viburnum clemensiae_matK_HQ591569.fasta
+  21   33 1474 files/Viburnum clemensiae_rbcL_HQ591714.fasta
+  12   23  847 files/Viburnum dentatum_matK_HQ591574.fasta
+  21   33 1471 files/Viburnum dentatum_rbcL_HQ591718.fasta
+  12   24  859 files/Viburnum rufidulum_matK_MH551948.fasta
+  21   33 1472 files/Viburnum rufidulum_rbcL_HQ591761.fasta
+  99  169 6964 total
 ```
 
 
@@ -322,8 +322,8 @@ To submit your assignment, please commit and push the following files to your re
 part_1_problem_1.txt     # answers for "good" run of blastp
 part_1_problem_2.txt     # answers for "bad" run of blastp
 part_1_problem_3.txt     # answers for Jurassic Park run w/ blastn
-find_accession.sh        # from problem 2
-fetch_accessions.sh      # from problem 3
-files/*.fasta            # the output from problem 3
+find_accession.sh        # from problem 1
+fetch_accessions.sh      # from problem 2
+files/*.fasta            # the output from problem 2
 history.txt              # redirected from `history` command
 ```
