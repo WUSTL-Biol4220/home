@@ -1,8 +1,6 @@
 # Lab 10
 
-*Lab 10 GitHub Classroom link:* https://classroom.github.com/a/BlDjHtUt
-
-**(Note: Problem 2, Task 3 previously asked you to find motifs with 5 to 6 repeat units (e.g. GACATAGATACA). You should now search for motifs with 3 to 4 repeat units.)**
+*Lab 10 GitHub Classroom link:* [https://classroom.github.com/a/BlDjHtUt](https://classroom.github.com/a/-KN_Qw5z)
 
 In the previous lab, we explored how to use the `grep` command with regular expressions to search and print general text patterns found within a text file or stream. Refer to the Lecture 09 for a review on regular expressions for search patterns.
 
