@@ -45,7 +45,7 @@ For the following tasks, report lines that contain 1+ instances of following mot
 
 **Problem 3.** Write a script named `problem3.sh` to organize the chapter descriptions in *Origin of Species*. *Origin of Species* can be download from https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt.
 
-Your script will reformat the descriptions for each Chapter listed after `CONTENTS.` and before `  GLOSSARY OF SCIENTIFIC TERMS.` For example, the original text for the Chapter 2 title (`VARIATION UNDER NATURE.`) and topics (e.g. `Variability`, `Individual Differences`, ...) appear as
+Your script will reformat the descriptions for each Chapter listed after `CONTENTS.` and before `  GLOSSARY OF SCIENTIFIC TERMS.` For example, the original text for the Chapter II title (`VARIATION UNDER NATURE.`) and topics (e.g. `Variability`, `Individual Differences`, ...) appear as
 ```
   CHAPTER II.
 
@@ -60,7 +60,7 @@ Your script will reformat the descriptions for each Chapter listed after `CONTEN
 ```
 Chapter titles and topics should be reformatted to appear as
 ```
-2. Variation Under Nature
+II. Variation Under Nature
   - Variability
   - Individual Differences
   - Doubtful species
