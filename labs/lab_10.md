@@ -12,9 +12,9 @@ Regular expressions may also be used to *find and replace* content within text f
 
 This lab will ask you to write several scripts that use `sed` to process text files of with a format.
 
-**Problem 1.** Write the script `problem1.sh` to construct a table of sequence information based on sequence headers in `Marra_2014_data.fasta`. Format the information as comma-separated values
+**Problem 1.** Write the script `problem1.sh` to construct a table of sequence information based on sequence headers in `Marra2014_data.fasta`. Format the information as comma-separated values
 ```
-$ ./problem1.sh Marra_2014_data.fasta | head -n5
+$ ./problem1.sh Marra2014_data.fasta | head -n5
 contig,length,numreads,gene,status
 00001,527,2,00001,it_thresh
 00002,551,8,00001,it_thresh
