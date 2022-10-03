@@ -11,10 +11,10 @@ All pipeline projects require instructor approval (see below).
 
 Pipelines will be composed of a number of intermediate scripted steps. For example, the molecular phylogenetics pipeline is built from 10 steps (8 standard, 2 custom). Pipeline steps will extend techniques that we explored in various course lab assignments, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
 
-Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own input, arguments, options, and output. At the same time, the script for any pipeline may need to produce output or accept input that is compatible with other pipeline steps (with the Option 1 pipeline, for example, sequence alignement in Step 3 will accept the downloaded sequences of Step 2 as input).
+Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own input, arguments, options, and output. At the same time, the script for any pipeline may need to produce output or accept input that is compatible with other pipeline step. With the Option 1 pipeline, for example, sequence alignment in Step 3 accepts the downloaded sequences of Step 2 as input.
 
 ## Project submission
-Students will submit their pipeline projects using a GitHub repository. Create your repository using this GitHub Classroom link: https://classroom.github.com/a/3qTtNZbC. This will create a new repository for your user account the location e.g. https://github.com/WUSTL-Biol4220/biol4220-pipeline-project-mlandis that can be viewed by the course instructors.
+Students will submit their pipeline projects using a GitHub repository. Create your repository using this GitHub Classroom link: . This will create a new repository for your user account the location e.g. https://github.com/WUSTL-Biol4220/biol4220-pipeline-project-mlandis that can be viewed by the course instructors.
  
 Each repository will contain all the relevant files needed for a naive user to analyze a provided dataset, or a new dataset. Project repositories must contain the following files:
   - pipeline scripts
@@ -56,6 +56,6 @@ At the end of the course, each student will deliver a short presentation of thei
 
 ## Important dates
 
-- Pipeline features and datasets approved by the instructor by **Oct 27 2021**
-- Students will present their work to the class on **Dec 06 2021**
-- Grading of project repositories will begin on **Dec 13 2021**
+- Pipeline features and datasets approved by the instructor by **Oct 26 2022**
+- Students will present their work to the class on **Dec 05 2022**
+- Grading of project repositories will begin on **Dec 12 2022**
