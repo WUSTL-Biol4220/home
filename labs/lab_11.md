@@ -1,6 +1,6 @@
 # Lab 11
 
-*Lab 11 GitHub Classroom link:* https://classroom.github.com/a/000Ot6tG
+*Lab 11 GitHub Classroom link:* https://classroom.github.com/a/X-5cj1cz
 
 In this lab, we will learn how to estimate phylogenies from molecular sequence data using a variety of inference methods.
 
@@ -20,8 +20,8 @@ We will install four pieces of phylogenetics software for this lab.
 FastTree (http://www.microbesonline.org/fasttree/) is phylogenetic inference software specializes in rapidly inferring molecular phylogenies using a variety of inference methods. For the purposes of our lab, we'll use FastTree to infer phyologenies using the distance-based neighbor-joining algorithm.
 
 ```
-$ mkdir ~/fasttree
-$ cd ~/fasttree
+$ mkdir -p ~/apps/fasttree
+$ cd ~/apps/fasttree
 $ wget http://www.microbesonline.org/fasttree/FastTree
 $ chmod +x FastTree
 $ cp FastTree ~/.local/bin/fasttree
@@ -36,8 +36,7 @@ $ wget https://github.com/Cibiv/IQ-TREE/releases/download/v1.6.12/iqtree-1.6.12-
 $ tar zxvf iqtree-1.6.12-Linux.tar.gz
 $ cp ~/apps/iqtree-1.6.12-Linux/bin/iqtree ~/.local/bin
 ```
-
-Documnetation for IQ-Tree: http://www.iqtree.org/doc/
+Documentation for IQ-Tree is located here: http://www.iqtree.org/doc/.
 
 ### Install MPBoot
 
