@@ -1,5 +1,7 @@
 # Course project
 
+*GitHub Classroom link:* https://classroom.github.com/a/ikvhCeRQ
+
 ## Overview
 
 Students will build a bioinformatics pipeline to analyze biological data:
@@ -14,7 +16,7 @@ Pipelines will be composed of a number of intermediate scripted steps. For examp
 Each step of the pipeline must run as an independent script or program. As such, each pipeline program will have its own functionality, and its own input, arguments, options, and output. At the same time, the script for any pipeline may need to produce output or accept input that is compatible with other pipeline step. With the Option 1 pipeline, for example, sequence alignment in Step 3 accepts the downloaded sequences of Step 2 as input.
 
 ## Project submission
-Students will submit their pipeline projects using a GitHub repository. Create your repository using this GitHub Classroom link: . This will create a new repository for your user account the location e.g. https://github.com/WUSTL-Biol4220/biol4220-pipeline-project-mlandis that can be viewed by the course instructors.
+Students will submit their pipeline projects using a GitHub repository. Create your repository using this GitHub Classroom link: https://classroom.github.com/a/ikvhCeRQ. This will create a new repository for your user account the location e.g. https://github.com/WUSTL-Biol4220/biol4220-pipeline-project-mlandis that can be viewed by the course instructors.
  
 Each repository will contain all the relevant files needed for a naive user to analyze a provided dataset, or a new dataset. Project repositories must contain the following files:
   - pipeline scripts
@@ -32,7 +34,7 @@ Create short manual entries for any custom pipeline steps. These entries should 
 
 ## Analysis report
 
-Write a 1-2 page report (12pt font, single-spaced) that summarizes your research findings. At a minimum, report should contain these components:
+Write a 2 page report (12pt font, single-spaced) that summarizes your research findings. At a minimum, report should contain these components:
 
 1. An overview of your pipeline, the pipeline features, and the analysis results.
 2. A detailed description of the custom pipeline features that you added to the project, why they might be interesting or useful, and any challenges you encountered introducing those features.
@@ -52,11 +54,12 @@ At the end of the course, each student will deliver a short presentation of thei
 
 ## Project approval
 
-All projects **must get approval from the instructor by Oct 27 2021**. Students will upload a short 1/2-page document to their project repository that briefly summarizes the scope and goals of their approved project.
+Students will describe the scope and goals of their proposed project in a 1-page document. Upload the document to `docs/proposal_yourname_biol4220_F2022.pdf` in your pipeline project repository. This document should be online for meeting with the instructor for project approval. All projects **must get approval from the instructor by Oct 27 2021**. 
 
 For Option 1 projects, the instructor must approve of the 2+ new pipeline features you plan to add and what dataset you plan to analyze.
 
 For Option 2 projects, the instructor must approve the entire project, including the general pipeline that you plan to build and the dataset that you plan to analyze.
+
 
 ## Important dates
 
