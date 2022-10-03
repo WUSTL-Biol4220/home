@@ -20,15 +20,15 @@ We will install four pieces of phylogenetics software for this lab.
 FastTree (http://www.microbesonline.org/fasttree/) is phylogenetic inference software specializes in rapidly inferring molecular phylogenies using a variety of inference methods. For the purposes of our lab, we'll use FastTree to infer phyologenies using the distance-based neighbor-joining algorithm.
 
 ```
-$ mkdir ~/fasttree
-$ cd ~/fasttree
+$ mkdir -p ~/apps/fasttree
+$ cd ~/apps/fasttree
 $ wget http://www.microbesonline.org/fasttree/FastTree
 $ chmod +x FastTree
 $ cp FastTree ~/.local/bin/fasttree
 ```
 
 ### Install IQ-Tree
-IQ-Tree (http://www.iqtree.org/) is another phylogenetics package, which specializes in likelihood-based models for phylogenetic inference.
+IQ-Tree (http://www.iqtree.org/) is another phylogenetics package, which specializes in likelihood-based models for phylogenetic inference. Documentation for IQ-Tree is located here: http://www.iqtree.org/doc/.
 
 ```
 $ cd ~/apps
@@ -36,8 +36,6 @@ $ wget https://github.com/Cibiv/IQ-TREE/releases/download/v1.6.12/iqtree-1.6.12-
 $ tar zxvf iqtree-1.6.12-Linux.tar.gz
 $ cp ~/apps/iqtree-1.6.12-Linux/bin/iqtree ~/.local/bin
 ```
-
-Documnetation for IQ-Tree: http://www.iqtree.org/doc/
 
 ### Install MPBoot
 
