@@ -52,7 +52,11 @@ At the end of the course, each student will deliver a short presentation of thei
 
 ## Project approval
 
-**All projects must get approval from the instructor by Oct 27 2021. Students will upload a short 1/2-page document to their project repository that briefly summarizes the scope and goals of their approved project.** For Option 1 projects, the instructor must approve of the 2+ new pipeline features you plan to add and what dataset you plan to analyze. For Option 2 projects, the instructor must approve the entire project, including the general pipeline that you plan to build and the dataset that you plan to analyze.
+All projects **must get approval from the instructor by Oct 27 2021**. Students will upload a short 1/2-page document to their project repository that briefly summarizes the scope and goals of their approved project.
+
+For Option 1 projects, the instructor must approve of the 2+ new pipeline features you plan to add and what dataset you plan to analyze.
+
+For Option 2 projects, the instructor must approve the entire project, including the general pipeline that you plan to build and the dataset that you plan to analyze.
 
 ## Important dates
 
