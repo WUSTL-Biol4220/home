@@ -1,8 +1,6 @@
 # Lab 10
 
-*Lab 10 GitHub Classroom link:* https://classroom.github.com/a/BlDjHtUt
-
-**(Note: Problem 2, Task 3 previously asked you to find motifs with 5 to 6 repeat units (e.g. GACATAGATACA). You should now search for motifs with 3 to 4 repeat units.)**
+*Lab 10 GitHub Classroom link:* https://classroom.github.com/a/-KN_Qw5z
 
 In the previous lab, we explored how to use the `grep` command with regular expressions to search and print general text patterns found within a text file or stream. Refer to the Lecture 09 for a review on regular expressions for search patterns.
 
@@ -14,9 +12,9 @@ Regular expressions may also be used to *find and replace* content within text f
 
 This lab will ask you to write several scripts that use `sed` to process text files of with a format.
 
-**Problem 1.** Write the script `problem1.sh` to construct a table of sequence information based on sequence headers in `Marra_2014_data.fasta`. Format the information as comma-separated values
+**Problem 1.** Write the script `problem1.sh` to construct a table of sequence information based on sequence headers in `Marra2014_data.fasta`. Format the information as comma-separated values
 ```
-$ ./problem1.sh Marra_2014_data.fasta | head -n5
+$ ./problem1.sh Marra2014_data.fasta | head -n5
 contig,length,numreads,gene,status
 00001,527,2,00001,it_thresh
 00002,551,8,00001,it_thresh
@@ -45,9 +43,9 @@ For the following tasks, report lines that contain 1+ instances of following mot
 - *Task 3:* Report all instances of motifs that repeat the pair of nucleotides `xA` between 3 and 4 times, and are flanked by the basepair `C` on both sides; only list the repeating region, not the flanking region. For example, `CGAGACATAC` would match, and the printed motif would be `GAGACATA`. The motif `CCATAGAC` would match, and be printed as `CATAGA`. The motifs `CTATATAG` and `CTATATATATAC` would not match.
 - *Task 4:* Report all lines that begin with `ATG` and end with `TAT`, `GAA`, or `CGA`. However, only print the first and last the nucleotides for the matched line in the output. For example if a line read `ATGCAGTATAGGACCATAGATACAGATATGGTAAGACCGA`, then the printed text for the motif should read `ATGCGA`.
 
-**Problem 3.** Write a script named `problem3.sh` to organize the chapter descriptions in *Origin of Species*. *Origin of Species* can be download from https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt.
+**Problem 3.** Write a script named `problem3.sh` to organize the chapter descriptions in *Origin of Species*. *Origin of Species* can be downloaded from https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt using `wget`.
 
-Your script will reformat the descriptions for each Chapter listed after `CONTENTS.` and before `  GLOSSARY OF SCIENTIFIC TERMS.` For example, the original text for the Chapter 2 title (`VARIATION UNDER NATURE.`) and topics (e.g. `Variability`, `Individual Differences`, ...) appear as
+Your script will reformat the descriptions for each Chapter listed after `CONTENTS.` and before `  GLOSSARY OF SCIENTIFIC TERMS.` For example, the original text for the Chapter II title (`VARIATION UNDER NATURE.`) and topics (e.g. `Variability`, `Individual Differences`, ...) appear as
 ```
   CHAPTER II.
 
@@ -62,15 +60,15 @@ Your script will reformat the descriptions for each Chapter listed after `CONTEN
 ```
 Chapter titles and topics should be reformatted to appear as
 ```
-2. Variation Under Nature
-  - Variability
-  - Individual Differences
-  - Doubtful species
-  - Wide ranging, much diffused, and common [...]
-  - Species of the larger genera in each cou[...]
-  - Many of the species of the larger genera[...]
+II. VARIATION UNDER NATURE.
+ - Variability
+ - Individual Differences
+ - Doubtful species
+ - Wide ranging, much diffused, and common [...]
+ - Species of the larger genera in each cou[...]
+ - Many of the species of the larger genera[...]
 ```
-where Chapter 2 would be printed between Chapters 1 and 3 in the output. Number and title each chapter entry. Within each chapter, use two spaces and a hyphen (`  -`) to list chapter topics. Only print the first 40 characters of each topic description. Topics with more than 40 characters will instead be terminated with `[...]` rather than the remaining text.
+where Chapter 2 would be printed between Chapters 1 and 3 in the output. Number and title each chapter entry. Within each chapter, use one space and one hyphen (` -`) to list chapter topics. Only print the first 40 characters of each topic description. Topics with more than 40 characters will instead be terminated with `[...]` rather than the remaining text.
 
 Consider using `grep -n` in combination with `sed 'a,b p' oos.txt` to extract the raw text describing the chapters in `oos.txt`. Use `tr` to reformat each list of chapter topics into a single line of text, then use `tr` again with `cut` to split the topics against the `-` delimiter. To truncate the topic descriptions to 40 characters, this can be done with `sed` and backreferences.
 
