@@ -2,7 +2,7 @@
 
 ## Overview
 
-Practical Bioinformatics (Biol4220) students will build a bioinformatics pipeline to analyze biological data. There are two options for students to pursue:
+Students will build a bioinformatics pipeline to analyze biological data:
 
 - **Option 1** is a molecular phylogenetics pipeline that downloads, aligns, and analyzes sequence data in a phylogenetic context ([link](assets/course_project/mol_phylo_project.md)).
 - **Option 2** is a custom pipeline on a research topic of your choosing. These pipelines, however, must minimally involve steps for (1) data collection, (2) data formatting, (3) data analysis, and (4) output generation.
