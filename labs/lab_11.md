@@ -28,7 +28,7 @@ $ cp FastTree ~/.local/bin/fasttree
 ```
 
 ### Install IQ-Tree
-IQ-Tree (http://www.iqtree.org/) is another phylogenetics package, which specializes in likelihood-based models for phylogenetic inference. Documentation for IQ-Tree is located here: http://www.iqtree.org/doc/.
+IQ-Tree (http://www.iqtree.org/) is another phylogenetics package, which specializes in likelihood-based models for phylogenetic inference.
 
 ```
 $ cd ~/apps
@@ -36,6 +36,7 @@ $ wget https://github.com/Cibiv/IQ-TREE/releases/download/v1.6.12/iqtree-1.6.12-
 $ tar zxvf iqtree-1.6.12-Linux.tar.gz
 $ cp ~/apps/iqtree-1.6.12-Linux/bin/iqtree ~/.local/bin
 ```
+Documentation for IQ-Tree is located here: http://www.iqtree.org/doc/.
 
 ### Install MPBoot
 
