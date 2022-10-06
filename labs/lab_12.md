@@ -81,7 +81,13 @@ print('Hello, world!')
 
 The first line contains a hashbang (`#!`) address that points to a Python interpreter, `/bin/python`. Line three simply constructs a string, while line five prints a string.
 
-To run the script, we will set the file permissions to enable execution, then run the script using the same `./scriptname` as we have used with Unix scripts
+You can run the script either by calling `python` or `ipython` as a program and passing the script as an argument
+```console
+$ python example.py
+Hello, world!
+```
+
+Alternatively, you can set set execution permissions for the script, then run the script using the same `./scriptname` as we have used with Unix scripts
 
 ```console
 $ chmod +x example.py
