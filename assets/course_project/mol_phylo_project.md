@@ -280,7 +280,6 @@ fig_plot.primates_cytb.align_mafft.phylo_fasttree.pdf
 - Angiosperms (TBD)
 - Birds (TBD)
 - Mammals (TBD)
-- Humans (TBD)
 - Primates (TBD)
 
 

@@ -1,6 +1,6 @@
 # Lab 12
 
-*Lab 12 GitHub Classroom link:* https://classroom.github.com/a/NPD-wuah
+*Lab 12 GitHub Classroom link:* https://classroom.github.com/a/eSpnynzl
 
 In this lab, we will begin to learn how to program using the Python programming language. [Python](https://www.python.org/) is a general-purpose, interpreted, high-level, and scriptable programming language. Language features include a rich package management system, object-oriented design, dynamic typing, and garbage collection. 
 
@@ -81,7 +81,13 @@ print('Hello, world!')
 
 The first line contains a hashbang (`#!`) address that points to a Python interpreter, `/bin/python`. Line three simply constructs a string, while line five prints a string.
 
-To run the script, we will set the file permissions to enable execution, then run the script using the same `./scriptname` as we have used with Unix scripts
+You can run the script either by calling `python` or `ipython` as a program and passing the script as an argument
+```console
+$ python example.py
+Hello, world!
+```
+
+Alternatively, you can set set execution permissions for the script, then run the script using the same `./scriptname` as we have used with Unix scripts
 
 ```console
 $ chmod +x example.py
@@ -105,11 +111,11 @@ A variable is a named location in computer memory that stores a value (or values
 
 ```python
 x = 1   # create variable x, and assign value of 1
-x
+print(x)
 y = 2   # create variable y, and assign value of 2
-y
+print(y)
 x = y   # assign value of y to existing variable x
-x
+print(x)
 ```
 
 The type of any variable is determined by the type of the assigned value. How functions, operators, and other Python features interact with a variable often depends on the type of said variable.
@@ -208,6 +214,36 @@ else:
     print('a < b')
 ```
 Notice that the first condition (`a > b`) would test for "greater than" before attempting the second condition (`a >= b`), therefore we don't expect the second block to run unless `a==b`. However, if that was `True`, the third condition (`a==b`) would not be run. The fourth condition (`a < b`) is run if the first three conditions evaluate as `False`.
+
+You can also construct simpler if-statement blocks, as needed, such as
+```python
+a = 3
+b = 2
+if a > b:
+    print('a > b')
+```
+
+and 
+
+```python
+a = 3
+b = 2
+if a > b:
+    print('a > b')
+elif a < b:
+    print('a < b') 
+```
+
+or
+
+```python
+a = 3
+b = 2
+if a > b:
+    print('a > b')
+else:
+    print('a <= b')
+```
 
 ### Functions
 
