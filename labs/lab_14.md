@@ -1,6 +1,6 @@
 # Lab 14
 
-*Lab 14 GitHub Classroom link:* https://classroom.github.com/a/UwrhqXhr
+*Lab 14 GitHub Classroom link:* https://classroom.github.com/a/JYorMEhR
 
 In this lab, we will learn how to use Python's built-in string manipulation methods, and how to read and write to the filesystem through Python.
 
