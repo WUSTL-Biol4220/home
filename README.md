@@ -25,6 +25,7 @@ Instructor
 * Phone: 314-935-8082
 * Drop-in hours: 3:00-4:00pm on Wed
 * Drop-in hours location: Rebstock 210
+* Zoom link: https://wustl.zoom.us/j/93971192504
 
 Teaching Assistant
 * Name: Hannah Chay
