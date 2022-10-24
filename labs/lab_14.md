@@ -1,6 +1,6 @@
 # Lab 14
 
-*Lab 14 GitHub Classroom link:* https://classroom.github.com/a/UwrhqXhr
+*Lab 14 GitHub Classroom link:* https://classroom.github.com/a/JYorMEhR
 
 In this lab, we will learn how to use Python's built-in string manipulation methods, and how to read and write to the filesystem through Python.
 
@@ -267,7 +267,7 @@ Write a Python script that accepts a list of words as arguments. The script then
 ```
 
 **Problem 2.**
-Write a Python script that reads a csv file with numerical values, performs mathematical operations on each row, then writes the results to a new file. The script is called with `./problem2.py input_file.txt output_file.txt`. Once called, the script splits each line of `input_file.txt` into five separate fields, delimited by the `,` character. Then, those values are stored as floats into a temporary list named `x` and used to compute `y = x[0] + x[1] * x[2] + x[3] * x[4]^2`. Finally, the script writes the values of `y` and `x` for each row to the file `output_file.txt`.
+Write a Python script that reads a csv file with numerical values, performs mathematical operations on each row, then writes the results to a new file. The script is called with `./problem2.py input_file.txt output_file.txt`. Once called, the script splits each line of `input_file.txt` into five separate fields, delimited by the `,` character. Then, those values are stored as floats into a temporary list named `x` and used to compute `y = x[0] + x[1]*x[2] + x[3]*(x[4]**2)`. Finally, the script writes the values of `y` and `x` for each row to the file `output_file.txt`.
 
 **Problem 3.** 
 Write a script that reorganizes the sequence data stored among fasta files within a directory. The script will process all files in a directory, then store their contents into a data array (list-of-lists). Each row in the array will correspond to one fasta sequence entry. The first column will give the species name, the second column will given the gene name, the third column will give the sequence length, and the fourth column will give the sequence identity itself. Assume that fasta headers for each sequence in each file follow the format `> species_name, gene_name`, for example `> Homo_sapiens, cytochrome B`, and that the lines immediately following the fasta header are valid sequences for that fasta entry.
