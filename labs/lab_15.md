@@ -251,7 +251,7 @@ then `seq.site('test.align.fasta', 0)` would return `{'Species_A':'A', 'Species_
 
 To test the `seq` module, try running the methods against a dataset used in a previous lab. A copy of the unaligned `adh.fasta` dataset from Lab 08 can be downloaded using the command `wget https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_15/adh.fasta`.
 
-*Note: MAFFT and other programs require a keypress to complete the process that is executed within Python. In this case, use `subprocess.Popen` which is able to send keyboard signals to the process. For MAFFT, first call the program using `p = subprocess.Popen([cmd], stdin=subprocess.PIPE, shell=True)` and then send a keypress with `p.communicate(input=b'\n')` to send an endline character as a byte-string to the process `p`.*
+*Note: MAFFT and other programs require a keypress to complete the process that is executed within Python. In this case, use `subprocess.Popen` which is able to send keyboard signals to the process. For MAFFT, first call the program using `p = subprocess.Popen(args=cmd, stdin=subprocess.PIPE, shell=True)` and then send a keypress with `p.communicate(input=b'\n')` to send an endline character as a byte-string to the process `p`.*
 
 ---
 
