@@ -74,7 +74,7 @@ To run the same command using `subprocess.Popen`, we'll import the `subprocess` 
 >>> cmd = 'ls -lart'
 >>> p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
 >>> out = p.stdout.readlines()
->>> for i,o in out:
+>>> for i,o in enumerate(out):
 ...     out[i] = o.decode('UTF-8')  # subprocess.Popen stdout needs to be converted from bytes to text
 ...
 >>> print( ''.join(out) )
