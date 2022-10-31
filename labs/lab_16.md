@@ -76,7 +76,7 @@ The remaining functions will expect a data object called the *alignment dictiona
 >>> my_phyinfo_site = phyinfo_site(d)
 >>> my_phyinfo_site
 [ False, True, False, False, False, True ]
->>> x[1]
+>>> my_phyinfo_site[1]
 True
 ```
 
