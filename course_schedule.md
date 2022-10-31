@@ -24,8 +24,8 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Oct 17 | -- | -- | -- | **Exam 1**<br><a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/files/biol4220_exam1_study_guide.docx">Exam 1 study guide</a> |
 |         | Wed, Oct 19 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_13.pdf">Lecture 13</a>  | [Lab 13](labs/lab_13.md) | CSB 3.4, 3.6.2| Python: containers, loops, script arguments |
 |         | Mon, Oct 24 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_14.pdf">Lecture 14</a>  | [Lab 14](labs/lab_14.md) | CSB 3.3.6, 3.7  | Python: strings, file handling  |
-| :whale: | Wed, Oct 26 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_15.pdf">Lecture 15</a>  | [Lab 15](labs/lab_15.md) | CSB 4.2.2 - 4.4 | Python: modules, system calls, more with containers<br>**Course project: approvals** |
-|         | Mon, Oct 31 | <!--<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_16.pdf">Lecture 16</a>-->Lecture 16  | <!--[Lab 16](labs/lab_16.md)-->Lab 16 | -- | Biology: sequence stats |
+|         | Wed, Oct 26 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_15.pdf">Lecture 15</a>  | [Lab 15](labs/lab_15.md) | CSB 4.2.2 - 4.4 | Python: modules, system calls, more with containers<br>**Course project: approvals** |
+| :whale: | Mon, Oct 31 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_16.pdf">Lecture 16</a>  | [Lab 16](labs/lab_16.md) | -- | Biology: sequence stats |
 |         | Wed, Nov 02 | <!--<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_17.pdf">Lecture 17</a>-->Lecture 17  | <!--[Lab 17](labs/lab_17.md)-->Lab 17  | CSB 6.4 | Python: Biopython |
 |         | Mon, Nov 07 | <!--<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_18.pdf">Lecture 18</a>-->Lecture 18  | <!--[Lab 18](labs/lab_18.md)-->Lab 18 | -- | Biology: positive selection<br>**Course project: check-in**   |
 |         | Wed, Nov 09 | -- | -- | -- | **Course project: open Lab** |
