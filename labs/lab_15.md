@@ -1,6 +1,6 @@
 # Lab 15
 
-*Lab 15 GitHub Classroom link:* https://classroom.github.com/a/ENctOCQX
+*Lab 15 GitHub Classroom link:* https://classroom.github.com/a/ks_b6hBe
 
 In this lab, we will learn how to use Python modules, how to execute system commands from within the Python shell, and new ways to interact with containers.
 
@@ -74,7 +74,7 @@ To run the same command using `subprocess.Popen`, we'll import the `subprocess` 
 >>> cmd = 'ls -lart'
 >>> p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
 >>> out = p.stdout.readlines()
->>> for i,o in out:
+>>> for i,o in enumerate(out):
 ...     out[i] = o.decode('UTF-8')  # subprocess.Popen stdout needs to be converted from bytes to text
 ...
 >>> print( ''.join(out) )
@@ -230,7 +230,7 @@ You will need to import `random` to use `random.shuffle()` and `sys` to support 
 If done correctly, you should be able to `import word` and call `word.mutate('elephant')` within a Python shell, which might return `'phleetna'` as a randomly shuffled string. Or the module could be called as a Unix script from the command line with `$ ./word.py elephant`, which might return `'taelephn'` as another randomly shuffled string. 
 
 **Problem 2.**
-Write a module file called `seq.py`. The code will be able to launch alignment software using `os.popen` and extract some basic information from the resultant alignment. This code will define two functions. The first function will be called `align(filename)`, which will issue a system call to align the fasta file (`filename`) using an alignment program of your choice (e.g. Muscle). The second function will be called `site(filename, i)` which returns a dictionary for the characters found at site-index `i` in the alignment stored in `filename`. The returned dictionary will have the sequence name as the key, and the character for the site-index `i` as the value.
+Write a module file called `seq.py`. The code will be able to launch alignment software using `os.popen` or `subprocess.Popen` and extract some basic information from the resultant alignment. This code will define two functions. The first function will be called `align(filename)`, which will issue a system call to align the fasta file (`filename`) using an alignment program of your choice (e.g. Muscle). The second function will be called `site(filename, i)` which returns a dictionary for the characters found at site-index `i` in the alignment stored in `filename`. The returned dictionary will have the sequence name as the key, and the character for the site-index `i` as the value.
 
 For example, if the fasta file `test.fasta` contained
 ```
@@ -250,5 +250,9 @@ AC-TTC
 then `seq.site('test.align.fasta', 0)` would return `{'Species_A':'A', 'Species_B':'A'}` and `seq.site('test.align.fasta', 2)` would return `{'Species_A':'G', 'Species_B':'-'}`,
 
 To test the `seq` module, try running the methods against a dataset used in a previous lab. A copy of the unaligned `adh.fasta` dataset from Lab 08 can be downloaded using the command `wget https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_15/adh.fasta`.
+
+*Note: MAFFT and other programs require a keypress to complete the process that is executed within Python. In this case, use `subprocess.Popen` which is able to send keyboard signals to the process. For MAFFT, first call the program using `p = subprocess.Popen(args=cmd, stdin=subprocess.PIPE, shell=True)` and then send a keypress with `p.communicate(input=b'\n')` to send an endline character as a byte-string to the process `p`.*
+
+---
 
 To complete the lab, commit and push your two scripts and a log of your history to your GitHub repository.

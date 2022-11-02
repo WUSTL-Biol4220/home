@@ -1,6 +1,6 @@
 # Lab 17
 
-*Lab 17 GitHub Classroom link:* https://classroom.github.com/a/H0UcYwyf
+*Lab 17 GitHub Classroom link:* https://classroom.github.com/a/rmkg-sND
 
 In this lab, we will learn how to use the Biopython library.
 
