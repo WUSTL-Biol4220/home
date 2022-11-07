@@ -52,7 +52,7 @@ The `codeml` program may now be run from any directory, but the program requires
 Let's begin by running a `codeml` analysis to detect site-specific positive selection in the envelope protein for HIV. We might expect that some sites in env are under positive selection, since the protein is important for HIV infection and for host immune system detection. Navigate into the `examples/HIVNSsites` directory in this lab's repo, then type `codeml` to run an example analysis
 
 ```console
-$ cd ~/labs/lab-19-mlandis/examples/HIVNSsites
+$ cd ~/labs/lab-18-mlandis/examples/HIVNSsites
 $ codeml
 
 CODONML in paml version 4.9j, February 2020
