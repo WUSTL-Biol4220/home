@@ -29,7 +29,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Nov 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_17.pdf">Lecture 17</a>  | [Lab 17](labs/lab_17.md)  | CSB 6.4 | Python: Biopython |
 |         | Mon, Nov 07 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_18.pdf">Lecture 18</a>  | [Lab 18](labs/lab_18.md) | -- | Biology: protein evolution<br>**Course project: check-in**   |
 |         | Wed, Nov 09 | -- | -- | -- | **Course project: open Lab** |
-| :whale: | Mon, Nov 14 | <!--<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_19.pdf">Lecture 19</a>-->Lecture 19  | <!--[Lab 19](labs/lab_19.md)-->Lab 19 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">data viz paper</a> | Python: Jupyter, Matplotlib |
+| :whale: | Mon, Nov 14 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_19.pdf">Lecture 19</a>  | [Lab 19](labs/lab_19.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">data viz paper</a> | Python: Jupyter, Matplotlib |
 |         | Wed, Nov 16 | <!--<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_20.pdf">Lecture 20</a>-->Lecture 20  | <!--[Lab 20](labs/lab_20.md)-->Lab 20 | CSB 6.1 - 6.2.2 | Python: NumPy <br>**Course project: check-in**   |
 |         | Mon, Nov 21 | <!--<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_21.pdf">Lecture 21</a>-->Lecture 21  | <!--[Lab 21](labs/lab_21.md)-->Lab 21 | CSB 6.2.3 - 6.2.5 | Python: SciPy |
 |         | Wed, Nov 23 | -- | -- | -- | **No class: Thanksgiving** |
