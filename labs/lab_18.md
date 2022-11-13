@@ -1,6 +1,6 @@
 # Lab 18
 
-*Lab 18 GitHub Classroom link:* https://classroom.github.com/a/k93qypCl
+*Lab 18 GitHub Classroom link:* [https://classroom.github.com/a/rzUHC1m_](https://classroom.github.com/a/rzUHC1m_)
 
 In this lab, we'll learn how to test hypotheses regarding protein evolution using the phylogenetic software package, PAML. [PAML](http://abacus.gene.ucl.ac.uk/software/paml.html) -- which stands for "Phylogenetic Analysis by Maximum Likelihood" -- is open source software written for inferring phylogenies and other phylogenetic patterns.  Specifically, PAML provides a special tool called `codeml` that is used to measure the relative rates of nonsynonmyous vs. synonymous substitutions (called dN/dS).
 
@@ -52,7 +52,7 @@ The `codeml` program may now be run from any directory, but the program requires
 Let's begin by running a `codeml` analysis to detect site-specific positive selection in the envelope protein for HIV. We might expect that some sites in env are under positive selection, since the protein is important for HIV infection and for host immune system detection. Navigate into the `examples/HIVNSsites` directory in this lab's repo, then type `codeml` to run an example analysis
 
 ```console
-$ cd ~/labs/lab-19-mlandis/examples/HIVNSsites
+$ cd ~/labs/lab-18-mlandis/examples/HIVNSsites
 $ codeml
 
 CODONML in paml version 4.9j, February 2020
