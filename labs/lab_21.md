@@ -138,6 +138,31 @@ DescribeResult(nobs=1000,
                kurtosis=-0.0055425614273967305)
 ```
 
+The `scipy.stats` package provides methods for linear regression models. In its simplest form, linear regression tests whether the values of one or more variables predict the value of another variable through a simple relationship -- e.g. `y = a*x + b + e`, where `y` is the dependent (predicted) variable, `x` is the independent (explantory) variable, `a` is the slope of the prediction line, `b` is the intercept at `x=0`, and `e` is an error term that penalizes points that do not fall on the line. Results from a linear regression will report estimates for `a` (slope), `b` (intercept), `r-value` (predictive power, where 0 is no power and 1 is perfect power), `p-value` (statistical significance, e.g. p < 0.05), and `stderr` (error of data relative to line). In this example, we simulate data where for `y = 1.6*x + e`, where `e` adds random noise on the interval [0,1] to each data point. Generate a linear regression using the `sp.stats.linregress` function.
+```python
+>>> # import numpy and scipy
+>>> import numpy as np
+>>> import scipy as sp
+>>> # simulate dataset
+>>> np.random.seed(seed=12345)
+>>> x = sp.stats.uniform.rvs(size=100, loc=0, scale=1)
+>>> y = 1.6*x + sp.stats.uniform.rvs(size=100, loc=0, scale=1)
+>>> # get results from linear regression, y ~ x
+>>> res = sp.stats.linregress(x, y)
+```
+
+The linear 
+```python
+>>> # view results
+>>> res
+LinregressResult(slope=1.4431933040436178, intercept=0.5860274273931283,
+rvalue=0.8088733612574854, pvalue=2.4706574634065375e-24, stderr=0.1059730971193916,
+intercept_stderr=0.06594536829897774)
+>>> print(f"R-squared: {res.rvalue**2:.6f}")
+R-squared: 0.65427
+```
+
+
 Last among the `scipy.stats` features we'll consider are kernel densitory estimators (KDEs). KDEs estimate the probability density function for a sample of data by using a non-parametric mixture of weighted distributions, called kernels. In essence, this means that one could compute the relative probability for new data points based on previously sampled data points. `scipy.stats` provides a function for kernels based on the Gaussian (i.e. normal) distribution. Below, we see that the distribution estimated with the KDE (orange line) fits the underlying dataset (blue histogram) quite nicely.
 
 
