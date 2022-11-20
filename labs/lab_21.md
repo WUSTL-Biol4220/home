@@ -162,6 +162,16 @@ intercept_stderr=0.06594536829897774)
 R-squared: 0.65427
 ```
 
+You can use `matplotlib` to plot the raw data and the estimated linear model.
+```python
+>>> # plot results
+>>> import matplotlib.pyplot as plt
+>>> plt.plot(x, y, 'o', label='original data')
+>>> plt.plot(x, res.intercept + res.slope*x, 'r',
+label='fitted line')
+>>> plt.legend()
+>>> plt.show()
+```
 
 Last among the `scipy.stats` features we'll consider are kernel densitory estimators (KDEs). KDEs estimate the probability density function for a sample of data by using a non-parametric mixture of weighted distributions, called kernels. In essence, this means that one could compute the relative probability for new data points based on previously sampled data points. `scipy.stats` provides a function for kernels based on the Gaussian (i.e. normal) distribution. Below, we see that the distribution estimated with the KDE (orange line) fits the underlying dataset (blue histogram) quite nicely.
 
