@@ -28,7 +28,7 @@ In this lab, we will explore several of SciPy's many features for processing qua
 | `scipy.special`     | special functions |
 | `scipy.stats`       | statistical functions |
 
-In this lab, we will explore several SciPy packages that are useful for analyzing biological datasets: `scipy.constants`, `scipy.stats`, `scipy.optimize`, `scipy.integrate`, and `scipy.cluster`.
+In this lab, we will explore several SciPy packages that are useful for analyzing biological datasets: `scipy.constants`, `scipy.stats`, `scipy.optimize`, `scipy.integrate`, `scipy.cluster`, and `scipy.spatial.
 
 You will need to install the SciPy library on your virtual machine, which may be done with the command `pip install scipy`.
 
@@ -274,5 +274,46 @@ SciPy offers several methods for clustering data, including vector quantization,
 >>> plt.scatter(y[:, 0], y[:, 1], c='r') # plot means, y
 >>> plt.show()
 ```
+
+### `scipy.spatial.ConvexHull`
+
+Because data are often messy, scientists often use the convex hull to characterize the geometric shape and size of a dataset. A convex hull can be thought of as a polygon that "shrinks" around a dataset. For example, imagine a scatterplot of data in two dimensions. Next, imagine stretching a rubberband around all datapoints. The convex hull is analogous to the polygonal shape of the rubberband after it tightens around the most extreme values. The technical definition for a convex hull is the smallest convex polygon that includes all points in the dataset, with meaning that the polygon contains no holes or large indentations (no concavities). We can create a convex hull using `scipy.spatial.ConvexHull`, like so.
+
+```python
+>>> # import numpy/scipy
+>>> import numpy as np
+>>> import scipy as sp
+>>> # simulate dataset
+>>> np.random.seed(seed=12345)
+>>> points = sp.stats.uniform.rvs(size=(30,2)) >>> # find convex hull of points
+>>> hull = sp.spatial.ConvexHull(points)
+>>> hull.area
+3.008424594700238
+>>> hull.points[hull.vertices,:]
+array([[0.846943 , 0.37809954],
+[0.9174485 , 0.80358537],
+[0.62491062, 0.89256119],
+[0.19608178, 0.9354918 ],
+[0.10410446, 0.71212017],
+[0.03714544, 0.03413158],
+[0.37113194, 0.04055327],
+[0.4249371 , 0.0743783 ]])
+```
+
+As before, we can use `matplotlib` to visualize this representation of the data.
+```python
+>>> # import numpy/scipy
+>>> import matplotlib.pyplot as plt
+>>> # plot raw data
+>>> plt.plot(points[:,0], points[:,1], 'o’)
+>>> # plot convex hull
+>>> for simplex in hull.simplices:
++++     plt.plot(points[simplex, 0], points[simplex, 1], 'k-')
+>>> plt.plot(points[hull.vertices,0], points[hull.vertices,1], 'r--', lw=2)
+>>> plt.plot(points[hull.vertices[0],0], points[hull.vertices[0],1, 'ro')
+>>> plt.show()
+```
+
+---
 
 Once you have executed all of the above code through the Jupyter notebook, save and close the notebook, then commit and push the notebook to your GitHub classroom assignment repository. Also submit a log of your history (`history.txt`).
