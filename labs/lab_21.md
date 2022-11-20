@@ -151,7 +151,7 @@ The `scipy.stats` package provides methods for linear regression models. In its 
 >>> res = sp.stats.linregress(x, y)
 ```
 
-The linear 
+Linear regression results are stored into the `res` variable as a custom `LinregressResult` datatype.
 ```python
 >>> # view results
 >>> res
