@@ -52,7 +52,7 @@ The `scipy.constants` provides a dictionary of nearly 400 mathematical and physi
 1.672621898e-27
 >>> constants.neutron_mass                     # mass of neutron
 1.674927471e-27
->>> scipy.constants.physical_constants.keys()  # returns (values, units, precision)
+>>> constants.physical_constants.keys()  # returns (values, units, precision)
 dict_keys(['Wien displacement law constant',
            'atomic unit of 1st hyperpolarizablity',
            'atomic unit of 2nd hyperpolarizablity',
