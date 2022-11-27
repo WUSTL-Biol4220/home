@@ -1,6 +1,6 @@
 # Lab 22
 
-*Lab 22 GitHub Classroom link:* https://classroom.github.com/a/CVwZ17I1
+*Lab 22 GitHub Classroom link:* https://classroom.github.com/a/ac78egGK
 
 This lab will explore how to work with data tables through the Python package, Pandas. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-22.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 19](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_19.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
 
