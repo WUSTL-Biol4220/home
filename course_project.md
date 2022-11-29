@@ -40,6 +40,8 @@ Write a 2 page report (12pt font, single-spaced) that summarizes your research f
 2. A detailed description of the custom pipeline features that you added to the project, why they might be interesting or useful, and any challenges you encountered introducing those features.
 3. A discussion of how your analysis output (results) differed depending on what settings/datasets you analyzed, and how those differences might influence what biological hypotheses are supported or rejected. For example, an analysis run under Settings-A might cause our methods to infer high proportions of nonsynonymous substitutions relative to synonymous substitutions, while Settings-B might cause our methods to infer roughly equal proportions of nonsynonymous and synonymous substitutions. Do Settings-A and Settings-B support conflicting biological scenarios? Why is it important to compare results using both settings? 
 
+The analysis report is not due until after the project presentation.
+
 ## Project presentation
 
 At the end of the course, each student will deliver a short presentation of their work on the pipeline project to the class. Your presentation should share:
@@ -50,7 +52,7 @@ At the end of the course, each student will deliver a short presentation of thei
   - any technical challenges you were proud to overcome
   - ideas for new pipeline features
   
-**Plan to present for no more than 10 minutes.** After your presentation, the class will ask the presenter questions. We'll discuss more after everyone has presented, if there's time.
+**Plan to present for 10 minutes.** After your presentation, the class will ask the presenter questions. We'll discuss more after everyone has presented, if there's time.
 
 ## Project approval
 
@@ -63,6 +65,6 @@ For Option 2 projects, the instructor must approve the entire project, including
 
 ## Important dates
 
-- Pipeline features and datasets approved by the instructor by **Oct 26 2022**
-- Students will present their work to the class on **Dec 05 2022**
-- Grading of project repositories will begin on **Dec 12 2022**
+- Pipeline features and datasets approved by the instructor by **Oct 26 2022**.
+- Students will present their work to the class on **Dec 05 2022**.
+- Grading of project repositories will begin on **Dec 12 2022**. All pipeline materials must be uploaded to your GitHub repository at this time.
