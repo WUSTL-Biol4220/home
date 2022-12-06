@@ -33,7 +33,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Nov 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_20.pdf">Lecture 20</a>  | [Lab 20](labs/lab_20.md) | CSB 6.1 - 6.2.2 | Python: NumPy <br>**Course project: check-in**   |
 |         | Mon, Nov 21 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_21.pdf">Lecture 21</a> | [Lab 21](labs/lab_21.md) | CSB 6.2.3 - 6.2.5 | Python: SciPy |
 |         | Wed, Nov 23 | -- | -- | -- | **No class: Thanksgiving** |
-| :whale: | Mon, Nov 28 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_22.pdf">Lecture 22</a>  | [Lab 22](labs/lab_22.md) | CSB 6.3 | Python: Pandas  |
+|         | Mon, Nov 28 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_22.pdf">Lecture 22</a>  | [Lab 22](labs/lab_22.md) | CSB 6.3 | Python: Pandas  |
 |         | Wed, Nov 30 | -- | -- | -- | **Course project: open lab**  |
 |         | Mon, Dec 05 | -- | -- | -- | **Course project: presentations**  |
-|         | Wed, Dec 07 | -- | -- | -- | **Exam 2**<br><a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/files/biol4220_exam2_study_guide.docx">Exam 2 study guide</a>  |
+| :whale: | Wed, Dec 07 | -- | -- | -- | **Exam 2**<br><a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/files/biol4220_exam2_study_guide.docx">Exam 2 study guide</a>  |
