@@ -1,4 +1,4 @@
-## Fall 2022
+## Fall 2024
 
 <img src="assets/home/biol4220_logo_trim.png" width="350"/>
 
@@ -23,12 +23,11 @@ Instructor
 * Name: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
-* Drop-in hours: 3:00-4:00pm on Wed
+* Drop-in hours: TBD
 * Drop-in hours location: Rebstock 210
-* Zoom link: https://wustl.zoom.us/j/93971192504
 
 Teaching Assistant
-* Name: Hannah Chay
-* Email: chayh@wustl.edu
-* Drop-in hours: 1:30-2:30 on Tue and 12:00-1:00 on Fri
+* Name: Raymond Castillo
+* Email: c.raymond@wustl.edu
+* Drop-in hours: TBD
 * Drop-in hours location: LLC Common Room
