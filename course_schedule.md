@@ -21,7 +21,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Oct 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_11.pdf">Lecture 11</a>  | [Lab 11](labs/lab_11.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Mon, Oct 07 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_12.pdf">Lecture 12</a>  | [Lab 12](labs/lab_12.md) | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: introduction, variables, operators,<br>if-statements, functions<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>)  |
 |         | Wed, Oct 09 | -- | -- | -- | **No class: Fall Break** |
-|         | Mon, Oct 14 | -- | -- | -- | RIS guest lecture |
+|         | Mon, Oct 14 | -- | -- | -- | RIS guest lecture<br>Overview of bioinfo software |
 |         | Wed, Oct 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_13.pdf">Lecture 13</a>  | [Lab 13](labs/lab_13.md) | CSB 3.4, 3.6.2| Python: containers, loops, script arguments |
 |         | Mon, Oct 21 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_14.pdf">Lecture 14</a>  | [Lab 14](labs/lab_14.md) | CSB 3.3.6, 3.7  | Python: strings, file handling  |
 |         | Wed, Oct 23 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_15.pdf">Lecture 15</a>  | [Lab 15](labs/lab_15.md) | CSB 4.2.2 - 4.4 | Python: modules, system calls, more with containers<br>**Course project: approvals** |
