@@ -28,10 +28,10 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Mon, Oct 28 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_16.pdf">Lecture 16</a>  | [Lab 16](labs/lab_16.md) | -- | Biology: sequence stats |
 |         | Wed, Oct 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_17.pdf">Lecture 17</a>  | [Lab 17](labs/lab_17.md)  | CSB 6.4 | Python: Biopython |
 |         | Mon, Nov 04 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_18.pdf">Lecture 18</a>  | [Lab 18](labs/lab_18.md) | -- | Biology: protein evolution<br>**Course project: check-in**   |
-|         | Wed, Nov 06 | -- | -- | -- | **Course project: open Lab** |
-|         | Mon, Nov 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_19.pdf">Lecture 19</a>  | [Lab 19](labs/lab_19.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">data viz paper</a> | Python: Jupyter, Matplotlib |
-|         | Wed, Nov 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_20.pdf">Lecture 20</a>  | [Lab 20](labs/lab_20.md) | CSB 6.1 - 6.2.2 | Python: NumPy <br>**Course project: check-in**   |
-|         | Mon, Nov 18 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_21.pdf">Lecture 21</a> | [Lab 21](labs/lab_21.md) | CSB 6.2.3 - 6.2.5 | Python: SciPy |
+|         | Wed, Nov 06 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_19.pdf">Lecture 19</a>  | [Lab 19](labs/lab_19.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">data viz paper</a> | Python: Jupyter, Matplotlib |
+|         | Mon, Nov 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_20.pdf">Lecture 20</a>  | [Lab 20](labs/lab_20.md) | CSB 6.1 - 6.2.2 | Python: NumPy <br>**Course project: check-in**   |
+|         | Wed, Nov 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_21.pdf">Lecture 21</a> | [Lab 21](labs/lab_21.md) | CSB 6.2.3 - 6.2.5 | Python: SciPy |
+|         | Mon, Nov 18 | -- | -- | -- | **Course project: open Lab** |
 |         | Wed, Nov 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_22.pdf">Lecture 22</a>  | [Lab 22](labs/lab_22.md) | CSB 6.3 | Python: Pandas  |
 |         | Wed, Nov 25 | -- | -- | -- | **No class: Thanksgiving** |
 |         | Wed, Nov 27 | -- | -- | -- | **Course project: open lab**  |
