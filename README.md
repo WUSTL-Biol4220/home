@@ -6,7 +6,7 @@
 
 * [Lecture & lab schedule](course_schedule.md)
 * [Canvas](https://wustl.instructure.com/courses/93893)
-* [Syllabus](https://docs.google.com/document/d/1P3TJ_bJiwFAKXKII_R3fqhgLsiTNXfowWWD4hjdMnp0/edit?usp=sharing)
+* [Syllabus](https://docs.google.com/document/d/1dKYfde0X5M6hDkAPgRK1TTpCjtQEg6Zwvj-gFFvMp_A/edit?usp=sharing)
 * [Course Project](course_project.md)
 * ["How To" guide](how_to_guide.md)
 
