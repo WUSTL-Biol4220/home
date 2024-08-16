@@ -19,7 +19,7 @@ Reading assignments from [*Computing Skills for Biologists*](https://computingsk
 |         | Wed, Sep 25 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_09.pdf">Lecture 09</a>  | [Lab 09](labs/lab_09.md) | CSB 5.1 - 5.9 | Unix: regular expressions, regex match |
 |         | Mon, Sep 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_10.pdf">Lecture 10</a>  | [Lab 10](labs/lab_10.md) | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Wed, Oct 02 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_11.pdf">Lecture 11</a>  | [Lab 11](labs/lab_11.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
-|         | Mon, Oct 07 | -- | -- | -- | RIS guest lecture<br>Overview of bioinfo software<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
+|         | Mon, Oct 07 | -- | -- | -- | Sequencing technologies<br>RIS tutorial<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
 |         | Wed, Oct 09 | -- | -- | -- | **No class: Fall Break** |
 |         | Mon, Oct 14 | -- | -- | -- |  Biology: genome assembly  |
 |         | Wed, Oct 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_12.pdf">Lecture 12</a>  | [Lab 12](labs/lab_12.md) | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: variables, operators,<br>if-statements, functions  |
