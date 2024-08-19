@@ -23,20 +23,20 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Wed, Oct 02 | Lecture 11 | Lab 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Mon, Oct 07 | Lecture 12 | Lab 12 | Sequencing technologies<br>RIS tutorial<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
 |         | Wed, Oct 09 | -- | -- | -- | **No class: Fall Break** |
-|         | Mon, Oct 14 | Lecture 13 | Lab 13 |  Biology: genome assembly  |
+|         | Mon, Oct 14 | Lecture 13 | Lab 13 | -- | Biology: genome assembly |
 |         | Wed, Oct 16 | Lecture 14 | Lab 14 | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: variables, operators,<br>if-statements, functions  |
-|         | Mon, Oct 21 | Lecture 15 | Lab 15 | CSB 3.4, 3.6.2| Python: containers, loops, strings, script arguments |
+|         | Mon, Oct 21 | Lecture 15 | Lab 15 | CSB 3.4, 3.6.2 | Python: containers, loops, strings, script arguments |
 |         | Wed, Oct 23 | Lecture 16 | Lab 16 | CSB 4.2.2 - 4.4 | Python: file handling, modules, system calls, more with containers<br>**Course project: approvals** |
 |         | Mon, Oct 28 | Lecture 17 | Lab 17 | -- | Biology: sequence stats |
 |         | Wed, Oct 30 | Lecture 18 | Lab 18 | CSB 6.4 | Python: Biopython |
-|         | Mon, Nov 04 | Lecture 19 | Lab 19 | -- | Biology: protein evolution   |
+|         | Mon, Nov 04 | Lecture 19 | Lab 19 | -- | Biology: variant calling |
 |         | Wed, Nov 06 | Lecture 20 | Lab 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">data viz paper</a> | Python: Jupyter, Matplotlib<br>**Course project: check-in** |
 |         | Mon, Nov 11 | Lecture 21 | Lab 21 | CSB 6.1 - 6.2.2 | Python: NumPy   |
-|         | Wed, Nov 13 | Lecture 22 | Lab 22 | CSB 6.3 | Python: Pandas  |
-|         | Mon, Nov 18 | Lecture 23 | Lab 23 | CSB 6.2.3 - 6.2.5 | Python: SciPy <br>**Course project: check-in** |
-|         | Wed, Nov 20 | Lecture 25 | Lab 25 | -- | Python: scikit-learn |
+|         | Wed, Nov 13 | Lecture 22 | Lab 22 | -- | Biology: protein evolution |
+|         | Mon, Nov 18 | Lecture 23 | Lab 23 | CSB 6.3 | Python: Pandas  |
+|         | Wed, Nov 20 | Lecture 25 | Lab 25 | CSB 6.2.3 - 6.2.5 | Python: SciPy <br>**Course project: check-in**|
 |         | Wed, Nov 25 | -- | -- | -- | **No class: Thanksgiving** |
-|         | Wed, Nov 27 | Lecture 26 | Lab 26 | TBD  |
+|         | Wed, Nov 27 | Lecture 26 | Lab 26 | -- | Python: scikit-learn  |
 |         | Mon, Dec 02 | -- | -- | -- | **Course project: open lab**  |
-|         | Wed, Dec 04 | -- | -- | -- | **Course project: presentations**  |
-|         | Mon, Dec 09 | -- | -- | -- | **Course project: presentations**  |
+|         | Wed, Dec 04 | -- | -- | -- | **Course project: presentations 1 to 8**  |
+|         | Mon, Dec 09 | -- | -- | -- | **Course project: presentations 9 to 16**  |
