@@ -21,7 +21,7 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Wed, Sep 25 | Lecture 09 | Lab 09 | CSB 5.1 - 5.9 | Unix: regular expressions, regex match |
 |         | Mon, Sep 30 | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Wed, Oct 02 | Lecture 11 | Lab 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
-|         | Mon, Oct 07 | Lecture 12 | Lab 12 | Sequencing technologies<br>RIS tutorial<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
+|         | Mon, Oct 07 | Lecture 12 | Lab 12 | -- | Sequencing technologies<br>RIS tutorial<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
 |         | Wed, Oct 09 | -- | -- | -- | **No class: Fall Break** |
 |         | Mon, Oct 14 | Lecture 13 | Lab 13 | -- | Biology: genome assembly |
 |         | Wed, Oct 16 | Lecture 14 | Lab 14 | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: variables, operators,<br>if-statements, functions  |
