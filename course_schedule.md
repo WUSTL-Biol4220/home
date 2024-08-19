@@ -32,8 +32,8 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Mon, Nov 04 | Lecture 19 | Lab 19 | -- | Biology: variant calling |
 |         | Wed, Nov 06 | Lecture 20 | Lab 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">data viz paper</a> | Python: Jupyter, Matplotlib<br>**Course project: check-in** |
 |         | Mon, Nov 11 | Lecture 21 | Lab 21 | CSB 6.1 - 6.2.2 | Python: NumPy   |
-|         | Wed, Nov 13 | Lecture 22 | Lab 22 | -- | Biology: protein evolution |
-|         | Mon, Nov 18 | Lecture 23 | Lab 23 | CSB 6.3 | Python: Pandas  |
+|         | Wed, Nov 13 | Lecture 22 | Lab 22 | CSB 6.3 | Python: Pandas  |
+|         | Mon, Nov 18 | Lecture 23 | Lab 23 | -- | Biology: protein evolution |
 |         | Wed, Nov 20 | Lecture 25 | Lab 25 | CSB 6.2.3 - 6.2.5 | Python: SciPy <br>**Course project: check-in**|
 |         | Wed, Nov 25 | -- | -- | -- | **No class: Thanksgiving** |
 |         | Wed, Nov 27 | Lecture 26 | Lab 26 | -- | Python: scikit-learn  |
