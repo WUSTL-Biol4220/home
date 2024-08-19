@@ -1,7 +1,7 @@
 
 ## Course schedule
 
-This file contains a list of all of the Labs for the semester. Links for Labs will be added when they are assigned. Free Writing assignments take place every Monday. Quizzes take place every Wednesday.
+Links for Labs will be added when they are assigned. Free Writing assignments take place every Monday. Quizzes take place every Wednesday.
 
 Reading assignments from [*Computing Skills for Biologists*](https://computingskillsforbiologists.com/) (Allesina & Wilmes) are identified by the CSB prefix followed by the pages or sections. Students are encouraged to read through the exercises at the end of each CSB chapter we read. Similar questions may appear on Quizzes.
 
