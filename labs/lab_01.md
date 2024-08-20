@@ -28,7 +28,7 @@ The main course webpage is located at: [https://github.com/WUSTL-Biol4220/home](
 All of the course materials are centralized in this page, including the Zoom meeting link, the course schedule, instructor contact information, and various course resources. The course resources are especially important, because they provide specific answers to various questions you might have. When in doubt, check the course resources!
 
 The course resources include:
-* [Syllabus](https://docs.google.com/document/d/1TYE10600VUhCyq51_h_9flVUhkCF-IQCE9SnQKRGRGo/edit?usp=sharing)
+* [Syllabus](https://docs.google.com/document/d/1dKYfde0X5M6hDkAPgRK1TTpCjtQEg6Zwvj-gFFvMp_A)
 * [Lecture & Lab schedule](https://github.com/WUSTL-Biol4220/home/blob/main/course_schedule.md)
 * ["How To" guide](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md)
 * [Course Project](https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md)
