@@ -45,7 +45,13 @@ Notice that this website is hosted at the web addresss [http://github.com](http:
 
 *(NOTE: Connecting to the VPN is only needed to access campus resources when **off-campus**.)*
 
-A *virtual private network* (VPN) is an extension of a private network that can be accessed through the internet. To control access to the VPN, a network administrator can design a server, called the *VPN host*, that only allows authorized users to connect to the VPN. Authorized users identify and authenticate themselves against the VPN host using a special piece of software, called the *VPN client*. Connecting to a VPN generally requires the user to provide (1) the IP address for the VPN host, (2) the login credentials for a user who is authorized to access the VPN, and sometimes (3) two-factor authentication (or 2FA) to ensure that the user who is logging into the VPN is indeed who they claim to be -- e.g. by sending a push notification to the user's registered smartphone. These VPN client-host relationships allow private networks to control what network resources are accessible to the outside world, and to whom.
+A *virtual private network* (VPN) is an extension of a private network that can be accessed through the internet. To control access to the VPN, a network administrator can design a server, called the *VPN host*, that only allows authorized users to connect to the VPN. Authorized users identify and authenticate themselves against the VPN host using a special piece of software, called the *VPN client*. Connecting to a VPN generally requires the user to provide:
+
+1. the IP address for the VPN host
+2. the login credentials for a user who is authorized to access the VPN
+3. (sometimes) two-factor authentication, or 2FA, to ensure that the user who is logging into the VPN is indeed who they claim to be -- e.g. by sending a push notification to the user's registered smartphone.
+
+These VPN client-host relationships allow private networks to control what network resources are accessible to the outside world, and to whom.
 
 For Part 2 of Lab 01, we'll install the VPN client software on to your home computer, then verify that we can connect to the WUSTL VPN.
 
