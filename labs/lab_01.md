@@ -32,7 +32,7 @@ The course resources include:
 * [Lecture & Lab schedule](https://github.com/WUSTL-Biol4220/home/blob/main/course_schedule.md)
 * ["How To" guide](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md)
 * [Course Project](https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md)
-* [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-f2020)
+* [GitHub Classroom](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-2024)
 * [Canvas](https://wustl.instructure.com/courses/54531)
 
 (We'll repeatedly refer to the "How To" guide for the tasks assigned in Lab 01.)
@@ -77,7 +77,7 @@ Now your home computer has a way to remotely interact with other computers on th
 
 ## 4. Connecting to your lab computer (your virtual machine)
 
-In Biol 4220, each student will have access to their own personal computer, located on the WUSTL private network. All student computers are configured in the exact same way: they are all running the Linux operating system, [Ubunutu 20.04 LTS](https://releases.ubuntu.com/20.04/), and they are all pre-configured with the software required to complete the Biol 4420 lab exercises.
+In Biol 4220, each student will have access to their own personal computer, located on the WUSTL private network. All student computers are configured in the exact same way: they are all running the Linux operating system, [Ubunutu 24.04 LTS](https://releases.ubuntu.com/24.04/), and they are all pre-configured with the software required to complete the Biol 4220 lab exercises.
 
 One thing to know is that these lab computers are not *physical computers*, but *virtual machines* or (VMs). As the name suggests, a VM is a computer hardware system that is emulated using software. This emulation is called *virtualization*. VMs are typically hosted by a VM server that specializes in virtualization, and is responsible for managing shared *physical* hardware resources -- such as processor time, memory, disk storage -- across the VMs that it is hosting, as well as backing up VMs, rebooting VMs, copying VMs, etc. Virtualization is an extremely useful technology, because it allows you to safely control and replicate your software environment, making certain software configurations extremely portable across diverse computing infrastructures. (For wet lab folks, imagine if you could "clone" your bench setup and mail it to a collaborating lab!)
 
@@ -102,9 +102,9 @@ Students who do not yet have a GitHub account should visit the [Create a GitHub 
 
 ## 6. Accept your first GitHub Classroom assignment
 
-Lab exercises (including this one!) will be assigned to students through the [Practical Bioinformatics (Fall 2022)](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-2022) website, hosted by [GitHub Classroom](https://classroom.github.com).
+Lab exercises (including this one!) will be assigned to students through the [Practical Bioinformatics (Fall 2024)](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-2024) website, hosted by [GitHub Classroom](https://classroom.github.com).
 
-Each lab exercise will include an *invitation link* at the top of the lab instructions (i.e. the `README.md` file, like this one). The invitation link for Lab 01 is [https://classroom.github.com/a/u0jYtjrJ](https://classroom.github.com/a/I1b437_X).
+Each lab exercise will include an *invitation link* at the top of the lab instructions (i.e. the `README.md` file, like this one). The invitation link for Lab 01 is https://classroom.github.com/a/zIH-8t3B.
 
 By clicking that link, you will inform GitHub Classroom that you've accepted the assignment. GitHub Classroom will then prepare your lab workspace on the code-sharing website GitHub. That workspace will be a *git repository* (or *repo* for short). Future labs will explore how to use the version control software, git. For now, we can essentially view a repo as a "smart folder" that can recall the entire history for how its contents have changed.
 
