@@ -15,7 +15,7 @@ This lab has seven short parts
 6. [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#6-accept-your-first-github-classroom-assignment)
 7. [Submit a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#7-complete-your-first-github-classroom-assignment)
 
-Parts of this lab assignment may be particularly difficult for students who are new to computing. Some of the concepts and commands we're using here have not yet been introduced, and may seem unfamiliar or intimidating. This feeling is common in computing! Do the best that you can do for now, and rest assured that we'll spend more time learning about these new concepts soon enough. Please ask the instructor for help if needed.
+Parts of this lab assignment may be particularly difficult for students who are new to computing. Some of the concepts and commands we're using here have not yet been introduced, and may seem unfamiliar or intimidating. This feeling is common in computing! Do the best that you can do for now, and rest assured that we'll spend more time learning about these new concepts soon enough. Please ask the instructors for help if needed.
 
 
 ---
@@ -45,7 +45,7 @@ Notice that this website is hosted at the web addresss [http://github.com](http:
 
 *(NOTE: Connecting to the VPN is only needed to access campus resources when **off-campus**.)*
 
-A *virtual private network* (VPN) is an extension of a private network that can be accessed through the internet. To control access to the VPN, a network administrator can design a server, called the *VPN host*, that only allows authorized users to connect to the VPN. Authorized users identify and authenticate themselves against the VPN host using a special piece of software, called the *VPN client*. Connecting to a VPN generally requires the user to provide:
+A *virtual private network* (VPN) is an extension of a private network that can be accessed through the internet. To control access to the VPN, a network administrator can design a server, called the *VPN host*, that only allows authorized users to connect. Authorized users identify and authenticate themselves against the VPN host using a special piece of software, called the *VPN client*. Connecting to a VPN generally requires the user to provide:
 
 1. the IP address for the VPN host
 2. the login credentials for a user who is authorized to access the VPN
@@ -57,15 +57,13 @@ For Part 2 of Lab 01, we'll install the VPN client software on to your home comp
 
 Complete the steps in the [VPN](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#virtual-private-network-vpn) section in the "How To" guide.
 
-In general, your home computer will need to be connected to the VPN to connect to your lab virtual machine (e.g. Part 3 of Lab 01) and other WUSTL network resources. 
-
-Now you can access approved WUSTL network resources from anywhere in the world, even your home.
+When you are off-campus, your home computer will need to be connected to the VPN to connect to your lab virtual machine (Part 3 of Lab 01) and other WUSTL network resources. 
 
 ---
 
 ## 3. Secure shell client (SSH)
 
-Two computers that are on the same network can connect and communicate with one another in various ways. One mode of communication -- through the secure shell (SSH) protocol -- is remarkably simple, fast, versatile, and secure. Once you have established an SSH connection with a remote computer, you will largely be free to interact with that computer as though you were physically sitting in front of it, at the keyboard, logged in through your user account. Most bioinformatics work carried out on remote computers is facilitated by SSH.
+Two computers that are on the same network can connect and communicate with one another in various ways. Secure shell (SSH) protocol is the most common command line interfacet for interacting with remote computers. It is simple, fast, versatile, secure, and available on every Unix-based computer by default. Once you have established an SSH connection with a remote computer, you will largely be free to interact with that computer as though you were physically sitting in front of it, at the keyboard, logged in through your user account. Most bioinformatics work carried out on remote computers is facilitated by SSH.
 
 The easiest way to connect to a remote computer through the SSH protocol is to install an SSH client.
 
