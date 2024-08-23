@@ -172,10 +172,10 @@ The key's randomart image is:
 |                 |
 +----[SHA256]-----+
 ```
-Next, print and copy the contents of your new key file. **Important:** you must run this command on your virtual machine and copy the contents for your individual and unique `id_rsa.pub` file. 
+Next, print and copy the contents of your new key file. **Important:** you must run this command on your virtual machine and copy the contents for your individual and unique `id_ed25519.pub` file. 
 ```
-$ cat id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EZZZZZZZZZZCZXYCKOebxfeutzUbDSsrO4DewLcvUQzEXrt09Knp7jJkYnnnO2S+axy/O2WHQZZZZZZZZMxeJsyUe+tN7CmwwB/Zn/BdWkvEnK0fkutsR8ahfXTrEl4OScWPZZZZZZZZZZZZZN8zfKPPdpfR7yzdUUa+ZoW2wFbEygvh39u1XJGO+k0G2ajeeujvOksh7SXXiBZI+9sBuQmos3DaFZ1Pz5bFOIBFeFMiG+QW18xo1YVhGr8GKVOV1hcE8/6Lxn1byXFN5P5DEQF+Jrxvt1aq0FLY7EjH4ZZZZZZZZ7Rx4AEa4+/6KBku1SfeV5hk4FYnv+IHaD47R0BD68ZZZZZZZ5PbIKxAT2o+DbR31A/zqRzXXRbgbS36gn5x3m+XCadXDZZZZZZaUCuD18k6zOONDUFF2xN8qNC6MrH/GFYqKZZZA71/MdIAejqZZZZZw3k3Dc8WMU= mlandis@bio4220testvm
+$ cat id_ed25519.pub
+ssh-ed25519 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxx/xxxxxxxx mlandis@ip-172-30-14-77
 ```
 **Important:** This key grants special access to your computer. Do not share it publicly. (The key printed above is a toy example and is invalid.)
 
