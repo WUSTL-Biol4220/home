@@ -81,25 +81,37 @@ mlandis@128.252.111.111's password:
 ```
 after correctly entering your password, you will see a welcome message similar to
 ```
-Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-45-generic x86_64)
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-1013-aws x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
+ * Support:        https://ubuntu.com/pro
 
- * Kubernetes 1.19 is out! Get it in one command with:
+ System information as of Fri Aug 23 16:07:35 UTC 2024
 
-     sudo snap install microk8s --channel=1.19 --classic
+  System load:  0.0                Temperature:           -273.1 C
+  Usage of /:   53.8% of 37.70GB   Processes:             109
+  Memory usage: 33%                Users logged in:       0
+  Swap usage:   0%                 IPv4 address for ens5: 172.30.14.77
 
-   https://microk8s.io/ has docs and details.
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
 
-14 updates can be installed immediately.
-0 of these updates are security updates.
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+19 updates can be applied immediately.
+6 of these updates are standard security updates.
 To see these additional updates run: apt list --upgradable
 
-Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Wed Sep  2 16:18:16 2020 from 172.21.136.99
-mlandis@biol4220-mlandis:~$
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Thu Aug 22 17:46:24 2024 from 128.252.25.9
+mlandis@ip-172-30-14-77:~$
 ```
 
 This last line (`mlandis@biol4220-mlandis:~$`) indicates that you have successfully SSH'd into your lab VM, and that the VM is ready to receive your commands!
