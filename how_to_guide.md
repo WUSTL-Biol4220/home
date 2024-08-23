@@ -50,7 +50,7 @@ After initiating an SSH connection with a remote host, the users typically needs
 
 ## Lab virtual machines (VM)
 
-Our class will use virtual machines (or VMs) to complete laboratory exercises. Every student will be given their own personal VM to use. Each VM is preinstalled with Ubuntu (20.04.1 LTS, aka "Focal Fossa") along with the software packages that are necessary to complete the course's lab assignments. For security purposes, your VM is only accessible through the WUSTL private network.
+Our class will use virtual machines (or VMs) to complete laboratory exercises. Every student will be given their own personal VM to use. Each VM is preinstalled with Ubuntu (24.04 LTS) along with the software packages that are necessary to complete the course's lab assignments. For security purposes, your VM is only accessible through the WUSTL private network.
 
 Students who are off-campus will need to first connect to the [VPN](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#virtual-private-network-vpn) before they can connect to their VM.
  
