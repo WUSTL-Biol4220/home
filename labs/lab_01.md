@@ -132,38 +132,4 @@ Scroll to the bottom of the window, enter a message, and click 'Commit change'
 
 <img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_wrong_commit.png" width="350"/>
 
-Allow the autograding software ~30 seconds to run, then return to your lab repository page on GitHub. Click on the red 'X', which will expand the error flag and display a 'Details' link. Click 'Details'.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_error_flag.png" width="350"/>
-
-Expand the failed step with the red 'X' (`Run education/autograding`) to see why the job failed. What was the expected output and what was the actual output?
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_error_msg.png" width="350"/>
-
-Return to the main page for your copy of the Lab 01 repository, then click on the `output.txt` file.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_edit_file.png" width="350"/>
-
-Click on the button with the pen logo on the righthand side of the page to 'Edit this file'.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_edit_file_2.png" width="350"/>
-
-Replace the current text for the file with text that matches the expected output.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_correct_text.png" width="350"/>
-
-Scroll down, write a message to explain your edits, then click 'Commit changes' to save your work.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_correct_commit.png" width="350"/>
-
-When you visit your Lab 01 assignment repository on GitHub, you should see a green checkmark towards the top of the screen.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_success_flag.png" width="350"/>
-
-Expand the `Run education/autograding` step that previously failed, and enjoy some fancy emoji art
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_success_msg.png" width="350"/>
-
-If your repository still shows a red 'x' (fails autograding test) instead of a green checkmark (passes autograding test), re-read `Run education/autograding` message and modify `output.txt` accordingly.
-
-That's it! This concludes your first lab exercise.
+Done! Now your new file is saved to the repository for grading. Future labs will be submitted and graded in a similar way.
