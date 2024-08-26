@@ -1,7 +1,7 @@
 
 # Lab 01
 
-*Lab 01 GitHub Classroom link:* [https://classroom.github.com/a/u0jYtjrJ](https://classroom.github.com/a/I1b437_X)
+*Lab 01 GitHub Classroom link:* [https://classroom.github.com/a/Sn9nM1tN](https://classroom.github.com/a/Sn9nM1tN)
 
 In this lab, we'll familiarize ourselves with various computational resources and procedures that we'll use throughout the course.
 
@@ -15,7 +15,7 @@ This lab has seven short parts
 6. [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#6-accept-your-first-github-classroom-assignment)
 7. [Submit a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_01.md#7-complete-your-first-github-classroom-assignment)
 
-Parts of this lab assignment may be particularly difficult for students who are new to computing. Some of the concepts and commands we're using here have not yet been introduced, and may seem unfamiliar or intimidating. This feeling is common in computing! Do the best that you can do for now, and rest assured that we'll spend more time learning about these new concepts soon enough. Please ask the instructor for help if needed.
+Parts of this lab assignment may be particularly difficult for students who are new to computing. Some of the concepts and commands we're using here have not yet been introduced, and may seem unfamiliar or intimidating. This feeling is common in computing! Do the best that you can do for now, and rest assured that we'll spend more time learning about these new concepts soon enough. Please ask the instructors for help if needed.
 
 
 ---
@@ -45,7 +45,7 @@ Notice that this website is hosted at the web addresss [http://github.com](http:
 
 *(NOTE: Connecting to the VPN is only needed to access campus resources when **off-campus**.)*
 
-A *virtual private network* (VPN) is an extension of a private network that can be accessed through the internet. To control access to the VPN, a network administrator can design a server, called the *VPN host*, that only allows authorized users to connect to the VPN. Authorized users identify and authenticate themselves against the VPN host using a special piece of software, called the *VPN client*. Connecting to a VPN generally requires the user to provide:
+A *virtual private network* (VPN) is an extension of a private network that can be accessed through the internet. To control access to the VPN, a network administrator can design a server, called the *VPN host*, that only allows authorized users to connect. Authorized users identify and authenticate themselves against the VPN host using a special piece of software, called the *VPN client*. Connecting to a VPN generally requires the user to provide:
 
 1. the IP address for the VPN host
 2. the login credentials for a user who is authorized to access the VPN
@@ -57,15 +57,13 @@ For Part 2 of Lab 01, we'll install the VPN client software on to your home comp
 
 Complete the steps in the [VPN](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#virtual-private-network-vpn) section in the "How To" guide.
 
-In general, your home computer will need to be connected to the VPN to connect to your lab virtual machine (e.g. Part 3 of Lab 01) and other WUSTL network resources. 
-
-Now you can access approved WUSTL network resources from anywhere in the world, even your home.
+When you are off-campus, your home computer will need to be connected to the VPN to connect to your lab virtual machine (Part 3 of Lab 01) and other WUSTL network resources. 
 
 ---
 
 ## 3. Secure shell client (SSH)
 
-Two computers that are on the same network can connect and communicate with one another in various ways. One mode of communication -- through the secure shell (SSH) protocol -- is remarkably simple, fast, versatile, and secure. Once you have established an SSH connection with a remote computer, you will largely be free to interact with that computer as though you were physically sitting in front of it, at the keyboard, logged in through your user account. Most bioinformatics work carried out on remote computers is facilitated by SSH.
+Two computers that are on the same network can connect and communicate with one another in various ways. Secure shell (SSH) protocol is the most common command line interfacet for interacting with remote computers. It is simple, fast, versatile, secure, and available on every Unix-based computer by default. Once you have established an SSH connection with a remote computer, you will largely be free to interact with that computer as though you were physically sitting in front of it, at the keyboard, logged in through your user account. Most bioinformatics work carried out on remote computers is facilitated by SSH.
 
 The easiest way to connect to a remote computer through the SSH protocol is to install an SSH client.
 
@@ -104,7 +102,7 @@ Students who do not yet have a GitHub account should visit the [Create a GitHub 
 
 Lab exercises (including this one!) will be assigned to students through the [Practical Bioinformatics (Fall 2024)](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-2024) website, hosted by [GitHub Classroom](https://classroom.github.com).
 
-Each lab exercise will include an *invitation link* at the top of the lab instructions (i.e. the `README.md` file, like this one). The invitation link for Lab 01 is https://classroom.github.com/a/zIH-8t3B.
+Each lab exercise will include an *invitation link* at the top of the lab instructions (i.e. the `README.md` file, like this one). The invitation link for Lab 01 is [https://classroom.github.com/a/zIH-8t3B](https://classroom.github.com/a/Sn9nM1tN).
 
 By clicking that link, you will inform GitHub Classroom that you've accepted the assignment. GitHub Classroom will then prepare your lab workspace on the code-sharing website GitHub. That workspace will be a *git repository* (or *repo* for short). Future labs will explore how to use the version control software, git. For now, we can essentially view a repo as a "smart folder" that can recall the entire history for how its contents have changed.
 
@@ -134,38 +132,4 @@ Scroll to the bottom of the window, enter a message, and click 'Commit change'
 
 <img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_wrong_commit.png" width="350"/>
 
-Allow the autograding software ~30 seconds to run, then return to your lab repository page on GitHub. Click on the red 'X', which will expand the error flag and display a 'Details' link. Click 'Details'.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_error_flag.png" width="350"/>
-
-Expand the failed step with the red 'X' (`Run education/autograding`) to see why the job failed. What was the expected output and what was the actual output?
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_error_msg.png" width="350"/>
-
-Return to the main page for your copy of the Lab 01 repository, then click on the `output.txt` file.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_edit_file.png" width="350"/>
-
-Click on the button with the pen logo on the righthand side of the page to 'Edit this file'.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_edit_file_2.png" width="350"/>
-
-Replace the current text for the file with text that matches the expected output.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_correct_text.png" width="350"/>
-
-Scroll down, write a message to explain your edits, then click 'Commit changes' to save your work.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_correct_commit.png" width="350"/>
-
-When you visit your Lab 01 assignment repository on GitHub, you should see a green checkmark towards the top of the screen.
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_success_flag.png" width="350"/>
-
-Expand the `Run education/autograding` step that previously failed, and enjoy some fancy emoji art
-
-<img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_success_msg.png" width="350"/>
-
-If your repository still shows a red 'x' (fails autograding test) instead of a green checkmark (passes autograding test), re-read `Run education/autograding` message and modify `output.txt` accordingly.
-
-That's it! This concludes your first lab exercise.
+Done! Now your new file is saved to the repository for grading. Future labs will be submitted and graded in a similar way.

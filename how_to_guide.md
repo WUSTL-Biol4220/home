@@ -50,7 +50,7 @@ After initiating an SSH connection with a remote host, the users typically needs
 
 ## Lab virtual machines (VM)
 
-Our class will use virtual machines (or VMs) to complete laboratory exercises. Every student will be given their own personal VM to use. Each VM is preinstalled with Ubuntu (20.04.1 LTS, aka "Focal Fossa") along with the software packages that are necessary to complete the course's lab assignments. For security purposes, your VM is only accessible through the WUSTL private network.
+Our class will use virtual machines (or VMs) to complete laboratory exercises. Every student will be given their own personal VM to use. Each VM is preinstalled with Ubuntu (24.04 LTS) along with the software packages that are necessary to complete the course's lab assignments. For security purposes, your VM is only accessible through the WUSTL private network.
 
 Students who are off-campus will need to first connect to the [VPN](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#virtual-private-network-vpn) before they can connect to their VM.
  
@@ -81,25 +81,37 @@ mlandis@128.252.111.111's password:
 ```
 after correctly entering your password, you will see a welcome message similar to
 ```
-Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-45-generic x86_64)
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-1013-aws x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
+ * Support:        https://ubuntu.com/pro
 
- * Kubernetes 1.19 is out! Get it in one command with:
+ System information as of Fri Aug 23 16:07:35 UTC 2024
 
-     sudo snap install microk8s --channel=1.19 --classic
+  System load:  0.0                Temperature:           -273.1 C
+  Usage of /:   53.8% of 37.70GB   Processes:             109
+  Memory usage: 33%                Users logged in:       0
+  Swap usage:   0%                 IPv4 address for ens5: 172.30.14.77
 
-   https://microk8s.io/ has docs and details.
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
 
-14 updates can be installed immediately.
-0 of these updates are security updates.
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+19 updates can be applied immediately.
+6 of these updates are standard security updates.
 To see these additional updates run: apt list --upgradable
 
-Your Hardware Enablement Stack (HWE) is supported until April 2025.
-Last login: Wed Sep  2 16:18:16 2020 from 172.21.136.99
-mlandis@biol4220-mlandis:~$
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Thu Aug 22 17:46:24 2024 from 128.252.25.9
+mlandis@ip-172-30-14-77:~$
 ```
 
 This last line (`mlandis@biol4220-mlandis:~$`) indicates that you have successfully SSH'd into your lab VM, and that the VM is ready to receive your commands!
@@ -160,10 +172,10 @@ The key's randomart image is:
 |                 |
 +----[SHA256]-----+
 ```
-Next, print and copy the contents of your new key file. **Important:** you must run this command on your virtual machine and copy the contents for your individual and unique `id_rsa.pub` file. 
+Next, print and copy the contents of your new key file. **Important:** you must run this command on your virtual machine and copy the contents for your individual and unique `id_ed25519.pub` file. 
 ```
-$ cat id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EZZZZZZZZZZCZXYCKOebxfeutzUbDSsrO4DewLcvUQzEXrt09Knp7jJkYnnnO2S+axy/O2WHQZZZZZZZZMxeJsyUe+tN7CmwwB/Zn/BdWkvEnK0fkutsR8ahfXTrEl4OScWPZZZZZZZZZZZZZN8zfKPPdpfR7yzdUUa+ZoW2wFbEygvh39u1XJGO+k0G2ajeeujvOksh7SXXiBZI+9sBuQmos3DaFZ1Pz5bFOIBFeFMiG+QW18xo1YVhGr8GKVOV1hcE8/6Lxn1byXFN5P5DEQF+Jrxvt1aq0FLY7EjH4ZZZZZZZZ7Rx4AEa4+/6KBku1SfeV5hk4FYnv+IHaD47R0BD68ZZZZZZZ5PbIKxAT2o+DbR31A/zqRzXXRbgbS36gn5x3m+XCadXDZZZZZZaUCuD18k6zOONDUFF2xN8qNC6MrH/GFYqKZZZA71/MdIAejqZZZZZw3k3Dc8WMU= mlandis@bio4220testvm
+$ cat id_ed25519.pub
+ssh-ed25519 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxx/xxxxxxxx mlandis@ip-172-30-14-77
 ```
 **Important:** This key grants special access to your computer. Do not share it publicly. (The key printed above is a toy example and is invalid.)
 
