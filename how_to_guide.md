@@ -158,7 +158,7 @@ Enter same passphrase again:
 Your identification has been saved in /home/mlandis/.ssh/id_ed25519
 Your public key has been saved in /home/mlandis/.ssh/id_ed25519.pub
 The key fingerprint is:
-SHA256:KmhWbu4XtoDVHK2UvBa3JadSlgS5R/KdYysSNoQ1L8g michael.landis@wustl.edu
+SHA256:KmhWbu4XtoDVHK2UvBa3JadSlgS5R/KdYysSNoQ1L8g your_email@example.com
 The key's randomart image is:
 +--[ED25519 256]--+
 |     ++*..       |
@@ -175,7 +175,7 @@ The key's randomart image is:
 Next, print and copy the contents of your new key file. **Important:** you must run this command on your virtual machine and copy the contents for your individual and unique `id_ed25519.pub` file. 
 ```
 $ cat id_ed25519.pub
-ssh-ed25519 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxx/xxxxxxxx mlandis@ip-172-30-14-77
+ssh-ed25519 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxx/xxxxxxxx your_email@example.com
 ```
 **Important:** This key grants special access to your computer. Do not share it publicly. (The key printed above is a toy example and is invalid.)
 
