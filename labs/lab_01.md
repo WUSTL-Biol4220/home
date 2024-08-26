@@ -124,7 +124,7 @@ Click the 'Add file' button, then select the 'Create new file' option
 
 <img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_create_file.png" width="350"/>
 
-Name the file `output.txt` by entering that name about the 'Edit file' panel. In the 'Edit file' panel, enter any text so long as it is not `Hello, world!`
+Name the file `output.txt` by entering that name about the 'Edit file' panel. In the 'Edit file' panel, enter the text: `Hello, world!`
 
 <img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_wrong_text.png" width="350"/>
 
