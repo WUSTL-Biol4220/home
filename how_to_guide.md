@@ -20,7 +20,7 @@ VPN allows remote users with proper credentials to access private network resour
 
 Note that VPN will only work properly if you are off-campus. You may receive an error or notice unusual access to network resources if you attempt to connect to the VPN while on-campus.
 
-WUSTL undergraduates can install the necessary VPN software and connect to the VPN by following the directions listed here: https://techden.wustl.edu/items/vpn-danforth-students/
+WUSTL undergraduates can install the necessary VPN software and connect to the VPN by following the directions listed here: https://computing.artsci.wustl.edu/connect-network-through-vpn
 
 Once the software is installed, to connect to the WUSTL VPN
 - Open the Cisco AnyConnect VPN Client software
