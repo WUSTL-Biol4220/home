@@ -106,7 +106,7 @@ Each lab exercise will include an *invitation link* at the top of the lab instru
 
 By clicking that link, you will inform GitHub Classroom that you've accepted the assignment. GitHub Classroom will then prepare your lab workspace on the code-sharing website GitHub. That workspace will be a *git repository* (or *repo* for short). Future labs will explore how to use the version control software, git. For now, we can essentially view a repo as a "smart folder" that can recall the entire history for how its contents have changed.
 
-Visit the [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#accept-your-github-classroom-lab-assignment) section in the "How To" guide.
+Visit the [Accept a GitHub Classroom assignment](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#accept-your-github-classroom-lab-assignment) section in the "How To" guide. *Note:* You will complete and submit your lab assignment through the GitHub website (see below). You do not need to use the command line for this part of the lab.
 
 Accept the Lab 01 assignment and verify that you can access the *git repository* for your lab assignment through [GitHub](https://github.com). 
 My GitHub username is mlandis, so my Lab 01 repo was created at https://github.com/WUSTL-Biol4220/lab-01-mlandis. After that workspace is prepared, all that's left is to complete your assignment (next section).
@@ -124,7 +124,7 @@ Click the 'Add file' button, then select the 'Create new file' option
 
 <img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_create_file.png" width="350"/>
 
-Name the file `output.txt` by entering that name about the 'Edit file' panel. In the 'Edit file' panel, enter any text so long as it is not `Hello, world!`
+Name the file `output.txt` by entering that name about the 'Edit file' panel. In the 'Edit file' panel, enter the text: `Hello, world!`
 
 <img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_01/git_class_wrong_text.png" width="350"/>
 

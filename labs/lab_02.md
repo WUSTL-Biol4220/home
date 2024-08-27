@@ -1,7 +1,7 @@
 
 # Lab 02
 
-*Lab 02 GitHub Classroom link:* [https://classroom.github.com/a/vFiNOEUv](https://classroom.github.com/a/p3M3nBA3)
+*Lab 02 GitHub Classroom link:* https://classroom.github.com/a/NmFQlFLd
 
 In this lab, we'll familiarize ourselves with the Unix command line interface (CLI) and filesystem.
 
@@ -63,7 +63,7 @@ mlandis@biol4220-mlandis:~$
 ```
 No matter where you are on the filesystem, `cd ~` will always take you home.
 
-Now, let's create a file called `readme.txt` to explain the purpose of the `labs/` folder. To create this file, we'll combine multiple commands. First, we will use the text editing program, Nano, to create a new file called `readme.txt`. Run the command
+Now, let's create a file called `readme.txt` to explain the purpose of the `labs/` folder. To create this file, we'll combine multiple commands. First, we will use the text editing program, [Nano](https://www.nano-editor.org/), to create a new file called `readme.txt`. Run the command
 
 ```console
 mlandis@biol4220-mlandis:~$ nano readme.txt
@@ -84,6 +84,19 @@ Before exiting, Nano will ask if you would like to `Save modified buffer?`, whic
 <img src="https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_02/nano3.png" width="350"/>
 
 When Nano asks `File Name to Write`, press Enter to keep the default name `readme.txt`. Once saved, you will return to the command prompt.
+
+Nano has many special commands you can use to help with text editing. A few important commands from the [complete list](https://www.nano-editor.org/dist/latest/cheatsheet.html) are summarized here:
+
+- `Ctrl+S` : Save current file
+- `Ctrl+O` : Offer to write file ("Save as")
+- `Ctrl+K` : Cut current line into cutbuffer
+- `Ctrl+U` : Paste contents of cutbuffer
+- `Ctrl+6` : Set marker for highlighting
+- `Ctrl+\` : Find and replace (press `Ctrl+R` to disable replace)
+- `Alt+U` (`Esc` then `U` on Mac) : Undo last action
+- `Alt+E` (`Esc` then `E` on Mac) : Redo last undone action
+
+*Note: There are many terminal-based text editors, including Nano, vim (https://www.vim.org/), and emacs (https://www.gnu.org/software/emacs/). Nano is easier to use but less powerful, whereas vim and emacs are more powerful but have a much steeper learning curve. Use whichever editor you like best!*
 
 You can view the contents of one (or multiple) file(s) using the *concatenate* command, `cat`. Execute `cat` with `readme.txt` as an argument
 ```console

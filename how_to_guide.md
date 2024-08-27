@@ -20,7 +20,7 @@ VPN allows remote users with proper credentials to access private network resour
 
 Note that VPN will only work properly if you are off-campus. You may receive an error or notice unusual access to network resources if you attempt to connect to the VPN while on-campus.
 
-WUSTL undergraduates can install the necessary VPN software and connect to the VPN by following the directions listed here: https://techden.wustl.edu/items/vpn-danforth-students/
+WUSTL undergraduates can install the necessary VPN software and connect to the VPN by following the directions listed here: https://computing.artsci.wustl.edu/connect-network-through-vpn
 
 Once the software is installed, to connect to the WUSTL VPN
 - Open the Cisco AnyConnect VPN Client software
@@ -147,35 +147,35 @@ You can simplify how you access GitHub from your virtual machine by first genera
 
 To generate an SSH key, log into your virtual machine then type
 ```
-$ mkdir -p ~/.ssh && cd ~/.ssh && ssh-keygen
+$ mkdir -p ~/.ssh && cd ~/.ssh && ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 When asked, use the default location to save the key then enter and re-enter your key's password (a blank password will be accepted but is not ideal).
 ```
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/mlandis/.ssh/id_rsa):
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/mlandis/.ssh/id_ed25519):
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in /home/mlandis/.ssh/id_rsa
-Your public key has been saved in /home/mlandis/.ssh/id_rsa.pub
+Your identification has been saved in /home/mlandis/.ssh/id_ed25519
+Your public key has been saved in /home/mlandis/.ssh/id_ed25519.pub
 The key fingerprint is:
-SHA256:fJFkgx52TrtiW0YBtNxszpExskQMmLUvhMI0Cy+J42k mlandis@bio4220testvm
+SHA256:KmhWbu4XtoDVHK2UvBa3JadSlgS5R/KdYysSNoQ1L8g your_email@example.com
 The key's randomart image is:
-+---[RSA 3072]----+
-|. o  +o=*o*      |
-|.= ..o ++O+*     |
-|= * . oo+=Oo     |
-|.o.. . =.++o     |
-| E    . S.+.     |
-|.      .o.+      |
-|       . =       |
-|        .        |
-|                 |
++--[ED25519 256]--+
+|     ++*..       |
+|   ...XoO o      |
+|    E=.&.B .     |
+|    . %.= =      |
+|   o.o =S. o     |
+|  .+. +.. .      |
+|  + +o.+ .       |
+| o o .o          |
+|   .o.           |
 +----[SHA256]-----+
 ```
 Next, print and copy the contents of your new key file. **Important:** you must run this command on your virtual machine and copy the contents for your individual and unique `id_ed25519.pub` file. 
 ```
 $ cat id_ed25519.pub
-ssh-ed25519 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxx/xxxxxxxx mlandis@ip-172-30-14-77
+ssh-ed25519 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxx/xxxxxxxx your_email@example.com
 ```
 **Important:** This key grants special access to your computer. Do not share it publicly. (The key printed above is a toy example and is invalid.)
 
@@ -185,7 +185,7 @@ The next step is to register your new key with your GitHub account.
 - Choose "Settings" from the dropdown menu
 - Click "SSH and GPG keys" under "Access" on the menubar on the left
 - Click the green "New SSH key" button in the upper right
-- Enter the "Biol 4220 VM" as the Title, select "Authentication Key" (default) as the Key type, paste the copied contents of `id_rsa.pub` into the Key field, then click "Add SSH key".
+- Enter the "Biol 4220 VM" as the Title, select "Authentication Key" (default) as the Key type, paste the copied contents of `id_ed25519.pub` into the Key field, then click "Add SSH key".
 
 <img src="assets/how_to/github_ssh_key.png" width="450"/>
 
