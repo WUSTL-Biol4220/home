@@ -85,6 +85,8 @@ Before exiting, Nano will ask if you would like to `Save modified buffer?`, whic
 
 When Nano asks `File Name to Write`, press Enter to keep the default name `readme.txt`. Once saved, you will return to the command prompt.
 
+*Note: There are many terminal-based text editors, including Nano, vim, and emacs. Nano is easier to use but less powerful, whereas vim and emacs are more powerful but have a steeper learning curve.*
+
 You can view the contents of one (or multiple) file(s) using the *concatenate* command, `cat`. Execute `cat` with `readme.txt` as an argument
 ```console
 mlandis@biol4220-mlandis:~$ cat readme.txt
