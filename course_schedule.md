@@ -37,6 +37,5 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Wed, Nov 20 | Lecture 25 | Lab 25 | CSB 6.2.3 - 6.2.5 | Python: SciPy <br>**Course project: check-in**|
 |         | Wed, Nov 25 | -- | -- | -- | **No class: Thanksgiving** |
 |         | Wed, Nov 27 | Lecture 26 | Lab 26 | -- | Python: scikit-learn  |
-|         | Mon, Dec 02 | -- | -- | -- | **Course project: open lab**  |
-|         | Wed, Dec 04 | -- | -- | -- | **Course project: presentations 1 to 8**  |
-|         | Mon, Dec 09 | -- | -- | -- | **Course project: presentations 9 to 16**  |
+|         | Mon, Dec 02 | -- | -- | -- | **Course project: presentations 1 to 8**  |
+|         | Wed, Dec 04 | -- | -- | -- | **Course project: presentations 9 to 16**  |
