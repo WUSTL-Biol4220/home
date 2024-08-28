@@ -403,6 +403,6 @@ To complete Lab 02, you will upload an excerpt of `history` output to GitHub.
 
 From the command line on your VM, call the `history` command. Through your SSH terminal on your personal computer, highlight and copy the text that was printed to the screen. Then, paste the text into a text editor, then save that text to a file called `history.txt` on your personal computer.
 
-Accept your GitHub Classroom assignment for Lab 02 using the link at the top of these instructions. Navigate to your newly created Lab 02 repo, then add and save your local copy of `history.txt` to the repo, as you did with `output.txt` in Lab 01. Once you have saved (committed) the `history.txt` file to the Lab 02 repo, you should see a green checkmark at the top of your repo page.
+Accept your GitHub Classroom assignment for Lab 02 using the link at the top of these instructions. Navigate to your newly created Lab 02 repo, then add and save your local copy of `history.txt` to the repo, as you did with `output.txt` in Lab 01. Once you have saved (committed) the `history.txt` file to the Lab 02 repo, you should see that file listed in the repo page.
 
 Transferring information from your virtual machine to your person computer in this way may feel "hacky" to you -- because it is! Beginning with the next lab, we'll begin to use `git` to update and share files in a far more elegant manner.
