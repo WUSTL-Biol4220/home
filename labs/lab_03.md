@@ -474,7 +474,7 @@ Let's now return to the `main` branch on our VM using the `git checkout` command
 > Aciononyx_jubatus
 CCGTTCTTACAT
 ```
-Be sure to also update `README.md` to reflect the changes in our `data` directory. Commit your changes and push them to GitHub.
+Be sure to also update `README.md` to reflect the changes in our `data` directory. Notice that `README.md` does not contain the changes you ust added to the copy of the file on the `add_puma` branch. Commit your changes and push them to GitHub.
 
 The two branches, `main` and `add_puma`, contain new data additions that we would somehow like to reunify into a single branch. This can be done using the `git merge` command. To *merge* in `git`, you will merge another branch into the branch you are currently using. In our case, we will merge `add_puma` into `main`.
 
