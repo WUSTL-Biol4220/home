@@ -29,5 +29,5 @@ Instructor
 Teaching Assistant
 * Name: Raymond Castillo
 * Email: c.raymond@wustl.edu
-* Drop-in hours: TBD
-* Drop-in hours location: LLC Common Room
+* Drop-in hours: Thursdays 2pm - 3pm
+* Drop-in hours location: Life Sciences 106 (Same floor as the lecture room!)
