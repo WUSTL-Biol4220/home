@@ -31,11 +31,34 @@ A primary goal of this exericse is to better understand how strings are construc
 Let's consider a few examples for how string constructions translate into string literals. For this, we'll use the `echo` command, which accepts a string as input, and prints it to standard output (your screen).
 
 ```console
-> echo "Hello, world!"
+$ echo "Hello, world!"
 Hello, world!
 ```
 
 Define and print the string that produces the following output, using the `echo` command with the `-e` option. The `-e` option instructs `echo` to evaluate escaped characters for the string literal.
+
+Try using `echo -e` to print `"` to standard output. Don't forget to use the escape symbol.
+
+```console
+$ echo -e "\""
+"
+```
+
+Next, try printing `Hello, world!` with one word per line:
+```console
+$ echo -e "Hello,\nworld!"
+Hello,
+world!
+```
+
+
+Now try using `echo -e` to print `\` to standard output.
+```console
+$ echo -e "\"
+>
+```
+
+This `>` prompt appears when a command is still *open* -- i.e. the command has not been completed or *closed*. In this case, we have opened the string `"Special symbols are easy to escape! See?\n"` but the interprets the second `"` as the user wanting to declare a second string! When you see the `>` prompt, you either need to (1) close the call, in this case by providing the rest of the string and the terminal `"` delimiter, or (2) pressing `^C` (ctrl-C) to terminate the open call. It's likely that you'll need to terminate your command while attempting to produce the correct string literal
 
 Section 1 question: **What is the one-line text string that you would construct to produce the string literal output with `echo -e` below?**
 ```
