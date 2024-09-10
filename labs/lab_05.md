@@ -116,6 +116,7 @@ Zoutpansbergia caerulea
 When processing text in files, a key step is often to collect the set of target files. The `find` function searches a target directory, and all directories nested within it, for all filesystem objects. Providing a search pattern with the `-name` option directs `find` to only show those file paths that match.
 
 ```console
+~/lab-05/data $ cd ..
 $ find data -name "*0.txt"
 data/Saavedra2013/n10.txt
 data/Saavedra2013/n40.txt
