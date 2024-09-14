@@ -15,7 +15,7 @@ The autograder will re-run after you push the new changes.
 In general, we do not use the autograder to determine grades, so you do not need to update `expected_files.txt` to the corrected version to receive full credit for the grade.
 
 
-*Lab 06 GitHub Classroom link:* https://classroom.github.com/a/uFqrc1yv
+*Lab 06 GitHub Classroom link:* TBD
 
 Many complex tasks cannot be completed with a single shell command, or even with several commands joined together with pipes. *Shell scripts* are useful in situations that require multiple commands, access to intermediate variables, for-loops, if-statements, mathematical operations, and/or unusual procedures that cannot easily be done with existing programs. In this lab, we will learn how to run, annotate, modify, and create shell scripts.
 
