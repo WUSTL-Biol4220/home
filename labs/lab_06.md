@@ -1,20 +1,5 @@
 # Lab 06
 
-**NOTE:** The autograder reads the file named `expected_files.txt` that is bundled with this assignment to verify all files were correctly committed to your GitHub Classroom repo. The original version of `expected_files.txt` contains an error. You can replace that file with a corrected version of `expected_files.txt` using the following commands:
-```
-$ cd <path_to_your_lab_06_directory>
-$ rm expected_files.txt
-$ wget https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/lab_06/expected_files.txt
-$ git add expected_files.txt
-$ git commit -m 'fix expected files'
-$ git pull
-$ git push
-```
-The autograder will re-run after you push the new changes.
-
-In general, we do not use the autograder to determine grades, so you do not need to update `expected_files.txt` to the corrected version to receive full credit for the grade.
-
-
 *Lab 06 GitHub Classroom link:* TBD
 
 Many complex tasks cannot be completed with a single shell command, or even with several commands joined together with pipes. *Shell scripts* are useful in situations that require multiple commands, access to intermediate variables, for-loops, if-statements, mathematical operations, and/or unusual procedures that cannot easily be done with existing programs. In this lab, we will learn how to run, annotate, modify, and create shell scripts.
