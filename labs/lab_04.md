@@ -1,6 +1,6 @@
 # Lab 04
 
-*Lab 04 GitHub Classroom link:* [https://classroom.github.com/a/zDfFL4r_](https://classroom.github.com/a/zDfFL4r_)
+*Lab 04 GitHub Classroom link:* https://classroom.github.com/a/b1HKmjGt
 
 This lab will explore how to generate and manipulate character strings in various ways. The lab will also explore how to use the pipe (`|`) and redirect (`>`) commands to link together independent programs.
 
@@ -31,11 +31,33 @@ A primary goal of this exericse is to better understand how strings are construc
 Let's consider a few examples for how string constructions translate into string literals. For this, we'll use the `echo` command, which accepts a string as input, and prints it to standard output (your screen).
 
 ```console
-> echo "Hello, world!"
+$ echo "Hello, world!"
 Hello, world!
 ```
 
-Define and print the string that produces the following output, using the `echo` command with the `-e` option. The `-e` option instructs `echo` to evaluate escaped characters for the string literal.
+Next, try printing `Hello, world!` with one word per line:
+```console
+$ echo "Hello,\nworld!"
+Hello,\nworld!
+```
+
+Use `echo` with the `-e` option to evaluate escaped characters for their string literals.
+
+```console
+$ echo -e "Hello,\nworld!"
+Hello,
+world!
+```
+
+Now try using `echo -e` to print `\` to standard output.
+```console
+$ echo -e "\"
+>
+```
+
+This `>` prompt appears when a command is still *open* -- i.e. the command has not been completed or *closed*. In this case, we have opened the string with `"` but the second `"` that usually terminates the string has been escaped as `\"`!
+
+When you see the `>` prompt, you either need to (1) close the call, in this case by providing the rest of the string and the terminal `"` delimiter, or (2) pressing `^C` (ctrl-C) to terminate the open call. It's likely that you'll need to terminate your command while attempting to produce the correct string literal
 
 Section 1 question: **What is the one-line text string that you would construct to produce the string literal output with `echo -e` below?**
 ```
@@ -53,12 +75,6 @@ $ echo -e "Special symbols are easy to escape! See?\n'"
 Special symbols are easy to escape! See?
 '
 ```
-When experimenting with this exercise, you may see an unusual prompt that looks like this
-```console
-$ echo -e "Special symbols are easy to escape! See?\n""
->
-```
-This `>` prompt appears when a system call is still *open* -- i.e. that call has not been completed or *closed*. In this case, we have opened the string `"Special symbols are easy to escape! See?\n"` but the interprets the second `"` as the user wanting to declare a second string! When you see the `>` prompt, you either need to (1) close the call, in this case by providing the rest of the string and the terminal `"` delimiter, or (2) pressing `^C` (ctrl-C) to terminate the open call. It's likely that you'll need to terminate your command while attempting to produce the correct string literal
 
 Save the command you used to produce the requested output into a file titled `string_literal.txt`. For example, that file might contain the content
 ```

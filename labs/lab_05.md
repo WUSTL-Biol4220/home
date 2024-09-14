@@ -1,6 +1,6 @@
 # Lab 05
 
-*Lab 05 GitHub Classroom link:* https://classroom.github.com/a/Y_gJx2_h
+*Lab 05 GitHub Classroom link:* https://classroom.github.com/a/H__Mo4cb
 
 This lab will study how to process a variety of text files. 
 
@@ -116,6 +116,7 @@ Zoutpansbergia caerulea
 When processing text in files, a key step is often to collect the set of target files. The `find` function searches a target directory, and all directories nested within it, for all filesystem objects. Providing a search pattern with the `-name` option directs `find` to only show those file paths that match.
 
 ```console
+~/lab-05/data $ cd ..
 $ find data -name "*0.txt"
 data/Saavedra2013/n10.txt
 data/Saavedra2013/n40.txt
@@ -129,7 +130,7 @@ data/Saavedra2013/n30.txt
 
 Bioinformatics projects tend to rely on a variety of pipeline commands, developed by different researchers to achieve different goals. In this section of the lab, you'll be provided with an assortment of pipeline commands. Your job is to interpret what those pipeline commands do, how to modify the pipeline to fulfill a different objective, and/or how to select a pipeline to perform a desired task.
 
-For each of the three problems below, you will need to produce (1) a file that modifies the behavior of the pipeline, (2) a file containing the output of the modified pipeline, and (3) a file that describes the steps of the modified pipeline, line-by-line. For each assignment, store these three files in the directory `part_2/problem_N`, where `N` corresponds to the problem in Part 2 that you've solved.
+For each of the **three problems below**, you will need to produce (1) a file that modifies the behavior of the pipeline, (2) a file containing the output of the modified pipeline, and (3) a file that describes the steps of the modified pipeline, line-by-line. For each assignment, store these three files in the directory `part_2/problem_N`, where `N` corresponds to the problem in Part 2 that you've solved.
 
 For example, an exercise might provide you with the pipeline commands
 ```
@@ -154,7 +155,7 @@ The *description file* (`description.txt`) will explain in simple language what 
 Finally, move the three files for each exercise in Step 2 into the directory `step_2/problem_N`, where `N` corresponds to exercises 1, 2, and 3.
 
 
-**Problem 1.** Modify the following command to first sort the data table by the `AdultBodyMass_g` column before sorting by `Family`. The output should all columns extracted using the original pipeline in addition to the new column `AdultBodyMass_g` column. (Hint: the command `sort -k4 -k2` would first sort by values in field 4, then subsort those results by values in field 2.)
+**Problem 1.** Modify the following command to first sort the data table by the `AdultBodyMass_g` column before sorting by `Family`. The output should contain all columns extracted using the original pipeline in addition to the new column `AdultBodyMass_g` column. (Hint: the command `sort -k4 -k2` would first sort by values in field 4, then subsort those results by values in field 2.)
 ```
 cat data/Pacifici2013_data.csv | cut -d ";" -f2,3,4 | sort -k2 -t ";" | uniq | cut -d ";" -f1,3 > output.txt
 ```
