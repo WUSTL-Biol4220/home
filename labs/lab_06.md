@@ -1,6 +1,6 @@
 # Lab 06
 
-*Lab 06 GitHub Classroom link:* TBD
+*Lab 06 GitHub Classroom link:* https://classroom.github.com/a/LltY-WDN
 
 Many complex tasks cannot be completed with a single shell command, or even with several commands joined together with pipes. *Shell scripts* are useful in situations that require multiple commands, access to intermediate variables, for-loops, if-statements, mathematical operations, and/or unusual procedures that cannot easily be done with existing programs. In this lab, we will learn how to run, annotate, modify, and create shell scripts.
 
@@ -66,7 +66,6 @@ The Part 3 problems will ask you to write a script to process a dataset. When wr
 ## Submit assignment
 
 To submit the assignment, you will need to commit and push
-1. a total of six `run.sh` and six `output.txt` files for the problems listed across the three parts. These files should be located at `part_X/problem_Y/run.sh` and `part_X/problem_Y/output.txt` for Part X and Problem Y.
+1. a total of six `run.sh` and six `output.txt` files for the problems listed across the three parts. These files should be located at `part_X/problem_Y/run.sh` and `part_X/problem_Y/output.txt` for Part X and Problem Y. *Note: Part 3, Problem 1 is an exception to this, and it does not generate any standard output. You can create an empty file for `part_3/problem_1/output.txt` or leave it absent.*
 2. the output from `history > history.txt`
 
-*Note: Part 3, Problem 1 does not generate any standard output. To satisfy the GitHub Classroom autograder, create an empty file for `part_3/problem_1/output.txt`.*
