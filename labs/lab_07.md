@@ -133,6 +133,15 @@ Review the top 5 BLAST hits in the filtered results (use default sorting). Creat
 
 The EDirect suite contains many useful Unix command-line tools, some of which we'll explore here. Visit the EDirect web page for the [EDirect Unix utilities](https://www.ncbi.nlm.nih.gov/books/NBK179288/) to learn more about the general uses for the tool suite. The [EDirect Examples](https://www.ncbi.nlm.nih.gov/books/NBK179288/#_chapter6_Examples_) section contains some especially useful practical techniques. EDirect commands do not have man-pages (`man`), but you can learn more about each command by calling it with the `--help` flag.
 
+To install the EDirect suite tools on your virtual machine, use the following command:
+```console
+$ sudo apt-get install ncbi-entrez-direct
+[sudo] password for mlandis:  <enter your password>
+... installation dialog ...
+```
+
+You should now be able to use the EDirect tools.
+
 ```console
 $ esearch --help | head
 esearch 13.9
