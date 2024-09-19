@@ -94,23 +94,9 @@ mhc class i antigen b*46
 mhc class ii antigen drb1*1
 ```
 
-**Problem 3.** Write a script called `problem3.sh` that searches *Origin of Species* for certain classes of words. Download the plain text file for *Origin of Species* from the URL https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt, and save the file as `oos.txt`. You can do this either on your VM using the `wget` command or by uploading the file to your GitHub repository and pulling those changes into the repo on your VM.
+**Problem 3.**
 
-Your script will process `oos.txt` and print a sorted list of the five most common words that begin with a "c" and end with a "d", ignoring upper/lower case. Hints: Use man to find out what the '-c' flag does for the tr command. Can you use character ranges to convert uppercase to lowercase or vice versa?
-Expected results:
-```
-271 could
-126 called
-116 crossed
-73 changed
-60 considered
-```
-
-One strategy for solving this problem is to first extract the correct number of matches for a word like `considered`. After that, generalize your solution for other words using regular expressions.
-
-**Problem 4.**
-
-Write a script called `problem4.sh` to process the file `bee_list.txt`, which contains information regarding bee biodiversity. `bee_list.txt` is a tab-delimited file reporting nearly 20,000 bee species, a list of papers for each species initial description, and unique identifiers for each bee species in the Taxonomic Information System. Your script should print the `N` authors in `bee_list.txt` that have the most publications. (Assume that each occurrence to the name [e.g.] "Eversmann" refers to the same person.) Also, the script should report the `N` years with the highest numbers of publications. The value of `N` is a user-provided argument. When printing the "top" results, also print their respective counts.
+Write a script called `problem3.sh` to process the file `bee_list.txt`, which contains information regarding bee biodiversity. `bee_list.txt` is a tab-delimited file reporting nearly 20,000 bee species, a list of papers for each species initial description, and unique identifiers for each bee species in the Taxonomic Information System. Your script should print the `N` authors in `bee_list.txt` that have the most publications. (Assume that each occurrence to the name [e.g.] "Eversmann" refers to the same person.) Also, the script should report the `N` years with the highest numbers of publications. The value of `N` is a user-provided argument. When printing the "top" results, also print their respective counts.
 
 Expected results:
 ```
@@ -130,6 +116,22 @@ Top 5 years of species descriptions:
 ```
 
 Note, to use `cut` against the `\t` delimiter, use the option `cut -d $'\t'`. The `$'...'` format is a special escape string that allows the tab-character (and other escaped characters, like `\n`) be recognized by its literal value (`\t`).
+
+**Problem 4.** Write a script called `problem4.sh` that searches *Origin of Species* for certain classes of words. Download the plain text file for *Origin of Species* from the URL https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt, and save the file as `oos.txt`. You can do this either on your VM using the `wget` command or by uploading the file to your GitHub repository and pulling those changes into the repo on your VM.
+
+Your script will process `oos.txt` and print a sorted list of the five most common words that begin with a "c" and end with a "d", ignoring upper/lower case. Hints: Use man to find out what the '-c' flag does for the tr command. Can you use character ranges to convert uppercase to lowercase or vice versa?
+Expected results:
+```
+271 could
+126 called
+116 crossed
+73 changed
+60 considered
+```
+
+One strategy for solving this problem is to first extract the correct number of matches for a word like `considered`. After that, generalize your solution for other words using regular expressions.
+
+*Note: This problem is a little harder than the others, and takes some experimentation to get a result that is exactly correct.*
 
 ---
 
