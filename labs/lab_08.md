@@ -72,8 +72,8 @@ $ ls -lart prank/bin/prank
 Finally, download and unzip the software for MAFFT
 ```console
 $ cd ~/apps
-$ wget https://mafft.cbrc.jp/alignment/software/mafft-7.471-linux.tgz
-$ tar zxvf mafft-7.471-linux.tgz
+$ wget https://mafft.cbrc.jp/alignment/software/mafft-7.526-linux.tgz
+$ tar zxvf mafft-7.526-linux.tgz
 $ ls -lart mafft-linux64/mafft.bat
 -rwxr-x--- 1 mlandis mlandis 284 Jul 23  2018 mafft-linux64/mafft.bat
 ```
@@ -90,7 +90,7 @@ $ echo $PATH
 Let's create links for `muscle` and `prank`
 ```console
 $ cd ~/.local/bin
-$ ln -s ~/apps/muscle/muscle3.8.31_i86linux64 muscle
+$ ln -s ~/apps/muscle/muscle-linux-x86.v5.2  muscle
 $ ln -s ~/apps/prank/bin/prank prank
 ```
 
@@ -106,7 +106,7 @@ When listing files, symbolic links are identified as `link_name -> actual_link_t
 ```console
 $ cd ~/.local/bin
 $ ls -lart muscle
-lrwxrwxrwx 1 mlandis mlandis 49 Oct  3 10:59 muscle -> /home/mlandis/apps/muscle/muscle3.8.31_i86linux64
+lrwxrwxrwx 1 mlandis mlandis 49 Oct  3 10:59 muscle -> /home/mlandis/apps/muscle/muscle-linux-x86.v5.2
 $ ls -lart prank
 lrwxrwxrwx 1 mlandis mlandis 35 Oct  2 22:02 prank -> /home/mlandis/apps/prank/bin/prank
 $ ls -lart mafft
