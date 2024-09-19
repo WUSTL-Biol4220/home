@@ -113,10 +113,16 @@ $ ls -lart mafft
 -rwxr-x--- 1 mlandis mlandis 284 Oct  3 11:30 mafft
 ```
 
-Finally, we will install the program [alv](https://github.com/arvestad/alv) to view sequence alignments in the command line. `alv` is written in Python, and is easily installed using the Python package installer, `pip`
+Finally, we will install the program [alv](https://github.com/arvestad/alv) to view sequence alignments in the command line. `alv` is written in Python, and is easily installed using `pipx`, a tool that manages executables from Python packages. First, we need to install `pipx`:
+
+```console
+$ sudo brew install pipx
 ```
-$ pip install --upgrade pip
-$ pip install alv
+
+Then use `pipx` to install `alv`
+
+```
+$ pipx install alv
 ```
 
 The program `alan` is another command line tool for viewing multiple sequence alignments. `alan` is written purely with Unix shell commands, meaning we only need to download the shell script and place it in a `PATH` directory to use it anywhere in the filesystem.
