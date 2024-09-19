@@ -136,6 +136,8 @@ $ cd ~/.local/bin
 $ ln -s ~/apps/alan/alan alan
 ```
 
+Note that `alan` is a script written entirely in shell! You can call `nano ~/apps/alan/alan` to review, and even modify, the innerworkings of the tool.
+
 ---
 
 ## 2. Using alignment programs
