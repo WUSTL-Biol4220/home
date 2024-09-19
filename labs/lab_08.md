@@ -39,20 +39,27 @@ Now, we can begin installing our alignment software. First, we'll install MUSCLE
 ```console
 $ mkdir -p ~/apps/muscle
 $ cd ~/apps/muscle
-$ wget https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux64.tar.gz
+$ wget https://github.com/rcedgar/muscle/archive/refs/tags/v5.2.tar.gz
 ```
 
-Files with the `.tar.gz` extension are archived into a single file (`.tar`) and zipped (`.gz`) as what's colloquially known as a *tarball*. We can unzip and decompress this tarball with the command `tar zxcf <tarball_file>`. In order, the options `zxvf` signify: un**z**ip the file, e**x**tract the files from the archive, print all filenames **v**erbosely, and that the argument is the input **f**ilename.
+Notice that the MUSCLE program does not come with permission to execute:
 
 ```console
-$ tar zxvf muscle3.8.31_i86linux64.tar.gz
-$ ls -lart muscle3.8.31_i86linux64
--rwxr-xr-x 1 mlandis mlandis 1058280 Oct  2 20:17 muscle3.8.31_i86linux64
+$ # permission bitset indicates file is not executable: -rw-rw-r--
+$ ls -lart muscle-linux-x86.v5.2
+-rw-rw-r-- 1 mlandis mlandis 3443680 Oct  2 20:17 muscle-linux-x86.v5.2
+```
+We use the command `chmod +x` to add `x` to the permission bitset:
+
+```console
+$ # modify file permissions
+$ chmod +x muscle-linux-x86.v5.2
+$ # new permission bitset includes `x`: -rwxr-xr-x
+$ ls -lart muscle-linux-x86.v5.2
+-rwxr-xr-x 1 mlandis mlandis 1058280 Oct  2 20:17 muscle-linux-x86.v5.2
 ```
 
-Notice that the unzipped and extracted MUSCLE program permissions already allow it to be executed (`x`).
-
-Next, we'll download the PRANK tarball, which contains the executable binaries for both the PRANK program itself, and for the MAFFT program. These programs can be installed and made accesible following a procedure that's similar to how we installed MUSCLE
+Next, we'll download the PRANK tarball, which contains the executable binaries for both the PRANK program itself, and for the MAFFT program. Files with a `.tar.gz` extension that are archived into a single file (`.tar`) and zipped (`.gz`) as what's colloquially known as a *tarball*. We can unzip and dearchive this tarball with the command `tar zxcf <tarball_file>`. In order, the options `zxvf` signify: un**z**ip the file, e**x**tract the files from the archive, print all filenames **v**erbosely, and that the argument is the input **f**ilename.
 
 ```console
 $ cd ~/apps
