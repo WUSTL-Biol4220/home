@@ -1,6 +1,6 @@
 # Lab 08
 
-*Lab 08 GitHub Classroom link:* https://classroom.github.com/a/ObAX8nPT
+*Lab 08 GitHub Classroom link:* https://classroom.github.com/a/M5O0186P
 
 This lab will explore three different programs that employ multiple sequence alignment algorithm. Two are [MUSCLE](https://www.drive5.com/muscle/) and  [MAFFT](https://mafft.cbrc.jp/alignment/software/), which are progressive alignment methods. The other is [PRANK](http://wasabiapp.org/software/prank/), a phylogeny-aware alignment method. In this lab, you will install the two programs on your VM, experiment with the programs by running the program under various settings through the command line, then write a script to align a sequence dataset under a set of user-provided program options.
 
@@ -39,20 +39,27 @@ Now, we can begin installing our alignment software. First, we'll install MUSCLE
 ```console
 $ mkdir -p ~/apps/muscle
 $ cd ~/apps/muscle
-$ wget https://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux64.tar.gz
+$ wget https://github.com/rcedgar/muscle/archive/refs/tags/v5.2.tar.gz
 ```
 
-Files with the `.tar.gz` extension are archived into a single file (`.tar`) and zipped (`.gz`) as what's colloquially known as a *tarball*. We can unzip and decompress this tarball with the command `tar zxcf <tarball_file>`. In order, the options `zxvf` signify: un**z**ip the file, e**x**tract the files from the archive, print all filenames **v**erbosely, and that the argument is the input **f**ilename.
+Notice that the MUSCLE program does not come with permission to execute:
 
 ```console
-$ tar zxvf muscle3.8.31_i86linux64.tar.gz
-$ ls -lart muscle3.8.31_i86linux64
--rwxr-xr-x 1 mlandis mlandis 1058280 Oct  2 20:17 muscle3.8.31_i86linux64
+$ # permission bitset indicates file is not executable: -rw-rw-r--
+$ ls -lart muscle-linux-x86.v5.2
+-rw-rw-r-- 1 mlandis mlandis 3443680 Oct  2 20:17 muscle-linux-x86.v5.2
+```
+We use the command `chmod +x` to add `x` to the permission bitset:
+
+```console
+$ # modify file permissions
+$ chmod +x muscle-linux-x86.v5.2
+$ # new permission bitset includes `x`: -rwxr-xr-x
+$ ls -lart muscle-linux-x86.v5.2
+-rwxr-xr-x 1 mlandis mlandis 1058280 Oct  2 20:17 muscle-linux-x86.v5.2
 ```
 
-Notice that the unzipped and extracted MUSCLE program permissions already allow it to be executed (`x`).
-
-Next, we'll download the PRANK tarball, which contains the executable binaries for both the PRANK program itself, and for the MAFFT program. These programs can be installed and made accesible following a procedure that's similar to how we installed MUSCLE
+Next, we'll download the PRANK tarball, which contains the executable binaries for both the PRANK program itself, and for the MAFFT program. Files with a `.tar.gz` extension that are archived into a single file (`.tar`) and zipped (`.gz`) as what's colloquially known as a *tarball*. We can unzip and dearchive this tarball with the command `tar zxcf <tarball_file>`. In order, the options `zxvf` signify: un**z**ip the file, e**x**tract the files from the archive, print all filenames **v**erbosely, and that the argument is the input **f**ilename.
 
 ```console
 $ cd ~/apps
@@ -65,8 +72,8 @@ $ ls -lart prank/bin/prank
 Finally, download and unzip the software for MAFFT
 ```console
 $ cd ~/apps
-$ wget https://mafft.cbrc.jp/alignment/software/mafft-7.471-linux.tgz
-$ tar zxvf mafft-7.471-linux.tgz
+$ wget https://mafft.cbrc.jp/alignment/software/mafft-7.526-linux.tgz
+$ tar zxvf mafft-7.526-linux.tgz
 $ ls -lart mafft-linux64/mafft.bat
 -rwxr-x--- 1 mlandis mlandis 284 Jul 23  2018 mafft-linux64/mafft.bat
 ```
@@ -83,7 +90,7 @@ $ echo $PATH
 Let's create links for `muscle` and `prank`
 ```console
 $ cd ~/.local/bin
-$ ln -s ~/apps/muscle/muscle3.8.31_i86linux64 muscle
+$ ln -s ~/apps/muscle/muscle-linux-x86.v5.2  muscle
 $ ln -s ~/apps/prank/bin/prank prank
 ```
 
@@ -99,17 +106,23 @@ When listing files, symbolic links are identified as `link_name -> actual_link_t
 ```console
 $ cd ~/.local/bin
 $ ls -lart muscle
-lrwxrwxrwx 1 mlandis mlandis 49 Oct  3 10:59 muscle -> /home/mlandis/apps/muscle/muscle3.8.31_i86linux64
+lrwxrwxrwx 1 mlandis mlandis 49 Oct  3 10:59 muscle -> /home/mlandis/apps/muscle/muscle-linux-x86.v5.2
 $ ls -lart prank
 lrwxrwxrwx 1 mlandis mlandis 35 Oct  2 22:02 prank -> /home/mlandis/apps/prank/bin/prank
 $ ls -lart mafft
 -rwxr-x--- 1 mlandis mlandis 284 Oct  3 11:30 mafft
 ```
 
-Finally, we will install the program [alv](https://github.com/arvestad/alv) to view sequence alignments in the command line. `alv` is written in Python, and is easily installed using the Python package installer, `pip`
+Finally, we will install the program [alv](https://github.com/arvestad/alv) to view sequence alignments in the command line. `alv` is written in Python, and is easily installed using `pipx`, a tool that manages executables from Python packages. First, we need to install `pipx`:
+
+```console
+$ sudo brew install pipx
 ```
-$ pip install --upgrade pip
-$ pip install alv
+
+Then use `pipx` to install `alv`
+
+```
+$ pipx install alv
 ```
 
 The program `alan` is another command line tool for viewing multiple sequence alignments. `alan` is written purely with Unix shell commands, meaning we only need to download the shell script and place it in a `PATH` directory to use it anywhere in the filesystem.
@@ -122,6 +135,8 @@ $ chmod +x alan
 $ cd ~/.local/bin
 $ ln -s ~/apps/alan/alan alan
 ```
+
+Note that `alan` is a script written entirely in shell! You can call `nano ~/apps/alan/alan` to review, and even modify, the innerworkings of the tool.
 
 ---
 

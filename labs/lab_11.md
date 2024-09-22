@@ -1,6 +1,6 @@
 # Lab 11
 
-*Lab 11 GitHub Classroom link:* https://classroom.github.com/a/X-5cj1cz
+*Lab 11 GitHub Classroom link:* https://classroom.github.com/a/qnMhTqH5
 
 In this lab, we will learn how to estimate phylogenies from molecular sequence data using a variety of inference methods.
 

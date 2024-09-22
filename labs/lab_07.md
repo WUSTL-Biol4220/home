@@ -57,7 +57,7 @@ Do not click BLAST yet. Instead, expand the `+ Algorithm parameters` option at t
 
 These options should *worsen* our search. Now click BLAST. The query will take longer (60-120 seconds).
 
-Under the "Filter Results" box in the upper right, enter 50 to 60 in the "Percent Identity" option. Click Filter
+Under the "Filter Results" box in the upper right, enter 85 to 90 in the "Percent Identity" option. Click Filter
 
 Review the top 20 BLAST hits in the filtered results (use default sorting). Create a text file called `part_1_problem_2_answers.txt` that contains answers to these questions:
 1. What are the highest (good) and lowest (bad) Total Score values do you see?
