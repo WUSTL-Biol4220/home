@@ -20,9 +20,9 @@ The 🐙 marker tells us how we're progressing through the semester.
 |  🐙      | Mon, Sep 23 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_08.pdf">Lecture 08</a> | [Lab 08](labs/lab_08.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/loytynoja_goldman_prank_2008_science.pdf">PRANK paper</a> | Biology: molecular sequence alignment |
 |         | Wed, Sep 25 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_09.pdf">Lecture 09</a> | [Lab 09](labs/lab_09.md) | CSB 5.1 - 5.9 | Unix: regular expressions, regex match |
 |         | Mon, Sep 30 | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace, group capture, sed |
-|         | Wed, Oct 02 | Lecture 11 | Lab 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
-|         | Mon, Oct 07 | Lecture 12 | Lab 12 | -- | Sequencing technologies<br>RIS tutorial<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
-|         | Wed, Oct 09 | -- | -- | -- | **No class: Fall Break** |
+|         | Wed, Oct 02 | Lecture 11 | Lab 11 | -- | Sequencing technologies<br>RIS tutorial<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
+|         | Mon, Oct 07 | -- | -- | -- | **No class: Fall Break** |
+|         | Wed, Oct 09 | Lecture 12 | Lab 12 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Mon, Oct 14 | Lecture 13 | Lab 13 | -- | Biology: genome assembly |
 |         | Wed, Oct 16 | Lecture 14 | Lab 14 | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: variables, operators,<br>if-statements, functions  |
 |         | Mon, Oct 21 | Lecture 15 | Lab 15 | CSB 3.4, 3.6.2                | Python: containers, loops, strings,<br>script arguments |
