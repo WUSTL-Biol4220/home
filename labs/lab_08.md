@@ -39,7 +39,7 @@ Now, we can begin installing our alignment software. First, we'll install MUSCLE
 ```console
 $ mkdir -p ~/apps/muscle
 $ cd ~/apps/muscle
-$ wget https://github.com/rcedgar/muscle/archive/refs/tags/v5.2.tar.gz
+$ wget https://github.com/rcedgar/muscle/releases/download/v5.2/muscle-linux-x86.v5.2
 ```
 
 Notice that the MUSCLE program does not come with permission to execute:
