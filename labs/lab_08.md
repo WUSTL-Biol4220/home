@@ -138,6 +138,12 @@ $ ln -s ~/apps/alan/alan alan
 
 Note that `alan` is a script written entirely in shell! You can call `nano ~/apps/alan/alan` to review, and even modify, the innerworkings of the tool.
 
+Return to your lab assignment directory once you have configured your user profile to use these new programs:
+```console
+$ # go to your clone lab directory
+$ cd ~/labs/lab-08-mlandis
+```
+
 ---
 
 ## 2. Using alignment programs
