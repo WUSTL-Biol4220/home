@@ -149,19 +149,23 @@ Three sets of sequences are provided for this lab. We will focus on sequences th
 To begin, we will align `adh.fasta` using MUSCLE. MUSCLE supports fairly few options, but it is fast.
 
 ```
-$ muscle -in adh.fasta  -out adh.muscle_it1.fasta -maxiters 1
+$ muscle -align adh.fasta -output adh_muscle_it1.fasta -replicates 1
 
-MUSCLE v3.8.31 by Robert C. Edgar
+muscle 5.2.linux64 [00ece7c]  936Mb RAM, 2 cores
+Built Aug 22 2024 16:13:48
+(C) Copyright 2004-2021 Robert C. Edgar.
+https://drive5.com
 
-http://www.drive5.com/muscle
-This software is donated to the public domain.
-Please cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.
+[align adh.fasta]
+Input: 11 seqs, avg length 1103, max 1173, min 981
 
-adh 11 seqs, max length 1173, avg  length 1102
-00:00:00    10 MB(-2%)  Iter   1  100.00%  K-mer dist pass 1
-00:00:00    10 MB(-2%)  Iter   1  100.00%  K-mer dist pass 2
-00:00:01    22 MB(-5%)  Iter   1  100.00%  Align node
-00:00:01    22 MB(-5%)  Iter   1  100.00%  Root alignment
+00:00 4.5Mb   100.0% Derep 11 uniques, 0 dupes
+00:00 4.5Mb  CPU has 2 cores, running 2 threads
+00:08 257Mb   100.0% Calc posteriors
+00:08 90Mb    100.0% UPGMA5
+00:09 90Mb    100.0% Consistency (1/2)
+00:10 90Mb    100.0% Consistency (2/2)
+00:10 93Mb    100.0% Refining
 ```
 
 The entire alignment can be viewed in `alv` with the command
