@@ -179,7 +179,7 @@ Alternatively, you can call use `alan` to view the alignment as nucleotides (`-n
 $ alan -n adh.muscle_it1.fasta
 ```
 
-Increasing the number of iterations will allow MUSCLE to find a better global fit for the alignment score. Run MUSCLE again, this time for a maximum of 2 iterations. Then try 3, 4, 5, and 6 iterations. Be sure to change the output file name so the earlier result is not overwritten.
+Increasing the number of replicates will allow MUSCLE to find a better global fit for the alignment score. Run MUSCLE again, this time for a maximum of 2 replicates. Then try 3, 4, 5, and 6 iterations. Be sure to change the output file name so the earlier result is not overwritten.
 
 How would you construct a pipeline with `cat`, `sort`, `uniq`, `grep`, and `wc` to count how many lines differ between two fasta alignment files?
 
