@@ -116,7 +116,7 @@ $ ls -lart mafft
 Finally, we will install the program [alv](https://github.com/arvestad/alv) to view sequence alignments in the command line. `alv` is written in Python, and is easily installed using `pipx`, a tool that manages executables from Python packages. First, we need to install `pipx`:
 
 ```console
-$ sudo brew install pipx
+$ sudo apt-get install pipx
 ```
 
 Then use `pipx` to install `alv`
