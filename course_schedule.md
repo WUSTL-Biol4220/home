@@ -17,16 +17,16 @@ The 🐙 marker tells us how we're progressing through the semester.
 |          | Wed, Sep 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_05.pdf">Lecture 05</a> | [Lab 05](labs/lab_05.md) | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
 |          | Mon, Sep 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_06.pdf">Lecture 06</a> | [Lab 06](labs/lab_06.md) | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
 |          | Wed, Sep 18 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_07.pdf">Lecture 07</a> | [Lab 07](labs/lab_07.md) | <a href="https://www.nature.com/scitable/topicpage/basic-local-alignment-search-tool-blast-29096/">BLAST overview</a><br><a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/">EDirect tools</a><br>(optional) | Biology: GenBank, BLAST |
-|  🐙      | Mon, Sep 23 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_08.pdf">Lecture 08</a> | [Lab 08](labs/lab_08.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/loytynoja_goldman_prank_2008_science.pdf">PRANK paper</a> | Biology: molecular sequence alignment |
-|         | Wed, Sep 25 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_09.pdf">Lecture 09</a> | [Lab 09](labs/lab_09.md) | CSB 5.1 - 5.9 | Unix: regular expressions, regex match |
-|         | Mon, Sep 30 | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace, group capture, sed |
-|         | Wed, Oct 02 | Lecture 11 | Lab 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
-|         | Mon, Oct 07 | Lecture 12 | Lab 12 | -- | Sequencing technologies<br>RIS tutorial<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
-|         | Wed, Oct 09 | -- | -- | -- | **No class: Fall Break** |
-|         | Mon, Oct 14 | Lecture 13 | Lab 13 | -- | Biology: genome assembly |
+|         | Mon, Sep 23 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_08.pdf">Lecture 08</a> | [Lab 08](labs/lab_08.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/loytynoja_goldman_prank_2008_science.pdf">PRANK paper</a> | Biology: molecular sequence alignment |
+|  🐙     | Wed, Sep 25 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_09.pdf">Lecture 09</a> | [Lab 09](labs/lab_09.md) | CSB 5.1 - 5.9 | Unix: regular expressions, regex match |
+|         | Mon, Sep 30 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_10.pdf">Lecture 10</a> | [Lab 10](labs/lab_10.md) | -- | Unix: more regex, find-replace, group capture, sed |
+|         | Wed, Oct 02 | Lecture 11 | Lab 11 | -- | Sequencing technologies<br>Computing on server clusters<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
+|         | Mon, Oct 07 | -- | -- | -- | **No class: Fall Break** |
+|         | Wed, Oct 09 | Lecture 12 | Lab 12 | -- | Biology: genome assembly |
+|         | Mon, Oct 14 | Lecture 13 | Lab 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Wed, Oct 16 | Lecture 14 | Lab 14 | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: variables, operators,<br>if-statements, functions  |
-|         | Mon, Oct 21 | Lecture 15 | Lab 15 | CSB 3.4, 3.6.2                | Python: containers, loops, strings,<br>script arguments |
-|         | Wed, Oct 23 | Lecture 16 | Lab 16 | CSB 4.2.2 - 4.4               | Python: file handling, modules, system calls,<br>more with containers<br>**Course project: approvals** |
+|         | Mon, Oct 21 | Lecture 15 | Lab 15 | CSB 3.4, 3.6.2                | Python: containers, loops, strings,<br>script arguments<br>**Course project: approvals** |
+|         | Wed, Oct 23 | Lecture 16 | Lab 16 | CSB 4.2.2 - 4.4               | Python: file handling, modules, system calls,<br>more with containers |
 |         | Mon, Oct 28 | Lecture 17 | Lab 17 | -- | Biology: sequence stats |
 |         | Wed, Oct 30 | Lecture 18 | Lab 18 | CSB 6.4 | Python: Biopython |
 |         | Mon, Nov 04 | Lecture 19 | Lab 19 | -- | Biology: variant calling |

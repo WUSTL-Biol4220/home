@@ -2,7 +2,7 @@
 
 *Lab 08 GitHub Classroom link:* https://classroom.github.com/a/M5O0186P
 
-This lab will explore three different programs that employ multiple sequence alignment algorithm. Two are [MUSCLE](https://www.drive5.com/muscle/) and  [MAFFT](https://mafft.cbrc.jp/alignment/software/), which are progressive alignment methods. The other is [PRANK](http://wasabiapp.org/software/prank/), a phylogeny-aware alignment method. In this lab, you will install the two programs on your VM, experiment with the programs by running the program under various settings through the command line, then write a script to align a sequence dataset under a set of user-provided program options.
+This lab will explore three different programs that employ multiple sequence alignment algorithm. Two are [MUSCLE](https://www.drive5.com/muscle/) and  [MAFFT](https://mafft.cbrc.jp/alignment/software/), which are progressive alignment methods. The third is [PRANK](http://wasabiapp.org/software/prank/), a phylogeny-aware alignment method. In this lab, you will install the two programs on your VM, experiment with the programs by running the program under various settings through the command line, then write a script to align a sequence dataset under a set of user-provided program options.
 
 1. Program installation
 2. Using alignment programs
@@ -39,7 +39,7 @@ Now, we can begin installing our alignment software. First, we'll install MUSCLE
 ```console
 $ mkdir -p ~/apps/muscle
 $ cd ~/apps/muscle
-$ wget https://github.com/rcedgar/muscle/archive/refs/tags/v5.2.tar.gz
+$ wget https://github.com/rcedgar/muscle/releases/download/v5.2/muscle-linux-x86.v5.2
 ```
 
 Notice that the MUSCLE program does not come with permission to execute:
@@ -116,7 +116,7 @@ $ ls -lart mafft
 Finally, we will install the program [alv](https://github.com/arvestad/alv) to view sequence alignments in the command line. `alv` is written in Python, and is easily installed using `pipx`, a tool that manages executables from Python packages. First, we need to install `pipx`:
 
 ```console
-$ sudo brew install pipx
+$ sudo apt-get install pipx
 ```
 
 Then use `pipx` to install `alv`
@@ -138,6 +138,12 @@ $ ln -s ~/apps/alan/alan alan
 
 Note that `alan` is a script written entirely in shell! You can call `nano ~/apps/alan/alan` to review, and even modify, the innerworkings of the tool.
 
+Return to your lab assignment directory once you have configured your user profile to use these new programs:
+```console
+$ # go to your clone lab directory
+$ cd ~/labs/lab-08-mlandis
+```
+
 ---
 
 ## 2. Using alignment programs
@@ -149,19 +155,23 @@ Three sets of sequences are provided for this lab. We will focus on sequences th
 To begin, we will align `adh.fasta` using MUSCLE. MUSCLE supports fairly few options, but it is fast.
 
 ```
-$ muscle -in adh.fasta  -out adh.muscle_it1.fasta -maxiters 1
+$ muscle -align adh.fasta -output adh_muscle_it1.fasta -replicates 1
 
-MUSCLE v3.8.31 by Robert C. Edgar
+muscle 5.2.linux64 [00ece7c]  936Mb RAM, 2 cores
+Built Aug 22 2024 16:13:48
+(C) Copyright 2004-2021 Robert C. Edgar.
+https://drive5.com
 
-http://www.drive5.com/muscle
-This software is donated to the public domain.
-Please cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.
+[align adh.fasta]
+Input: 11 seqs, avg length 1103, max 1173, min 981
 
-adh 11 seqs, max length 1173, avg  length 1102
-00:00:00    10 MB(-2%)  Iter   1  100.00%  K-mer dist pass 1
-00:00:00    10 MB(-2%)  Iter   1  100.00%  K-mer dist pass 2
-00:00:01    22 MB(-5%)  Iter   1  100.00%  Align node
-00:00:01    22 MB(-5%)  Iter   1  100.00%  Root alignment
+00:00 4.5Mb   100.0% Derep 11 uniques, 0 dupes
+00:00 4.5Mb  CPU has 2 cores, running 2 threads
+00:08 257Mb   100.0% Calc posteriors
+00:08 90Mb    100.0% UPGMA5
+00:09 90Mb    100.0% Consistency (1/2)
+00:10 90Mb    100.0% Consistency (2/2)
+00:10 93Mb    100.0% Refining
 ```
 
 The entire alignment can be viewed in `alv` with the command
@@ -175,7 +185,7 @@ Alternatively, you can call use `alan` to view the alignment as nucleotides (`-n
 $ alan -n adh.muscle_it1.fasta
 ```
 
-Increasing the number of iterations will allow MUSCLE to find a better global fit for the alignment score. Run MUSCLE again, this time for a maximum of 2 iterations. Then try 3, 4, 5, and 6 iterations. Be sure to change the output file name so the earlier result is not overwritten.
+Increasing the number of replicates will allow MUSCLE to find a better global fit for the alignment score. Run MUSCLE again, this time for a maximum of 2 replicates. Then try 3, 4, 5, and 6 iterations. Be sure to change the output file name so the earlier result is not overwritten.
 
 How would you construct a pipeline with `cat`, `sort`, `uniq`, `grep`, and `wc` to count how many lines differ between two fasta alignment files?
 
