@@ -22,8 +22,8 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Mon, Sep 30 | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Wed, Oct 02 | Lecture 11 | Lab 11 | -- | Sequencing technologies<br>RIS tutorial<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
 |         | Mon, Oct 07 | -- | -- | -- | **No class: Fall Break** |
-|         | Mon, Oct 09 | Lecture 12 | Lab 12 | -- | Biology: genome assembly |
-|         | Wed, Oct 14 | Lecture 13 | Lab 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
+|         | Wed, Oct 09 | Lecture 12 | Lab 12 | -- | Biology: genome assembly |
+|         | Mon, Oct 14 | Lecture 13 | Lab 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Wed, Oct 16 | Lecture 14 | Lab 14 | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: variables, operators,<br>if-statements, functions  |
 |         | Mon, Oct 21 | Lecture 15 | Lab 15 | CSB 3.4, 3.6.2                | Python: containers, loops, strings,<br>script arguments |
 |         | Wed, Oct 23 | Lecture 16 | Lab 16 | CSB 4.2.2 - 4.4               | Python: file handling, modules, system calls,<br>more with containers<br>**Course project: approvals** |
