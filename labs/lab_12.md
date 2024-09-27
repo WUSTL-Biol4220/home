@@ -1,6 +1,6 @@
 # Lab 12
 
-*Lab 12 GitHub Classroom link:* TBD
+*Lab 12 GitHub Classroom link:* https://classroom.github.com/a/Eku_G42u
 
 In this lab, we'll learn how assemble genomes using different software and techniques
 
