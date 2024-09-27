@@ -25,8 +25,8 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Wed, Oct 09 | Lecture 12 | Lab 12 | -- | Biology: genome assembly |
 |         | Mon, Oct 14 | Lecture 13 | Lab 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Wed, Oct 16 | Lecture 14 | Lab 14 | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: variables, operators,<br>if-statements, functions  |
-|         | Mon, Oct 21 | Lecture 15 | Lab 15 | CSB 3.4, 3.6.2                | Python: containers, loops, strings,<br>script arguments |
-|         | Wed, Oct 23 | Lecture 16 | Lab 16 | CSB 4.2.2 - 4.4               | Python: file handling, modules, system calls,<br>more with containers<br>**Course project: approvals** |
+|         | Mon, Oct 21 | Lecture 15 | Lab 15 | CSB 3.4, 3.6.2                | Python: containers, loops, strings,<br>script arguments<br>**Course project: approvals** |
+|         | Wed, Oct 23 | Lecture 16 | Lab 16 | CSB 4.2.2 - 4.4               | Python: file handling, modules, system calls,<br>more with containers |
 |         | Mon, Oct 28 | Lecture 17 | Lab 17 | -- | Biology: sequence stats |
 |         | Wed, Oct 30 | Lecture 18 | Lab 18 | CSB 6.4 | Python: Biopython |
 |         | Mon, Nov 04 | Lecture 19 | Lab 19 | -- | Biology: variant calling |
