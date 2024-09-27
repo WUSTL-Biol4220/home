@@ -17,9 +17,9 @@ The 🐙 marker tells us how we're progressing through the semester.
 |          | Wed, Sep 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_05.pdf">Lecture 05</a> | [Lab 05](labs/lab_05.md) | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
 |          | Mon, Sep 16 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_06.pdf">Lecture 06</a> | [Lab 06](labs/lab_06.md) | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
 |          | Wed, Sep 18 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_07.pdf">Lecture 07</a> | [Lab 07](labs/lab_07.md) | <a href="https://www.nature.com/scitable/topicpage/basic-local-alignment-search-tool-blast-29096/">BLAST overview</a><br><a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/">EDirect tools</a><br>(optional) | Biology: GenBank, BLAST |
-|  🐙      | Mon, Sep 23 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_08.pdf">Lecture 08</a> | [Lab 08](labs/lab_08.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/loytynoja_goldman_prank_2008_science.pdf">PRANK paper</a> | Biology: molecular sequence alignment |
+|         | Mon, Sep 23 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_08.pdf">Lecture 08</a> | [Lab 08](labs/lab_08.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/loytynoja_goldman_prank_2008_science.pdf">PRANK paper</a> | Biology: molecular sequence alignment |
 |         | Wed, Sep 25 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_09.pdf">Lecture 09</a> | [Lab 09](labs/lab_09.md) | CSB 5.1 - 5.9 | Unix: regular expressions, regex match |
-|         | Mon, Sep 30 | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace, group capture, sed |
+|  🐙     | Mon, Sep 30 | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Wed, Oct 02 | Lecture 11 | Lab 11 | -- | Sequencing technologies<br>RIS tutorial<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
 |         | Mon, Oct 07 | -- | -- | -- | **No class: Fall Break** |
 |         | Mon, Oct 09 | Lecture 12 | Lab 12 | -- | Biology: genome assembly |
