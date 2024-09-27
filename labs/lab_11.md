@@ -42,9 +42,9 @@ Last login: Sun Oct 25 11:59:00 2020 from 128.252.107.1
 Our user account belongs to a number of user `groups`
 ```console
 [michael.landis@compute1-client-1 ~]$ groups
-domain users compute storage-home1-home-ro storage-bga-gmsroot-ro storage-bga-site-locks-rw storage-bga-shared-ro storage-mcallawa-shared-ro storage-ris-sas-ro storage-michael.landis compute-michael.landis
+domain users compute storage-home1-home-ro storage-bga-gmsroot-ro storage-bga-site-locks-rw storage-bga-shared-ro compute-workshop storage-mcallawa-shared-ro storage-ris-sas-ro storage-michael.landis compute-michael.landis compute-artsci storage-workshops-bio4220-rw
 ```
-where our account's membership in `storage-michael.landis` and `compute-michael.landis` determines what resources we have access to, how our use of resources will be billed, etc.
+where our account's membership in `storage-workshops-bio4220-rw` and `compute-artsci` determines what resources we have access to, how our use of resources will be billed, etc.
 
 The user `michael.landis` has access to three major storage directories. First, the user's `$HOME` directory, which has fast access times but is relatively small (10GB) in size. This is generally where you would store user configuration files, like `~/.profile`, and manage user binaries and libraries, e.g. `~/.local/bin` and `~/.local/lib`.
 
@@ -52,7 +52,6 @@ The user `michael.landis` has access to three major storage directories. First, 
 [michael.landis@compute1-client-1 ~]$ echo $HOME
 /home/michael.landis
 ```
-
 
 Each user also has a scratch directory (e.g. `/scratch1/fs1/michael.landis`) which does not have strict size limits, but files are deleted sporadically by RIS administrators and policies. This is typically where you would write output for programs. Important output would be copied to permanent storage before it is automatically deleted by RIS.
 
@@ -70,11 +69,11 @@ Space consumed by paths:
 /scratch1/fs1/michael.landis/.mmfind.policy 0 B
 ```
 
-Finally, members of the `compute-michael.landis` group have shared access to `/storage1/fs1/michael.landis` directory, whose contents are persistent, but disk space is limited to 2.5TB. Large files or directories that you need to use on a regular basis are stored here, e.g. input datasets, source code for compiled binaries, GitHub projects, etc.
+Finally, members of the `storage-workshops-bio4220-rw` group have shared access to persistent storage in the `/storage1/fs1/workshops/Active/BIO4220` directory. Large files or directories that you need to use on a regular basis can be stored here, e.g. input datasets, source code for compiled binaries, GitHub projects, etc.
 
 ```console
 [michael.landis@compute1-client-1 michael.landis]$ pwd
-/storage1/fs1/michael.landis
+/storage1/fs1/workshops/Active/BIO4220
 [michael.landis@compute1-client-1 michael.landis]$ ls
 Active  Archive  README.txt
 ```
