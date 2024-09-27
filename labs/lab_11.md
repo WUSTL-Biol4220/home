@@ -17,7 +17,7 @@ WUSTL Research Infrastructure Services (RIS) provides campus researchers with ac
 
 To improve the user experience with RIS compute services, RIS publishes a [user manual](https://confluence.ris.wustl.edu/display/RSUM/RIS+Services+User+Manual) and [knowledgebase articles](https://confluence.ris.wustl.edu/display/ITKB/RIS+IT+Knowledge+Base), and staffs a responsive [service desk](https://jira.ris.wustl.edu/servicedesk/customer/portal/1). RIS also offers several [workshops](https://confluence.ris.wustl.edu/display/ITKB/Workshops+and+Training) to orient new users to scientific computing through the cluster.
 
-To use the cluster, we first need to connect to it. The cluster is on the WUSTL private network, just like your VMs, meaning you will need to connect to VPN, then SSH into the cluster.
+To use the cluster, we first need to connect to it. The cluster is on the WUSTL private network, just like your VM.  meaning you will need to connect to VPN, then SSH into the cluster.
 
 Recall that HPC environments are composed of many nodes that provide different services to users, including *head nodes* that host SSH sessions for remote users and schedule jobs, and including *compute nodes* that process jobs assigned by the scheduler.
 
