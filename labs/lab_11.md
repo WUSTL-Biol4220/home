@@ -77,7 +77,8 @@ Finally, members of the `storage-workshops-bio4220-rw` group have shared access 
 [michael.landis@compute1-client-1 michael.landis]$ ls
 Active  Archive  README.txt
 ```
-where the `Active` directory is backed up with daily snapshots, where `Archive` data is read-only, used rarely, but regularly backed up to tape.
+
+If you are part of a research team here at WUSTL, you might also have membership to groups such as `storage-account.name` and `compute-account.name`, where `account.name` is the head of the research team. In that case, you would also have access to `/storage1/fs1/account.name`, which is a shared directory for your research group. This directory is backed up with daily snapshots, where `Archive` data is read-only, used rarely, but regularly backed up to tape.
 
 ## Scheduling jobs with LSF
 
