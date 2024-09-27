@@ -11,7 +11,7 @@ The 🐙 marker tells us how we're progressing through the semester.
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
 |         | Mon, Aug 26 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_01.pdf">Lecture 01</a> | [Lab 01](labs/lab_01.md) | CSB 0.1 - 0.5 | Unix: orientation |
 |         | Wed, Aug 28 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_02.pdf">Lecture 02</a> | [Lab 02](labs/lab_02.md) | CSB 1.1 - 1.5.1 | Unix: commands, filesystem |
-| --      | Mon, Sep 02 | -- | -- | -- | **No class: Labor Day** |
+|         | Mon, Sep 02 | -- | -- | -- | **No class: Labor Day** |
 |         | Wed, Sep 04 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_03.pdf">Lecture 03</a> | [Lab 03](labs/lab_03.md) | CSB 2.1 - 2.5 | Unix: git |
 |         | Mon, Sep 09 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_04.pdf">Lecture 04</a> | [Lab 04](labs/lab_04.md) | CSB 1.5.2 - 1.6.6 | Unix: text, pipes, redirects |
 |          | Wed, Sep 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_05.pdf">Lecture 05</a> | [Lab 05](labs/lab_05.md) | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
@@ -21,7 +21,7 @@ The 🐙 marker tells us how we're progressing through the semester.
 |  🐙     | Wed, Sep 25 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_09.pdf">Lecture 09</a> | [Lab 09](labs/lab_09.md) | CSB 5.1 - 5.9 | Unix: regular expressions, regex match |
 |         | Mon, Sep 30 | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace, group capture, sed |
 |         | Wed, Oct 02 | Lecture 11 | Lab 11 | -- | Sequencing technologies<br>Computing on server clusters<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
-| --      | Mon, Oct 07 | -- | -- | -- | **No class: Fall Break** |
+|         | Mon, Oct 07 | -- | -- | -- | **No class: Fall Break** |
 |         | Wed, Oct 09 | Lecture 12 | Lab 12 | -- | Biology: genome assembly |
 |         | Mon, Oct 14 | Lecture 13 | Lab 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Wed, Oct 16 | Lecture 14 | Lab 14 | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: variables, operators,<br>if-statements, functions  |
@@ -35,7 +35,7 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Wed, Nov 13 | Lecture 22 | Lab 22 | CSB 6.3 | Python: Pandas  |
 |         | Mon, Nov 18 | Lecture 23 | Lab 23 | -- | Biology: protein evolution |
 |         | Wed, Nov 20 | Lecture 25 | Lab 25 | CSB 6.2.3 - 6.2.5 | Python: SciPy <br>**Course project: check-in**|
-| --      | Wed, Nov 25 | -- | -- | -- | **No class: Thanksgiving** |
+|         | Wed, Nov 25 | -- | -- | -- | **No class: Thanksgiving** |
 |         | Wed, Nov 27 | Lecture 26 | Lab 26 | -- | Python: scikit-learn  |
 |         | Mon, Dec 02 | -- | -- | -- | **Course project: presentations 1 to 8**  |
 |         | Wed, Dec 04 | -- | -- | -- | **Course project: presentations 9 to 16**  |
