@@ -26,7 +26,7 @@ Instructor
 * Drop-in hours: Tuesdays 1pm - 2pm
 * Drop-in hours location: Rebstock 210
 
-Teaching Assistant
+Graduate Student Instructor
 * Name: Raymond Castillo
 * Email: c.raymond@wustl.edu
 * Drop-in hours: Thursdays 2pm - 3pm & Fridays 10am - 11am 
