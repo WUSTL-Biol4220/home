@@ -196,10 +196,10 @@ Now your files are downloaded to `/home/mlandis` on your virtual machine.
 Another way would be use GitHub to synchronize files with a remote repository
 ```console
 $ mkdir -p projects
-$ git clone https://github.com/WUSTL-Biol4220/lab-07a-mlandis.git projects/lab-07a-mlandis
-$ mv output.txt projects/lab-07a-mlandis
-$ mv job.log projects/lab-07a-mlandis
-$ cd ~/projects/lab-07a-mlandis
+$ git clone https://github.com/WUSTL-Biol4220/lab-11-mlandis.git projects/lab-11-mlandis
+$ mv output.txt projects/lab-11-mlandis
+$ mv job.log projects/lab-11-mlandis
+$ cd ~/projects/lab-11-mlandis
 $ git add job.log
 $ git add output.txt
 $ git commit -am 'add log/txt'
@@ -209,8 +209,8 @@ Now the files you produced on the cluster are now synchronized with the remote r
 
 ```console
 $ ssh mlandis@128.252.89.47
-$ git clone https://github.com/WUSTL-Biol4220/lab-07a-mlandis.git projects/lab-07a-mlandis
-$ cd projets/lab-07a-mlandis
+$ git clone https://github.com/WUSTL-Biol4220/lab-11-mlandis.git projects/lab-11-mlandis
+$ cd projets/lab-11-mlandis
 $ git pull
 ```
 
