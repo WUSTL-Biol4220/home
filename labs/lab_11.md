@@ -104,13 +104,12 @@ The central challenge in using a cluster efficiently is: how to define manageabl
 
 To orient ourselves, first list all of the queues available for processing jobs
 ```
-[michael.landis@compute1-client-1 ~]$ bqueues
+[michael.landis@compute1-client-1 ~]$ bqueues | head -n5
 QUEUE_NAME      PRIO STATUS          MAX JL/U JL/P JL/H NJOBS  PEND   RUN  SUSP
 datatransfer     10  Open:Active       -    -    -    -     0     0     0     0
-general          10  Open:Active       -    -    -    - 90936 90912    24     0
-general-interac  10  Open:Active       -    -    -    -     5     0     5     0
-workshop         10  Open:Active       -    2    -    -     0     0     0     0
-workshop-intera  10  Open:Active       -    1    -    -     0     0     0     0
+general-interac  10  Open:Active       -   64    -    -   991   800   191     0
+dragen-2         10  Open:Active       -    -    -    -     0     0     0     0
+dragen-2-intera  10  Open:Active       -    -    -    -     0     0     0     0
 ...
 ```
 where the field `QUEUE_NAME` reports the queues you can see, `PRIO` reports the default priority of jobs in the queue, where (all else being equal) high priority jobs are processed before low priority jobs; `STATUS` reports whether each queue is fully functioning; `MAX` reports the maximum number of job slots that can be used to process jobs in the queue; `JL/U` and `JL/P` and `JL/H` give the max number of jobs per user, jobs per X , abd jobs per X. `NJOBS` gives the total number of job slots allowed in the queue; `PEND` gives the number of jobs waiting to be analyzed; `RUN` gives the number of jobs currently being processed; and `SUSP` gives the number of suspended jobs in the queue.
@@ -118,36 +117,42 @@ where the field `QUEUE_NAME` reports the queues you can see, `PRIO` reports the 
 
 Next, list the compute nodes available for processing jobs scheduled across queues
 ```
-[michael.landis@compute1-client-1 ~]$ bhosts
+[michael.landis@compute1-client-1 ~]$ bhosts | head -n5
 HOST_NAME          STATUS       JL/U    MAX  NJOBS    RUN  SSUSP  USUSP    RSV
-compute1-exec-1.ri ok              -     16      0      0      0      0      0
-compute1-exec-10.r ok              -     36      0      0      0      0      0
-compute1-exec-100. ok              -     32      0      0      0      0      0
-compute1-exec-101. ok              -     32      0      0      0      0      0
-compute1-exec-102. ok              -     32      0      0      0      0      0
+compute1-dragen-2. ok              -     24      0      0      0      0      0
+compute1-dragen-3. ok              -     24      0      0      0      0      0
+compute1-dragen-4. ok              -     32      0      0      0      0      0
+compute1-dragen-5. ok              -     32      0      0      0      0      0
 ```
 where `HOST_NAME` is the compute node's name, `STATUS` reports whether that node is functioning (`ok`) or not, `JL/U` reports the ma number of jobs per user, `MAX` is the job slots for the node, `NJOBS` is the number of jobs assigned to the node, `RUN` is the number of actively running jobs, `SSUSP` is the number of jobs suspended by the system (e.g. due to policy violation), `USUSP` is the number of jobs suspended by users (e.g. by an administrator), and `RSV` is the number of reserved slots in use.
 
 Let's submit our first job to the LSF scheduler
 ```console
-[michael.landis@compute1-client-1 ~]$ bsub -Is -q general-interactive -a 'docker(alpine)' 'echo -e "Hello, world!"'
-Defaulting to LSF user group 'compute-michael.landis'
-Job <93145> is submitted to queue <general-interactive>.
+[michael.landis@compute1-client-1 ~]$ bsub -G compute-artsci -Is -q general-interactive -a 'docker(alpine)' 'echo -e "Hello, world!"'
+Job <285964> is submitted to queue <general-interactive>.
 <<Waiting for dispatch ...>>
-<<Starting on compute1-exec-52.ris.wustl.edu>>
+<<Starting on compute1-exec-130.ris.wustl.edu>>
 Using default tag: latest
 latest: Pulling from library/alpine
-Digest: sha256:c0e9560cda118f9ec63ddefb4a173a2b2a0347082d7dff7dc14272e7841a5b5a
+Digest: sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d
 Status: Image is up to date for alpine:latest
 docker.io/library/alpine:latest
 Hello, world!
 [michael.landis@compute1-client-1 ~]$
 ```
 
+The anatomy of the command is as follows:
+- `bsub` : submits a job to the LSF queue
+- `-G compute-artsci` : determines which compute group to use for processor time
+- `-Is` : run the job as an interactive session and create a pseudoterminal, meaning you can view the output directly
+- `-q general-interactive` : run the job in the `general-interactive` queue, which allows interactive sessions (`-Is`)
+- `-a 'docker(alpine)'` : run the job using a Docker container running Ubuntu-derived operating system, Alpine
+- `'echo -e "Hello, world!"'` : the command string we want our job to execute, which should print `Hello, world!` to screen
+
 This job runs almost instantaneously, and prints `Hello, world!` before completing. The job runs so quickly, that it can't be used to demonstrate how to monitor (`bjobs`) and cancel (`bkill`) jobs. This time, will run a job that runs the command `sleep 1000` submitted as a non-interactive job, which tells the compute to do nothing for 1000 seconds.
 
 ```console
-[michael.landis@compute1-client-1 ~]$ bsub -q general -a 'docker(alpine)' 'echo Waiting; sleep 10; echo ...done!'
+[michael.landis@compute1-client-1 ~]$ bsub -G compute-artsci -q general -a 'docker(alpine)' 'echo Waiting; sleep 10; echo ...done!'
 Defaulting to LSF user group 'compute-michael.landis'
 Job <93149> is submitted to queue <general>.
 [michael.landis@compute1-client-1 ~]$ bjobs
