@@ -56,6 +56,7 @@ The user `michael.landis` has access to three major storage directories. First, 
 Each user also has a scratch directory (e.g. `/scratch1/fs1/michael.landis`) which does not have strict size limits, but files are deleted sporadically by RIS administrators and policies. This is typically where you would write output for programs. Important output would be copied to permanent storage before it is automatically deleted by RIS.
 
 ```console
+[michael.landis@compute1-client-1 ~]$ cd /scratch1/fs1/michael.landis
 [michael.landis@compute1-client-1 michael.landis]$ pwd
 /scratch1/fs1/michael.landis
 [michael.landis@compute1-client-1 michael.landis]$ cat RIS_usage_report.txt
@@ -72,10 +73,11 @@ Space consumed by paths:
 Finally, members of the `storage-workshops-bio4220-rw` group have shared access to persistent storage in the `/storage1/fs1/workshops/Active/BIO4220` directory. Large files or directories that you need to use on a regular basis can be stored here, e.g. input datasets, source code for compiled binaries, GitHub projects, etc.
 
 ```console
-[michael.landis@compute1-client-1 michael.landis]$ pwd
+[michael.landis@compute1-client-1 michael.landis]$ cd /storage1/fs1/workshops/Active/BIO4220
+[michael.landis@compute1-client-1 BIO4220]$ 
 /storage1/fs1/workshops/Active/BIO4220
-[michael.landis@compute1-client-1 michael.landis]$ ls
-Active  Archive  README.txt
+[michael.landis@compute1-client-1 BIO4220]$ ls
+labs  students
 ```
 
 If you are part of a research team here at WUSTL, you might also have membership to groups such as `storage-account.name` and `compute-account.name`, where `account.name` is the head of the research team. In that case, you would also have access to `/storage1/fs1/account.name`, which is a shared directory for your research group. This directory is backed up with daily snapshots, where `Archive` data is read-only, used rarely, but regularly backed up to tape.
