@@ -155,7 +155,7 @@ Three sets of sequences are provided for this lab. We will focus on sequences th
 To begin, we will align `adh.fasta` using MUSCLE. MUSCLE supports fairly few options, but it is fast.
 
 ```
-$ muscle -align adh.fasta -output adh_muscle_it1.fasta -consiters 1
+$ muscle -align adh.fasta -output adh_muscle_it1.fasta -refineiters 100 -consiters 1
 
 muscle 5.2.linux64 [00ece7c]  936Mb RAM, 2 cores
 Built Aug 22 2024 16:13:48
@@ -185,7 +185,7 @@ Alternatively, you can call use `alan` to view the alignment as nucleotides (`-n
 $ alan -n adh.muscle_it1.fasta
 ```
 
-Increasing the number of refinement and consistency iterations will allow MUSCLE to find better alignments alignment score. Refinement iterations are involve local adjustments, such as shuffling the positions of characters and removing gaps, that can improve the global alignment score. Consistency iterations make adjustments to ensure that alignment scores have good transitive properties, e.g. if A and B have a good pairwise alignment score, and B and C have a good pairwise score, then A and C should also have a good pairwise score by (transitivity). By default, MUSCLE uses 100 refinement and 2 consistency iterations. Run MUSCLE again, this time for a maximum of 3 consistency iterations, using `-consiters 3` as an optional flag. Then try 3, 4, 5, and 6 iterations. Be sure to change the output file name so the earlier result is not overwritten.
+Increasing the number of refinement and consistency iterations will allow MUSCLE to find better alignments alignment score. Refinement iterations are involve local adjustments, such as shuffling the positions of characters and removing gaps, that can improve the global alignment score. Consistency iterations make adjustments to ensure that alignment scores have good transitive properties, e.g. if A and B have a good pairwise alignment score, and B and C have a good pairwise score, then A and C should also have a good pairwise score by (transitivity). By default, MUSCLE uses 100 refinement iterations and 2 consistency iterations. Run MUSCLE again, this time for a maximum of 3 consistency iterations, setting `-consiters 3` as an optional flag. Then try 3, 4, 5, and 6 iterations. Be sure to change the output file name so the earlier result is not overwritten.
 
 How would you construct a pipeline with `cat`, `sort`, `uniq`, `grep`, and `wc` to count how many lines differ between two fasta alignment files?
 
