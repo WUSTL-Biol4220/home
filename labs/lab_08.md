@@ -201,6 +201,9 @@ $ mafft --op 0.0 --ep 0.0 adh.fasta > adh.mafft_op0_ep0.fasta        # op=0.0, e
 
 What happens when the value of `--op` is small? when it is large? What happens when the value of `--ep` is small? when it is large? What settings would you provide to MAFFT to generate an alignment that with very few, but very large, gaps? for an alignment with very many, but very small gaps?
 
+Note, MAFFT does not perform any refinement iterations on the alignment by default. However, you can add (for example) 100 refinement iterations to the analysis with the `--maxiterate 100` option.
+
+
 ### PRANK
 
 Finally, we will run the phylogeny-aware alignment tool, PRANK. In contrast to the progressive aligners, MUSCLE and MAFFT, PRANK instead employs evolutionary rules ("tree-thinking") to determine what sequence variation is due to substitution, insertion, or deletion. We will generate alignments manually under several
