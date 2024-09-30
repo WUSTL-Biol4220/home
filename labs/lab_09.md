@@ -96,7 +96,7 @@ mhc class ii antigen drb1*1
 
 **Problem 3.**
 
-Write a script called `problem3.sh` to process the file `bee_list.txt`, which contains information regarding bee biodiversity. `bee_list.txt` is a tab-delimited file reporting nearly 20,000 bee species, a list of papers for each species initial description, and unique identifiers for each bee species in the Taxonomic Information System. Your script should print the `N` authors in `bee_list.txt` that have the most publications. (Assume that each occurrence to the name [e.g.] "Eversmann" refers to the same person.) Also, the script should report the `N` years with the highest numbers of publications. The value of `N` is a user-provided argument. When printing the "top" results, also print their respective counts.
+Write a script called `problem3.sh` to process the file `bee_list.txt`, which contains information regarding bee biodiversity. `bee_list.txt` is a tab-delimited file reporting nearly 20,000 bee species, a list of papers for each species initial description, and unique identifiers for each bee species in the Taxonomic Information System. Your script should print the `N` authors in `bee_list.txt` that have the most publications. (Assume that each occurrence to the name [e.g.] "Eversmann" and "M. G. Eversmann" and "Q. F. Eversemann" refer to the same person.) Also, the script should report the `N` years with the highest numbers of publications. The value of `N` is a user-provided argument. When printing the "top" results, also print their respective counts.
 
 Expected results:
 ```
