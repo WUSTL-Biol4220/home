@@ -224,6 +224,8 @@ The output of `job.log` often contains valuable information, especially for debu
 
 After generating output, there are multiple ways to share those files on the cluster with other computers.
 
+(*Note: this last section using secure copy does not currently work due to network permissions issues, but that should be resolved in the coming weeks.)
+
 One way would be to transfer files using secure copy (`scp`). If your virtual machine username is `mlandis` and your virtual machine IP is `128.252.89.47`, then you can copy your files by typing 
 ```
 $ scp output.txt mlandis@128.252.89.47:/home/mlandis
