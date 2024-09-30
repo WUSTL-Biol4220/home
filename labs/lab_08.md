@@ -167,11 +167,10 @@ Input: 11 seqs, avg length 1103, max 1173, min 981
 
 00:00 4.5Mb   100.0% Derep 11 uniques, 0 dupes
 00:00 4.5Mb  CPU has 2 cores, running 2 threads
-00:08 257Mb   100.0% Calc posteriors
-00:08 90Mb    100.0% UPGMA5
-00:09 90Mb    100.0% Consistency (1/2)
-00:10 90Mb    100.0% Consistency (2/2)
-00:10 93Mb    100.0% Refining
+00:07 257Mb   100.0% Calc posteriors
+00:07 90Mb    100.0% UPGMA5
+00:08 90Mb    100.0% Consistency (1/1)
+00:08 93Mb    100.0% Refining
 ```
 
 The entire alignment can be viewed in `alv` with the command
