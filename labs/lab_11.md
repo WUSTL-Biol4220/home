@@ -128,7 +128,7 @@ where `HOST_NAME` is the compute node's name, `STATUS` reports whether that node
 
 Let's submit our first job to the LSF scheduler
 ```console
-[michael.landis@compute1-client-1 ~]$ bsub -G compute-artsci -Is -q general-interactive -a 'docker(alpine)' 'echo -e "Hello, world!"'
+[michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop -Is -q general-interactive -a 'docker(alpine)' 'echo -e "Hello, world!"'
 Job <285964> is submitted to queue <general-interactive>.
 <<Waiting for dispatch ...>>
 <<Starting on compute1-exec-130.ris.wustl.edu>>
@@ -143,7 +143,7 @@ Hello, world!
 
 The anatomy of the command is as follows:
 - `bsub` : submits a job to the LSF queue
-- `-G compute-artsci` : determines which compute group to use for processor time
+- `-G compute-workshop` : determines which compute group to use for processor time
 - `-Is` : run the job as an interactive session and create a pseudoterminal, meaning you can view the output directly
 - `-q general-interactive` : run the job in the `general-interactive` queue, which allows interactive sessions (`-Is`)
 - `-a 'docker(alpine)'` : run the job using a Docker container running Ubuntu-derived operating system, Alpine
@@ -152,8 +152,8 @@ The anatomy of the command is as follows:
 This job runs almost instantaneously, and prints `Hello, world!` before completing. The job runs so quickly, that it can't be used to demonstrate how to monitor (`bjobs`) and cancel (`bkill`) jobs. This time, will run a job that runs the command `sleep 1000` submitted as a non-interactive job, which tells the compute to do nothing for 1000 seconds.
 
 ```console
-[michael.landis@compute1-client-1 ~]$ bsub -G compute-artsci -q general -a 'docker(alpine)' 'echo Waiting; sleep 10; echo ...done!'
-Defaulting to LSF user group 'compute-michael.landis'
+[michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop -q general -a 'docker(alpine)' 'echo Waiting; sleep 60; echo ...done!'
+Defaulting to LSF user group 'compute-workshop'
 Job <93149> is submitted to queue <general>.
 [michael.landis@compute1-client-1 ~]$ bjobs
 JOBID   USER    STAT  QUEUE      FROM_HOST   EXEC_HOST   JOB_NAME   SUBMIT_TIME
@@ -172,10 +172,28 @@ To record metadata regarding the processed job, such as run time and resource us
 ```console
 [michael.landis@compute1-client-1 ~]$ cat output.txt
 'Hello, world!'
-[michael.landis@compute1-client-1 ~]$ bsub -q general -a 'docker(alpine)' -o job.log "echo -e \'Hello, world\!\' > output.txt"
-Defaulting to LSF user group 'compute-michael.landis'
+[michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop -q general -a 'docker(alpine)' -o job.log "echo -e \'Hello, world\!\' > output.txt"
+Defaulting to LSF user group 'compute-workshop'
 Job <93159> is submitted to queue <general>.
 [michael.landis@compute1-client-1 ~]$ tail -n25  job.log
+
+Using default tag: latest
+latest: Pulling from library/alpine
+Digest: sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d
+Status: Image is up to date for alpine:latest
+docker.io/library/alpine:latest
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@compute1-exec-148.ris.wustl.edu>
+Subject: Job 286134: <echo -e \'Hello, world\!\' > output.txt> in cluster <compute1-lsf> Done
+
+Job <echo -e \'Hello, world\!\' > output.txt> was submitted from host <compute1-client-1.ris.wustl.edu> by user <michael.landis> in cluster <compute1-lsf> at Mon Sep 30 11:57:16 2024
+Job was executed on host(s) <compute1-exec-148.ris.wustl.edu>, in queue <general>, as user <michael.landis> in cluster <compute1-lsf> at Mon Sep 30 11:57:17 2024
+</home/michael.landis> was used as the home directory.
+</home/michael.landis> was used as the working directory.
+Started at Mon Sep 30 11:57:17 2024
+Terminated at Mon Sep 30 11:57:37 2024
+Results reported at Mon Sep 30 11:57:37 2024
 
 Your job looked like:
 
@@ -188,19 +206,21 @@ Successfully completed.
 
 Resource usage summary:
 
-    CPU time :                                   0.24 sec.
-    Max Memory :                                 8 MB
-    Average Memory :                             6.67 MB
+    CPU time :                                   10.16 sec.
+    Max Memory :                                 33 MB
+    Average Memory :                             16.75 MB
     Total Requested Memory :                     4096.00 MB
-    Delta Memory :                               4088.00 MB
+    Delta Memory :                               4063.00 MB
     Max Swap :                                   -
     Max Processes :                              5
-    Max Threads :                                19
-    Run time :                                   9 sec.
-    Turnaround time :                            11 sec.
+    Max Threads :                                15
+    Run time :                                   25 sec.
+    Turnaround time :                            21 sec.
 
 The output (if any) is above this job summary.
 ```
+
+The output of `job.log` often contains valuable information, especially for debugging the cause of job to fail.
 
 After generating output, there are multiple ways to share those files on the cluster with other computers.
 
