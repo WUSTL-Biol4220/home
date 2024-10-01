@@ -46,6 +46,8 @@ domain users compute storage-home1-home-ro storage-bga-gmsroot-ro storage-bga-si
 ```
 where our account's membership in `storage-workshops-bio4220-rw` and `compute-artsci` determines what resources we have access to, how our use of resources will be billed, etc.
 
+### Home
+
 The user `michael.landis` has access to three major storage directories. First, the user's `$HOME` directory, which has fast access times but is relatively small (10GB) in size. This is generally where you would store user configuration files, like `~/.profile`, and manage user binaries and libraries, e.g. `~/.local/bin` and `~/.local/lib`.
 
 ```console
@@ -53,9 +55,12 @@ The user `michael.landis` has access to three major storage directories. First, 
 /home/michael.landis
 ```
 
+### Scratch
+
 Each user also has a scratch directory (e.g. `/scratch1/fs1/michael.landis`) which does not have strict size limits, but files are deleted sporadically by RIS administrators and policies. This is typically where you would write output for programs. Important output would be copied to permanent storage before it is automatically deleted by RIS.
 
 ```console
+[michael.landis@compute1-client-1 ~]$ cd /scratch1/fs1/michael.landis
 [michael.landis@compute1-client-1 michael.landis]$ pwd
 /scratch1/fs1/michael.landis
 [michael.landis@compute1-client-1 michael.landis]$ cat RIS_usage_report.txt
@@ -69,16 +74,25 @@ Space consumed by paths:
 /scratch1/fs1/michael.landis/.mmfind.policy 0 B
 ```
 
+### Storage
+
 Finally, members of the `storage-workshops-bio4220-rw` group have shared access to persistent storage in the `/storage1/fs1/workshops/Active/BIO4220` directory. Large files or directories that you need to use on a regular basis can be stored here, e.g. input datasets, source code for compiled binaries, GitHub projects, etc.
 
 ```console
-[michael.landis@compute1-client-1 michael.landis]$ pwd
+[michael.landis@compute1-client-1 michael.landis]$ cd /storage1/fs1/workshops/Active/BIO4220
+[michael.landis@compute1-client-1 BIO4220]$ 
 /storage1/fs1/workshops/Active/BIO4220
-[michael.landis@compute1-client-1 michael.landis]$ ls
-Active  Archive  README.txt
+[michael.landis@compute1-client-1 BIO4220]$ ls
+labs  students
 ```
 
-If you are part of a research team here at WUSTL, you might also have membership to groups such as `storage-account.name` and `compute-account.name`, where `account.name` is the head of the research team. In that case, you would also have access to `/storage1/fs1/account.name`, which is a shared directory for your research group. This directory is backed up with daily snapshots, where `Archive` data is read-only, used rarely, but regularly backed up to tape.
+If you are part of a research team here at WUSTL, you might also have membership to groups such as `storage-account.name` and `compute-account.name`, where `account.name` is the head of the research team. In that case, you would also have access to `/storage1/fs1/account.name`, which is a shared directory for your research group. This directory is backed up with daily snapshots, where `Archive` data is read-only, used rarely, but regularly backed up to tape. Most clusters impose a disk quota on storage directories, to prevent individual users from using all the shared disk space.
+
+**Where should you store your files?**
+- Use the *home directory for smaller personal files*. You should aim to store less than 1GB in your home directory.
+- Use the *scratch directory for working or temporary files* that are generated as part of an analysis. For example, your code may need to generate and process 10GB of files to produce a small output file with analyzed results. Remember that  need to copy final versions of files to the stable storage directory.
+- Use the *storage directory for large and important files* that should persist on the filesystem. For example, a large 5TB dataset unprocessed raw sequence data that is being analyzed by a team of researchers should be saved in shared storage.
+
 
 ## Scheduling jobs with LSF
 
@@ -90,13 +104,12 @@ The central challenge in using a cluster efficiently is: how to define manageabl
 
 To orient ourselves, first list all of the queues available for processing jobs
 ```
-[michael.landis@compute1-client-1 ~]$ bqueues
+[michael.landis@compute1-client-1 ~]$ bqueues | head -n5
 QUEUE_NAME      PRIO STATUS          MAX JL/U JL/P JL/H NJOBS  PEND   RUN  SUSP
 datatransfer     10  Open:Active       -    -    -    -     0     0     0     0
-general          10  Open:Active       -    -    -    - 90936 90912    24     0
-general-interac  10  Open:Active       -    -    -    -     5     0     5     0
-workshop         10  Open:Active       -    2    -    -     0     0     0     0
-workshop-intera  10  Open:Active       -    1    -    -     0     0     0     0
+general-interac  10  Open:Active       -   64    -    -   991   800   191     0
+dragen-2         10  Open:Active       -    -    -    -     0     0     0     0
+dragen-2-intera  10  Open:Active       -    -    -    -     0     0     0     0
 ...
 ```
 where the field `QUEUE_NAME` reports the queues you can see, `PRIO` reports the default priority of jobs in the queue, where (all else being equal) high priority jobs are processed before low priority jobs; `STATUS` reports whether each queue is fully functioning; `MAX` reports the maximum number of job slots that can be used to process jobs in the queue; `JL/U` and `JL/P` and `JL/H` give the max number of jobs per user, jobs per X , abd jobs per X. `NJOBS` gives the total number of job slots allowed in the queue; `PEND` gives the number of jobs waiting to be analyzed; `RUN` gives the number of jobs currently being processed; and `SUSP` gives the number of suspended jobs in the queue.
@@ -104,37 +117,43 @@ where the field `QUEUE_NAME` reports the queues you can see, `PRIO` reports the 
 
 Next, list the compute nodes available for processing jobs scheduled across queues
 ```
-[michael.landis@compute1-client-1 ~]$ bhosts
+[michael.landis@compute1-client-1 ~]$ bhosts | head -n5
 HOST_NAME          STATUS       JL/U    MAX  NJOBS    RUN  SSUSP  USUSP    RSV
-compute1-exec-1.ri ok              -     16      0      0      0      0      0
-compute1-exec-10.r ok              -     36      0      0      0      0      0
-compute1-exec-100. ok              -     32      0      0      0      0      0
-compute1-exec-101. ok              -     32      0      0      0      0      0
-compute1-exec-102. ok              -     32      0      0      0      0      0
+compute1-dragen-2. ok              -     24      0      0      0      0      0
+compute1-dragen-3. ok              -     24      0      0      0      0      0
+compute1-dragen-4. ok              -     32      0      0      0      0      0
+compute1-dragen-5. ok              -     32      0      0      0      0      0
 ```
 where `HOST_NAME` is the compute node's name, `STATUS` reports whether that node is functioning (`ok`) or not, `JL/U` reports the ma number of jobs per user, `MAX` is the job slots for the node, `NJOBS` is the number of jobs assigned to the node, `RUN` is the number of actively running jobs, `SSUSP` is the number of jobs suspended by the system (e.g. due to policy violation), `USUSP` is the number of jobs suspended by users (e.g. by an administrator), and `RSV` is the number of reserved slots in use.
 
 Let's submit our first job to the LSF scheduler
 ```console
-[michael.landis@compute1-client-1 ~]$ bsub -Is -q general-interactive -a 'docker(alpine)' 'echo -e "Hello, world!"'
-Defaulting to LSF user group 'compute-michael.landis'
-Job <93145> is submitted to queue <general-interactive>.
+[michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop -Is -q general-interactive -a 'docker(alpine)' 'echo -e "Hello, world!"'
+Job <285964> is submitted to queue <general-interactive>.
 <<Waiting for dispatch ...>>
-<<Starting on compute1-exec-52.ris.wustl.edu>>
+<<Starting on compute1-exec-130.ris.wustl.edu>>
 Using default tag: latest
 latest: Pulling from library/alpine
-Digest: sha256:c0e9560cda118f9ec63ddefb4a173a2b2a0347082d7dff7dc14272e7841a5b5a
+Digest: sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d
 Status: Image is up to date for alpine:latest
 docker.io/library/alpine:latest
 Hello, world!
 [michael.landis@compute1-client-1 ~]$
 ```
 
+The anatomy of the command is as follows:
+- `bsub` : submits a job to the LSF queue
+- `-G compute-workshop` : determines which compute group to use for processor time
+- `-Is` : run the job as an interactive session and create a pseudoterminal, meaning you can view the output directly
+- `-q general-interactive` : run the job in the `general-interactive` queue, which allows interactive sessions (`-Is`)
+- `-a 'docker(alpine)'` : run the job using a Docker container running Ubuntu-derived operating system, Alpine
+- `'echo -e "Hello, world!"'` : the command string we want our job to execute, which should print `Hello, world!` to screen
+
 This job runs almost instantaneously, and prints `Hello, world!` before completing. The job runs so quickly, that it can't be used to demonstrate how to monitor (`bjobs`) and cancel (`bkill`) jobs. This time, will run a job that runs the command `sleep 1000` submitted as a non-interactive job, which tells the compute to do nothing for 1000 seconds.
 
 ```console
-[michael.landis@compute1-client-1 ~]$ bsub -q general -a 'docker(alpine)' 'echo Waiting; sleep 10; echo ...done!'
-Defaulting to LSF user group 'compute-michael.landis'
+[michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop -q general -a 'docker(alpine)' 'echo Waiting; sleep 60; echo ...done!'
+Defaulting to LSF user group 'compute-workshop'
 Job <93149> is submitted to queue <general>.
 [michael.landis@compute1-client-1 ~]$ bjobs
 JOBID   USER    STAT  QUEUE      FROM_HOST   EXEC_HOST   JOB_NAME   SUBMIT_TIME
@@ -153,10 +172,28 @@ To record metadata regarding the processed job, such as run time and resource us
 ```console
 [michael.landis@compute1-client-1 ~]$ cat output.txt
 'Hello, world!'
-[michael.landis@compute1-client-1 ~]$ bsub -q general -a 'docker(alpine)' -o job.log "echo -e \'Hello, world\!\' > output.txt"
-Defaulting to LSF user group 'compute-michael.landis'
+[michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop -q general -a 'docker(alpine)' -o job.log "echo -e \'Hello, world\!\' > output.txt"
+Defaulting to LSF user group 'compute-workshop'
 Job <93159> is submitted to queue <general>.
 [michael.landis@compute1-client-1 ~]$ tail -n25  job.log
+
+Using default tag: latest
+latest: Pulling from library/alpine
+Digest: sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d
+Status: Image is up to date for alpine:latest
+docker.io/library/alpine:latest
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@compute1-exec-148.ris.wustl.edu>
+Subject: Job 286134: <echo -e \'Hello, world\!\' > output.txt> in cluster <compute1-lsf> Done
+
+Job <echo -e \'Hello, world\!\' > output.txt> was submitted from host <compute1-client-1.ris.wustl.edu> by user <michael.landis> in cluster <compute1-lsf> at Mon Sep 30 11:57:16 2024
+Job was executed on host(s) <compute1-exec-148.ris.wustl.edu>, in queue <general>, as user <michael.landis> in cluster <compute1-lsf> at Mon Sep 30 11:57:17 2024
+</home/michael.landis> was used as the home directory.
+</home/michael.landis> was used as the working directory.
+Started at Mon Sep 30 11:57:17 2024
+Terminated at Mon Sep 30 11:57:37 2024
+Results reported at Mon Sep 30 11:57:37 2024
 
 Your job looked like:
 
@@ -169,21 +206,25 @@ Successfully completed.
 
 Resource usage summary:
 
-    CPU time :                                   0.24 sec.
-    Max Memory :                                 8 MB
-    Average Memory :                             6.67 MB
+    CPU time :                                   10.16 sec.
+    Max Memory :                                 33 MB
+    Average Memory :                             16.75 MB
     Total Requested Memory :                     4096.00 MB
-    Delta Memory :                               4088.00 MB
+    Delta Memory :                               4063.00 MB
     Max Swap :                                   -
     Max Processes :                              5
-    Max Threads :                                19
-    Run time :                                   9 sec.
-    Turnaround time :                            11 sec.
+    Max Threads :                                15
+    Run time :                                   25 sec.
+    Turnaround time :                            21 sec.
 
 The output (if any) is above this job summary.
 ```
 
+The output of `job.log` often contains valuable information, especially for debugging the cause of job to fail.
+
 After generating output, there are multiple ways to share those files on the cluster with other computers.
+
+(*Note: this last section using secure copy does not currently work due to network permissions issues, but that should be resolved in the coming weeks.)
 
 One way would be to transfer files using secure copy (`scp`). If your virtual machine username is `mlandis` and your virtual machine IP is `128.252.89.47`, then you can copy your files by typing 
 ```
@@ -196,10 +237,10 @@ Now your files are downloaded to `/home/mlandis` on your virtual machine.
 Another way would be use GitHub to synchronize files with a remote repository
 ```console
 $ mkdir -p projects
-$ git clone https://github.com/WUSTL-Biol4220/lab-07a-mlandis.git projects/lab-07a-mlandis
-$ mv output.txt projects/lab-07a-mlandis
-$ mv job.log projects/lab-07a-mlandis
-$ cd ~/projects/lab-07a-mlandis
+$ git clone https://github.com/WUSTL-Biol4220/lab-11-mlandis.git projects/lab-11-mlandis
+$ mv output.txt projects/lab-11-mlandis
+$ mv job.log projects/lab-11-mlandis
+$ cd ~/projects/lab-11-mlandis
 $ git add job.log
 $ git add output.txt
 $ git commit -am 'add log/txt'
@@ -209,8 +250,8 @@ Now the files you produced on the cluster are now synchronized with the remote r
 
 ```console
 $ ssh mlandis@128.252.89.47
-$ git clone https://github.com/WUSTL-Biol4220/lab-07a-mlandis.git projects/lab-07a-mlandis
-$ cd projets/lab-07a-mlandis
+$ git clone https://github.com/WUSTL-Biol4220/lab-11-mlandis.git projects/lab-11-mlandis
+$ cd projets/lab-11-mlandis
 $ git pull
 ```
 
