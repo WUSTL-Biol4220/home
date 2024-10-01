@@ -39,7 +39,7 @@ Write a 2 page report (12pt font, single-spaced) that summarizes your research f
 1. **Summary**. Describes the overall purpose of your pipeline, the pipeline features, and the analysis results.
 2. **Design**. This section describes in detail important decisions you made in the design of your pipeline.
 3. **Analysis**. A discussion of how your analysis output (results) differed depending on what settings/datasets you analyzed, and how those differences might influence what biological hypotheses are supported or rejected. For example, an analysis run under Settings-A might cause our methods to infer high proportions of nonsynonymous substitutions relative to synonymous substitutions, while Settings-B might cause our methods to infer roughly equal proportions of nonsynonymous and synonymous substitutions. Do Settings-A and Settings-B support conflicting biological scenarios? Why is it important to compare results using both settings?
-4. **Future work**. An overview of how you might want to improve your pipeline or the quality of your analyses in the future.
+4. **Future ideas**. An overview of how you might want to improve your pipeline or the quality of your analyses in the future.
 
 The analysis report is not due until after the project presentation.
 
