@@ -222,19 +222,42 @@ The output (if any) is above this job summary.
 
 The output of `job.log` often contains valuable information, especially for debugging the cause of job to fail.
 
-After generating output, there are multiple ways to share those files on the cluster with other computers.
+Transferring small files to and from RIS can be done using secure copy (`scp`). `scp` behaves similarly to standard `cp`, except you must also provide the network (IP) address and login credentials to complete the copy. Servers generally have a fixed IP address where the IP addresses of most user computers are randomly allocated. Because of this, we will assume the following commands are run from your workstation -- i.e., physical computer in front of you, not the virtual machine.
 
-(*Note: this last section using secure copy does not currently work due to network permissions issues, but that should be resolved in the coming weeks.)
+To copy a file called `input.txt` from your physical computer on to RIS, you would type
+```console
+$ echo "Hello, world!" > input.txt
+$ scp input.txt michael.landis@compute1-client-1.ris.wustl.edu:/home/michael.landis/input.txt
+You are connecting to RIS Compute services.
+Membership in a compute-* AD group is required.
 
-One way would be to transfer files using secure copy (`scp`). If your virtual machine username is `mlandis` and your virtual machine IP is `128.252.89.47`, then you can copy your files by typing 
+Users are responsible for acting in accordance with
+policies applicable to Washington University St. Louis.
+
+https://confluence.ris.wustl.edu/display/RSUM/RIS+Compute+%3A+User+Agreement
+michael.landis@compute1-client-1.ris.wustl.edu's password:
+input.txt                                    100%   14     3.4KB/s   00:00
+
 ```
-$ scp output.txt mlandis@128.252.89.47:/home/mlandis
-$ scp job.log mlandis@128.252.89.47:/home/mlandis
+
+Notice how the destination filepath string is constructed:
+- `michael.landis` is the username to authenticate
+- `@` indicates that the remaining text will locate the destination
+- `compute1-client-1.ris.wustl.edu` is the destination server
+- `:` indicates the next text is the path for the file on the destination server's filesystem
+- `/home/michael.landis/test.txt` is where the file will be stored on the destination server
+
+You will need to modify the remote username, address, and filepath depending on your authentication information, the server you're working with, and the location of your remote files.
+
+Treating RIS as the source and your workstation as the destination allows you to transfer files into the local directory of your filesystem. 
 ```
-Now your files are downloaded to `/home/mlandis` on your virtual machine.
+$ scp michael.landis@compute1-client-1.ris.wustl.edu:/home/michael.landis/output.txt output.txt
+$ scp michael.landis@compute1-client-1.ris.wustl.edu:/home/michael.landis/job.log job.log
+```
 
+**Note:** currently, network restrictions prevent us from copying files directly between our VMs and the RIS servers. This should be enabled shortly.
 
-Another way would be use GitHub to synchronize files with a remote repository
+Another way would be use GitHub to synchronize files on the server with a remote repository
 ```console
 $ mkdir -p projects
 $ git clone https://github.com/WUSTL-Biol4220/lab-11-mlandis.git projects/lab-11-mlandis
@@ -246,6 +269,9 @@ $ git add output.txt
 $ git commit -am 'add log/txt'
 $ git push
 ```
+
+For more advanced tutorials on file transfer involving RIS, visit: https://docs.ris.wustl.edu/doc/storage/03_storage.html#moving-data-into-the-storage-service.
+
 Now the files you produced on the cluster are now synchronized with the remote repository online. To synchronize the files with your Virtual Machine, you'll need to clone and pull changes from the GitHub repository to your Virual Machine.
 
 ```console
@@ -255,7 +281,7 @@ $ cd projets/lab-11-mlandis
 $ git pull
 ```
 
-That's all we'll cover in this tutorial
+That's all we'll cover in this tutorial. Later labs may use RIS to assemble raw sequence data into genomes. You are certainly encouraged to use RIS or other server resources to complete your course project.
 
 ---
 
