@@ -59,9 +59,9 @@ At the end of the course, each student will deliver a short presentation of thei
 
 Students will describe the scope and goals of their proposed project in a 1-page document. Upload the document to `docs/proposal_yourname_biol4220_F2024.pdf` in your pipeline project repository. This document should be online for meeting with the instructor for project approval. All projects **must get approval from the instructor by Oct 23 2024**. 
 
-For Option 1 projects, the instructor must approve of the 2+ new pipeline features you plan to add and what dataset you plan to analyze.
+For **Phylogenetic Pipeline** projects, the instructor must approve of the 2+ new pipeline features you plan to add and what dataset you plan to analyze.
 
-For Option 2 projects, the instructor must approve the entire project, including the general pipeline that you plan to build and the dataset that you plan to analyze.
+For **Custom Pipelne** projects, the instructor must approve the entire project, including the general pipeline that you plan to build and the dataset that you plan to analyze.
 
 
 ## Important dates
