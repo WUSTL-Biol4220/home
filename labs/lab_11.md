@@ -57,7 +57,7 @@ The user `michael.landis` has access to three major storage directories. First, 
 
 ### Scratch
 
-Each user also has a scratch directory (e.g. `/scratch1/fs1/michael.landis`) which does not have strict size limits, but files are deleted sporadically by RIS administrators and policies. This is typically where you would write output for programs. Important output would be copied to permanent storage before it is automatically deleted by RIS.
+On most clusters, each user also has a scratch directory (e.g. `/scratch1/fs1/michael.landis`) which does not have strict size limits, but files are deleted sporadically by RIS administrators and policies. This is typically where you would write output for programs. Important output would be copied to permanent storage before it is automatically deleted by RIS. *Note: most students will not have access to a scratch space unless they belong to the storage group associated with a research lab.*
 
 ```console
 [michael.landis@compute1-client-1 ~]$ cd /scratch1/fs1/michael.landis
@@ -90,7 +90,7 @@ If you are part of a research team here at WUSTL, you might also have membership
 
 **Where should you store your files?**
 - Use the *home directory for smaller personal files*. You should aim to store less than 1GB in your home directory.
-- Use the *scratch directory for working or temporary files* that are generated as part of an analysis. For example, your code may need to generate and process 10GB of files to produce a small output file with analyzed results. Remember that  need to copy final versions of files to the stable storage directory.
+- Use the *scratch directory for working or temporary files* that are generated as part of an analysis. For example, your code may need to generate and process 10GB of files to produce a small output file with analyzed results. Remember that you need to copy final versions of files to the stable storage directory.
 - Use the *storage directory for large and important files* that should persist on the filesystem. For example, a large 5TB dataset unprocessed raw sequence data that is being analyzed by a team of researchers should be saved in shared storage.
 
 
@@ -257,7 +257,10 @@ $ scp michael.landis@compute1-client-1.ris.wustl.edu:/home/michael.landis/job.lo
 
 **Note:** currently, network restrictions prevent us from copying files directly between our VMs and the RIS servers. We're working on a way to enable this functionality or an alternative method for file transfer.
 
-Another way would be use GitHub to synchronize files on the server with a remote repository
+Another way would be use GitHub to synchronize files on the server with a remote repository. Before using `git` to synchronize files, you'll need to create a new  security key for your RIS session, then share the public key with GitHub. We configured these keys on the first day for your laptops, following these instructions ([link](https://github.com/WUSTL-Biol4220/home/blob/main/how_to_guide.md#add-ssh-key-to-github-account)). Follow these instructions again, this time from within the home directory for an RIS session.
+
+Afterwards, your RIS account should be able to use GitHub. Try running these commands:
+
 ```console
 $ mkdir -p projects
 $ git clone https://github.com/WUSTL-Biol4220/lab-11-mlandis.git projects/lab-11-mlandis
