@@ -255,7 +255,7 @@ $ scp michael.landis@compute1-client-1.ris.wustl.edu:/home/michael.landis/output
 $ scp michael.landis@compute1-client-1.ris.wustl.edu:/home/michael.landis/job.log job.log
 ```
 
-**Note:** currently, network restrictions prevent us from copying files directly between our VMs and the RIS servers. This should be enabled shortly.
+**Note:** currently, network restrictions prevent us from copying files directly between our VMs and the RIS servers. We're working on a way to enable this functionality or an alternative method for file transfer.
 
 Another way would be use GitHub to synchronize files on the server with a remote repository
 ```console
@@ -270,12 +270,9 @@ $ git commit -am 'add log/txt'
 $ git push
 ```
 
-For more advanced tutorials on file transfer involving RIS, visit: https://docs.ris.wustl.edu/doc/storage/03_storage.html#moving-data-into-the-storage-service.
-
-Now the files you produced on the cluster are now synchronized with the remote repository online. To synchronize the files with your Virtual Machine, you'll need to clone and pull changes from the GitHub repository to your Virual Machine.
+Now the files you produced on the cluster are now synchronized with the remote repository online. To synchronize the files with your computer, you'll need to clone and pull changes from the GitHub repository:
 
 ```console
-$ ssh mlandis@128.252.89.47
 $ git clone https://github.com/WUSTL-Biol4220/lab-11-mlandis.git projects/lab-11-mlandis
 $ cd projets/lab-11-mlandis
 $ git pull
@@ -283,6 +280,8 @@ $ git pull
 
 That's all we'll cover in this tutorial. Later labs may use RIS to assemble raw sequence data into genomes. You are certainly encouraged to use RIS or other server resources to complete your course project.
 
+For more advanced tutorials on file transfer involving RIS, visit: https://docs.ris.wustl.edu/doc/storage/03_storage.html#moving-data-into-the-storage-service.
+
 ---
 
-Clone the Lab 12 repo to the cluster, then commit and push `history > history.txt` to the cloned repo to complete the assignment.
+Clone the Lab 11 repo to the cluster, then commit and push `history > history.txt` to the cloned repo to complete the assignment.
