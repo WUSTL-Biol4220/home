@@ -257,7 +257,7 @@ The numbers by the internal nodes in tree are clade support values. Each value r
 
 Run `fasttree` three times against the same dataset, except now you will specify how many bootstrap replicates to use. Provide `-boot 10`, `-boot 1000`, and `-boot 100000` as arguments to run FastTree with different numbers of replicates. Be sure to rename your output accordingly, so as not to overwrite previous results. More bootstrap replicates increases the accuracy of the clade support metrics, but it takes more time.
 
-Compare your results using `nw_display` for the three trees. Pick two clades with high support and two clades with low support for the tree with 100000 bootstrap replicates. Compare those clade support scores against the scores obtained using 10 and 1000 replicates. Do the bootstrap scores tend to increase, decrease, remain the same, or become noisy as you reduce the number of replicates?
+Compare your results using `nw_display` for the three trees. Pick two clades with high support and two clades with low support for the tree with 100000 bootstrap replicates. Compare those clade support scores against the scores obtained using 10 and 1000 replicates. Do the bootstrap scores tend to increase, decrease, remain the same, or become noisy as you reduce the number of replicates? Do you notice anything interesting about the clade support values when only using 10 replicates?
 
 
 
