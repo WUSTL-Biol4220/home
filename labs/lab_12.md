@@ -32,9 +32,9 @@ IQ-Tree (http://www.iqtree.org/) is another phylogenetics package, which special
 
 ```
 $ cd ~/apps
-$ wget https://github.com/Cibiv/IQ-TREE/releases/download/v1.6.12/iqtree-1.6.12-Linux.tar.gz
-$ tar zxvf iqtree-1.6.12-Linux.tar.gz
-$ cp ~/apps/iqtree-1.6.12-Linux/bin/iqtree ~/.local/bin
+$ wget https://github.com/iqtree/iqtree2/releases/download/v2.3.6/iqtree-2.3.6-Linux-intel.tar.gz
+$ tar xzvf iqtree-2.3.6-Linux-intel.tar.gz
+$ cp ~/apps/iqtree-2.3.6-Linux-intel/bin/iqtree2 ~/.local/bin/
 ```
 Documentation for IQ-Tree is located here: http://www.iqtree.org/doc/.
 
@@ -72,6 +72,7 @@ Newick strings are compact and computer-readable formats for storing phylogeneti
 
 For example, suppose we create a file `simple_newick.tre` with the following contents
 ```
+$ echo "((A,B),(C,D));" > simple_newick.tre
 $ cat simple_newick.tre
 ((A,B),(C,D));
 ```
