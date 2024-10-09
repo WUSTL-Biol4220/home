@@ -1,6 +1,6 @@
 # Lab 12
 
-*Lab 12 GitHub Classroom link:* https://classroom.github.com/a/qnMhTqH5
+*Lab 12 GitHub Classroom link:* https://classroom.github.com/a/AG7tF9pq
 
 In this lab, we will learn how to estimate phylogenies from molecular sequence data using a variety of inference methods.
 
@@ -32,9 +32,9 @@ IQ-Tree (http://www.iqtree.org/) is another phylogenetics package, which special
 
 ```
 $ cd ~/apps
-$ wget https://github.com/Cibiv/IQ-TREE/releases/download/v1.6.12/iqtree-1.6.12-Linux.tar.gz
-$ tar zxvf iqtree-1.6.12-Linux.tar.gz
-$ cp ~/apps/iqtree-1.6.12-Linux/bin/iqtree ~/.local/bin
+$ wget https://github.com/iqtree/iqtree2/releases/download/v2.3.6/iqtree-2.3.6-Linux-intel.tar.gz
+$ tar xzvf iqtree-2.3.6-Linux-intel.tar.gz
+$ cp ~/apps/iqtree-2.3.6-Linux-intel/bin/iqtree2 ~/.local/bin/
 ```
 Documentation for IQ-Tree is located here: http://www.iqtree.org/doc/.
 
@@ -72,6 +72,7 @@ Newick strings are compact and computer-readable formats for storing phylogeneti
 
 For example, suppose we create a file `simple_newick.tre` with the following contents
 ```
+$ echo "((A,B),(C,D));" > simple_newick.tre
 $ cat simple_newick.tre
 ((A,B),(C,D));
 ```
@@ -115,6 +116,7 @@ Newick strings typically report richer information, including the amount of mole
 Create a file called `richer_newick.tre` with the following contents:
 
 ```
+$ echo "((A:0.1,B:0.2)0.75:0.3,(C:0.3,D:0.2)0.9:0.2);" > richer_newick.tre
 $ cat richer_newick.tre
 ((A:0.1,B:0.2)0.75:0.3,(C:0.3,D:0.2)0.9:0.2);
 ```
@@ -167,6 +169,9 @@ Read the contents of `richer_newick.tre` carefully and make sure you understand 
 
 In this section, we will familiarize ourselves with the syntax for each for each piece of phylogenetics software. Our example datasets are stored in `data`. We'll store out results in the directory `output` (create as needed).
 
+```console
+$ mkdir output
+```
 
 ### Neighbor-joining with FastTree
 
@@ -192,14 +197,78 @@ $ cat output/primates-JC-NJ.tre
 (Galeopterus_variegatus:0.15599,((Saimiri_sciureus:0.12228,(Aotus_trivirgatus:0.09990,(Cebus_albifrons:0.10231,Callicebus_donacophilus:0.10515)0.589:0.00652)0.804:0.01115)1.000:0.05145,((Hylobates_lar:0.10901,Pan_paniscus:0.08691)0.959:0.01763,(Colobus_guereza:0.11724,(Chlorocebus_aethiops:0.08114,Macaca_mulatta:0.09615)0.990:0.02012)0.989:0.02182)0.999:0.03189)0.999:0.02692,(Daubentonia_madagascariensis:0.12656,((Lepilemur_hubbardorum:0.12315,((Microcebus_murinus:0.11794,Cheirogaleus_major:0.08173)0.958:0.01517,(Propithecus_coquereli:0.09400,(Varecia_variegata_variegata:0.11152,Lemur_catta:0.08932)0.720:0.00770)0.851:0.00814)0.562:0.00333)0.995:0.02072,(Tarsius_syrichta:0.14953,((Loris_tardigradus:0.10023,Nycticebus_coucang:0.10539)0.807:0.00894,(Perodicticus_potto:0.09784,(Galago_senegalensis:0.07533,Otolemur_crassicaudatus:0.08621)0.999:0.02583)0.921:0.01151)0.960:0.01641)0.936:0.01055)0.673:0.00590)0.547:0.00386);
 ```
 
+Study the inferred phylogeny using `nw_display`:
+
+```
+$ nw_display output/primates-JC-NJ.tre
+ +-------------------------------------+ Galeopterus variegatus
+ |
+ |                  +-----------------------------+ Saimiri sciureus
+ |                  |
+ |      +-----------+ 1.000--------------------+ Aotus trivirgatus
+ |      |           |  |
+ |      |           +--++0.804-------------------+ Cebus albifrons
+ |      |              ++ 0.589
+ +------+ 0.999         +-------------------------+ Callicebus donacophilus
+ |      |
+ |      |           +-------------------------+ Hylobates lar
+ |      |      +----+ 0.959
+ |      |      |    +--------------------+ Pan paniscus
+=|      +------+ 0.999
+ |             |     +---------------------------+ Colobus guereza
+ |             |     |
+ |             +-----+ 0.989-----------------+ Chlorocebus aethiops
+ |                   +----+ 0.990
+ |                        +----------------------+ Macaca mulatta
+ |
+ |+------------------------------+ Daubentonia madagascariensis
+ ||
+ ||     +-----------------------------+ Lepilemur hubbardorum
+ ||     |
+ ||     |    +----------------------------+ Microcebus murinus
+ +++0.547+0.9950.958
+  ||    ||   +-------------------+ Cheirogaleus major
+  ||    ++ 0.562
+  ||     | +----------------------+ Propithecus coquereli
+  ||     | |
+  ||     +-+ 0.851----------------------+ Varecia variegata variegata
+  ++ 0.673 +-+ 0.720
+   |         +---------------------+ Lemur catta
+   |
+   |  +-----------------------------------+ Tarsius syrichta
+   |  |
+   |  |     +------------------------+ Loris tardigradus
+   +--+ 0.936 0.807
+      |   | +-------------------------+ Nycticebus coucang
+      +---+ 0.960
+          |  +-----------------------+ Perodicticus potto
+          |  |
+          +--+ 0.921-----------------+ Galago senegalensis
+             +-----+ 0.999
+                   +--------------------+ Otolemur crassicaudatus
+
+ |-----------|-----------|------------|-----------|
+ 0        0.05         0.1         0.15         0.2
+ substitutions/site
+ ```
+
+The numbers by the internal nodes in tree are clade support values. Each value represents the frequency that that clade is recovered using random "bootstrapped" alignments with similar statistical properties as the original alignment. High values mean most aligments recover the same clade. This a random algorithm, so your results should look slightly different from those above. 
+
+Run `fasttree` three times against the same dataset, except now you will specify how many bootstrap replicates to use. Provide `-boot 10`, `-boot 1000`, and `-boot 100000` as arguments to run FastTree with different numbers of replicates. Be sure to rename your output accordingly, so as not to overwrite previous results. More bootstrap replicates increases the accuracy of the clade support metrics, but it takes more time.
+
+Compare your results using `nw_display` for the three trees. Pick two clades with high support and two clades with low support for the tree with 100000 bootstrap replicates. Compare those clade support scores against the scores obtained using 10 and 1000 replicates. Do the bootstrap scores tend to increase, decrease, remain the same, or become noisy as you reduce the number of replicates? Do you notice anything interesting about the clade support values when only using 10 replicates?
+
+
+
+>>>>>>> 839a89b5f26651b2d2c2e2121d7fedc96bc1574e
 ### Maximum likelihood with IQ-Tree 
 
 Now, we will estimate the maximum likelihood tree using IQ-Tree. IQ-Tree offers hundreds of features, but we will explore only a few in this lab. Type `iqtree --help` to review all available features.
 
-Regardless of what features we use, we'll need to specify the input sequence file (`-s data/primates_and_galeopterus_cytb.fasta `). In addition, we will instruct IQ-Tree to use an extremely simple model where all nucleotide substitutions occur at the same rate, and all nucleotides occur at the same frequency in the data (`-m JC+FQ`). To compute clade support metrics, we compute 1000 site-permutation tests (a procedure called *bootstrapping*) to determine whether we would estimate the same phylogeny if we were to hypothetically sample different nucleotides for the same set of taxa (`-bb 1000`). Finally, molecular phylogenetic analyses often infer *unrooted* phylogenies, which disregard the notion of time -- i.e. that one pair of lineages diverged before another pair of lineages. To *root* our phylogeny, we will identify which taxon is most distantly related to all other taxa; this is called the *outgroup*, which in our case is the flying lemur, *Galeopterus variegatus* (`-o Galeopterus_variegatus`). Finally, we will ask IQ-Tree to following our naming scheme for output  files (`-pre output/primates-JC-MLE`):
+Regardless of what features we use, we'll need to specify the input sequence file (`-s data/primates_and_galeopterus_cytb.fasta `). In addition, we will instruct IQ-Tree to use an extremely simple model where all nucleotide substitutions occur at the same rate, and all nucleotides occur at the same frequency in the data (`-m JC+FQ`). We will assume 1000 bootstrap replicates (`-bb 1000`) to measure clade support. Finally, molecular phylogenetic analyses often infer *unrooted* phylogenies, which disregard the notion of time -- i.e. that one pair of lineages diverged before another pair of lineages. To *root* our phylogeny, we will identify which taxon is most distantly related to all other taxa; this is called the *outgroup*, which in our case is the flying lemur, *Galeopterus variegatus* (`-o Galeopterus_variegatus`). Finally, we will ask IQ-Tree to following our naming scheme for output  files (`-pre output/primates-JC-MLE`):
 
 ```
-$ iqtree -s data/primates_and_galeopterus_cytb.fasta -m JC+FQ -bb 1000 -o Galeopterus_variegatus -pre output/primates-JC-MLE
+$ iqtree2 -s data/primates_and_galeopterus_cytb.fasta -m JC+FQ -bb 1000 -o Galeopterus_variegatus -pre output/primates-JC-MLE
 [ ... lots of output ... ]
 Analysis results written to:
   IQ-TREE report:                output/primates-JC-MLE.iqtree
