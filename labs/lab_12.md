@@ -263,7 +263,7 @@ Compare your results using `nw_display` for the three trees. Pick two clades wit
 >>>>>>> 839a89b5f26651b2d2c2e2121d7fedc96bc1574e
 ### Maximum likelihood with IQ-Tree 
 
-Now, we will estimate the maximum likelihood tree using IQ-Tree. IQ-Tree offers hundreds of features, but we will explore only a few in this lab. Type `iqtree --help` to review all available features.
+Now, we will estimate the maximum likelihood tree using IQ-Tree. IQ-Tree offers hundreds of features, but we will explore only a few in this lab. Type ` --help` to review all available features.
 
 Regardless of what features we use, we'll need to specify the input sequence file (`-s data/primates_and_galeopterus_cytb.fasta `). In addition, we will instruct IQ-Tree to use an extremely simple model where all nucleotide substitutions occur at the same rate, and all nucleotides occur at the same frequency in the data (`-m JC+FQ`). We will assume 1000 bootstrap replicates (`-bb 1000`) to measure clade support. Finally, molecular phylogenetic analyses often infer *unrooted* phylogenies, which disregard the notion of time -- i.e. that one pair of lineages diverged before another pair of lineages. To *root* our phylogeny, we will identify which taxon is most distantly related to all other taxa; this is called the *outgroup*, which in our case is the flying lemur, *Galeopterus variegatus* (`-o Galeopterus_variegatus`). Finally, we will ask IQ-Tree to following our naming scheme for output  files (`-pre output/primates-JC-MLE`):
 
@@ -290,7 +290,7 @@ $ cat output/primates-JC-MLE.contree
 
 ### Maximum parsimony with MPBoot
 
-Finally, we will estimate the maximum parsimony tree for primate cytB using `mpboot`. The syntax is very similar to that for `iqtree`, except that parsimony methods do not have evolutionary models, so we do not specify the `-m` option
+Finally, we will estimate the maximum parsimony tree for primate cytB using `mpboot`. The syntax is very similar to that for `iqtree2`, except that parsimony methods do not have evolutionary models, so we do not specify the `-m` option
 
 ```
 mpboot -s data/primates_and_galeopterus_cytb.fasta -bb 1000 -o Galeopterus_variegatus -pre output/primates-MP
@@ -303,7 +303,7 @@ We can now use `nw_display` to visualize the different relationships each method
 Tree estimates can also be compared using *Robinson-Foulds distance* (or RF distance), which essentially measures the number of taxa that would have to be deleted from a pair of trees for the two trees to be identical. The larger the RF score, the more different the two trees are. To (quietly) compute the RF distance between the trees, use the following commands
 
 ```
-$ iqtree -quiet -te output/primates-JC-MLE.contree -rf output/primates-MP.contree -pre output/MLE-MP-RF
+$ iqtree2 -quiet -te output/primates-JC-MLE.contree -rf output/primates-MP.contree -pre output/MLE-MP-RF
 $ cat output/MLE-MP-RF.rfdist
 1 1
 Tree0       2
@@ -315,7 +315,7 @@ This indicates that the maximum likelihood (MLE) and maximum parsimony (MP) tree
 
 ## Scripting phylogenetics analyses
 
-*Part 1.* Write a script called `build_phylo.sh` that accepts a DNA sequence alignment in fasta format as an input argument.  The script will then estimate the phylogeny from that alignment using `fasttree`, `iqtree`, and `mpboot`, using the settings defined in the previous section. Use a variable named `METHOD` to record whether the tree was estimated using neighbor-joining (`NJ`), maximum likelihood (`ML`), or maximum parsimony (`MP`). Store the input filename, except for the `.fasta` file extension, into a variable called e.g. `INPUT_PREFIX`. Then define the variable `OUTPUT_PREFIX` that is equal to `${INPUT_PREFIX}.${METHOD}`.
+*Part 1.* Write a script called `build_phylo.sh` that accepts a DNA sequence alignment in fasta format as an input argument.  The script will then estimate the phylogeny from that alignment using `fasttree`, `iqtree2`, and `mpboot`, using the settings defined in the previous section. Use a variable named `METHOD` to record whether the tree was estimated using neighbor-joining (`NJ`), maximum likelihood (`ML`), or maximum parsimony (`MP`). Store the input filename, except for the `.fasta` file extension, into a variable called e.g. `INPUT_PREFIX`. Then define the variable `OUTPUT_PREFIX` that is equal to `${INPUT_PREFIX}.${METHOD}`.
 
 For each analysis, the script should ensure all standard output from the methods has the prefix `${OUTPUT_PREFIX}`. In addition, save text-plots for each phylogeny into the file `${OUTPUT_PREFIX}.tree_plot.txt` using `nw_display`. Finally, save three files that compute the Robinson-Foulds distance between the pairs trees estimated by the three methods: `${INPUT_PREFIX}.MLE_MP.rfdist`, `${INPUT_PREFIX}.MLE_NJ.rfdist`, and `${INPUT_PREFIX}.MP_NJ.rfdist`.
 
