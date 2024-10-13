@@ -14,9 +14,41 @@ In this lab, we will begin to learn how to program using the Python programming 
 ---
 
 ## Python interpreter
+# Lab 13
 
-Python is an *interpreted* language, where interpreted languages use a program called the interpreter to translate human-readable code into computer-readable commands. There are a variety of useful tools that Python programmers use to run their code. Any computer that has Python installed will also  have the `python` program for interpreting code. The `ipython` program ([link](https://ipython.readthedocs.io/en/stable/)) is another Python shell and interpreter that introduces several user-friendly features, including syntax highlighting, debugger integration, and improved object introspection. We will primarily use `python` and `ipython` in this course. However, many Python programmers prefer to develop using `jupyter` ([link](https://jupyter.org/)), which offers an elegant online interface for managing Python notebooks. Alternatively, many Python developers might prefer to use `conda` ([link](https://docs.conda.io/en/latest/)), which offers a flexible framework for managing and rapidly deploying development environments.
+*Lab 13 GitHub Classroom link:* https://classroom.github.com/a/Oc0PeqPh
 
+In this lab, we will begin to learn how to program using the Python programming language. [Python](https://www.python.org/) is a general-purpose, interpreted, high-level, and scriptable programming language. Language features include a rich package management system, object-oriented design, dynamic typing, and garbage collection. 
+
+1. Python interpreter
+2. Variables
+3. Operators
+4. Containers
+5. Functions
+6. Exercises
+
+---
+
+## Python interpreter
+
+Python is an *interpreted* language, where interpreted languages use a program called the interpreter to translate human-readable code into computer-readable commands. There are a variety of useful tools that Python programmers use to run their code. Any computer that has Python installed will also  have the `python` program for interpreting code. The `ipython` program ([link](https://ipython.readthedocs.io/en/stable/)) is another Python shell and interpreter that introduces several user-friendly features, including syntax highlighting, debugger integration, and improved object introspection. We will primarily use `python` in this course. However, many Python programmers prefer to develop using `jupyter` ([link](https://jupyter.org/)), which offers an elegant online interface for managing Python notebooks. Alternatively, many Python developers might prefer to use `conda` ([link](https://docs.conda.io/en/latest/)), which offers a flexible framework for managing and rapidly deploying development environments.
+
+To begin the lab, log into your virtual machine and open the `python` console:
+
+```python
+>>> 'Hello, world!'           # report value of string in console
+'Hello, world!'
+>>> print('Hello, world!')    # print string literal value to standard output
+Hello, world!
+```
+
+To exit the Python console, type:
+```python
+>>> quit()
+mlandis@ip-172-30-14-77:~$     # returns you to shell command line
+```
+
+<!--
 To begin the lab, log in to your virtual machine. From your home directory, use the package installer for Python (`pip`) to install the interactive Python shell, `ipython`
 
 ```console
@@ -73,6 +105,8 @@ In [4]: quit()
 $
 ```
 
+-->
+
 Now, let's create a Python script. First create a new file call `example.py` that contains the following text
 ```
 #!/usr/bin/python
@@ -100,7 +134,7 @@ Hello, world!
 
 When run in this way, notice that the script only printed `Hello, world!` to standard output in the Unix shell, but the unassigned string value (`'Ahem, can you hear me?'`) does not produce any output.
 
-In this course, we will generally prefer to write our code in source files (`.py`) so that code can be reused and shared, but the command-line interface of `ipython` is often useful for code design, development, and debugging.
+In this course, we will generally prefer to write our code in source files (`.py`) so that code can be reused and shared, but the command-line interface of `python` is often useful for code design, development, and debugging.
 
 ---
 
