@@ -14,22 +14,6 @@ In this lab, we will begin to learn how to program using the Python programming 
 ---
 
 ## Python interpreter
-# Lab 13
-
-*Lab 13 GitHub Classroom link:* https://classroom.github.com/a/Oc0PeqPh
-
-In this lab, we will begin to learn how to program using the Python programming language. [Python](https://www.python.org/) is a general-purpose, interpreted, high-level, and scriptable programming language. Language features include a rich package management system, object-oriented design, dynamic typing, and garbage collection. 
-
-1. Python interpreter
-2. Variables
-3. Operators
-4. Containers
-5. Functions
-6. Exercises
-
----
-
-## Python interpreter
 
 Python is an *interpreted* language, where interpreted languages use a program called the interpreter to translate human-readable code into computer-readable commands. There are a variety of useful tools that Python programmers use to run their code. Any computer that has Python installed will also  have the `python` program for interpreting code. The `ipython` program ([link](https://ipython.readthedocs.io/en/stable/)) is another Python shell and interpreter that introduces several user-friendly features, including syntax highlighting, debugger integration, and improved object introspection. We will primarily use `python` in this course. However, many Python programmers prefer to develop using `jupyter` ([link](https://jupyter.org/)), which offers an elegant online interface for managing Python notebooks. Alternatively, many Python developers might prefer to use `conda` ([link](https://docs.conda.io/en/latest/)), which offers a flexible framework for managing and rapidly deploying development environments.
 
@@ -453,10 +437,18 @@ Write Python code to perform each of the following tasks. Save your solutions fo
 
 - **Problem 2.** Create three variables: `duck`, `chicken`, and `turkey`. Assign each variable an animal sound. Create a fourth variable called `turducken` that concatenates the values of the three variables together, in any order.
 
-<--
-- **Problem 3.**  Define a function called `rate()` that accepts parameters for `distance` and `time`, then returns the ratio of distance over time. Call `rate()` three times using the values `distance=3.0` and `time=1.0`, `distance=4.0` and `time=1.2`, and `distance=5.0` and `time=1.6`. Use an if-statement to find the fastest rate, then print the corresponding `distance`, `time`, and `rate()` values.
+- **Problem 3.** Using a single command, create a dictionary that contains the following information:
+```
+human  GATTACA
+mouse  GCCTATC
+fly    CAGTTAT
+worm   CGTATCA
+```
+where the keys are species names and values are sequence data, and sequence data are stored as lists of length-1 strings. Once you have created the dictionary, make two modifications. Add a new entry for `chimp` with the value `AATGCTA`. Change the middle character for fly and worm to a gap, `-`. Print the list of keys to standard output, then print the list of values to standard output.
 
-- **Problem 4.** Create variables `x` and `z` with numerical values you choose. Write two functions, one called `power(x,z)` and another called `root(x,z)`. Both functions should attempt to cast the `x` and `z` arguments as type float. The function `power(x,z)` should return the value `x` to the `z` power, while `root(x,z)` should return the `z`-th root of its argument `x`. Write a test to validate that the value returned by `power( root(x, z), z)` minus `x` is approximately equal to zero (i.e. within narrow error tolerance of <1E-9).
--->
+- **Problem 4.** Create a list with the lengths of five imaginary genes (in base pairs). You can invent the values for their lengths. Write a few lines of code to calculate and print the total length of all the genes combined, the average gene length, and the difference between the longest and shortest genes.
+Hint: Use the `sum`, `max`, and `min` functions. Use the `help` function to learn how other functions work, e.g. `help(sum)`.
+
+---
 
 To complete the assignment, commit and push all of your Python scripts to your GitHub repository.
