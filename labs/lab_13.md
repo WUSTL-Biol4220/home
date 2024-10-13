@@ -33,6 +33,22 @@ In this lab, we will begin to learn how to program using the Python programming 
 
 Python is an *interpreted* language, where interpreted languages use a program called the interpreter to translate human-readable code into computer-readable commands. There are a variety of useful tools that Python programmers use to run their code. Any computer that has Python installed will also  have the `python` program for interpreting code. The `ipython` program ([link](https://ipython.readthedocs.io/en/stable/)) is another Python shell and interpreter that introduces several user-friendly features, including syntax highlighting, debugger integration, and improved object introspection. We will primarily use `python` in this course. However, many Python programmers prefer to develop using `jupyter` ([link](https://jupyter.org/)), which offers an elegant online interface for managing Python notebooks. Alternatively, many Python developers might prefer to use `conda` ([link](https://docs.conda.io/en/latest/)), which offers a flexible framework for managing and rapidly deploying development environments.
 
+On our virtual machines, the name of the Python executable is `python3`, not `python`:
+```console
+$ which python
+# ... no output
+$ which python3
+/usr/bin/python3
+```
+
+Let's make a symbolic link for our user account so `python` acts as a shortcut to `/usr/bin/python3`:
+```
+$ cd ~/.local/bin
+$ ln -s /usr/bin/python3 python
+/usr/bin/python3
+$ which python
+```
+
 To begin the lab, log into your virtual machine and open the `python` console:
 
 ```python
@@ -118,7 +134,7 @@ print('Hello, world!')
 
 The first line contains a hashbang (`#!`) address that points to a Python interpreter, `/bin/python`. Line three simply constructs a string, while line five prints a string.
 
-You can run the script either by calling `python` or `ipython` as a program and passing the script as an argument
+You can run the script either by calling `python` as a program and passing the script as an argument
 ```console
 $ python example.py
 Hello, world!
@@ -130,6 +146,7 @@ Alternatively, you can set set execution permissions for the script, then run th
 $ chmod +x example.py
 $ ./example.py
 Hello, world!
+$ ./example.py | wc
 ```
 
 When run in this way, notice that the script only printed `Hello, world!` to standard output in the Unix shell, but the unassigned string value (`'Ahem, can you hear me?'`) does not produce any output.
