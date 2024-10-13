@@ -168,7 +168,7 @@ x += 1   # equivalent to x = x + 1
 x *= 2   # equivalent to x = x * 2
 ```
 
-Boolean conditions evaluate an equality statement, then return the boolean value `True` if that statement is true, and `False` otherwise.
+Boolean conditions evaluate an equality statement, then return the boolean value `True` if that statement is true, and `False` otherwise. In the future, we'll use these inequalities as conditions in if-statements.
 
 ```python
 x = 5       # assignment
@@ -181,7 +181,7 @@ x <= (y+3)  # less than or equal to?
 (x-3) >= y  # greater than or equal to?
 ```
 
-Boolean operators are useful for designing complex statements of boolean logic
+Boolean operators are useful for designing complex statements of boolean logic. 
 ```python
 True and True   # AND operator
 True and False  # AND operator
