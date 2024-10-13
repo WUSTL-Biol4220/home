@@ -1,6 +1,6 @@
 # Lab 14
 
-*Lab 14 GitHub Classroom link: TBD
+*Lab 14 GitHub Classroom link:* TBD
 
 In this lab, we will learn how to create and manipulate Python containers, how to use for-loops with containers, and how to pass arguments to a Python script through Unix.
 
