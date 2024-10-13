@@ -1,12 +1,15 @@
-# Lab 12
+# Lab 13
 
-*Lab 12 GitHub Classroom link:* https://classroom.github.com/a/eSpnynzl
+*Lab 13 GitHub Classroom link:* TBD
 
 In this lab, we will begin to learn how to program using the Python programming language. [Python](https://www.python.org/) is a general-purpose, interpreted, high-level, and scriptable programming language. Language features include a rich package management system, object-oriented design, dynamic typing, and garbage collection. 
 
 1. Python interpreter
-2. Variables, operators, if-statements, and functions
-3. Exercises
+2. Variables
+3. Operators
+4. Containers
+5. Functions
+6. Exercises
 
 ---
 
@@ -101,7 +104,7 @@ In this course, we will generally prefer to write our code in source files (`.py
 
 ---
 
-##  Variables, operators, if-statements, and functions
+##  Variables, operators, containers, and functions
 
 In this section, we will explore how to use Python variables, operators, if-statements, and functions in combination to produce complex outcomes. First, we'll review how these four programming concepts work, and what syntax they follow in Python, using the `ipython` console. Then, you will be asked to demonstrate your proficiency implementing these concepts, by writing a Python script that prints responses to a series of simple questions.
 
@@ -197,53 +200,156 @@ x + y           # concatenates 'hello, world!'
 z = x * 3       # repeats 'hello, hello, hello, '
 ```
 
-### If-statements
+---
 
-Python if-statements have two major features: the condition statements and each condition's code block. Python will only execute the code block for the first condition that evaluates as `True` (bool) in a standard if-statement. All if-statements begin with an `if` condition, then are followed by zero or more else-if (`elif`) blocks, and are terminated with zero or one `else` blocks, where the else block is executed only if no other conditions evaluate as `True`.
+### Containers
 
+Containers are variables that *contain* multiple values, called *elements*. Just as there are different primitive datatypes (e.g. `int`, `float`, `str`, `bool`, etc.) there are different container datatypes. In this lab, we'll practice using the two most commonly used Python container types, lists and dictionaries. Lists and dictionaries are especially useful because they are (1) *indexed*, meaning that container elements may be retrieved by providing the "address" or index of an element using the index operator `[]`; and (2) they are *mutable*, meaning that the values of their elements, and even which elements each container contains, may changed after the container is first declared. (The tuple is an example of a list-like container that is *immutable*).
+
+#### Lists
+
+Let's begin by exploring the properties of list variables. A list is a container whose elements are indexed by consecutive integers. From the `ipython` shell, create a new list, then access and modify its contents.
 ```python
-a = 3
-b = 2
-if a > b:
-    print('a > b')
-elif a >= b:
-    print('a >= b') 
-elif a == b:
-    print('a == b')
-else:
-    print('a < b')
-```
-Notice that the first condition (`a > b`) would test for "greater than" before attempting the second condition (`a >= b`), therefore we don't expect the second block to run unless `a==b`. However, if that was `True`, the third condition (`a==b`) would not be run. The fourth condition (`a < b`) is run if the first three conditions evaluate as `False`.
+In [1]: x = [ 0, 1, 2 ]      # creates new list
 
-You can also construct simpler if-statement blocks, as needed, such as
-```python
-a = 3
-b = 2
-if a > b:
-    print('a > b')
-```
+In [2]: x[0]                 # returns value of (first) element at index 0
+Out[2]: 0
 
-and 
+In [3]: print(x[0])          # prints element to stdout
+0
 
-```python
-a = 3
-b = 2
-if a > b:
-    print('a > b')
-elif a < b:
-    print('a < b') 
+In [4]: x[0:2]               # returns values for indices 0 and 1 (not 2)
+Out[4]: [0, 1]
+
+In [5]: x[0] = 10            # assign new value to index-0 element
+
+In [6]: x[1:3] = [ 20, 30 ]  # assign new values to indices 1 and 2 (not 3)
+
+In [7]: x                    # return new values for list
+Out[7]: [10, 20, 30]
+
+In [8]: x[-1]                # return the last value in the list
+Out[8]: 30
 ```
 
-or
+One thing to note is that Python indexes elements in a list starting with the number zero (`0`). This is called *base-0* indexing, and is used in languages including C, C++, and Java.
+
+You will also have noticed that we can access a *range* of list elements using the index-slicing notation, `x[n:m]`. In this case, `n` indexes the first element in the returned range, and `m-1` indexes the final element in the returned range -- i.e. *not* the element at index `m`.
+
+The number of list elements may also be modified with the following commands
+```python
+In [1]: x = ['a', 'b', 'c']
+
+In [2]: x.append('d')     # appends value onto end of list
+
+In [3]: x
+Out[3]: ['a', 'b', 'c', 'd']
+
+In [4]: x.insert(2, 'e')  # inserts value ('e') into index (2)
+
+In [5]: x
+Out[5]: ['a', 'b', 'e', 'c', 'd']
+
+In [6]: x.remove('b')     # removes first variable with value
+
+In [7]: x
+Out[7]: ['a', 'e', 'c', 'd']
+
+In [8]: x.pop(3)          # returns value AND modifies container
+Out[8]: 'd'
+
+In [9]: x
+Out[9]: ['a', 'e', 'c']
+```
+
+Finally, list elements may be rearranged
+```python
+In [1]: x = [ 3, 6, 5, 1, 2 ]
+
+In [2]: x.reverse()       # reverses order of list elements by index
+
+In [3]: x
+Out[3]: [2, 1, 5, 6, 3]
+
+In [4]: x.sort()          # sorts order of list elements by value
+
+In [5]: x
+Out[5]: [1, 2, 3, 5, 6]
+
+In [6]: x.index(5)        # returns index of first element with target value
+Out[6]: 3
+
+In [7]: x.clear()         # erase all elements from container
+
+In [8]: x
+Out[8]: []
+
+```
+
+#### Dictionaries
+Dictionaries (or *dicts*) are containers whose elements are accessed through *key-value* pairs. Dictionaries differ from lists in two important ways: (1) the keys provided to index elements do not need to be integers (`int`); and (2) new dictionary elements are added as-needed during assignment (i.e. no insert or append necessary). 
 
 ```python
-a = 3
-b = 2
-if a > b:
-    print('a > b')
-else:
-    print('a <= b')
+In [1]: x = {'a':1, 'b':2, 'c':3}   # create a new dictionary
+
+In [2]: x
+Out[2]: {'a': 1, 'b': 2, 'c': 3}
+
+In [3]: x['a']                      # access the value with key 'a'
+Out[3]: 1
+
+In [4]: x['d'] = 4                  # create a new value 4 with key 'd'
+
+In [5]: x
+Out[5]: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+In [6]: x['a'] = 0                  # assign 0 to the value with key 'a'
+
+In [7]: x
+Out[7]: {'a': 0, 'b': 2, 'c': 3, 'd': 4}
+
+In [8]: del x['b']                  # delete the first element with key 'b'
+
+In [9]: x
+Out[9]: {'a': 0, 'c': 3, 'd': 4}
 ```
+
+To view ordered lists of a dictionary's keys and values
+```python
+In [1]: x = { 'a':1, 'b':2, 'c':3 }
+
+In [2]: x.keys()                     # return ordered dictionary keys
+Out[2]: dict_keys(['a', 'b', 'c'])
+
+In [3]: x.values()                   # return ordered dictionary values
+Out[3]: dict_values([1, 2, 3])
+
+In [4]: type(x.values())
+Out[4]: dict_values
+
+In [5]: list(x.values())             # convert `dict_values` into type `list`
+Out[5]: [1, 2, 3]
+
+In [6]: type(list(x.values()))
+Out[6]: list
+```
+
+Dictionaries are extremely flexible, but it comes at some cost. Compared with lists, dictionaries may require greater memory usage and induce slower processing times, depending on the task. Code to manipulate and access dictionaries can also be more cumbersome than similar code for lists, because dictionaries impose less internal structure on variables. For example, the dictionaries do not have a compact notation for slicing subsets of elements from the container; for lists, it's quite elegant (e.g. `x[3:6]`).
+
+Finally, containers may treat other containers as elements, making it easy to construct high-dimensional data structures
+```python
+In [1]: x = [[1,2], [3,4]]
+
+In [2]: x[0][1]
+2
+
+In [3]: y = {'a':[1,2], 'b':[3,4]}
+
+In [4]: y['a'][1]
+Out[4]: 2
+```
+
+---
 
 ### Functions
 
@@ -268,25 +374,21 @@ Programmers may define their own custom functions, as follows
 
 ```python
 # define custom function
-def my_function(a, b, c=10):
+def my_function(a, b):
     '''
     Description:
-    This function returns a+c if a>b and returns b+c if a<=b.
+    This function returns a + b^2
     
     Parameters:
-    a (int) : first compared value
-    b (int) : second compared value
-    c (int) : added to larger value when returned
+    a (float) : first compared value
+    b (float) : second compared value
     '''
-    if a > b:
-        return a + c
-    else:
-        return b + c
+    return a + b**2 
         
 # call custom function
-x = my_function( 1, 2, 13 )
+x = my_function( 1.3, 2.2 )
 ```
---
+---
 
 ## Exercises
 
@@ -296,8 +398,10 @@ Write Python code to perform each of the following tasks. Save your solutions fo
 
 - **Problem 2.** Create three variables: `duck`, `chicken`, and `turkey`. Assign each variable an animal sound. Create a fourth variable called `turducken` that concatenates the values of the three variables together, in any order.
 
+<--
 - **Problem 3.**  Define a function called `rate()` that accepts parameters for `distance` and `time`, then returns the ratio of distance over time. Call `rate()` three times using the values `distance=3.0` and `time=1.0`, `distance=4.0` and `time=1.2`, and `distance=5.0` and `time=1.6`. Use an if-statement to find the fastest rate, then print the corresponding `distance`, `time`, and `rate()` values.
 
 - **Problem 4.** Create variables `x` and `z` with numerical values you choose. Write two functions, one called `power(x,z)` and another called `root(x,z)`. Both functions should attempt to cast the `x` and `z` arguments as type float. The function `power(x,z)` should return the value `x` to the `z` power, while `root(x,z)` should return the `z`-th root of its argument `x`. Write a test to validate that the value returned by `power( root(x, z), z)` minus `x` is approximately equal to zero (i.e. within narrow error tolerance of <1E-9).
+-->
 
 To complete the assignment, commit and push all of your Python scripts to your GitHub repository.
