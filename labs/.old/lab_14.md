@@ -1,10 +1,10 @@
-# Lab 13
+# Lab 14
 
-*Lab 13 GitHub Classroom link: https://classroom.github.com/a/5ioSshML*
+*Lab 14 GitHub Classroom link: TBD
 
 In this lab, we will learn how to create and manipulate Python containers, how to use for-loops with containers, and how to pass arguments to a Python script through Unix.
 
-1. Containers
+1. If statements
 2. For-loops
 3. Script arguments
 
@@ -12,151 +12,52 @@ To begin this lab, clone your GitHub assignment repository to your virtual machi
 
 ---
 
-## Containers
+### If-statements
 
-Containers are variables that *contain* multiple values, called *elements*. Just as there are different primitive datatypes (e.g. `int`, `float`, `str`, `bool`, etc.) there are different container datatypes. In this lab, we'll practice using the two most commonly used Python container types, lists and dictionaries. Lists and dictionaries are especially useful because they are (1) *indexed*, meaning that container elements may be retrieved by providing the "address" or index of an element using the index operator `[]`; and (2) they are *mutable*, meaning that the values of their elements, and even which elements each container contains, may changed after the container is first declared. (The tuple is an example of a list-like container that is *immutable*).
+Python if-statements have two major features: the condition statements and each condition's code block. Python will only execute the code block for the first condition that evaluates as `True` (bool) in a standard if-statement. All if-statements begin with an `if` condition, then are followed by zero or more else-if (`elif`) blocks, and are terminated with zero or one `else` blocks, where the else block is executed only if no other conditions evaluate as `True`.
 
-### Lists
-
-Let's begin by exploring the properties of list variables. A list is a container whose elements are indexed by consecutive integers. From the `ipython` shell, create a new list, then access and modify its contents.
 ```python
-In [1]: x = [ 0, 1, 2 ]      # creates new list
+a = 3
+b = 2
+if a > b:
+    print('a > b')
+elif a >= b:
+    print('a >= b') 
+elif a == b:
+    print('a == b')
+else:
+    print('a < b')
+```
+Notice that the first condition (`a > b`) would test for "greater than" before attempting the second condition (`a >= b`), therefore we don't expect the second block to run unless `a==b`. However, if that was `True`, the third condition (`a==b`) would not be run. The fourth condition (`a < b`) is run if the first three conditions evaluate as `False`.
 
-In [2]: x[0]                 # returns value of (first) element at index 0
-Out[2]: 0
-
-In [3]: print(x[0])          # prints element to stdout
-0
-
-In [4]: x[0:2]               # returns values for indices 0 and 1 (not 2)
-Out[4]: [0, 1]
-
-In [5]: x[0] = 10            # assign new value to index-0 element
-
-In [6]: x[1:3] = [ 20, 30 ]  # assign new values to indices 1 and 2 (not 3)
-
-In [7]: x                    # return new values for list
-Out[7]: [10, 20, 30]
-
-In [8]: x[-1]                # return the last value in the list
-Out[8]: 30
+You can also construct simpler if-statement blocks, as needed, such as
+```python
+a = 3
+b = 2
+if a > b:
+    print('a > b')
 ```
 
-One thing to note is that Python indexes elements in a list starting with the number zero (`0`). This is called *base-0* indexing, and is used in languages including C, C++, and Java.
+and 
 
-You will also have noticed that we can access a *range* of list elements using the index-slicing notation, `x[n:m]`. In this case, `n` indexes the first element in the returned range, and `m-1` indexes the final element in the returned range -- i.e. *not* the element at index `m`.
-
-The number of list elements may also be modified with the following commands
 ```python
-In [1]: x = ['a', 'b', 'c']
-
-In [2]: x.append('d')     # appends value onto end of list
-
-In [3]: x
-Out[3]: ['a', 'b', 'c', 'd']
-
-In [4]: x.insert(2, 'e')  # inserts value ('e') into index (2)
-
-In [5]: x
-Out[5]: ['a', 'b', 'e', 'c', 'd']
-
-In [6]: x.remove('b')     # removes first variable with value
-
-In [7]: x
-Out[7]: ['a', 'e', 'c', 'd']
-
-In [8]: x.pop(3)          # returns value AND modifies container
-Out[8]: 'd'
-
-In [9]: x
-Out[9]: ['a', 'e', 'c']
+a = 3
+b = 2
+if a > b:
+    print('a > b')
+elif a < b:
+    print('a < b') 
 ```
 
-Finally, list elements may be rearranged
-```python
-In [1]: x = [ 3, 6, 5, 1, 2 ]
-
-In [2]: x.reverse()       # reverses order of list elements by index
-
-In [3]: x
-Out[3]: [2, 1, 5, 6, 3]
-
-In [4]: x.sort()          # sorts order of list elements by value
-
-In [5]: x
-Out[5]: [1, 2, 3, 5, 6]
-
-In [6]: x.index(5)        # returns index of first element with target value
-Out[6]: 3
-
-In [7]: x.clear()         # erase all elements from container
-
-In [8]: x
-Out[8]: []
-
-```
-
-### Dictionaries
-Dictionaries (or *dicts*) are containers whose elements are accessed through *key-value* pairs. Dictionaries differ from lists in two important ways: (1) the keys provided to index elements do not need to be integers (`int`); and (2) new dictionary elements are added as-needed during assignment (i.e. no insert or append necessary). 
+or
 
 ```python
-In [1]: x = {'a':1, 'b':2, 'c':3}   # create a new dictionary
-
-In [2]: x
-Out[2]: {'a': 1, 'b': 2, 'c': 3}
-
-In [3]: x['a']                      # access the value with key 'a'
-Out[3]: 1
-
-In [4]: x['d'] = 4                  # create a new value 4 with key 'd'
-
-In [5]: x
-Out[5]: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
-
-In [6]: x['a'] = 0                  # assign 0 to the value with key 'a'
-
-In [7]: x
-Out[7]: {'a': 0, 'b': 2, 'c': 3, 'd': 4}
-
-In [8]: del x['b']                  # delete the first element with key 'b'
-
-In [9]: x
-Out[9]: {'a': 0, 'c': 3, 'd': 4}
-```
-
-To view ordered lists of a dictionary's keys and values
-```python
-In [1]: x = { 'a':1, 'b':2, 'c':3 }
-
-In [2]: x.keys()                     # return ordered dictionary keys
-Out[2]: dict_keys(['a', 'b', 'c'])
-
-In [3]: x.values()                   # return ordered dictionary values
-Out[3]: dict_values([1, 2, 3])
-
-In [4]: type(x.values())
-Out[4]: dict_values
-
-In [5]: list(x.values())             # convert `dict_values` into type `list`
-Out[5]: [1, 2, 3]
-
-In [6]: type(list(x.values()))
-Out[6]: list
-```
-
-Dictionaries are extremely flexible, but it comes at some cost. Compared with lists, dictionaries may require greater memory usage and induce slower processing times, depending on the task. Code to manipulate and access dictionaries can also be more cumbersome than similar code for lists, because dictionaries impose less internal structure on variables. For example, the dictionaries do not have a compact notation for slicing subsets of elements from the container; for lists, it's quite elegant (e.g. `x[3:6]`).
-
-Finally, containers may treat other containers as elements, making it easy to construct high-dimensional data structures
-```python
-In [1]: x = [[1,2], [3,4]]
-
-In [2]: x[0][1]
-2
-
-In [3]: y = {'a':[1,2], 'b':[3,4]}
-
-In [4]: y['a'][1]
-Out[4]: 2
+a = 3
+b = 2
+if a > b:
+    print('a > b')
+else:
+    print('a <= b')
 ```
 
 ---
@@ -255,7 +156,7 @@ In [2]: for i,(k,v) in enumerate(x.items()):
 2 c 30
 ```
 
-Finally, for-loops can be nested with other control structures, including other for-loops and if-statements
+For-loops can be nested with other control structures, including other for-loops and if-statements
 
 ```python
 In [1]: x = [[1,2],[3,4]]
@@ -271,6 +172,26 @@ In [2]: for i in x:
 3 is odd
 4 is even
 ```
+
+Below is another example, which only assigns values to new keys in a dictionary. This prevents old keys from being overwritten with new values.
+
+```python
+>>> d = {'dog' : 'woof'}
+>>> 'dog' in d
+True
+>>> 'woof' in d
+False
+>>> animals = ['cat', 'dog']
+>>> sounds = ['meow', 'ruff']
+>>> for i in range(len(sounds)):
+...     if animals[i] not in d:
+...         d[animals[i]] = sounds[i]
+...
+>>> d
+{'dog': 'woof', 'cat': 'meow'}
+```
+
+
 
 ---
 
