@@ -229,7 +229,7 @@ Study the content of `example.py` to understand how to access `sys.argv` element
 
 You will create a separate Python script for each of the following problems. Name the script after which problem it solves, e.g. `problem1.py`.
 
-**Problem 1.** Write a Python script that takes the following matrix, represented as a list (rows) of lists (columns). For the four nucleotides ('a', 'c', 'g', and 't'), each in turn, print out all row-column index pairs that correspond to a given nucleotide.
+**Problem 1.** Write a Python script that summarizes information for the following matrix, represented as a list (rows) of lists (columns).
 
 ```
 x = [ ['a', 'g', 'a', 't', 'c', 'g', 'a'],
@@ -241,10 +241,11 @@ x = [ ['a', 'g', 'a', 't', 'c', 'g', 'a'],
       ['c', 'c', 'a', 'c', 'c', 'g', 'a'] ]
 ```
 
-For example, the output for nucleotide `t` would appear as
+For the four nucleotides ('a', 'c', 'g', and 't'), each in turn, print out all row-column index pairs that correspond to a given nucleotide. For example, the output for nucleotide `t` would appear as
 ```
 't' : (0,3), (2,3), (4,1), (5,0)
 ```
+
 This problem can be solved in multiple ways. One way is to use three nested for-loops, with an if-statement in the innermost loop.
 
 **Problem 2.** Write a Python script that prints all integers between the values of 1 and 100 that are evenly divisible by 2 but are *not* divisible by 3. The easiest way to solve this problem will use a for-loop, 1 or 2 if-statements, and the modulus (`%`) operator.
