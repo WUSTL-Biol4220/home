@@ -1,6 +1,6 @@
 # Lab 13
 
-*Lab 13 GitHub Classroom link:* TBD
+*Lab 13 GitHub Classroom link:* https://classroom.github.com/a/Oc0PeqPh
 
 In this lab, we will begin to learn how to program using the Python programming language. [Python](https://www.python.org/) is a general-purpose, interpreted, high-level, and scriptable programming language. Language features include a rich package management system, object-oriented design, dynamic typing, and garbage collection. 
 
