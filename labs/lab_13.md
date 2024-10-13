@@ -446,7 +446,7 @@ worm   CGTATCA
 ```
 where the keys are species names and values are sequence data, and sequence data are stored as lists of length-1 strings. Once you have created the dictionary, make two modifications. Add a new entry for `chimp` with the value `AATGCTA`. Change the middle character for fly and worm to a gap, `-`. Print the list of keys to standard output, then print the list of values to standard output.
 
-- **Problem 4.** Create a list with the lengths of five imaginary genes (in base pairs). You can invent the values for their lengths. Write a few lines of code to calculate and print the total length of all the genes combined, the average gene length, and the difference between the longest and shortest genes.
+- **Problem 4.** Create a list with the lengths of five genes (in base pairs). Use the values 391, 852, 172, 1414, and 742. Write code to calculate and print the total length of all the genes combined, the average gene length, and the difference between the longest and shortest genes.
 Hint: Use the `sum`, `max`, and `min` functions. Use the `help` function to learn how other functions work, e.g. `help(sum)`.
 
 ---
