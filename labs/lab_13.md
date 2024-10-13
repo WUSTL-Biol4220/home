@@ -146,10 +146,14 @@ Alternatively, you can set set execution permissions for the script, then run th
 $ chmod +x example.py
 $ ./example.py
 Hello, world!
-$ ./example.py | wc
 ```
 
 When run in this way, notice that the script only printed `Hello, world!` to standard output in the Unix shell, but the unassigned string value (`'Ahem, can you hear me?'`) does not produce any output.
+
+```console
+$ ./example.py | wc -2     # should expect that standard output contains two words!
+2
+```
 
 In this course, we will generally prefer to write our code in source files (`.py`) so that code can be reused and shared, but the command-line interface of `python` is often useful for code design, development, and debugging.
 
