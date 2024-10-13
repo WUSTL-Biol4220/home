@@ -14,7 +14,7 @@ To begin this lab, clone your GitHub assignment repository to your virtual machi
 
 ### If-statements
 
-Python if-statements have two major features: the condition statements and each condition's code block. Python will only execute the code block for the first condition that evaluates as `True` (bool) in a standard if-statement. All if-statements begin with an `if` condition, then are followed by zero or more else-if (`elif`) blocks, and are terminated with zero or one `else` blocks, where the else block is executed only if no other conditions evaluate as `True`.
+If-statements are used to execute a block of code *only if* a condition is met. Python if-statements have two major features: the condition statements and each condition's code block. Python will only execute the code block for the first condition that evaluates as `True` (bool) in a standard if-statement. All if-statements begin with an `if` condition. They can be followed by zero or more else-if (`elif`) blocks. These blocks are only executed if the condition is met *and* no previous conditions evaluate as `True`. They can also be terminated with zero or one `else` blocks. The else block is executed only if no previous conditions evaluate as `True`.
 
 ```python
 a = 3
