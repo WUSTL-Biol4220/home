@@ -277,7 +277,7 @@ Now the files you produced on the cluster are now synchronized with the remote r
 
 ```console
 $ git clone git@github.com:WUSTL-Biol4220/lab-11-mlandis.git
-$ cd projets/lab-11-mlandis
+$ cd projects/lab-11-mlandis
 $ git pull
 ```
 
