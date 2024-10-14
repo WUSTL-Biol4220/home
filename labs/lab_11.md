@@ -264,6 +264,7 @@ Afterwards, your RIS account should be able to use GitHub. Try running these com
 ```console
 $ mkdir -p projects
 $ git clone git@github.com:WUSTL-Biol4220/lab-11-mlandis.git
+$ mv ./lab-11-mlandis ./projects/lab-11-mlandis
 $ mv output.txt projects/lab-11-mlandis
 $ mv job.log projects/lab-11-mlandis
 $ cd ~/projects/lab-11-mlandis
@@ -276,8 +277,9 @@ $ git push
 Now the files you produced on the cluster are now synchronized with the remote repository online. To synchronize the files with your computer, you'll need to clone and pull changes from the GitHub repository:
 
 ```console
+$ # navigate to the directory where you store lab repositories
 $ git clone git@github.com:WUSTL-Biol4220/lab-11-mlandis.git
-$ cd projects/lab-11-mlandis
+$ cd lab-11-mlandis
 $ git pull
 ```
 
