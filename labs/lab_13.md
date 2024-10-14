@@ -437,14 +437,14 @@ Write Python code to perform each of the following tasks. Save your solutions fo
 
 - **Problem 2.** Create three variables: `duck`, `chicken`, and `turkey`. Assign each variable an animal sound. Create a fourth variable called `turducken` that concatenates the values of the three variables together, in any order.
 
-- **Problem 3.** Using a single command, create a dictionary that contains the following information:
-```
-human  GATTACA
-mouse  GCCTATC
-fly    CAGTTAT
-worm   CGTATCA
-```
-where the keys are species names and values are sequence data, and sequence data are stored as lists of length-1 strings. Once you have created the dictionary, make two modifications. Add a new entry for `chimp` with the value `AATGCTA`. Change the middle character for fly and worm to a gap, `-`. Print the list of keys to standard output, then print the list of values to standard output.
+-  **Problem 3.** Using a single command, create a dictionary that contains the following information:
+   ```console
+   human  GATTACA
+   mouse  GCCTATC
+   fly    CAGTTAT
+   worm   CGTATCA
+   ```
+   where the keys are species names and values are sequence data, and sequence data are stored as lists of length-1 strings. Once you have created the dictionary, make two modifications. Add a new entry for `chimp` with the value `AATGCTA`. Change the middle character for fly and worm to a gap, `-`. Print the list of keys to standard output, then print the list of values to standard output.
 
 - **Problem 4.** Create a list with the lengths of five genes (in base pairs). Use the values 391, 852, 172, 1414, and 742. Write code to calculate and print the total length of all the genes combined, the average gene length, and the difference between the longest and shortest genes.
 Hint: Use the `sum`, `max`, and `min` functions. Use the `help` function to learn how other functions work, e.g. `help(sum)`.
