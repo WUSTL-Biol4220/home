@@ -109,7 +109,7 @@ $
 
 Now, let's create a Python script. First create a new file call `example.py` that contains the following text
 ```
-#!/usr/bin/python
+#!/usr/bin/python3
 # construct a string
 'Ahem, can you hear me?'
 # print a string
