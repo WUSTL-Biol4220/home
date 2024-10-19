@@ -1,12 +1,13 @@
-# Lab 14
+# Lab 15
 
-*Lab 14 GitHub Classroom link:* https://classroom.github.com/a/JYorMEhR
+*Lab 15 GitHub Classroom link:* 
 
-In this lab, we will learn how to use Python's built-in string manipulation methods, and how to read and write to the filesystem through Python.
+In this lab, we will learn how to use Python modules, how to execute system commands from within the Python shell, and new ways to interact with containers.
 
 1. Strings, revisited
 2. Filesystem
-3. Exercises
+3. Modules
+4. System calls
 
 To begin this lab, clone your GitHub assignment repository to your virtual machine, enter the newly cloned directory, then open the `python` or `ipython` command line interface.
 
@@ -14,7 +15,7 @@ To begin this lab, clone your GitHub assignment repository to your virtual machi
 
 ## Strings, revisited
 
-We initially learned about Python string objects in the earlier Lecture & Lab 08A. Compared to most programming languages, Python strings are extremely easy to work with, in part because Python offers a rich platform of built-in string manipulation tools. We'll learn about some of those tools now.
+We initially learned about Python string objects in an earlier lecture and lab. Compared to most programming languages, Python strings are extremely easy to work with, in part because Python offers a rich platform of built-in string manipulation tools. We'll learn about some of those tools now.
 
 Strings are a Python data type used for representing text. However, in many ways, they also have features that resemble containers of single-character strings. For example, substrings in a Python string may be accessed using the index operator (`x[0]`). Explore how to access single characters and substrings from string objects with the following index operations:
 
@@ -254,19 +255,6 @@ $ cat /home/mlandis/test.txt
 3 of 3
 ```
 
-# Lab 15
-
-*Lab 15 GitHub Classroom link:* https://classroom.github.com/a/ks_b6hBe
-
-In this lab, we will learn how to use Python modules, how to execute system commands from within the Python shell, and new ways to interact with containers.
-
-1. Modules
-2. System calls
-3. Containers, revisited
-4. Exercises
-
-To begin this lab, clone your GitHub assignment repository to your virtual machine, enter the newly cloned directory, then open the `python` or `ipython` command line interface.
-
 ---
 
 ## Modules
@@ -346,6 +334,15 @@ drwxrwxr-x  2 mlandis mlandis 4096 Nov 10 13:38 .
 
 You will create a separate Python script for each of the following problems.
 
+<!--
+**Problem 1.** 
+Write a Python script that accepts a list of words as arguments. The script then constructs a dictionary, that has each of the 26 letters of the alphabet as keys (`A`, `B`, ..., `Z`) and has the list of alphabetically sorted words that begin with each letter as values. For example, if the script was called as `./problem1.py avocado banana alligator` it would create a dictionary with the value
+
+```python
+{ 'A': ['alligator', 'avocado'], 'B': ['banana'], 'C': [], 'D': [], ..., 'Z': [] }
+```
+-->
+
 **Problem 1.** 
 Write a module file called `word.py`. This code will define a function called `mutate(s)` which accepts the string `s` as input and returns a string as output. The `mutate()` function will take the input string, convert it to a list of single-character strings, randomize the order of elements in the character-list using `random.shuffle()`, convert the now-shuffled character-list back into a string, then return that string. The script will also define an if-statement for `if __name__ == '__main__'` that calls `mutate()` for that string, then prints the shuffled string to standard output.
 
@@ -353,50 +350,8 @@ You will need to import `random` to use `random.shuffle()` and `sys` to support 
 
 If done correctly, you should be able to `import word` and call `word.mutate('elephant')` within a Python shell, which might return `'phleetna'` as a randomly shuffled string. Or the module could be called as a Unix script from the command line with `$ ./word.py elephant`, which might return `'taelephn'` as another randomly shuffled string. 
 
-**Problem 2.**
-Write a module file called `seq.py`. The code will be able to launch alignment software using `os.popen` or `subprocess.Popen` and extract some basic information from the resultant alignment. This code will define two functions. The first function will be called `align(filename)`, which will issue a system call to align the fasta file (`filename`) using an alignment program of your choice (e.g. Muscle). The second function will be called `site(filename, i)` which returns a dictionary for the characters found at site-index `i` in the alignment stored in `filename`. The returned dictionary will have the sequence name as the key, and the character for the site-index `i` as the value.
 
-For example, if the fasta file `test.fasta` contained
-```
-> Species_A
-ACGTT
-> Species_B
-ACTTC
-```
-and if `seq.align('test.fasta')` produced the alignment file `test.align.fasta`
-
-```
-> Species_A
-ACGTT-
-> Species_B
-AC-TTC
-```
-then `seq.site('test.align.fasta', 0)` would return `{'Species_A':'A', 'Species_B':'A'}` and `seq.site('test.align.fasta', 2)` would return `{'Species_A':'G', 'Species_B':'-'}`,
-
-To test the `seq` module, try running the methods against a dataset used in a previous lab. A copy of the unaligned `adh.fasta` dataset from Lab 08 can be downloaded using the command `wget https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_15/adh.fasta`.
-
-*Note: MAFFT and other programs require a keypress to complete the process that is executed within Python. In this case, use `subprocess.Popen` which is able to send keyboard signals to the process. For MAFFT, first call the program using `p = subprocess.Popen(args=cmd, stdin=subprocess.PIPE, shell=True)` and then send a keypress with `p.communicate(input=b'\n')` to send an endline character as a byte-string to the process `p`.*
-
----
-
-To complete the lab, commit and push your two scripts and a log of your history to your GitHub repository.
-
-
-## Exercises
-
-You will create a separate Python script for each of the following problems. Name the script after which problem it solves, e.g. `problem1.py`.
-
-**Problem 1.** 
-Write a Python script that accepts a list of words as arguments. The script then constructs a dictionary, that has each of the 26 letters of the alphabet as keys (`A`, `B`, ..., `Z`) and has the list of alphabetically sorted words that begin with each letter as values. For example, if the script was called as `./problem1.py avocado banana alligator` it would create a dictionary with the value
-
-```python
-{ 'A': ['alligator', 'avocado'], 'B': ['banana'], 'C': [], 'D': [], ..., 'Z': [] }
-```
-
-**Problem 2.**
-Write a Python script that reads a csv file with numerical values, performs mathematical operations on each row, then writes the results to a new file. The script is called with `./problem2.py input_file.txt output_file.txt`. Once called, the script splits each line of `input_file.txt` into five separate fields, delimited by the `,` character. Then, those values are stored as floats into a temporary list named `x` and used to compute `y = x[0] + x[1]*x[2] + x[3]*(x[4]**2)`. Finally, the script writes the values of `y` and `x` for each row to the file `output_file.txt`.
-
-**Problem 3.** 
+**Problem 2.** 
 Write a script that reorganizes the sequence data stored among fasta files within a directory. The script will process all files in a directory, then store their contents into a data array (list-of-lists). Each row in the array will correspond to one fasta sequence entry. The first column will give the species name, the second column will given the gene name, the third column will give the sequence length, and the fourth column will give the sequence identity itself. Assume that fasta headers for each sequence in each file follow the format `> species_name, gene_name`, for example `> Homo_sapiens, cytochrome B`, and that the lines immediately following the fasta header are valid sequences for that fasta entry.
 
 For example, suppose the directory `data` contained two files, `data/rbcL.fasta`
@@ -436,4 +391,31 @@ Viburnum_clemensoae,matK,7,CTTAGTA
 Viburnum_dentatum,matK,7,GTTAGTA
 ```
 
-To complete the lab, commit and push your three scripts and your history log to your GitHub repository.
+**Problem 3.**
+Write a module file called `seq.py`. The code will be able to launch alignment software using `os.popen` or `subprocess.Popen` and extract some basic information from the resultant alignment. This code will define two functions. The first function will be called `align(filename)`, which will issue a system call to align the fasta file (`filename`) using an alignment program of your choice (e.g. Muscle). The second function will be called `site(filename, i)` which returns a dictionary for the characters found at site-index `i` in the alignment stored in `filename`. The returned dictionary will have the sequence name as the key, and the character for the site-index `i` as the value.
+
+For example, if the fasta file `test.fasta` contained
+```
+> Species_A
+ACGTT
+> Species_B
+ACTTC
+```
+and if `seq.align('test.fasta')` produced the alignment file `test.align.fasta`
+
+```
+> Species_A
+ACGTT-
+> Species_B
+AC-TTC
+```
+then `seq.site('test.align.fasta', 0)` would return `{'Species_A':'A', 'Species_B':'A'}` and `seq.site('test.align.fasta', 2)` would return `{'Species_A':'G', 'Species_B':'-'}`,
+
+To test the `seq` module, try running the methods against a dataset used in a previous lab. A copy of the unaligned `adh.fasta` dataset from Lab 15 can be downloaded using the command `wget https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_15/adh.fasta`.
+
+*Note: MAFFT and other programs require a keypress to complete the process that is executed within Python. In this case, use `subprocess.Popen` which is able to send keyboard signals to the process. For MAFFT, first call the program using `p = subprocess.Popen(args=cmd, stdin=subprocess.PIPE, shell=True)` and then send a keypress with `p.communicate(input=b'\n')` to send an endline character as a byte-string to the process `p`.*
+
+---
+
+To complete the lab, commit and push your three scripts and a log of your history to your GitHub repository.
+
