@@ -24,9 +24,9 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Mon, Oct 07 | -- | -- | -- | **No class: Fall Break** |
 |         | Wed, Oct 09 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_12.pdf">Lecture 12</a> | [Lab 12](labs/lab_12.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/yang_rannala_2012_nature_reviews_genetics.pdf">phylogenetics paper</a> | Biology: molecular phylogenetics | 
 |         | Mon, Oct 14 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_13.pdf">Lecture 13</a> | [Lab 13](labs/lab_13.md) | CSB 3.1 - 3.3.5, 3.6.1, 4.2.1 | Python: variables, operators,<br>if-statements, functions  |
-|    🐙   | Wed, Oct 16 |<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_14.pdf">Lecture 14</a> | [Lab 14](labs/lab_14.md) | CSB 3.4, 3.6.2                | Python: containers, loops, strings,<br>script arguments |
-|         | Mon, Oct 21 |<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_15.pdf">Lecture 15</a> | Lab 15 | CSB 4.2.2 - 4.4               | Python: file handling, modules,<br>system calls, more with containers |
-|         | Wed, Oct 23 | Lecture 16 | Lab 16 | -- | Biology: sequence stats <br>**Course project: approvals** |
+|         | Wed, Oct 16 |<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_14.pdf">Lecture 14</a> | [Lab 14](labs/lab_14.md) | CSB 3.4, 3.6.2                | Python: containers, loops, strings,<br>script arguments |
+|     🐙  | Mon, Oct 21 |<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_15.pdf">Lecture 15</a> |  [Lab 15](labs/lab_15.md)| CSB 4.2.2 - 4.4               | Python: file handling, modules,<br>system calls, more with containers |
+|         | Wed, Oct 23 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_16.pdf">Lecture 16</a>|  [Lab 16](labs/lab_16.md)| -- | Biology: sequence stats <br>**Course project: approvals** |
 |         | Mon, Oct 28 | Lecture 17 | Lab 17 | -- | Biology: genome assembly I |
 |         | Wed, Oct 30 | Lecture 18 | Lab 18 | -- | Biology: genome assembly II |
 |         | Mon, Nov 04 | Lecture 19 | Lab 19 | CSB 6.4 | Python: Biopython |
