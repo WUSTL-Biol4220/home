@@ -15,7 +15,7 @@ In this lab, we will begin to learn how to program using the Python programming 
 
 ## Python interpreter
 
-Python is an *interpreted* language, where interpreted languages use a program called the interpreter to translate human-readable code into computer-readable commands. There are a variety of useful tools that Python programmers use to run their code. Any computer that has Python installed will also  have the `python` program for interpreting code. The `ipython` program ([link](https://ipython.readthedocs.io/en/stable/)) is another Python shell and interpreter that introduces several user-friendly features, including syntax highlighting, debugger integration, and improved object introspection. We will primarily use `python` in this course. However, many Python programmers prefer to develop using `jupyter` ([link](https://jupyter.org/)), which offers an elegant online interface for managing Python notebooks. Alternatively, many Python developers might prefer to use `conda` ([link](https://docs.conda.io/en/latest/)), which offers a flexible framework for managing and rapidly deploying development environments.
+Python is an *interpreted* language, where interpreted languages use a program called the interpreter to translate human-readable code into computer-readable commands. There are a variety of useful tools that Python programmers use to run their code. Any computer that has Python installed will also  have the `python` program for interpreting code. The `python` program ([link](https://ipython.readthedocs.io/en/stable/)) is another Python shell and interpreter that introduces several user-friendly features, including syntax highlighting, debugger integration, and improved object introspection. We will primarily use `python` in this course. However, many Python programmers prefer to develop using `jupyter` ([link](https://jupyter.org/)), which offers an elegant online interface for managing Python notebooks. Alternatively, many Python developers might prefer to use `conda` ([link](https://docs.conda.io/en/latest/)), which offers a flexible framework for managing and rapidly deploying development environments.
 
 On our virtual machines, the name of the Python executable is `python3`, not `python`:
 ```console
@@ -29,8 +29,8 @@ Let's make a symbolic link for our user account so `python` acts as a shortcut t
 ```
 $ cd ~/.local/bin
 $ ln -s /usr/bin/python3 python
-/usr/bin/python3
 $ which python
+/home/mlandis/.local/bin/python
 ```
 
 To begin the lab, log into your virtual machine and open the `python` console:
@@ -48,31 +48,36 @@ To exit the Python console, type:
 mlandis@ip-172-30-14-77:~$     # returns you to shell command line
 ```
 
-<!--
-To begin the lab, log in to your virtual machine. From your home directory, use the package installer for Python (`pip`) to install the interactive Python shell, `ipython`
-
+To install the IPython console, which has additional features and a nicer interface compared to the default Python console, run the following command:
 ```console
-$ pip install ipython
-Defaulting to user installation because normal site-packages is not writeable
-Requirement already satisfied: ipython in /home/mlandis/.local/lib/python3.8/site-packages (7.17.0)
-Requirement already satisfied: setuptools>=18.5 in /usr/lib/python3/dist-packages (from ipython) (45.2.0)
-...
+$ sudo apt install ipython3
+[sudo] password for mlandis:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  ipython3
+0 upgraded, 1 newly installed, 0 to remove and 189 not upgraded.
+Need to get 4,936 B of archives.
+After this operation, 47.1 kB of additional disk space will be used.
+... more install text ...
 ```
 
-Once `pip` completes the installation of `ipython`, clone your GitHub assignment repository, enter the newly cloned directory, and open the `ipython` console
+As with `python3`, we'll make a symbolic link to run the program as `ipython`:
+```
+$ cd ~/.local/bin
+$ ln -s $(which ipython3) ipython
+$ which ipython
+/home/mlandis/.local/bin/ipython
+```
 
+You can now open the IPython console:
 ```console
 $ ipython
 Python 3.8.5 (default, Jul 28 2020, 12:59:40)
 Type 'copyright', 'credits' or 'license' for more information
 IPython 7.17.0 -- An enhanced Interactive Python. Type '?' for help.
 
-In [1]:
-```
-
-Each line of code you enter into the `ipython` shell will then be executed by the interpreter. Let's begin with the `print()` function.
-
-```
 In [1]: 'Hello, world!'
 Out[1]: 'Hello, world!'
 
@@ -80,9 +85,7 @@ In [2]: print('Hello, world!')
 Hello, world!
 ```
 
-The first command constructs a string with the literal value `Hello, world!`. When we hit enter, that value is declared, but left unassigned, hence it is received by the `Out` prompt. The second command instead calls `print('Hello, world!')`, where `print()` is the function name, and `Hello, world!` is the argument passed to the function (i.e. enclosed by `(...)`); in this second case, the value of `Hello, world!` is printed through standard output, rather than returned to the console.
-
-We can learn more about a function using the `?` or `help()` command
+Within IPython, we can learn more about a function using the `?` or `help()` commands
 
 ```
 In [3]: ?print
@@ -98,18 +101,16 @@ flush: whether to forcibly flush the stream.
 Type:      builtin_function_or_method
 ```
 
-To exit `ipython` (or `python`), simply execute `quit()` and you will return to your Unix shell session
+To exit `ipython`, call `quit()` and you will return to your Unix shell session
 
 ```
 In [4]: quit()
 $
 ```
 
--->
-
 Now, let's create a Python script. First create a new file call `example.py` that contains the following text
 ```
-#!/usr/bin/python
+#!/usr/bin/python3
 # construct a string
 'Ahem, can you hear me?'
 # print a string
@@ -145,7 +146,7 @@ In this course, we will generally prefer to write our code in source files (`.py
 
 ##  Variables, operators, containers, and functions
 
-In this section, we will explore how to use Python variables, operators, if-statements, and functions in combination to produce complex outcomes. First, we'll review how these four programming concepts work, and what syntax they follow in Python, using the `ipython` console. Then, you will be asked to demonstrate your proficiency implementing these concepts, by writing a Python script that prints responses to a series of simple questions.
+In this section, we will explore how to use Python variables, operators, if-statements, and functions in combination to produce complex outcomes. First, we'll review how these four programming concepts work, and what syntax they follow in Python, using `python` or `ipython`. Then, you will be asked to demonstrate your proficiency implementing these concepts, by writing a Python script that prints responses to a series of simple questions.
 
 ### Variables
 
@@ -437,14 +438,14 @@ Write Python code to perform each of the following tasks. Save your solutions fo
 
 - **Problem 2.** Create three variables: `duck`, `chicken`, and `turkey`. Assign each variable an animal sound. Create a fourth variable called `turducken` that concatenates the values of the three variables together, in any order.
 
-- **Problem 3.** Using a single command, create a dictionary that contains the following information:
-```
-human  GATTACA
-mouse  GCCTATC
-fly    CAGTTAT
-worm   CGTATCA
-```
-where the keys are species names and values are sequence data, and sequence data are stored as lists of length-1 strings. Once you have created the dictionary, make two modifications. Add a new entry for `chimp` with the value `AATGCTA`. Change the middle character for fly and worm to a gap, `-`. Print the list of keys to standard output, then print the list of values to standard output.
+-  **Problem 3.** Using a single command, create a dictionary that contains the following information:
+   ```console
+   human  GATTACA
+   mouse  GCCTATC
+   fly    CAGTTAT
+   worm   CGTATCA
+   ```
+   where the keys are species names and values are sequence data, and sequence data are stored as lists of length-1 strings. Once you have created the dictionary, make two modifications. Add a new entry for `chimp` with the value `AATGCTA`. Change the middle character for fly and worm to a gap, `-`. Print the list of keys to standard output, then print the list of values to standard output.
 
 - **Problem 4.** Create a list with the lengths of five genes (in base pairs). Use the values 391, 852, 172, 1414, and 742. Write code to calculate and print the total length of all the genes combined, the average gene length, and the difference between the longest and shortest genes.
 Hint: Use the `sum`, `max`, and `min` functions. Use the `help` function to learn how other functions work, e.g. `help(sum)`.
