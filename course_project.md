@@ -1,6 +1,6 @@
 # Course project
 
-*GitHub Classroom link:* TBD
+*GitHub Classroom link:* https://classroom.github.com/a/sLb0kBoM
 
 ## Overview
 
