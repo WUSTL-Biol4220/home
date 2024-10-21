@@ -277,39 +277,88 @@ $ quast.py -o quast_spades spades/scaffolds.fasta
 
 
 ```console
+#!/bin/bash
+
 ECOLI_DIR="/storage1/fs1/workshops/Active/BIO4220/dataset/ecoli"
 PROJ_DIR="/storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-17-mlandis"
 
+PWD=$(pwd)
 cd $PROJ_DIR
 
-# fastqc: pre-trim quality control
+echo "fastqc: pre-trim quality control"
 mkdir fastqc_raw
 fastqc -t 2 ${ECOLI_DIR}/SRR11874161_1.fastq ${ECOLI_DIR}/SRR11874161_2.fastq -o fastqc_raw
 
-# fastp: trim reads
+echo "fastp: trim reads"
 mkdir fastp
 cd fastp
 fastp --in1 ${ECOLI_DIR}/SRR11874161_1.fastq --in2 ${ECOLI_DIR}/SRR11874161_2.fastq --out1 SRR11874161_trim_1.fastq --out2 SRR11874161_trim_2.fastq > fastp.log
 cd ..
 
-# fastqc: post-trim quality control
+echo "fastqc: post-trim quality control"
 mkdir fastqc_trim
 fastqc -t 2 fastp/SRR11874161_trim_1.fastq fastp/SRR11874161_trim_2.fastq -o fastqc_trim
 
-# minia: contig assembly
+echo "minia: contig assembly"
 mkdir minia
 minia -in fastp/SRR11874161_trim_1.fastq -in fastp/SRR11874161_trim_2.fastq -kmer-size 41 -abundance-min 2 -out minia/minia.41 -nb-cores 2
 
-# spades: contig assembly
+echo "spades: contig assembly"
 mkdir spades
 spades -o spades -1 fastp/SRR11874161_trim_1.fastq -2 fastp/SRR11874161_trim_2.fastq -t 2 -m 8 --only-assembler
 
-# quast: minia contig assembly quality
+echo "quast: minia contig assembly quality"
 quast.py -o quast_minia minia/minia.41.contigs.fa
 
-# quast: spades contig assembly quality
+echo "quast: spades contig assembly quality"
 quast.py -o quast_spades spades/scaffolds.fasta
+
+echo "...done!"
+cd $PWD
 ```
+
+Next make a script to submit the job to a non-interactive queue:
+
+```console
+#!/bin/bash
+bsub -G compute-workshop \
+-cwd /storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-17-mlandis/ \
+-o my_job.stdout.txt \
+-J lab17 \
+-q workshop \
+-n 4 -M 4GB -R "rusage [mem=4GB] span[hosts=1]" \
+-a 'docker(mlandis/biol4220:2024-v1)' /bin/bash /storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-17-mlandis/my_job.sh
+```
+
+Update execute permissions and run the submission script:
+```
+$ chmod +x bsub_job.sh
+$ ./bsub_job.sh
+```
+
+Confirm the job is running:
+```
+$ bjobs
+JOBID   USER    STAT  QUEUE      FROM_HOST   EXEC_HOST   JOB_NAME   SUBMIT_TIME
+790125  michael RUN   workshop   compute1-ex 4*compute1- lab17      Oct 21 01:15
+```
+
+You can monitor progress by looking at the end of the stdout log:
+```console
+$ tail my_job.stdout.txt
+  0:00:41.937    40M / 1G    INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 355)   Extracting unbranching paths
+  0:00:48.899   108M / 1G    INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 374)   Extracting unbranching paths finished. 1019759 sequences extracted
+  0:00:52.523   108M / 1G    INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 310)   Collecting perfect loops
+  0:00:53.845   108M / 1G    INFO   UnbranchingPathExtractor (debruijn_graph_constructor: 343)   Collecting perfect loops finished. 0 loops collected
+  0:00:54.745   364M / 1G    INFO    General                 (stage.cpp                 : 101)   PROCEDURE == Filling coverage indices (PHM)
+  0:00:54.745   364M / 1G    INFO   K-mer Index Building     (kmer_index_builder.hpp    : 301)   Building kmer index
+  0:00:54.745   364M / 1G    INFO   K-mer Index Building     (kmer_index_builder.hpp    : 314)   Building perfect hash indices
+  0:00:56.506   372M / 1G    INFO   K-mer Index Building     (kmer_index_builder.hpp    : 336)   Index built. Total 10256448 bytes occupied (3.70997 bits per kmer).
+  0:00:56.524   460M / 1G    INFO    General                 (construction.cpp          : 388)   Collecting k-mer coverage information from reads, this takes a while.
+  0:01:18.325   460M / 1G    INFO    General                 (construction.cpp          : 508)   Filling coverage and flanking coverage from PHM
+```
+
+Either the job completes or it encounter an error. In either case, reviewing the stdout log will help guide your next steps.
 
 ---
 
