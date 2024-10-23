@@ -413,7 +413,7 @@ ACGTTAA
 > Species_C
 AC-TCAA
 ```
-then `seq.site('test.align.fasta', 0)` would return `{'Species_A':'A', 'Species_B':'A'}` and `seq.site('test.align.fasta', 2)` would return `{'Species_A':'G', 'Species_B':'-'}`,
+then `seq.site('test.align.fasta', 0)` would return `{'Species_A':'A', 'Species_B':'A', 'Species_C':'A'}` and `seq.site('test.align.fasta', 2)` would return `{'Species_A':'G', 'Species_B':'-', 'Species_C':'-'}`,
 
 To test the `seq` module, try running the methods against a dataset used in a previous lab. A copy of the unaligned `adh.fasta` dataset from Lab 15 can be downloaded using the command `wget https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/lab_15/adh.fasta`.
 
