@@ -397,17 +397,21 @@ Write a module file called `seq.py`. The code will be able to launch alignment s
 For example, if the fasta file `test.fasta` contained
 ```
 > Species_A
-ACGTT
+ACGTTAA
 > Species_B
-ACTTC
+ACCAA
+> Species_C
+ACTCAA
 ```
-and if `seq.align('test.fasta')` produced the alignment file `test.align.fasta`
+and if `seq.align('test.fasta')` used *muscle* with default settings to produce the alignment file `test.align.fasta`
 
 ```
-> Species_A
-ACGTT-
 > Species_B
-AC-TTC
+AC--CAA
+> Species_A
+ACGTTAA
+> Species_C
+AC-TCAA
 ```
 then `seq.site('test.align.fasta', 0)` would return `{'Species_A':'A', 'Species_B':'A'}` and `seq.site('test.align.fasta', 2)` would return `{'Species_A':'G', 'Species_B':'-'}`,
 
