@@ -1,6 +1,6 @@
 # Lab 18
 
-*Lab 18 GitHub Classroom link:* TBD
+*Lab 18 GitHub Classroom link:* https://classroom.github.com/a/LDp-UZQK
 
 We'll learn how to access a Jupyter session that is hosted on a remote computer, and how to produce Matplotlib visualizations using Jupyter notebooks.
 
