@@ -10,7 +10,7 @@ This lab will cover the following topics
 2. Using Jupyter
 3. Matplotlib
 
-Follow the instructions in this lab to generate five standard Matplotlib plots in a Jupyter notebook. To complete this assignment, submit your Jupyter notebook file (`lab-19.ipynb`) through GitHub Classroom.
+Follow the instructions in this lab to generate five standard Matplotlib plots in a Jupyter notebook. To complete this assignment, submit your Jupyter notebook file (`lab-18.ipynb`) through GitHub Classroom.
 
 ---
 
@@ -131,7 +131,7 @@ $ pip install matplotlib
 
 As we'd done in the previous section, we'll continue to use Jupyter notebooks to generate Matplotlib visualizations through our remote virtual machines that we can view from our personal computers. 
 
-First, create a new notebook called `lab-19.ipynb` through the Jupyter Notebook interface. In the first cell, we will import all the libraries we'll use in the remaining cells, and set the random seed for the analysis. What is the random seed? When computers generate "random" numbers, the random numbers are in fact a sequence of pseudorandom numbers, where each value in the sequence is perfectly determined by a starting value, known as the *random number seed*.
+First, create a new notebook called `lab-18.ipynb` through the Jupyter Notebook interface. In the first cell, we will import all the libraries we'll use in the remaining cells, and set the random seed for the analysis. What is the random seed? When computers generate "random" numbers, the random numbers are in fact a sequence of pseudorandom numbers, where each value in the sequence is perfectly determined by a starting value, known as the *random number seed*.
 
 ```python
 # Import libraries
@@ -289,4 +289,4 @@ plt.show()
 
 ---
 
-Save and close the Jupyter notebook after you have generated each of the above plots. Once closed, commit and push the `lab-19.ipynb` file that you saved to your GitHub repository.
+Save and close the Jupyter notebook after you have generated each of the above plots. Once closed, commit and push the `lab-18.ipynb` file that you saved to your GitHub repository.
