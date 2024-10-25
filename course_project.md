@@ -1,6 +1,6 @@
 # Course project
 
-*GitHub Classroom link:* TBD
+*GitHub Classroom link:* https://classroom.github.com/a/sLb0kBoM
 
 ## Overview
 
@@ -19,12 +19,12 @@ Each step of the pipeline must run as an independent script or program. As such,
 Students will submit their pipeline projects using a GitHub repository. Create your repository using this GitHub Classroom link (see top of page). This will create a new repository for your user account the location e.g. https://github.com/WUSTL-Biol4220/biol4220-pipeline-project-mlandis that can be viewed by the course instructors.
  
 Each repository will contain all the relevant files needed for a naive user to analyze a provided dataset, or a new dataset. Project repositories must contain the following files:
-  - pipeline scripts
-  - input dataset
-  - analysis output
-  - pipeline manual
-  - analysis report
-  - presentation slides
+  - pipeline scripts (in `./scripts`)
+  - input dataset (in `./data`)
+  - analysis output (in `./output`)
+  - pipeline manual (in `./docs`)
+  - analysis report (in `./docs`)
+  - presentation slides (in `./docs`)
   
 These materials are described in more detail below.
 
