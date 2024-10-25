@@ -1,6 +1,6 @@
 # Lab 17
 
-*Lab 17 GitHub Classroom link:* TBD
+*Lab 17 GitHub Classroom link:* https://classroom.github.com/a/EPLy9U3o
 
 In this lab, we will learn how to use the Biopython library.
 
