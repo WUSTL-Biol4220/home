@@ -226,8 +226,6 @@ TCTCCTC seq4
 
 ## Exercises
 
-You will create a separate Python script for each of the following problems.
-
 Write a module file called `biopython_stats.py`. The module will define several functions to read a sequence aligment of nucleotides, to translate the codons into amino acids depending on the reading frame, to classify amino acids into classes of physicochemical properties, and to report codon usage frequencies per amino acid.
 
 **Part 1.** Write a function called `read_alignment(filename)` that accepts the name for a fasta-formatted sequence alignment of DNA as input. The function will read the file using the function  `AlignIO.read(filename, "fasta")`, translate the codons into amino acids, and return the amino acid alignment.
