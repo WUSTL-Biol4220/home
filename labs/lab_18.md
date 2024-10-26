@@ -18,20 +18,11 @@ Follow the instructions in this lab to generate five standard Matplotlib plots i
 
 Jupyter is a platform for hosting interactive and web-accessible programming notebooks. Jupyter notebooks act as a programming environment, playing a role similar to a standard `python` or `ipython` shell session. Jupyter notebooks also allow the programmer to enter commands, have access to local filesystem objects, and report output to the programmer. Rather than entering commands through a terminal session, Jupyter notebooks are accessed through a standard webpage browser and edited through a GUI.
 
-By default, `jupyter` is not installed on most operating systems, including the Ubuntu installation on the virtual machines. To install the Python `jupyter` package on your virtual machine, using the `pip` installer
+By default, `jupyter` is not installed on most operating systems, including the Ubuntu installation on the virtual machines. To install the Python `jupyter` package on your virtual machine, type:
 ```console
-$ pip install jupyter
-Defaulting to user installation because normal site-packages is not writeable
-Collecting jupyter
-  Downloading jupyter-1.0.0-py2.py3-none-any.whl (2.7 kB)
-Requirement already satisfied: ipykernel in ./.local/lib/python3.8/site-packages (from jupyter) (5.3.4)
-Collecting jupyter-console
-  Downloading jupyter_console-6.2.0-py3-none-any.whl (22 kB)
-
+$ sudo apt-get install jupyter
 ... installing ...
-
 ```
-
 
 Next, navigate to your lab assignment repository, then call the following command to begin hosting Jupyter notebook services
 
