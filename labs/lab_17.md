@@ -1,6 +1,19 @@
 # Lab 17
 
-> *Mon Oct 28 2024: two parts of this lab have been corrected to work with the newest version of Biopython. First, the `y = x.tomutable()` and `z = y.toseq()` methods were removed from Biopython. Instead, types should be converted using `y = MutableSeq(x)` and `z = Seq(y)`. Second, the `GC()` function that reports the percent of GC sites in the sequence data was renamed to `gc_fraction()` and now reports GC content as a fraction. You now import the function as `from Bio.SeqUtils import gc_fraction`.*
+> *Mon Oct 28 2024: two parts of this lab have been corrected to work with the newest version of Biopython. First, the `.tomutable()` and `.toseq()` methods were removed from the library. Instead, you can convert between types using the class constructors:*
+>```
+>from Bio.Seq import Seq, MutableSeq
+>x = Seq('ACGT')
+>y = MutableSeq(x)
+>z = Seq(y)
+>```
+> *Second, the `GC()` function that reports the percent of GC sites in the sequence data was renamed to `gc_fraction()` and now reports GC content as a fraction. You now import the function as `from Bio.SeqUtils import gc_fraction`.*
+>```
+>>>> from Bio.SeqUtils import gc_fraction
+>>>> my_seq = Seq('ACGTC')
+>>>> gc_fraction(my_seq)
+>0.6
+>```
 
 *Lab 17 GitHub Classroom link:* https://classroom.github.com/a/EPLy9U3o
 
