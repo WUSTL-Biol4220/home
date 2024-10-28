@@ -1,5 +1,7 @@
 # Lab 17
 
+> *Note, two parts of this lab have been corrected to work with the newest version of Biopython. First, the `y = x.tomutable()` and `z = y.toseq()` methods were removed from Biopython. Instead, types should be converted using `y = MutableSeq(x)` and `z = Seq(y)`. Second, the `GC()` function that reports the percent of GC sites in the sequence data was renamed to `gc_fraction()` and now reports GC content as a fraction. You now import the function as `from Bio.SeqUtils import gc_fraction`.*
+
 *Lab 17 GitHub Classroom link:* https://classroom.github.com/a/EPLy9U3o
 
 In this lab, we will learn how to use the Biopython library.
@@ -93,9 +95,9 @@ Seq('GATCGATGGGCCTATATAGGATCGAAAATCGC')
 Seq('CTAGCTACCCGGATATATCCTAGCTTTTAGCG')
 >>> my_seq.reverse_complement()  # return reverse-complement
 Seq('GCGATTTTCGATCCTATATAGGCCCATCGATC')
->>> from Bio.SeqUtils import GC
->>> GC(my_seq)                   # what is the GC content?
-46.875
+>>> from Bio.SeqUtils import gc_fraction
+>>> gc_fraction(my_seq)                   # what is the GC content?
+0.46875
 ```
 
 Recall the Central Dogma of Molecular Biology, which explains how DNA is converted into protein: DNA sequences are transcribed into RNA, and RNA sequences are translated (as codons) into amino acid sequences. `Seq` objects possess transcription and translation methods that modify sequence content accordingly. The `.translate()` method allows you to specify which genetic code is used for translation (see below), and to terminate amino acid sequenced upon translating the first stop codon under that genetic code.
