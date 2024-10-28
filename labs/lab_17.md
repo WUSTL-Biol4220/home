@@ -67,17 +67,18 @@ Seq('GATCGATNNNNNNNTATAGGA')
 
 
 ```python
+>>> from Bio.Seq import MutableSeq
 >>> my_seq                         # create sequence
 Seq('GATTACA')
 >>> my_seq[0] = 'C'                # attempt to modify seq
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: 'Seq' object does not support item assignment
->>> mut_seq = my_seq.tomutable()   # convert to mutable seq
+>>> mut_seq = MutableSeq(my_seq)   # convert to mutable seq
 >>> mut_seq[0] = 'C'               # modify seq successfuly
 >>> mut_seq
 MutableSeq('CATTACA')
->>> new_seq = mut_seq.toseq()      # convert to immutable seq
+>>> new_seq = Seq(mut_seq)         # convert to immutable seq
 >>> new_seq
 Seq('CATTACA')
 ```
