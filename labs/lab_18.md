@@ -113,13 +113,6 @@ When you are done editing your notebook, click Logout in the upper-right corner 
 
 [Matplotlib](https://matplotlib.org/) is an open source Python library for visualizations. The library comes with a superb [User's Guide](https://matplotlib.org/users/index.html) to help new Matplotlib programmers become familiar with the library's features. Matplotlib also publishes a [gallery](https://matplotlib.org/gallery/index.html) of attractive figures, along with the code that was used to produce the images. When browsing the online documentation, note that most Matplotlib functions are encoded as hyperlinks; clicking those links will provide you with more information about what the function does, what arguments it accepts, and what output to expect.
 
-
-You will need to install Matplotlib on your virtual machine before proceeding
-
-```
-$ pip install matplotlib
-```
-
 As we'd done in the previous section, we'll continue to use Jupyter notebooks to generate Matplotlib visualizations through our remote virtual machines that we can view from our personal computers. 
 
 First, create a new notebook called `lab-18.ipynb` through the Jupyter Notebook interface. In the first cell, we will import all the libraries we'll use in the remaining cells, and set the random seed for the analysis. What is the random seed? When computers generate "random" numbers, the random numbers are in fact a sequence of pseudorandom numbers, where each value in the sequence is perfectly determined by a starting value, known as the *random number seed*.
