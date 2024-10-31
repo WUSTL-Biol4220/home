@@ -1,6 +1,6 @@
 # Lab 18
 
-*Lab 18 GitHub Classroom link:* TBD
+*Lab 18 GitHub Classroom link:* https://classroom.github.com/a/LDp-UZQK
 
 We'll learn how to access a Jupyter session that is hosted on a remote computer, and how to produce Matplotlib visualizations using Jupyter notebooks.
 
@@ -10,7 +10,7 @@ This lab will cover the following topics
 2. Using Jupyter
 3. Matplotlib
 
-Follow the instructions in this lab to generate five standard Matplotlib plots in a Jupyter notebook. To complete this assignment, submit your Jupyter notebook file (`lab-19.ipynb`) through GitHub Classroom.
+Follow the instructions in this lab to generate five standard Matplotlib plots in a Jupyter notebook. To complete this assignment, submit your Jupyter notebook file (`lab-18.ipynb`) through GitHub Classroom.
 
 ---
 
@@ -18,20 +18,11 @@ Follow the instructions in this lab to generate five standard Matplotlib plots i
 
 Jupyter is a platform for hosting interactive and web-accessible programming notebooks. Jupyter notebooks act as a programming environment, playing a role similar to a standard `python` or `ipython` shell session. Jupyter notebooks also allow the programmer to enter commands, have access to local filesystem objects, and report output to the programmer. Rather than entering commands through a terminal session, Jupyter notebooks are accessed through a standard webpage browser and edited through a GUI.
 
-By default, `jupyter` is not installed on most operating systems, including the Ubuntu installation on the virtual machines. To install the Python `jupyter` package on your virtual machine, using the `pip` installer
+By default, `jupyter` is not installed on most operating systems, including the Ubuntu installation on the virtual machines. To install the Python `jupyter` package on your virtual machine, type:
 ```console
-$ pip install jupyter
-Defaulting to user installation because normal site-packages is not writeable
-Collecting jupyter
-  Downloading jupyter-1.0.0-py2.py3-none-any.whl (2.7 kB)
-Requirement already satisfied: ipykernel in ./.local/lib/python3.8/site-packages (from jupyter) (5.3.4)
-Collecting jupyter-console
-  Downloading jupyter_console-6.2.0-py3-none-any.whl (22 kB)
-
+$ sudo apt-get install jupyter
 ... installing ...
-
 ```
-
 
 Next, navigate to your lab assignment repository, then call the following command to begin hosting Jupyter notebook services
 
@@ -122,16 +113,9 @@ When you are done editing your notebook, click Logout in the upper-right corner 
 
 [Matplotlib](https://matplotlib.org/) is an open source Python library for visualizations. The library comes with a superb [User's Guide](https://matplotlib.org/users/index.html) to help new Matplotlib programmers become familiar with the library's features. Matplotlib also publishes a [gallery](https://matplotlib.org/gallery/index.html) of attractive figures, along with the code that was used to produce the images. When browsing the online documentation, note that most Matplotlib functions are encoded as hyperlinks; clicking those links will provide you with more information about what the function does, what arguments it accepts, and what output to expect.
 
-
-You will need to install Matplotlib on your virtual machine before proceeding
-
-```
-$ pip install matplotlib
-```
-
 As we'd done in the previous section, we'll continue to use Jupyter notebooks to generate Matplotlib visualizations through our remote virtual machines that we can view from our personal computers. 
 
-First, create a new notebook called `lab-19.ipynb` through the Jupyter Notebook interface. In the first cell, we will import all the libraries we'll use in the remaining cells, and set the random seed for the analysis. What is the random seed? When computers generate "random" numbers, the random numbers are in fact a sequence of pseudorandom numbers, where each value in the sequence is perfectly determined by a starting value, known as the *random number seed*.
+First, create a new notebook called `lab-18.ipynb` through the Jupyter Notebook interface. In the first cell, we will import all the libraries we'll use in the remaining cells, and set the random seed for the analysis. What is the random seed? When computers generate "random" numbers, the random numbers are in fact a sequence of pseudorandom numbers, where each value in the sequence is perfectly determined by a starting value, known as the *random number seed*.
 
 ```python
 # Import libraries
@@ -289,4 +273,4 @@ plt.show()
 
 ---
 
-Save and close the Jupyter notebook after you have generated each of the above plots. Once closed, commit and push the `lab-19.ipynb` file that you saved to your GitHub repository.
+Save and close the Jupyter notebook after you have generated each of the above plots. Once closed, commit and push the `lab-18.ipynb` file that you saved to your GitHub repository.

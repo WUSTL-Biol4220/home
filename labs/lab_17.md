@@ -1,6 +1,20 @@
 # Lab 17
 
-*Lab 17 GitHub Classroom link:* TBD
+> *Mon Oct 28 2024: several parts of this lab have been corrected to work with the newest version of Biopython. First, the `.tomutable()` and `.toseq()` methods were removed from the library. Instead, you can convert between types using the class constructors:*
+>```
+>from Bio.Seq import Seq, MutableSeq
+>x = Seq('ACGT')
+>y = MutableSeq(x)
+>z = Seq(y)
+>```
+> *Second, the `GC()` function that reports the percent of GC sites in the sequence data was renamed to `gc_fraction()` and now reports GC content as a fraction. You now import the function as `from Bio.SeqUtils import gc_fraction`.*
+>```
+>from Bio.SeqUtils import gc_fraction
+>my_seq = Seq('ACGTC')
+>gc_fraction(my_seq)
+>```
+
+*Lab 17 GitHub Classroom link:* https://classroom.github.com/a/EPLy9U3o
 
 In this lab, we will learn how to use the Biopython library.
 
@@ -67,17 +81,18 @@ Seq('GATCGATNNNNNNNTATAGGA')
 
 
 ```python
+>>> from Bio.Seq import MutableSeq
 >>> my_seq                         # create sequence
 Seq('GATTACA')
 >>> my_seq[0] = 'C'                # attempt to modify seq
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: 'Seq' object does not support item assignment
->>> mut_seq = my_seq.tomutable()   # convert to mutable seq
+>>> mut_seq = MutableSeq(my_seq)   # convert to mutable seq
 >>> mut_seq[0] = 'C'               # modify seq successfuly
 >>> mut_seq
 MutableSeq('CATTACA')
->>> new_seq = mut_seq.toseq()      # convert to immutable seq
+>>> new_seq = Seq(mut_seq)         # convert to immutable seq
 >>> new_seq
 Seq('CATTACA')
 ```
@@ -92,9 +107,9 @@ Seq('GATCGATGGGCCTATATAGGATCGAAAATCGC')
 Seq('CTAGCTACCCGGATATATCCTAGCTTTTAGCG')
 >>> my_seq.reverse_complement()  # return reverse-complement
 Seq('GCGATTTTCGATCCTATATAGGCCCATCGATC')
->>> from Bio.SeqUtils import GC
->>> GC(my_seq)                   # what is the GC content?
-46.875
+>>> from Bio.SeqUtils import gc_fraction
+>>> gc_fraction(my_seq)                   # what is the GC content?
+0.46875
 ```
 
 Recall the Central Dogma of Molecular Biology, which explains how DNA is converted into protein: DNA sequences are transcribed into RNA, and RNA sequences are translated (as codons) into amino acid sequences. `Seq` objects possess transcription and translation methods that modify sequence content accordingly. The `.translate()` method allows you to specify which genetic code is used for translation (see below), and to terminate amino acid sequenced upon translating the first stop codon under that genetic code.
@@ -204,6 +219,7 @@ TG Species_C
 
 ```python
 >>> from Bio.Align import MultipleSeqAlignment
+>>> from Bio.SeqRecord import SeqRecord
 >>> alignment = MultipleSeqAlignment(
 ...     [
 ...         SeqRecord(Seq("ACTCCTA"), id='seq1'),
@@ -225,10 +241,6 @@ TCTCCTC seq4
 ```
 
 ## Exercises
-
-(*Important: The example output shown below uses sequence data from an example fasta file. The original example.fasta file packaged with this assignment differed slightly in its sequence content. To exactly reproduce the example results, replace the contents of example.fasta with the text below.)
-
-You will create a separate Python script for each of the following problems.
 
 Write a module file called `biopython_stats.py`. The module will define several functions to read a sequence aligment of nucleotides, to translate the codons into amino acids depending on the reading frame, to classify amino acids into classes of physicochemical properties, and to report codon usage frequencies per amino acid.
 
@@ -262,7 +274,7 @@ Species_C : SI
 Species_D : SL
 ```
 
-(**Bonus problem.** Real world alignments often contain gap characters (`-`), but Biopython cannot translate a codon that contain gaps. Modify your `read_alignment()` method to drop codon-site columns that contain gaps.)
+(**Optional bonus problem.** Real world alignments often contain gap characters (`-`), but Biopython cannot translate a codon that contain gaps. Modify your `read_alignment()` method to drop codon-site columns that contain gaps.)
 
 **Part 2.** Write a function called `find_physicochemical_seq(aa_alignment)` that identifies the physicochemical properties for each amino acid in the alignment. The `aa_alignment` argument is an alignment of amino acids, similar to that output by `read_alignment()`. Below is a list of amino acid properties, and the amino acids with that property.
 
@@ -327,7 +339,7 @@ the function would return the dictionary-of-dictionaries
 ```
 where the first key gives the amino acid, the second key gives the codon translated into that amino acid, and the second key's value gives the count for how many times that particular codon appears in the sequence alignment. By listing codons with counts of 0, the dictionary can easily be used to test for codon usage bias, if so desired.
 
-(**Bonus problem.** Let `codon_usage_bias()` accept an argument `frame_shift` that "shifts" the reading frame from to the right by 0, 1, or 2 sites. Do your molecular statistics codon usage bias change in response to different `frame_shift` values?)
+(**Optional bonus problem.** Let `codon_usage_bias()` accept an argument `frame_shift` that "shifts" the reading frame from to the right by 0, 1, or 2 sites. Do your molecular statistics codon usage bias change in response to different `frame_shift` values?)
 
 To complete the lab, commit and push your `biopython_stats.py` and `history.txt` files to your GitHub repository.
 
