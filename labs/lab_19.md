@@ -79,7 +79,7 @@ LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/worksho
 Let's create temporary variables to help locate filesystem objects for this lab (you could add these to your `.bash_profile` using `export` if you want):
 ```console
 $ ECOLI_DIR="$STORAGE/dataset/ecoli"
-$ PROJ_DIR="$STORAGE/users/michael.landis/lab-17-mlandis"
+$ PROJ_DIR="$STORAGE/users/michael.landis/lab-19-mlandis"
 $ echo $ECOLI_DIR
 $ echo $PROJ_DIR
 ```
@@ -89,7 +89,7 @@ Lastly, you will make a directory to store your work in the Storage directory fo
 ```console
 $ mkdir -p users/michael.landis
 $ cd users/michael.landis
-$ git clone git@github.com:WUSTL-Biol4220/lab-17-mlandis.git
+$ git clone git@github.com:WUSTL-Biol4220/lab-19-mlandis.git
 ```
 
 Cluster jobs will be able to write to the Storage directory. 
@@ -400,7 +400,9 @@ $ samtools tview minia.55.aligned_reads_sorted.bam
 
 Press the `?` key to see options for using *samtools tview*:
 
-<img src="https://github.com/WUSTL-Biol4220/home/blob/main/assets/lab_19/tview.png" width="350"/>
+<img src="https://github.com/WUSTL-Biol4220/home/blob/main/assets/lab_19/tview.png" width="550"/>
+
+This lets you view your assembled reads!
 
 ---
 
@@ -411,7 +413,7 @@ Press the `?` key to see options for using *samtools tview*:
 #!/bin/bash
 
 ECOLI_DIR="/storage1/fs1/workshops/Active/BIO4220/dataset/ecoli"
-PROJ_DIR="/storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-17-mlandis"
+PROJ_DIR="/storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-19-mlandis"
 
 PWD=$(pwd)
 cd $PROJ_DIR
@@ -438,12 +440,6 @@ echo "spades: contig assembly"
 mkdir spades
 spades -o spades -1 fastp/SRR11874161_trim_1.fastq -2 fastp/SRR11874161_trim_2.fastq -t 2 -m 8 --only-assembler
 
-echo "quast: minia contig assembly quality"
-quast.py -o quast_minia minia/minia.41.contigs.fa
-
-echo "quast: spades contig assembly quality"
-quast.py -o quast_spades spades/scaffolds.fasta
-
 echo "...done!"
 cd $PWD
 ```
@@ -453,12 +449,12 @@ Next make a script to submit the job to a non-interactive queue:
 ```console
 #!/bin/bash
 bsub -G compute-workshop \
--cwd /storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-17-mlandis/ \
+-cwd /storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-19-mlandis/ \
 -o my_job.stdout.txt \
--J lab17 \
+-J lab19 \
 -q workshop \
 -n 4 -M 4GB -R "rusage [mem=4GB] span[hosts=1]" \
--a 'docker(mlandis/biol4220:2024-v1)' /bin/bash /storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-17-mlandis/my_job.sh
+-a 'docker(mlandis/biol4220:2024-v1)' /bin/bash /storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-19-mlandis/my_job.sh
 ```
 
 Update execute permissions and run the submission script:
@@ -471,7 +467,7 @@ Confirm the job is running:
 ```
 $ bjobs
 JOBID   USER    STAT  QUEUE      FROM_HOST   EXEC_HOST   JOB_NAME   SUBMIT_TIME
-790125  michael RUN   workshop   compute1-ex 4*compute1- lab17      Oct 21 01:15
+790125  michael RUN   workshop   compute1-ex 4*compute1- lab19      Oct 21 01:15
 ```
 
 You can monitor progress by looking at the end of the stdout log:
