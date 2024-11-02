@@ -400,7 +400,7 @@ $ samtools tview minia.55.aligned_reads_sorted.bam
 
 Press the `?` key to see options for using *samtools tview*:
 
-<img src="/assets/lab_19/tview.png"/>
+<img src="https://github.com/WUSTL-Biol4220/home/blob/main/assets/lab_19/tview.png" width="350"/>
 
 ---
 
