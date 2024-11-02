@@ -385,20 +385,22 @@ $ samtools coverage bowtie/minia.55.aligned_reads_sorted.bam >
 bowtie/minia.55.coverage.txt
 ```
 
-Compared to the *samtools* program, *assembly_stats* reports a simpler and more concise set of assembly statistics:
+Compared to the *samtools* program, *assembly_stats* reports a simpler and more-concise set of assembly statistics:
 
 ```console
 $ assembly_stats minia/minia.55.contigs.fa
 ```
 
-One last 
+You can visually inspect your assembly using the *samtools tview* command, after first creating a bam index file (*.bai*):
 
 ```console
-$ quast.py -o quast_minia minia/minia.41.contigs.fa
+$ samtools index minia.55.aligned_reads_sorted.bam
+$ samtools tview minia.55.aligned_reads_sorted.bam
 ```
 
+Press the `?` key to see options for using *samtools tview*:
 
-
+<img src="/assets/lab_19/tview.png"/>
 
 ---
 
@@ -493,23 +495,11 @@ Either the job completes or it encounter an error. In either case, reviewing the
 
 ## Exercises
 
-No exercises for Lab 17! Spend your extra time working on your course project.
-
-<!--
-Go through all the steps through an interactive session. Write a bash script called `job.sh` that will submit to process all tasks using a non-interactive session. Make sure the job produces a file named `job.log` for you to use for debugging.
-
-Design the script so user arguments can modify these important analysis parameters:
-```
-```
-
-What do you notice about quality when you run X?
-
-What do you notice about quality when you run Y?
--->
+No exercises for Lab 19! Spend your extra time working on your course project.
 
 ---
 
-Clone the Lab 17 repo to the cluster. Commit and push the `job.sh` and `job.log`, and `history > history.txt` to the cloned repo to complete the assignment.
+Clone the Lab 19 repo to the cluster. Commit and push the `job.sh` and `job.log`, and `history > history.txt` to the cloned repo to complete the assignment.
 
 
 
