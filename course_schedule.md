@@ -29,8 +29,8 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Wed, Oct 23 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_16.pdf">Lecture 16</a>|  [Lab 16](labs/lab_16.md)| -- | Biology: sequence stats <br>**Course project: approvals** |
 |         | Mon, Oct 28 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_17.pdf">Lecture 17</a>|  [Lab 17](labs/lab_17.md) | CSB 6.4 | Python: Biopython |
 |         | Wed, Oct 30 |  <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_18.pdf">Lecture 18</a>|  [Lab 18](labs/lab_18.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">data viz paper</a> | Python: Jupyter, Matplotlib<br>**Course project: check-in** |
-|    🐙   | Mon, Nov 04 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_19.pdf">Lecture 19</a> | Lab 19 | -- | Biology: genome assembly |
-|         | Wed, Nov 06 | -- | -- | -- | **Course project: free day** |
+|    🐙   | Mon, Nov 04 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_19.pdf">Lecture 19</a> | [Lab 19](labs/lab_19.md) | -- | Biology: genome assembly |
+|         | Wed, Nov 06 | -- | -- | -- | **Course project: free day**<br>(no quiz) |
 |         | Mon, Nov 11 | Lecture 21 | Lab 21 | CSB 6.1 - 6.2.2 | Python: NumPy   |
 |         | Wed, Nov 13 | Lecture 22 | Lab 22 | CSB 6.3 | Python: Pandas  |
 |         | Mon, Nov 18 | Lecture 23 | Lab 23 | -- | Biology: protein evolution |
