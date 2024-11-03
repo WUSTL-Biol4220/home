@@ -1,6 +1,6 @@
 # Lab 19
 
-*Lab 19 GitHub Classroom link:* TBD
+*Lab 19 GitHub Classroom link:* https://classroom.github.com/a/jqa2Qk3p
 
 In this lab, we'll learn how assemble a genome using an Illumina short read dataset. The main steps will be:
 
