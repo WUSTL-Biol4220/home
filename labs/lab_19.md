@@ -1,6 +1,6 @@
 # Lab 19
 
-*Lab 19 GitHub Classroom link:* TBD
+*Lab 19 GitHub Classroom link:* https://classroom.github.com/a/jqa2Qk3p
 
 In this lab, we'll learn how assemble a genome using an Illumina short read dataset. The main steps will be:
 
@@ -400,7 +400,9 @@ $ samtools tview minia.55.aligned_reads_sorted.bam
 
 Press the `?` key to see options for using *samtools tview*. You can use the `h`, `l`, `j`, and `k` keys to navigate in the display. The number of reads stacked vertically against each site is the depth.
 
-<img src="https://github.com/WUSTL-Biol4220/home/blob/main/assets/lab_19/tview.png" width="350"/>
+<img src="https://github.com/WUSTL-Biol4220/home/blob/main/assets/lab_19/tview.png" width="550"/>
+
+This lets you view your assembled reads!
 
 You should now have a better understanding for how short reads are processed for genome assembly.
 
