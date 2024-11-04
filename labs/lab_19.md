@@ -26,9 +26,9 @@ $ ssh michael.landis@compute1-client-1.ris.wustl.edu
 Once logged in, add these line to the end of `~/.bash_profile`
 
 ```console
-export STORAGE="/storage1/fs1/workshops/Active/BIO4220"
-alias bsub-is="LSF_DOCKER_VOLUMES='${STORAGE}:${STORAGE}' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(ubuntu)' /bin/bash"
-alias bsub-is-4220="LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash"
+echo "export STORAGE=\"/storage1/fs1/workshops/Active/BIO4220\"" >> ~/.bash_profile
+echo "alias bsub-is=\"LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(ubuntu)' /bin/bash\"" >> ~/.bash_profile
+echo "alias bsub-is-4220=\"LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash\"" >> ~/.bash_profile
 ```
 
 The line with `export STORAGE` creates a variable to shared storage directory for our class. The lines that begin with `alias` create names that behave like commands for starting different kinds of interactive cluster jobs.
