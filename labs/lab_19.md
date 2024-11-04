@@ -72,7 +72,6 @@ michael.landis@compute1-exec-76:~$ bowtie2 --version
 You can also submit a job to LSF using `bsub` as follows:
 
 ```console
-# make a script
 LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash
 ```
 
