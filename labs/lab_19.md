@@ -83,7 +83,7 @@ $ echo $ECOLI_DIR
 $ echo $PROJ_DIR
 ```
 
-Lastly, you will make a directory to store your work in the Storage directory for the class.
+Lastly, you will make a directory to store your work in the Storage directory for the class. The example below uses `michael.landis` but instead you should provide your username.
 
 ```console
 $ mkdir -p users/michael.landis
