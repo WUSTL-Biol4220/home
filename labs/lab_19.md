@@ -185,7 +185,6 @@ Now unzip the results and inspect the data table:
 
 ```console
 $ unzip fastqc_raw/SRR11874161_1_fastqc.zip
-$ cd SRR11874161_1_fastqc
 $ less SRR11874161_1_fastqc/fastqc_data.txt
 ```
 
