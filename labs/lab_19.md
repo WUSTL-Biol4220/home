@@ -360,12 +360,18 @@ $ mkdir -p bowtie
 $ bowtie2-build ./minia/minia.55.contigs.fa ./bowtie/minia.55.contigs_index
 ```
 
-Then we map our reads against the new index (this can take a little while):
+Then we map our reads against the new index (this may take up to 10 minutes):
 ```console
 $ bowtie2 -x bowtie/minia.55.contigs_index \
              -1 fastp/SRR11874161_trim_1.fastq \
              -2 fastp/SRR11874161_trim_2.fastq \
              -S bowtie/minia.55.aligned_reads.sam
+```
+
+While you're waiting, you can open a second shell session and monitor that file size to see that it is increasing:
+```
+$ cd $STORAGE/users/michael.landis/lab-19-mlandis
+$ ls -lart bowtie/minia.55.aligned_reads.sam
 ```
 
 Now we can use *samtools* to generate a table of read depth across the contigs. First, we convert our human-readable sam file into a compact and sorted bam file:
