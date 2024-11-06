@@ -26,9 +26,9 @@ $ ssh michael.landis@compute1-client-1.ris.wustl.edu
 Once logged in, add these line to the end of `~/.bash_profile`
 
 ```console
-export STORAGE="/storage1/fs1/workshops/Active/BIO4220"
-alias bsub-is="LSF_DOCKER_VOLUMES='${STORAGE}:${STORAGE}' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(ubuntu)' /bin/bash"
-alias bsub-is-4220="LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:latest)' /bin/bash"
+echo "export STORAGE=\"/storage1/fs1/workshops/Active/BIO4220\"" >> ~/.bash_profile
+echo "alias bsub-is=\"LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(ubuntu)' /bin/bash\"" >> ~/.bash_profile
+echo "alias bsub-is-4220=\"LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash\"" >> ~/.bash_profile
 ```
 
 The line with `export STORAGE` creates a variable to shared storage directory for our class. The lines that begin with `alias` create names that behave like commands for starting different kinds of interactive cluster jobs.
@@ -72,8 +72,7 @@ michael.landis@compute1-exec-76:~$ bowtie2 --version
 You can also submit a job to LSF using `bsub` as follows:
 
 ```console
-# make a script
-LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:latest)' /bin/bash
+LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash
 ```
 
 Let's create temporary variables to help locate filesystem objects for this lab (you could add these to your `.bash_profile` using `export` if you want):
@@ -84,7 +83,7 @@ $ echo $ECOLI_DIR
 $ echo $PROJ_DIR
 ```
 
-Lastly, you will make a directory to store your work in the Storage directory for the class.
+Lastly, you will make a directory to store your work in the Storage directory for the class. The example below uses `michael.landis` but instead you should provide your username.
 
 ```console
 $ mkdir -p users/michael.landis
@@ -186,7 +185,6 @@ Now unzip the results and inspect the data table:
 
 ```console
 $ unzip fastqc_raw/SRR11874161_1_fastqc.zip
-$ cd SRR11874161_1_fastqc
 $ less SRR11874161_1_fastqc/fastqc_data.txt
 ```
 
@@ -362,12 +360,18 @@ $ mkdir -p bowtie
 $ bowtie2-build ./minia/minia.55.contigs.fa ./bowtie/minia.55.contigs_index
 ```
 
-Then we map our reads against the new index (this can take a little while):
+Then we map our reads against the new index (this may take up to 10 minutes):
 ```console
 $ bowtie2 -x bowtie/minia.55.contigs_index \
              -1 fastp/SRR11874161_trim_1.fastq \
              -2 fastp/SRR11874161_trim_2.fastq \
              -S bowtie/minia.55.aligned_reads.sam
+```
+
+While you're waiting, you can open a second shell session and monitor that file size to see that it is increasing:
+```
+$ cd $STORAGE/users/michael.landis/lab-19-mlandis
+$ ls -lart bowtie/minia.55.aligned_reads.sam
 ```
 
 Now we can use *samtools* to generate a table of read depth across the contigs. First, we convert our human-readable sam file into a compact and sorted bam file:
