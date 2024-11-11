@@ -38,7 +38,7 @@ Before we explore features of NumPy and its `ndarray` class, let us first observ
 <class 'numpy.ndarray'>
 >>> x.dtype                 # container dtype is 64-bit integer
 dtype('int64')
->>> type(x[0])              # element type is 64-bit integer
+>>> type(x[0,0])            # element type is 64-bit integer
 <class 'numpy.int64'>
 >>> x.tolist()              # convert to standard list-of-lists
 [[1, 2, 3], [4, 5, 6]]
