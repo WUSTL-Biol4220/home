@@ -1,14 +1,14 @@
 # Lab 20
 
-*Lab 20 GitHub Classroom link:* https://classroom.github.com/a/6bNZOj-N
+*Lab 20 GitHub Classroom link:* https://classroom.github.com/a/9JVD6x9T
 
-This lab will introduce to the numerical analysis library, NumPy, with an emphasis on how to create, access, manipulate, and compute with `numpy.array` data structures. To complete this assignment, finish the exercises in a Jupyter notebook (`lab-20.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 19](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_19.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
+This lab will introduce to the numerical analysis library, NumPy, with an emphasis on how to create, access, manipulate, and compute with `numpy.array` data structures. To complete this assignment, finish the exercises in a Jupyter notebook (`lab-20.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 18](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_18.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
 
 ---
 
 ## NumPy
 
-[NumPy]() is a Python library that specializes in providing data types and functions that enable rapid processing of numerical data. The NumPy library is at the center of scientific computing ecosystem in Python, and as such, many other scientific libraries depend on NumPy data structures and/or functions. (We saw that the Matplotlib gallery examples from Lab 12A used NumPy random number generators to produce "toy" datasets.)
+[NumPy]() is a Python library that specializes in providing data types and functions that enable rapid processing of numerical data. The NumPy library is at the center of scientific computing ecosystem in Python, and as such, many other scientific libraries depend on NumPy data structures and/or functions. (We saw that the Matplotlib gallery examples from Lab 18 used NumPy random number generators to produce "toy" datasets.)
 
 Place each of the following code-blocks into its own Jupyter cell.
 

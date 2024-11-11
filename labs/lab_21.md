@@ -1,8 +1,8 @@
 # Lab 21
 
-*Lab 21 GitHub Classroom link:* https://classroom.github.com/a/ac78egGK
+*Lab 21 GitHub Classroom link:* https://classroom.github.com/a/xR77oxGg
 
-This lab will explore how to work with data tables through the Python package, Pandas. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-22.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 19](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_19.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
+This lab will explore how to work with data tables through the Python package, Pandas. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-21.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 18](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_18.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
 
 ---
 
