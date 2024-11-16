@@ -53,7 +53,7 @@ Let's begin by running a `codeml` analysis to detect site-specific positive sele
 $ cd ~/labs/lab-22-mlandis/examples/HIVNSsites
 $ codeml
 
-CODONML in paml version 4.9j, February 2020
+CODONML in paml version 4.10.6, November 2022
 
 ----------------------------------------------
 Phe F TTT | Ser S TCT | Tyr Y TAT | Cys C TGT
