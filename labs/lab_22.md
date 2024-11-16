@@ -18,24 +18,22 @@ To begin this lab, clone your GitHub assignment repository to your virtual machi
 
 PAML is written in the programming language C. C programs must be compiled into executable binaries in order to run. Let's install it now.
 
-Log on to your virtual machine, enter the `~/apps` directory, then download the most recent version of PAML using `wget` from the following URL: http://abacus.gene.ucl.ac.uk/software/paml4.9j.tgz. Once downloaded, we can follow the Unix installation instructions for PAML, given [here](http://abacus.gene.ucl.ac.uk/software/paml.html#download). 
-
+Log on to your virtual machine, enter the `~/apps` directory, then clone the most recent version of the PAML repository:
 ```console
-$ tar zxvf paml4.9j.tgz      # decompress PAML tarball
-... unzips ~100 files ...
-$ cd paml4.9j/src            # enter PAML source code dir            
+$ git clone git@github.com:abacus-gene/paml.git
+$ cd paml/src
 $ make -f Makefile           # this compiles the PAML binaries
 cc  -O3 -o baseml baseml.c tools.c -lm
 ... followed by ~5 minutes of compiler output ...
 ```
 
-Now, we will clean up the PAML binaries, first by deleting the Windows executables (`.exe`), then moving the newly build binaries, and finally by adding the new `codeml` program to `~/.local/bin`. Recall that `~/.local/bin` is identified in the environment variable, `PATH`, as defined by `~/.bash_profile`.
+Now, we'll store the newly built binaries in a new directory and then link the new `codeml` program to `~/.local/bin`. Recall that `~/.local/bin` is identified in the environment variable, `PATH`, as defined by `~/.bash_profile`.
 
 ```console
-$ rm ../bin/*.exe
-$ mv baseml basemlg codeml pamp evolver yn00 chi2 ../bin
+$ mkdir ../bin
+$ mv baseml basemlg codeml pamp evolver yn00 chi2 infinitesites mcmctree ../bin
 $ cd ~/.local/bin
-$ ln -s ~/apps/paml4.9j/bin/codeml .
+$ ln -s ~/apps/paml/bin/codeml .
 $ which codeml
 /home/mlandis/.local/bin/codeml
 ```
