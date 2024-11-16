@@ -2,7 +2,7 @@
 
 *Lab 21 GitHub Classroom link:* https://classroom.github.com/a/xR77oxGg
 
-This lab will explore how to work with data tables through the Python package, Pandas. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-21.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 18](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_18.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
+This lab will explore how to work with data tables through the Python package, Pandas. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-21.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 21](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_21.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
 
 ---
 
@@ -66,7 +66,6 @@ Pandas will display larger data tables in an abbreviated format. (Notice `codon`
 
 Part of what makes Pandas so useful is that it allows programmers to easily import/export data tables across a wide variety of formats. In effect, this makes it easy to explore datasets using Python without needing to write custom data parsers.
 
-Note: .to_excel requires the openpyxl packages. Open a terminal and enter 'pip install openpyxl'
 
 ```python
 >>> # read data into new DataFrame
