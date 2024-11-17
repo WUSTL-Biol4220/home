@@ -381,7 +381,7 @@ What does all of this mean? This first model assumes all sites evolve under the 
 
 ## Scripting with PAML (optional)
 
-*Note: This exercise is optional, but will be useful for students building a molecular phylogenetics pipeline for the course project. ** 
+*Note: This exercise is optional, but will be useful for students building a molecular phylogenetics pipeline for the course project.*
 
 As flexible as PAML is for modeling, it is somewhat limited in terms of how it accepts input and how it prints output. We will write a Python script that accepts user arguments as input, runs a PAML analysis under those settings, then generates output datafiles that are easily parsed.
 
