@@ -33,8 +33,8 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Wed, Nov 06 | -- | -- | -- | **Course project: free day**<br>(no quiz) |
 |         | Mon, Nov 11 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_20.pdf">Lecture 20</a> | [Lab 20](labs/lab_20.md) | CSB 6.1 - 6.2.2 | Python: NumPy   |
 |         | Wed, Nov 13 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_21.pdf">Lecture 21</a> | [Lab 21](labs/lab_21.md) | CSB 6.3 | Python: Pandas  |
-|    🐙   | Mon, Nov 18 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_22.pdf">Lecture 22</a> | [Lab 22](labs/lab_22.md) | -- | Biology: protein evolution |
-|         | Wed, Nov 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_23.pdf">Lecture 23</a> | [Lab 23](labs/lab_23.md) | CSB 6.2.3 - 6.2.5 | Python: SciPy <br>**Course project: check-in**|
+|         | Mon, Nov 18 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_22.pdf">Lecture 22</a> | [Lab 22](labs/lab_22.md) | -- | Biology: protein evolution |
+|    🐙   | Wed, Nov 20 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_23.pdf">Lecture 23</a> | [Lab 23](labs/lab_23.md) | CSB 6.2.3 - 6.2.5 | Python: SciPy <br>**Course project: check-in**|
 |         | Mon, Nov 25 | -- | -- | -- | Free day to work on projects  |
 |         | Wed, Nov 27 | -- | -- | -- | **No class: Thanksgiving** |
 |         | Mon, Dec 02 | -- | -- | -- | **Course project:**<br>**presentations 1 to 8**  |
