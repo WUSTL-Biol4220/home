@@ -137,7 +137,7 @@ The log file should report
 
 ## 4. `make_phylo.sh`
 
-*(Relevant labs and lectures: 11)*
+*(Relevant labs and lectures: 12)*
 
 This script will estimate a phylogeny from a multiple sequence alignment.
 
@@ -203,7 +203,7 @@ where `prefix` is the alignment name except the file extension (`.fasta`) e.g. `
 
 ## 6. `make_dnds.py`
 
-*(Relevant labs and lectures: 18)*
+*(Relevant labs and lectures: 22)*
 
 The `make_dnds.sh` script will test for the molecular signature of positive selection using the modeling software, PAML. 
 
@@ -213,7 +213,7 @@ The `make_dnds.sh` script will test for the molecular signature of positive sele
 
 ### Behavior
 
-This script accepts a multiple sequence alignment and a phylogenetic tree as input to process using PAML. PAML settings are managed through a control file ([codeml.ctl](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/codeml.ctl)), where the appropriate filenames will need to be assigned based on the `make_dnds.py` arguments. Note that the provided control file applies the model settings `NSsites = 0 1 2`, as was done in Lab 11A.
+This script accepts a multiple sequence alignment and a phylogenetic tree as input to process using PAML. PAML settings are managed through a control file ([codeml.ctl](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/codeml.ctl)), where the appropriate filenames will need to be assigned based on the `make_dnds.py` arguments. Note that the provided control file applies the model settings `NSsites = 0 1 2`, as was done in Lab 22.
 
 PAML will not accept a standard fasta file as input. Instead, PAML uses a custom format, where the first row contains two numbers -- the number of sequences, and the number of sites per sequence -- and each following row gives the sequence name, followed by the sequence content. This [file](https://raw.githubusercontent.com/WUSTL-Biol4220/home/master/assets/course_project/example_convert_paml.py) contains modifiable code for converting fasta formatted files into PAML format.
 
