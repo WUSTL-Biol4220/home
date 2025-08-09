@@ -5,11 +5,11 @@ Links for Labs will be added when they are assigned. Free Writing assignments ta
 
 Reading assignments from [*Computing Skills for Biologists*](https://computingskillsforbiologists.com/) (Allesina & Wilmes) are identified by the CSB prefix followed by the pages or sections. Students are encouraged to read through the exercises at the end of each CSB chapter we read. Similar questions may appear on Quizzes.
 
-The 🐙 marker tells us how we're progressing through the semester.
+The 🪲 marker tells us how we're progressing through the semester.
 
 |         | date        | lecture | lab     | reading | topics |
 | :-:     | :--         | :-      |   :-    | :--     | :--    |
-|         | Mon, Aug 25 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_01.pdf">Lecture 01</a> | [Lab 01](labs/lab_01.md) | CSB 0.1 - 0.5 | Unix: orientation |
+|    🪲   | Mon, Aug 25 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_01.pdf">Lecture 01</a> | [Lab 01](labs/lab_01.md) | CSB 0.1 - 0.5 | Unix: orientation |
 |         | Wed, Aug 27 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_02.pdf">Lecture 02</a> | [Lab 02](labs/lab_02.md) | CSB 1.1 - 1.5.1 | Unix: commands, filesystem |
 |         | Mon, Sep 01 | -- | -- | -- | **No class: Labor Day** |
 |         | Wed, Sep 03 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_03.pdf">Lecture 03</a> | [Lab 03](labs/lab_03.md) | CSB 2.1 - 2.5 | Unix: git |
