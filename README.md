@@ -1,4 +1,4 @@
-## Fall 2024
+## Fall 2025
 
 <img src="assets/home/biol4220_logo_trim.png" width="350"/>
 
@@ -13,7 +13,7 @@
 
 ### Course info
 
-* Class hours: 8:30am - 12:00pm on Mon + Wed
+* Class hours: 9:00am - 12:00pm on Mon + Wed
 * Class room: Life Sciences, Room 117 (Computer Lab)
 
 
@@ -23,11 +23,11 @@ Instructor
 * Name: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
-* Drop-in hours: Tuesdays 1pm - 2pm
+* Drop-in hours: TBD
 * Drop-in hours location: Rebstock 210
 
 Graduate Student Instructor
-* Name: Raymond Castillo
-* Email: c.raymond@wustl.edu
-* Drop-in hours: Thursdays 2pm - 3pm & Fridays 10am - 11am 
-* Drop-in hours location: Thursday - Life Sciences 106 & Friday - Rebstock 210
+* Name: Jillian Cieslik
+* Email: c.jillian@wustl.edu
+* Drop-in hours: TBD
+* Drop-in hours location: TBD
