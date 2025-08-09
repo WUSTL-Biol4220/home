@@ -37,5 +37,5 @@ The 🐙 marker tells us how we're progressing through the semester.
 |         | Wed, Nov 19 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_23.pdf">Lecture 23</a> | [Lab 23](labs/lab_23.md) | CSB 6.2.3 - 6.2.5 | Python: SciPy <br>**Course project: check-in**|
 |         | Mon, Nov 24 | -- | -- | -- | Free day to work on projects  |
 |         | Wed, Nov 26 | -- | -- | -- | **No class: Thanksgiving** |
-|         | Mon, Dec 01 | -- | -- | -- | **Course project:**<br>**presentations 1 to 8**  |
-|         | Wed, Dec 03 | -- | -- | -- | **Course project:**<br>**presentations 9 to 16**  |
+|         | Mon, Dec 01 | -- | -- | -- | **Course project:**<br>**presentations 1 to 10**  |
+|         | Wed, Dec 03 | -- | -- | -- | **Course project:**<br>**presentations 11 to 20**  |
