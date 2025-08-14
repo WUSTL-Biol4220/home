@@ -5,7 +5,7 @@
 ### Course resources
 
 * [Schedule](course_schedule.md) (lectures and labs)
-* [Canvas](https://wustl.instructure.com/courses/93893)
+* [Canvas](https://wustl.instructure.com/courses/156756)
 * [Syllabus](https://docs.google.com/document/d/18XjvAN-bNOjOb5Tw7I3SZVj6xxkeIE-YL4qInpbYtF8)
 * [Course Project](course_project.md)
 * ["How To" guide](how_to_guide.md)
