@@ -1,0 +1,549 @@
+# ssh into RIS
+ssh michael.landis@compute1-client-1.ris.wustl.edu
+
+# enter password
+...
+
+# start interactive session, using BIOL 4220 Docker image
+LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash
+
+# enter directory
+cd /storage1/fs1/workshops/Active/BIO4220/dataset/illumina
+
+
+# quality control
+fastqc
+
+
+# run trimmer
+fastp --in1 SRR11874161_1.fastq \
+      --in2 SRR11874161_2.fastq \
+      --out1 trimmed_1.fastq \
+      --out2 trimmed_2.fastq
+
+
+# reference alignment (if applicable)
+
+
+# run assembler
+minia -in trimmed_1.fastq \
+      -in trimmed_2.fastq \
+      -kmer-size 41 \
+      -abundance-min 2 \
+      -out minia/minia.41 \
+      -nb-cores 2
+
+
+# assembly quality (quast or busco)
+
+
+
+# contig scaffolding
+
+
+#
+
+----
+
+
+0. Where are we
+
+	Go to dataset directory
+	
+	cd /storage1/fs1/workshops/Active/BIO4220/dataset/illumina
+
+
+1. Quality Control
+
+    Program: FastQC or MultiQC
+    Description: Evaluate the quality of raw sequencing reads to identify any issues (e.g., adapter contamination, poor-quality bases). You can visualize the results and decide if further filtering is needed.
+    
+    
+    fastqc --help
+    
+    mkdir -p fastqc
+    fastqc -t 2 SRR11874161_1.fastq SRR11874161_2.fastq -o fastqc
+    unzip SRR11874161_2_fastqc.zip
+    cd SRR11874161_2_fastqc
+    less SRR11874161_2_fastqc/fastqc_data.txt
+    # look for bad stuff
+    
+    
+	# quality score by base relative to read length (1-150bp)
+	# trim if quality drops
+	# what is a tile???
+	
+	
+    
+
+2. Trimming and Filtering
+
+    Program: Trimmomatic or Cutadapt
+    Description: Remove low-quality bases and adapter sequences from the reads to improve the quality of downstream analysis.
+
+
+	fastp --in1 SRR11874161_1.fastq --in2 SRR11874161_2.fastq --out1 trimmed_1.fastq --out2 trimmed_2.fastq
+
+
+2b. Check quality after filtering
+
+	mkdir -p fastqc_trim
+    fastqc -t 2 trimmed_1.fastq trimmed_2.fastq -o fastqc_trim
+    unzip trimmed_1_fastqc.zip
+    less trimmed_1_fastqc/fastqc_data.txt
+
+
+3. Error Correction (Optional)
+
+    Program: SPAdes error correction or Lighter
+    Description: Correct sequencing errors in the reads to improve the quality of assembly.
+
+4. Read Alignment (Optional)
+
+
+
+    Program: BWA or Bowtie2
+    Description: If needed, align reads to a reference genome to assess coverage or other quality measures.
+    
+    # from: https://hbctraining.github.io/Intro-to-ChIPseq-flipped/lessons/04_alignment_using_bowtie2.html
+
+	## index the reference genome for mapping
+	bowtie2-build ecoli/ecoli_reference.fasta something
+
+	## do the alignment
+	bowtie2 -x bowtie/ecoli -1 ecoli/illumina/trimmed_1.fastq -2 ecoli/illumina/trimmed_2.fastq -S bowtie/ecoli.sam
+
+
+5. De Novo Assembly
+
+    Program: SPAdes, Velvet, or SOAPdenovo2
+    Description: Assemble the filtered short reads into contiguous sequences (contigs) without using a reference genome.
+
+
+
+
+
+
+6. Assembly Evaluation
+
+    Program: QUAST or Busco
+    Description: Assess the quality of your assembly by checking N50, L50, genome coverage, and completeness of genes. This step helps you determine how well the assembly has performed.
+
+7. Contig Scaffolding (Optional)
+
+    Program: SSPACE or Opera-LG
+    Description: Link contigs into scaffolds using paired-end or mate-pair reads, potentially closing gaps between contigs.
+
+8. Genome Polishing (Optional)
+
+    Program: Pilon or Racon
+    Description: Refine the assembly by correcting small errors using aligned reads, especially important if you have a reference genome available.
+
+9. Annotation (Optional)
+
+    Program: Prokka, MAKER
+    Description: Annotate the assembled genome to identify genes, rRNAs, and other genomic features.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----
+
+
+
+
+How do I fix this for image?
+
+	LANGUAGE = (unset),
+	LC_ALL = "en_US.UTF-8",
+	LC_CTYPE = "C",
+	LANG = "C"
+
+
+
+------
+
+
+michael.landis@compute1-exec-120:/storage1/fs1/workshops/Active/BIO4220/dataset/illumina$ minia -in trimmed_1.fastq -in trimmed_2.fastq -kmer-size 41 -abundance-min 2 -out minia/minia.41 -nb-cores 2
+setting storage type to hdf5
+[Approximating frequencies of minimizers ]  100  %   elapsed:   0 min 0  sec   remaining:   0 min 0  sec   cpu: 100.0 %   mem: [  45,   45,   45] MB
+[DSK: Collecting stats on trimmed_1      ]  100  %   elapsed:   0 min 0  sec   remaining:   0 min 0  sec   cpu: 103.4 %   mem: [  77,   77,   77] MB
+[DSK: nb solid kmers: 4981328            ]  100  %   elapsed:   0 min 15 sec   remaining:   0 min 0  sec   cpu: 131.5 %   mem: [ 100, 1210, 1288] MB
+bcalm_algo params, prefix:minia/minia.41.unitigs.fa k:41 a:2 minsize:10 threads:2 mintype:1
+DSK used 1 passes and 2 partitions
+prior to queues allocation                      21:54:22     memory [current, maxRSS]: [  88, 1288] MB
+Starting BCALM2                                 21:54:22     memory [current, maxRSS]: [  88, 1288] MB
+[Iterating DSK partitions                ]  0    %   elapsed:   0 min 0  sec   remaining:   0 min 0  sec
+Iterated 4871899 kmers, among them 330393 were doubled
+
+-------
+
+
+
+This study compares Enterobacteria
+
+
+Workflow:
+1. Trimming
+2. Other quality control? Binning?
+3. Assembly
+	- Short reads
+	- Long reads
+4. Quality stats
+5. Visualize output
+
+
+Software:
+- BWA
+- samtools
+- bamtools
+- bowtie2
+- cufflinks
+
+
+Trimming
+- specifying adapter removal
+- sickle, cutadapt, trimmomatic, fastp
+
+Binning
+
+
+
+Short read assembly
+
+
+
+Long read assembly
+
+
+
+# use E coli
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6807382/
+https://www.ncbi.nlm.nih.gov/bioproject/PRJNA422511
+
+
+# illumina, pacbio, nanopore
+
+
+### PART 1
+
+# short read assembly tutorial
+https://github.com/chrishah/short-read-processing-and-assembly
+
+
+# trim reads using fastp
+brew install fastp
+
+fastp --help
+
+fastp --in1 illumina/SRR11874161_1.fastq \
+      --in2 illumina/SRR11874161_2.fastq \
+      --out1 illumina/trimmed_1.fastq \
+      --out2 illumina/trimmed_2.fastq
+
+# takes some time...
+
+
+
+fastp --in1 data/reads.1.fastq.gz --in2 data/reads.2.fastq.gz \
+      --out1 trimmed/reads.trimmed.pe.1.fastq.gz \
+      --out2 trimmed/reads.trimmed.pe.2.fastq.gz \
+      --detect_adapter_for_pe \
+      --length_required 100 \
+      --qualified_quality_phred 30 \
+      --average_qual 20 \
+      --cut_right \
+      --cut_mean_quality 25 \
+      --thread 2 \
+      --html trimmed/trimming.report.html \
+      --json trimmed/trimming.report.json 
+
+fastp --in1 illumina/SRR11874161_1.fastq \
+      --in2 illumina/SRR11874161_2.fastq \
+      --out1 illumina/trimmed_1.fastq \
+      --out2 illumina/trimmed_2.fastq \
+      --merge \
+      --merged_out illumina/merged.fastq
+
+
+# count kmers
+https://github.com/refresh-bio/KMC
+
+
+ulimit -n 2048
+ls -1 *.fastq > fastq.files.txt
+mkdir kmer
+kmc -k100 -m4 @fastq.files.txt NA.res kmer
+
+
+# assembly
+
+Assemblers
+    Minia
+    Spades
+    Platanus
+    ABySS
+
+
+# MINIA ASSEMBLY
+mkdir minia    ## for output
+minia -in trimmed_1.fastq -in trimmed_2.fastq -kmer-size 41 -abundance-min 2 -out minia/minia.41 -nb-cores 2
+
+assembly_stats minia/minia.41.contigs.fa
+assembly_stats minia/minia.61.contigs.fa
+
+# run with different kmer sizes
+
+
+# takes 1-2 minutes
+
+
+# check stats
+quast.py -o quast_results minia/minia.41.contigs.fa
+
+# view assembly
+
+
+
+# SPADES ASSEMBLY
+spades.py -o spades-default -1 trimmed_1.fastq -2 trimmed_2.fastq -t 2 -m 8 --only-assembler
+
+
+
+---------
+
+
+
+### PART 2: LONG READS
+
+# NanoFilt for long read trimming
+
+NanoFilt -q 12 --headcrop 75 SRR8494916.fastq | gzip > trimmed-reads.fastq.gz
+
+brew install nanofilt miniasm flye samtools assembly-stats
+
+
+# Minimap2/miniasm
+
+minimap2 -x ava-ont trimmed-reads.fastq.gz trimmed-reads.fastq.gz | gzip -1 > ./minimap
+.paf.gz
+
+
+miniasm -f trimmed-reads.fastq.gz minimap.paf.gz > miniasm.gfa
+awk '/^S/{print ">"$2"\n"$3}' miniasm.gfa > miniasm.fasta
+assembly_stats miniasm.fasta
+
+# flye
+
+flye --nano-raw ../SRR8494916.fastq --genome-size 4.5m --out-dir .
+
+
+
+-----------
+
+
+
+
+https://bioinformaticsworkbook.org/dataAnalysis/GenomeAssembly/Arabidopsis/AT_platanus-genome-assembly.html#gsc.tab=0
+
+
+
+https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SAMN04457953
+
+
+
+Has short read and long read data
+
+
+# set up workspace
+
+
+# how large is the file? where is it from?
+
+# modify ~/.bash_profile
+alias bsub-is="LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-    michael.landis -q general-interactive -a 'docker(ubuntu)' /bin/bash"
+
+
+
+
+
+# Get data
+
+- install tools
+
+	- wget fastq-dump
+	- tar xzvf ...
+	while read line; do
+	  fastq-dump --split-files --origfmt ${line};
+	done<srr.ids
+	- now I have files
+	
+
+
+- download short reads
+- download long reads
+
+
+# assembly software
+SPAdes
+masurca, soapdenovo, flye, canu
+
+
+# short read assembly
+
+
+# long read assembly
+
+
+# how big is the genome?
+# how many genes? how many contigs?
+# how many repeat regions?
+
+
+
+------------
+
+
+
+Assembly
+
+- basic idea
+	- one genome
+	- copied
+	- fragmented
+	- how to piece together
+	
+- coverage
+	- 5x is minimal
+	- 40x coverage good
+	
+- how to find suffix of one read match prefix of another?
+
+- long read
+	- 10kbp length
+	- error rate 5-15%
+	- how to overcome error rate?
+	
+- long read
+	- ~100bp length
+	- low error rate
+	- how to assemble?
+	
+	
+- get same overlap percentage
+	- shallow coverage
+	- 100x coverage for Nanopore
+	- 25-50x coverage for PacBio
+	
+	
+- combining assemblies
+	- first get Nanopore for rough draft of structure
+	- then use PacBio against Nanopore reference genome to refine base calls
+	
+- how to read a genome assembly representation
+
+
+
+- Long Read Assembly Pipeline
+	- reads
+	- overlap (build overlap graph)
+	- layout (bundle stretches of overlap graph into contigs)
+	- consensus (pick most likely nt seq per contig)
+	- contigs
+
+- Overlap Layout Consensus (OLC) graph
+	- unordered set of reads
+	- how to find reads that come from same part of genome
+	- pairwise alignments, dynamic programming, find few mismatch/indel
+	- create directed graph where directed edges connect overlapping nodes
+	- overlap graph
+		- each read is a vertex
+		- direct edges, parent is left side, child is right side, edge weight is score
+	- layout
+		- overlap means many vertices are redundant
+		- edge is lower cost
+		- remove transitively-inferrable edges, remove edges that skip 1 or 2 vertices
+		- contig 1 resolve, then perhap unresolvable repeat, then contig 2
+	- consensus
+		- what nucleotide/gap to put in particular site?
+		- majority base at position (consensus)
+		
+		
+		
+- Short Read Assembly Pipeline
+	- Error correction
+	 	- error rate is 0.0025/bp, but can increase to 0.025/bp after ~80bp
+		- correct errors before processing to eliminate mismatches
+		- k-mer correction: count number times each k-mer appears, replace rare k-mers with common k-mers
+		- very fast, memory efficient. takes only a few hours to correct.
+		- 
+	- de Bruijn Graph construction
+		- 
+	- Graph cleaning
+	- Contig assembly
+	- Scaffolding
+	- Gap filling
+	
+- Problem
+	- 27 bp short reads
+	- too short
+	- overlaps of about 18-20 bp
+	- very many 20-mers in genome, meaning reads crossing 20-mers get cross-connected
+	- overlap graph explodes
+	
+- Solution
+	- De Brujin graph assembly, short k-mers
+	
+
+	- CCGTTA TATACGTT TACGTT CGTTCG GTTCGA
+	- Break into k-mers, e.g. k=4
+	             /------------------------------\
+	            v                               |
+	- CCGT -> CGGT -> GTTA -> TTAC -> TACG -> ACGT 
+	            |
+	            \---> GTTC -> TTCG -> TCGA	          
+	
+	- graph artifacts
+		- tips that tangle
+		- bubble, esp in diploids
+	- graph cleaning of artifacts
+		- find danlging edges
+		- walk back to main path
+		- remove tips/spurs
+		- randomly resolve bubbles
+		- compact/merge unbranched segments into super-segments
+	- contig assembly??
+	- scaffolding
+		- map paired end reads to contigs
+		- some pairs map to two separate contigs
+		- scaffolds contain gaps NNNNN
+		- can fill in gaps with other sequencing tech e.g. PacBio
+		
+
+Bacterial genomes
+	- short reads, 100s contigs, 10-100kbp average length
+	- long reads, few contigs, often one for whole genome
+	
+Large genomes
+	- short: 10kbp contigus
+	- long: 1Mbp contigs
+
+Long read much more expensive
+
+Short read assembly difficulty
+	- SRA don't trust blindly
+	- submit comparison of assembly boa/cichlid/something
+	- preqc: tell us if assembly easy/hard
+	- difficulties: repetitive sequence, high heterozygosity, low coverage, biased sequencing, high error rate, chimeric reads, sequencing adapters in reads, sample contamination, sequencing multiple individuals
+	- look at assembly graph and report if graph is hard to complete
+	
