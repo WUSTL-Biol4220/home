@@ -65,7 +65,7 @@ For **Custom Pipelne** projects, the instructor must approve the entire project,
 
 ## Project grade breakdown
 
-The pipeline project has five major parts, each worth different amounts of the project grade: proposal (10%), presentation (20%), documentation (15%), report (25%), code (40%). A penalty of -5% points is applied to the project grade for each day it is late.
+The pipeline project has five major parts, each worth different amounts of the project grade: proposal (5%), presentation (20%), report (20%), documentation (15%), code (40%). A penalty of -5% points is applied to the project grade for each day it is late.
 
 ## Important dates
 
