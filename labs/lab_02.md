@@ -1,7 +1,7 @@
 
 # Lab 02
 
-*Lab 02 GitHub Classroom link:* https://classroom.github.com/a/NmFQlFLd
+*Lab 02 GitHub Classroom link:* https://classroom.github.com/a/uo45Gznd
 
 In this lab, we'll familiarize ourselves with the Unix command line interface (CLI) and filesystem.
 
