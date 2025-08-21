@@ -102,7 +102,7 @@ Students who do not yet have a GitHub account should visit the [Create a GitHub 
 
 Lab exercises (including this one!) will be assigned to students through the [Practical Bioinformatics (Fall 2024)](https://classroom.github.com/classrooms/69019055-practical-bioinformatics-2024) website, hosted by [GitHub Classroom](https://classroom.github.com).
 
-Each lab exercise will include an *invitation link* at the top of the lab instructions (i.e. the `README.md` file, like this one). The invitation link for Lab 01 is [https://classroom.github.com/a/zIH-8t3B](https://classroom.github.com/a/Sn9nM1tN).
+Each lab exercise will include an *invitation link* at the top of the lab instructions (i.e. the `README.md` file, like this one). The invitation link for Lab 01 is https://classroom.github.com/a/F-H3XoH4.
 
 By clicking that link, you will inform GitHub Classroom that you've accepted the assignment. GitHub Classroom will then prepare your lab workspace on the code-sharing website GitHub. That workspace will be a *git repository* (or *repo* for short). Future labs will explore how to use the version control software, git. For now, we can essentially view a repo as a "smart folder" that can recall the entire history for how its contents have changed.
 
