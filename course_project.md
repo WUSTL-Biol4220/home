@@ -72,4 +72,4 @@ The pipeline project has five major parts, each worth different amounts of the p
 - We will overview the pipeline projects on **Oct 01 2025**.
 - Pipeline features and datasets approved by the instructor by **Oct 22 2025**.
 - Students will present their work to the class on **Dec 01 2025** and **Dec 03 2025**.
-- Grading of project repositories will begin on **Dec 08 2025**. All pipeline materials must be uploaded to your GitHub repository at this time.
+- Grading of project repositories will begin on **Dec 08 2025**. All pipeline materials must be uploaded to your GitHub repository **before** this time.
