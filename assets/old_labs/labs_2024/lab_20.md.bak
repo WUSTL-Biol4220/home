@@ -1,0 +1,195 @@
+# Lab 18
+
+*Lab 18 GitHub Classroom link:* https://classroom.github.com/a/Eku_G42u
+
+In this lab, we'll learn how assemble genomes using different software and techniques
+
+1. Genome assembly with short read data against reference genome
+2. De novo genome assembly with long read data
+
+This lab is written to be performed through WUSTL RIS, our university's cluster. Review Lab 11 for a refresher on how to use WUSTL RIS.
+
+
+---
+
+## Dataset
+
+We'll use the same dataset for *E. coli* as Lab 17.
+
+We'll set up some environment variables again
+
+```console
+$ ECOLI_DIR="/storage1/fs1/workshops/Active/BIO4220/dataset/ecoli"
+$ PROJ_DIR="/storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-18-mlandis"
+$ echo $ECOLI_DIR
+$ echo $PROJ_DIR
+```
+
+
+## Assemble short reads against the reference genome
+
+Revisit the previous lab. Do the same steps for *Quality Control*, *Trimming*, and *Error Correction*. Stop before
+
+```console
+$ mkdir -p bowtie
+$ cd bowtie
+```
+
+First we need to index the genome. This will generate a set of files that can be used to quickly locate where short reads belong relative to the reference sequence
+```console
+    
+## index the reference genome for mapping
+bowtie2-build ${ECOLI_DIR}/U00096.fasta ecoli_ref
+```
+
+Next, we use the index to map our short reads on to the reference genome. This creates a SAM (Sequence Alignment/Map) file, which reports how all reads map on to the reference. *NOTE:* This step does not report progress to the screen (stdout) and it can take a long amount of time to complete. It may take about 5 minutes for the *E. coli* dataset.
+
+```console
+## do the alignment
+bowtie2 -x ecoli_ref -1 ../../lab-17-mlandis/fastp/SRR11874161_trim_1.fastq -2 ../../lab-17-mlandis/fastp/SRR11874161_trim_2.fastq -S ecoli.sam
+```
+
+
+We will use the *samtools* program to handle our new human-readable .sam file. First, .sam file into a binary text .bam file format with *samtools view -b*: 
+
+
+```console
+$ samtools view -b ecoli.sam > ecoli.bam
+```
+
+Notice the five-fold difference in file size:
+```console
+$ ls -lart ecoli.[bs]am
+-rw-------. 1 michael.landis storage-workshops-bio4220-rw 1169523218 Oct 21 18:03 ecoli.sam
+-rw-------. 1 michael.landis storage-workshops-bio4220-rw  233298779 Oct 22 15:14 ecoli.bam
+```
+
+
+Assemble contigs with *minia* and *spades*, as you had done in Lab 17:
+
+```
+$ cd $PROJ_DIR
+$ mkdir -p minia
+$ minia -in bowtie/SRR11874161_trim_1.fastq -in bowtie/SRR11874161_trim_2.fastq -kmer-size 41 -abundance-min 2 -out minia/minia.41 -nb-cores 2
+```
+
+Now *spades*:
+
+```console
+$ cd $PROJ_DIR
+$ mkdir -p spades
+$ spades -o spades -1 bowtie/SRR11874161_trim_1.fastq -2 bowtie/SRR11874161_trim_2.fastq -t 2 -m 8 --only-assembler
+```
+
+```
+samtools depth
+samtools coverage
+samtools bedcov
+```
+
+
+## Long read assembly
+
+Now we'll generate a long read assembly.
+
+### Quality control
+
+```console
+$ mkdir fastqc_raw
+```
+
+To see the options for `fastqc`, run:
+
+```console
+$ fastqc --help
+```
+
+```console
+$ fastqc -t 2 ${ECOLI_DIR}/SRR11874161_1.fastq ${ECOLI_DIR}/SRR11874161_2.fastq -o fastqc_raw
+Started analysis of SRR11874161_1.fastq
+Started analysis of SRR11874161_2.fastq
+Approx 5% complete for SRR11874161_1.fastq
+Approx 5% complete for SRR11874161_2.fastq
+Approx 10% complete for SRR11874161_1.fastq
+Approx 10% complete for SRR11874161_2.fastq
+
+[ ... more text ... ]
+
+Approx 90% complete for SRR11874161_1.fastq
+Approx 90% complete for SRR11874161_2.fastq
+Approx 95% complete for SRR11874161_1.fastq
+Approx 95% complete for SRR11874161_2.fastq
+Analysis complete for SRR11874161_1.fastq
+Analysis complete for SRR11874161_2.fastq
+```
+
+Now unzip the results and inspect the data table:
+
+```console
+$ unzip fastqc_raw/SRR11874161_1_fastqc.zip
+$ cd SRR11874161_1_fastqc
+$ less SRR11874161_1_fastqc/fastqc_data.txt
+```
+
+### Trimming
+
+We'll use *NanoFilt* for trimming long reads.
+
+```console
+NanoFilt -q 12 --headcrop 75 SRR8494916.fastq | gzip > trimmed-reads.fastq.gz
+```
+
+
+### Long read assembly
+
+We'll use two programs to generate long read assemblies, *minimap2* and *miniasm*.
+
+```console
+minimap2 -x ava-ont trimmed-reads.fastq.gz trimmed-reads.fastq.gz | gzip -1 > ./minimap
+.paf.gz
+```
+
+
+### miniasm
+```console
+miniasm -f trimmed-reads.fastq.gz minimap.paf.gz > miniasm.gfa
+awk '/^S/{print ">"$2"\n"$3}' miniasm.gfa > miniasm.fasta
+assembly_stats miniasm.fasta
+```
+
+# flye
+```console
+flye --nano-raw ../SRR8494916.fastq --genome-size 4.5m --out-dir .
+```
+
+
+---
+
+## Exercises
+
+Go through all the steps through an interactive session. Write a bash script called `job.sh` that will submit to process all tasks using a non-interactive session. Make sure the job produces a file named `job.log` for you to use for debugging.
+
+
+Mess around with mapping reads to reference
+```
+For --end-to-end:
+--very-fast            -D 5 -R 1 -N 0 -L 22 -i S,0,2.50
+--fast                 -D 10 -R 2 -N 0 -L 22 -i S,0,2.50
+--sensitive            -D 15 -R 2 -N 0 -L 22 -i S,1,1.15 (default)
+--very-sensitive       -D 20 -R 3 -N 0 -L 20 -i S,1,0.50
+
+For --local:
+--very-fast-local      -D 5 -R 1 -N 0 -L 25 -i S,1,2.00
+--fast-local           -D 10 -R 2 -N 0 -L 22 -i S,1,1.75
+--sensitive-local      -D 15 -R 2 -N 0 -L 20 -i S,1,0.75 (default)
+--very-sensitive-local -D 20 -R 3 -N 0 -L 20 -i S,1,0.50
+```
+How does this influence assembly quality?
+
+---
+
+Clone the Lab 17 repo to the cluster. Commit and push the `job.sh` and `job.log`, and `history > history.txt` to the cloned repo to complete the assignment.
+
+
+
+
