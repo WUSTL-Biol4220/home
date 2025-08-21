@@ -1,6 +1,6 @@
 # Course project
 
-*GitHub Classroom link:* https://classroom.github.com/a/sLb0kBoM
+*GitHub Classroom link:* TBD
 
 ## Overview
 
@@ -57,15 +57,19 @@ At the end of the course, each student will deliver a short presentation of thei
 
 ## Project approval
 
-Students will describe the scope and goals of their proposed project in a 1-page document. Upload the document to `docs/proposal_yourname_biol4220_F2024.pdf` in your pipeline project repository. This document should be online for meeting with the instructor for project approval. All projects **must get approval from the instructor by Oct 23 2024**. 
+Students will describe the scope and goals of their proposed project in a 1-page document. Upload the document to `docs/proposal_yourname_biol4220_F2024.pdf` in your pipeline project repository. This document should be online for meeting with the instructor for project approval. All projects **must get approval from the instructor by Oct 22 2025**. 
 
 For **Phylogenetic Pipeline** projects, the instructor must approve of the 2+ new pipeline features you plan to add and what dataset you plan to analyze.
 
 For **Custom Pipelne** projects, the instructor must approve the entire project, including the general pipeline that you plan to build and the dataset that you plan to analyze.
 
+## Project grade breakdown
+
+The pipeline project has five major parts, each worth different amounts of the project grade: proposal (10%), presentation (20%), documentation (15%), report (25%), code (40%). A penalty of -5% points is applied to the project grade for each day it is late.
 
 ## Important dates
 
-- Pipeline features and datasets approved by the instructor by **Oct 23 2024**.
-- Students will present their work to the class on **Dec 02 2024** and **Dec 04 2024**.
-- Grading of project repositories will begin on **Dec 09 2022**. All pipeline materials must be uploaded to your GitHub repository at this time.
+- We will overview the pipeline projects on **Oct 01 2025**.
+- Pipeline features and datasets approved by the instructor by **Oct 22 2025**.
+- Students will present their work to the class on **Dec 01 2025** and **Dec 03 2025**.
+- Grading of project repositories will begin on **Dec 08 2025**. All pipeline materials must be uploaded to your GitHub repository at this time.
