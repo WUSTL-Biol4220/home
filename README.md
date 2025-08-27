@@ -30,4 +30,4 @@ Graduate Student Instructor
 * Name: Jillian Cieslik
 * Email: c.jillian@wustl.edu
 * Drop-in hours: Monday 1-2pm
-* Drop-in hours location: TBD
+* Drop-in hours location: Life Sciences 106
