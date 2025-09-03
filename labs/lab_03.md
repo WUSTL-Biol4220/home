@@ -202,7 +202,7 @@ data/neofelis/diardi.fasta
 
 Let's begin by reviewing our *commit history* using `git log`
 
-```
+```console
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git log
 commit 5c48daca1e1cc668a041602637811586591933ed (HEAD -> main, origin/main, origin/HEAD)
 Author: Michael Landis <mlandis@gmail.com>
@@ -576,5 +576,6 @@ Return to the Lab 03 repo on GitHub. The `README.md` should show your merged cha
 <img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/commit_03.png" width="350"/>
 
 This final `push` command completes the lab exercise.
+
 
 
