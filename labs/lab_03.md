@@ -173,7 +173,7 @@ Congratulations! You've just cloned a local copy of a remote repo, added a file 
 
 In this lab, we'll learn more about how to move between different commits within a single repo branch.
 
-Similar to what you did in Part 1 of this lab, we will clone your Lab 03 assignment repo from GitHub to the `~/labs` directory on your VM. The process of cloning a repo to your workstation will become familiar over time, but revisit the Part 1 instructions if you don't remember the exact procedure. The general procedure is to: navigate to the Lab 03 assignment on GitHub, click Code, select HTTPS, then copy the link to your clipboard (e.g. `https://github.com/WUSTL-Biol4220/lab-03-mlandis.git`). Then, enter `~/labs` and call `git clone` while using the copied link as the argument.
+Similar to what you did in Part 1 of this lab, we will clone your Lab 03 assignment repo from GitHub to the `~/labs` directory on your VM. The process of cloning a repo to your workstation will become familiar over time, but revisit the Part 1 instructions if you don't remember the exact procedure. The general procedure is to: navigate to the Lab 03 assignment on GitHub, click Code, select SSH, then copy the link to your clipboard (e.g. `git@github.com:WUSTL-Biol4220/lab-03-mlandis.git`). Then, enter `~/labs` and call `git clone` while using the copied link as the argument.
 
 ```console
 mlandis@biol4220-mlandis:~/labs$ git clone git@github.com:WUSTL-Biol4220/lab-03-mlandis.git
@@ -576,6 +576,7 @@ Return to the Lab 03 repo on GitHub. The `README.md` should show your merged cha
 <img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/commit_03.png" width="350"/>
 
 This final `push` command completes the lab exercise.
+
 
 
 
