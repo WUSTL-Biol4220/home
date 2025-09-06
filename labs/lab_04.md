@@ -1,6 +1,6 @@
 # Lab 04
 
-*Lab 04 GitHub Classroom link:* https://classroom.github.com/a/b1HKmjGt
+*Lab 04 GitHub Classroom link:* https://classroom.github.com/a/1vHHcKtw
 
 This lab will explore how to generate and manipulate character strings in various ways. The lab will also explore how to use the pipe (`|`) and redirect (`>`) commands to link together independent programs.
 
@@ -322,3 +322,4 @@ Several files must be present in your GitHub repository to submit your assignmen
 3. `pipelines.txt` (Section 4)
 4. the `output` directory and the three output products (Section 4)
 5. a `history.txt` file that contains the redirected (`>`) the output of the `history` command
+
