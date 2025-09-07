@@ -1,6 +1,6 @@
 # Lab 05
 
-*Lab 05 GitHub Classroom link:* https://classroom.github.com/a/H__Mo4cb
+*Lab 05 GitHub Classroom link:* https://classroom.github.com/a/E9tTKjjO
 
 This lab will study how to process a variety of text files. 
 
@@ -188,4 +188,5 @@ In this final step for Lab 05, you will write several pipelines that can be used
 ## 4. Submit assignment
 
 Push the`part_2` and `part_3` directories and their contents, along with a `history.txt` file, to your GitHub repo for Lab 05 to submit the assignment. As with previous exercises, the `history.txt` file will contain the redirected output from the `history` command.
+
 

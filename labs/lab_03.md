@@ -143,15 +143,13 @@ Our local branch is one commit ahead of GitHub's copy. This should seem correct 
 
 ```console
 mlandis@biol4220-mlandis:~/labs/lab-01-mlandis$ git push
-Username for 'https://github.com': mlandis
-Password for 'https://mlandis@github.com':
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 2 threads
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 366 bytes | 366.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/WUSTL-Biol4220/lab-01-mlandis.git
+To github.com/WUSTL-Biol4220/lab-01-mlandis.git
    f67bd00..517d999  main -> main
 ```
 
@@ -175,7 +173,7 @@ Congratulations! You've just cloned a local copy of a remote repo, added a file 
 
 In this lab, we'll learn more about how to move between different commits within a single repo branch.
 
-Similar to what you did in Part 1 of this lab, we will clone your Lab 03 assignment repo from GitHub to the `~/labs` directory on your VM. The process of cloning a repo to your workstation will become familiar over time, but revisit the Part 1 instructions if you don't remember the exact procedure. The general procedure is to: navigate to the Lab 03 assignment on GitHub, click Code, select HTTPS, then copy the link to your clipboard (e.g. `https://github.com/WUSTL-Biol4220/lab-03-mlandis.git`). Then, enter `~/labs` and call `git clone` while using the copied link as the argument.
+Similar to what you did in Part 1 of this lab, we will clone your Lab 03 assignment repo from GitHub to the `~/labs` directory on your VM. The process of cloning a repo to your workstation will become familiar over time, but revisit the Part 1 instructions if you don't remember the exact procedure. The general procedure is to: navigate to the Lab 03 assignment on GitHub, click Code, select SSH, then copy the link to your clipboard (e.g. `git@github.com:WUSTL-Biol4220/lab-03-mlandis.git`). Then, enter `~/labs` and call `git clone` while using the copied link as the argument.
 
 ```console
 mlandis@biol4220-mlandis:~/labs$ git clone git@github.com:WUSTL-Biol4220/lab-03-mlandis.git
@@ -204,7 +202,7 @@ data/neofelis/diardi.fasta
 
 Let's begin by reviewing our *commit history* using `git log`
 
-```
+```console
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git log
 commit 5c48daca1e1cc668a041602637811586591933ed (HEAD -> main, origin/main, origin/HEAD)
 Author: Michael Landis <mlandis@gmail.com>
@@ -413,8 +411,6 @@ To push the current branch and set the remote as upstream, use
 When you create a new branch in `git` through your local machine, you will need to inform GitHub (`origin`) before you can push the current branch 
 ```console
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git push --set-upstream origin add_puma
-Username for 'https://github.com': mlandis
-Password for 'https://mlandis@github.com':
 Enumerating objects: 7, done.
 Counting objects: 100% (7/7), done.
 Delta compression using up to 2 threads
@@ -425,7 +421,7 @@ remote:
 remote: Create a pull request for 'add_puma' on GitHub by visiting:
 remote:      https://github.com/WUSTL-Biol4220/lab-03-mlandis/pull/new/add_puma
 remote:
-To https://github.com/WUSTL-Biol4220/lab-03-mlandis.git
+To github.com/WUSTL-Biol4220/lab-03-mlandis.git
  * [new branch]      add_puma -> add_puma
 Branch 'add_puma' set up to track remote branch 'add_puma' from 'origin'.
 ```
@@ -442,14 +438,12 @@ To apply the new GitHub branch commits to your local copy of the branch, you wil
 
 ```console
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git pull
-Username for 'https://github.com': mlandis
-Password for 'https://mlandis@github.com':
 remote: Enumerating objects: 5, done.
 remote: Counting objects: 100% (5/5), done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), 754 bytes | 754.00 KiB/s, done.
-From https://github.com/WUSTL-Biol4220/lab-03-mlandis
+From github.com/WUSTL-Biol4220/lab-03-mlandis
    dd7156a..d443871  add_puma   -> origin/add_puma
 Updating dd7156a..d443871
 Fast-forward
@@ -566,8 +560,6 @@ mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git add README.md
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git commit -am 'merge with add_puma; resolve README.md conflict'
 [main b34d17b] merge with add_puma; resolve README.md conflict
 mlandis@biol4220-mlandis:~/labs/lab-03-mlandis$ git push
-Username for 'https://github.com': mlandis
-Password for 'https://mlandis@github.com':
 Enumerating objects: 16, done.
 Counting objects: 100% (16/16), done.
 Delta compression using up to 2 threads
@@ -575,7 +567,7 @@ Compressing objects: 100% (8/8), done.
 Writing objects: 100% (10/10), 979 bytes | 326.00 KiB/s, done.
 Total 10 (delta 3), reused 0 (delta 0)
 remote: Resolving deltas: 100% (3/3), completed with 1 local object.
-To https://github.com/WUSTL-Biol4220/lab-03-mlandis.git
+To github.com/WUSTL-Biol4220/lab-03-mlandis.git
    0004f47..b34d17b  main -> main
 ```
 
@@ -584,4 +576,7 @@ Return to the Lab 03 repo on GitHub. The `README.md` should show your merged cha
 <img src="https://github.com/WUSTL-Biol4220/home/raw/main/assets/lab_03/commit_03.png" width="350"/>
 
 This final `push` command completes the lab exercise.
+
+
+
 

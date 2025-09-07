@@ -1,6 +1,6 @@
 # Lab 07
 
-*Lab 07 GitHub Classroom link:* https://classroom.github.com/a/aUdtOKIl
+*Lab 07 GitHub Classroom link:* https://classroom.github.com/a/8ISZLBpx
 
 This lab will focus on retrieving fasta formatted sequences from GenBank, one of NCBI's Entrez databases. These techniques are useful when you need to generate a dataset for a set of organisms and genes. Although these scripts will only download nucleotide sequence information, the scripts could easily be adapted to compile different kinds of datasets (e.g. amino acid sequences, gene annotation features).
 
@@ -124,7 +124,7 @@ Review the top 5 BLAST hits in the filtered results (use default sorting). Creat
 2. What range of E values do you see?
 3. What are the sequence descriptions for the best BLAST hits?
 4. What are genes like this often used for?
-5. This gene sequence appears on page 103 in "Jurassic Park" by Michael Crichton, apparently in reference to the DNA sequences the scientists used to bring extinct non-avian dinosaurs to life. Do you think it is likely that Crichton generated a random DNA sequence or used the DNA from a random gene for his book? Or do you think it is likely that the gene sequence Crichton published could somehow be involved in ressurrecting dinosaurs? Feel free to speculate wildly, but try to give a defensible answer.
+5. This gene sequence appears on page 103 in "Jurassic Park" by Michael Crichton, apparently in reference to the DNA sequences the scientists used to bring extinct non-avian dinosaurs to life. Do you think it is likely that Crichton generated a random DNA sequence or used the DNA from a random gene for his book? Or do you think it is likely that the gene sequence Crichton published could somehow be involved in resurrecting dinosaurs? Feel free to speculate wildly, but try to give a defensible answer.
 
 ---
 
@@ -335,3 +335,5 @@ fetch_accessions.sh      # from problem 2
 files/*.fasta            # the output from problem 2
 history.txt              # redirected from `history` command
 ```
+
+

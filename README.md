@@ -23,11 +23,11 @@ Instructor
 * Name: Michael Landis
 * Email: michael.landis@wustl.edu
 * Phone: 314-935-8082
-* Drop-in hours: Tuesday 4-5pm
+* Drop-in hours: Tuesday 3:30 - 4:30pm
 * Drop-in hours location: Rebstock 210
 
 Graduate Student Instructor
 * Name: Jillian Cieslik
 * Email: c.jillian@wustl.edu
-* Drop-in hours: Monday 1-2pm
+* Drop-in hours: Monday 1:00 - 2:00pm
 * Drop-in hours location: Life Sciences 106
