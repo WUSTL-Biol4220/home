@@ -67,7 +67,7 @@ Special symbols are easy to escape! See?
 	\'
 	\$
 ```
-Note, that lines 2-5 each begin with a tab character, not a series of single-space (` `) characters.
+Note, that lines 2-5 each begin with a tab character, not a series of single-space (` `) characters. This problem can be solved using either double-quotes (`""`) or single-quotes (`''`) to construct the string. Try experimenting with both.
 
 You will likely need to call `echo -e` against several candidate strings to get this right. To get started, try calling
 ```console
@@ -322,4 +322,5 @@ Several files must be present in your GitHub repository to submit your assignmen
 3. `pipelines.txt` (Section 4)
 4. the `output` directory and the three output products (Section 4)
 5. a `history.txt` file that contains the redirected (`>`) the output of the `history` command
+
 
