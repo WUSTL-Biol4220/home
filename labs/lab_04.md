@@ -88,9 +88,9 @@ Commit the `string_literal.txt` file to your repo when complete.
 
 Strings are often used to identify filesytem resources. In many cases like this, the user wants to identify a set of strings that share a common pattern. The wildcard characters useful in these cases. A *wildcard* is used as a placeholder in a search pattern to match any other suitable character(s) during a search. Two wildcards we'll learn about today are `*` and `?`. The `*` character will match zero or more characters of any type, while the `?` character will match exactly one character. Any number of wildcards can appear anywhere in a search pattern: it's your choice. We will learn about other types of wildcards in a future lab on regular expressions.
 
-In this section, you will determine what command accomplished the specified objectives below.
+In this section, you will determine what command would accomplish the specified objectives below.
 
-1. What command all lists all files in the current directory that start with `new_` and end with `.txt`?
+1. What command lists all files in the current directory that start with `new_` and end with `.txt`?
 2. What command moves all files ending with `.zip` into a directory called `text_files`?
 3. What command removes all directories (empty and non-empty) containing the text `_old` at the end of their directory names? (Hint: directories have `/` at the end of their path while files do not)
 4. What command would you use to list all `.fasta` files within a subdirectory named `data/`
@@ -322,5 +322,6 @@ Several files must be present in your GitHub repository to submit your assignmen
 3. `pipelines.txt` (Section 4)
 4. the `output` directory and the three output products (Section 4)
 5. a `history.txt` file that contains the redirected (`>`) the output of the `history` command
+
 
 
