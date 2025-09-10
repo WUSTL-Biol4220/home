@@ -62,7 +62,7 @@ Under the "Filter Results" box in the upper right, enter 85 to 90 in the "Percen
 Review the top 20 BLAST hits in the filtered results (use default sorting). Create a text file called `part_1_problem_2_answers.txt` that contains answers to these questions:
 1. What are the highest (good) and lowest (bad) Total Score values do you see?
 2. What are the lowest (good) and highest (bad) E values do you see?
-3. What species were matched? Provide some context for how distantly related those species are relative to the species from which the query sequence probably originated. Are they in the same taxonomic family? The same genus?
+3. Names three species in your match. Provide some context for how distantly related those species are relative to the species from which the query sequence probably originated. Are they in the same taxonomic family? The same genus?
 
 Click on the name of a sequence to inspect the BLAST alignment. You should see output that resembles this:
 ```
@@ -335,5 +335,6 @@ fetch_accessions.sh      # from problem 2
 files/*.fasta            # the output from problem 2
 history.txt              # redirected from `history` command
 ```
+
 
 
