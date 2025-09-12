@@ -19,7 +19,7 @@ Most researchers use NCBI's online interface to submit BLAST queries against Gen
 
 BLAST is also available as a [command line tool](https://www.ncbi.nlm.nih.gov/books/NBK279690/), which is useful for scripting. The command line tool, however, requires the local installation of a (large!) GenBank database to be used effectively. Because of that, we'll use the web tool today.
 
-**Problem 1.** Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool. This wil open a new interfact with a tab named `blastp` (i.e. BLAST for proteins) selected.
+**Problem 1.** Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool. This will open a new interfact with a tab named `blastp` (i.e. BLAST for proteins) selected.
 
 Copy and paste the following amino acid sequence into the first text field, which reads "
 Enter accession number(s), gi(s), or FASTA sequence(s)".
@@ -335,6 +335,7 @@ fetch_accessions.sh      # from problem 2
 files/*.fasta            # the output from problem 2
 history.txt              # redirected from `history` command
 ```
+
 
 
 
