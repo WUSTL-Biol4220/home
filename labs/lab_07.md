@@ -312,18 +312,17 @@ Running the script using the above `my_species.txt` and `my_genes.txt` files as 
 ```console
 $ ./fetch_accessions.sh my_species.txt my_genes.txt files
 $ ls files
-Viburnum_clemensiae_matK_HQ591569.fasta  Viburnum_dentatum_matK_HQ591574.fasta  Viburnum_rufidulum_matK_MH551948.fasta
+Viburnum_clemensiae_matK_HQ591569.fasta  Viburnum_dentatum_matK_NC_086692.fasta  Viburnum_rufidulum_matK_MH551948.fasta
 Viburnum_clemensiae_rbcL_HQ591714.fasta  Viburnum_dentatum_rbcL_HQ591718.fasta  Viburnum_rufidulum_rbcL_HQ591761.fasta
 $ wc files/*.fasta
-  12   23  841 files/Viburnum clemensiae_matK_HQ591569.fasta
-  21   33 1474 files/Viburnum clemensiae_rbcL_HQ591714.fasta
-  12   23  847 files/Viburnum dentatum_matK_HQ591574.fasta
-  21   33 1471 files/Viburnum dentatum_rbcL_HQ591718.fasta
-  12   24  859 files/Viburnum rufidulum_matK_MH551948.fasta
-  21   33 1472 files/Viburnum rufidulum_rbcL_HQ591761.fasta
-  99  169 6964 total
+    12     23    841 files/Viburnum_clemensiae_matK_HQ591569.fasta
+    21     33   1474 files/Viburnum_clemensiae_rbcL_HQ591714.fasta
+  2258   2263 160281 files/Viburnum_dentatum_matK_NC_086692.fasta
+  2258   2263 160281 files/Viburnum_dentatum_rbcL_HQ591718.fasta
+    12     24    859 files/Viburnum_rufidulum_matK_MH551948.fasta
+     9     23    721 files/Viburnum_rufidulum_rbcL_HQ591761.fasta
+  4570   4629 324457 total
 ```
-
 
 ---
 
@@ -337,6 +336,7 @@ fetch_accessions.sh      # from problem 2
 files/*.fasta            # the output from problem 2
 history.txt              # redirected from `history` command
 ```
+
 
 
 
