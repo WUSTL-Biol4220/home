@@ -39,6 +39,8 @@ Setting "Query subrange" allows you to limit the BLAST search to match only part
 
 "Database" option allows you to focus your search for matches against a specific protein database. This is particularly useful if you are e.g. only interested in matching against model organisms, whose protein functions are most likely to have been studied experimentaly. Not only will selecting a specific database speed up your search, it will also decrease your average E-value, since smaller databases contain fewer samples, and therefore are less likely to generate matches that are false positives due to multiple testing. Setting "Organism" can limit your search even further.
 
+Set the "Database" option to "swissprot".
+
 Click the "BLAST" button to submit your query. It may take the NCBI servers 30-60 seconds to process your request.
 
 Upon completion, the website will display the query results. Scroll down to find the results table.
@@ -46,7 +48,7 @@ Upon completion, the website will display the query results. Scroll down to find
 Review the top 5 BLAST hits (use default sorting). Create a text file called `part_1_problem_1_answers.txt` that contains answers to these questions:
 1. What range of Total Score values do you see?
 2. What range of E values do you see?
-3. What species does the (input) query sequence probably belong to?
+3. What species do you think the (input) query sequence probably belongs to?
 4. What gene does the query sequence belong to?
 5. What is the putative function for this gene?
 6. Would you expect that this gene and its function evolves slowly or rapidly compared to other genes, and why?
@@ -335,6 +337,7 @@ fetch_accessions.sh      # from problem 2
 files/*.fasta            # the output from problem 2
 history.txt              # redirected from `history` command
 ```
+
 
 
 
