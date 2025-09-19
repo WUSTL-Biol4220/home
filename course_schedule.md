@@ -14,11 +14,11 @@ The 🪲 marker tells us how we're progressing through the semester.
 |         | Mon, Sep 01  | -- | -- | -- | **No class: Labor Day** |
 |         | Wed, Sep 03  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_03.pdf">Lecture 03</a> | [Lab 03](labs/lab_03.md) | CSB 2.1 - 2.5 | Unix: git |
 |         | Mon, Sep 08  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_04.pdf">Lecture 04</a> | [Lab 04](labs/lab_04.md) | CSB 1.5.2 - 1.6.6 | Unix: text, pipes, redirects |
-|   🪲    | Wed, Sep 10  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_05.pdf">Lecture 05</a> | [Lab 05](labs/lab_05.md) | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
-|         | Mon, Sep 15  | Lecture 06 | Lab 06 | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
-|         | Wed, Sep 17  | Lecture 07 | Lab 07 | <a href="https://www.nature.com/scitable/topicpage/basic-local-alignment-search-tool-blast-29096/">BLAST overview</a><br><a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/">EDirect tools</a><br>(optional) | Biology: GenBank, BLAST |
-|         | Mon, Sep 22  | Lecture 08 | Lab 08 | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/loytynoja_goldman_prank_2008_science.pdf">PRANK paper</a> | Biology: molecular sequence alignment |
-|         | Wed, Sep 24  | Lecture 09 | Lab 09 | CSB 5.1 - 5.9 | Unix: regular expressions, regex match |
+|         | Wed, Sep 10  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_05.pdf">Lecture 05</a> | [Lab 05](labs/lab_05.md) | -- | Unix: text formats, pipelines<br>Biology: sequence data | 
+|         | Mon, Sep 15  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_06.pdf">Lecture 06</a>  | [Lab 06](labs/lab_06.md) | CSB 1.6.7 - 1.10 | Unix: shell scripts  |
+|         | Wed, Sep 17  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_07.pdf">Lecture 07</a>  | [Lab 07](labs/lab_07.md) | <a href="https://www.nature.com/scitable/topicpage/basic-local-alignment-search-tool-blast-29096/">BLAST overview</a><br><a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/">EDirect tools</a><br>(optional) | Biology: GenBank, BLAST |
+|   🪲    | Mon, Sep 22  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_08.pdf">Lecture 08</a>  | [Lab 08](labs/lab_08.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/loytynoja_goldman_prank_2008_science.pdf">PRANK paper</a> | Biology: molecular sequence alignment |
+|         | Wed, Sep 24  |<a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_09.pdf">Lecture 09</a>  | [Lab 09](labs/lab_09.md) | CSB 5.1 - 5.9 | Unix: regular expressions, regex match |
 |         | Mon, Sep 29  | Lecture 10 | Lab 10 | -- | Unix: more regex, find-replace,<br>group capture, sed |
 |         | Wed, Oct 01  | Lecture 11a - Sequencing<br>Lecture 11b - HPC<br>Lecture 11 - RIS  | Lab 11 | -- | Sequencing technologies<br>Computing on server clusters<br>**Course project: overview**<br>(<a href="https://github.com/WUSTL-Biol4220/home/blob/main/course_project.md">link</a>) |
 |         | Mon, Oct 06  | -- | -- | -- | **No class: Fall Break** |
