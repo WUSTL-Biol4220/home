@@ -1,6 +1,6 @@
 # Lab 08
 
-*Lab 08 GitHub Classroom link:* https://classroom.github.com/a/M5O0186P
+*Lab 08 GitHub Classroom link:* https://classroom.github.com/a/jIlMnABx
 
 This lab will explore three different programs that employ multiple sequence alignment algorithm. Two are [MUSCLE](https://www.drive5.com/muscle/) and  [MAFFT](https://mafft.cbrc.jp/alignment/software/), which are progressive alignment methods. The third is [PRANK](http://wasabiapp.org/software/prank/), a phylogeny-aware alignment method. In this lab, you will install the two programs on your VM, experiment with the programs by running the program under various settings through the command line, then write a script to align a sequence dataset under a set of user-provided program options.
 
@@ -265,3 +265,4 @@ To turn in this assignment, please commit and push the following files to your G
 - `align_mafft.sh` and `align_prank.sh` from Part 3
 - `seq.mafft_stats.csv` and `seq.prank_stats.csv` from Part 3
 - a file named `history.txt` that contains the output from the `history` command
+
