@@ -19,7 +19,7 @@ Most researchers use NCBI's online interface to submit BLAST queries against Gen
 
 BLAST is also available as a [command line tool](https://www.ncbi.nlm.nih.gov/books/NBK279690/), which is useful for scripting. The command line tool, however, requires the local installation of a (large!) GenBank database to be used effectively. Because of that, we'll use the web tool today.
 
-**Problem 1.** Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool. This wil open a new interfact with a tab named `blastp` (i.e. BLAST for proteins) selected.
+**Problem 1.** Open the NCBI BLAST [website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Protein BLAST tool. This will open a new interfact with a tab named `blastp` (i.e. BLAST for proteins) selected.
 
 Copy and paste the following amino acid sequence into the first text field, which reads "
 Enter accession number(s), gi(s), or FASTA sequence(s)".
@@ -39,6 +39,8 @@ Setting "Query subrange" allows you to limit the BLAST search to match only part
 
 "Database" option allows you to focus your search for matches against a specific protein database. This is particularly useful if you are e.g. only interested in matching against model organisms, whose protein functions are most likely to have been studied experimentaly. Not only will selecting a specific database speed up your search, it will also decrease your average E-value, since smaller databases contain fewer samples, and therefore are less likely to generate matches that are false positives due to multiple testing. Setting "Organism" can limit your search even further.
 
+Set the "Database" option to "swissprot".
+
 Click the "BLAST" button to submit your query. It may take the NCBI servers 30-60 seconds to process your request.
 
 Upon completion, the website will display the query results. Scroll down to find the results table.
@@ -46,7 +48,7 @@ Upon completion, the website will display the query results. Scroll down to find
 Review the top 5 BLAST hits (use default sorting). Create a text file called `part_1_problem_1_answers.txt` that contains answers to these questions:
 1. What range of Total Score values do you see?
 2. What range of E values do you see?
-3. What species does the (input) query sequence probably belong to?
+3. What species do you think the (input) query sequence probably belongs to?
 4. What gene does the query sequence belong to?
 5. What is the putative function for this gene?
 6. Would you expect that this gene and its function evolves slowly or rapidly compared to other genes, and why?
@@ -62,7 +64,7 @@ Under the "Filter Results" box in the upper right, enter 85 to 90 in the "Percen
 Review the top 20 BLAST hits in the filtered results (use default sorting). Create a text file called `part_1_problem_2_answers.txt` that contains answers to these questions:
 1. What are the highest (good) and lowest (bad) Total Score values do you see?
 2. What are the lowest (good) and highest (bad) E values do you see?
-3. What species were matched? Provide some context for how distantly related those species are relative to the species from which the query sequence probably originated. Are they in the same taxonomic family? The same genus?
+3. Names three species in your match. Provide some context for how distantly related those species are relative to the species from which the query sequence probably originated. Are they in the same taxonomic family? The same genus?
 
 Click on the name of a sequence to inspect the BLAST alignment. You should see output that resembles this:
 ```
@@ -241,15 +243,15 @@ $ esearch -db nucleotide -query "AY596878" | efetch -format fasta
 
 Note that an unmatched search query will identify 0 records. Fetching against a search with 0 matches will return no text.
 ```console
-$ esearch -db nucleotide -query "Tyrannosaurus rex"
+$ esearch -db nucleotide -query "frozen waffles"
 <ENTREZ_DIRECT>
   <Db>nucleotide</Db>
-  <WebEnv>MCID_5f779558ae9e2c11ab7040b6</WebEnv>
+  <WebEnv>MCID_68c49414485269c9ab052fb7</WebEnv>
   <QueryKey>1</QueryKey>
   <Count>0</Count>
   <Step>1</Step>
 </ENTREZ_DIRECT>
-$ esearch -db nucleotide -query "Tyrannosaurus rex" | efetch -format fasta
+$ esearch -db nucleotide -query "frozen waffles" | efetch -format fasta
 $
 ```
 
@@ -310,18 +312,17 @@ Running the script using the above `my_species.txt` and `my_genes.txt` files as 
 ```console
 $ ./fetch_accessions.sh my_species.txt my_genes.txt files
 $ ls files
-Viburnum_clemensiae_matK_HQ591569.fasta  Viburnum_dentatum_matK_HQ591574.fasta  Viburnum_rufidulum_matK_MH551948.fasta
+Viburnum_clemensiae_matK_HQ591569.fasta  Viburnum_dentatum_matK_NC_086692.fasta  Viburnum_rufidulum_matK_MH551948.fasta
 Viburnum_clemensiae_rbcL_HQ591714.fasta  Viburnum_dentatum_rbcL_HQ591718.fasta  Viburnum_rufidulum_rbcL_HQ591761.fasta
 $ wc files/*.fasta
-  12   23  841 files/Viburnum clemensiae_matK_HQ591569.fasta
-  21   33 1474 files/Viburnum clemensiae_rbcL_HQ591714.fasta
-  12   23  847 files/Viburnum dentatum_matK_HQ591574.fasta
-  21   33 1471 files/Viburnum dentatum_rbcL_HQ591718.fasta
-  12   24  859 files/Viburnum rufidulum_matK_MH551948.fasta
-  21   33 1472 files/Viburnum rufidulum_rbcL_HQ591761.fasta
-  99  169 6964 total
+    12     23    841 files/Viburnum_clemensiae_matK_HQ591569.fasta
+    21     33   1474 files/Viburnum_clemensiae_rbcL_HQ591714.fasta
+  2258   2263 160281 files/Viburnum_dentatum_matK_NC_086692.fasta
+  2258   2263 160281 files/Viburnum_dentatum_rbcL_HQ591718.fasta
+    12     24    859 files/Viburnum_rufidulum_matK_MH551948.fasta
+     9     23    721 files/Viburnum_rufidulum_rbcL_HQ591761.fasta
+  4570   4629 324457 total
 ```
-
 
 ---
 
@@ -335,5 +336,10 @@ fetch_accessions.sh      # from problem 2
 files/*.fasta            # the output from problem 2
 history.txt              # redirected from `history` command
 ```
+
+
+
+
+
 
 
