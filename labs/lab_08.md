@@ -155,7 +155,7 @@ Three sets of sequences are provided for this lab. We will focus on sequences th
 To begin, we will align `adh.fasta` using MUSCLE. MUSCLE supports fairly few options, but it is fast.
 
 ```
-$ muscle -align adh.fasta -output adh_muscle_it1.fasta -refineiters 100 -consiters 1
+$ muscle -align adh.fasta -output adh.muscle_it1.fasta -refineiters 100 -consiters 1
 
 muscle 5.2.linux64 [00ece7c]  936Mb RAM, 2 cores
 Built Aug 22 2024 16:13:48
@@ -265,4 +265,5 @@ To turn in this assignment, please commit and push the following files to your G
 - `align_mafft.sh` and `align_prank.sh` from Part 3
 - `seq.mafft_stats.csv` and `seq.prank_stats.csv` from Part 3
 - a file named `history.txt` that contains the output from the `history` command
+
 
