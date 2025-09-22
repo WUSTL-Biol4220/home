@@ -1,6 +1,6 @@
 # Lab 09
 
-*Lab 09 GitHub Classroom link:* https://classroom.github.com/a/NF0CZw4v
+*Lab 09 GitHub Classroom link:* https://classroom.github.com/a/h1SgkyYj
 
 This lab will explore how to use regular expressions (regex) to search for patterns in text files using the `grep` command. Lecture 09 reviews the regex features that we'll explore in this lab. Each problem contains smaller exercises.
 
@@ -136,3 +136,4 @@ One strategy for solving this problem is to first extract the correct number of 
 ---
 
 To complete the assignment, please submit the four script files (`problem1.sh`, `problem2.sh`, `problem3.sh`, and `problem4.sh`) and the contents of `history > history.txt`.
+
