@@ -117,7 +117,7 @@ Top 5 years of species descriptions:
 
 Note, to use `cut` against the `\t` delimiter, use the option `cut -d $'\t'`. The `$'...'` format is a special escape string that allows the tab-character (and other escaped characters, like `\n`) be recognized by its literal value (`\t`).
 
-**Problem 4.** Write a script called `problem4.sh` that searches *Origin of Species* for certain classes of words. Download the plain text file for *Origin of Species* from the URL https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt, and save the file as `oos.txt`. You can do this either on your VM using the `wget` command or by uploading the file to your GitHub repository and pulling those changes into the repo on your VM.
+**Problem 4. (optional, worth 5 bonus points)** Write a script called `problem4.sh` that searches *Origin of Species* for certain classes of words. Download the plain text file for *Origin of Species* from the URL https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt, and save the file as `oos.txt`. You can do this either on your VM using the `wget` command or by uploading the file to your GitHub repository and pulling those changes into the repo on your VM.
 
 Your script will process `oos.txt` and print a sorted list of the five most common words that begin with a "c" and end with a "d", ignoring upper/lower case. Hints: Use man to find out what the '-c' flag does for the tr command. Can you use character ranges to convert uppercase to lowercase or vice versa?
 Expected results:
@@ -136,4 +136,5 @@ One strategy for solving this problem is to first extract the correct number of 
 ---
 
 To complete the assignment, please submit the four script files (`problem1.sh`, `problem2.sh`, `problem3.sh`, and `problem4.sh`) and the contents of `history > history.txt`.
+
 
