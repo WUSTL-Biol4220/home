@@ -1,6 +1,6 @@
 # Lab 10
 
-*Lab 10 GitHub Classroom link:* https://classroom.github.com/a/EODK8Yj8
+*Lab 10 GitHub Classroom link:* https://classroom.github.com/a/AQKAut0d
 
 In the previous lab, we explored how to use the `grep` command with regular expressions to search and print general text patterns found within a text file or stream. Refer to the Lecture 09 for a review on regular expressions for search patterns.
 
@@ -77,4 +77,5 @@ At a minimum, you should be able to produce a list of topics, separated by line,
 ---
 
 To submit your lab assignment, please commit and push the scripts `problem1.sh`, `problem2.sh`, `problem3.sh`, and the redirected output of `history > history.txt` to your GitHub assignment repo.
+
 
