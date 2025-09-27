@@ -1,6 +1,6 @@
 # Lab 10
 
-*Lab 10 GitHub Classroom link:* https://classroom.github.com/a/EODK8Yj8
+*Lab 10 GitHub Classroom link:* https://classroom.github.com/a/AQKAut0d
 
 In the previous lab, we explored how to use the `grep` command with regular expressions to search and print general text patterns found within a text file or stream. Refer to the Lecture 09 for a review on regular expressions for search patterns.
 
@@ -43,7 +43,7 @@ For the following tasks, report lines that contain 1+ instances of following mot
 - *Task 3:* Report all instances of motifs that repeat the pair of nucleotides `xA` between 3 and 4 times, and are flanked by the basepair `C` on both sides; only list the repeating region, not the flanking region. For example, `CGAGACATAC` would match, and the printed motif would be `GAGACATA`. The motif `CCATAGAC` would match, and be printed as `CATAGA`. The motifs `CTATATAG` and `CTATATATATAC` would not match.
 - *Task 4:* Report all lines that begin with `ATG` and end with `TAT`, `GAA`, or `CGA`. However, only print the first and last the nucleotides for the matched line in the output. For example if a line read `ATGCAGTATAGGACCATAGATACAGATATGGTAAGACCGA`, then the printed text for the motif should read `ATGCGA`.
 
-**Problem 3 (optional).** Write a script named `problem3.sh` to organize the chapter descriptions in *Origin of Species*. *Origin of Species* can be downloaded from https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt using `wget`.
+**Problem 3 (optional, worth 5 bonus points).** Write a script named `problem3.sh` to organize the chapter descriptions in *Origin of Species*. *Origin of Species* can be downloaded from https://raw.githubusercontent.com/WUSTL-Biol4220/home/main/assets/data/oos.txt using `wget`.
 
 Your script will reformat the descriptions for each Chapter listed after `CONTENTS.` and before `  GLOSSARY OF SCIENTIFIC TERMS.` For example, the original text for the Chapter II title (`VARIATION UNDER NATURE.`) and topics (e.g. `Variability`, `Individual Differences`, ...) appear as
 ```
@@ -77,3 +77,5 @@ At a minimum, you should be able to produce a list of topics, separated by line,
 ---
 
 To submit your lab assignment, please commit and push the scripts `problem1.sh`, `problem2.sh`, `problem3.sh`, and the redirected output of `history > history.txt` to your GitHub assignment repo.
+
+

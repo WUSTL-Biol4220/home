@@ -1,6 +1,6 @@
 # Lab 11
 
-*Lab 11 GitHub Classroom link:* https://classroom.github.com/a/Eku_G42u
+*Lab 11 GitHub Classroom link:* https://classroom.github.com/a/-0i1prbi
 
 In this short lab, we will learn about the WUSTL RIS cluster and how to interact with the cluster.
 
@@ -290,3 +290,4 @@ For more advanced tutorials on file transfer involving RIS, visit: https://docs.
 ---
 
 Clone the Lab 11 repo to the cluster, then commit and push `history > history.txt` to the cloned repo to complete the assignment.
+
