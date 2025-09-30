@@ -116,7 +116,7 @@ To orient ourselves, first list all of the queues available for processing jobs
 [michael.landis@compute1-client-1 ~]$ bqueues | head -n5
 QUEUE_NAME      PRIO STATUS          MAX JL/U JL/P JL/H NJOBS  PEND   RUN  SUSP
 datatransfer     10  Open:Active       -    -    -    -     0     0     0     0
-general-interac  10  Open:Active       -   64    -    -   991   800   191     0
+general-interac  10  Open:Active       -   64    -    -  3452  3277   175     0
 dragen-2         10  Open:Active       -    -    -    -     0     0     0     0
 dragen-2-intera  10  Open:Active       -    -    -    -     0     0     0     0
 ...
@@ -129,15 +129,18 @@ Next, list the compute nodes available for processing jobs scheduled across queu
 [michael.landis@compute1-client-1 ~]$ bhosts | head -n5
 HOST_NAME          STATUS       JL/U    MAX  NJOBS    RUN  SSUSP  USUSP    RSV
 compute1-dragen-2. ok              -     24      0      0      0      0      0
-compute1-dragen-3. ok              -     24      0      0      0      0      0
+compute1-dragen-3. ok              -     24     20     20      0      0      0
 compute1-dragen-4. ok              -     32      0      0      0      0      0
-compute1-dragen-5. ok              -     32      0      0      0      0      0
+compute1-dragen-5. closed          -     32     32     32      0      0      0
 ```
 where `HOST_NAME` is the compute node's name, `STATUS` reports whether that node is functioning (`ok`) or not, `JL/U` reports the ma number of jobs per user, `MAX` is the job slots for the node, `NJOBS` is the number of jobs assigned to the node, `RUN` is the number of actively running jobs, `SSUSP` is the number of jobs suspended by the system (e.g. due to policy violation), `USUSP` is the number of jobs suspended by users (e.g. by an administrator), and `RSV` is the number of reserved slots in use.
 
 Let's submit our first job to the LSF scheduler
 ```console
-[michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop -Is -q general-interactive -a 'docker(alpine)' 'echo -e "Hello, world!"'
+[michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop \
+                                           -Is -q general-interactive \
+                                           -a 'docker(alpine)' \
+                                           'echo -e "Hello, world!"'
 Job <285964> is submitted to queue <general-interactive>.
 <<Waiting for dispatch ...>>
 <<Starting on compute1-exec-130.ris.wustl.edu>>
@@ -299,6 +302,7 @@ For more advanced tutorials on file transfer involving RIS, visit: https://docs.
 ---
 
 Clone the Lab 11 repo to the cluster, then commit and push `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
