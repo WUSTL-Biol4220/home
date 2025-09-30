@@ -135,12 +135,24 @@ compute1-dragen-5. closed          -     32     32     32      0      0      0
 ```
 where `HOST_NAME` is the compute node's name, `STATUS` reports whether that node is functioning (`ok`) or not, `JL/U` reports the ma number of jobs per user, `MAX` is the job slots for the node, `NJOBS` is the number of jobs assigned to the node, `RUN` is the number of actively running jobs, `SSUSP` is the number of jobs suspended by the system (e.g. due to policy violation), `USUSP` is the number of jobs suspended by users (e.g. by an administrator), and `RSV` is the number of reserved slots in use.
 
-Let's submit our first job to the LSF scheduler
+Let's submit our first job to the LSF scheduler with the following command:
+
+```console
+[michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop -Is -q general-interactive -a 'docker(alpine)' 'echo -e "Hello, world!"'
+```
+
+This is quite long. You can use the `\` character to construct multiline commands. Enter part of the command, then add `\` and press enter. The command line will display a `>` prompt to indicate that the command has not yet been completed. The final line does not have a `\`, so pressing enter will complete the command and attempt to execute it.
+
 ```console
 [michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop \
-                                           -Is -q general-interactive \
-                                           -a 'docker(alpine)' \
-                                           'echo -e "Hello, world!"'
+>                                          -Is -q general-interactive \
+>                                          -a 'docker(alpine)' \
+>                                           'echo -e "Hello, world!"'
+```
+
+After executing the command, you should see something similar to:
+
+```
 Job <285964> is submitted to queue <general-interactive>.
 <<Waiting for dispatch ...>>
 <<Starting on compute1-exec-130.ris.wustl.edu>>
@@ -302,6 +314,7 @@ For more advanced tutorials on file transfer involving RIS, visit: https://docs.
 ---
 
 Clone the Lab 11 repo to the cluster, then commit and push `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
