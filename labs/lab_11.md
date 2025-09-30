@@ -80,10 +80,19 @@ Finally, members of the `storage-workshops-bio4220-rw` group have shared access 
 
 ```console
 [michael.landis@compute1-client-1 michael.landis]$ cd /storage1/fs1/workshops/Active/BIO4220
-[michael.landis@compute1-client-1 BIO4220]$ 
+[michael.landis@compute1-client-1 BIO4220]$ pwd
 /storage1/fs1/workshops/Active/BIO4220
 [michael.landis@compute1-client-1 BIO4220]$ ls
 dataset  users
+```
+
+Make a directory for your work:
+
+```console
+[michael.landis@compute1-client-1 BIO4220]$ mkdir -p users/${USER}
+[michael.landis@compute1-client-1 BIO4220]$ cd users/${USER}
+[michael.landis@compute1-client-1 BIO4220]$ pwd
+/storage1/fs1/workshops/Active/BIO4220/users/michael.landis
 ```
 
 If you are part of a research team here at WUSTL, you might also have membership to groups such as `storage-account.name` and `compute-account.name`, where `account.name` is the head of the research team. In that case, you would also have access to `/storage1/fs1/account.name`, which is a shared directory for your research group. This directory is backed up with daily snapshots, where `Archive` data is read-only, used rarely, but regularly backed up to tape. Most clusters impose a disk quota on storage directories, to prevent individual users from using all the shared disk space.
@@ -290,5 +299,6 @@ For more advanced tutorials on file transfer involving RIS, visit: https://docs.
 ---
 
 Clone the Lab 11 repo to the cluster, then commit and push `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
