@@ -173,7 +173,7 @@ The anatomy of the command is as follows:
 - `-a 'docker(alpine)'` : run the job using a Docker container running Ubuntu-derived operating system, Alpine
 - `'echo -e "Hello, world!"'` : the command string we want our job to execute, which should print `Hello, world!` to screen
 
-This job runs almost instantaneously, and prints `Hello, world!` before completing. The job runs so quickly, that it can't be used to demonstrate how to monitor (`bjobs`) and cancel (`bkill`) jobs. This time, will run a job that runs the command `sleep 1000` submitted as a non-interactive job, which tells the compute to do nothing for 1000 seconds.
+This job runs almost instantaneously, and prints `Hello, world!` before completing. The job runs so quickly, that it can't be used to demonstrate how to monitor (`bjobs`) and cancel (`bkill`) jobs. This time, will run a job that runs the command `sleep 60` submitted as a non-interactive job, which tells the compute to do nothing for 60 seconds.
 
 ```console
 [michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop -q general -a 'docker(alpine)' 'echo Waiting; sleep 60; echo ...done!'
@@ -314,6 +314,7 @@ For more advanced tutorials on file transfer involving RIS, visit: https://docs.
 ---
 
 Clone the Lab 11 repo to the cluster, then commit and push `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
