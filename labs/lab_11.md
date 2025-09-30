@@ -93,6 +93,7 @@ Make a directory for your work:
 [michael.landis@compute1-client-1 BIO4220]$ cd users/${USER}
 [michael.landis@compute1-client-1 BIO4220]$ pwd
 /storage1/fs1/workshops/Active/BIO4220/users/michael.landis
+[michael.landis@compute1-client-1 BIO4220]$ cd ~
 ```
 
 If you are part of a research team here at WUSTL, you might also have membership to groups such as `storage-account.name` and `compute-account.name`, where `account.name` is the head of the research team. In that case, you would also have access to `/storage1/fs1/account.name`, which is a shared directory for your research group. This directory is backed up with daily snapshots, where `Archive` data is read-only, used rarely, but regularly backed up to tape. Most clusters impose a disk quota on storage directories, to prevent individual users from using all the shared disk space.
@@ -287,6 +288,7 @@ Another way would be use GitHub to synchronize files on the server with a remote
 Afterwards, your RIS account should be able to use GitHub. Try running these commands:
 
 ```console
+$ cd ~
 $ mkdir -p projects
 $ git clone git@github.com:WUSTL-Biol4220/lab-11-mlandis.git
 $ mv ./lab-11-mlandis ./projects/lab-11-mlandis
@@ -315,6 +317,7 @@ For more advanced tutorials on file transfer involving RIS, visit: https://docs.
 ---
 
 Clone the Lab 11 repo to the cluster, then commit and push `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
