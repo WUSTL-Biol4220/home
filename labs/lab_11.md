@@ -194,8 +194,6 @@ No unfinished job found
 To record metadata regarding the processed job, such as run time and resource usage, we can provide the `-o` flag
 
 ```console
-[michael.landis@compute1-client-1 ~]$ cat output.txt
-'Hello, world!'
 [michael.landis@compute1-client-1 ~]$ bsub -G compute-workshop -q general -a 'docker(alpine)' -o job.log "echo -e \'Hello, world\!\' > output.txt"
 Defaulting to LSF user group 'compute-workshop'
 Job <93159> is submitted to queue <general>.
@@ -242,6 +240,9 @@ Resource usage summary:
     Turnaround time :                            21 sec.
 
 The output (if any) is above this job summary.
+
+[michael.landis@compute1-client-1 ~]$ cat output.txt
+'Hello, world!'
 ```
 
 The output of `job.log` often contains valuable information, especially for debugging the cause of job to fail.
@@ -314,6 +315,7 @@ For more advanced tutorials on file transfer involving RIS, visit: https://docs.
 ---
 
 Clone the Lab 11 repo to the cluster, then commit and push `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
