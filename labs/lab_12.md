@@ -1,6 +1,6 @@
 # Lab 12
 
-*Lab 12 GitHub Classroom link:* https://classroom.github.com/a/AG7tF9pq
+*Lab 12 GitHub Classroom link:* https://classroom.github.com/a/lvNowi0X
 
 In this lab, we will learn how to estimate phylogenies from molecular sequence data using a variety of inference methods.
 
@@ -338,3 +338,4 @@ Submit the the following files to complete the assignment:
 - `batch_phylo.sh`
 - the `output` directory and its contents
 - the output of `history > history.txt`
+
