@@ -22,7 +22,7 @@ FastTree (http://www.microbesonline.org/fasttree/) is phylogenetic inference sof
 ```
 $ mkdir -p ~/apps/fasttree
 $ cd ~/apps/fasttree
-$ wget http://www.microbesonline.org/fasttree/FastTree
+$ wget https://github.com/morgannprice/fasttree/raw/refs/heads/main/FastTree
 $ chmod +x FastTree
 $ cp FastTree ~/.local/bin/fasttree
 ```
@@ -338,4 +338,5 @@ Submit the the following files to complete the assignment:
 - `batch_phylo.sh`
 - the `output` directory and its contents
 - the output of `history > history.txt`
+
 
