@@ -258,9 +258,6 @@ Run `fasttree` three times against the same dataset, except now you will specify
 
 Compare your results using `nw_display` for the three trees. Pick two clades with high support and two clades with low support for the tree with 100000 bootstrap replicates. Compare those clade support scores against the scores obtained using 10 and 1000 replicates. Do the bootstrap scores tend to increase, decrease, remain the same, or become noisy as you reduce the number of replicates? Do you notice anything interesting about the clade support values when only using 10 replicates?
 
-
-
->>>>>>> 839a89b5f26651b2d2c2e2121d7fedc96bc1574e
 ### Maximum likelihood with IQ-Tree 
 
 Now, we will estimate the maximum likelihood tree using IQ-Tree. IQ-Tree offers hundreds of features, but we will explore only a few in this lab. Type ` --help` to review all available features.
@@ -338,5 +335,6 @@ Submit the the following files to complete the assignment:
 - `batch_phylo.sh`
 - the `output` directory and its contents
 - the output of `history > history.txt`
+
 
 
