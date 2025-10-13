@@ -9,7 +9,7 @@ Students will build a bioinformatics pipeline to analyze biological data:
 - **Phylogenetics Pipeline** is a molecular phylogenetics pipeline that downloads, aligns, and analyzes sequence data in a phylogenetic context ([link](assets/course_project/mol_phylo_project.md)).
 - **Custom Pipeline** is a custom pipeline on a research topic of your choosing. These pipelines, however, must minimally involve steps for (1) data collection, (2) data formatting, (3) data analysis, and (4) output generation.
 
-All pipeline projects require instructor approval (see below).
+All pipeline projects require instructor approval (see below). Examples of previous projects: [link](https://docs.google.com/document/d/1hnW04r8iYRKYjFrDS3QyXPwVEaHlAZ5CTeAz9QrSkDg)
 
 Pipelines will be composed of a number of intermediate scripted steps. For example, the molecular phylogenetics pipeline is built from 10 steps (8 standard, 2 custom). Pipeline steps will extend techniques that we explored in various course lab assignments, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
 
