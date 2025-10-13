@@ -11,7 +11,9 @@ Students will build a bioinformatics pipeline to analyze biological data:
 
 **Not sure what to work on?** 🤔 Titles/topics of projects from previous years are listed here: [link](assets/course_project/example_projects.md).
 
-**All pipeline projects require instructor approval (see below).**
+All pipeline projects require instructor approval (see below).
+
+---
 
 Pipelines will be composed of a number of intermediate scripted steps. For example, the molecular phylogenetics pipeline is built from 10 steps (8 standard, 2 custom). Pipeline steps will extend techniques that we explored in various course lab assignments, although students are free to incorporate resources and ideas learned outside of the course into their pipeline design.
 
