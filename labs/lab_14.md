@@ -1,6 +1,6 @@
 # Lab 14
 
-*Lab 14 GitHub Classroom link:* https://classroom.github.com/a/3vHMqPVp
+*Lab 14 GitHub Classroom link:* https://classroom.github.com/a/g4N-mzQX
 
 In this lab, we will learn how to create and manipulate Python containers, how to use for-loops with containers, and how to pass arguments to a Python script through Unix.
 
@@ -253,3 +253,4 @@ This problem can be solved in multiple ways. One way is to use three nested for-
 **Problem 3.** Write a Python script that converts a sequence of numbers into a sequence of alphabetical characters. The script expects any number of integers (valued 1 to 26) as an argument. Taking each number in the arguments, the script then converts that number into the letter in the corresponding position in the alphabet. For example, if the script was called as `./problem3.py 3 1 20` would print `cat`, and `./problem3.py 16 25 20 8 15 14` would print `python`.
 
 To complete the lab, commit and push your three scripts and a log of your history to your GitHub repository.
+
