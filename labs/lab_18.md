@@ -1,6 +1,6 @@
 # Lab 18
 
-*Lab 18 GitHub Classroom link:* https://classroom.github.com/a/LDp-UZQK
+*Lab 18 GitHub Classroom link:* https://classroom.github.com/a/y0o6qz7k
 
 We'll learn how to access a Jupyter session that is hosted on a remote computer, and how to produce Matplotlib visualizations using Jupyter notebooks.
 
@@ -274,3 +274,4 @@ plt.show()
 ---
 
 Save and close the Jupyter notebook after you have generated each of the above plots. Once closed, commit and push the `lab-18.ipynb` file that you saved to your GitHub repository.
+
