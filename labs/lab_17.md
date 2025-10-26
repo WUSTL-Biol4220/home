@@ -1,19 +1,5 @@
 # Lab 17
 
-> *Mon Oct 28 2024: several parts of this lab have been corrected to work with the newest version of Biopython. First, the `.tomutable()` and `.toseq()` methods were removed from the library. Instead, you can convert between types using the class constructors:*
->```
->from Bio.Seq import Seq, MutableSeq
->x = Seq('ACGT')
->y = MutableSeq(x)
->z = Seq(y)
->```
-> *Second, the `GC()` function that reports the percent of GC sites in the sequence data was renamed to `gc_fraction()` and now reports GC content as a fraction. You now import the function as `from Bio.SeqUtils import gc_fraction`.*
->```
->from Bio.SeqUtils import gc_fraction
->my_seq = Seq('ACGTC')
->gc_fraction(my_seq)
->```
-
 *Lab 17 GitHub Classroom link:* https://classroom.github.com/a/EPLy9U3o
 
 In this lab, we will learn how to use the Biopython library.
@@ -342,4 +328,5 @@ where the first key gives the amino acid, the second key gives the codon transla
 (**Optional bonus problem.** Let `codon_usage_bias()` accept an argument `frame_shift` that "shifts" the reading frame from to the right by 0, 1, or 2 sites. Do your molecular statistics codon usage bias change in response to different `frame_shift` values?)
 
 To complete the lab, commit and push your `biopython_stats.py` and `history.txt` files to your GitHub repository.
+
 
