@@ -1,6 +1,6 @@
 # Lab 17
 
-*Lab 17 GitHub Classroom link:* https://classroom.github.com/a/EPLy9U3o
+*Lab 17 GitHub Classroom link:* https://classroom.github.com/a/akHQGTba
 
 In this lab, we will learn how to use the Biopython library.
 
@@ -328,5 +328,6 @@ where the first key gives the amino acid, the second key gives the codon transla
 (**Optional bonus problem.** Let `codon_usage_bias()` accept an argument `frame_shift` that "shifts" the reading frame from to the right by 0, 1, or 2 sites. Do your molecular statistics codon usage bias change in response to different `frame_shift` values?)
 
 To complete the lab, commit and push your `biopython_stats.py` and `history.txt` files to your GitHub repository.
+
 
 
