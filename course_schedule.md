@@ -27,8 +27,8 @@ The 🪲 marker tells us how we're progressing through the semester.
 |         | Wed, Oct 15  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_14.pdf">Lecture 14</a> | [Lab 14](labs/lab_14.md) | CSB 3.4, 3.6.2                | Python: containers, loops, strings,<br>script arguments |
 |         | Mon, Oct 20  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_15.pdf">Lecture 15</a> | [Lab 15](labs/lab_15.md) | CSB 4.2.2 - 4.4               | Python: file handling, modules,<br>system calls, more with containers |
 |         | Wed, Oct 22  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_16.pdf">Lecture 16</a> | [Lab 16](labs/lab_16.md) | -- | Biology: sequence stats <br>**Course project: approvals** |
-|    🪲   | Mon, Oct 27  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_17.pdf">Lecture 17</a>  | [Lab 17](labs/lab_17.md) | CSB 6.4 | Python: Biopython |
-|         | Wed, Oct 29  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_18.pdf">Lecture 18</a>  | [Lab 18](labs/lab_18.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">data viz paper</a> | Python: Jupyter, Matplotlib<br>**Course project: check-in** |
+|         | Mon, Oct 27  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_17.pdf">Lecture 17</a>  | [Lab 17](labs/lab_17.md) | CSB 6.4 | Python: Biopython |
+|    🪲   | Wed, Oct 29  | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/lectures/lecture_18.pdf">Lecture 18</a>  | [Lab 18](labs/lab_18.md) | <a href="https://github.com/WUSTL-Biol4220/home/raw/main/assets/papers/rougier_et_al_2014_plos_comp_biol.pdf">data viz paper</a> | Python: Jupyter, Matplotlib<br>**Course project: check-in** |
 |         | Mon, Nov 03  | Lecture 19 | Lab 19 | -- | Biology: genome assembly |
 |         | Wed, Nov 05  | -- | -- | -- | **Course project: free day**<br>(no quiz) |
 |         | Mon, Nov 10  | Lecture 20 | Lab 20 | CSB 6.1 - 6.2.2 | Python: NumPy   |
