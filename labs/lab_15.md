@@ -372,7 +372,7 @@ CTTAGTA
 GTTAGTA
 ```
 
-Running the script `./problem3.py data output.txt` should cause the script to internally create an array with the value
+Running the script `./problem2.py data output.txt` should cause the script to internally create an array with the value
 ```
 [ ['Viburnum_clemensiae', 'rbcL', 6, 'ACGACT'],
   ['Viburnum_dentatum', 'rbcL', 6, 'ACGACT'],
@@ -422,5 +422,6 @@ To test the `seq` module, try running the methods against a dataset used in a pr
 ---
 
 To complete the lab, commit and push your three scripts and a log of your history to your GitHub repository.
+
 
 

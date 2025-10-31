@@ -1,20 +1,6 @@
 # Lab 17
 
-> *Mon Oct 28 2024: several parts of this lab have been corrected to work with the newest version of Biopython. First, the `.tomutable()` and `.toseq()` methods were removed from the library. Instead, you can convert between types using the class constructors:*
->```
->from Bio.Seq import Seq, MutableSeq
->x = Seq('ACGT')
->y = MutableSeq(x)
->z = Seq(y)
->```
-> *Second, the `GC()` function that reports the percent of GC sites in the sequence data was renamed to `gc_fraction()` and now reports GC content as a fraction. You now import the function as `from Bio.SeqUtils import gc_fraction`.*
->```
->from Bio.SeqUtils import gc_fraction
->my_seq = Seq('ACGTC')
->gc_fraction(my_seq)
->```
-
-*Lab 17 GitHub Classroom link:* https://classroom.github.com/a/EPLy9U3o
+*Lab 17 GitHub Classroom link:* https://classroom.github.com/a/akHQGTba
 
 In this lab, we will learn how to use the Biopython library.
 
@@ -53,7 +39,7 @@ Seq('gattaca')
 3
 >>> my_seq.count('TAC')       # count occurrences
 1
->>> Seq('AAAA').count('A')    # non-overlapping count
+>>> Seq('AAAA').count('AA')   # non-overlapping count
 2
 >>> Seq('AAAA').count_overlap('AA') # overlapping count
 3
@@ -274,7 +260,7 @@ Species_C : SI
 Species_D : SL
 ```
 
-(**Optional bonus problem.** Real world alignments often contain gap characters (`-`), but Biopython cannot translate a codon that contain gaps. Modify your `read_alignment()` method to drop codon-site columns that contain gaps.)
+(**Optional bonus problem (+2 points).** Real world alignments often contain gap characters (`-`), but Biopython cannot translate a codon that contain gaps. Modify your `read_alignment()` method to drop codon-site columns that contain gaps.)
 
 **Part 2.** Write a function called `find_physicochemical_seq(aa_alignment)` that identifies the physicochemical properties for each amino acid in the alignment. The `aa_alignment` argument is an alignment of amino acids, similar to that output by `read_alignment()`. Below is a list of amino acid properties, and the amino acids with that property.
 
@@ -339,7 +325,11 @@ the function would return the dictionary-of-dictionaries
 ```
 where the first key gives the amino acid, the second key gives the codon translated into that amino acid, and the second key's value gives the count for how many times that particular codon appears in the sequence alignment. By listing codons with counts of 0, the dictionary can easily be used to test for codon usage bias, if so desired.
 
-(**Optional bonus problem.** Let `codon_usage_bias()` accept an argument `frame_shift` that "shifts" the reading frame from to the right by 0, 1, or 2 sites. Do your molecular statistics codon usage bias change in response to different `frame_shift` values?)
+(**Optional bonus problem (+2 points).** Let `codon_usage_bias()` accept an argument `frame_shift` that "shifts" the reading frame from to the right by 0, 1, or 2 sites. Do your molecular statistics codon usage bias change in response to different `frame_shift` values?)
 
 To complete the lab, commit and push your `biopython_stats.py` and `history.txt` files to your GitHub repository.
+
+
+
+
 
