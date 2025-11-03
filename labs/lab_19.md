@@ -1,6 +1,6 @@
 # Lab 19
 
-*Lab 19 GitHub Classroom link:* https://classroom.github.com/a/jqa2Qk3p
+*Lab 19 GitHub Classroom link:* https://classroom.github.com/a/c3rMqdpJ
 
 In this lab, we'll learn how assemble a genome using an Illumina short read dataset. The main steps will be:
 
@@ -525,6 +525,7 @@ No exercises for Lab 19! Spend your extra time working on your course project.
 ---
 
 Clone the Lab 19 repo to the cluster. Commit and push the `job.sh` and `job.log`, and `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
