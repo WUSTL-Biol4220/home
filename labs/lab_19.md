@@ -168,9 +168,7 @@ Let's store our quality control data in a subdirectory called `fastqc_raw`:
 
 ```console
 $ mkdir -p fastqc_raw
-$ fastqc -t 2 ${ECOLI_DIR}/SRR11874161_1.fastq \
-              ${ECOLI_DIR}/SRR11874161_2.fastq \ 
-              -o fastqc_raw
+$ fastqc -t 2 ${ECOLI_DIR}/SRR11874161_1.fastq ${ECOLI_DIR}/SRR11874161_2.fastq -o fastqc_raw
 Started analysis of SRR11874161_1.fastq
 Started analysis of SRR11874161_2.fastq
 Approx 5% complete for SRR11874161_1.fastq
@@ -202,20 +200,14 @@ Now we run `fastp`:
 ```console
 $ cd $PROJ_DIR
 $ mkdir fastp
-$ fastp --in1 ${ECOLI_DIR}/SRR11874161_1.fastq \
-        --in2 ${ECOLI_DIR}/SRR11874161_2.fastq \
-        --out1 fastp/SRR11874161_trim_1.fastq \
-        --out2 fastp/SRR11874161_trim_2.fastq
+$ fastp --in1 ${ECOLI_DIR}/SRR11874161_1.fastq --in2 ${ECOLI_DIR}/SRR11874161_2.fastq --out1 fastp/SRR11874161_trim_1.fastq --out2 fastp/SRR11874161_trim_2.fastq
 ```
 
 You can check the quality of your new datasets after trimming, using the same technique as above, under *Quality Control*. This published dataset was already trimmed and filtered for quality, so we don't expect to see a large difference before and after trimming. 
 
 ```console
 $ mkdir fastqc_trim
-$ fastqc -t 2 \
-         fastp/SRR11874161_trim_1.fastq \
-         fastp/SRR11874161_trim_2.fastq \
-         -o fastqc_trim
+$ fastqc -t 2 fastp/SRR11874161_trim_1.fastq fastp/SRR11874161_trim_2.fastq -o fastqc_trim
 $ # unzip and inspect as was done above, if interested
 ```
 
@@ -239,16 +231,22 @@ You can learn more about *minia* from the manual ([link](https://github.com/GATB
 $ minia --help
 ```
 
+The command strings for *minia* can grow quite long, so we will issue multiline commands. Normally a command is executed once you press enter. However, any part of a command whose line ends with the `\` character tells shell that the entire command is still being constructed, so it should not execute it when pressing enter. Once the command is fully constructed, the user can execute it by pressing enter on a line that does *not* end with the `\` character. This would be equivalent to writing the command on one, long line.
+
 To assemble contigs with *minia* using standard settings, type:
 
 ```console
 $ mkdir minia
+$ # multi-line command
 $ minia -in fastp/SRR11874161_trim_1.fastq \
         -in fastp/SRR11874161_trim_2.fastq \
         -kmer-size 55 \
         -abundance-min 2 \
         -out minia/minia.55 \
         -nb-cores 2 > minia/minia.55.log
+$
+$ # single-line command
+$ minia -in fastp/SRR11874161_trim_1.fastq -in fastp/SRR11874161_trim_2.fastq -kmer-size 55 -abundance-min 2 -out minia/minia.55 -nb-cores 2 > minia/minia.55.log
 ```
 
 Notice the option `-kmer-size` above was set to 55bp. This kmer length is used when constructing the de Bruijn graph used for assembly. Ultimately, a lower kmer size will mean it is easier to map short reads when assembling a contig, which will both increase read depth but also increase the number of poorly-matching mapped reads. Use lower kmer sizes with smaller low-coverage with few repetitive genomic regions. 
@@ -526,6 +524,7 @@ No exercises for Lab 19! Spend your extra time working on your course project.
 ---
 
 Clone the Lab 19 repo to the cluster. Commit and push the `job.sh` and `job.log`, and `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
