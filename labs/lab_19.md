@@ -23,7 +23,7 @@ To begin, ssh into an RIS login node, for example:
 $ ssh michael.landis@compute1-client-1.ris.wustl.edu
 ```
 
-Once logged in, add these line to the end of `~/.bash_profile`
+Once logged in, add these line to the end of `~/.bash_profile` by running the following commands from shell (they will use the append redirect `>>` to add new lines to the end of your profile):
 
 ```console
 echo "export STORAGE=\"/storage1/fs1/workshops/Active/BIO4220\"" >> ~/.bash_profile
@@ -525,6 +525,7 @@ No exercises for Lab 19! Spend your extra time working on your course project.
 ---
 
 Clone the Lab 19 repo to the cluster. Commit and push the `job.sh` and `job.log`, and `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
