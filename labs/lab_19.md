@@ -47,7 +47,25 @@ $ pwd
 /storage1/fs1/workshops/Active/BIO4220
 ```
 
-You may now also run an interactive job with RIS by typing `bsub-is-4220`. Note, it takes some time to load pull the Docker image and make a container for the job.
+Now that you can easily access the storage directory, create directories for your work in that directory. First, let's create temporary variables to help locate filesystem objects for this lab (you could add these to your `.bash_profile` using `export` if you want):
+```console
+$ ECOLI_DIR="$STORAGE/dataset/ecoli"
+$ PROJ_DIR="$STORAGE/users/michael.landis/lab-19-mlandis"
+$ echo $ECOLI_DIR
+$ echo $PROJ_DIR
+```
+
+Next, make a directory to store your work in the Storage directory for the class. The example below uses `michael.landis` but instead you should provide your username.
+
+```console
+$ mkdir -p users/michael.landis
+$ cd users/michael.landis
+$ git clone git@github.com:WUSTL-Biol4220/lab-19-mlandis.git
+```
+
+Now that the workspace is set up, you can now execute jobs on RIS that save work to the storage device.
+
+Run an interactive job with RIS by typing `bsub-is-4220`. Note, it takes some time to load pull the Docker image and make a container for the job.
 
 ```console
 $ bsub-is-4220
@@ -74,23 +92,6 @@ You can also submit a job to LSF using `bsub` as follows:
 ```console
 LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash
 ```
-
-Let's create temporary variables to help locate filesystem objects for this lab (you could add these to your `.bash_profile` using `export` if you want):
-```console
-$ ECOLI_DIR="$STORAGE/dataset/ecoli"
-$ PROJ_DIR="$STORAGE/users/michael.landis/lab-19-mlandis"
-$ echo $ECOLI_DIR
-$ echo $PROJ_DIR
-```
-
-Lastly, you will make a directory to store your work in the Storage directory for the class. The example below uses `michael.landis` but instead you should provide your username.
-
-```console
-$ mkdir -p users/michael.landis
-$ cd users/michael.landis
-$ git clone git@github.com:WUSTL-Biol4220/lab-19-mlandis.git
-```
-
 Cluster jobs will be able to write to the Storage directory. 
 
 ---
@@ -525,6 +526,7 @@ No exercises for Lab 19! Spend your extra time working on your course project.
 ---
 
 Clone the Lab 19 repo to the cluster. Commit and push the `job.sh` and `job.log`, and `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
