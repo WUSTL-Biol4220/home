@@ -27,11 +27,13 @@ Once logged in, add these line to the end of `~/.bash_profile` by running the fo
 
 ```console
 echo "export STORAGE=\"/storage1/fs1/workshops/Active/BIO4220\"" >> ~/.bash_profile
+echo "export ECOLI_DIR=\"/storage1/fs1/workshops/Active/BIO4220/dataset/ecoli\"" >> ~/.bash_profile
+echo "export PROJ_DIR=\"/storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-19-mlandis\"" >> ~/.bash_profile
 echo "alias bsub-is=\"LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(ubuntu)' /bin/bash\"" >> ~/.bash_profile
 echo "alias bsub-is-4220=\"LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash\"" >> ~/.bash_profile
 ```
 
-The line with `export STORAGE` creates a variable to shared storage directory for our class. The lines that begin with `alias` create names that behave like commands for starting different kinds of interactive cluster jobs.
+The line with `export STORAGE` creates a variable to shared storage directory for our class. The following `export ECOLI_DIR` and `export PROJ_DIR` lines create variables to help access other directories in `STORAGE`. The lines that begin with `alias` create names that behave like commands for starting different kinds of interactive cluster jobs.
 
 To make use of the new additions to your profile, you can either log off and log back in, or you can use the following command:
 
@@ -45,14 +47,6 @@ Now you can use the new `STORAGE` variable:
 $ cd $STORAGE
 $ pwd
 /storage1/fs1/workshops/Active/BIO4220
-```
-
-Now that you can easily access the storage directory, create directories for your work in that directory. First, let's create temporary variables to help locate filesystem objects for this lab (you could add these to your `.bash_profile` using `export` if you want):
-```console
-$ ECOLI_DIR="$STORAGE/dataset/ecoli"
-$ PROJ_DIR="$STORAGE/users/michael.landis/lab-19-mlandis"
-$ echo $ECOLI_DIR
-$ echo $PROJ_DIR
 ```
 
 Next, make a directory to store your work in the Storage directory for the class. The example below uses `michael.landis` but instead you should provide your username.
@@ -528,6 +522,7 @@ No exercises for Lab 19! Spend your extra time working on your course project.
 ---
 
 Clone the Lab 19 repo to the cluster. Commit and push the `job.sh` and `job.log`, and `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
