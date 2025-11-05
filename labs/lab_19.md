@@ -65,6 +65,12 @@ $ git clone git@github.com:WUSTL-Biol4220/lab-19-mlandis.git
 
 Now that the workspace is set up, you can now execute jobs on RIS that save work to the storage device.
 
+---
+
+## Docker container
+
+You will need to be running an interactive Docker session to run the genome assembly programs used throughout the rest of this lab.
+
 Run an interactive job with RIS by typing `bsub-is-4220`. Note, it takes some time to load pull the Docker image and make a container for the job.
 
 ```console
@@ -93,8 +99,6 @@ You can also submit a job to LSF using `bsub` as follows:
 LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash
 ```
 Cluster jobs will be able to write to the Storage directory. 
-
----
 
 ## Dataset
 
@@ -524,6 +528,7 @@ No exercises for Lab 19! Spend your extra time working on your course project.
 ---
 
 Clone the Lab 19 repo to the cluster. Commit and push the `job.sh` and `job.log`, and `history > history.txt` to the cloned repo to complete the assignment.
+
 
 
 
