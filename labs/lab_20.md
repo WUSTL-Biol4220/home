@@ -263,5 +263,6 @@ array([[ 5,  6, 10, 12],
        [21, 24, 28, 32]])
 ```
 
-Now you should be familiar enough with NumPy's basic features to judge whether or not it would be useful to incorporate into your future (or ongoing!) projects. Submit `lab-20.ipynb' to your assignment repository to receive credit.
+Now you should be familiar enough with NumPy's basic features to judge whether or not it would be useful to incorporate into your future (or ongoing!) projects. Submit `lab-20.ipynb` to your assignment repository to receive credit.
+
 
