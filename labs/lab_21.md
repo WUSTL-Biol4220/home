@@ -1,8 +1,8 @@
 # Lab 21
 
-*Lab 21 GitHub Classroom link:* https://classroom.github.com/a/xR77oxGg
+*Lab 21 GitHub Classroom link:* https://classroom.github.com/a/ynXOhIDB
 
-This lab will explore how to work with data tables through the Python package, Pandas. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-21.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 21](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_21.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
+This lab will explore how to work with data tables through the Python package, Pandas. To complete this assignment, complete the exercises in a Jupyter notebook (`lab-21.ipynb`), then submit the notebook through GitHub Classroom. See [Lab 18](https://github.com/WUSTL-Biol4220/home/blob/master/labs/lab_18.md) for instructions to connect to a Jupyter Notebook server hosted through your virtual machine.
 
 ---
 
@@ -669,3 +669,4 @@ N     asparagine  Asn    C4H8N2O3      132.12        -28
 ```
 
 Once you have executed all of the above code through the Jupyter notebook, save and close the notebook, then commit and push the notebook to your GitHub classroom assignment repository. Also submit a log of your history (`history.txt`).
+
