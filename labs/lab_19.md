@@ -23,15 +23,17 @@ To begin, ssh into an RIS login node, for example:
 $ ssh michael.landis@compute1-client-1.ris.wustl.edu
 ```
 
-Once logged in, add these line to the end of `~/.bash_profile`
+Once logged in, add these line to the end of `~/.bash_profile` by running the following commands from shell (they will use the append redirect `>>` to add new lines to the end of your profile):
 
 ```console
 echo "export STORAGE=\"/storage1/fs1/workshops/Active/BIO4220\"" >> ~/.bash_profile
+echo "export ECOLI_DIR=\"/storage1/fs1/workshops/Active/BIO4220/dataset/ecoli\"" >> ~/.bash_profile
+echo "export PROJ_DIR=\"/storage1/fs1/workshops/Active/BIO4220/users/michael.landis/lab-19-mlandis\"" >> ~/.bash_profile
 echo "alias bsub-is=\"LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(ubuntu)' /bin/bash\"" >> ~/.bash_profile
 echo "alias bsub-is-4220=\"LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash\"" >> ~/.bash_profile
 ```
 
-The line with `export STORAGE` creates a variable to shared storage directory for our class. The lines that begin with `alias` create names that behave like commands for starting different kinds of interactive cluster jobs.
+The line with `export STORAGE` creates a variable to shared storage directory for our class. The following `export ECOLI_DIR` and `export PROJ_DIR` lines create variables to help access other directories in `STORAGE`. The lines that begin with `alias` create names that behave like commands for starting different kinds of interactive cluster jobs.
 
 To make use of the new additions to your profile, you can either log off and log back in, or you can use the following command:
 
@@ -47,7 +49,23 @@ $ pwd
 /storage1/fs1/workshops/Active/BIO4220
 ```
 
-You may now also run an interactive job with RIS by typing `bsub-is-4220`. Note, it takes some time to load pull the Docker image and make a container for the job.
+Next, make a directory to store your work in the Storage directory for the class. The example below uses `michael.landis` but instead you should provide your username.
+
+```console
+$ mkdir -p users/michael.landis
+$ cd users/michael.landis
+$ git clone git@github.com:WUSTL-Biol4220/lab-19-mlandis.git
+```
+
+Now that the workspace is set up, you can now execute jobs on RIS that save work to the storage device.
+
+---
+
+## Docker container
+
+You will need to be running an interactive Docker session to run the genome assembly programs used throughout the rest of this lab.
+
+Run an interactive job with RIS by typing `bsub-is-4220`. Note, it takes some time to load pull the Docker image and make a container for the job.
 
 ```console
 $ bsub-is-4220
@@ -74,26 +92,7 @@ You can also submit a job to LSF using `bsub` as follows:
 ```console
 LSF_DOCKER_VOLUMES='/storage1/fs1/workshops/Active/BIO4220:/storage1/fs1/workshops/Active/BIO4220' bsub -Is -G compute-workshop -q workshop-interactive -a 'docker(mlandis/biol4220:2024-v1)' /bin/bash
 ```
-
-Let's create temporary variables to help locate filesystem objects for this lab (you could add these to your `.bash_profile` using `export` if you want):
-```console
-$ ECOLI_DIR="$STORAGE/dataset/ecoli"
-$ PROJ_DIR="$STORAGE/users/michael.landis/lab-19-mlandis"
-$ echo $ECOLI_DIR
-$ echo $PROJ_DIR
-```
-
-Lastly, you will make a directory to store your work in the Storage directory for the class. The example below uses `michael.landis` but instead you should provide your username.
-
-```console
-$ mkdir -p users/michael.landis
-$ cd users/michael.landis
-$ git clone git@github.com:WUSTL-Biol4220/lab-19-mlandis.git
-```
-
 Cluster jobs will be able to write to the Storage directory. 
-
----
 
 ## Dataset
 
@@ -167,9 +166,7 @@ Let's store our quality control data in a subdirectory called `fastqc_raw`:
 
 ```console
 $ mkdir -p fastqc_raw
-$ fastqc -t 2 ${ECOLI_DIR}/SRR11874161_1.fastq \
-              ${ECOLI_DIR}/SRR11874161_2.fastq \ 
-              -o fastqc_raw
+$ fastqc -t 2 ${ECOLI_DIR}/SRR11874161_1.fastq ${ECOLI_DIR}/SRR11874161_2.fastq -o fastqc_raw
 Started analysis of SRR11874161_1.fastq
 Started analysis of SRR11874161_2.fastq
 Approx 5% complete for SRR11874161_1.fastq
@@ -201,20 +198,14 @@ Now we run `fastp`:
 ```console
 $ cd $PROJ_DIR
 $ mkdir fastp
-$ fastp --in1 ${ECOLI_DIR}/SRR11874161_1.fastq \
-        --in2 ${ECOLI_DIR}/SRR11874161_2.fastq \
-        --out1 fastp/SRR11874161_trim_1.fastq \
-        --out2 fastp/SRR11874161_trim_2.fastq
+$ fastp --in1 ${ECOLI_DIR}/SRR11874161_1.fastq --in2 ${ECOLI_DIR}/SRR11874161_2.fastq --out1 fastp/SRR11874161_trim_1.fastq --out2 fastp/SRR11874161_trim_2.fastq
 ```
 
 You can check the quality of your new datasets after trimming, using the same technique as above, under *Quality Control*. This published dataset was already trimmed and filtered for quality, so we don't expect to see a large difference before and after trimming. 
 
 ```console
 $ mkdir fastqc_trim
-$ fastqc -t 2 \
-         fastp/SRR11874161_trim_1.fastq \
-         fastp/SRR11874161_trim_2.fastq \
-         -o fastqc_trim
+$ fastqc -t 2 fastp/SRR11874161_trim_1.fastq fastp/SRR11874161_trim_2.fastq -o fastqc_trim
 $ # unzip and inspect as was done above, if interested
 ```
 
@@ -238,16 +229,22 @@ You can learn more about *minia* from the manual ([link](https://github.com/GATB
 $ minia --help
 ```
 
+The command strings for *minia* can grow quite long, so we will issue multiline commands. Normally a command is executed once you press enter. However, any part of a command whose line ends with the `\` character tells shell that the entire command is still being constructed, so it should not execute it when pressing enter. Once the command is fully constructed, the user can execute it by pressing enter on a line that does *not* end with the `\` character. This would be equivalent to writing the command on one, long line.
+
 To assemble contigs with *minia* using standard settings, type:
 
 ```console
 $ mkdir minia
+$ # multi-line command
 $ minia -in fastp/SRR11874161_trim_1.fastq \
         -in fastp/SRR11874161_trim_2.fastq \
         -kmer-size 55 \
         -abundance-min 2 \
         -out minia/minia.55 \
         -nb-cores 2 > minia/minia.55.log
+$
+$ # single-line command
+$ minia -in fastp/SRR11874161_trim_1.fastq -in fastp/SRR11874161_trim_2.fastq -kmer-size 55 -abundance-min 2 -out minia/minia.55 -nb-cores 2 > minia/minia.55.log
 ```
 
 Notice the option `-kmer-size` above was set to 55bp. This kmer length is used when constructing the de Bruijn graph used for assembly. Ultimately, a lower kmer size will mean it is easier to map short reads when assembling a contig, which will both increase read depth but also increase the number of poorly-matching mapped reads. Use lower kmer sizes with smaller low-coverage with few repetitive genomic regions. 
@@ -525,6 +522,11 @@ No exercises for Lab 19! Spend your extra time working on your course project.
 ---
 
 Clone the Lab 19 repo to the cluster. Commit and push the `job.sh` and `job.log`, and `history > history.txt` to the cloned repo to complete the assignment.
+
+
+
+
+
 
 
 
