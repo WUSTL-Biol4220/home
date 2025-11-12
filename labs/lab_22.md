@@ -387,7 +387,7 @@ As flexible as PAML is for modeling, it is somewhat limited in terms of how it a
 
 Create a module called `paml.py`. The module will define two functions.
 
-The first function is called `run(control_file, seq_file, tree_file, output_file)`. This function accepts a sequence file and tree file (Newick format) as input. The function then creates a new file called `control_file` in the local directory. The control file will be identical to `codeml.ctl` from the HIV example, except the `seq_file`, `tree_file`, and `output_file` settings are replaced by the user-provided arguments. Once the new control file (`control_file`) is created, run the PAML analysis by calling `codeml control_file`.
+The first function is called `run(control_file, seq_file, tree_file, output_file)`. This function accepts a sequence file and tree file (Newick format) as input. The function then creates a new file called `control_file` in the local directory. The control file will be identical to `codeml.ctl` from the HIV example, except the `seq_file`, `tree_file`, and `output_file` settings are replaced by the user-provided arguments. Once the new control file (`control_file`) is created, run the PAML analysis by calling `codeml control_file`. Review your notes for [Lab 15](https://github.com/WUSTL-Biol4220/home/blob/main/labs/lab_15.md) to remember how to use `subprocess.run()` or `os.system()` to execute shell commands from a Python script.
 
 The second function is called `format(output_prefix)`. This function will read the `rst` file as input. First, the function will split the output file into different subsections for each model type, then produce two data matrices for Model 1 and Model 2 results. Define the data matrices as lists-of-lists, where each row corresponds to the position of the amino acid.
 
@@ -412,3 +412,4 @@ The data matrix for Model 2 will also list one amino acid site per row, but with
 The function will then write one output file for each data matrix. If the `output_prefix` argument had the value `HIV`, then the Model 1 output would be named `HIV.model_1.csv` and the Model 2 output would be named `HIV.model_2.csv`. Write the files as comma-separated values, with informative column header names.
 
 Upload your `paml.py` script, your output files for `HIV.model_1.csv` and `HIV.model_2.csv`, and your `history.txt` to your GitHub repository.
+
