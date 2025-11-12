@@ -506,7 +506,7 @@ Especially with large data tables, it often helps to summarize the data to compr
 For example, quantiles bin data such that some percent of the data are less than or equal to a quantile's value -- e.g. 20% of molecular weights are less than or equal to 117.7460.
 
 ```python
->>> aa.quantile([0.05, 0.20, 0.5, 0.80, 0.95])
+>>> aa.loc[:,'mol_weight':'hydrophob'].quantile([0.05, 0.20, 0.5, 0.80, 0.95])
       mol_weight  hydrophob
 0.05     88.3985     -46.45
 0.20    116.7460     -24.00
@@ -669,4 +669,5 @@ N     asparagine  Asn    C4H8N2O3      132.12        -28
 ```
 
 Once you have executed all of the above code through the Jupyter notebook, save and close the notebook, then commit and push the notebook to your GitHub classroom assignment repository. Also submit a log of your history (`history.txt`).
+
 
