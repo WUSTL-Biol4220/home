@@ -30,7 +30,7 @@ In this lab, we will explore several of SciPy's many features for processing qua
 
 In this lab, we will explore several SciPy packages that are useful for analyzing biological datasets: `scipy.constants`, `scipy.stats`, `scipy.optimize`, `scipy.integrate`, `scipy.cluster`, and `scipy.spatial.
 
-You will need to install the SciPy library on your virtual machine, which may be done with the command `pip install scipy`.
+The virtual machines already have the SciPy library installed.
 
 ### `scipy.constants`
 
@@ -317,3 +317,4 @@ As before, we can use `matplotlib` to visualize this representation of the data.
 ---
 
 Once you have executed all of the above code through the Jupyter notebook, save and close the notebook, then commit and push the notebook to your GitHub classroom assignment repository. Also submit a log of your history (`history.txt`).
+
