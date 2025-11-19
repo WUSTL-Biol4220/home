@@ -310,11 +310,12 @@ As before, we can use `matplotlib` to visualize this representation of the data.
 >>> for simplex in hull.simplices:
 +++     plt.plot(points[simplex, 0], points[simplex, 1], 'k-')
 >>> plt.plot(points[hull.vertices,0], points[hull.vertices,1], 'r--', lw=2)
->>> plt.plot(points[hull.vertices[0],0], points[hull.vertices[0],1, 'ro')
+>>> plt.plot(points[hull.vertices[0],0], points[hull.vertices[0],1], 'ro')
 >>> plt.show()
 ```
 
 ---
 
 Once you have executed all of the above code through the Jupyter notebook, save and close the notebook, then commit and push the notebook to your GitHub classroom assignment repository. Also submit a log of your history (`history.txt`).
+
 
